@@ -14,14 +14,14 @@ Log masuk dengan kelayakan kloros+ anda untuk membolehkan pemprosesan CLI.
 
 ** Sintaks: **
 
-___Code0001___
+___Code0000___
 
 ** Contoh: **
 
-___Code0002___
+___Code0001___
 
 {% petunjuk gaya = & quot; Amaran & quot; %}
-** Watak Khas **: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti ___inline0001___, ___inline0002___, atau ruang.
+** Watak Khas **: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti ___inline0000___, ___inline0001___, atau ruang.
 { % endhint %}
 
 ** Keluar: **

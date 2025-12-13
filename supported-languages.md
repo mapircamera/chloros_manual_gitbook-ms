@@ -6,44 +6,44 @@ Chloros menyokong bahasa berikut:
 
 | # | Bahasa | Nama asli | CLI CODE |
 | --- | ---------- | ------------- | ---------- |
-| 1 | 🇺🇸 Bahasa Inggeris | Bahasa Inggeris | ___Inline0001___ |
-| 2 | 🇪🇸 Sepanyol | Sepanyol | ___Inline0002___ |
-| 3 | 🇵🇹 Portugis | Portugis | ___Inline0003___ |
-| 4 | 🇫🇷 Perancis | Perancis | ___Inline0004___ |
-| 5 | 🇩🇪 Jerman | Jerman | ___Inline0005___ |
-| 6 | 🇮🇹 Itali | Itali | ___Inline0006___ |
-| 7 | 🇯🇵 Jepun | 日本語 | ___Inline0007___ |
-| 8 | 🇰🇷 Korea | 한국어 | ___Inline0008___ |
-| 9 | 🇨🇳 Cina (dipermudahkan) | 简体中文 | ___Inline0009___ |
-| 10 | 🇹🇼 Cina (Tradisional) | 繁體中文 | ___Inline0010___ |
-| 11 | 🇷🇺 Rusia | Rusia | ___Inline0011___ |
-| 12 | 🇳🇱 Belanda | Belanda | ___Inline0012___ |
-| 13 | 🇸🇦 Arab | العرangsang | | ___Inline0013___ |
-| 14 | 🇵🇱 Poland | Polsky | ___Inline0014___ |
-| 15 | 🇹🇷 Turki | Turkce | ___Inline0015___ |
-| 16 | 🇮🇳 Hindi | हिंदी | ___Inline0016___ |
-| 17 | 🇮🇩 Indonesia | Bahasa Indonesia | ___Inline0017___ |
-| 18 | 🇻🇳 Vietnam | Tiếng việt | ___Inline0018___ |
-| 19 | 🇹🇭 Thai | ไทย | ___Inline0019___ |
-| 20 | 🇸🇪 Swedish | Svenska | ___Inline0020___ |
-| 21 | 🇩🇰 Denmark | Dansk | ___Inline0021___ |
-| 22 | 🇳🇴 Norwegian | Norsk | ___Inline0022___ |
-| 23 | 🇫🇮 Finnish | Suomi | ___Inline0023___ |
-| 24 | 🇬🇷 Greek | Ελληνικά | ___Inline0024___ |
-| 25 | 🇨🇿 Czech | CEština | ___Inline0025___ |
-| 26 | 🇭🇺 Hungarian | Magyar | ___Inline0026___ |
-| 27 | 🇷🇴 Romania | Română | ___Inline0027___ |
-| 28 | 🇺🇦 Ukraine | Ураїнса | ___Inline0028___ |
-| 29 | 🇧🇷 Portugis Brazil | Portugis Brazil | ___Inline0029___ |
-| 30 | 🇭🇰 Kanton | 粵語 | ___Inline0030___ |
-| 31 | 🇲🇾 Melayu | Bahasa Melayu | ___Inline0031___ |
-| 32 | 🇸🇰 Slovak | Slovenčina | ___Inline0032___ |
-| 33 | 🇧🇬 Bulgaria | Bъъъаи | ___Inline0033___ |
-| 34 | 🇭🇷 Croatian | Hrvatski | ___Inline0034___ |
-| 35 | 🇱🇹 Lithuanian | Lietuvių | ___Inline0035___ |
-| 36 | 🇱🇻 Latvian | Latviešu | ___Inline0036___ |
-| 37 | 🇪🇪 Estonian | Eesti | ___Inline0037___ |
-| 38 | 🇸🇮 Slovenian | Slovenščina | ___Inline0038___ |
+| 1 | 🇺🇸 Bahasa Inggeris | Bahasa Inggeris | ___Inline0000___ |
+| 2 | 🇪🇸 Sepanyol | Sepanyol | ___Inline0001___ |
+| 3 | 🇵🇹 Portugis | Portugis | ___Inline0002___ |
+| 4 | 🇫🇷 Perancis | Perancis | ___Inline0003___ |
+| 5 | 🇩🇪 Jerman | Jerman | ___Inline0004___ |
+| 6 | 🇮🇹 Itali | Itali | ___Inline0005___ |
+| 7 | 🇯🇵 Jepun | 日本語 | ___Inline0006___ |
+| 8 | 🇰🇷 Korea | 한국어 | ___Inline0007___ |
+| 9 | 🇨🇳 Cina (dipermudahkan) | 简体中文 | ___Inline0008___ |
+| 10 | 🇹🇼 Cina (Tradisional) | 繁體中文 | ___Inline0009___ |
+| 11 | 🇷🇺 Rusia | Rusia | ___Inline0010___ |
+| 12 | 🇳🇱 Belanda | Belanda | ___Inline0011___ |
+| 13 | 🇸🇦 Arab | العرangsang | | ___Inline0012___ |
+| 14 | 🇵🇱 Poland | Polsky | ___Inline0013___ |
+| 15 | 🇹🇷 Turki | Turkce | ___Inline0014___ |
+| 16 | 🇮🇳 Hindi | हिंदी | ___Inline0015___ |
+| 17 | 🇮🇩 Indonesia | Bahasa Indonesia | ___Inline0016___ |
+| 18 | 🇻🇳 Vietnam | Tiếng việt | ___Inline0017___ |
+| 19 | 🇹🇭 Thai | ไทย | ___Inline0018___ |
+| 20 | 🇸🇪 Swedish | Svenska | ___Inline0019___ |
+| 21 | 🇩🇰 Denmark | Dansk | ___Inline0020___ |
+| 22 | 🇳🇴 Norwegian | Norsk | ___Inline0021___ |
+| 23 | 🇫🇮 Finnish | Suomi | ___Inline0022___ |
+| 24 | 🇬🇷 Greek | Ελληνικά | ___Inline0023___ |
+| 25 | 🇨🇿 Czech | CEština | ___Inline0024___ |
+| 26 | 🇭🇺 Hungarian | Magyar | ___Inline0025___ |
+| 27 | 🇷🇴 Romania | Română | ___Inline0026___ |
+| 28 | 🇺🇦 Ukraine | Ураїнса | ___Inline0027___ |
+| 29 | 🇧🇷 Portugis Brazil | Portugis Brazil | ___Inline0028___ |
+| 30 | 🇭🇰 Kanton | 粵語 | ___Inline0029___ |
+| 31 | 🇲🇾 Melayu | Bahasa Melayu | ___Inline0030___ |
+| 32 | 🇸🇰 Slovak | Slovenčina | ___Inline0031___ |
+| 33 | 🇧🇬 Bulgaria | Bъъъаи | ___Inline0032___ |
+| 34 | 🇭🇷 Croatian | Hrvatski | ___Inline0033___ |
+| 35 | 🇱🇹 Lithuanian | Lietuvių | ___Inline0034___ |
+| 36 | 🇱🇻 Latvian | Latviešu | ___Inline0035___ |
+| 37 | 🇪🇪 Estonian | Eesti | ___Inline0036___ |
+| 38 | 🇸🇮 Slovenian | Slovenščina | ___Inline0037___ |
 
 ## Cara menukar bahasa
 
@@ -56,9 +56,9 @@ Chloros menyokong bahasa berikut:
 
 ### di cli chloros
 
-Gunakan perintah ___inline0039___ untuk melihat atau menukar bahasa antara muka CLI:
+Gunakan perintah ___inline0038___ untuk melihat atau menukar bahasa antara muka CLI:
 
-___Code0001___
+___Code0000___
 
 Untuk maklumat lanjut, lihat [Dokumentasi CLI] (CLI.MD).
 

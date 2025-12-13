@@ -135,7 +135,7 @@ Semasa membuat projek baru:
 
 ** "Simpan Folder Projek" ** Menetapkan Menentukan Di mana Projek Baru Dibuat Secara Lalai:
 
-*** Lokasi lalai **: ___inline0001___.
+*** Lokasi lalai **: ___inline0000___.
 *** Tukar Lokasi **: Klik ikon Edit dan pilih folder baru.
 *** Bila hendak mengubahnya **:
   * Pemacu rangkaian untuk kerjasama pasukan.

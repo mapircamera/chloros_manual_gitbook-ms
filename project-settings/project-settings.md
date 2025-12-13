@@ -154,7 +154,7 @@ Tetapan ini membolehkan anda mengkonfigurasi indeks multispektral untuk analisis
   2. Tentukan formula anda menggunakan pengenal band (contohnya, NIR, merah, hijau, biru).
   3. Simpan formula dengan nama deskriptif.
 *** Sintaks Formula **: Operasi matematik standard disokong, termasuk:
-  * Aritmetik: ___inline0001___, ___inline0002___, ___inline0003___, ___inline0004___.
+  * Aritmetik: ___inline0000___, ___inline0001___, ___inline0002___, ___inline0003___.
   * Kurungan untuk pesanan operasi
   * Rujukan Band: NIR, Merah, Hijau, Biru, Rededge, Cyan, Orange, NIR1, NIR2
 
@@ -205,7 +205,7 @@ Ciri ini membolehkan anda menyimpan tetapan projek semasa anda sebagai templat y
 Tetapan ini menentukan di mana projek baru disimpan secara lalai.
 
 *** Jenis **: Paparan Laluan Direktori + Butang Edit
-*** lalai **: ___inline0005___
+*** lalai **: ___inline0004___
 *** Penerangan **: Menunjukkan direktori lalai semasa di mana projek -projek kloros baru dibuat. Klik ikon Edit untuk memilih direktori yang berbeza.
 *** Bila hendak mengubahnya **:
   * Sediakan pemacu rangkaian untuk kerjasama pasukan.
@@ -217,7 +217,7 @@ Tetapan ini menentukan di mana projek baru disimpan secara lalai.
 
 ## Konfigurasi Konfigurasi
 
-Semua tetapan projek disimpan secara automatik dengan fail projek (__inline0006___ format projek). Apabila anda membuka semula projek, semua tetapan akan dipulihkan tepat seperti yang anda tinggalkan.
+Semua tetapan projek disimpan secara automatik dengan fail projek (__inline0005___ format projek). Apabila anda membuka semula projek, semua tetapan akan dipulihkan tepat seperti yang anda tinggalkan.
 
 ### Tetapan Hierarki
 

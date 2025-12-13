@@ -82,7 +82,7 @@ Setiap indeks mempunyai pelbagai nilai dan makna tertentu:
 
 #### NDVI Contoh
 
-___Code0001___
+___Code0000___
 
 Untuk dokumentasi formula indeks lengkap, lihat [Formula Indeks Multispectral] (../ Project-Settings/Multispectral-Index-Formulas.md).
 
@@ -176,9 +176,9 @@ Kawalan rangkaian ** ** Tentukan nilai indeks mana peta yang warna dalam kecerun
 
 1. Dalam panel LUT, cari nilai minimum ** ** dan ** Nilai maksimum ** medan input.
 2. Klik medan ** minimum ** medan.
-3. Taipkan nilai minimum yang dikehendaki (contohnya, ___inline0001___).
+3. Taipkan nilai minimum yang dikehendaki (contohnya, ___inline0000___).
 4. Tekan ** masukkan ** atau klik di luar medan.
-5. Ulangi proses untuk medan ** maksimum ** (contohnya, ___inline0002___).
+5. Ulangi proses untuk medan ** maksimum ** (contohnya, ___inline0001___).
 6. Paparan ** kemas kini dengan segera **.
 
 {% petunjuk gaya = & quot; info & quot; %}
@@ -187,10 +187,10 @@ Kawalan rangkaian ** ** Tentukan nilai indeks mana peta yang warna dalam kecerun
 
 ** NDVI Range Tetapan Contoh: **
 
-*** julat penuh **: ___inline0003___ ke ___inline0004___ (Tunjukkan semua nilai yang mungkin)
-*** Vegetasi Fokus **: ___inline0005___ ke ___inline0006___ (tidak termasuk tanah dan air kosong)
-*** Hanya tumbuh -tumbuhan yang sihat **: ___inline0007___ ke ___inline0008___ (sorot hanya tumbuh -tumbuhan yang kuat)
-*** Saringan tekanan **: ___inline0009___ ke ___inline0010___ (menekankan kawasan masalah)
+*** julat penuh **: ___inline0002___ ke ___inline0003___ (Tunjukkan semua nilai yang mungkin)
+*** Vegetasi Berfokus **: ___inline0004___ ke ___inline0005___ (tidak termasuk tanah dan air yang kosong)
+*** Vegetasi Sihat Sahaja **: ___inline0006___ hingga ___inline0007___ (Sorot hanya tumbuh -tumbuhan yang kuat)
+*** Saringan tekanan **: ___inline0008___ ke ___inline0009___ (menekankan kawasan masalah)
 *** Range Custom ** - Laraskan berdasarkan nilai piksel yang diperhatikan
 
 ** Mengapa menyesuaikan julat? **
@@ -260,7 +260,7 @@ Untuk kawalan penuh ke atas paparan, anda boleh membuat ** kecerunan warna tersu
 5. Pilih warna baru menggunakan:
    *** Roda warna **: Pemilihan warna visual.
    *** Slider RGB/HSV **: Kawalan warna yang tepat.
-   *** Kemasukan kod hexadecimal **: Spesifikasi warna yang tepat (mis. ___Inline0011___ untuk merah).
+   *** Kemasukan kod hexadecimal **: Spesifikasi warna yang tepat (mis. ___Inline0010___ untuk merah).
 6. Klik di luar pemetik warna ** untuk memohon warna baru **.
 7. Kecerunan ** Kemas kini dengan segera ** pada imej.
 
@@ -339,7 +339,7 @@ Selepas memeriksa nilai piksel, laraskan minimum dan maksimum LUT dengan sewajar
 
 *** pemerhatian **: nilai tanah = 0.05-0.25, ditekankan = 0.25-0.50, sihat = 0.50-0.85
 *** Matlamat **: Lihat sahaja Kesihatan Loji (tidak termasuk tanah)
-*** Tetapan LUT **: Min. = ___Inline0012___, Max. = ___Inline0013___
+*** Tetapan LUT **: Min. = ___Inline0011___, Max. = ___Inline0012___
 *** tanaman **: "latar belakang asal" untuk melihat lantai dengan warna semula jadi
 *** Hasil **: Kecerunan warna hanya digunakan untuk tumbuh -tumbuhan, tanah ditunjukkan seperti dalam imej asal
 
@@ -363,16 +363,16 @@ Selepas memeriksa nilai piksel, laraskan minimum dan maksimum LUT dengan sewajar
 2. Pergi ke menu drop-down ** indeks **.
 3. Cari pilihan ** «Custom» ** (anda mesti log masuk dengan Lesen Chloros+).
 4. ** Tentukan formula anda ** menggunakan pembolehubah band:
-   * Nama band: ___inline0014___, ___inline0015___, ___inline0016___, ___inline0017___, ___inline0018___, dll.
-   * Pengendali: ___inline0019___, ___inline0020___, ___inline0021___, ___inline0022___, ___inline0023___ (eksponen)
-   * Fungsi: ___inline0024___, ___inline0025___, dll (jika disokong)
-   * Kurungan: ___inline0026___ untuk pesanan operasi
+   * Nama band: ___inline0013___, ___inline0014___, ___inline0015___, ___inline0016___, ___inline0017___, dll.
+   * Pengendali: ___inline0018___, ___inline0019___, ___inline0020___, ___inline0021___, ___inline0022___ (eksponen)
+   * Fungsi: ___inline0023___, ___inline0024___, dll (jika disokong)
+   * Kurungan: ___inline0025___ untuk pesanan operasi
 5. ** Namakan indeks anda ** (contohnya, "myindex" atau "customndvi").
 6. ** Simpan tetapan **.
 
 ** Contoh formula tersuai: **
 
-___Code0002___
+___Code0001___
 
 {% petunjuk gaya = & quot; Amaran & quot; %}
 ** Pengesahan Formula **: Pastikan formula anda menggunakan band yang terdapat di kamera anda. Sebagai contoh, Rededge hanya boleh didapati di kamera dengan penapis Rededge.

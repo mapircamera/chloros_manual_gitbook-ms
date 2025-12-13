@@ -32,7 +32,7 @@ Keperluan ###
 
 Pasang melalui PIP:
 
-___Code0001___
+___Code0000___
 
 {% petunjuk gaya = & quot; info & quot; %}
 ** Persediaan Awal **: Sebelum menggunakan SDK, aktifkan lesen Chloros+ anda dengan membuka Chloros, Chloros (penyemak imbas), atau chloros CLI dan log masuk dengan kelayakan anda. Ini hanya perlu dilakukan sekali.
@@ -42,13 +42,13 @@ ___Code0001___
 
 Proses folder dengan hanya beberapa baris:
 
-___Code0002___
+___Code0001___
 
 ### Kawalan penuh
 
 Untuk aliran kerja lanjutan:
 
-___Code0003___
+___Code0002___
 
 ***
 
@@ -66,21 +66,21 @@ Sebelum memasang SDK, pastikan anda mempunyai:
 
 ** Pemasangan Standard: **
 
-___Code0004___
+___Code0000___
 
 ** Dengan sokongan pemantauan kemajuan: **
 
-___Code0005___
+___Code0004___
 
 ** Pemasangan Pembangunan: **
 
-___Code0006___
+___Code0005___
 
 ### Sahkan pemasangan
 
 Periksa bahawa SDK dipasang dengan betul:
 
-___Code0007___
+___Code0006___
 
 ***
 
@@ -102,7 +102,7 @@ SDK menggunakan lesen yang sama seperti chloros, chloros (penyemak imbas) dan ch
 
 Semak bahawa SDK boleh menyambung ke kloros:
 
-___Code0008___
+___Code0007___
 
 ***
 
@@ -114,27 +114,27 @@ Kelas utama untuk pemprosesan imej kloros tempatan.
 
 #### pembina
 
-___Code0009___
+___Code0008___
 
 ** Parameter: **
 
 | Parameter | Jenis | Lalai | Penerangan |
 | ------------------------- | ---- | ------------------------- | ------------------------------------- |
-| ___Inline0001___ | str | ___Inline0002___ | URL backend tempatan Chloros |
-| ___Inline0003___ | Bool | ___Inline0004___ | Secara automatik memulakan backend jika perlu |
-| ___Inline0005___ | str | ___Inline0006___ (Mengesan Auto) | Laluan ke Backend Executable |
-| ___Inline0007___ | int | ___Inline0008___ | Permintaan masa dalam beberapa saat |
-| ___Inline0009___ | int | ___Inline0010___ | Backend Startup Timeout (Seconds) |
+| ___Inline0000___ | str | ___Inline0001___ | URL backend tempatan Chloros |
+| ___Inline0002___ | Bool | ___Inline0003___ | Secara automatik memulakan backend jika perlu |
+| ___Inline0004___ | str | ___Inline0005___ (auto-detect) | Laluan ke Backend Executable |
+| ___Inline0006___ | int | ___Inline0007___ | Permintaan masa dalam beberapa saat |
+| ___Inline0008___ | int | ___Inline0009___ | Backend Startup Timeout (Seconds) |
 
 ** Contoh: **
 
-___Code0010___
+___Code0009___
 
 ***
 
 ### Kaedah
 
-#### ___inline0011___
+#### ___inline0010___
 
 Buat projek kloros baru.
 
@@ -142,18 +142,18 @@ Buat projek kloros baru.
 
 | Parameter | Jenis | Mandatori | Penerangan |
 | -------------- | ---- | -------- | -------------------------------------------------------- |
-| ___Inline0012___ | str | Ya | Nama Projek |
-| ___Inline0013___ | str | Tidak | Templat Kamera (mis. "Survey3n \ _rgn", "Survey3w \ _Ocn") |
+| ___Inline0011___ | str | Ya | Nama Projek |
+| ___Inline0012___ | str | Tidak | Templat Kamera (mis. "Survey3n \ _rgn", "Survey3w \ _Ocn") |
 
-** Pulangan: ** ___inline0014___: Respons Penciptaan Projek
+** Pulangan: ** ___inline0013___: Respons Penciptaan Projek
 
 ** Contoh: **
 
-___Code0011___
+___Code0010___
 
 ***
 
-#### ___inline0015___
+#### ___inline0014___
 
 Import imej dari folder.
 
@@ -161,18 +161,18 @@ Import imej dari folder.
 
 | Parameter | Jenis | Mandatori | Penerangan |
 | ------------- | -------- | -------- | ---------------------------------- |
-| ___Inline0016___ | str/path | Ya | Laluan ke folder dengan imej |
-| ___Inline0017___ | Bool | Tidak | Subfolder Cari (lalai: palsu) |
+| ___Inline0015___ | str/path | Ya | Laluan ke folder dengan imej |
+| ___Inline0016___ | Bool | Tidak | Subfolder Cari (lalai: palsu) |
 
-** Pulangan: ** ___inline0018___: Import Hasil dengan kiraan fail.
+** Pulangan: ** ___inline0017___: Import Hasil dengan kiraan fail.
 
 ** Contoh: **
 
-___Code0012___
+___Code0011___
 
 ***
 
-#### ___inline0019___
+#### ___inline0018___
 
 Konfigurasikan tetapan pemprosesan.
 
@@ -180,20 +180,20 @@ Konfigurasikan tetapan pemprosesan.
 
 | Parameter | Jenis | Lalai | Penerangan |
 | ------------------------- | ---- | ----------------------- | ---------------------------- |
-| ___Inline0020___ | str | «Berkualiti tinggi (lebih cepat)» | Kaedah Debayer |
-| ___Inline0021___ | Bool | ___Inline0022___ | Dayakan Pembetulan Vignette |
-| ___Inline0023___ | Bool | ___Inline0024___ | Dayakan penentukuran refleksi |
-| ___Inline0025___ | Senarai | ___Inline0026___ | Indeks Vegetasi untuk Mengira |
-| ___Inline0027___ | str | «Tiff (16 bit)» | Format output |
-| ___Inline0028___ | Bool | ___Inline0029___ | Dayakan Pembetulan PPK |
-| ___Inline0030___ | dict | ___Inline0031___ | Tetapan Advanced Custom |
+| ___Inline0019___ | str | «Berkualiti tinggi (lebih cepat)» | Kaedah Debayer |
+| ___Inline0020___ | Bool | ___Inline0021___ | Dayakan Pembetulan Vignette |
+| ___Inline0022___ | Bool | ___Inline0023___ | Dayakan penentukuran refleksi |
+| ___Inline0024___ | Senarai | ___Inline0025___ | Indeks Vegetasi untuk Mengira |
+| ___Inline0026___ | str | «Tiff (16 bit)» | Format output |
+| ___Inline0027___ | Bool | ___Inline0028___ | Dayakan Pembetulan PPK |
+| ___Inline0029___ | dict | ___Inline0030___ | Tetapan Advanced Custom |
 
 ** Format Eksport: **
 
-* ___Inline0032___: Disyorkan untuk GIS/Photogrammetry
-* ___Inline0033___: Analisis saintifik
-* ___Inline0034___: Pemeriksaan visual
-* ___Inline0035___: output termampat
+* ___Inline0031___: Disyorkan untuk GIS/Photogrammetry
+* ___Inline0032___: Analisis saintifik
+* ___Inline0033___: Pemeriksaan visual
+* ___Inline0034___: output termampat
 
 ** indeks tersedia: **
 
@@ -201,11 +201,11 @@ NDVI, NDRE, GNDVI, OSAVI, CIG, EVI, SAVI, MSAVI, MTVI2 dan banyak lagi.
 
 ** Contoh: **
 
-___Code0013___
+___Code0012___
 
 ***
 
-#### ___inline0036___
+#### ___inline0035___
 
 Imej projek proses.
 
@@ -213,12 +213,12 @@ Imej projek proses.
 
 | Parameter | Jenis | Lalai | Penerangan |
 | ------------------- | -------- | ------------ | ----------------------------------------- |
-| ___Inline0037___ | str | ___Inline0038___ | Mod Pemprosesan: "Selari" atau "Serial" |
-| ___Inline0039___ | Bool | ___Inline0040___ | Tunggu ia selesai |
-| ___Inline0041___ | Callable | ___Inline0042___ | Fungsi Panggilan Kembali Kemajuan (Kemajuan, Mesej) |
-| ___Inline0043___ | Float | ___Inline0044___ | Pengundian Selang untuk Kemajuan (Seconds) |
+| ___Inline0036___ | str | ___Inline0037___ | Mod Pemprosesan: "Selari" atau "Serial" |
+| ___Inline0038___ | Bool | ___Inline0039___ | Tunggu ia selesai |
+| ___Inline0040___ | Callable | ___Inline0041___ | Fungsi Panggilan Kembali Kemajuan (Kemajuan, Mesej) |
+| ___Inline0042___ | Float | ___Inline0043___ | Pengundian Selang untuk Kemajuan (Seconds) |
 
-** Pulangan: ** ___inline0045___ - Hasil pemprosesan
+** Pulangan: ** ___inline0044___ - Hasil pemprosesan
 
 {% petunjuk gaya = & quot; Amaran & quot; %}
 ** Mod Paralel **: Memerlukan Lesen Chloros+. Secara automatik menyesuaikan diri dengan teras CPU (sehingga 16 pekerja).
@@ -226,15 +226,27 @@ Imej projek proses.
 
 ** Contoh: **
 
+___Code0013___
+
+***
+
+#### ___inline0045___
+
+Mendapat konfigurasi projek semasa.
+
+** Pulangan: ** ___inline0046___: Konfigurasi Projek Semasa.
+
+** Contoh: **
+
 ___Code0014___
 
 ***
 
-#### ___inline0046___
+#### ___inline0047___
 
-Mendapat konfigurasi projek semasa.
+Dapatkan maklumat mengenai status backend.
 
-** Pulangan: ** ___inline0047___: Konfigurasi Projek Semasa.
+** Pulangan: ** ___inline0048___ - Status backend.
 
 ** Contoh: **
 
@@ -242,11 +254,9 @@ ___Code0015___
 
 ***
 
-#### ___inline0048___
+#### ___inline0049___
 
-Dapatkan maklumat mengenai status backend.
-
-** Pulangan: ** ___inline0049___ - Status backend.
+Tutup backend (jika dimulakan dengan SDK).
 
 ** Contoh: **
 
@@ -254,19 +264,9 @@ ___Code0016___
 
 ***
 
-#### ___inline0050___
-
-Tutup backend (jika dimulakan dengan SDK).
-
-** Contoh: **
-
-___Code0017___
-
-***
-
 ### Ciri -ciri kemudahan
 
-#### ___inline0051___
+#### ___inline0050___
 
 Fungsi kemudahan satu baris untuk memproses folder.
 
@@ -274,21 +274,21 @@ Fungsi kemudahan satu baris untuk memproses folder.
 
 | Parameter | Jenis | Lalai | Penerangan |
 | ------------------------- | -------- | --------------- | --------------------------- |
-| ___Inline0052___ | str/path | Mandatori | Laluan ke folder dengan imej |
-| ___Inline0053___ | str | Dihasilkan secara automatik | Nama Projek |
-| ___Inline0054___ | str | ___Inline0055___ | Templat Kamera |
-| ___Inline0056___ | Senarai | ___Inline0057___ | Indeks untuk mengira |
-| ___Inline0058___ | Bool | ___Inline0059___ | Dayakan Pembetulan Vignette |
-| ___Inline0060___ | Bool | ___Inline0061___ | Dayakan penentukuran refleksi |
-| ___Inline0062___ | str | «Tiff (16 bit)» | Format output |
-| ___Inline0063___ | str | ___Inline0064___ | Mod Pemprosesan |
-| ___Inline0065___ | Callable | ___Inline0066___ | Panggilan balik kemajuan |
+| ___Inline0051___ | str/path | Mandatori | Laluan ke folder dengan imej |
+| ___Inline0052___ | str | Dihasilkan secara automatik | Nama Projek |
+| ___Inline0053___ | str | ___Inline0054___ | Templat Kamera |
+| ___Inline0055___ | Senarai | ___Inline0056___ | Indeks untuk mengira |
+| ___Inline0057___ | Bool | ___Inline0058___ | Dayakan Pembetulan Vignette |
+| ___Inline0059___ | Bool | ___Inline0060___ | Dayakan penentukuran refleksi |
+| ___Inline0061___ | str | «Tiff (16 bit)» | Format output |
+| ___Inline0062___ | str | ___Inline0063___ | Mod Pemprosesan |
+| ___Inline0064___ | Callable | ___Inline0065___ | Panggilan balik kemajuan |
 
-** Pulangan: ** ___inline0067___ - Hasil pemprosesan.
+** Pulangan: ** ___inline0066___ - Hasil pemprosesan.
 
 ** Contoh: **
 
-___Code0018___
+___Code0017___
 
 ***
 
@@ -296,7 +296,7 @@ ___Code0018___
 
 SDK menyokong pengurus konteks untuk pembersihan automatik:
 
-___Code0019___
+___Code0018___
 
 ***
 
@@ -306,7 +306,7 @@ ___Code0019___
 
 Proses folder dengan tetapan lalai:
 
-___Code0020___
+___Code0019___
 
 ***
 
@@ -314,7 +314,7 @@ ___Code0020___
 
 Kawalan penuh ke atas proses pemprosesan:
 
-___Code0021___
+___Code0020___
 
 ***
 
@@ -322,7 +322,7 @@ ___Code0021___
 
 Proses pelbagai set data penerbangan:
 
-___Code0022___
+___Code0021___
 
 ***
 
@@ -330,7 +330,7 @@ ___Code0022___
 
 Mengintegrasikan kloros dengan analisis data:
 
-___Code0023___
+___Code0022___
 
 ***
 
@@ -338,7 +338,7 @@ ___Code0023___
 
 Penjejakan kemajuan lanjutan dengan pembalakan:
 
-___Code0024___
+___Code0023___
 
 ***
 
@@ -346,7 +346,7 @@ ___Code0024___
 
 Pengurusan ralat yang teguh untuk kegunaan pengeluaran:
 
-___Code0025___
+___Code0024___
 
 ***
 
@@ -354,11 +354,11 @@ ___Code0025___
 
 Buat alat CLI tersuai dengan SDK:
 
-___Code0026___
+___Code0025___
 
 ** Gunakan: **
 
-___Code0027___
+___Code0026___
 
 ***
 
@@ -368,11 +368,11 @@ SDK menyediakan kelas pengecualian khusus untuk pelbagai jenis kesilapan:
 
 ### hierarki pengecualian
 
-___Code0028___
+___Code0027___
 
 ### Contoh pengecualian
 
-___Code0029___
+___Code0028___
 
 ***
 
@@ -382,19 +382,19 @@ ___Code0029___
 
 Gunakan lokasi backend tersuai atau konfigurasi:
 
-___Code0030___
+___Code0029___
 
 ### pemprosesan bebas blok
 
 Mula memproses dan teruskan dengan tugas lain:
 
-___Code0031___
+___Code0030___
 
 ### Pengurusan memori
 
 Untuk set data yang besar, proses batch:
 
-___Code0032___
+___Code0031___
 
 ***
 
@@ -408,12 +408,12 @@ ___Code0032___
 
 1. Periksa bahawa desktop kloros dipasang:
 
-___Code0033___
+___Code0032___
 
 2. Periksa bahawa Windows Firewall tidak menghalang anda.
 3. Cuba laluan backend manual:
 
-___Code0034___
+___Code0033___
 
 ***
 
@@ -426,7 +426,7 @@ ___Code0034___
 1.
 2. Periksa bahawa lesen itu cache:
 
-___Code0035___
+___Code0034___
 
 3. Sokongan Hubungi: info@mapir.camera
 
@@ -434,11 +434,11 @@ ___Code0035___
 
 ### Kesalahan import
 
-** Masalah: ** ___inline0068___
+** Masalah: ** ___inline0067___
 
 ** Penyelesaian: **
 
-___Code0036___
+___Code0035___
 
 ***
 
@@ -450,7 +450,7 @@ ___Code0036___
 
 1. Meningkatkan masa menunggu:
 
-___Code0037___
+___Code0036___
 
 2. Proses kelompok yang lebih kecil
 3. Periksa ruang cakera yang ada
@@ -464,11 +464,11 @@ ___Code0037___
 
 ** Penyelesaian: **
 
-___Code0038___
+___Code0037___
 
 Atau mencari dan menutup proses yang bercanggah:
 
-___Code0039___
+___Code0038___
 
 ***
 
@@ -478,15 +478,15 @@ ___Code0039___
 
 1. ** Gunakan mod selari ** (memerlukan chloros+)
 
-___Code0040___
+___Code0039___
 
 2. ** Kurangkan resolusi output ** (jika boleh diterima)
 
-___Code0041___
+___Code0040___
 
 3. ** Lumpuhkan indeks yang tidak perlu **
 
-___Code0042___
+___Code0041___
 
 4. ** Proses pada SSD ** (bukan HDD)
 
@@ -496,7 +496,7 @@ ___Code0042___
 
 Untuk set data yang besar:
 
-___Code0043___
+___Code0042___
 
 ***
 
@@ -504,7 +504,7 @@ ___Code0043___
 
 Python percuma untuk tugas lain:
 
-___Code0044___
+___Code0043___
 
 ***
 
@@ -512,15 +512,15 @@ ___Code0044___
 
 ### Integrasi Django
 
-___Code0045___
+___Code0044___
 
 ### Flask API
 
-___Code0046___
+___Code0045___
 
 ### Jupyter Notebook
 
-___Code0047___
+___Code0046___
 
 ***
 
@@ -568,7 +568,7 @@ Sila hubungi info@mapir.camera untuk pertanyaan OEM.
 
 ### Q: Bagaimana saya mengemas kini SDK?
 
-___Code0048___
+___Code0047___
 
 ***
 
@@ -576,7 +576,7 @@ ___Code0048___
 
 Secara lalai, di jalan projek:
 
-___Code0049___
+___Code0048___
 
 ***
 
@@ -584,7 +584,7 @@ ___Code0049___
 
 ** A: ** Ya! Gunakan Windows Tugas Scheduler dengan skrip Python:
 
-___Code0050___
+___Code0049___
 
 Jadual pelaksanaan harian menggunakan penjadual tugas.
 
@@ -592,9 +592,9 @@ Jadual pelaksanaan harian menggunakan penjadual tugas.
 
 ### Q: Adakah SDK menyokong async/menunggu?
 
-** A: ** Versi semasa adalah segerak. Untuk tingkah laku tak segerak, gunakan ___inline0069___ atau jalankannya pada benang yang berasingan:
+** A: ** Versi semasa adalah segerak. Untuk tingkah laku asynchronous, gunakan ___inline0068___ atau jalankannya pada benang yang berasingan:
 
-___Code0051___
+___Code0050___
 
 ***
 

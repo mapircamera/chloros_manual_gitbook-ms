@@ -40,15 +40,15 @@ Keperluan sistem ###
 
 #### ** Langkah pemasangan: **
 
-1. Muat turun fail ___inline0001___
+1. Muat turun fail ___inline0000___
 2. Klik dua kali pada pemasang untuk memulakan pemasangan
 3. Ikuti arahan wizard pemasangan
-4. Pilih direktori pemasangan (lalai: ___inline0002___)
+4. Pilih direktori pemasangan (lalai: ___inline0001___)
 5. Lengkapkan pemasangan dan mulakan kloros
 6. Log masuk dengan akaun Mapir Cloud Chloros+ anda (atau teruskan dengan versi percuma).
 
 {% petunjuk gaya = & quot; kejayaan & quot; %}
-Pemasang secara automatik menambah ___inline0003___ ke laluan sistem anda untuk akses baris arahan.
+Pemasang secara automatik menambah ___inline0002___ ke laluan sistem anda untuk akses baris arahan.
 { % endhint %}
 
 ***
@@ -59,7 +59,7 @@ Pemasang secara automatik menambah ___inline0003___ ke laluan sistem anda untuk 
 
 Untuk pemaju dan aliran kerja automasi, pasang SDK Python Chloros:
 
-___Code0001___
+___Code0000___
 
 ** Dokumentasi **: [API: Python SDK] (api-python-sdk.md)
 

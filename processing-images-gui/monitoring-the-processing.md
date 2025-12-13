@@ -161,13 +161,13 @@ Log debug memberikan maklumat terperinci mengenai kemajuan pemprosesan dan sebar
 
 Kemas kini pemprosesan biasa:
 
-___Code0001___
+___Code0000___
 
 #### Mesej amaran (kuning)
 
 Isu bukan kritikal yang tidak berhenti diproses:
 
-___Code0002___
+___Code0001___
 
 ** Tindakan: ** Kajian amaran selepas diproses, tetapi jangan mengganggu pemprosesan.
 
@@ -175,7 +175,7 @@ ___Code0002___
 
 Isu kritikal yang boleh menyebabkan pemprosesan gagal:
 
-___Code0003___
+___Code0002___
 
 ** Tindakan: ** Berhenti memproses, menyelesaikan ralat, dan mulakan semula.
 
