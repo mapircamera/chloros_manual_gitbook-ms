@@ -10,7 +10,7 @@ Sebelum memproses imej anda, penting untuk mengkonfigurasi tetapan projek anda u
 
 {% hint style="info" %}
 ** Tetapan disimpan secara automatik ** dengan projek anda. Apabila anda membuka semula projek, semua tetapan dipulihkan.
-{ % endhint %}
+{% endhint %}
 
 ***
 
@@ -171,7 +171,7 @@ Jika menggunakan perakam Mapir Daq dengan GPS untuk geolokasi yang tepat:
 
 {% hint style="warning" %}
 ** PENTING **: Pin pendedahan mesti ditugaskan dengan betul ke kamera masing -masing. Tugasan yang tidak betul akan mengakibatkan data geolokasi yang salah.
-{ % endhint %}
+{% endhint %}
 
 ***
 

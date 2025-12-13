@@ -24,7 +24,7 @@ Keperluan ###
 
 {% hint style="warning" %}
 ** Keperluan Lesen **: CLI memerlukan langganan Chloros+ yang dibayar. Pelan standard (percuma) tidak mempunyai akses CLI. Lawati [https://cloud.mapir.camera/pricingś(https://cloud.mapir.camera/pricing) untuk menaik taraf.
-{ % endhint %}
+{% endhint %}
 
 ## Permulaan cepat
 
@@ -38,7 +38,7 @@ CLI secara automatik disertakan dengan pemasang kloros:
 
 {% hint style="success" %}
 Pemasang secara automatik menambah `chloros-cli` ke laluan sistem anda. Mulakan semula terminal anda selepas pemasangan.
-{ % endhint %}
+{% endhint %}
 
 ### Persediaan kali pertama
 
@@ -133,7 +133,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 {% hint style="warning" %}
 ** Watak Khas **: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti `$`, `!`, Atau ruang.
-{ % endhint %}
+{% endhint %}
 
 ** output: **
 
@@ -295,7 +295,7 @@ chloros-cli language ja
 
 {% hint style="success" %}
 **Automatic Persistence**: Your language preference is saved to `~/.Chloros/cli_language.json` dan berterusan di semua sesi.
-{ % endhint %}
+{% endhint %}
 
 ***
 
@@ -414,7 +414,7 @@ The CLI uses **High Quality (Faster)** as the default and recommended debayer al
 
 {% hint style="success" %}
 ** Cadangan **: Sentiasa aktifkan pembetulan vignette untuk memastikan kecerahan seragam merentasi bingkai.
-{ % endhint %}
+{% endhint %}
 
 ### penentukuran refleksi
 
@@ -426,7 +426,7 @@ Menukar nilai sensor mentah ke peratusan refleksi standard menggunakan panel pen
 
 {% hint style="info" %}
 ** Keperluan **: Pastikan panel penentukuran terdedah dengan betul dan dapat dilihat dalam imej anda untuk penukaran refleksi yang tepat.
-{ % endhint %}
+{% endhint %}
 
 ### pembetulan ppk
 
@@ -611,7 +611,7 @@ Masa pemprosesan biasa untuk 100 imej (12MP setiap satu):
 
 {% hint style="info" %}
 ** Petua Prestasi **: Masa pemprosesan berbeza -beza berdasarkan kiraan imej, resolusi, dan spesifikasi komputer.
-{ % endhint %}
+{% endhint %}
 
 ***
 

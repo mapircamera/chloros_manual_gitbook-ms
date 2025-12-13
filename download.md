@@ -22,7 +22,7 @@ Keperluan sistem ###
 
 {% hint style="info" %}
 ** Percepatan GPU **: Pengguna Chloros+ dengan NVIDIA GPU (4GB+ VRAM) boleh menggunakan pecutan CUDA untuk pemprosesan yang lebih cepat.
-{ % endhint %}
+{% endhint %}
 
 ***
 
@@ -50,7 +50,7 @@ Keperluan sistem ###
 
 {% hint style="success" %}
 Pemasang secara automatik menambah `chloros-cli` ke laluan sistem anda untuk akses baris arahan.
-{ % endhint %}
+{% endhint %}
 
 ***
 

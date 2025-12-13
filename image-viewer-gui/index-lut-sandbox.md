@@ -367,7 +367,7 @@ After inspecting pixel values, adjust your LUT min/max accordingly:
 
 {% hint style="info" %}
 ** Di mana untuk membuat **: Indeks tersuai boleh dikonfigurasi dalam ** Tetapan Projek ** sebelum diproses, serta di bar sisi Sandbox Viewer Image.
-{ % endhint %}
+{% endhint %}
 
 ** Untuk membuat indeks tersuai: **
 
@@ -400,7 +400,7 @@ Indeks eksponen:
 
 {% hint style="warning" %}
 ** Pengesahan Formula **: Pastikan formula anda menggunakan band yang terdapat di kamera anda. Sebagai contoh, Rededge hanya boleh didapati di kamera dengan penapis Rededge.
-{ % endhint %}
+{% endhint %}
 
 ***
 

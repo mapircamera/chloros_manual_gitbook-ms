@@ -56,7 +56,7 @@ Dropdown Layer ** Layer ** di bahagian atas kanan penonton imej membolehkan anda
 
 {% hint style="info" %}
 ** Lapisan Sasaran **: Lapisan ini hanya muncul dalam lungsur turun untuk imej yang mengandungi sasaran penentukuran. Imej menangkap tetap tidak akan mempunyai pilihan ini.
-{ % endhint %}
+{% endhint %}
 
 ### mentah (reflektif)
 
@@ -76,7 +76,7 @@ Dropdown Layer ** Layer ** di bahagian atas kanan penonton imej membolehkan anda
 
 {% hint style="success" %}
 ** Disyorkan **: Gunakan lapisan RAW (Refleksi) apabila memeriksa nilai piksel untuk pengukuran dan analisis saintifik.
-{ % endhint %}
+{% endhint %}
 
 ### mentah (indeks ndvi) ... dan serupa
 

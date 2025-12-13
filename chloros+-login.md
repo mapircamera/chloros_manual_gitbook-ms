@@ -26,7 +26,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 {% hint style="warning" %}
 ** Watak Khas **: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti `$`, `!`, Atau ruang.
-{ % endhint %}
+{% endhint %}
 
 ** output: **
 
