@@ -1,62 +1,62 @@
-# Bahasa yang disokong
+# Supported Languages
 
-Chloros menyediakan sokongan antara muka penuh dalam ** 38 bahasa di seluruh dunia **, menjadikannya mudah diakses oleh pengguna di seluruh dunia. Anda boleh menukar bahasa dengan serta -merta merentasi semua antara muka: desktop, penyemak imbas, CLI, dan Python SDK.
+Chloros provides full interface support in **38 languages worldwide**, making it accessible to users across the globe. You can switch languages instantly across all interfaces: Desktop, Browser, CLI, and Python SDK.
 
-Chloros menyokong bahasa berikut:
+Chloros supports the following languages:
 
-| # | Bahasa | Nama asli | XPROTX0000555XPROTX CODE |
-| --- | ---------- | ------------- | ---------- |
-| 1 | 🇺🇸 Bahasa Inggeris | Bahasa Inggeris | `en` |
-| 2 | 🇪🇸 Sepanyol | Español | `es` |
-| 3 | 🇵🇹 Portugis | Português | `pt` |
-| 4 | 🇫🇷 Perancis | Français | `fr` |
-| 5 | 🇩🇪 Jerman | Deutsch | `de` |
-| 6 | 🇮🇹 Itali | Italiano | `it` |
-| 7 | 🇯🇵 Jepun | 日本語 | `ja` |
-| 8 | 🇰🇷 Korea | 한국어 | `ko` |
-| 9 | 🇨🇳 Cina (dipermudahkan) | 简体中文 | `zh` |
-| 10 | 🇹🇼 Cina (Tradisional) | 繁體中文 | `zh-TW` |
-| 11 | 🇷🇺 Rusia | Р й | `ru` |
-| 12 | 🇳🇱 Belanda | Nederlands | `nl` |
-| 13 | 🇸🇦 Arab | العرangsang | | `ar` |
-| 14 | 🇵🇱 Poland | Polski | `pl` |
-| 15 | 🇹🇷 Turki | Türkçe | `tr` |
+| # | Language | Native Name | CLI Code |
+|---|----------|-------------|----------|
+| 1 | 🇺🇸 English | English | `en` |
+| 2 | 🇪🇸 Spanish | Español | `es` |
+| 3 | 🇵🇹 Portuguese | Português | `pt` |
+| 4 | 🇫🇷 French | Français | `fr` |
+| 5 | 🇩🇪 German | Deutsch | `de` |
+| 6 | 🇮🇹 Italian | Italiano | `it` |
+| 7 | 🇯🇵 Japanese | 日本語 | `ja` |
+| 8 | 🇰🇷 Korean | 한국어 | `ko` |
+| 9 | 🇨🇳 Chinese (Simplified) | 简体中文 | `zh` |
+| 10 | 🇹🇼 Chinese (Traditional) | 繁體中文 | `zh-TW` |
+| 11 | 🇷🇺 Russian | Русский | `ru` |
+| 12 | 🇳🇱 Dutch | Nederlands | `nl` |
+| 13 | 🇸🇦 Arabic | العربية | `ar` |
+| 14 | 🇵🇱 Polish | Polski | `pl` |
+| 15 | 🇹🇷 Turkish | Türkçe | `tr` |
 | 16 | 🇮🇳 Hindi | हिंदी | `hi` |
-| 17 | 🇮🇩 Indonesia | Bahasa Indonesia | `id` |
-| 18 | 🇻🇳 Vietnam | Tiếng việt | `vi` |
+| 17 | 🇮🇩 Indonesian | Bahasa Indonesia | `id` |
+| 18 | 🇻🇳 Vietnamese | Tiếng Việt | `vi` |
 | 19 | 🇹🇭 Thai | ไทย | `th` |
 | 20 | 🇸🇪 Swedish | Svenska | `sv` |
-| 21 | 🇩🇰 Denmark | Dansk | `da` |
+| 21 | 🇩🇰 Danish | Dansk | `da` |
 | 22 | 🇳🇴 Norwegian | Norsk | `no` |
 | 23 | 🇫🇮 Finnish | Suomi | `fi` |
 | 24 | 🇬🇷 Greek | Ελληνικά | `el` |
 | 25 | 🇨🇿 Czech | Čeština | `cs` |
 | 26 | 🇭🇺 Hungarian | Magyar | `hu` |
-| 27 | 🇷🇴 Romania | Română | `ro` |
-| 28 | 🇺🇦 Ukraine | Ураїнса | `uk` |
-| 29 | 🇧🇷 Portugis Brazil | Português Brasileiro | `pt-BR` |
-| 30 | 🇭🇰 Kanton | 粵語 | `zh-HK` |
-| 31 | 🇲🇾 Melayu | Bahasa Melayu | `ms` |
-| 32 | 🇸🇰 Slovak | Slovenčina | XPROTX0000333XPROTX |
-| 33 | 🇧🇬 Bulgaria | Bъъъаи | `bg` |
+| 27 | 🇷🇴 Romanian | Română | `ro` |
+| 28 | 🇺🇦 Ukrainian | Українська | `uk` |
+| 29 | 🇧🇷 Brazilian Portuguese | Português Brasileiro | `pt-BR` |
+| 30 | 🇭🇰 Cantonese | 粵語 | `zh-HK` |
+| 31 | 🇲🇾 Malay | Bahasa Melayu | `ms` |
+| 32 | 🇸🇰 Slovak | Slovenčina | `sk` |
+| 33 | 🇧🇬 Bulgarian | Български | `bg` |
 | 34 | 🇭🇷 Croatian | Hrvatski | `hr` |
 | 35 | 🇱🇹 Lithuanian | Lietuvių | `lt` |
 | 36 | 🇱🇻 Latvian | Latviešu | `lv` |
 | 37 | 🇪🇪 Estonian | Eesti | `et` |
 | 38 | 🇸🇮 Slovenian | Slovenščina | `sl` |
 
-## Cara menukar bahasa
+## How to Change Language
 
-### di xprotx000044xprotx desktop/penyemak imbas
+### In Chloros Desktop/Browser
 
-1. Buka tetapan aplikasi
-2. Navigasi ke menu pemilihan bahasa
-3. Pilih bahasa pilihan anda dari senarai
-4. Antara muka akan dikemas kini dengan serta -merta
+1. Open the application settings
+2. Navigate to the language selection menu
+3. Choose your preferred language from the list
+4. The interface will update instantly
 
-### di xprotx000045xprotx xprotx000056xprotx
+### In Chloros CLI
 
-Gunakan arahan `language` untuk melihat atau menukar bahasa antara muka CLI:
+Use the `language` command to view or change the CLI interface language:
 
 ```bash
 # View current language
@@ -75,19 +75,19 @@ chloros-cli language pt-BR
 chloros-cli language --list
 ```
 
-Untuk maklumat lanjut, lihat dokumentasi [xProtx000058xprotx] (CLI.md).
+For more details, see the [CLI documentation](CLI.md).
 
-### di xprotx000046xprotx xprotx000052xprotx xprotx000061xprotx
+### In Chloros Python SDK
 
-Tetapkan parameter bahasa apabila memulakan xProtx00000062xprotx untuk mendapatkan mesej dan output dalam bahasa pilihan anda.
+Set the language parameter when initializing the SDK to get messages and outputs in your preferred language.
 
-## liputan
+## Coverage
 
-Semua 38 bahasa disokong sepenuhnya di seluruh:
+All 38 languages are fully supported across:
 
-*** xprotx000047xprotx desktop ** - Terjemahan GUI Lengkap
-*** Chloros Pelayar ** - Antara Muka Web dalam semua bahasa
-*** Chloros CLI ** - Antara muka baris dan mesej output
-*** xProtx000050xprotx xProtx000053xprotx xprotx00000063xprotx ** - xprotx000064xprotx mesej dan dokumentasi
+* **Chloros Desktop** - Complete GUI translation
+* **Chloros Browser** - Web interface in all languages
+* **Chloros CLI** - Command-line interface and output messages
+* **Chloros Python SDK** - API messages and documentation
 
-Sokongan bahasa memastikan pengguna di seluruh dunia dapat berfungsi dengan cekap dalam bahasa ibunda mereka tanpa halangan.
+Language support ensures that users worldwide can work efficiently in their native language without barriers.
