@@ -17,7 +17,7 @@ Apabila pemprosesan berjaya, anda akan melihat beberapa petunjuk:
 
 ### Membuka folder output
 
-1. Klik ** menu utama ** <img src = "../. Gitbook/aset/imej (1) (1) .png" alt = "" data-size = "line"> ikon (kiri atas)
+1. Klik ** menu utama ** <img src="../. Gitbook/assets/image (1) (1).png" alt="" data-size="line"> ikon (kiri atas)
 2. Pilih ** "Folder Projek Buka" **
 3. Penjelajah fail anda dibuka ke direktori projek
 4. Cari projek anda dengan nama
@@ -51,7 +51,7 @@ Gunakan penonton imej terbina dalam Chloros untuk visualisasi lanjutan:
 
 1. Klik gambar kecil imej dalam penyemak imbas fail
 2. Imej dibuka di kawasan pratonton utama
-3. Klik ** Penonton Imej ** <img src = "../. Gitbook/aset/icon_image-viewer.jpg" alt = "" data-size = "line"> tab di bar sisi kiri
+3. Klik ** Penonton Imej ** <img src="../. Gitbook/assets/icon_image-viewer.jpg" alt="" data-size="line"> tab di bar sisi kiri
 4. Gunakan [indeks/lut sandbox](../ image-viewer-gui/index-lut-sandbox.md) untuk analisis interaktif
 
 Lihat [Image Viewer](../ Image-Viewer-Gui/Opening-An-Image-full-screen.md) untuk arahan terperinci.
@@ -62,7 +62,7 @@ Lihat [Image Viewer](../ Image-Viewer-Gui/Opening-An-Image-full-screen.md) untuk
 
 ### periksa amaran atau kesilapan
 
-1. Buka ** log debug ** <img src = "../. Gitbook/aset/icon_log.jpg" alt = "" data-size = "line"> tab
+1. Buka ** log debug ** <img src="../. Gitbook/assets/icon_log.jpg" alt="" data-size="line"> tab
 2. Tatal melalui mesej
 3. Cari amaran kuning atau kesilapan merah
 4. Mengkaji sebarang isu yang dinyatakan

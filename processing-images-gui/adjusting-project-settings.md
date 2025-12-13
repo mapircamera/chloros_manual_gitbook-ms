@@ -5,7 +5,7 @@ Sebelum memproses imej anda, penting untuk mengkonfigurasi tetapan projek anda u
 ## Mengakses Tetapan Projek
 
 1. Buka projek anda di kloros
-2. Klik tetapan projek ** ** <img src = "../. Gitbook/aset/icon_project-settings.jpg" alt = "" data-size = "line"> ikon di bar sisi kiri
+2. Klik tetapan projek ** ** <img src="../. Gitbook/assets/icon_project-settings.jpg" alt="" data-size="line"> ikon di bar sisi kiri
 3. Panel Tetapan Projek memaparkan semua pilihan konfigurasi
 
 {% hint style="info" %}

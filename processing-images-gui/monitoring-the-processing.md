@@ -151,7 +151,7 @@ Log debug memberikan maklumat terperinci mengenai kemajuan pemprosesan dan sebar
 
 ### mengakses log debug
 
-1. Klik Log Debug ** <img src = "../. Gitbook/Assets/icon_log.jpg" alt = "" data-size = "line"> ikon di bar sisi kiri
+1. Klik Log Debug ** <img src="../. Gitbook/Assets/icon_log.jpg" alt="" data-size="line"> ikon di bar sisi kiri
 2. Panel log terbuka menunjukkan mesej pemprosesan masa nyata
 3. Auto-scrolls untuk menunjukkan mesej terkini
 

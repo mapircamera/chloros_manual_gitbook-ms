@@ -26,7 +26,7 @@ Sebelum mengklik butang Mula, sahkan bahawa semuanya sudah siap:
 Butang Start/Play terletak di bar kepala kloros atas:
 
 * Kedudukan: pusat atas tingkap
-*Ikon: ** Butang Main/Mula ** <img src = "../. Gitbook/aset/imej (2) .png" alt = "" data-size = "line">
+*Ikon: ** Butang Main/Mula ** <img src="../. Gitbook/assets/image (2).png" alt="" data-size="line">
 * Status: Butang diaktifkan (cerah) apabila bersedia untuk diproses
 
 ### Klik untuk memulakan
@@ -305,7 +305,7 @@ Pemprosesan ### bermula kemudian segera gagal
 
 ** Penyelesaian: **
 
-1. Periksa log debug <img src = "../. Gitbook/aset/icon_log.jpg" alt = "" data-size = "line"> untuk mesej ralat
+1. Periksa log debug <img src="../. Gitbook/assets/icon_log.jpg" alt="" data-size="line"> untuk mesej ralat
 2. Sahkan ruang cakera ada
 3. Cuba memproses subset kecil gambar
 4. Sahkan imej tidak rosak

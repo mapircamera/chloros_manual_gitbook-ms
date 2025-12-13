@@ -127,7 +127,7 @@ print(f"Chloros SDK version: {chloros_sdk.__version__}")
 
 SDK menggunakan lesen yang sama seperti chloros, chloros (penyemak imbas), dan chloros cli. Aktifkan sekali melalui GUI atau CLI:
 
-1. Buka ** Chloros atau Chloros (penyemak imbas) ** dan log masuk pada pengguna <img src = ". Gitbook/aset/icon_user.jpg" alt = "" data-size = "line"> tab. Atau, buka ** cli **.
+1. Buka ** Chloros atau Chloros (penyemak imbas) ** dan log masuk pada pengguna <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> tab. Atau, buka ** cli **.
 2. Masukkan kelayakan kloros+ anda dan log masuk
 3. Lesen di -cache secara tempatan (berterusan merentasi reboot)
 

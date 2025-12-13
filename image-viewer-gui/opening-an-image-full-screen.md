@@ -8,7 +8,7 @@ Penonton Imej Chloros menyediakan antara muka skrin penuh yang berdedikasi untuk
 
 Cara yang paling biasa untuk membuka imej dalam penonton imej:
 
-1. Pastikan anda berada di ** pelayar fail ** tab <img src = "../. Gitbook/aset/icon_file-browser.jpg" alt = "" data-size = "line">
+1. Pastikan anda berada di ** pelayar fail ** tab <img src="../. Gitbook/assets/icon_file-browser.jpg" alt="" data-size="line">
 2. Klik mana -mana ** gambar kecil gambar ** dalam grid imej
 3. Imej dibuka di kawasan pratonton utama ** (pusat skrin)
 4. Imej kini dimuatkan dan siap untuk melihat skrin penuh
@@ -17,7 +17,7 @@ Cara yang paling biasa untuk membuka imej dalam penonton imej:
 
 Setelah imej dimuatkan di kawasan pratonton:
 
-1. Klik ** Image Viewer ** <img src = "../. Gitbook/Aset/icon_image-viewer.jpg" alt = "" data-size = "line"> ikon di bar sisi kiri
+1. Klik ** Image Viewer ** <img src="../. Gitbook/Aset/icon_image-viewer.jpg" alt="" data-size="line"> ikon di bar sisi kiri
 2. Tab Penonton Imej dibuka, memaparkan skrin penuh imej yang dipilih
 3. Alat tontonan dan analisis lanjutan boleh didapati di bar sisi kiri
 
@@ -132,7 +132,7 @@ Semasa anda menggerakkan kursor tetikus anda ke atas imej, nilai piksel dipapark
 
 Sapukan indeks multispektral dan jadual paparan warna:
 
-1. Cari ** Indeks/Lut Sandbox ** In ** Image Viewer ** <img src = "../. Gitbook/aset/icon_image-viewer.jpg" alt = "" data-size = "line">
+1. Cari ** Indeks/Lut Sandbox ** In ** Image Viewer ** <img src="../. Gitbook/assets/icon_image-viewer.jpg" alt="" data-size="line">
 2. Pilih Indeks Vegetasi (NDVI, NDRE, dll.)
 3. Pilih formula multispektral, atau buat satu adat anda sendiri (chloros+ sahaja)
 4. Gunakan kecerunan lut warna untuk visualisasi

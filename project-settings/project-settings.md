@@ -1,13 +1,13 @@
 # Tetapan Projek
 
-Tetapan Projek <img src = ".. Tetapan ini disimpan dengan projek anda dan boleh disimpan sebagai templat untuk digunakan semula di pelbagai projek.
+Tetapan Projek <img src=".. Tetapan ini disimpan dengan projek anda dan boleh disimpan sebagai templat untuk digunakan semula di pelbagai projek.
 
 ## Mengakses Tetapan Projek
 
 Untuk mengakses tetapan projek:
 
 1. Buka projek di kloros
-2. Klik tetapan projek ** ** <img src = "../. Gitbook/aset/icon_project-settings.jpg" alt = "" data-size = "line"> di bar sisi kiri
+2. Klik tetapan projek ** ** <img src="../. Gitbook/assets/icon_project-settings.jpg" alt="" data-size="line"> di bar sisi kiri
 3. Panel Tetapan akan memaparkan semua pilihan konfigurasi yang disediakan oleh kategori
 
 ***

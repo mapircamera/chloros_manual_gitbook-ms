@@ -1,11 +1,11 @@
 # Menambah fail ke projek
 
-Sebaik sahaja anda telah membuat atau membuka projek di kloros, langkah seterusnya adalah untuk menambah imej multispektral anda untuk memulakan pemprosesan. Penyemak imbas fail <img src = "../. Gitbook/aset/icon_file-browser.jpg" alt = "" tab data = "line"> menjadikannya mudah untuk mengimport imej dan menguruskan dataset anda.
+Sebaik sahaja anda telah membuat atau membuka projek di kloros, langkah seterusnya adalah untuk menambah imej multispektral anda untuk memulakan pemprosesan. Penyemak imbas fail <img src="../. Gitbook/assets/icon_file-browser.jpg" alt="" tab data = "line"> menjadikannya mudah untuk mengimport imej dan menguruskan dataset anda.
 
 ## Mengakses penyemak imbas fail
 
 1. Buka atau buat projek di kloros
-2. Klik penyemak imbas fail ** <img src = "../.
+2. Klik penyemak imbas fail ** <img src="../.
 3. Panel penyemak imbas fail akan memaparkan senarai fail projek anda
 
 {% hint style="info" %}
