@@ -57,7 +57,7 @@ Dalam jadual penyemak imbas fail yang sebelum memilih imej sasaran di lajur kana
 
 <details>
 
-<summary>If I will upload my images to <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud</a> should I process in Chloros prior to uploading?</summary>
+<summary>Jika saya akan memuat naik imej saya ke <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud</a> patutkah saya memproses dalam Chloros sebelum memuat naik?</summary>
 
 Jika anda bercadang untuk memuat naik ke platform pemprosesan dalam talian kami [Mapir Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription) Jangan edit imej sebelum dimuat naik. Awan akan melakukan semua pemprosesan yang sama dan banyak lagi.
 
