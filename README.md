@@ -1,48 +1,47 @@
 ---
 metaLinks: {}
 ---
+# Pengenalan
 
-# Getting Started
+<Div Data-Full-Width = "False"> <IGOS> <IMG SRC = ". Gitbook/Asset/Chloros_Logo_Transparent.png" alt = ""> <igcaption> </figcaption> </angka>
 
-<div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>
-
-Chloros is a software application from [MAPIR](https://www.mapir.camera) to process images and other sensor data.
-
-***
-
-Chloros is available in 4 application modes:
-
-## Chloros: Desktop GUI application
-
-\[Recommended] Standalone separate window with all features.
-
-## Chloros (Browser): Web-based GUI interface
-
-Runs in your web browser (Chrome/Edge). Best for slower computers with <4GB VRAM.
-
-## [Chloros CLI: Command line interface](CLI.md)
-
-Command-line batch processing. Perfect for automation, scripting, and advanced workflows. _CLI requires a Chloros+ license to access._
-
-## [Chloros API: Python SDK](api-python-sdk.md)
-
-Programmatic Python interface for automation and custom workflows. Perfect for research pipelines, integration with existing Python applications, and building custom tools. _API requires a Chloros+ license to access._
+Chloros adalah aplikasi perisian dari [MAPIR] (https://www.mapir.camera) untuk memproses imej dan data sensor lain.
 
 ***
 
-## Chloros+
+Chloros boleh didapati dalam 4 mod permohonan:
 
-While Chloros is free to use for most tasks, you may find you want more. That is where a paid license for Chloros+ can benefit you. With a Chloros+ license you can unlock new features such as:
+## Chloros - Aplikasi GUI Desktop
 
-* **Multi-threaded Processing**: greatly speed up image processing for larger projects by simultaneously processing images through the pipeline.
-* **GPU (CUDA) Acceleration**: take advantage of today's higher GPU memory options to further speed up the image processing pipeline. We recommend 4GB or more of VRAM for best results.
-* **Chloros+** [**CLI**](CLI.md) **Access**: run Chloros+ from the command line to automate and integrate into your own software.
-* **Chloros+** [**API**](api-python-sdk.md) **Access:** run Chloros+ from Python for programmatic control, enabling seamless integration with your research pipelines, data analysis workflows, and custom applications.
-* **Multiple Device Usage**: each Chloros+ license allows for 2+ devices to be registered. Use your MAPIR Cloud account to manage registered devices. Add support for more devices by upgrading your Chloros+ license.
-* **Custom Multispectral Index Formulas:** enter in custom multispectral indices in the Chloros raster calculators, both for processing and the image viewing sandbox.
+\ [Disyorkan] Tetingkap mandiri penuh.
 
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary" data-icon="envira">Chloros+ Pricing &#x26; Signup</a></p>
+## Chloros (penyemak imbas): Antara muka GUI berasaskan Web
 
-<figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
+Ia berjalan di pelayar web anda (Chrome/Edge). Ideal untuk komputer yang lebih perlahan dengan kurang daripada 4 GB VRAM.
 
-<figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>
+## [Chloros CLI: Interface Line Command] (CLI.MD)
+
+Pemprosesan batch dari baris arahan. Sempurna untuk aliran kerja automasi, skrip, dan lanjutan. _Cli ​​memerlukan lesen chloros+ untuk akses._
+
+## [CHLOROS API: Python SDK] (API-PYTHON-SDK.MD)
+
+Antara muka Program Python untuk aliran kerja automasi dan adat. Sempurna untuk proses penyelidikan, integrasi dengan aplikasi Python sedia ada, dan membuat alat tersuai. _ API memerlukan lesen Chloros+ untuk mengaksesnya._
+
+***
+
+## chloros+
+
+Walaupun kloros bebas untuk digunakan untuk kebanyakan tugas, anda mungkin mahu lebih banyak. Di sinilah lesen berbayar untuk Chloros+ boleh menjadi berguna. Dengan lesen Chloros+, anda boleh membuka kunci ciri baru, seperti:
+
+*** Pemprosesan Multi-threaded **: Secara dramatik mempercepatkan pemprosesan imej untuk projek-projek yang lebih besar dengan memproses imej secara serentak merentasi saluran paip.
+*** Percepatan GPU (CUDA) **: Ambil kesempatan daripada pilihan memori GPU yang lebih tinggi hari ini untuk mempercepatkan saluran pemprosesan imej. Kami mengesyorkan 4 GB atau lebih VRAM untuk hasil terbaik.
+*** chloros+ ** [** cli **] (cli.md) ** Access ** - Run Chloros+ dari baris arahan untuk mengautomasikan dan mengintegrasikan ke dalam perisian anda sendiri.
+*** Chloros+ ** [** API **] (API-Python-sdk.md) ** Access: ** Run Chloros+ dari Python untuk kawalan programatik, membolehkan integrasi lancar dengan proses penyelidikan anda, aliran kerja analisis data, dan aplikasi tersuai.
+*** Penggunaan pelbagai peranti **: Setiap lesen Chloros+ membolehkan anda mendaftarkan lebih daripada dua peranti. Gunakan akaun Mapir Cloud anda untuk menguruskan peranti berdaftar. Tambah sokongan untuk lebih banyak peranti dengan menaik taraf lesen Chloros+ anda.
+*** Formula indeks multispektral tersuai: ** Masukkan indeks multispektral tersuai ke dalam kalkulator raster kloros, kedua -duanya untuk pemprosesan dan imej melihat kotak pasir.
+
+<p align = "center"> <a href = "https://cloud.mapir.camera/pricing" class = "Button primary" Data-icon = "envira"> chloros+ harga dan pendaftaran </a> </p>
+
+<IGROS> <img src = ". Gitbook/aset/plus_prog.jpg" alt = ""> <igcaption> </figcaption> </angka>
+
+<IGROS> <img src = ". Gitbook/aset/cli.jpg" alt = ""> <igcapaption> </figcaption> </angka>

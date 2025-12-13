@@ -1,392 +1,378 @@
-# Monitoring the Processing
+# Pemantauan pemantauan
 
-Once processing has started, Chloros provides several ways to monitor progress, check for issues, and understand what's happening with your dataset. This page explains how to track your processing and interpret the information Chloros provides.
+Sebaik sahaja pemprosesan telah bermula, Chloros menawarkan beberapa cara untuk memantau kemajuan, periksa masalah, dan memahami apa yang berlaku dengan set data anda. Halaman ini menerangkan cara mengesan pemprosesan dan mentafsirkan maklumat yang disediakan oleh Chloros.
 
-## Progress Bar Overview
+## Gambaran Keseluruhan Bar Kemajuan
 
-The progress bar in the top header shows real-time processing status and completion percentage.
+Bar kemajuan di bahagian atas tajuk menunjukkan status pemprosesan masa nyata dan peratusan lengkap.
 
-### Free Mode Progress Bar
+### bar kemajuan dalam mod percuma
 
-For users without Chloros+ license:
+Bagi pengguna tanpa lesen Chloros+:
 
-**2-Stage Progress Display:**
+** Paparan kemajuan dalam dua peringkat: **
 
-1. **Target Detect** - Finding calibration targets in images
-2. **Processing** - Applying corrections and exporting
+1. ** Pengesanan Sasaran **: Cari sasaran penentukuran dalam imej.
+2. ** Pemprosesan **: Penggunaan pembetulan dan eksport.
 
-**Progress bar shows:**
+** Kemajuan bar menunjukkan: **
 
-* Overall completion percentage (0-100%)
-* Current stage name
-* Simple horizontal bar visualization
+* Jumlah peratusan siap (0-100%)
+* Nama peringkat semasa
+* Paparan mudah dengan bar mendatar
 
-### Chloros+ Progress Bar
+### chloros+ bar kemajuan
 
-For users with Chloros+ license:
+Bagi pengguna dengan lesen Chloros+:
 
-**4-Stage Progress Display:**
+** Kemajuan visualisasi dalam 4 peringkat: **
 
-1. **Detecting** - Finding calibration targets
-2. **Analyzing** - Examining images and preparing pipeline
-3. **Calibrating** - Applying vignette and reflectance corrections
-4. **Exporting** - Saving processed files
+1. ** Pengesanan **: Cari sasaran penentukuran.
+2. ** Analisis **: Pemeriksaan imej dan penyediaan proses.
+3. ** Penentukuran **: Penggunaan vignette dan pembetulan refleksi.
+4. ** Eksport **: Menyimpan fail yang diproses.
 
-**Interactive Features:**
+** Ciri Interaktif: **
 
-* **Hover over** progress bar to see expanded 4-stage panel
-* **Click** progress bar to freeze/pin the expanded panel
-* **Click again** to unfreeze and auto-hide on mouse leave
-* Each stage shows individual progress (0-100%)
-
-***
-
-## Understanding Each Processing Stage
-
-### Stage 1: Detecting (Target Detection)
-
-**What's happening:**
-
-* Chloros scans images marked with Target checkbox
-* Computer vision algorithms identify the 4 calibration panels
-* Reflectance values extracted from each panel
-* Target timestamps recorded for proper calibration scheduling
-
-**Duration:**
-
-* With marked targets: 10-60 seconds
-* Without marked targets: 5-30+ minutes (scans all images)
-
-**Progress indicator:**
-
-* Detecting: 0% → 100%
-* Number of images scanned
-* Targets found count
-
-**What to watch for:**
-
-* Should complete quickly if targets properly marked
-* If taking too long, targets may not be marked
-* Check Debug Log for "Target found" messages
-
-### Stage 2: Analyzing
-
-**What's happening:**
-
-* Reading image EXIF metadata (timestamps, exposure settings)
-* Determining calibration strategy based on target timestamps
-* Organizing image processing queue
-* Preparing parallel processing workers (Chloros+ only)
-
-**Duration:** 5-30 seconds
-
-**Progress indicator:**
-
-* Analyzing: 0% → 100%
-* Fast stage, usually completes quickly
-
-**What to watch for:**
-
-* Should progress steadily without pauses
-* Warnings about missing metadata will appear in Debug Log
-
-### Stage 3: Calibrating
-
-**What's happening:**
-
-* **Debayering**: Converting RAW Bayer pattern to 3 channels
-* **Vignette correction**: Removing lens edge darkening
-* **Reflectance calibration**: Normalizing with target values
-* **Index calculation**: Computing multispectral indices
-* Processing each image through the full pipeline
-
-**Duration:** Majority of total processing time (60-80%)
-
-**Progress indicator:**
-
-* Calibrating: 0% → 100%
-* Current image being processed
-* Images completed / Total images
-
-**Processing behavior:**
-
-* **Free mode**: Processes one image at a time sequentially
-* **Chloros+ mode**: Processes up to 16 images simultaneously
-* **GPU acceleration**: Significantly speeds up this stage
-
-**What to watch for:**
-
-* Steady progress through image count
-* Check Debug Log for per-image completion messages
-* Warnings about image quality or calibration issues
-
-### Stage 4: Exporting
-
-**What's happening:**
-
-* Writing calibrated images to disk in selected format
-* Exporting multispectral index images with LUT colors
-* Creating camera model subfolders
-* Preserving original filenames with appropriate suffixes
-
-**Duration:** 10-20% of total processing time
-
-**Progress indicator:**
-
-* Exporting: 0% → 100%
-* Files being written
-* Export format and destination
-
-**What to watch for:**
-
-* Disk space warnings
-* File write errors
-* Completion of all configured outputs
+*** Hover ke atas ** Bar Kemajuan untuk melihat panel 4-peringkat yang diperluaskan.
+*** Klik ** pada bar kemajuan untuk membekukan/pin panel yang diperluaskan
+*** Klik Lagi ** untuk Membongkar dan Sembunyikan Secara Automatik Apabila anda mengeluarkan tetikus
+* Setiap peringkat menunjukkan kemajuan individu (0-100%)
 
 ***
 
-## Debug Log Tab
+## Memahami setiap peringkat pemprosesan
 
-The Debug Log provides detailed information about processing progress and any issues encountered.
+### Peringkat 1: Pengesanan (Pengesanan Sasaran)
 
-### Accessing the Debug Log
+** Apa yang berlaku: **
 
-1. Click the **Debug Log** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> icon in the left sidebar
-2. Log panel opens showing real-time processing messages
-3. Auto-scrolls to show latest messages
+* Chloros mengimbas imej yang ditandai dengan kotak sasaran
+* Algoritma penglihatan mesin mengenal pasti 4 panel penentukuran
+* Nilai refleksi diekstrak dari setiap panel
+*Timestamp sasaran direkodkan untuk menjadualkan penentukuran dengan betul
 
-### Understanding Log Messages
+** Tempoh: **
 
-#### Information Messages (White/Gray)
+* Dengan objektif yang ditandakan: 10-60 saat
+*Tiada sasaran yang ditandakan: 5-30+ minit (imbas semua imej)
 
-Normal processing updates:
+** Petunjuk Kemajuan: **
 
-```
-[INFO] Processing started
-[INFO] Target detected in IMG_0015.RAW - 4 panels found
-[INFO] Calibrating IMG_0234.RAW
-[INFO] Exported NDVI image: IMG_0234_NDVI.tif
-[INFO] Processing complete
-```
+* Pengesanan: 0% → 100%.
+* Bilangan imej yang diimbas.
+* Mengira sasaran yang dijumpai.
 
-#### Warning Messages (Yellow)
+** Apa yang perlu diperhatikan: **
 
-Non-critical issues that don't stop processing:
+*Harus diselesaikan dengan cepat jika objektif ditandakan dengan betul.
+*Jika terlalu lama, sasaran mungkin tidak ditandakan.
+* Semak log debug untuk mesej "Target Found".
 
-```
-[WARN] No GPS data found in IMG_0145.RAW
-[WARN] Target image timestamp gap > 30 minutes
-[WARN] Low contrast in calibration panel - results may vary
-```
+### Peringkat 2: Analisis
 
-**Action:** Review warnings after processing, but don't interrupt
+** Apa yang berlaku: **
 
-#### Error Messages (Red)
+* Membaca metadata EXIF ​​dari imej (setem masa, tetapan pendedahan).
+* Penentuan strategi penentukuran berdasarkan cap waktu sasaran.
+* Organisasi giliran pemprosesan imej.
+* Penyediaan pekerja pemprosesan selari (chloros+ sahaja).
 
-Critical issues that may cause processing to fail:
+** Tempoh: ** 5-30 saat.
 
-```
-[ERROR] Cannot write file - disk full
-[ERROR] Corrupted image file: IMG_0299.RAW
-[ERROR] No targets detected - enable reflectance calibration or mark target images
-```
+** Petunjuk Kemajuan: **
 
-**Action:** Stop processing, resolve error, restart
+* Analisis: 0% → 100%
+* Peringkat cepat, biasanya selesai dengan cepat
 
-### Common Log Messages
+** Apa yang perlu diperhatikan: **
 
-| Message                          | Meaning                                | Action Needed                                         |
+* Mesti maju dengan mantap tanpa jeda
+* Amaran mengenai Metadata Hilang akan muncul dalam log debug
+
+### Peringkat 3: Penentukuran
+
+** Apa yang berlaku: **
+
+*** de-bayerization **: Penukaran corak mentah Bayer ke 3 saluran
+*** Pembetulan Vignette **: Pembuangan kelebihan lensa gelap.
+*** Penentukuran Refleksi **: Normalisasi dengan nilai sasaran.
+*** Pengiraan Indeks **: Pengiraan indeks multispektral.
+* Pemprosesan setiap imej sepanjang keseluruhan proses.
+
+** Tempoh: ** Kebanyakan jumlah masa pemprosesan (60-80%).
+
+** Petunjuk Kemajuan: **
+
+* Penentukuran: 0% → 100%
+* Imej semasa yang sedang berjalan
+* Imej / jumlah gambar yang lengkap
+
+** Tingkah laku pemprosesan: **
+
+*** Mod Percuma **: Proses satu gambar pada satu masa secara berurutan
+*** mod kloros+**: proses sehingga 16 imej secara serentak
+*** Percepatan GPU **: Mempercepatkan tahap ini.
+
+** Apa yang perlu diperhatikan: **
+
+* Kemajuan berterusan melalui pengiraan imej.
+* Semak log debug untuk mesej penyelesaian per-imej.
+* Amaran mengenai kualiti imej atau isu penentukuran.
+
+### Peringkat 4: Eksport
+
+** Apa yang berlaku: **
+
+* Tulis imej yang dikalibrasi ke cakera dalam format yang dipilih
+* Imej indeks multispektral eksport dengan warna lut
+* Buat subfolder model kamera
+* Memelihara nama fail asal dengan akhiran yang sesuai
+
+** Tempoh: ** 10-20% daripada jumlah masa pemprosesan
+
+** Petunjuk Kemajuan: **
+
+* Eksport: 0% → 100%
+* Fail yang ditulis
+* Format dan destinasi eksport
+
+** Apa yang perlu diperhatikan: **
+
+*Amaran ruang cakera
+* Kesalahan penulisan fail
+* Penyiapan semua output yang dikonfigurasikan
+
+***
+
+## Tab Log Debug
+
+Log debug memberikan maklumat terperinci mengenai kemajuan pemprosesan dan sebarang masalah yang dihadapi.
+
+### mengakses log debug
+
+1. Klik Log Debug ** <img src = "../. Gitbook/Assets/icon_log.jpg" alt = "" data-size = "line"> ikon di bar sisi kiri
+2. Panel log dibuka, memaparkan mesej pemprosesan masa nyata
+3. Skrol secara automatik untuk menunjukkan mesej paling terkini
+
+### Memahami mesej log
+
+#### Mesej maklumat (putih/kelabu)
+
+Kemas kini pemprosesan biasa:
+
+___Code0001___
+
+#### Mesej amaran (kuning)
+
+Isu bukan kritikal yang tidak berhenti diproses:
+
+___Code0002___
+
+** Tindakan: ** Kajian amaran selepas diproses, tetapi jangan mengganggu pemprosesan.
+
+#### Mesej ralat (rangkaian)
+
+Isu kritikal yang boleh menyebabkan pemprosesan gagal:
+
+___Code0003___
+
+** Tindakan: ** Berhenti memproses, menyelesaikan ralat, dan mulakan semula.
+
+### mesej log biasa
+
+| Mesej | Makna | Tindakan diperlukan |
 | -------------------------------- | -------------------------------------- | ----------------------------------------------------- |
-| "Target detected in \[filename]" | Calibration target found successfully  | None - normal                                         |
-| "Processing image X of Y"        | Current progress update                | None - normal                                         |
-| "No targets found"               | No calibration targets detected        | Mark target images or disable reflectance calibration |
-| "Insufficient disk space"        | Not enough storage for output          | Free up disk space                                    |
-| "Skipping corrupted file"        | Image file is damaged                  | Re-copy file from SD card                             |
-| "PPK data applied"               | GPS corrections from .daq file applied | None - normal                                         |
+| «Sasaran dikesan di \ [Filename]» | Sasaran penentukuran dijumpai dengan betul | Tiada - Normal |
+| «Pemprosesan Imej X of Y» | Kemas kini Kemajuan Semasa | Tiada - Normal |
+| «Tiada sasaran dijumpai» | Tiada sasaran penentukuran dikesan | Tandakan imej sasaran atau melumpuhkan penentukuran refleksi |
+| "Ruang cakera yang tidak mencukupi" | Penyimpanan yang tidak mencukupi untuk output | Ruang cakera percuma |
+| «Melangkau fail yang rosak» | Fail imej rosak | Salin fail kembali dari kad SD |
+| «Data PPK Gunaan» | .daq fail GPS FIXES DAPATKAN | Tiada - Normal |
 
-### Copying Log Data
+### Salin data log
 
-To copy log for troubleshooting or support:
+Untuk menyalin log untuk menyelesaikan masalah atau tujuan sokongan teknikal:
 
-1. Open Debug Log panel
-2. Click **"Copy Log"** button (or right-click → Select All)
-3. Paste into text file or email
-4. Send to MAPIR support if needed
-
-***
-
-## System Resource Monitoring
-
-### CPU Usage
-
-**Free Mode:**
-
-* 1 CPU core at \~100%
-* Other cores idle or available
-* System remains responsive
-
-**Chloros+ Parallel Mode:**
-
-* Multiple cores at 80-100% (up to 16 cores)
-* High overall CPU utilization
-* System may feel less responsive
-
-**To monitor:**
-
-* Windows Task Manager (Ctrl+Shift+Esc)
-* Performance tab → CPU section
-* Look for "Chloros" or "chloros-backend" processes
-
-### Memory (RAM) Usage
-
-**Typical usage:**
-
-* Small projects (< 100 images): 2-4 GB
-* Medium projects (100-500 images): 4-8 GB
-* Large projects (500+ images): 8-16 GB
-* Chloros+ parallel mode uses more RAM
-
-**If memory is low:**
-
-* Process smaller batches
-* Close other applications
-* Upgrade RAM if regularly processing large datasets
-
-### GPU Usage (Chloros+ with CUDA)
-
-When GPU acceleration is enabled:
-
-* NVIDIA GPU shows high utilization (60-90%)
-* VRAM usage increases (requires 4GB+ VRAM)
-* Calibrating stage is significantly faster
-
-**To monitor:**
-
-* NVIDIA System Tray icon
-* Task Manager → Performance → GPU
-* GPU-Z or similar monitoring tool
-
-### Disk I/O
-
-**What to expect:**
-
-* High disk read during Analyzing stage
-* High disk write during Exporting stage
-* SSD significantly faster than HDD
-
-**Performance tip:**
-
-* Use SSD for project folder when possible
-* Avoid network drives for large datasets
-* Ensure disk isn't near capacity (affects write speed)
+1. Buka panel log debug.
+2. Klik butang ** «Copy Log» ** (atau klik kanan → Pilih Semua).
+3. Tampalkan kandungan ke dalam fail teks atau e -mel.
+4. Hantar ke Sokongan Teknikal Mapir jika perlu.
 
 ***
 
-## Detecting Problems During Processing
+## sumber sistem pemantauan
 
-### Warning Signs
+### Penggunaan CPU
 
-**Progress stalls (no change for 5+ minutes):**
+** Mod Percuma: **
 
-* Check Debug Log for errors
-* Verify disk space available
-* Check Task Manager to ensure Chloros is running
+* 1 teras CPU pada ~ 100%
+* Teras lain tidak aktif atau tersedia
+* Sistem masih bertindak balas
 
-**Error messages appear frequently:**
+** Kloros+ mod selari: **
 
-* Stop processing and review errors
-* Common causes: disk space, corrupted files, memory issues
-* See Troubleshooting section below
+* Multi-teras pada 80-100% (sehingga 16 teras)
+* Penggunaan CPU keseluruhan yang tinggi
+* Sistem mungkin kelihatan kurang responsif.
 
-**System becomes unresponsive:**
+** untuk memantau: **
 
-* Chloros+ parallel mode using too many resources
-* Consider reducing concurrent tasks or upgrading hardware
-* Free mode is less resource-intensive
+* Pengurus Tugas Windows (Ctrl+Shift+ESC)
+* Tab Prestasi → Bahagian CPU
+* Cari proses "kloros" atau "kloros-backend".
 
-### When to Stop Processing
+### penggunaan memori (RAM)
 
-Stop processing if you see:
+** Penggunaan biasa: **
 
-* ❌ "Disk full" or "Cannot write file" errors
-* ❌ Repeated image file corruption errors
-* ❌ System completely frozen (not responding)
-* ❌ Realized wrong settings were configured
-* ❌ Wrong images imported
+* Projek Kecil (<100 imej): 2-4 GB
+* Projek Sederhana (100-500 imej): 4-8 GB
+* Projek Besar (500+ gambar): 8-16 GB
+* Chloros+ mod selari menggunakan lebih banyak ram
 
-**How to stop:**
+** Sekiranya memori tidak mencukupi: **
 
-1. Click **Stop/Cancel button** (replaces Start button)
-2. Processing halts, progress is lost
-3. Fix issues and restart from beginning
+* Proses kelompok yang lebih kecil.
+* Tutup aplikasi lain.
+*Meningkatkan RAM Jika anda kerap memproses set data yang besar.
 
-***
+### Penggunaan GPU (Chloros+ dengan CUDA)
 
-## Troubleshooting During Processing
+Apabila pecutan GPU didayakan:
 
-### Processing is Very Slow
+* NVIDIA GPU menunjukkan penggunaan yang tinggi (60-90%).
+* Penggunaan VRAM meningkat (memerlukan 4GB+ VRAM).
+* Tahap penentukuran jauh lebih cepat.
 
-**Possible causes:**
+** untuk memantau: **
 
-* Unmarked target images (scanning all images)
-* HDD instead of SSD storage
-* Insufficient system resources
-* Many indices configured
-* Network drive access
+* Ikon dulang sistem nvidia.
+* Pengurus Tugas → Prestasi → GPU.
+* GPU-Z atau alat pemantauan yang serupa.
 
-**Solutions:**
+### Disk I/O.
 
-1. If just started and in Detecting stage: Cancel, mark targets, restart
-2. For future: Use SSD, reduce indices, upgrade hardware
-3. Consider CLI for batch processing large datasets
+** Apa yang diharapkan: **
 
-### "Disk Space" Warnings
+* Cakera tinggi dibaca semasa fasa analisis.
+* Cakera tinggi menulis semasa fasa eksport.
+* SSD jauh lebih cepat daripada HDD.
 
-**Solutions:**
+** Petua Prestasi: **
 
-1. Free up disk space immediately
-2. Move project to drive with more space
-3. Reduce number of indices to export
-4. Use JPG format instead of TIFF (smaller files)
-
-### Frequent "Corrupted File" Messages
-
-**Solutions:**
-
-1. Re-copy images from SD card to ensure integrity
-2. Test SD card for errors
-3. Remove corrupted files from project
-4. Continue processing remaining images
-
-### System Overheating / Throttling
-
-**Solutions:**
-
-1. Ensure adequate ventilation
-2. Clean dust from computer vents
-3. Reduce processing load (use Free mode instead of Chloros+)
-4. Process during cooler times of day
+* Gunakan SSD untuk folder projek apabila mungkin.
+* Elakkan pemacu rangkaian untuk set data yang besar.
+* Pastikan pemacu tidak dekat dengan kapasiti maksimumnya (mempengaruhi kelajuan menulis).
 
 ***
 
-## Processing Complete Notification
+## mengesan masalah semasa pemprosesan
 
-When processing finishes:
+Tanda -tanda amaran ###
 
-* Progress bar reaches 100%
-* **"Processing Complete"** message appears in Debug Log
-* Start button becomes enabled again
-* All output files are in camera model subfolder
+** Kemajuan berhenti (tiada perubahan selama lebih dari 5 minit): **
+
+* Semak log debug untuk kesilapan.
+* Semak ruang cakera yang tersedia.
+* Periksa Pengurus Tugas untuk memastikan kloros berjalan.
+
+** Mesej ralat sering muncul: **
+
+* Berhenti memproses dan periksa kesilapan.
+* Penyebab umum: Ruang cakera, fail yang rosak, masalah memori.
+* Lihat bahagian penyelesaian masalah di bawah.
+
+** Sistem berhenti bertindak balas: **
+
+* Chloros+ dalam mod selari menggunakan terlalu banyak sumber.
+* Pertimbangkan untuk mengurangkan tugas serentak atau menaik taraf perkakasan.
+* Mod percuma menggunakan kurang sumber.
+
+### Bilakah berhenti memproses
+
+Berhenti memproses jika anda melihat:
+
+* ❌ "Cakera penuh" atau "tidak boleh menulis fail" ralat.
+* ❌ Ralat Rasuah Fail Imej Berulang.
+* ❌ Sistem ini telah terhempas sepenuhnya (tidak bertindak balas).
+* ❌ Ia telah dikesan bahawa tetapan yang salah telah dikonfigurasikan.
+* ❌ Imej yang salah telah diimport.
+
+** Cara menghentikannya: **
+
+1. Klik butang Stop/Batal ** ** (menggantikan butang Mula).
+2. Perhentian pemprosesan dan kemajuan hilang
+3. Betulkan masalah dan mulakan semula dari awal
 
 ***
 
-## Next Steps
+## menyelesaikan masalah semasa pemprosesan
 
-Once processing completes:
+### pemprosesan sangat perlahan
 
-1. **Review results** - See [Finishing the Processing](finishing-the-processing.md)
-2. **Check output folder** - Verify all files exported correctly
-3. **Review Debug Log** - Check for any warnings or errors
-4. **Preview processed images** - Use Image Viewer or external software
+** Kemungkinan Punca: **
 
-For information about reviewing and using your processed results, see [Finishing the Processing](finishing-the-processing.md).
+* Imej sasaran yang tidak terkawal (imbas semua imej)
+* Penyimpanan HDD dan bukannya SSD
+*Sumber sistem yang tidak mencukupi
+* Banyak indeks yang dikonfigurasikan
+* Akses pemacu rangkaian
+
+** Penyelesaian: **
+
+1. Jika anda baru sahaja bermula dan berada dalam fasa pengesanan: Batalkan, tandakan objektif dan mulakan semula.
+2. Untuk masa depan: Gunakan SSD, mengurangkan indeks dan menaik taraf perkakasan.
+3. Pertimbangkan menggunakan CLI untuk pemprosesan batch set data besar.
+
+### "Ruang cakera" amaran
+
+** Penyelesaian: **
+
+1. Percuma ruang cakera segera.
+2. Pindahkan projek ke pemanduan dengan lebih banyak ruang.
+3. Kurangkan bilangan indeks untuk mengeksport.
+4. Gunakan format JPG dan bukannya TIFF (fail yang lebih kecil).
+
+### Mesej "fail yang rosak"
+
+** Penyelesaian: **
+
+1. Salin gambar sekali lagi dari kad SD untuk memastikan integriti mereka.
+2. Semak kad SD untuk kesilapan.
+3. Padam fail yang rosak dari projek.
+4. Teruskan memproses imej yang tinggal.
+
+### Sistem terlalu panas/kelembapan
+
+** Penyelesaian: **
+
+1. Pastikan pengudaraan yang mencukupi.
+2. Debu bersih dari lubang komputer.
+3. Mengurangkan beban pemprosesan (gunakan mod percuma dan bukannya chloros+).
+4. Proses semasa waktu paling keren pada hari itu.
+
+***
+
+## Pemberitahuan pemprosesan selesai
+
+Semasa pemprosesan selesai:
+
+* Bar kemajuan mencapai 100%.
+*** "Pemprosesan Selesai" ** Mesej muncul dalam log debug.
+* Butang rumah diaktifkan lagi.
+* Semua fail output terletak di subfolder model kamera.
+
+***
+
+## Langkah seterusnya
+
+Setelah pemprosesan selesai:
+
+1. ** Semak hasil **: lihat [menyelesaikan pemprosesan] (penamat-the-processing.md).
+2. ** Semak Folder Output ** - Sahkan bahawa semua fail telah dieksport dengan jayanya.
+3. ** Periksa log debug ** - periksa amaran atau kesilapan.
+4. ** Pratonton Imej yang diproses **: Gunakan penonton imej atau perisian luaran.
+
+Untuk maklumat tentang cara mengkaji dan menggunakan hasil yang diproses, lihat [menyelesaikan pemprosesan] (penamat-the-processing.md).

@@ -3,170 +3,163 @@ metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/download
 ---
+# Pelepasan
 
-# Download
+Muat turun versi terkini kloros untuk Windows dan mulakan dengan pemprosesan imej multispektral.
 
-Download the latest version of Chloros for Windows to get started with multispectral image processing.
+Keperluan sistem ###
 
-### System Requirements
+| Keperluan | Minimum | Disyorkan |
+| -------------------- | ---------------------------- | ---------------------------- |
+| ** Sistem Operasi ** | Windows 10 (64-bit) | Windows 11 (64-bit) |
+| ** pemproses ** | Intel Core i5 atau setara | Intel Core i7 atau lebih tinggi |
+| ** Memory (RAM) ** | 8GB | 16 GB atau lebih |
+| ** Kad Grafik ** | DirectX 11 serasi | NVIDIA GPU dengan 4 GB+ VRAM |
+| ** Penyimpanan ** | 2 GB ruang kosong | SSD dengan 10 GB+ ruang kosong |
+| ** paparan ** | 1920x1080 | 2560 x 1440 atau lebih tinggi |
+| ** Internet ** | Diperlukan untuk Pengaktifan Lesen | Diperlukan untuk Pengaktifan Lesen |
 
-| Requirement          | Minimum                         | Recommended                     |
-| -------------------- | ------------------------------- | ------------------------------- |
-| **Operating System** | Windows 10 (64-bit)             | Windows 11 (64-bit)             |
-| **Processor**        | Intel Core i5 or equivalent     | Intel Core i7 or better         |
-| **Memory (RAM)**     | 8GB                             | 16GB or more                    |
-| **Graphics Card**    | DirectX 11 compatible           | NVIDIA GPU with 4GB+ VRAM       |
-| **Storage**          | 2GB free space                  | SSD with 10GB+ free space       |
-| **Display**          | 1920x1080                       | 2560x1440 or higher             |
-| **Internet**         | Required for license activation | Required for license activation |
-
-{% hint style="info" %}
-**GPU Acceleration**: Chloros+ users with NVIDIA GPUs (4GB+ VRAM) can use CUDA acceleration for significantly faster processing.
-{% endhint %}
-
-***
-
-## Download Chloros
-
-### <a href="https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link" class="button primary">Download Chloros Here</a>
-
-### Latest Stable Release
-
-**Chloros Installer for Windows**
-
-* **Version**: 1.0.3
-* **Release Date**: December ?, 2025
-* **File Size**: 1.6GB
-* **File Type**: .exe (Windows Installer)
-
-#### **Installation Steps:**
-
-1. Download the `CHLOROS INSTALLER - CURRENT VERSION.exe` file
-2. Double-click the installer to begin installation
-3. Follow the installation wizard prompts
-4. Choose installation directory (default: `C:\Program Files\Chloros\`)
-5. Complete installation and launch Chloros
-6. Sign in with your MAPIR Cloud Chloros+ account (or continue with free version)
-
-{% hint style="success" %}
-The installer automatically adds `chloros-cli` to your system PATH for command-line access.
-{% endhint %}
+{% petunjuk gaya = & quot; info & quot; %}
+** Percepatan GPU **: Pengguna Chloros+ dengan NVIDIA GPU (4 GB+ VRAM) boleh menggunakan pecutan CUDA untuk pemprosesan yang lebih cepat.
+{ % endhint %}
 
 ***
 
-## Additional Resources
+## Muat turun chloros
+
+### <a href = "https://drive.google.com/file/d/1hjwruy4m7hgxdbmybo7ipe_6johnugr4/view?usp=drive_link" class = "Button primary"> muat turun chloros di sini </a>
+
+### versi stabil terkini
+
+** pemasang kloros untuk Windows **
+
+*** Versi **: 1.0.3
+*** Tarikh Siaran **: Disember 2025
+*** saiz fail **: 1.6 GB
+*** Jenis Fail **: .exe (Windows Installer)
+
+#### ** Langkah pemasangan: **
+
+1. Muat turun fail ___inline0001___
+2. Klik dua kali pada pemasang untuk memulakan pemasangan
+3. Ikuti arahan wizard pemasangan
+4. Pilih direktori pemasangan (lalai: ___inline0002___)
+5. Lengkapkan pemasangan dan mulakan kloros
+6. Log masuk dengan akaun Mapir Cloud Chloros+ anda (atau teruskan dengan versi percuma).
+
+{% petunjuk gaya = & quot; kejayaan & quot; %}
+Pemasang secara automatik menambah ___inline0003___ ke laluan sistem anda untuk akses baris arahan.
+{ % endhint %}
+
+***
+
+## Sumber tambahan
 
 ### Python SDK
 
-For developers and automation workflows, install the Chloros Python SDK:
+Untuk pemaju dan aliran kerja automasi, pasang SDK Python Chloros:
 
-```bash
-pip install chloros-sdk
-```
+___Code0001___
 
-**Documentation**: [API: Python SDK](api-python-sdk.md)
+** Dokumentasi **: [API: Python SDK] (api-python-sdk.md)
 
-**Requirements**: Chloros Desktop must be installed, Chloros+ license required
+** Keperluan **: Desktop Chloros mesti dipasang, Lesen Chloros+ diperlukan.
 
 ***
 
-## What's Included
+## Apa yang disertakan
 
-The Chloros installation includes:
+Pemasangan kloros termasuk:
 
-* ✅ **Chloros Desktop GUI** - Full-featured graphical interface
-* ✅ **Chloros (Browser)** - Web-based interface for lower-spec systems
-* ✅ **Chloros CLI** - Command-line interface (requires Chloros+ license)
-* ✅ **Backend Engine** - Image processing pipeline
-* ✅ **Camera Profiles** - Pre-configured MAPIR camera templates
-
-***
-
-## Upgrade to Chloros+
-
-Unlock advanced features with a Chloros+ subscription:
-
-* 🚀 **Multi-threaded Processing** - Process images in parallel
-* ⚡ **GPU (CUDA) Acceleration** - Leverage NVIDIA GPU power
-* 💻 **CLI Access** - Automate with command-line tools
-* 🐍 **Python SDK** - Programmatic API access
-* 📱 **Multiple Devices** - Use on 2-10+ devices (plan dependent)
-* 🧮 **Custom Formulas** - Create custom multispectral indices
-
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">View Chloros+ Plans &#x26; Pricing</a></p>
+*✅ ** Chloros Desktop GUI **-Antara Muka Grafik Penuh
+*✅ ** chloros (penyemak imbas) ** - antara muka berasaskan web untuk sistem spec yang lebih rendah
+*✅ ** chloros cli **: antara muka baris perintah (memerlukan lesen chloros+)
+*✅ ** Backend Engine **: Paip pemprosesan imej
+*✅ ** Profil Kamera ** - Templat Kamera Mapir yang telah dikonfigurasikan
 
 ***
 
-## Installation Help
+## chloros+ naik taraf
 
-### Troubleshooting
+Buka kunci ciri lanjutan dengan langganan kloros+:
 
-**Installation fails with error message:**
+*🚀 ** pemprosesan pelbagai threaded **: Proses imej selari
+*⚡ ** pecutan GPU (CUDA) **: Ambil kesempatan daripada kuasa GPU NVIDIA
+*💻 ** CLI Access ** - Automasi dengan alat baris arahan
+*🐍 ** python sdk ** - akses API programatik
+*📱 ** Pelbagai peranti ** - Gunakan pada 2 hingga 10+ peranti (bergantung pada pelan)
+*🧮 ** Formula tersuai ** - Buat indeks multispektral tersuai
 
-* Ensure you have administrator rights
-* Temporarily disable antivirus software
-* Check that you meet minimum system requirements
+<p align = "center"> <a href = "https://cloud.mapir.camera/pricing" class = "Button Primary"> Lihat chloros+ rancangan dan harga </a> </p> *** ***
 
-**Application won't start:**
+## Bantuan pemasangan
 
-* Try Chloros (Browser) version
-* Verify Windows 10/11 (64-bit) is installed
-* Update graphics drivers
-* Check Windows Event Viewer for error details
-* Contact support with error logs
+### penyelesaian masalah
 
-**License activation issues:**
+** Pemasangan gagal dengan mesej ralat: **
 
-* Ensure internet connection is active
-* Verify credentials at [https://cloud.mapir.camera](https://cloud.mapir.camera)
-* Check firewall isn't blocking Chloros
-* See [Chloros+ Login](chloros+-login.md) for detailed instructions
+* Pastikan anda mempunyai hak pentadbir
+* Lumpuhkan sementara perisian antivirus
+* Periksa bahawa anda memenuhi keperluan sistem minimum
 
-### Getting Support
+** Permohonan tidak bermula: **
 
-Need help with installation or setup?
+* Cuba versi chloros (penyemak imbas).
+* Periksa bahawa Windows 10/11 (64-bit) dipasang.
+* Kemas kini pemacu grafik.
+* Semak Windows Event Viewer untuk butiran mengenai ralat.
+* Sokongan hubungi dengan log ralat.
 
-* 📧 **Email**: info@mapir.camera
-* 🌐 **Website**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* 📚 **Documentation**: [Getting Started](./)
-* ❓ **FAQ**: [Frequently Asked Questions](faq.md)
+** Masalah dengan pengaktifan lesen: **
 
-***
+* Pastikan sambungan internet anda aktif.
+* Sahkan kelayakan di [https://cloud.mapir.camera] (https://cloud.mapir.camera).
+* Periksa bahawa firewall tidak menyekat kloros.
+* Lihat [chloros+ login] (chloros+ -login.md) untuk arahan terperinci
 
-## Change Log
+### Dapatkan bantuan
 
-<details>
+Perlukan bantuan dengan pemasangan atau konfigurasi?
 
-<summary>Version 1.0.3</summary>
-
-### **Release Date**: December ?, 2025
-
-#### New Features
-
-* Initial Launch
-
-#### Improvements
-
-* Initial Launch
-
-#### Bug Fixes
-
-* Initial Launch
-
-#### Known Issues
-
-* Initial Launch
-
-</details>
+*📧 ** e -mel **: info@mapir.camera
+*🌐 ** Laman web **: [https://www.mapir.camera/community/contact n(https://www.mapir.camera/community/contact)
+*📚 ** Dokumentasi **: [Pengenalan] (./)
+*❓ ** Soalan Lazim **: [Soalan Lazim] (FAQ.MD)
 
 ***
 
-## License Agreement
+## Changelog
 
-**Proprietary Software** - Copyright (c) 2025 MAPIR Inc.
+<utiran>
 
-Unauthorized use, distribution, or modification is prohibited.
+<summary> Versi 1.0.3 </summary>
 
-**Free Version**: Available for personal and commercial use with feature limitations
+### ** Tarikh Siaran **: Disember 2025?
 
-**Chloros+**: Subscription-based license for advanced features and commercial deployments
+#### Ciri -ciri baru
+
+*Pelepasan awal
+
+#### penambahbaikan
+
+*Pelepasan awal
+
+#### Pembetulan pepijat
+
+*Pelepasan awal
+
+#### isu yang diketahui
+
+*Pelepasan awal
+
+</butiran> ***
+
+## Perjanjian Lesen
+
+** Perisian Proprietari ** - Hak Cipta (c) 2025 Mapir Inc.
+
+Penggunaan, pengedaran atau pengubahsuaian yang tidak dibenarkan adalah dilarang.
+
+** Versi Percuma ** - tersedia untuk kegunaan peribadi dan komersial dengan batasan ciri.
+
+** Chloros+**: Lesen berasaskan langganan untuk ciri-ciri canggih dan pelaksanaan komersil.

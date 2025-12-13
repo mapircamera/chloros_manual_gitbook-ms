@@ -1,26 +1,25 @@
 ---
-description: Panel yang diukur Lab yang digunakan untuk menentukur data yang ditangkap dalam pemprosesan pos
+description: Paneles medidos en laboratorio utilizados para calibrar los datos capturados en el posprocesamiento.
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/calibration-targets
 ---
+# Sasaran penentukuran
 
-# Calibration Targets
+Mapir menawarkan beberapa sasaran penentukuran untuk menampung pelbagai aplikasi. Kompak T4-R50 yang ditunjukkan di bawah mengandungi 4 panel yang telah diukur untuk pemantulan cahaya mereka antara 250 dan 2500 nm.
 
-MAPIR offers various calibration targets to cover a range of applications. The compact T4-R50 seen below contains 4 panels that have been measured for light reflectance from 250 - 2,500 nm.
+<Imige> <img src = ". gitbook/aset/t4-r50_2.jpg" alt = ""> <pmigcaption> <p> mapir t4-r50 </p> </figcaption> </angka>
 
-<figure><img src=".gitbook/assets/t4-r50_2.jpg" alt=""><figcaption><p>MAPIR T4-R50</p></figcaption></figure>
+T4 Sasaran Rujukan Menyebar mempunyai lengkung refleksi berikut, [Muat turun data di sini] (https://cdn.shopify.com/s/files/1/0972/5566/files/mapir_diffuse_reflectance_calibration_target_data_data_t4.xlsx?
 
-The T4 diffuse reference targets have the following reflectance curves, [data download here](https://cdn.shopify.com/s/files/1/0972/5566/files/MAPIR_Diffuse_Reflectance_Standard_Calibration_Target_Data_T4.xlsx?v=1741759157):
+<Imig> <img src = ". Gitbook/aset/MAPIR meresap refleksi data sasaran penentukuran standard T4 (250-2500nm) .png" alt = ""> <prigcaption> <p> MAPIR T4 Reflektif :: 250-2500 nm </p> </angka>
 
-<figure><img src=".gitbook/assets/MAPIR Diffuse Reflectance Standard Calibration Target Data T4 (250-2500nm).png" alt=""><figcaption><p>MAPIR T4 Reflectance :: 250-2500nm</p></figcaption></figure>
+<Impe> <img src = ". Gitbook/aset/MAPIR meresap refleksi data sasaran penentukuran standard T4 (400-1000nm) .png" alt = ""> <igcaption> <p> Mapir T4 Refleksi :: 400-1000 nm </p> </figcaption>
 
-<figure><img src=".gitbook/assets/MAPIR Diffuse Reflectance Standard Calibration Target Data T4 (400-1000nm).png" alt=""><figcaption><p>MAPIR T4 Reflectance :: 400-1000nm</p></figcaption></figure>
+Jika kita melihat graf refleksi, kita dapat melihat bahawa nilai-nilai adalah panjang gelombang (paksi x) berbanding peratusan refleksi (paksi y). Apabila kita menangkap imej sasaran penentukuran, kita mewujudkan hubungan antara nilai piksel dan peratusan refleksi, dalam spektrum yang mana band sensor kamera sensitif.
 
-Looking at the reflectance graph you can see that the values are wavelength (x-axis) versus reflectance percent (y-axis). When we capture an image of the calibration target we then create a relationship between pixel value and reflectance percent, within the spectrum that each of the camera's sensor bands are sensitive to.
+This means that with every image you capture with our cameras, you can use a photo of our reflectance targets, such as the [T4-R50](https://www.mapir.camera/collections/calibration-targets/products/diffuse-reflectance-standard-calibration-target-package-t3-r50) or the [T4-R125] (https://www.mapir.camera/collections/multispectral-reflectance-reference-calibration-targets/products/diffuse-reflectance-standard-talibration-target--package-t4-r125) kepada calibrate. Setelah ditentukur, setiap piksel dalam imej adalah sama dengan peratusan refleksi.
 
-This means that with every image you capture with our cameras, you can use a photo of our reflectance targets, such as the [T4-R50](https://www.mapir.camera/collections/calibration-targets/products/diffuse-reflectance-standard-calibration-target-package-t3-r50) or [T4-R125](https://www.mapir.camera/collections/multispectral-reflectance-reference-calibration-targets/products/diffuse-reflectance-standard-calibration-target-package-t4-r125) to calibrate the images for reflectance. Once calibrated each pixel in the image is equal to percent reflectance.
+Jika imej yang dikalibrasi kloros dihasilkan sebagai JPG atau TIFF biasa, peratusan refleksi dikira dengan membahagikan nilai piksel dengan kedalaman bit format imej. Oleh itu, untuk JPG ia dibahagikan dengan 255 dan untuk TIFF ia dibahagikan dengan 65,535. Anda juga boleh memilih format peratus dalam kloros, dan kemudian setiap piksel akan mempunyai nilai peratusan antara 0.0 dan 1.0 (0% hingga 100% refleksi). Perlu diingat bahawa beberapa aplikasi imej tidak menerima imej peratusan (titik terapung) dan bahawa mereka mengambil banyak ruang penyimpanan.
 
-If you output the calibrated images in Chloros as the typical JPG or TIFF then the reflectance percent is calculated by dividing the pixel value by the bit depth of the image format. So for JPG divide by 255, and for TIFF divide by 65,535. You can also choose the PERCENT format output in Chloros, and then each pixel will range from a percent value of 0.0 to 1.0 (0% to 100% reflectance). Just keep in mind that some image applications cannot accept the percent (floating point) images, and they are large in size storage wise.
-
-<div><figure><img src=".gitbook/assets/t3-125.jpg" alt=""><figcaption><p>T4-R125</p></figcaption></figure> <figure><img src=".gitbook/assets/t3-125_2.jpg" alt=""><figcaption><p>T4-R125</p></figcaption></figure> <figure><img src=".gitbook/assets/t3-125_closed.jpg" alt=""><figcaption><p>T4-R125</p></figcaption></figure></div>
+3 alt = ""> <prigcaption> <p> t4-r125 </p> </figcaption> </angka> <Img src = ". Gitbook/aset/t3-125_closed.jpg" alt = "

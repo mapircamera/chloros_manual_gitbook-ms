@@ -1,255 +1,255 @@
-# Project Settings
+# Tetapan Projek
 
-The Project Settings <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> sidebar in Chloros allows you to configure all aspects of image processing, calibration target detection, multispectral index calculations, and export options for your project. These settings are saved with your project and can be saved as templates for reuse across multiple projects.
+The Chloros <IMG Src = ".. Tetapan ini disimpan dengan projek anda dan boleh disimpan sebagai templat untuk digunakan semula di pelbagai projek.
 
-## Accessing Project Settings
+## akses ke tetapan projek
 
-To access Project Settings:
+Untuk mengakses tetapan projek:
 
-1. Open a project in Chloros
-2. Click the **Project Settings**  <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> tab in the left sidebar
-3. The settings panel will display all available configuration options organized by category
-
-***
-
-## Target Detection
-
-These settings control how Chloros detects and processes calibration targets in your images.
-
-### Minimum calibration sample area (px)
-
-* **Type**: Number
-* **Range**: 0 to 10,000 pixels
-* **Default**: 25 pixels
-* **Description**: Sets the minimum area (in pixels) required for a detected region to be considered a valid calibration target sample. Smaller values will detect smaller targets but may increase false positives. Larger values require bigger, clearer target regions for detection.
-* **When to adjust**:
-  * Increase if you're getting false detections on small image artifacts
-  * Decrease if your calibration targets appear small in your images and are not being detected
-
-### Minimum Target Clustering (0-100)
-
-* **Type**: Number
-* **Range**: 0 to 100
-* **Default**: 60
-* **Description**: Controls the clustering threshold for grouping similar colored regions when detecting calibration targets. Higher values require more similar colors to be grouped together, resulting in more conservative target detection. Lower values allow more color variation within a target group.
-* **When to adjust**:
-  * Increase if calibration targets are being split into multiple detections
-  * Decrease if calibration targets with color variation are not being fully detected
+1. Buka projek di kloros
+2. Klik Tetapan Projek ** ** <img src = "../. Gitbook/Asset/icon_Project-Settings.jpg" alt = "" Data-Size = "Line"> di bar sisi kiri.
+3. Panel Tetapan akan memaparkan semua pilihan tetapan yang tersedia yang dianjurkan oleh kategori.
 
 ***
 
-## Processing
+## Pengesanan sasaran
 
-These settings control how Chloros processes and calibrates your images.
+Tetapan ini mengawal bagaimana kloros mengesan dan memproses sasaran penentukuran dalam imej anda.
 
-### Vignette correction
+### Kawasan sampel penentukuran minimum (PX)
 
-* **Type**: Checkbox
-* **Default**: Enabled (checked)
-* **Description**: Applies vignette correction to compensate for lens darkening at the edges of images. Vignetting is a common optical phenomenon where the corners and edges of an image appear darker than the center due to lens characteristics.
-* **When to disable**: Only disable if your camera/lens combination has already applied vignette correction, or if you want to manually correct vignetting in post-processing.
+*** Jenis **: Nombor
+*** julat **: 0 hingga 10,000 piksel
+*** lalai **: 25 piksel
+*** Penerangan **: Menetapkan kawasan minimum (dalam piksel) yang diperlukan untuk rantau yang dikesan untuk dianggap sebagai sampel yang sah dari sasaran penentukuran. Nilai yang lebih kecil akan mengesan sasaran yang lebih kecil, tetapi boleh meningkatkan positif palsu. Nilai yang lebih besar memerlukan kawasan sasaran yang lebih besar dan lebih jelas untuk pengesanan.
+*** Bila hendak menyesuaikan **:
+  * Meningkatkan jika anda mendapat pengesanan palsu pada artifak imej kecil.
+  * Kurangkan jika sasaran penentukuran anda kelihatan kecil dalam imej anda dan tidak dikesan.
 
-### Reflectance calibration / white balance
+### Pengumpulan sasaran minimum (0-100)
 
-* **Type**: Checkbox
-* **Default**: Enabled (checked)
-* **Description**: Enables automatic reflectance calibration using detected calibration targets in your images. This normalizes the reflectance values across your dataset and ensures consistent measurements regardless of lighting conditions.
-* **When to disable**: Disable only if you want to process raw, uncalibrated images or if you're using a different calibration workflow.
-
-### Debayer method
-
-* **Type**: Dropdown selection
-* **Options**:
-  * High Quality (Faster) - Currently the only option available
-* **Default**: High Quality (Faster)
-* **Description**: Selects the demosaicing algorithm used to convert raw Bayer pattern sensor data into full-color images. The "High Quality (Faster)" method provides an optimal balance between processing speed and image quality.
-* **Note**: Additional debayer methods may be added in future versions of Chloros.
-
-### Minimum recalibration interval
-
-* **Type**: Number
-* **Range**: 0 to 3,600 seconds
-* **Default**: 0 seconds
-* **Description**: Sets the minimum time interval (in seconds) between using calibration targets. When set to 0, Chloros will use every detected calibration target. When set to a higher value, Chloros will only use calibration targets that are separated by at least this many seconds, reducing processing time for datasets with frequent calibration target captures.
-* **When to adjust**:
-  * Set to 0 for maximum calibration accuracy when lighting conditions vary
-  * Increase (e.g., to 60-300 seconds) for faster processing when lighting is consistent and you have frequent calibration target images
-
-### Light sensor timezone offset
-
-* **Type**: Number
-* **Range**: -12 to +12 hours
-* **Default**: 0 hours
-* **Description**: Specifies the timezone offset (in hours from UTC) for light sensor data timestamps. This is used when processing PPK (Post-Processed Kinematic) data files to ensure correct time synchronization between image captures and GPS data.
-* **When to adjust**: Set this to your local timezone offset if your PPK data uses local time instead of UTC. For example:
-  * Pacific Time: -8 or -7 (depending on DST)
-  * Eastern Time: -5 or -4 (depending on DST)
-  * Central European Time: +1 or +2 (depending on DST)
-
-### Apply PPK corrections
-
-* **Type**: Checkbox
-* **Default**: Disabled (unchecked)
-* **Description**: Enables the use of Post-Processed Kinematic (PPK) corrections from MAPIR DAQ recorders containing a GPS (GNSS). When enabled, Chloros will use any .daq log files containing exposure pin data in your project directory and apply precise geolocation corrections to your images.
-* **Requirement**: .daq log file with exposure pin entries must be present in your project directory
-* **When to enable**: It is recommended to always enable PPK correction if you have exposure feedback entries in your .daq log file.
-
-### Exposure Pin 1
-
-* **Type**: Dropdown selection
-* **Visibility**: Only visible when "Apply PPK corrections" is enabled AND exposure data is available for Pin 1
-* **Options**:
-  * Camera model names detected in the project
-  * "Do Not Use" - Ignore this exposure pin
-* **Default**: Auto-selected based on project configuration
-* **Description**: Assigns a specific camera to Exposure Pin 1 for PPK time synchronization. The exposure pin records the exact timing when the camera shutter is triggered, which is critical for accurate PPK geolocation.
-* **Auto-selection behavior**:
-  * Single camera + single pin: Automatically selects the camera
-  * Single camera + two pins: Pin 1 automatically assigned to the camera
-  * Multiple cameras: Manual selection required
-
-### Exposure Pin 2
-
-* **Type**: Dropdown selection
-* **Visibility**: Only visible when "Apply PPK corrections" is enabled AND exposure data is available for Pin 2
-* **Options**:
-  * Camera model names detected in the project
-  * "Do Not Use" - Ignore this exposure pin
-* **Default**: Auto-selected based on project configuration
-* **Description**: Assigns a specific camera to Exposure Pin 2 for PPK time synchronization when using a dual-camera setup.
-* **Auto-selection behavior**:
-  * Single camera + single pin: Pin 2 automatically set to "Do Not Use"
-  * Single camera + two pins: Pin 2 automatically set to "Do Not Use"
-  * Multiple cameras: Manual selection required
-* **Note**: The same camera cannot be assigned to both Pin 1 and Pin 2 simultaneously.
+*** Jenis **: Nombor.
+*** Range **: Dari 0 hingga 100.
+*** lalai **: 60.
+*** Penerangan **: Mengawal ambang kumpulan ke kawasan kumpulan warna yang sama apabila mengesan sasaran penentukuran. Nilai yang lebih tinggi memerlukan lebih banyak warna yang serupa untuk dikumpulkan bersama, menghasilkan pengesanan sasaran yang lebih konservatif. Nilai yang lebih rendah membolehkan variasi warna yang lebih besar dalam kumpulan sasaran.
+*** Bila hendak menyesuaikan **:
+  * Meningkatkan jika sasaran penentukuran dibahagikan kepada pelbagai pengesanan.
+  * Kurangkan jika sasaran penentukuran dengan variasi warna tidak dikesan sepenuhnya.
 
 ***
 
-## Index
+## Pemprosesan
 
-These settings allow you to configure multispectral indices for analysis and visualization.
+Tetapan ini mengawal bagaimana kloros memproses dan menentukur imej anda.
 
-### Add index
+### pembetulan vignetting
 
-* **Type**: Special index configuration panel
-* **Description**: Opens an interactive panel where you can select and configure multispectral vegetation indices (NDVI, NDRE, EVI, etc.) to calculate during image processing. You can add multiple indices, each with its own visualization settings.
-* **Available indices**: The system includes 30+ pre-defined multispectral indices including:
-  * NDVI (Normalized Difference Vegetation Index)
-  * NDRE (Normalized Difference RedEdge)
-  * EVI (Enhanced Vegetation Index)
+*** Jenis **: kotak semak
+*** Lalai **: didayakan (diperiksa)
+*** Penerangan **: Memohon pembetulan vignetting untuk mengimbangi lensa gelap di tepi imej. Vignetting adalah fenomena optik biasa di mana sudut dan tepi imej kelihatan lebih gelap daripada pusat kerana ciri -ciri lensa.
+*** Bila hendak melumpuhkan **: Lumpuhkan pilihan ini hanya jika kombinasi kamera dan lensa telah menggunakan pembetulan vignetting atau jika anda ingin membetulkan secara manual vignetting dalam pemprosesan pasca.
+
+### refleksi/penentukuran keseimbangan putih
+
+*** Jenis **: kotak semak
+*** Lalai **: didayakan (diperiksa)
+*** Penerangan **: Membolehkan penentukuran pemantulan automatik menggunakan sasaran penentukuran yang dikesan dalam imej. Ini menormalkan nilai refleksi di seluruh set data dan memastikan pengukuran yang konsisten tanpa mengira keadaan pencahayaan.
+*** Bila hendak melumpuhkan **: Lumpuhkan hanya jika anda ingin memproses imej yang tidak diselaraskan atau jika anda menggunakan aliran kerja penentukuran yang berbeza.
+
+### Kaedah demosaik
+
+*** Jenis **: Pemilihan dropdown
+*** Pilihan **:
+  * Berkualiti tinggi (lebih cepat) - pada masa ini satu -satunya pilihan yang tersedia
+*** Lalai **: Kualiti Tinggi (lebih cepat)
+*** Penerangan **: Pilih algoritma demosaik yang digunakan untuk menukar data sensor corak bayer mentah ke dalam imej warna penuh. Kaedah "berkualiti tinggi (lebih cepat)" menyediakan keseimbangan optimum antara kelajuan pemprosesan dan kualiti imej.
+*** Nota **: Kaedah debayer tambahan boleh ditambah dalam versi kloros masa depan.
+
+### selang pengubahsuaian minimum
+
+*** Jenis **: Nombor
+*** Julat **: 0 hingga 3600 saat
+*** lalai **: 0 saat
+*** Penerangan **: Menetapkan selang waktu minimum (dalam saat) antara menggunakan sasaran penentukuran. Apabila ditetapkan kepada 0, kloros akan menggunakan semua sasaran penentukuran yang dikesan. Apabila ditetapkan kepada nilai yang lebih tinggi, kloros hanya akan menggunakan sasaran penentukuran yang dipisahkan oleh sekurang -kurangnya bilangan saat ini, mengurangkan masa pemprosesan untuk set data dengan penangkapan sasaran penentukuran yang kerap.
+*** Bila hendak menyesuaikan **:
+  * Tetapkan nilai kepada 0 untuk ketepatan penentukuran maksimum apabila keadaan pencahayaan berbeza -beza.
+  * Meningkatkan nilai (contohnya, hingga 60-300 saat) untuk mempercepatkan pemprosesan apabila pencahayaan adalah imej sasaran penentukuran yang tetap dan kerap tersedia.
+
+### lag masa sensor cahaya
+
+*** Jenis **: Nombor
+*** julat **: -12 hingga +12 jam
+*** lalai **: 0 jam
+*** Penerangan **: Menentukan perbezaan masa (dalam jam dari UTC) untuk cap waktu data sensor cahaya. Digunakan semasa memproses fail data PPK (pasca diproses kinematik) untuk memastikan penyegerakan yang betul antara penangkapan imej dan data GPS.
+*** Bila untuk menyesuaikan **: Tetapkan nilai ini ke perbezaan masa zon waktu tempatan anda jika data PPK anda menggunakan masa tempatan dan bukannya UTC. Contohnya:
+  * Masa Pasifik: -8 atau -7 (bergantung pada waktu penjimatan siang)
+  * Waktu Timur: -5 atau -4 (bergantung pada waktu penjimatan siang)
+  * Masa Eropah Tengah: +1 atau +2 (bergantung pada waktu penjimatan siang)
+
+### memohon pembetulan ppk
+
+*** Jenis **: kotak semak
+*** Lalai **: Dilumpuhkan (tidak terkawal)
+*** Penerangan **: Membolehkan penggunaan pembetulan kinematik pasca (PPK) perakam Daq Mapir yang mengandungi GPS (GNSS). Apabila diaktifkan, kloros akan menggunakan sebarang fail log .daq yang mengandungi data pin pendedahan dalam direktori projek anda dan memohon pembetulan geolokasi yang tepat pada imej anda.
+*** Keperluan **: mesti ada fail log .daq dengan entri pin pendedahan dalam direktori projek
+*** Bila Mengaktifkan **: Adalah disyorkan untuk sentiasa mengaktifkan pembetulan PPK jika terdapat entri maklum balas pendedahan dalam fail log .daq.
+
+### pin pendedahan 1
+
+*** Jenis **: Pemilihan dropdown
+*** Keterlihatan **: Hanya kelihatan apabila "memohon pembetulan PPK" diaktifkan dan data pendedahan tersedia untuk pin 1
+*** Pilihan **:
+  * Nama model kamera yang dikesan dalam projek
+  * "Jangan gunakan": Abaikan pin pendedahan ini
+*** lalai **: dipilih secara automatik berdasarkan tetapan projek
+*** Keterangan **: Menetapkan kamera khusus untuk pin pendedahan 1 untuk penyegerakan masa PPK. PIN pendedahan merekodkan momen yang tepat pengatup kamera dikeluarkan, yang penting untuk geolokasi PPK yang tepat.
+*** tingkah laku pemilihan automatik **:
+  * Kamera tunggal + pin tunggal: Secara automatik pilih kamera
+  * Kamera tunggal + dua pin: pin 1 secara automatik diberikan ke kamera
+  * Kamera berganda: pemilihan manual diperlukan
+
+### pin pendedahan 2
+
+*** Jenis **: Pemilihan dropdown
+*** Keterlihatan **: Hanya dapat dilihat apabila "memohon pembetulan PPK" diaktifkan dan data pendedahan tersedia untuk pin 2
+*** Pilihan **:
+  * Nama model kamera yang dikesan dalam projek
+  * "Jangan gunakan": Abaikan pin pendedahan ini
+*** Default ** - dipilih secara automatik berdasarkan tetapan projek
+*** Keterangan **: Menetapkan kamera khusus untuk pin pendedahan 2 untuk penyegerakan masa PPK apabila menggunakan persediaan kamera dwi.
+*** tingkah laku pemilihan automatik **:
+  * Kamera tunggal + pin tunggal: pin 2 ditetapkan secara automatik ke "Jangan gunakan"
+  * Ruang tunggal + dua pin: pin 2 secara automatik ditetapkan untuk "jangan gunakan"
+  * Kamera berganda: pemilihan manual diperlukan
+*** NOTA **: Kamera yang sama tidak boleh ditugaskan untuk pin 1 dan pin 2 secara serentak.
+
+***
+
+## indeks
+
+Tetapan ini membolehkan anda mengkonfigurasi indeks multispektral untuk analisis dan paparan.
+
+### Tambah indeks
+
+*** Jenis **: Panel Konfigurasi Indeks Khas
+*** Penerangan **: Membuka panel interaktif di mana anda boleh memilih dan mengkonfigurasi indeks tumbuh -tumbuhan multispektral (NDVI, NDRE, EVI, dll.) Untuk mengira semasa pemprosesan imej. Anda boleh menambah pelbagai indeks, masing -masing dengan tetapan paparan sendiri.
+*** indeks yang ada **: Sistem ini merangkumi lebih daripada 30 indeks multispektral yang telah ditetapkan, termasuk:
+  * NDVI (Indeks Vegetasi Perbezaan Normal)
+  * Ndre (perbezaan normal rededge)
+  * EVI (Indeks Vegetasi Dipertingkatkan)
   * GNDVI, SAVI, OSAVI, MSAVI2
-  * And many more (see [Multispectral Index Formulas](multispectral-index-formulas.md) for complete list)
-* **Features**:
-  * Select from pre-defined index formulas
-  * Configure visualization color gradients (LUT - Look-Up Tables)
-  * Set threshold values for analysis
-  * Create custom index formulas
+  * Dan banyak lagi (lihat [formula indeks multispectral] (multispectral-index-formula.md) untuk senarai penuh)
+*** Ciri **:
+  * Pilih dari formula indeks yang telah ditetapkan
+  * Konfigurasikan kecerunan warna paparan (LUT - jadual carian)
+  * Tetapkan nilai ambang untuk analisis
+  * Buat formula indeks tersuai
 
-### Custom Formulas (Chloros+ Feature)
+### Formula tersuai (chloros+ ciri)
 
-* **Type**: Array of custom formula definitions
-* **Description**: Allows you to create and save custom multispectral index formulas using band math. Custom formulas are saved with your project settings and can be used just like built-in indices.
-* **How to create**:
-  1. In the Index configuration panel, look for the custom formula option
-  2. Define your formula using band identifiers (e.g., NIR, Red, Green, Blue)
-  3. Save the formula with a descriptive name
-* **Formula syntax**: Standard mathematical operations are supported, including:
-  * Arithmetic: `+`, `-`, `*`, `/`
-  * Parentheses for order of operations
-  * Band references: NIR, Red, Green, Blue, RedEdge, Cyan, Orange, NIR1, NIR2
-
-***
-
-## Export
-
-These settings control the format and quality of exported processed images.
-
-### Calibrated image format
-
-* **Type**: Dropdown selection
-* **Options**:
-  * **TIFF (16-bit)** - Uncompressed 16-bit TIFF format
-  * **TIFF (32-bit, Percent)** - 32-bit floating-point TIFF with reflectance values as percentages
-  * **PNG (8-bit)** - Compressed 8-bit PNG format
-  * **JPG (8-bit)** - Compressed 8-bit JPEG format
-* **Default**: TIFF (16-bit)
-* **Description**: Selects the file format for saving processed and calibrated images.
-* **Format recommendations**:
-  * **TIFF (16-bit)**: Recommended for scientific analysis and professional workflows. Preserves maximum data quality with no compression artifacts. Best for multispectral analysis and further processing in GIS software.
-  * **TIFF (32-bit, Percent)**: Best for workflows that require reflectance values as percentages (0-100%). Offers maximum precision for radiometric measurements.
-  * **PNG (8-bit)**: Good for web viewing and general visualization. Smaller file sizes with lossless compression, but reduced dynamic range.
-  * **JPG (8-bit)**: Smallest file sizes, best for previews and web display only. Uses lossy compression which is not suitable for scientific analysis.
+*** Jenis **: Arahan definisi formula tersuai
+*** Penerangan **: Membolehkan anda membuat dan menyimpan formula indeks multispektral tersuai menggunakan matematik band. Formula tersuai disimpan dengan tetapan projek anda dan boleh digunakan seperti indeks terbina dalam.
+*** Cara membuat **:
+  1. Dalam panel Tetapan Indeks, cari pilihan formula tersuai.
+  2. Tentukan formula anda menggunakan pengenal band (contohnya, NIR, merah, hijau, biru).
+  3. Simpan formula dengan nama deskriptif.
+*** Sintaks Formula **: Operasi matematik standard disokong, termasuk:
+  * Aritmetik: ___inline0001___, ___inline0002___, ___inline0003___, ___inline0004___.
+  * Kurungan untuk pesanan operasi
+  * Rujukan Band: NIR, Merah, Hijau, Biru, Rededge, Cyan, Orange, NIR1, NIR2
 
 ***
 
-## Save Project Template
+## Eksport
 
-This feature allows you to save your current project settings as a reusable template.
+Tetapan ini mengawal format dan kualiti imej diproses yang dieksport.
 
-* **Type**: Text input + Save button
-* **Description**: Enter a descriptive name for your settings template and click the save icon. The template will store all your current project settings (target detection, processing options, indices, and export format) for easy reuse in future projects.
-* **Use cases**:
-  * Create templates for different camera systems (RGB, multispectral, NIR)
-  * Save standard configurations for specific crop types or analysis workflows
-  * Share consistent settings across a team
-* **How to use**:
-  1. Configure all your desired project settings
-  2. Enter a template name (e.g., "RedEdge Survey3 NDVI Standard")
-  3. Click the save icon
-  4. The template can now be loaded when creating new projects
+### Format imej yang dikalibrasi
 
-***
-
-## Save Project Folder
-
-This setting specifies where new projects are saved by default.
-
-* **Type**: Directory path display + Edit button
-* **Default**: `C:\Users\[Username]\Chloros Projects`
-* **Description**: Shows the current default directory where new Chloros projects are created. Click the edit icon to select a different directory.
-* **When to change**:
-  * Set to a network drive for team collaboration
-  * Change to a drive with more storage space for large datasets
-  * Organize projects by year, client, or project type in different folders
-* **Note**: Changing this setting only affects NEW projects. Existing projects remain in their original locations.
+*** Jenis **: Pemilihan dropdown
+*** Pilihan **:
+  *** TIFF (16-bit) **: Format TIFF 16-bit yang tidak dikompresi
+  *** TIFF (32-bit, peratusan) **: 32-bit tiff dengan titik terapung dan peratusan nilai refleksi
+  *** png (8-bit) **-8-bit format png termampat.
+  *** JPG (8-bit) **: 8-bit format jpeg termampat.
+*** Lalai **: TIFF (16-bit).
+*** Penerangan **: Pilih format fail untuk menyimpan imej yang diproses dan ditentukur.
+*** Cadangan Format **:
+  *** TIFF (16-bit) **: Disyorkan untuk analisis saintifik dan aliran kerja profesional. Memelihara kualiti data maksimum tanpa artifak mampatan. Ideal untuk analisis multispektral dan pemprosesan pasca dalam perisian GIS.
+  *** TIFF (32-bit, peratusan) **: Ideal untuk aliran kerja yang memerlukan nilai refleksi dalam bentuk peratusan (0-100%). Menawarkan ketepatan maksimum untuk pengukuran radiometrik.
+  *** PNG (8-bit) **: Ideal untuk tontonan web dan tontonan umum. Saiz fail yang lebih kecil dengan mampatan lossless, tetapi mengurangkan julat dinamik.
+  *** JPG (8-bit) **: Saiz fail yang lebih kecil, sesuai untuk pratonton dan tontonan web sahaja. Ia menggunakan mampatan lossy, yang tidak sesuai untuk analisis saintifik.
 
 ***
 
-## Settings Persistence
+## Simpan templat projek
 
-All project settings are automatically saved with your project file (`.mapir` project format). When you reopen a project, all settings are restored exactly as you left them.
+Ciri ini membolehkan anda menyimpan tetapan projek semasa anda sebagai templat yang boleh diguna semula.
 
-### Settings Hierarchy
-
-Settings are applied in the following order:
-
-1. **System defaults** - Built-in defaults defined by Chloros
-2. **Template settings** - If you load a template when creating a project
-3. **Saved project settings** - Settings saved with the project file
-4. **Manual adjustments** - Any changes you make during the current session
-
-### Settings and Image Processing
-
-Most settings changes (especially in Processing and Export categories) will trigger reprocessing of images to reflect the new settings. However, some settings are "export-only" and don't require immediate reprocessing:
-
-* Save Project Template
-* Working Directory
-* Calibrated image format (applies when exporting)
+*** Jenis **: Input Teks + Butang Simpan
+*** Penerangan **: Masukkan nama deskriptif untuk templat konfigurasi anda dan klik ikon Simpan. Templat ini akan menyimpan semua tetapan semasa projek anda (pengesanan sasaran, pilihan pemprosesan, indeks, dan format eksport) untuk digunakan semula dengan mudah dalam projek masa depan.
+*** Gunakan Kes **:
+  * Buat templat untuk sistem kamera yang berbeza (RGB, Multispectral, NIR)
+  * Simpan tetapan standard untuk jenis tanaman tertentu atau aliran kerja analisis
+  * Kongsi tetapan yang konsisten di seluruh pasukan
+*** Cara menggunakannya **:
+  1. Konfigurasikan semua tetapan projek yang anda mahukan
+  2. Masukkan nama untuk templat (contohnya, "Rededge Survey3 NDVI Standard").
+  3. Klik ikon Simpan.
+  4. Sekarang templat boleh dimuatkan apabila membuat projek baru.
 
 ***
 
-## Best Practices
+## Simpan Folder Projek
 
-1. **Start with defaults**: The default settings work well for most MAPIR camera systems and typical workflows.
-2. **Create templates**: Once you've optimized settings for a specific workflow or camera, save them as a template to ensure consistency across projects.
-3. **Test before full processing**: When experimenting with new settings, test on a small subset of images before processing your entire dataset.
-4. **Document your settings**: Use descriptive template names that indicate the camera system, processing type, and intended use (e.g., "Survey3\_RGB\_NDVI\_Agriculture").
-5. **Export format selection**: Choose your export format based on your end use:
-   * Scientific analysis → TIFF (16-bit or 32-bit)
-   * GIS processing → TIFF (16-bit)
-   * Quick visualization → PNG (8-bit)
-   * Web sharing → JPG (8-bit)
+Tetapan ini menentukan di mana projek baru disimpan secara lalai.
+
+*** Jenis **: Paparan Laluan Direktori + Butang Edit
+*** lalai **: ___inline0005___
+*** Penerangan **: Menunjukkan direktori lalai semasa di mana projek -projek kloros baru dibuat. Klik ikon Edit untuk memilih direktori yang berbeza.
+*** Bila hendak mengubahnya **:
+  * Sediakan pemacu rangkaian untuk kerjasama pasukan.
+  * Beralih ke pemacu dengan lebih banyak ruang penyimpanan untuk set data yang besar.
+  * Mengatur projek mengikut tahun, pelanggan, atau jenis projek dalam folder yang berbeza.
+*** Nota **: Menukar tetapan ini hanya mempengaruhi projek baru. Projek sedia ada kekal di lokasi asalnya.
 
 ***
 
-For more information on multispectral indices in Chloros, see [Multispectral Index Formulas](multispectral-index-formulas.md) page.
+## Konfigurasi Konfigurasi
+
+Semua tetapan projek disimpan secara automatik dengan fail projek (__inline0006___ format projek). Apabila anda membuka semula projek, semua tetapan akan dipulihkan tepat seperti yang anda tinggalkan.
+
+### Tetapan Hierarki
+
+Tetapan digunakan mengikut urutan berikut:
+
+1. ** Sistem lalai **: lalai terbina dalam yang ditakrifkan oleh kloros
+2. ** Tetapan templat **: Sekiranya anda memuatkan templat semasa membuat projek
+3. ** Tetapan projek disimpan **: Tetapan disimpan dengan fail projek
+4. ** Tetapan Manual **: Sebarang perubahan yang anda buat semasa sesi semasa
+
+### persediaan dan pemprosesan gambar
+
+Kebanyakan tetapan berubah (terutamanya dalam kategori rendering dan eksport) akan menyebabkan imej diproses semula untuk mencerminkan tetapan baru. Walau bagaimanapun, sesetengah tetapan adalah "eksport sahaja" dan tidak memerlukan pemprosesan segera:
+
+* Simpan templat projek
+* Direktori kerja
+* Format imej yang ditentukur (digunakan semasa mengeksport)
+
+***
+
+## Amalan terbaik
+
+1. ** Mulakan dengan lalai ** - Tetapan lalai berfungsi dengan baik untuk kebanyakan sistem kamera Mapir dan aliran kerja biasa.
+2. ** Buat templat ** - Sebaik sahaja anda telah mengoptimumkan tetapan untuk aliran kerja atau kamera tertentu, simpannya sebagai templat untuk memastikan konsistensi antara projek.
+3. ** Ujian sebelum pemprosesan penuh **: Apabila bereksperimen dengan tetapan baru, uji mereka pada subset kecil imej sebelum memproses keseluruhan set data.
+4. ** Dokumen tetapan anda **: Gunakan nama templat deskriptif yang menunjukkan sistem kamera, jenis pemprosesan, dan penggunaan yang dimaksudkan (contohnya, "SURVEY3 \ _RGB \ _NDVI \ _AGRICULTURE").
+5. ** Pemilihan Format Eksport **: Pilih format eksport berdasarkan penggunaan akhir:
+   * Analisis Saintifik → TIFF (16 bit atau 32 bit)
+   * Pemprosesan GIS → TIFF (16 bit)
+   * Pandangan Cepat → PNG (8 bit)
+   * Kongsi di Web → JPG (8 bit)
+
+***
+
+Untuk maklumat lanjut mengenai indeks multispektral di kloros, lihat halaman [formula indeks multispectral] (multispectral-index-formula.md).

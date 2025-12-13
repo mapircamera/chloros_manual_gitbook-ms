@@ -1,93 +1,78 @@
-# Supported Languages
+# Bahasa yang disokong
 
-Chloros provides full interface support in **38 languages worldwide**, making it accessible to users across the globe. You can switch languages instantly across all interfaces: Desktop, Browser, CLI, and Python SDK.
+Chloros menawarkan sokongan antara muka penuh dalam ** 38 bahasa di seluruh dunia **, menjadikannya mudah diakses oleh pengguna di seluruh dunia. Anda boleh menukar bahasa dengan serta -merta merentasi semua antara muka: desktop, penyemak imbas, CLI, dan Python SDK.
 
-Chloros supports the following languages:
+Chloros menyokong bahasa berikut:
 
-| # | Language | Native Name | CLI Code |
-|---|----------|-------------|----------|
-| 1 | 🇺🇸 English | English | `en` |
-| 2 | 🇪🇸 Spanish | Español | `es` |
-| 3 | 🇵🇹 Portuguese | Português | `pt` |
-| 4 | 🇫🇷 French | Français | `fr` |
-| 5 | 🇩🇪 German | Deutsch | `de` |
-| 6 | 🇮🇹 Italian | Italiano | `it` |
-| 7 | 🇯🇵 Japanese | 日本語 | `ja` |
-| 8 | 🇰🇷 Korean | 한국어 | `ko` |
-| 9 | 🇨🇳 Chinese (Simplified) | 简体中文 | `zh` |
-| 10 | 🇹🇼 Chinese (Traditional) | 繁體中文 | `zh-TW` |
-| 11 | 🇷🇺 Russian | Русский | `ru` |
-| 12 | 🇳🇱 Dutch | Nederlands | `nl` |
-| 13 | 🇸🇦 Arabic | العربية | `ar` |
-| 14 | 🇵🇱 Polish | Polski | `pl` |
-| 15 | 🇹🇷 Turkish | Türkçe | `tr` |
-| 16 | 🇮🇳 Hindi | हिंदी | `hi` |
-| 17 | 🇮🇩 Indonesian | Bahasa Indonesia | `id` |
-| 18 | 🇻🇳 Vietnamese | Tiếng Việt | `vi` |
-| 19 | 🇹🇭 Thai | ไทย | `th` |
-| 20 | 🇸🇪 Swedish | Svenska | `sv` |
-| 21 | 🇩🇰 Danish | Dansk | `da` |
-| 22 | 🇳🇴 Norwegian | Norsk | `no` |
-| 23 | 🇫🇮 Finnish | Suomi | `fi` |
-| 24 | 🇬🇷 Greek | Ελληνικά | `el` |
-| 25 | 🇨🇿 Czech | Čeština | `cs` |
-| 26 | 🇭🇺 Hungarian | Magyar | `hu` |
-| 27 | 🇷🇴 Romanian | Română | `ro` |
-| 28 | 🇺🇦 Ukrainian | Українська | `uk` |
-| 29 | 🇧🇷 Brazilian Portuguese | Português Brasileiro | `pt-BR` |
-| 30 | 🇭🇰 Cantonese | 粵語 | `zh-HK` |
-| 31 | 🇲🇾 Malay | Bahasa Melayu | `ms` |
-| 32 | 🇸🇰 Slovak | Slovenčina | `sk` |
-| 33 | 🇧🇬 Bulgarian | Български | `bg` |
-| 34 | 🇭🇷 Croatian | Hrvatski | `hr` |
-| 35 | 🇱🇹 Lithuanian | Lietuvių | `lt` |
-| 36 | 🇱🇻 Latvian | Latviešu | `lv` |
-| 37 | 🇪🇪 Estonian | Eesti | `et` |
-| 38 | 🇸🇮 Slovenian | Slovenščina | `sl` |
+| # | Bahasa | Nama asli | CLI CODE |
+| --- | ---------- | ------------- | ---------- |
+| 1 | 🇺🇸 Bahasa Inggeris | Bahasa Inggeris | ___Inline0001___ |
+| 2 | 🇪🇸 Sepanyol | Sepanyol | ___Inline0002___ |
+| 3 | 🇵🇹 Portugis | Portugis | ___Inline0003___ |
+| 4 | 🇫🇷 Perancis | Perancis | ___Inline0004___ |
+| 5 | 🇩🇪 Jerman | Jerman | ___Inline0005___ |
+| 6 | 🇮🇹 Itali | Itali | ___Inline0006___ |
+| 7 | 🇯🇵 Jepun | 日本語 | ___Inline0007___ |
+| 8 | 🇰🇷 Korea | 한국어 | ___Inline0008___ |
+| 9 | 🇨🇳 Cina (dipermudahkan) | 简体中文 | ___Inline0009___ |
+| 10 | 🇹🇼 Cina (Tradisional) | 繁體中文 | ___Inline0010___ |
+| 11 | 🇷🇺 Rusia | Rusia | ___Inline0011___ |
+| 12 | 🇳🇱 Belanda | Belanda | ___Inline0012___ |
+| 13 | 🇸🇦 Arab | العرangsang | | ___Inline0013___ |
+| 14 | 🇵🇱 Poland | Polsky | ___Inline0014___ |
+| 15 | 🇹🇷 Turki | Turkce | ___Inline0015___ |
+| 16 | 🇮🇳 Hindi | हिंदी | ___Inline0016___ |
+| 17 | 🇮🇩 Indonesia | Bahasa Indonesia | ___Inline0017___ |
+| 18 | 🇻🇳 Vietnam | Tiếng việt | ___Inline0018___ |
+| 19 | 🇹🇭 Thai | ไทย | ___Inline0019___ |
+| 20 | 🇸🇪 Swedish | Svenska | ___Inline0020___ |
+| 21 | 🇩🇰 Denmark | Dansk | ___Inline0021___ |
+| 22 | 🇳🇴 Norwegian | Norsk | ___Inline0022___ |
+| 23 | 🇫🇮 Finnish | Suomi | ___Inline0023___ |
+| 24 | 🇬🇷 Greek | Ελληνικά | ___Inline0024___ |
+| 25 | 🇨🇿 Czech | CEština | ___Inline0025___ |
+| 26 | 🇭🇺 Hungarian | Magyar | ___Inline0026___ |
+| 27 | 🇷🇴 Romania | Română | ___Inline0027___ |
+| 28 | 🇺🇦 Ukraine | Ураїнса | ___Inline0028___ |
+| 29 | 🇧🇷 Portugis Brazil | Portugis Brazil | ___Inline0029___ |
+| 30 | 🇭🇰 Kanton | 粵語 | ___Inline0030___ |
+| 31 | 🇲🇾 Melayu | Bahasa Melayu | ___Inline0031___ |
+| 32 | 🇸🇰 Slovak | Slovenčina | ___Inline0032___ |
+| 33 | 🇧🇬 Bulgaria | Bъъъаи | ___Inline0033___ |
+| 34 | 🇭🇷 Croatian | Hrvatski | ___Inline0034___ |
+| 35 | 🇱🇹 Lithuanian | Lietuvių | ___Inline0035___ |
+| 36 | 🇱🇻 Latvian | Latviešu | ___Inline0036___ |
+| 37 | 🇪🇪 Estonian | Eesti | ___Inline0037___ |
+| 38 | 🇸🇮 Slovenian | Slovenščina | ___Inline0038___ |
 
-## How to Change Language
+## Cara menukar bahasa
 
-### In Chloros Desktop/Browser
+### di desktop/penyemak imbas kloros
 
-1. Open the application settings
-2. Navigate to the language selection menu
-3. Choose your preferred language from the list
-4. The interface will update instantly
+1. Tetapan aplikasi terbuka.
+2. Pergi ke menu pemilihan bahasa.
+3. Pilih bahasa pilihan anda dari senarai.
+4. Antara muka akan dikemas kini dengan serta -merta.
 
-### In Chloros CLI
+### di cli chloros
 
-Use the `language` command to view or change the CLI interface language:
+Gunakan perintah ___inline0039___ untuk melihat atau menukar bahasa antara muka CLI:
 
-```bash
-# View current language
-chloros-cli language
+___Code0001___
 
-# Change to Spanish
-chloros-cli language es
+Untuk maklumat lanjut, lihat [Dokumentasi CLI] (CLI.MD).
 
-# Change to Chinese (Simplified)
-chloros-cli language zh
+### di chloros python sdk
 
-# Change to Brazilian Portuguese
-chloros-cli language pt-BR
+Tetapkan parameter bahasa apabila memulakan SDK untuk menerima mesej dan menghasilkan bahasa pilihan anda.
 
-# List all available languages
-chloros-cli language --list
-```
+## liputan
 
-For more details, see the [CLI documentation](CLI.md).
+Semua 38 bahasa disokong sepenuhnya dalam:
 
-### In Chloros Python SDK
+*** Desktop Chloros **: Terjemahan GUI Penuh
+*** Pelayar kloros **: Antara muka web dalam semua bahasa
+*** chloros cli **: antara muka baris perintah dan mesej output
+*** Chloros Python SDK **: Mesej dan Dokumentasi API
 
-Set the language parameter when initializing the SDK to get messages and outputs in your preferred language.
-
-## Coverage
-
-All 38 languages are fully supported across:
-
-* **Chloros Desktop** - Complete GUI translation
-* **Chloros Browser** - Web interface in all languages
-* **Chloros CLI** - Command-line interface and output messages
-* **Chloros Python SDK** - API messages and documentation
-
-Language support ensures that users worldwide can work efficiently in their native language without barriers.
+Sokongan pelbagai bahasa memastikan pengguna di seluruh dunia dapat bekerja dengan cekap dalam bahasa ibunda mereka tanpa halangan.

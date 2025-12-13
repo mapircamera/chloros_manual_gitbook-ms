@@ -1,34 +1,34 @@
-# Table of contents
+# Indeks
 
-* [Getting Started](README.md)
-* [GUI : Navigation](navigation.md)
-* [GUI : Projects](projects.md)
-* [CLI : Command Line](CLI.md)
-* [API : Python SDK](api-python-sdk.md)
-* [Supported Cameras](supported-cameras.md)
-* [Output Image Formats](output-image-formats.md)
-* [Chloros+ Login](chloros+-login.md)
-* [Calibration Targets](calibration-targets.md)
-* [Supported Languages](supported-languages.md)
-* [Download](download.md)
-* [FAQ](faq.md)
+* [Pengenalan] (ReadMe.md)
+* [GUI: navigasi] (navigasi.md)
+* [GUI: Projek] (Projects.md)
+* [CLI: baris arahan] (CLI.MD)
+* [API: Python SDK] (api-python-sdk.md)
+* [Kamera yang disokong] (disokong kamera.md)
+* [Format imej output] (output-image-formats.md)
+* [Chloros+ login] (chloros+ -login.md)
+* [Sasaran penentukuran] (penentukuran targets.md)
+* [Bahasa yang disokong] (disokong bahasa.md)
+* [Muat turun] (muat turun.md)
+* [Soalan Lazim] (FAQ.MD)
 
-## Processing Images (GUI)
+## Pemprosesan Imej (GUI)
 
-* [Adjusting Project Settings](processing-images-gui/adjusting-project-settings.md)
-* [Adding Files to a Project](processing-images-gui/adding-files-to-a-project.md)
-* [Choosing Target Images](processing-images-gui/choosing-target-images.md)
-* [Starting the Processing](processing-images-gui/starting-the-processing.md)
-* [Monitoring the Processing](processing-images-gui/monitoring-the-processing.md)
-* [Finishing the Processing](processing-images-gui/finishing-the-processing.md)
+* [Menyesuaikan tetapan projek] (Imej-imej-GUI/penyesuaian-projek-penyelesaian.md)
+* [Menambah fail ke projek] (pemprosesan-imej-gui/tambah-files-to-a-project.md)
+* [Memilih Imej Sasaran] (Imej-imej-Gui/Pilihan-Target-imd.md)
+* [Memulakan pemprosesan] (pemprosesan-imej-gui/permulaan-pemprosesan.md)
+* [Memantau pemprosesan] (pemprosesan-imej-gui/pemantauan-the-processing.md)
+* [Memproses pemprosesan] (pemprosesan-imej-gui/penamat-the-processing.md)
 
-## PROJECT SETTINGS
+## Persediaan Projek
 
-* [Project Settings](project-settings/project-settings.md)
-* [Multispectral Index Formulas](project-settings/multispectral-index-formulas.md)
+* [Tetapan Projek] (Projek-Penyesuaian/Projek-Settings.md)
+* [Formula Indeks Multispectral] (Projek-Penyesuaian/Multispectral-Index-Formula.md)
 
-## IMAGE VIEWER (GUI)
+## Penonton Imej (GUI)
 
-* [Opening an Image Full Screen](image-viewer-gui/opening-an-image-full-screen.md)
-* [Image Layers](image-viewer-gui/image-layers.md)
-* [Index/LUT Sandbox](image-viewer-gui/index-lut-sandbox.md)
+* [Buka imej dalam skrin penuh] (imej-viewer-gui/pembukaan-an-imej-full-screen.md)
+* [Lapisan Imej] (Image-Viewer-Gui/Image-Layers.md)
+* [Indeks pasir/lut] (imej-viewer-gui/index-lut-sandbox.md)

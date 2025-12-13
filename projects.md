@@ -1,17 +1,17 @@
-# GUI : Projects
+# GUI: Projek
 
-Chloros allows you to create projects which can be reopened in the future.
+Chloros membolehkan anda membuat projek yang boleh dibuka semula pada masa akan datang.
 
-## New Project
+## Projek baru
 
-<figure><img src=".gitbook/assets/project_new.JPG" alt=""><figcaption></figcaption></figure>
+<Ign Rajah> <img src = ". gitbook/aset/project_new.jpg" alt = ""> <igcaption> </figcaption> </angka>
 
-Select "New Project" from the main menu and enter a unique name for your project.
+Pilih "Projek Baru" dari menu utama dan masukkan nama unik untuk projek anda.
 
-## Open Project
+## Projek Terbuka
 
-<figure><img src=".gitbook/assets/project_open.JPG" alt=""><figcaption></figcaption></figure>
+<IGROS> <img src = ". Gitbook/aset/project_open.jpg" alt = ""> <igcaption> </figcaption> </angka>
 
-Select "Open Project" to see a list of existing projects in the Project Folder. If no projects exist the secondary side menu will not open. You can see some GUI created projects (t1, t2, t3) listed in the above photo. The DATE\_TIME projects were created by the CLI using the default project naming scheme. Clicking any project name will open it.
+Pilih "Projek Terbuka" untuk melihat senarai projek sedia ada dalam folder Projek. Sekiranya tiada projek, menu sampingan sekunder tidak akan dibuka. Dalam gambar di atas, anda dapat melihat beberapa projek yang dibuat dengan GUI (T1, T2, T3). Projek tarikh \ _Time telah dibuat oleh CLI menggunakan skim penamaan projek lalai. Mengklik pada mana -mana nama projek akan membukanya.
 
-Clicking the "Open Project Folder" button opens your computer's file explorer at the project path. You can adjust the project path in the [Project Settings](project-settings/project-settings.md).
+Mengklik butang "Buka Projek Folder" akan membuka penjelajah fail komputer anda ke laluan projek. Anda boleh menyesuaikan laluan projek dalam [Tetapan Projek] (Projek-Penyesuaian/Projek-Settings.md).

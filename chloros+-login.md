@@ -1,43 +1,39 @@
-# Chloros+ Login
+# Chloros+ login
 
-## Chloros and Chloros (Browser) Login
+## Chloros dan kloros (penyemak imbas) Log masuk
 
-The user <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> sidebar menu allows you to log into your Chloros+ account and unlock additional features.
+The <img src = ". Gitbook/aset/icon_user.jpg" alt = "" data-size = "line"> Sidebar pengguna membolehkan anda log masuk ke akaun kloros+ anda dan membuka kunci ciri tambahan.
 
-When logged in your account details will be shown:
+Apabila anda log masuk, butiran akaun anda akan dipaparkan:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
+<ret angka> <img src = ". gitbook/aset/user_account.jpg" alt = "" width = "375"> <igcaption> </figcaption> </angka>
 
-## CLI Login
+## Log masuk CLI
 
-Login with your Chloros+ credentials to enable CLI processing.
+Log masuk dengan kelayakan kloros+ anda untuk membolehkan pemprosesan CLI.
 
-**Syntax:**
+** Sintaks: **
 
-```bash
-chloros-cli login <email> <password>
-```
+___Code0001___
 
-**Example:**
+** Contoh: **
 
-```powershell
-chloros-cli login user@example.com 'MyP@ssw0rd123'
-```
+___Code0002___
 
-{% hint style="warning" %}
-**Special Characters**: Use single quotes around passwords containing characters like `$`, `!`, or spaces.
-{% endhint %}
+{% petunjuk gaya = & quot; Amaran & quot; %}
+** Watak Khas **: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti ___inline0001___, ___inline0002___, atau ruang.
+{ % endhint %}
 
-**Output:**
+** Keluar: **
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+<retal> <img src = ". gitbook/aset/cli login_w.jpg" alt = ""> <igcaption> </figcaption> </angka>
 
-### Plan Expiration
+### pelan tamat tempoh
 
-The plan expiration in the GUI shows when your license will become invalid. For recurring monthly subscriptions the expiration is at the end of the month. For yearly subscriptions it is a year after you started the subscription. The license check requires a monthly internet connection to verify, with a 30 day grace period.
+Pelan pelan dalam menunjukkan GUI apabila lesen anda tidak lagi sah. Untuk langganan bulanan berulang, tamat tempohnya pada akhir bulan. Untuk langganan tahunan, ini adalah satu tahun selepas anda memulakan langganan. Pengesahan lesen memerlukan sambungan internet bulanan untuk mengesahkan, dengan tempoh tangguh 30 hari.
 
-### Device Limit
+### had peranti
 
-Each Chloros+ plan offers a different number of registered devices. Each device you log into with a Chloros+ account will count towards your number of registered devices. You can rename and remove a device on your MAPIR Cloud account page.
+Setiap pelan Chloros+ menawarkan bilangan peranti berdaftar yang berbeza. Setiap peranti yang anda log masuk dengan dengan akaun Chloros+ akan dikira ke arah bilangan peranti berdaftar anda. Anda boleh menamakan semula dan memadam peranti pada halaman akaun Mapir Cloud anda.
 
-<table><thead><tr><th width="168.5999755859375" align="right">Chloros+ Plan</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Devices Supported</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
+<Able> <Thead> <tr> <th width = "168.5999755859375" align = "right"> chloros plan </th> <th align = "center"> copper </th> <th align = "center"> gangsa </th> align = "center"> emas </th> </tr> </thead> <tbody> <tr> <td align = "right"> peranti serasi </td> <td align = "center"> 2 </td> <td align = "center"> 2 </td> Align = "Center"> 10 </td> </tr> </tbody> </table>

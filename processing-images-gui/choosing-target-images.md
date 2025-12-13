@@ -1,221 +1,221 @@
-# Choosing Target Images
+# Pemilihan gambar sasaran
 
-Marking which images contain calibration targets is a crucial step that significantly speeds up the Chloros processing pipeline. By pre-selecting target images, you eliminate the need for Chloros to scan every image in your dataset for calibration targets.
+Menandai imej mana yang mengandungi sasaran penentukuran adalah langkah penting yang mempercepatkan proses kloros. Dengan merangka imej sasaran, anda menghapuskan keperluan kloros untuk mengimbas semua imej dalam set data untuk sasaran penentukuran.
 
-## Why Mark Target Images?
+## Mengapa menandakan imej sasaran?
 
-### Processing Speed
+### kelajuan pemprosesan
 
-Without marking target images, Chloros must:
+Tanpa menandakan imej sasaran, kloros mesti:
 
-* Scan every single image in your project
-* Run target detection algorithms on each image
-* Check hundreds or thousands of images unnecessarily
+* Imbas setiap imej dalam projek anda.
+* Jalankan algoritma pengesanan sasaran pada setiap imej.
+* Semak beratus -ratus atau beribu -ribu imej yang tidak perlu.
 
-**Result**: Processing can take significantly longer, especially for large datasets.
+** Hasil **: Pemprosesan boleh mengambil masa yang lebih lama, terutamanya untuk set data yang besar.
 
-### With Marked Target Images
+### dengan imej sasaran yang ditandakan
 
-When you check the Target column for specific images:
+Apabila anda menyemak lajur sasaran untuk imej tertentu:
 
-* Chloros only scans the checked images for targets
-* Target detection completes much faster
-* Overall processing time is greatly reduced
+* Chloros hanya mengimbas imej yang ditandakan untuk sasaran.
+* Pengesanan sasaran selesai lebih cepat.
+* Jumlah masa pemprosesan sangat dikurangkan.
 
-{% hint style="success" %}
-**Speed Improvement**: Marking 2-3 target images in a 500-image dataset can reduce target detection time from 30+ minutes to under 1 minute.
-{% endhint %}
-
-***
-
-## How to Mark Target Images
-
-### Step 1: Identify Your Target Images
-
-Look through your imported images in the File Browser and identify which images contain calibration targets.
-
-**Common scenarios:**
-
-* **Pre-capture target**: Captured before starting the session
-* **Post-capture target**: Captured after completing the session
-* **In-field targets**: Targets placed within the capture area
-* **Multiple targets**: 2-3 target images per session (recommended)
-
-### Step 2: Check the Target Column
-
-For each image containing a calibration target:
-
-1. Locate the image in the File Browser table
-2. Find the **Target** column (rightmost column)
-3. Click the checkbox in the Target column for that image
-4. Repeat for all images containing targets
-
-### Step 3: Verify Your Selection
-
-Before processing, double-check:
-
-* [ ] All images with calibration targets are checked
-* [ ] No non-target images are accidentally checked
-* [ ] Targets are clearly visible in checked images
+{% petunjuk gaya = & quot; kejayaan & quot; %}
+** Penambahbaikan kelajuan **: Menandai 2-3 imej sasaran dalam set data 500 imej dapat mengurangkan masa pengesanan sasaran dari lebih dari 30 minit hingga kurang dari 1 minit.
+{ % endhint %}
 
 ***
 
-## Best Practices for Target Images
+## Cara menandakan gambar sasaran
 
-### Target Capture Guidelines
+### Langkah 1: Kenal pasti gambar sasaran anda
 
-**Timing:**
+Semak imej yang diimport dalam penjelajah fail dan mengenal pasti yang mengandungi sasaran penentukuran.
 
-* Capture target images immediately before and throughout your capture session
-* Within the same lighting conditions as your DAQ light sensor
-* Ideally capture target images as often as possible for the best results. Otherwise, the light sensor data will be used to adjust the calibration over time.
+** Senario biasa: **
 
-**Camera Position:**
+*** Sasaran pra-menangkap **: Ditangkap sebelum memulakan sesi.
+*** Post Capture Objective **: Ditangkap setelah menyelesaikan sesi.
+*** Sasaran di lapangan **: Sasaran yang diletakkan di dalam kawasan penangkapan.
+*** Pelbagai sasaran **: 2-3 Imej sasaran setiap sesi (disyorkan).
 
-* Hold camera above target such that is is centered and fills around 40-60% of the image center.
-* Keep camera parallel/nadir to target surface
+### Langkah 2: Periksa lajur objektif.
 
-**Lighting:**
+Untuk setiap imej yang mengandungi sasaran penentukuran:
 
-* Same ambient lighting as your DAQ light sensor
-* Avoid shadows on the target surfaces
-* Don't block your light source with your body, vehicle or vegetation
-* Overcast conditions provide most consistent results
+1. Cari imej dalam jadual Explorer File.
+2. Cari lajur ** sasaran ** (lajur paling kanan).
+3. Klik kotak semak dalam lajur sasaran untuk imej itu.
+4. Ulangi proses untuk semua imej yang mengandungi sasaran.
 
-**Target Condition:**
+### Langkah 3: Semak pilihan anda.
 
-* Keep target panels clean and dry
-* All 4 panels should be clearly visible and unobstructed
-* Targets perpendicular/nadir to the light source if possible
+Sebelum memproses, periksa perkara berikut:
 
-### How Many Target Images?
-
-**Minimum:** 1 target image per session. **Recommended:** 3-5 target images per session.
-
-**Best practice schedule:**
-
-* 3-5 images captured shortly after the light sensor is recording
-* Rotate the camera between captures for the best results
-* Optional: periodically mid-session if lighting conditions change constantly
+* [] Semua imej dengan sasaran penentukuran ditandakan.
+* [] Tiada imej yang tidak sasaran secara tidak sengaja ditandakan.
+* [] Sasaran jelas kelihatan dalam imej yang ditandakan.
 
 ***
 
-## Working with Multiple Cameras
+## Amalan terbaik untuk imej sasaran
 
-### Dual-Camera Setups
+### Garis Panduan Tangkapan Sasaran
 
-If using two MAPIR cameras simultaneously (e.g., Survey3W RGN + Survey3N OCN):
+** Momen: **
 
-1. Capture target images with **both cameras** at the same time
-2. Use the **same physical target** for both cameras
-3. Mark target images for **both camera types** in the File Browser
-4. Chloros will use appropriate targets for each camera's calibration
+* Menangkap imej sasaran segera sebelum dan semasa sesi penangkapan.
+* Di bawah keadaan pencahayaan yang sama seperti sensor cahaya DAQ.
+* Sebaik -baiknya anda harus menangkap imej sasaran seberapa kerap mungkin untuk hasil yang terbaik. Jika tidak, data sensor cahaya akan digunakan untuk menyesuaikan penentukuran dari masa ke masa.
 
-### Camera Model Column
+** Kedudukan Kamera: **
 
-The **Camera Model** column helps identify which images came from which camera:
+*Pegang kamera di atas lensa supaya ia berpusat dan mengambil 40-60% pusat imej.
+* Pastikan kamera selari/nadir ke permukaan kanta.
 
-* Survey3W\_RGN
-* Survey3N\_OCN
-* Survey3W\_RGB
-* etc.
+** Kilat: **
 
-Use this column to verify you've marked targets for each camera type in your project.
+* Pencahayaan ambien yang sama seperti sensor cahaya daq anda.
+* Elakkan bayang -bayang pada permukaan sasaran.
+*Jangan menyekat sumber cahaya dengan badan, kenderaan atau tumbuh -tumbuhan anda.
+*Keadaan mendung memberikan hasil yang paling konsisten.
 
-***
+** Keadaan kanta: **
 
-## Target Detection Settings
+* Pastikan panel sasaran bersih dan kering.
+* Semua 4 panel mesti kelihatan jelas dan bebas daripada halangan.
+*Sasaran hendaklah berserenjang/nadir ke sumber cahaya, jika boleh.
 
-### Adjusting Detection Sensitivity
+### Berapa banyak imej sasaran?
 
-If Chloros isn't detecting your targets correctly, adjust these settings in [Project Settings](adjusting-project-settings.md):
+** Minimum: ** 1 Imej sasaran setiap sesi. ** Disyorkan: ** 3-5 Imej sasaran setiap sesi.
 
-**Minimum calibration sample area:**
+** Kalendar amalan yang baik: **
 
-* **Default**: 25 pixels
-* **Increase** if getting false detections on small artifacts
-* **Decrease** if targets aren't being detected
-
-**Minimum target clustering:**
-
-* **Default**: 60
-* **Increase** if targets are being split into multiple detections
-* **Decrease** if targets with color variation aren't fully detected
+* Menangkap 3-5 imej sejurus selepas sensor cahaya mula merakam.
+* Putar kamera antara tangkapan untuk hasil terbaik.
+*Pilihan: secara berkala pertengahan sesi jika keadaan pencahayaan sentiasa berubah.
 
 ***
 
-## Common Target Image Issues
+## Bekerja dengan pelbagai kamera
 
-### Problem: No Targets Detected
+### setup kamera dwi
 
-**Possible causes:**
+Jika anda menggunakan dua kamera MAPIR secara serentak (mis. SURVEY3W RGN + SURVEY3N OCN):
 
-* Target images not marked in File Browser
-* Target too small in frame (< 30% of image)
-* Poor lighting (shadows, glare)
-* Target detection settings too strict
+1. Tangkap imej sasaran dengan ** kedua -dua kamera ** pada masa yang sama.
+2. Gunakan lensa fizikal yang sama ** untuk kedua -dua kamera.
+3. Semak imej sasaran untuk ** kedua -dua jenis kamera ** dalam explorer fail.
+4. Chloros akan menggunakan objektif yang sesuai untuk penentukuran setiap kamera.
 
-**Solutions:**
+Lajur Model ### Kamera
 
-1. Verify Target column is checked for correct images
-2. Review target image quality in preview
-3. Recapture targets if quality is poor
-4. Adjust target detection settings if needed
+Model kamera ** ** lajur membantu mengenal pasti imej mana yang datang dari kamera mana:
 
-### Problem: False Target Detections
+* SURVEY3W \ _RGN
+* SURVEY3N \ _OCN
+* SURVEY3W \ _RGB
+* dll.
 
-**Possible causes:**
-
-* White buildings, vehicles, or ground cover mistaken for targets
-* Bright patches in vegetation
-* Detection sensitivity too low
-
-**Solutions:**
-
-1. Mark only actual target images to limit detection scope
-2. Increase minimum calibration sample area
-3. Increase minimum target clustering value
-4. Ensure target images show only the target (minimal background clutter)
+Gunakan lajur ini untuk mengesahkan bahawa anda telah menandakan sasaran untuk setiap jenis kamera dalam projek anda.
 
 ***
 
-## Verification Checklist
+## Tetapan Pengesanan Sasaran
 
-Before starting processing, verify your target image selection:
+### Laraskan kepekaan pengesanan
 
-* [ ] At least 1 target image marked per session
-* [ ] Target column checkboxes are checked for all target images
-* [ ] Target images captured within same timeframe as survey
-* [ ] Targets clearly visible in preview when clicked
-* [ ] All 4 calibration panels visible in each target image
-* [ ] No shadows or obstructions on targets
-* [ ] For dual-camera: Targets marked for both camera types
+Jika kloros tidak mengesan sasaran anda dengan betul, sesuaikan parameter ini dalam [tetapan projek] (menyesuaikan-projek-settings.md):
 
-***
+** Kawasan sampel penentukuran minimum: **
 
-## Target-Free Processing
+*** lalai **: 25 piksel
+*** Meningkatkan ** Sekiranya anda mendapat pengesanan palsu mengenai artifak kecil
+*** Kurangkan ** Sekiranya sasaran tidak dikesan
 
-### Processing Without Calibration Targets
+** Pengumpulan sasaran minimum: **
 
-While not recommended for scientific work, you can process without targets:
-
-1. Leave all Target column checkboxes unchecked
-2. **Disable** "Reflectance calibration" in Project Settings
-3. Vignette correction will still be applied
-4. Output will not be calibrated for absolute reflectance
-
-{% hint style="warning" %}
-**Not Recommended**: Without reflectance calibration, pixel values represent relative brightness only, not scientific reflectance measurements. Use calibration targets for accurate, repeatable results.
-{% endhint %}
+*** lalai **: 60
+*** Meningkatkan ** Jika sasaran dibahagikan kepada pelbagai pengesanan.
+*** Kurangkan ** Jika sasaran dengan variasi warna tidak dikesan sepenuhnya.
 
 ***
 
-## Next Steps
+## Masalah biasa dengan imej kanta
 
-Once you've marked your target images:
+### Masalah: Tiada sasaran yang dikesan.
 
-1. **Review your settings** - See [Adjusting Project Settings](adjusting-project-settings.md)
-2. **Start processing** - See [Starting the Processing](starting-the-processing.md)
-3. **Monitor progress** - See [Monitoring the Processing](monitoring-the-processing.md)
+** Kemungkinan Punca: **
 
-For more information about calibration targets themselves, see [Calibration Targets](../calibration-targets.md).
+*Imej sasaran tidak ditandakan dalam File Explorer.
+* Kanta terlalu kecil dalam bingkai (& lt; 30% imej).
+* Pencahayaan yang lemah (bayang -bayang, pantulan)
+* Tetapan pengesanan sasaran terlalu ketat
+
+** Penyelesaian: **
+
+1. Periksa bahawa lajur sasaran diperiksa untuk imej yang betul
+2. Periksa kualiti imej sasaran dalam pratonton
+3. Menarik balik sasaran jika kualiti miskin
+4. Laraskan tetapan pengesanan sasaran jika perlu
+
+### Isu: Pengesanan sasaran palsu
+
+** Kemungkinan Punca: **
+
+* Bangunan putih, kenderaan atau tumbuh -tumbuhan yang tersilap untuk sasaran.
+* Tempat terang pada tumbuh -tumbuhan.
+* Kepekaan pengesanan terlalu rendah.
+
+** Penyelesaian: **
+
+1. Tanda hanya imej sasaran sebenar untuk mengehadkan julat pengesanan.
+2. Meningkatkan kawasan sampel penentukuran minimum.
+3. Meningkatkan nilai kumpulan sasaran minimum.
+4. Pastikan imej sasaran hanya menunjukkan sasaran (bunyi latar belakang yang minimum).
+
+***
+
+## senarai semak
+
+Sebelum memulakan pemprosesan, periksa pemilihan imej sasaran:
+
+* [] Sekurang -kurangnya 1 imej sasaran ditandakan setiap sesi.
+* [] Kotak semak lajur sasaran diperiksa untuk semua imej sasaran.
+* [] Imej sasaran yang ditangkap dalam selang masa yang sama seperti kajian.
+* [] Sasaran jelas kelihatan dalam pratonton apabila diklik.
+* [] Semua 4 panel penentukuran dapat dilihat dalam setiap imej sasaran.
+* [] Tiada bayang -bayang atau penghalang pada kanta.
+* [] Untuk kamera dua: kanta ditandakan untuk kedua -dua jenis kamera.
+
+***
+
+## pemprosesan tanpa sasaran
+
+### Pemprosesan tanpa sasaran penentukuran
+
+Walaupun tidak disyorkan untuk kerja saintifik, anda boleh memproses tanpa objektif:
+
+1. Tinggalkan semua kotak semak dalam lajur matlamat yang tidak terkawal.
+2. ** Lumpuhkan ** "Penentukuran Refleksi" dalam tetapan projek.
+3. Pembetulan vignette masih akan digunakan.
+4. Output tidak akan ditentukur untuk pemantulan mutlak.
+
+{% petunjuk gaya = & quot; Amaran & quot; %}
+** Tidak disyorkan **: Tanpa penentukuran pemantulan, nilai piksel mewakili kecerahan relatif sahaja, bukan pengukuran refleksi saintifik. Gunakan sasaran penentukuran untuk keputusan yang tepat dan boleh diulang.
+{ % endhint %}
+
+***
+
+## Langkah seterusnya
+
+Sebaik sahaja anda menandakan imej sasaran:
+
+1. ** Tetapan Tinjauan **: Lihat [menyesuaikan tetapan projek] (menyesuaikan-projek-stetings.md)
+2. ** Mulakan pemprosesan **-lihat [memulakan pemprosesan] (permulaan-pemproses.md)
+3. ** Memantau Kemajuan **-Lihat [Memantau pemprosesan] (Pemantauan-The-Processing.md)
+
+Untuk maklumat lanjut mengenai sasaran penentukuran, lihat [sasaran penentukuran] (../ calibration-targets.md).
