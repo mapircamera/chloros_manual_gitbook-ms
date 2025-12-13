@@ -2,11 +2,11 @@
 
 ## Chloros dan kloros (penyemak imbas) Log masuk
 
-The <img src = ". Gitbook/aset/icon_user.jpg" alt = "" data-size = "line"> Sidebar pengguna membolehkan anda log masuk ke akaun kloros+ anda dan membuka kunci ciri tambahan.
+Pengguna <img src = ". Gitbook/aset/icon_user.jpg" alt = "" data-size = "line"> menu sidebar membolehkan anda log masuk ke kloros+ akaun anda dan membuka kunci ciri tambahan.
 
-Apabila anda log masuk, butiran akaun anda akan dipaparkan:
+Apabila log masuk butiran akaun anda akan ditunjukkan:
 
-<ret angka> <img src = ". gitbook/aset/user_account.jpg" alt = "" width = "375"> <igcaption> </figcaption> </angka>
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Log masuk CLI
 
@@ -14,26 +14,30 @@ Log masuk dengan kelayakan kloros+ anda untuk membolehkan pemprosesan CLI.
 
 ** Sintaks: **
 
-___Code0000___
+```bash
+chloros-cli login <email> <password>
+```
 
 ** Contoh: **
 
-___Code0001___
+```powershell
+chloros-cli login user@example.com 'MyP@ssw0rd123'
+```
 
-{% petunjuk gaya = & quot; Amaran & quot; %}
-** Watak Khas **: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti ___inline0000___, ___inline0001___, atau ruang.
+{ % petunjuk gaya = "amaran" %}
+** Watak Khas **: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti `$`, `!`, Atau ruang.
 { % endhint %}
 
-** Keluar: **
+** output: **
 
-<retal> <img src = ". gitbook/aset/cli login_w.jpg" alt = ""> <igcaption> </figcaption> </angka>
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
 
 ### pelan tamat tempoh
 
-Pelan pelan dalam menunjukkan GUI apabila lesen anda tidak lagi sah. Untuk langganan bulanan berulang, tamat tempohnya pada akhir bulan. Untuk langganan tahunan, ini adalah satu tahun selepas anda memulakan langganan. Pengesahan lesen memerlukan sambungan internet bulanan untuk mengesahkan, dengan tempoh tangguh 30 hari.
+Pelan pelan dalam menunjukkan GUI apabila lesen anda akan menjadi tidak sah. Untuk langganan bulanan berulang, tamat tempoh adalah pada akhir bulan. Untuk langganan tahunan ia adalah setahun selepas anda memulakan langganan. Cek lesen memerlukan sambungan internet bulanan untuk mengesahkan, dengan tempoh tangguh 30 hari.
 
 ### had peranti
 
-Setiap pelan Chloros+ menawarkan bilangan peranti berdaftar yang berbeza. Setiap peranti yang anda log masuk dengan dengan akaun Chloros+ akan dikira ke arah bilangan peranti berdaftar anda. Anda boleh menamakan semula dan memadam peranti pada halaman akaun Mapir Cloud anda.
+Setiap pelan Chloros+ menawarkan bilangan peranti berdaftar yang berbeza. Setiap peranti yang anda log masuk dengan akaun Chloros+ akan dikira ke arah bilangan peranti berdaftar anda. Anda boleh menamakan semula dan mengeluarkan peranti pada halaman akaun Mapir Cloud anda.
 
-<Able> <Thead> <tr> <th width = "168.5999755859375" align = "right"> chloros plan </th> <th align = "center"> copper </th> <th align = "center"> gangsa </th> align = "center"> emas </th> </tr> </thead> <tbody> <tr> <td align = "right"> peranti serasi </td> <td align = "center"> 2 </td> <td align = "center"> 2 </td> Align = "Center"> 10 </td> </tr> </tbody> </table>
+<table><thead><tr><th width="168.5999755859375" align="right">Chloros+ Plan</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Devices Supported</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>

@@ -1,26 +1,27 @@
 ---
-metaLinks:
-  alternates:
-    - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/download
+Metalinks:
+  Ganti:
+    - https://app.gitbook.com/s/o044kn3ws0uidvomskcr/download
 ---
-# Pelepasan
 
-Muat turun versi terkini kloros untuk Windows dan mulakan dengan pemprosesan imej multispektral.
+# Muat turun
+
+Muat turun versi terkini Chloros untuk Windows untuk memulakan dengan pemprosesan imej multispektral.
 
 Keperluan sistem ###
 
 | Keperluan | Minimum | Disyorkan |
-| -------------------- | ---------------------------- | ---------------------------- |
+| -------------------- | ------------------------------- | ------------------------------- |
 | ** Sistem Operasi ** | Windows 10 (64-bit) | Windows 11 (64-bit) |
-| ** pemproses ** | Intel Core i5 atau setara | Intel Core i7 atau lebih tinggi |
-| ** Memory (RAM) ** | 8GB | 16 GB atau lebih |
-| ** Kad Grafik ** | DirectX 11 serasi | NVIDIA GPU dengan 4 GB+ VRAM |
-| ** Penyimpanan ** | 2 GB ruang kosong | SSD dengan 10 GB+ ruang kosong |
-| ** paparan ** | 1920x1080 | 2560 x 1440 atau lebih tinggi |
+| ** pemproses ** | Intel Core i5 atau setara | Intel Core i7 atau lebih baik |
+| ** Memory (RAM) ** | 8GB | 16GB atau lebih |
+| ** Kad Grafik ** | DirectX 11 serasi | NVIDIA GPU dengan 4GB+ VRAM |
+| ** Penyimpanan ** | 2GB ruang kosong | SSD dengan 10GB+ ruang kosong |
+| ** paparan ** | 1920x1080 | 2560x1440 atau lebih tinggi |
 | ** Internet ** | Diperlukan untuk Pengaktifan Lesen | Diperlukan untuk Pengaktifan Lesen |
 
-{% petunjuk gaya = & quot; info & quot; %}
-** Percepatan GPU **: Pengguna Chloros+ dengan NVIDIA GPU (4 GB+ VRAM) boleh menggunakan pecutan CUDA untuk pemprosesan yang lebih cepat.
+{ % petunjuk gaya = "info" %}
+** Percepatan GPU **: Pengguna Chloros+ dengan NVIDIA GPU (4GB+ VRAM) boleh menggunakan pecutan CUDA untuk pemprosesan yang lebih cepat.
 { % endhint %}
 
 ***
@@ -29,26 +30,26 @@ Keperluan sistem ###
 
 ### <a href = "https://drive.google.com/file/d/1hjwruy4m7hgxdbmybo7ipe_6johnugr4/view?usp=drive_link" class = "Button primary"> muat turun chloros di sini </a>
 
-### versi stabil terkini
+### pelepasan stabil terkini
 
 ** pemasang kloros untuk Windows **
 
 *** Versi **: 1.0.3
-*** Tarikh Siaran **: Disember 2025
-*** saiz fail **: 1.6 GB
+*** Tarikh Siaran **: Disember?, 2025
+*** saiz fail **: 1.6GB
 *** Jenis Fail **: .exe (Windows Installer)
 
 #### ** Langkah pemasangan: **
 
-1. Muat turun fail ___inline0000___
-2. Klik dua kali pada pemasang untuk memulakan pemasangan
-3. Ikuti arahan wizard pemasangan
-4. Pilih direktori pemasangan (lalai: ___inline0001___)
-5. Lengkapkan pemasangan dan mulakan kloros
-6. Log masuk dengan akaun Mapir Cloud Chloros+ anda (atau teruskan dengan versi percuma).
+1. Muat turun fail `chloros - file version.exe` semasa
+2. Klik dua kali pemasang untuk memulakan pemasangan
+3. Ikuti wizard pemasangan yang diminta
+4. Pilih Direktori Pemasangan (Lalai: `C: \ Program Files \ Chloros \`)
+5. Pemasangan dan Lancarkan Kloros lengkap
+6. Log masuk dengan akaun Mapir Cloud Chloros+ anda (atau teruskan dengan versi percuma)
 
-{% petunjuk gaya = & quot; kejayaan & quot; %}
-Pemasang secara automatik menambah ___inline0002___ ke laluan sistem anda untuk akses baris arahan.
+{ % petunjuk gaya = "kejayaan" %}
+Pemasang secara automatik menambah `chloros-cli` ke laluan sistem anda untuk akses baris arahan.
 { % endhint %}
 
 ***
@@ -59,11 +60,13 @@ Pemasang secara automatik menambah ___inline0002___ ke laluan sistem anda untuk 
 
 Untuk pemaju dan aliran kerja automasi, pasang SDK Python Chloros:
 
-___Code0000___
+```bash
+PIP Pasang Chloros-SDK
+```
 
 ** Dokumentasi **: [API: Python SDK] (api-python-sdk.md)
 
-** Keperluan **: Desktop Chloros mesti dipasang, Lesen Chloros+ diperlukan.
+** Keperluan **: Desktop Chloros mesti dipasang, Lesen Chloros+ diperlukan
 
 ***
 
@@ -71,26 +74,28 @@ ___Code0000___
 
 Pemasangan kloros termasuk:
 
-*✅ ** Chloros Desktop GUI **-Antara Muka Grafik Penuh
-*✅ ** chloros (penyemak imbas) ** - antara muka berasaskan web untuk sistem spec yang lebih rendah
-*✅ ** chloros cli **: antara muka baris perintah (memerlukan lesen chloros+)
-*✅ ** Backend Engine **: Paip pemprosesan imej
+*✅ ** Chloros Desktop GUI ** - Antara Muka Grafik Penuh
+*✅ ** chloros (penyemak imbas) **-antara muka berasaskan web untuk sistem spec rendah
+*✅ ** chloros cli ** - antara muka baris perintah (memerlukan lesen chloros+)
+*✅ ** Backend Engine ** - Paip pemprosesan imej
 *✅ ** Profil Kamera ** - Templat Kamera Mapir yang telah dikonfigurasikan
 
 ***
 
-## chloros+ naik taraf
+## Naik taraf ke Chloros+
 
 Buka kunci ciri lanjutan dengan langganan kloros+:
 
-*🚀 ** pemprosesan pelbagai threaded **: Proses imej selari
-*⚡ ** pecutan GPU (CUDA) **: Ambil kesempatan daripada kuasa GPU NVIDIA
+*🚀 ** pemprosesan pelbagai threaded ** - Proses imej selari
+*⚡ ** GPU (CUDA) Percepatan ** - Leverage Nvidia GPU Power
 *💻 ** CLI Access ** - Automasi dengan alat baris arahan
 *🐍 ** python sdk ** - akses API programatik
-*📱 ** Pelbagai peranti ** - Gunakan pada 2 hingga 10+ peranti (bergantung pada pelan)
+*📱 ** pelbagai peranti ** - Gunakan pada peranti 2-10+ (Rancangan bergantung)
 *🧮 ** Formula tersuai ** - Buat indeks multispektral tersuai
 
-<p align = "center"> <a href = "https://cloud.mapir.camera/pricing" class = "Button Primary"> Lihat chloros+ rancangan dan harga </a> </p> *** ***
+<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Lihat Pelan & Harga Chloros+</a></p>
+
+***
 
 ## Bantuan pemasangan
 
@@ -102,64 +107,66 @@ Buka kunci ciri lanjutan dengan langganan kloros+:
 * Lumpuhkan sementara perisian antivirus
 * Periksa bahawa anda memenuhi keperluan sistem minimum
 
-** Permohonan tidak bermula: **
+** Permohonan tidak akan bermula: **
 
-* Cuba versi chloros (penyemak imbas).
-* Periksa bahawa Windows 10/11 (64-bit) dipasang.
-* Kemas kini pemacu grafik.
-* Semak Windows Event Viewer untuk butiran mengenai ralat.
-* Sokongan hubungi dengan log ralat.
+* Cuba versi kloros (penyemak imbas)
+* Sahkan Windows 10/11 (64-bit) dipasang
+* Kemas kini pemacu grafik
+* Semak Windows Event Viewer untuk maklumat ralat
+* Sokongan hubungi dengan log ralat
 
-** Masalah dengan pengaktifan lesen: **
+** Isu Pengaktifan Lesen: **
 
-* Pastikan sambungan internet anda aktif.
-* Sahkan kelayakan di [https://cloud.mapir.camera] (https://cloud.mapir.camera).
-* Periksa bahawa firewall tidak menyekat kloros.
+* Pastikan sambungan internet aktif
+* Sahkan kelayakan di [https://cloud.mapir.camera] (https://cloud.mapir.camera)
+* Periksa firewall tidak menyekat kloros
 * Lihat [chloros+ login] (chloros+ -login.md) untuk arahan terperinci
 
-### Dapatkan bantuan
+### mendapat sokongan
 
-Perlukan bantuan dengan pemasangan atau konfigurasi?
+Perlukan bantuan dengan pemasangan atau persediaan?
 
 *📧 ** e -mel **: info@mapir.camera
 *🌐 ** Laman web **: [https://www.mapir.camera/community/contact n(https://www.mapir.camera/community/contact)
-*📚 ** Dokumentasi **: [Pengenalan] (./)
-*❓ ** Soalan Lazim **: [Soalan Lazim] (FAQ.MD)
+*📚 ** Dokumentasi **: [Bermula] (./)
+*❓ ** FAQ **: [Soalan Lazim] (FAQ.MD)
 
 ***
 
-## Changelog
+## Tukar log
 
-<utiran>
+<details>
 
-<summary> Versi 1.0.3 </summary>
+<summary>Version 1.0.3</summary>
 
-### ** Tarikh Siaran **: Disember 2025?
+### ** Tarikh Siaran **: Disember?, 2025
 
 #### Ciri -ciri baru
 
-*Pelepasan awal
+* Pelancaran awal
 
 #### penambahbaikan
 
-*Pelepasan awal
+* Pelancaran awal
 
 #### Pembetulan pepijat
 
-*Pelepasan awal
+* Pelancaran awal
 
 #### isu yang diketahui
 
-*Pelepasan awal
+* Pelancaran awal
 
-</butiran> ***
+</details>
+
+***
 
 ## Perjanjian Lesen
 
 ** Perisian Proprietari ** - Hak Cipta (c) 2025 Mapir Inc.
 
-Penggunaan, pengedaran atau pengubahsuaian yang tidak dibenarkan adalah dilarang.
+Penggunaan, pengedaran, atau pengubahsuaian yang tidak dibenarkan adalah dilarang.
 
-** Versi Percuma ** - tersedia untuk kegunaan peribadi dan komersial dengan batasan ciri.
+** Versi Percuma **: Tersedia untuk Penggunaan Peribadi dan Komersial dengan Batasan Ciri
 
-** Chloros+**: Lesen berasaskan langganan untuk ciri-ciri canggih dan pelaksanaan komersil.
+** Chloros+**: Lesen berasaskan langganan untuk ciri canggih dan penggunaan komersial

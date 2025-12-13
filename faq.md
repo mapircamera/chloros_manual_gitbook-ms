@@ -1,71 +1,72 @@
 ---
-description: Preguntas frecuentes
-metaLinks:
-  alternates:
-    - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/faq
+Penerangan: Soalan yang sering ditanya
+Metalinks:
+  Ganti:
+    - https://app.gitbook.com/s/o044kn3ws0uidvomskcr/faq
 ---
-# Soalan yang sering ditanya
 
-<utiran>
+# FAQ
 
-<summary> Bolehkah saya memproses imej dari kamera bukan mapir dengan kloros? </Summary>
+<details>
 
-Tidak, kloros hanya menyokong pemprosesan imej dari kamera Mapir. Lihat senarai [model kamera yang disokong] (disokong kamer.md) untuk maklumat lanjut. Kami menawarkan pemprosesan kamera lain di Mapir Cloud, lihat senarai penuh [di sini] (https://mapir.gitbook.io/mapir-cloud/supported-cameras).
+<summary>Bolehkah saya memproses imej dari kamera yang bukan jenama Mapir dengan kloros?</summary>
 
-</butiran>
+Tidak, kloros hanya menyokong pemprosesan imej kamera Mapir. Sila lihat senarai [model kamera yang disokong] (disokong kamer.md) untuk maklumat lanjut. Kami menawarkan pemprosesan kamera lain di Mapir Cloud, lihat senarai penuh [di sini] (https://mapir.gitbook.io/mapir-cloud/supported-cameras).
 
-<utiran>
+</details>
 
-<summary> Bolehkah saya menentukur imej saya untuk pemantulan tanpa sasaran penentukuran? </Summary>
+<details>
 
-Tidak. Tanpa imej sasaran penentukuran yang ditangkap pada kira-kira masa yang sama dengan imej bukan sasaran, anda tidak akan dapat mengaitkan nilai piksel imej kepada peratusan refleksi yang diketahui. Jika anda juga tidak termasuk rakaman dari sensor cahaya Mapir, spektrum cahaya ambien tidak akan diukur dan hasil refleksi tidak akan tepat.
+<summary>Bolehkah saya menentukur gambar saya untuk pemantulan tanpa sasaran penentukuran?</summary>
 
-</butiran>
+Tidak. Tanpa imej sasaran penentukuran yang ditangkap apabila imej bukan sasaran ditangkap, anda tidak akan dapat mengaitkan nilai piksel imej kepada peratus refleksi yang diketahui. Jika anda juga tidak memasukkan log dari sensor cahaya MAPIR maka spektrum cahaya ambien tidak akan diukur, dan hasil refleksi tidak akan tepat.
 
-<utiran>
+</details>
 
-<summary> Bolehkah saya mengedit imej saya sebelum memprosesnya di kloros? </Summary>
+<details>
 
-Tidak. Chloros menganggap bahawa data input belum diubahsuai. Jangan menukar nama fail.
+<summary>Bolehkah saya mengedit imej saya sebelum diproses di kloros?</summary>
 
-</butiran>
+Tidak. Chloros menganggap data input belum diubahsuai. Jangan ubah nama fail.
 
-<utiran>
+</details>
 
-<summary> Bolehkah saya menetapkan kamera Mapir Survey3 saya untuk pendedahan automatik dan memproses imej di kloros? </Summary>
+<details>
 
-No. Survey3 set data imej mesti mempunyai pendedahan tetap/terkunci, jadi kelajuan pengatup auto dan ISO auto tidak dibenarkan. Semua imej dari model kamera yang sama mesti mempunyai kelajuan pengatup yang sama dan ISO (pendedahan).
+<summary>Bolehkah saya menetapkan kamera Mapir Survey3 saya untuk pendedahan auto dan memproses imej di kloros?</summary>
 
-</butiran>
+No. Dataset Imej Survey3 mesti mempunyai pendedahan tetap/terkunci, jadi tiada kelajuan pengatup auto atau ISO auto. Semua imej model kamera yang sama mesti mempunyai kelajuan pengatup yang sama dan ISO (pendedahan).
 
-<utiran>
+</details>
 
-<summary> Bolehkah kloros memproses atau menganalisis imej orthomosaik? </Summary>
+<details>
 
-Tidak. Hanya imej kamera Mapir individu yang disokong, bukan imej yang disatukan sebagai peta orthomosaik.
+<summary>Can Chloros process or analyze orthomosaic images?</summary>
 
-</butiran>
+Tidak. Hanya imej kamera Mapir individu yang disokong, tidak dijahit imej seperti peta orthomosaik.
 
-<utiran>
+</details>
 
-<summary> bagaimana saya boleh mempercepatkan langkah pengesanan sasaran kloros? </summary>
+<details>
 
-Dalam jadual Explorer File, jika anda mengangkat imej sasaran di lajur yang betul, kloros hanya akan mencari sasaran penentukuran dalam imej tersebut, sangat mempercepatkan pemprosesan.
+<summary>How can I speed up the target detection step of Chloros?</summary>
 
-</butiran>
+Dalam jadual penyemak imbas fail yang sebelum memilih imej sasaran di lajur kanan akan memberitahu kloros hanya melihat imej tersebut untuk sasaran penentukuran, sangat mempercepatkan pemprosesan.
 
-<utiran>
+</details>
 
-<summary> Sekiranya saya memuat naik gambar saya ke <a href = "https://www.mapir.camera/collections/software/products/mapir-cloud-subscription"> Mapir Cloud, </a>
+<details>
 
-Jika anda merancang untuk memuat naiknya ke platform pemprosesan dalam talian kami [Mapir Cloud] (https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), jangan edit imej sebelum memuat naiknya. Awan akan melakukan pemprosesan yang sama dan banyak lagi.
+<summary>If I will upload my images to <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud</a> should I process in Chloros prior to uploading?</summary>
 
-</butiran>
+Jika anda bercadang untuk memuat naik ke platform pemprosesan dalam talian kami [Mapir Cloud] (https://www.mapir.camera/collections/software/products/mapir-cloud-subscription) Jangan edit imej sebelum dimuat naik. Awan akan melakukan semua pemprosesan yang sama dan banyak lagi.
 
-<utiran>
+</details>
 
-<summary> Adakah Mapir pernah menyokong ciri x? Saya sangat suka mapir untuk menawarkan x. </Summary>
+<details>
 
-Kami sentiasa berminat untuk menerima komen mengenai produk kami. Sekiranya anda menemui sebarang masalah dengan produk kami atau mempunyai cadangan tentang bagaimana kami dapat memperbaikinya, sila hubungi kami (https://www.mapir.camera/community/contact) untuk berkongsi pendapat anda. Kebanyakan R & D kami dipandu oleh keperluan yang paling penting bagi pelanggan kami.
+<summary>Will MAPIR ever support X feature? I really wish MAPIR offered X.</summary>
 
-</butiran>
+Kami sentiasa berminat untuk menerima maklum balas mengenai produk kami. Jika anda menemui masalah dengan produk kami, atau mempunyai cadangan tentang bagaimana kami dapat memperbaiki produk kami, sila [hubungi kami] (https://www.mapir.camera/community/contact) untuk berkongsi pemikiran anda. Kebanyakan R \ & D kami dipandu dengan mendengar keperluan terbesar pelanggan kami.
+
+</details>

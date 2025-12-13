@@ -1,6 +1,6 @@
-# Indeks
+# Jadual kandungan
 
-* [Pengenalan] (ReadMe.md)
+* [Bermula] (Readme.md)
 * [GUI: navigasi] (navigasi.md)
 * [GUI: Projek] (Projects.md)
 * [CLI: baris arahan] (CLI.MD)
@@ -11,24 +11,24 @@
 * [Sasaran penentukuran] (penentukuran targets.md)
 * [Bahasa yang disokong] (disokong bahasa.md)
 * [Muat turun] (muat turun.md)
-* [Soalan Lazim] (FAQ.MD)
+* [FAQ] (FAQ.MD)
 
-## Pemprosesan Imej (GUI)
+## Imej Pemprosesan (GUI)
 
 * [Menyesuaikan tetapan projek] (Imej-imej-GUI/penyesuaian-projek-penyelesaian.md)
 * [Menambah fail ke projek] (pemprosesan-imej-gui/tambah-files-to-a-project.md)
-* [Memilih Imej Sasaran] (Imej-imej-Gui/Pilihan-Target-imd.md)
+* [Memilih Imej Sasaran] (Imej-imej-Gui/Pilihan Target-Imej.md)
 * [Memulakan pemprosesan] (pemprosesan-imej-gui/permulaan-pemprosesan.md)
 * [Memantau pemprosesan] (pemprosesan-imej-gui/pemantauan-the-processing.md)
-* [Memproses pemprosesan] (pemprosesan-imej-gui/penamat-the-processing.md)
+* [Menamatkan pemprosesan] (pemprosesan-imej-gui/penamat-the-processing.md)
 
-## Persediaan Projek
+## Tetapan Projek
 
 * [Tetapan Projek] (Projek-Penyesuaian/Projek-Settings.md)
 * [Formula Indeks Multispectral] (Projek-Penyesuaian/Multispectral-Index-Formula.md)
 
 ## Penonton Imej (GUI)
 
-* [Buka imej dalam skrin penuh] (imej-viewer-gui/pembukaan-an-imej-full-screen.md)
+* [Membuka Skrin Penuh Imej] (Image-Viewer-Gui/Opening-An-Immage-Full-Screen.md)
 * [Lapisan Imej] (Image-Viewer-Gui/Image-Layers.md)
-* [Indeks pasir/lut] (imej-viewer-gui/index-lut-sandbox.md)
+* [Index/Lut Sandbox] (imej-viewer-gui/index-lut-sandbox.md)

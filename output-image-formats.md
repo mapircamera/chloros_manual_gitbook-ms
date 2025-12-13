@@ -1,23 +1,24 @@
 ---
-metaLinks:
-  alternates:
-    - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/output-image-formats
+Metalinks:
+  Ganti:
+    -https://app.gitbook.com/s/o044kn3ws0uidvomskcr/output-image-formats
 ---
+
 # Format imej output
 
-### TIFF (16 bit)
+### TIFF (16-bit)
 
-16 bit (nombor digital piksel 0 - 65535) output dalam format TIFF (.tif).
+16 -bit (nombor digital piksel 0 - 65535) tiff (.tif) output format.
 
-### TIFF (32-bit, peratusan %)
+### TIFF (32-bit, peratus %)
 
-32 bit (piksel terapung 0.0 - 1.0) dalam format TIFF (.tif). Nilai piksel mewakili peratusan refleksi, di mana 0.0 = 0% dan 1.0 = 100%.
+32 -bit (pixel float 0.0 - 1.0) tiff (.tif) output format. Nilai piksel mewakili peratusan refleksi di mana 0.0 = 0% dan 1.0 = 100%.
 
-### ** jpg (8 bit) **
+### ** jpg (8-bit) **
 
-Output dalam format JPG 8-bit (.jpg) (nombor digital piksel 0-255).
+8 -bit (nombor digital pixel 0 -255) jpg (.jpg) output format.
 
 ### ** png (8-bit) **
 
-Output dalam format 8 -bit png (.png) (nombor digital piksel 0 - 255). Mampatan tanpa kehilangan sesuai untuk tontonan web.
+8 -bit (nombor digital pixel 0 - 255) png (.png) output format. Mampatan tanpa kehilangan sesuai untuk tontonan dan visualisasi web.
 
