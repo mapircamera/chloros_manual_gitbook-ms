@@ -75,7 +75,7 @@ Chloros-cli Language Pt-Br
 Bahasa Chloros-cli-list
 ```
 
-Untuk maklumat lanjut, lihat [Dokumentasi CLI] (CLI.MD).
+Untuk maklumat lanjut, lihat [Dokumentasi CLI](CLI.md).
 
 ### di chloros python sdk
 

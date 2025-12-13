@@ -36,10 +36,10 @@ Lihat melalui imej yang diimport anda dalam penyemak imbas fail dan mengenal pas
 
 ** Senario biasa: **
 
-*** Target Pra-Capture **: Ditangkap Sebelum Memulakan Sesi
-*** sasaran pasca menangkap **: ditangkap setelah menyelesaikan sesi
-*** sasaran dalam bidang **: sasaran yang diletakkan di kawasan penangkapan
-*** Pelbagai sasaran **: 2-3 Imej sasaran setiap sesi (disyorkan)
+* **Target Pra-Capture**: Ditangkap Sebelum Memulakan Sesi
+* **sasaran pasca menangkap**: ditangkap setelah menyelesaikan sesi
+* **sasaran dalam bidang**: sasaran yang diletakkan di kawasan penangkapan
+* **Pelbagai sasaran**: 2-3 Imej sasaran setiap sesi (disyorkan)
 
 ### Langkah 2: Periksa lajur sasaran
 
@@ -128,17 +128,17 @@ Gunakan lajur ini untuk mengesahkan anda telah menandakan sasaran untuk setiap j
 
 ### menyesuaikan kepekaan pengesanan
 
-Jika kloros tidak mengesan sasaran anda dengan betul, laraskan tetapan ini dalam [tetapan projek] (menyesuaikan-projek-penyediakan.md):
+Jika kloros tidak mengesan sasaran anda dengan betul, laraskan tetapan ini dalam [tetapan projek](menyesuaikan-projek-penyediakan.md):
 
 ** Kawasan sampel penentukuran minimum: **
 
-*** lalai **: 25 piksel
+* **lalai**: 25 piksel
 *** Meningkatkan ** Sekiranya mendapat pengesanan palsu pada artifak kecil
 *** Kurangkan ** Sekiranya sasaran tidak dikesan
 
 ** Clustering Sasaran Minimum: **
 
-*** lalai **: 60
+* **lalai**: 60
 *** Meningkatkan ** Sekiranya sasaran dibahagikan kepada pelbagai pengesanan
 *** Kurangkan ** Sekiranya sasaran dengan variasi warna tidak dikesan sepenuhnya
 
@@ -214,8 +214,8 @@ Walaupun tidak disyorkan untuk kerja saintifik, anda boleh memproses tanpa sasar
 
 Sebaik sahaja anda menandakan gambar sasaran anda:
 
-1. ** Mengkaji tetapan anda **-lihat [menyesuaikan tetapan projek] (menyesuaikan-projek-penyetempatan.md)
-2. ** Mula Pemprosesan **-Lihat [Memulakan Pemprosesan] (permulaan-pemproses.md)
-3. ** Memantau Kemajuan **-Lihat [Memantau pemprosesan] (Pemantauan-The-Processing.md)
+1. ** Mengkaji tetapan anda **-lihat [menyesuaikan tetapan projek](menyesuaikan-projek-penyetempatan.md)
+2. ** Mula Pemprosesan **-Lihat [Memulakan Pemprosesan](permulaan-pemproses.md)
+3. ** Memantau Kemajuan **-Lihat [Memantau pemprosesan](Pemantauan-The-Processing.md)
 
-Untuk maklumat lanjut mengenai penentukuran mensasarkan diri mereka, lihat [sasaran penentukuran] (../ penentukuran targets.md).
+Untuk maklumat lanjut mengenai penentukuran mensasarkan diri mereka, lihat [sasaran penentukuran](../ penentukuran targets.md).

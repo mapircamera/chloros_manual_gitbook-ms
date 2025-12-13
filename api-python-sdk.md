@@ -16,7 +16,7 @@ Keperluan ###
 | Keperluan | Butiran |
 | -------------------- | ------------------------------------------------------------------- |
 | ** Desktop Chloros ** | Mesti dipasang secara tempatan |
-| ** Lesen ** | Chloros+ ([pelan berbayar diperlukan] (https://cloud.mapir.camera/pricing)) |
+| ** Lesen ** | Chloros+ ([pelan berbayar diperlukan](https://cloud.mapir.camera/pricing)) |
 | ** Sistem Operasi ** | Windows 10/11 (64-bit) |
 | ** Python ** | Python 3.7 atau lebih tinggi |
 | ** Memory ** | 8GB RAM Minimum (16GB disyorkan) |
@@ -86,9 +86,9 @@ chloros.process(mode="parallel", wait=True)
 
 Sebelum memasang SDK, pastikan anda mempunyai:
 
-1. ** Desktop Chloros ** Dipasang ([muat turun] (muat turun.md))
-2. ** Python 3.7+** Dipasang ([python.org] (https://www.python.org))
-3. ** Lesen AKTIF CHLOROS+ ** ([Upgrade] (https://cloud.mapir.camera/pricing))
+1. ** Desktop Chloros ** Dipasang ([muat turun](muat turun.md))
+2. ** Python 3.7+** Dipasang ([python.org](https://www.python.org))
+3. ** Lesen AKTIF CHLOROS+ ** ([Upgrade](https://cloud.mapir.camera/pricing))
 
 ### Pasang melalui PIP
 
@@ -1219,13 +1219,13 @@ thread.start()
 
 ### Dokumentasi
 
-*** rujukan API **: Halaman ini
+* **rujukan API**: Halaman ini
 
 ### saluran sokongan
 
-*** E -mel **: info@mapir.camera
-*** Laman web **: [https://www.mapir.camera/community/contact n(https://www.mapir.camera/community/contact)
-*** Harga **: [https://cloud.mapir.camera/pricingś(https://cloud.mapir.camera/pricing)
+* **E -mel**: info@mapir.camera
+* **Laman web**: [https://www.mapir.camera/community/contact n(https://www.mapir.camera/community/contact)
+* **Harga**: [https://cloud.mapir.camera/pricingś(https://cloud.mapir.camera/pricing)
 
 ### Contoh kod
 

@@ -31,7 +31,7 @@ Hanya mengimport imej anda dan mula memproses dengan lalai ini.
 
 ## Gambaran keseluruhan tetapan projek
 
-Panel Tetapan Projek dianjurkan ke dalam beberapa kategori. Berikut adalah ringkasan setiap bahagian. Untuk dokumentasi lengkap, lihat [Tetapan Projek] (../ Project-Settings/Project-Settings.md).
+Panel Tetapan Projek dianjurkan ke dalam beberapa kategori. Berikut adalah ringkasan setiap bahagian. Untuk dokumentasi lengkap, lihat [Tetapan Projek](../ Project-Settings/Project-Settings.md).
 
 ### Pengesanan sasaran
 
@@ -39,8 +39,8 @@ Mengawal bagaimana kloros mengenal pasti sasaran penentukuran dalam imej anda.
 
 ** Tetapan utama: **
 
-*** Kawasan sampel penentukuran minimum **: ambang saiz untuk pengesanan sasaran (lalai: 25 piksel)
-*** kluster sasaran minimum **: ambang persamaan untuk mengumpulkan kawasan sasaran (lalai: 60)
+* **Kawasan sampel penentukuran minimum**: ambang saiz untuk pengesanan sasaran (lalai: 25 piksel)
+* **kluster sasaran minimum**: ambang persamaan untuk mengumpulkan kawasan sasaran (lalai: 60)
 
 ** Bila hendak menyesuaikan: **
 
@@ -54,16 +54,16 @@ Pilihan pemprosesan imej utama dan penentukuran.
 
 ** Tetapan utama: **
 
-*** Pembetulan Vignette **: Mengimbangi lensa gelap di tepi ✅ disyorkan
-*** Penentukuran Refleksi **: Menormalkan nilai menggunakan sasaran penentukuran ✅ Disyorkan
-*** kaedah debayer **: Algoritma untuk menukar mentah ke 3-channels multi-spectral
-*** Selang pengubahsuaian minimum **: Masa antara menggunakan sasaran penentukuran (0 = Gunakan semua)
+* **Pembetulan Vignette**: Mengimbangi lensa gelap di tepi ✅ disyorkan
+* **Penentukuran Refleksi**: Menormalkan nilai menggunakan sasaran penentukuran ✅ Disyorkan
+* **kaedah debayer**: Algoritma untuk menukar mentah ke 3-channels multi-spectral
+* **Selang pengubahsuaian minimum**: Masa antara menggunakan sasaran penentukuran (0 = Gunakan semua)
 
 ** Tetapan Lanjutan: **
 
-*** Offset Zon Time Sensor Light **: Untuk Penyegerakan Masa PPK (Lalai: 0)
-*** Memohon pembetulan PPK **: Menggunakan data pin GPS/pendedahan dari fail .daq
-*** PIN Pendedahan 1/2 **: Menetapkan kamera ke pin pendedahan untuk persediaan dwi-kamera
+* **Offset Zon Time Sensor Light**: Untuk Penyegerakan Masa PPK (Lalai: 0)
+* **Memohon pembetulan PPK**: Menggunakan data pin GPS/pendedahan dari fail .daq
+* **PIN Pendedahan 1/2**: Menetapkan kamera ke pin pendedahan untuk persediaan dwi-kamera
 
 ### indeks (indeks multispektral)
 
@@ -78,11 +78,11 @@ Konfigurasikan indeks tumbuh -tumbuhan yang hendak dikira dan dieksport.
 
 ** indeks popular: **
 
-*** ndvi **: Kesihatan tumbuh -tumbuhan umum (yang paling biasa)
-*** ndre **: Pengesanan tekanan awal dengan rededge
-*** gndvi **: kepekatan klorofil sensitif
-*** osavi **: berfungsi dengan baik dengan tanah yang kelihatan
-*** Evi **: Kawasan Indeks Kawasan Daun Tinggi (LAI)
+* **ndvi**: Kesihatan tumbuh -tumbuhan umum (yang paling biasa)
+* **ndre**: Pengesanan tekanan awal dengan rededge
+* **gndvi**: kepekatan klorofil sensitif
+* **osavi**: berfungsi dengan baik dengan tanah yang kelihatan
+* **Evi**: Kawasan Indeks Kawasan Daun Tinggi (LAI)
 
 ** Formula tersuai (kloros+ sahaja): **
 
@@ -90,7 +90,7 @@ Konfigurasikan indeks tumbuh -tumbuhan yang hendak dikira dan dieksport.
 * Gunakan matematik band dengan semua saluran imej
 * Simpan formula tersuai untuk digunakan semula
 
-Untuk semua indeks dan formula yang ada, lihat [Formula Indeks Multispectral] (../ Project-Settings/Multispectral-Index-Formulas.md).
+Untuk semua indeks dan formula yang ada, lihat [Formula Indeks Multispectral](../ Project-Settings/Multispectral-Index-Formulas.md).
 
 ### Eksport
 
@@ -98,10 +98,10 @@ Mengawal format dan kualiti fail output.
 
 ** Format yang ada: **
 
-*** TIFF (16-bit) **: Disyorkan untuk analisis GIS dan saintifik (0-65,535 julat)
-*** TIFF (32-bit, peratus) **: Nilai pemantulan terapung (0.0-1.0 julat)
-*** png (8-bit) **: mampatan tanpa kehilangan untuk visualisasi (julat 0-255)
-*** jpg (8-bit) **: fail terkecil, mampatan lossy (julat 0-255)
+* **TIFF (16-bit)**: Disyorkan untuk analisis GIS dan saintifik (0-65,535 julat)
+* **TIFF (32-bit, peratus)**: Nilai pemantulan terapung (0.0-1.0 julat)
+* **png (8-bit)**: mampatan tanpa kehilangan untuk visualisasi (julat 0-255)
+* **jpg (8-bit)**: fail terkecil, mampatan lossy (julat 0-255)
 
 ***
 
@@ -135,9 +135,9 @@ Semasa membuat projek baru:
 
 ** "Simpan Folder Projek" ** Menetapkan Menentukan Di mana Projek Baru Dibuat Secara Lalai:
 
-*** Lokasi lalai **: `c: \ users \ [username] \ chloros projects`
-*** Tukar Lokasi **: Klik edit ikon dan pilih folder baru
-*** bila hendak berubah **:
+* **Lokasi lalai**: `c: \ users [username] \ chloros projects`
+* **Tukar Lokasi**: Klik edit ikon dan pilih folder baru
+* **bila hendak berubah**:
   * Pemacu rangkaian untuk kerjasama pasukan
   * Pemacu yang berbeza dengan lebih banyak ruang penyimpanan
   * Struktur folder teratur mengikut tahun/pelanggan
@@ -165,8 +165,8 @@ Jika menggunakan perakam Mapir Daq dengan GPS untuk geolokasi yang tepat:
 
 ** Tugasan PIN Pendedahan: **
 
-*** PIN PENDEDAHAN 1 **: Pilih Model Kamera dari Dropdown
-*** PIN PENDEDAHAN 2 **: Pilih Kamera Kedua atau "Jangan Gunakan"
+* **PIN PENDEDAHAN 1**: Pilih Model Kamera dari Dropdown
+* **PIN PENDEDAHAN 2**: Pilih Kamera Kedua atau "Jangan Gunakan"
 * Kamera yang sama tidak dapat diberikan kepada kedua -dua pin
 
 {% hint style="warning" %}
@@ -227,8 +227,8 @@ Sebelum mula memproses, semak tetapan utama ini:
 
 Setelah tetapan anda dikonfigurasikan:
 
-1. ** Tandakan imej sasaran penentukuran **-lihat [memilih imej sasaran] (memilih sasaran-imej.md)
-2. ** Mula Pemprosesan **-Lihat [Memulakan Pemprosesan] (permulaan-pemproses.md)
-3. ** Memantau Kemajuan **-Lihat [Memantau pemprosesan] (Pemantauan-The-Processing.md)
+1. ** Tandakan imej sasaran penentukuran **-lihat [memilih imej sasaran](memilih sasaran-imej.md)
+2. ** Mula Pemprosesan **-Lihat [Memulakan Pemprosesan](permulaan-pemproses.md)
+3. ** Memantau Kemajuan **-Lihat [Memantau pemprosesan](Pemantauan-The-Processing.md)
 
 Untuk butiran lengkap mengenai semua tetapan yang tersedia, lihat dokumentasi rujukan [Projek-Settings/Project-Settings.md) [Project Settings/Project-Settings.md).

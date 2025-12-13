@@ -67,7 +67,7 @@ Sebaik sahaja imej diimport, mereka muncul dalam jadual dengan lajur berikut:
 
 * Periksa kotak ini untuk imej yang mengandungi sasaran penentukuran
 * Sangat mempercepat pengesanan sasaran semasa pemprosesan
-* Lihat [memilih imej sasaran] (memilih sasaran-imej.md) untuk maklumat lanjut
+* Lihat [memilih imej sasaran](memilih sasaran-imej.md) untuk maklumat lanjut
 
 ***
 
@@ -83,9 +83,9 @@ Untuk membuang gambar yang tidak diingini dari projek anda:
 
 ### menyusun dan menapis
 
-*** Sort mengikut lajur **: Klik mana -mana tajuk lajur untuk menyusun gambar
-*** timestamp sort **: berguna untuk mengatur urutan penangkapan kronologi
-*** Penapis Model Kamera **: Imej Kumpulan dengan Jenis Kamera Jika menggunakan pelbagai kamera
+* **Sort mengikut lajur**: Klik mana -mana tajuk lajur untuk menyusun gambar
+* **timestamp sort**: berguna untuk mengatur urutan penangkapan kronologi
+* **Penapis Model Kamera**: Imej Kumpulan dengan Jenis Kamera Jika menggunakan pelbagai kamera
 
 ***
 
@@ -101,10 +101,10 @@ Klik mana -mana gambar kecil imej dalam penyemak imbas fail untuk memaparkannya 
 
 ### Navigasi cepat
 
-*** gambar sebelumnya **: Klik anak panah kiri atau tekan ← Kunci
-*** Imej Seterusnya **: Klik anak panah kanan atau tekan → kekunci
-*** Zum masuk/keluar **: Gunakan butang roda tetikus atau zum
-*** pan **: Klik dan seret pada imej ketika dizum masuk
+* **gambar sebelumnya**: Klik anak panah kiri atau tekan ← Kunci
+* **Imej Seterusnya**: Klik anak panah kanan atau tekan → kekunci
+* **Zum masuk/keluar**: Gunakan butang roda tetikus atau zum
+* **pan**: Klik dan seret pada imej ketika dizum masuk
 
 ***
 
@@ -165,7 +165,7 @@ Jika projek anda mengandungi imej dari pelbagai kamera Mapir:
 ** Kemungkinan Punca: **
 
 * Format fail tidak disokong (hanya mentah+jpg dan jpg dari kamera mapir)
-* Imej berasal dari kamera bukan mapir (lihat [kamera yang disokong] (../ disokong-cameras.md))
+* Imej berasal dari kamera bukan mapir (lihat [kamera yang disokong](../ disokong-cameras.md))
 * Fail rasuah atau pemindahan tidak lengkap dari kad SD
 
 ** Penyelesaian **: Sahkan format fail dan keserasian model kamera
@@ -197,8 +197,8 @@ Setelah fail anda diimport:
 
 1. ** Semak senarai fail ** - Pastikan semua imej dimuat dengan betul
 2. ** Semak Model Kamera ** - Sahkan pengesanan kamera yang betul
-3. ** Tandakan imej sasaran **-lihat [memilih imej sasaran] (memilih sasaran-imej.md)
-4. ** Laraskan Tetapan **-Konfigurasikan Pilihan Pemprosesan Dalam [Tetapan Projek] (menyesuaikan-projek-penstabil.md)
-5. ** Mula Pemprosesan **-Lihat [Memulakan Pemprosesan] (permulaan-pemproses.md)
+3. ** Tandakan imej sasaran **-lihat [memilih imej sasaran](memilih sasaran-imej.md)
+4. ** Laraskan Tetapan **-Konfigurasikan Pilihan Pemprosesan Dalam [Tetapan Projek](menyesuaikan-projek-penstabil.md)
+5. ** Mula Pemprosesan **-Lihat [Memulakan Pemprosesan](permulaan-pemproses.md)
 
-Untuk maklumat terperinci mengenai konfigurasi projek, lihat [Menyesuaikan Tetapan Projek] (menyesuaikan-projek-penyelesaian.md).
+Untuk maklumat terperinci mengenai konfigurasi projek, lihat [Menyesuaikan Tetapan Projek](menyesuaikan-projek-penyelesaian.md).

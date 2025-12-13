@@ -408,12 +408,12 @@ Indeks eksponen:
 
 Sekarang anda memahami kotak pasir indeks/lut:
 
-*** Memohon kepada pemprosesan **: Gunakan tetapan yang ditemui dalam [Tetapan Projek] (../ Project-Settings/Project-Settings.md)
-*** Proses Batch **: Sapukan indeks yang dioptimumkan ke dataset penuh
-*** Ketahui lebih lanjut **: Baca [formula indeks multispectral] (../ Project-Settings/Multispectral-index-Formulas.md)
+* **Memohon kepada pemprosesan**: Gunakan tetapan yang ditemui dalam [Tetapan Projek](../ Project-Settings/Project-Settings.md)
+* **Proses Batch**: Sapukan indeks yang dioptimumkan ke dataset penuh
+* **Ketahui lebih lanjut**: Baca [formula indeks multispectral](../ Project-Settings/Multispectral-index-Formulas.md)
 
 Dokumentasi Berkaitan:
 
-*[** Lapisan Imej **] (Image -Layers.md) - Pengurusan Lapisan dan Visualisasi
-*[** Membuka Skrin Penuh Imej **] (Pembukaan-An-Image-full-Screen.md)-Asas Penonton Imej
-*[** Imej Pemprosesan (GUI) **] (../ Pemprosesan-Images-Gui/Adding-Files-to-a-project.md)-Aliran Kerja Pemprosesan Penuh
+*[** Lapisan Imej **](Image -Layers.md) - Pengurusan Lapisan dan Visualisasi
+*[** Membuka Skrin Penuh Imej **](Pembukaan-An-Image-full-Screen.md)-Asas Penonton Imej
+*[** Imej Pemprosesan (GUI) **](../ Pemprosesan-Images-Gui/Adding-Files-to-a-project.md)-Aliran Kerja Pemprosesan Penuh

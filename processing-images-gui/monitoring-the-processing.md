@@ -94,10 +94,10 @@ Bagi pengguna dengan Lesen Chloros+:
 
 ** Apa yang berlaku: **
 
-*** debayering **: Menukar corak bayer mentah ke 3 saluran
-*** Pembetulan Vignette **: Mengeluarkan kelebihan lensa gelap
-*** Penentukuran Refleksi **: Menormalkan dengan nilai sasaran
-*** Pengiraan indeks **: pengkomputeran indeks multispektral
+* **debayering**: Menukar corak bayer mentah ke 3 saluran
+* **Pembetulan Vignette**: Mengeluarkan kelebihan lensa gelap
+* **Penentukuran Refleksi**: Menormalkan dengan nilai sasaran
+* **Pengiraan indeks**: pengkomputeran indeks multispektral
 * Memproses setiap gambar melalui saluran paip penuh
 
 ** Tempoh: ** Majoriti jumlah masa pemprosesan (60-80%)
@@ -110,9 +110,9 @@ Bagi pengguna dengan Lesen Chloros+:
 
 ** Tingkah laku pemprosesan: **
 
-*** mod percuma **: memproses satu imej pada satu masa secara berurutan
-*** CHLOROS+ MODE **: Proses sehingga 16 imej secara serentak
-*** Percepatan GPU **: Mempercepatkan tahap ini
+* **mod percuma**: memproses satu imej pada satu masa secara berurutan
+* **CHLOROS+ MODE**: Proses sehingga 16 imej secara serentak
+* **Percepatan GPU**: Mempercepatkan tahap ini
 
 ** Apa yang perlu ditonton: **
 
@@ -197,7 +197,7 @@ Isu kritikal yang boleh menyebabkan pemprosesan gagal:
 
 | Mesej | Makna | Tindakan diperlukan |
 | -------------------------------- | -------------------------------------- | ----------------------------------------------------- |
-| "Sasaran dikesan dalam \ [Filename]" | Sasaran penentukuran dijumpai berjaya | Tiada - Normal |
+| "Sasaran dikesan dalam [Filename]" | Sasaran penentukuran dijumpai berjaya | Tiada - Normal |
 | "Pemprosesan Imej X of Y" | Kemas kini Kemajuan Semasa | Tiada - Normal |
 | "Tiada sasaran dijumpai" | Tiada sasaran penentukuran dikesan | Tandakan imej sasaran atau melumpuhkan penentukuran refleksi |
 | "Ruang cakera yang tidak mencukupi" | Tidak mencukupi penyimpanan untuk output | Ruang cakera percuma |
@@ -384,9 +384,9 @@ Semasa pemprosesan selesai:
 
 Setelah pemprosesan selesai:
 
-1. ** Hasil semakan **-lihat [menyelesaikan pemprosesan] (penamat-the-processing.md)
+1. ** Hasil semakan **-lihat [menyelesaikan pemprosesan](penamat-the-processing.md)
 2. ** Periksa folder output ** - Sahkan semua fail yang dieksport dengan betul
 3. ** Tinjau Log Debug ** - Periksa sebarang amaran atau kesilapan
 4. ** Pratonton Imej diproses ** - Gunakan penonton imej atau perisian luaran
 
-Untuk maklumat mengenai mengkaji dan menggunakan hasil yang diproses anda, lihat [menyelesaikan pemprosesan] (penamat-the-processing.md).
+Untuk maklumat mengenai mengkaji dan menggunakan hasil yang diproses anda, lihat [menyelesaikan pemprosesan](penamat-the-processing.md).

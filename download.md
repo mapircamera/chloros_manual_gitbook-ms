@@ -34,10 +34,10 @@ Keperluan sistem ###
 
 ** pemasang kloros untuk Windows **
 
-*** Versi **: 1.0.3
-*** Tarikh Siaran **: Disember?, 2025
-*** saiz fail **: 1.6GB
-*** Jenis Fail **: .exe (Windows Installer)
+* **Versi**: 1.0.3
+* **Tarikh Siaran**: Disember?, 2025
+* **saiz fail**: 1.6GB
+* **Jenis Fail**: .exe (Windows Installer)
 
 #### ** Langkah pemasangan: **
 
@@ -64,7 +64,7 @@ Untuk pemaju dan aliran kerja automasi, pasang SDK Python Chloros:
 PIP Pasang Chloros-SDK
 ```
 
-** Dokumentasi **: [API: Python SDK] (api-python-sdk.md)
+** Dokumentasi **: [API: Python SDK](api-python-sdk.md)
 
 ** Keperluan **: Desktop Chloros mesti dipasang, Lesen Chloros+ diperlukan
 
@@ -118,9 +118,9 @@ Buka kunci ciri lanjutan dengan langganan kloros+:
 ** Isu Pengaktifan Lesen: **
 
 * Pastikan sambungan internet aktif
-* Sahkan kelayakan di [https://cloud.mapir.camera] (https://cloud.mapir.camera)
+* Sahkan kelayakan di [https://cloud.mapir.camera](https://cloud.mapir.camera)
 * Periksa firewall tidak menyekat kloros
-* Lihat [chloros+ login] (chloros+ -login.md) untuk arahan terperinci
+* Lihat [chloros+ login](chloros+ -login.md) untuk arahan terperinci
 
 ### mendapat sokongan
 
@@ -128,8 +128,8 @@ Perlukan bantuan dengan pemasangan atau persediaan?
 
 *📧 ** e -mel **: info@mapir.camera
 *🌐 ** Laman web **: [https://www.mapir.camera/community/contact n(https://www.mapir.camera/community/contact)
-*📚 ** Dokumentasi **: [Bermula] (./)
-*❓ ** FAQ **: [Soalan Lazim] (FAQ.MD)
+*📚 ** Dokumentasi **: [Bermula](./)
+*❓ ** FAQ **: [Soalan Lazim](FAQ.md)
 
 ***
 

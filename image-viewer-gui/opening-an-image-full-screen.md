@@ -29,10 +29,10 @@ Setelah imej dimuatkan di kawasan pratonton:
 
 Bahagian terbesar skrin menunjukkan imej anda:
 
-*** Resolusi Penuh **: Imej yang dipaparkan pada resolusi asli
-*** Zoomable **: Gunakan kawalan atau roda tetikus untuk mengezum
-*** Pannable **: Klik dan seret untuk bergerak ketika dizum
-*** nisbah aspek dikekalkan **: Skala imej secara proporsional
+* **Resolusi Penuh**: Imej yang dipaparkan pada resolusi asli
+* **Zoomable**: Gunakan kawalan atau roda tetikus untuk mengezum
+* **Pannable**: Klik dan seret untuk bergerak ketika dizum
+* **nisbah aspek dikekalkan**: Skala imej secara proporsional
 
 ***
 
@@ -44,9 +44,9 @@ Bahagian terbesar skrin menunjukkan imej anda:
 
 Navigasi melalui set gambar anda menggunakan pintasan atau butang papan kekunci:
 
-*** Imej Seterusnya **: Klik → Butang atau tekan ** → ** (anak panah kanan)
-*** gambar sebelumnya **: klik ← butang atau tekan ** ← ** (anak panah kiri)
-*** Lompat ke imej tertentu **: Kembali ke pelayar fail dan klik gambar kecil yang dikehendaki
+* **Imej Seterusnya**: Klik → Butang atau tekan ** → ** (anak panah kanan)
+* **gambar sebelumnya**: klik ← butang atau tekan ** ← ** (anak panah kiri)
+* **Lompat ke imej tertentu**: Kembali ke pelayar fail dan klik gambar kecil yang dikehendaki
 
 #### Kawalan zum
 
@@ -138,7 +138,7 @@ Sapukan indeks multispektral dan jadual paparan warna:
 4. Gunakan kecerunan lut warna untuk visualisasi
 5. Laraskan julat nilai dan ambang
 
-Lihat [Index/Lut Sandbox] (Index-Lut-Sandbox.MD) untuk arahan terperinci.
+Lihat [Index/Lut Sandbox](Index-Lut-Sandbox.md) untuk arahan terperinci.
 
 ***
 
@@ -148,26 +148,26 @@ Lihat [Index/Lut Sandbox] (Index-Lut-Sandbox.MD) untuk arahan terperinci.
 
 *** → ** (anak panah kanan): Gambar seterusnya
 *** ← ** (anak panah kiri): gambar sebelumnya
-*** Laman Utama **: Imej Pertama dalam Senarai
-*** end **: Imej terakhir dalam senarai
+* **Laman Utama**: Imej Pertama dalam Senarai
+* **end**: Imej terakhir dalam senarai
 
 ### Zoom
 
 ***+** atau ** = **: Zum masuk
-*** - **: Zum keluar
+* **-**: Zum keluar
 *** 0 ** (sifar): Sesuai dengan skrin
-*** roda tetikus **: Zum masuk/keluar
+* **roda tetikus**: Zum masuk/keluar
 
 ### Lihat kawalan
 
-*** p **: Mod peratus togol piksel
-*** l **: panel lapisan togol
-*** esc **: Tutup skrin penuh atau kembali ke penyemak imbas fail
+* **p**: Mod peratus togol piksel
+* **l**: panel lapisan togol
+* **esc**: Tutup skrin penuh atau kembali ke penyemak imbas fail
 
 ### Lain -lain
 
-*** ctrl+s **: simpan gambar semasa
-*** f **: mod skrin penuh (jika ada)
+* **ctrl+s**: simpan gambar semasa
+* **f**: mod skrin penuh (jika ada)
 
 ***
 
@@ -238,10 +238,10 @@ Periksa indeks yang dikira dengan betul:
 
 Sekarang anda boleh melihat gambar skrin penuh:
 
-*[** Lapisan Imej **] (Image-Layers.md)-Ketahui mengenai visualisasi multi-band
-*[** Indeks/Lut Sandbox **] (Index-Lut-Sandbox.md)-Guna indeks tersuai dan pemetaan warna
-*[** Formula Indeks Multispectral **] (../ Project-Settings/Multispectral-index-Formulas.md)-Memahami indeks yang tersedia
+*[** Lapisan Imej **](Image-Layers.md)-Ketahui mengenai visualisasi multi-band
+*[** Indeks/Lut Sandbox **](Index-Lut-Sandbox.md)-Guna indeks tersuai dan pemetaan warna
+*[** Formula Indeks Multispectral **](../ Project-Settings/Multispectral-index-Formulas.md)-Memahami indeks yang tersedia
 
 Untuk memproses aliran kerja, lihat:
 
-*[** Imej Pemprosesan (GUI) **] (../ Pemprosesan-Images-Gui/Adding-Files-to-A-Project.md)-Panduan Pemprosesan Lengkap
+*[** Imej Pemprosesan (GUI) **](../ Pemprosesan-Images-Gui/Adding-Files-to-A-Project.md)-Panduan Pemprosesan Lengkap

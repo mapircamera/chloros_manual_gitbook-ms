@@ -11,7 +11,7 @@ Metalinks:
 
 <summary>Bolehkah saya memproses imej dari kamera yang bukan jenama Mapir dengan kloros?</summary>
 
-Tidak, kloros hanya menyokong pemprosesan imej kamera Mapir. Sila lihat senarai [model kamera yang disokong] (disokong kamer.md) untuk maklumat lanjut. Kami menawarkan pemprosesan kamera lain di Mapir Cloud, lihat senarai penuh [di sini] (https://mapir.gitbook.io/mapir-cloud/supported-cameras).
+Tidak, kloros hanya menyokong pemprosesan imej kamera Mapir. Sila lihat senarai [model kamera yang disokong](disokong kamer.md) untuk maklumat lanjut. Kami menawarkan pemprosesan kamera lain di Mapir Cloud, lihat senarai penuh [di sini](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
 
 </details>
 
@@ -59,7 +59,7 @@ Dalam jadual penyemak imbas fail yang sebelum memilih imej sasaran di lajur kana
 
 <summary>If I will upload my images to <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud</a> should I process in Chloros prior to uploading?</summary>
 
-Jika anda bercadang untuk memuat naik ke platform pemprosesan dalam talian kami [Mapir Cloud] (https://www.mapir.camera/collections/software/products/mapir-cloud-subscription) Jangan edit imej sebelum dimuat naik. Awan akan melakukan semua pemprosesan yang sama dan banyak lagi.
+Jika anda bercadang untuk memuat naik ke platform pemprosesan dalam talian kami [Mapir Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription) Jangan edit imej sebelum dimuat naik. Awan akan melakukan semua pemprosesan yang sama dan banyak lagi.
 
 </details>
 
@@ -67,6 +67,6 @@ Jika anda bercadang untuk memuat naik ke platform pemprosesan dalam talian kami 
 
 <summary>Will MAPIR ever support X feature? I really wish MAPIR offered X.</summary>
 
-Kami sentiasa berminat untuk menerima maklum balas mengenai produk kami. Jika anda menemui masalah dengan produk kami, atau mempunyai cadangan tentang bagaimana kami dapat memperbaiki produk kami, sila [hubungi kami] (https://www.mapir.camera/community/contact) untuk berkongsi pemikiran anda. Kebanyakan R \ & D kami dipandu dengan mendengar keperluan terbesar pelanggan kami.
+Kami sentiasa berminat untuk menerima maklum balas mengenai produk kami. Jika anda menemui masalah dengan produk kami, atau mempunyai cadangan tentang bagaimana kami dapat memperbaiki produk kami, sila [hubungi kami](https://www.mapir.camera/community/contact) untuk berkongsi pemikiran anda. Kebanyakan R \ & D kami dipandu dengan mendengar keperluan terbesar pelanggan kami.
 
 </details>

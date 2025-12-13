@@ -129,8 +129,8 @@ Chloros beroperasi dalam dua mod pemprosesan yang berbeza bergantung pada lesen 
 
 ** Apa yang dilakukan oleh kloros: **
 
-*** Pembetulan Vignette **: Mengeluarkan kanta gelap di tepi
-*** Penentukuran Refleksi **: Menormalkan menggunakan nilai refleksi sasaran
+* **Pembetulan Vignette**: Mengeluarkan kanta gelap di tepi
+* **Penentukuran Refleksi**: Menormalkan menggunakan nilai refleksi sasaran
 * Menggunakan pembetulan di semua kumpulan/saluran
 * Menggunakan sasaran penentukuran yang sesuai untuk setiap imej berdasarkan cap waktu
 
@@ -210,7 +210,7 @@ Semasa pemprosesan berjalan, anda boleh:
 *** Tab Log Periksa ** - Lihat mesej dan amaran pemprosesan terperinci
 *** Pratonton Imej Selesai ** - Beberapa fail eksport mungkin muncul semasa pemprosesan
 
-Untuk maklumat terperinci mengenai pemantauan, lihat [Pemantauan Pemprosesan] (Pemantauan-The-Processing.md).
+Untuk maklumat terperinci mengenai pemantauan, lihat [Pemantauan Pemprosesan](Pemantauan-The-Processing.md).
 
 ***
 
@@ -320,7 +320,7 @@ Pemprosesan ### bermula kemudian segera gagal
 
 ** Penyelesaian: **
 
-1. Ulasan [memilih imej sasaran] (memilih-sasaran-imej.md)
+1. Ulasan [memilih imej sasaran](memilih-sasaran-imej.md)
 2. Tandakan gambar yang sesuai dalam lajur sasaran
 3. Sahkan sasaran dapat dilihat dalam imej yang ditandakan
 4. Laraskan tetapan pengesanan sasaran jika diperlukan
@@ -359,8 +359,8 @@ Jika menggunakan pecutan GPU NVIDIA:
 
 Setelah pemprosesan telah bermula:
 
-1. ** Pantau kemajuan **-Lihat [Memantau pemprosesan] (Pemantauan-The-Processing.md)
+1. ** Pantau kemajuan **-Lihat [Memantau pemprosesan](Pemantauan-The-Processing.md)
 2. ** Tunggu siap ** - Pemprosesan berjalan secara automatik
-3. ** Hasil semakan **-lihat [menyelesaikan pemprosesan] (penamat-the-processing.md)
+3. ** Hasil semakan **-lihat [menyelesaikan pemprosesan](penamat-the-processing.md)
 
-Untuk maklumat mengenai apa yang perlu dilakukan semasa pemprosesan, lihat [memantau pemprosesan] (pemantauan-pemproses.md).
+Untuk maklumat mengenai apa yang perlu dilakukan semasa pemprosesan, lihat [memantau pemprosesan](pemantauan-pemproses.md).

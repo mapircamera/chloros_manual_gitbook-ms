@@ -17,7 +17,7 @@ Keperluan ###
 | Keperluan | Butiran |
 | -------------------- | ------------------------------------------------------------------- |
 | ** Sistem Operasi ** | Windows 10/11 (64-bit) |
-| ** Lesen ** | Chloros+ ([pelan berbayar diperlukan] (https://cloud.mapir.camera/pricing)) |
+| ** Lesen ** | Chloros+ ([pelan berbayar diperlukan](https://cloud.mapir.camera/pricing)) |
 | ** Memory ** | 8GB RAM Minimum (16GB disyorkan) |
 | ** Internet ** | Diperlukan untuk Pengaktifan Lesen |
 | ** ruang cakera ** | Berbeza mengikut saiz projek |
@@ -783,7 +783,7 @@ chloros-cli process "C:\Input" -o "D:\Output"
 
 ### Q: Bolehkah saya memproses pelbagai folder sekaligus?
 
-** A: ** Tidak secara langsung dalam satu arahan, tetapi anda boleh menggunakan skrip untuk memproses folder secara berurutan. Lihat [Automasi & Skrip] (CLI.MD#Automasi-Scripting).
+** A: ** Tidak secara langsung dalam satu arahan, tetapi anda boleh menggunakan skrip untuk memproses folder secara berurutan. Lihat [Automasi & Skrip](CLI.md#Automasi-Scripting).
 
 ***
 
@@ -817,7 +817,7 @@ Imej yang diproses sebahagiannya mungkin kekal dalam folder output.
 
 ### Q: Bolehkah saya mengautomasikan pemprosesan CLI?
 
-** A: ** Sudah tentu! CLI direka untuk automasi. Lihat [Automasi & Skrip] (CLI.MD#Automasi-Scripting) untuk contoh PowerShell, Batch, dan Python.
+** A: ** Sudah tentu! CLI direka untuk automasi. Lihat [Automasi & Skrip](CLI.md#Automasi-Scripting) untuk contoh PowerShell, Batch, dan Python.
 
 ***
 

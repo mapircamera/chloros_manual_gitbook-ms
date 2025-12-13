@@ -26,7 +26,7 @@ Dalam Mod Berlesen Chloros+ yang dibayar, yang memproses semua fail secara seren
 
 Menu bar sisi kiri mengandungi pelbagai ikon untuk berinteraksi dengan:
 
-#### <img src = ". gitbook/aset/icon_project-settings.jpg" alt = "" data-size = "line"> [Tetapan Projek] (Projek-Sttings/Project-Settings.md)
+#### <img src = ". gitbook/aset/icon_project-settings.jpg" alt = "" data-size = "line"> [Tetapan Projek](Projek-Sttings/Project-Settings.md)
 
 Tab Penetapan Projek membolehkan anda menyesuaikan tetapan pemprosesan projek global dan projek. Laraskan ini sebelum mula memproses fail anda.
 
@@ -34,14 +34,14 @@ Tab Penetapan Projek membolehkan anda menyesuaikan tetapan pemprosesan projek gl
 
 Tambah fail/folder dan keluarkan fail dari projek. Fail pendua diabaikan. Semak kotak lajur sasaran untuk sebarang imej sasaran, dan pemprosesan hanya akan melihat imej yang diperiksa untuk sasaran, sangat mempercepatkan masa pemprosesan anda.
 
-#### <img src = ". gitbook/aset/icon_image-viewer.jpg" alt = "" data-size = "line"> [Image Viewer] (image-viewer-gui/pembukaan-image-full-screen.md)
+#### <img src = ". gitbook/aset/icon_image-viewer.jpg" alt = "" data-size = "line"> [Image Viewer](image-viewer-gui/pembukaan-image-full-screen.md)
 
 Apabila imej diklik dalam penonton imej utama, ia dibuka skrin penuh dalam tab Image Viewer.
 
 #### <img src = ". gitbook/aset/icon_log.jpg" alt = "" data-size = "line"> log debug
 
-Semak log untuk cetakan debug apabila isu berlaku. Salin/muat turun log dan hantar ke [Sokongan Mapir] (https://www.mapir.camera/community/contact) untuk bantuan.
+Semak log untuk cetakan debug apabila isu berlaku. Salin/muat turun log dan hantar ke [Sokongan Mapir](https://www.mapir.camera/community/contact) untuk bantuan.
 
-#### <img src = ". gitbook/aset/icon_user.jpg" alt = "" data-size = "line"> [pengguna login] (chloros+-login.md)
+#### <img src = ". gitbook/aset/icon_user.jpg" alt = "" data-size = "line"> [pengguna login](chloros+-login.md)
 
 Sidebar log masuk pengguna membolehkan anda log masuk ke akaun Chloros+ anda untuk membuka kunci ciri lanjutan. Anda juga boleh melihat versi aplikasi semasa, serta menyesuaikan bahasa teks yang dipaparkan di Chloros GUI dan CLI.

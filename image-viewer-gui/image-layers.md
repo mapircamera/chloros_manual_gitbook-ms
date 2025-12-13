@@ -65,7 +65,7 @@ Dropdown Layer ** Layer ** di bahagian atas kanan penonton imej membolehkan anda
 * Reflectance ditentukur menggunakan data sasaran (jika diaktifkan)
 * Tiff berbilang band dengan semua saluran kamera
 * Nilai piksel mewakili pemantulan peratus (semasa menggunakan mod peratus)
-* Bersedia untuk memanipulasi dengan [Indeks/Lut Sandbox] (Index-Lut-Sandbox.md)
+* Bersedia untuk memanipulasi dengan [Indeks/Lut Sandbox](Index-Lut-Sandbox.md)
 
 ** Bila hendak melihat: **
 
@@ -94,7 +94,7 @@ Dropdown Layer ** Layer ** di bahagian atas kanan penonton imej membolehkan anda
 * Mentah (indeks osavi)
 * Mentah (indeks evi)
 * Mentah (indeks savi)
-* Dan banyak lagi ... (lihat [formula indeks multispectral] (../ Project-Settings/Multispectral-index-Formulas.md))
+* Dan banyak lagi ... (lihat [formula indeks multispectral](../ Project-Settings/Multispectral-index-Formulas.md))
 
 ** Bila hendak melihat: **
 
@@ -140,7 +140,7 @@ Tidak semua lapisan disediakan untuk setiap imej:
 * ⚠️ mentah (asal) - Hanya jika imej ditangkap dalam mod mentah atau mentah+jpg
 * ⚠️ mentah (sasaran) - Hanya jika imej mengandungi sasaran penentukuran yang dikesan
 * ⚠️ mentah (reflektif) - Hanya selepas diproses dengan penentukuran refleksi diaktifkan
-* ⚠️ Raw (\ [index] index) - Hanya selepas diproses dengan indeks yang dikonfigurasikan
+* ⚠️ Raw ([index] index) - Hanya selepas diproses dengan indeks yang dikonfigurasikan
 
 ***
 
@@ -218,29 +218,29 @@ Lapisan yang berbeza menunjukkan julat nilai piksel yang berbeza:
 
 ### JPG lapisan
 
-*** Range **: 0-255 (8-bit)
-*** Arti **: Nilai paparan, diperbetulkan gamma
-*** Gunakan **: pemeriksaan visual sahaja, bukan untuk pengukuran saintifik
+* **Range**: 0-255 (8-bit)
+* **Arti**: Nilai paparan, diperbetulkan gamma
+* **Gunakan**: pemeriksaan visual sahaja, bukan untuk pengukuran saintifik
 
 ### mentah (asal)
 
-*** Range **: 0-65535 (16-bit)
-*** Arti **: Nombor digital sensor mentah
-*** Gunakan **: Memeriksa prestasi sensor, tidak ditentukur
+* **Range**: 0-65535 (16-bit)
+* **Arti**: Nombor digital sensor mentah
+* **Gunakan**: Memeriksa prestasi sensor, tidak ditentukur
 
 ### mentah (reflektif)
 
-*** Range **: 0-65,535 (tiff 16-bit) atau 0.0-1.0 (32-bit peratus)
-*** Maksudnya **: Refleksi peratus yang dikalibrasi
-*** Gunakan **: Pengukuran dan analisis saintifik
+* **Range**: 0-65,535 (tiff 16-bit) atau 0.0-1.0 (32-bit peratus)
+* **Maksudnya**: Refleksi peratus yang dikalibrasi
+* **Gunakan**: Pengukuran dan analisis saintifik
 
 ** Untuk tiff 16-bit: ** Bahagikan sebanyak 65,535 untuk mendapatkan pemantulan peratus ** untuk peratus 32-bit: ** Nilai secara langsung mewakili peratus (0.5 = 50% refleksi)
 
 ### mentah (imej indeks)
 
-*** julat **: Berbeza mengikut indeks (biasanya -1.0 hingga +1.0 untuk indeks normal)
-*** Arti **: Hasil Pengiraan Indeks
-*** Contoh **:
+* **julat**: Berbeza mengikut indeks (biasanya -1.0 hingga +1.0 untuk indeks normal)
+* **Arti**: Hasil Pengiraan Indeks
+* **Contoh**:
   * NDVI: -1 hingga +1 (tumbuh -tumbuhan biasanya 0.4 hingga 0.9)
   * Ndre: -1 hingga +1 (pengesanan tekanan)
   * EVI: 0 hingga 1 (tumbuh -tumbuhan yang dipertingkatkan)
@@ -251,22 +251,22 @@ Lapisan yang berbeza menunjukkan julat nilai piksel yang berbeza:
 
 ### Beralih lapisan yang cekap
 
-*** Kesedaran Pintasan Papan Kekunci **: Walaupun tidak ada pintasan papan kekunci untuk lapisan, anak panah navigasi (←/→) bekerja di semua lapisan
-*** aliran kerja yang konsisten **: Pilih satu lapisan (mis., NDVI) dan semak semula dataset sebelum beralih ke yang lain
-*** perbandingan cepat **: togol antara asal dan refleksi untuk mengesahkan kualiti pemprosesan
+* **Kesedaran Pintasan Papan Kekunci**: Walaupun tidak ada pintasan papan kekunci untuk lapisan, anak panah navigasi (←/→) bekerja di semua lapisan
+* **aliran kerja yang konsisten**: Pilih satu lapisan (mis., NDVI) dan semak semula dataset sebelum beralih ke yang lain
+* **perbandingan cepat**: togol antara asal dan refleksi untuk mengesahkan kualiti pemprosesan
 
 ### Pertimbangan prestasi
 
-*** JPG memuat terpantas **: Gunakan untuk navigasi cepat melalui banyak gambar
-*** Lapisan mentah memuat lebih perlahan **: resolusi yang lebih tinggi dan kedalaman bit
-*** Lapisan Indeks **: Kelajuan yang serupa dengan lapisan refleksi
-*** Beban pertama adalah paling lambat **: Pandangan seterusnya lapisan yang sama cache dan lebih cepat
+* **JPG memuat terpantas**: Gunakan untuk navigasi cepat melalui banyak gambar
+* **Lapisan mentah memuat lebih perlahan**: resolusi yang lebih tinggi dan kedalaman bit
+* **Lapisan Indeks**: Kelajuan yang serupa dengan lapisan refleksi
+* **Beban pertama adalah paling lambat**: Pandangan seterusnya lapisan yang sama cache dan lebih cepat
 
 ### pengesahan kualiti
 
-*** Sentiasa periksa mentah (asal) **: Sahkan kualiti data sumber sebelum mempercayai output diproses
-*** Bandingkan Lapisan **: Gunakan lapisan Beralih untuk Mengesahkan Pemprosesan Berfungsi dengan betul
-*** Rentang Indeks Semak **: Gunakan mod peratus piksel dengan lapisan indeks untuk mengesahkan nilai adalah munasabah
+* **Sentiasa periksa mentah (asal)**: Sahkan kualiti data sumber sebelum mempercayai output diproses
+* **Bandingkan Lapisan**: Gunakan lapisan Beralih untuk Mengesahkan Pemprosesan Berfungsi dengan betul
+* **Rentang Indeks Semak**: Gunakan mod peratus piksel dengan lapisan indeks untuk mengesahkan nilai adalah munasabah
 
 ***
 
@@ -312,7 +312,7 @@ Lapisan ### tidak tersedia
 1. Periksa log debug untuk mesej "sasaran dijumpai"
 2. Sahkan imej sebenarnya mengandungi sasaran penentukuran yang kelihatan
 3. Laraskan tetapan pengesanan sasaran dalam tetapan projek
-4. Lihat [memilih imej sasaran] (../ pemprosesan-images-gui/memilih-target-imag.md)
+4. Lihat [memilih imej sasaran](../ pemprosesan-images-gui/memilih-target-imag.md)
 
 ***
 
@@ -322,23 +322,23 @@ Lapisan ### tidak tersedia
 
 Apabila melihat mana -mana lapisan, anda boleh menggunakan:
 
-*** Kawalan Zum **: Magnify untuk memeriksa butiran
-*** pan **: Klik dan seret untuk bergerak di sekitar gambar zum
-*** Pemeriksaan nilai piksel **: Lihat nilai di lokasi kursor
-*** anak panah navigasi **: bergerak antara imej sambil mengekalkan lapisan
-*** mod peratus piksel **: togol antara paparan DN dan peratus
+* **Kawalan Zum**: Magnify untuk memeriksa butiran
+* **pan**: Klik dan seret untuk bergerak di sekitar gambar zum
+* **Pemeriksaan nilai piksel**: Lihat nilai di lokasi kursor
+* **anak panah navigasi**: bergerak antara imej sambil mengekalkan lapisan
+* **mod peratus piksel**: togol antara paparan DN dan peratus
 
-Lihat [Membuka Skrin Penuh Imej] (pembukaan-image-full-screen.md) untuk dokumentasi penonton imej lengkap.
+Lihat [Membuka Skrin Penuh Imej](pembukaan-image-full-screen.md) untuk dokumentasi penonton imej lengkap.
 
 ### Indeks/Lut Sandbox
 
 Untuk ujian dan visualisasi indeks interaktif:
 
-*** Pengiraan indeks masa nyata **: Uji formula indeks yang berbeza
-*** Pemetaan Warna Lut **: Sapukan kecerunan warna ke indeks skala kelabu
-*** Visualisasi Eksport **: Simpan Imej Indeks Berwarna
+* **Pengiraan indeks masa nyata**: Uji formula indeks yang berbeza
+* **Pemetaan Warna Lut**: Sapukan kecerunan warna ke indeks skala kelabu
+* **Visualisasi Eksport**: Simpan Imej Indeks Berwarna
 
-Lihat [Index/Lut Sandbox] (Index-Lut-Sandbox.MD) untuk butirannya.
+Lihat [Index/Lut Sandbox](Index-Lut-Sandbox.md) untuk butirannya.
 
 ***
 
@@ -346,7 +346,7 @@ Lihat [Index/Lut Sandbox] (Index-Lut-Sandbox.MD) untuk butirannya.
 
 Sekarang anda memahami lapisan gambar:
 
-*[** Membuka Skrin Penuh Imej **] (Pembukaan-An-Image-full-Screen.md)-Panduan Penonton Imej Lengkap
-*[** indeks/lut sandbox **] (index-lut-sandbox.md)-visualisasi indeks interaktif
-*[** Formula Indeks Multispectral **] (../ Project-Settings/Multispectral-index-Formulas.md)-Rujukan indeks yang tersedia
-*[** Menamatkan pemprosesan **] (../ pemprosesan-images-gui/penamat-the-processing.md)-Memahami output yang diproses
+*[** Membuka Skrin Penuh Imej **](Pembukaan-An-Image-full-Screen.md)-Panduan Penonton Imej Lengkap
+*[** indeks/lut sandbox **](index-lut-sandbox.md)-visualisasi indeks interaktif
+*[** Formula Indeks Multispectral **](../ Project-Settings/Multispectral-index-Formulas.md)-Rujukan indeks yang tersedia
+*[** Menamatkan pemprosesan **](../ pemprosesan-images-gui/penamat-the-processing.md)-Memahami output yang diproses

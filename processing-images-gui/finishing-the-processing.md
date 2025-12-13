@@ -52,9 +52,9 @@ Gunakan penonton imej terbina dalam Chloros untuk visualisasi lanjutan:
 1. Klik gambar kecil imej dalam penyemak imbas fail
 2. Imej dibuka di kawasan pratonton utama
 3. Klik ** Penonton Imej ** <img src = "../. Gitbook/aset/icon_image-viewer.jpg" alt = "" data-size = "line"> tab di bar sisi kiri
-4. Gunakan [indeks/lut sandbox] (../ image-viewer-gui/index-lut-sandbox.md) untuk analisis interaktif
+4. Gunakan [indeks/lut sandbox](../ image-viewer-gui/index-lut-sandbox.md) untuk analisis interaktif
 
-Lihat [Image Viewer] (../ Image-Viewer-Gui/Opening-An-Image-full-screen.md) untuk arahan terperinci.
+Lihat [Image Viewer](../ Image-Viewer-Gui/Opening-An-Image-full-screen.md) untuk arahan terperinci.
 
 ***
 
@@ -131,10 +131,10 @@ Untuk menyimpan rekod pemprosesan atau dihantar ke Sokongan Mapir:
 
 ** Jangkauan NDVI yang diharapkan: **
 
-*** Air, batu, tanah **: -0.1 hingga 0.2
+* **Air, batu, tanah**: -0.1 hingga 0.2
 ** tumbuh -tumbuhan yang jarang/tidak sihat **: 0.2 hingga 0.4
-*** Vegetasi sederhana **: 0.4 hingga 0.6
-*** tumbuh -tumbuhan yang sihat dan padat **: 0.6 hingga 0.9
+* **Vegetasi sederhana**: 0.4 hingga 0.6
+* **tumbuh -tumbuhan yang sihat dan padat**: 0.6 hingga 0.9
 
 ** Jika nilai berada di luar julat ini: **
 
@@ -197,9 +197,9 @@ Untuk menyimpan rekod pemprosesan atau dihantar ke Sokongan Mapir:
 
 ** Cadangan Penyimpanan: **
 
-*** sandaran segera **: cakera keras luaran
-*** Arkib Jangka Panjang **: Penyimpanan Awan (Google Drive, Dropbox, dan lain-lain)
-*** Data Kritikal **: Simpan 2-3 salinan di lokasi yang berbeza
+* **sandaran segera**: cakera keras luaran
+* **Arkib Jangka Panjang**: Penyimpanan Awan (Google Drive, Dropbox, dan lain-lain)
+* **Data Kritikal**: Simpan 2-3 salinan di lokasi yang berbeza
 
 ***
 
@@ -228,13 +228,13 @@ Untuk pelbagai sesi/dataset:
 
 * Automatikkan pemprosesan batch
 * Proses pelbagai folder dengan skrip
-* Lihat [Dokumentasi CLI] (../ Cli.md)
+* Lihat [Dokumentasi CLI](../ Cli.md)
 
 ** Pilihan 3: Python SDK (chloros+ sahaja) **
 
 * Kawalan Programatik
 * Integrasi dengan saluran paip analisis
-* Lihat [Dokumentasi API] (../ API-PYTHON-SDK.MD)
+* Lihat [Dokumentasi API](../ API-PYTHON-SDK.md)
 
 ***
 
@@ -264,8 +264,8 @@ Sekiranya anda menghadapi masalah:
 
 *📧 ** e -mel **: info@mapir.camera (termasuk log debug)
 *🌐 ** Sokongan **: [https://www.mapir.camera/community/contact n(https://www.mapir.camera/community/contact)
-*📚 ** FAQ **: [Soalan Lazim] (../ FAQ.MD)
-*📖 ** Dokumentasi **: [Manual Chloros] (../)
+*📚 ** FAQ **: [Soalan Lazim](../ FAQ.md)
+*📖 ** Dokumentasi **: [Manual Chloros](../)
 
 ***
 
@@ -273,12 +273,12 @@ Sekiranya anda menghadapi masalah:
 
 Anda kini telah menyelesaikan aliran kerja pemprosesan kloros penuh:
 
-1. ✅ ** Projek yang dicipta ** - Lihat [Projek] (../ Projects.md)
-2. ✅ ** tambah fail **-lihat [menambah fail] (menambah fail-to-a-project.md)
-3. ✅ ** Tetapan diselaraskan **-Lihat [Menyesuaikan Tetapan Projek] (menyesuaikan-projek-penstabil.md)
-4. ✅ ** sasaran bertanda **-lihat [memilih imej sasaran] (memilih sasaran-imej.md)
-5. ✅ ** Memperkenalkan pemprosesan **-Lihat [Memulakan Pemprosesan] (permulaan-pemproses.md)
-6. ✅ ** Memantau Kemajuan **-Lihat [Memantau Pemprosesan] (Pemantauan-The-Processing.md)
+1. ✅ ** Projek yang dicipta ** - Lihat [Projek](../ Projects.md)
+2. ✅ ** tambah fail **-lihat [menambah fail](menambah fail-to-a-project.md)
+3. ✅ ** Tetapan diselaraskan **-Lihat [Menyesuaikan Tetapan Projek](menyesuaikan-projek-penstabil.md)
+4. ✅ ** sasaran bertanda **-lihat [memilih imej sasaran](memilih sasaran-imej.md)
+5. ✅ ** Memperkenalkan pemprosesan **-Lihat [Memulakan Pemprosesan](permulaan-pemproses.md)
+6. ✅ ** Memantau Kemajuan **-Lihat [Memantau Pemprosesan](Pemantauan-The-Processing.md)
 7. ✅ ** Hasil Semakan ** - Halaman ini
 
 ** Imej multispektral yang dikalibrasi dan refleksi anda siap untuk analisis! **
@@ -289,18 +289,18 @@ Anda kini telah menyelesaikan aliran kerja pemprosesan kloros penuh:
 
 ### Ciri -ciri lanjutan
 
-*[** Image Viewer **] (../ image-viewer-gui/pembukaan-an-image-full-screen.md)-visualisasi dan analisis interaktif
-*[** indeks/lut sandbox **] (../ image-viewer-gui/index-lut-sandbox.md)-ujian indeks tersuai
-*[** Formula Indeks Multispectral **] (../ Project-Settings/Multispectral-index-Formulas.md)-Rujukan Indeks Lengkap
+*[** Image Viewer **](../ image-viewer-gui/pembukaan-an-image-full-screen.md)-visualisasi dan analisis interaktif
+*[** indeks/lut sandbox **](../ image-viewer-gui/index-lut-sandbox.md)-ujian indeks tersuai
+*[** Formula Indeks Multispectral **](../ Project-Settings/Multispectral-index-Formulas.md)-Rujukan Indeks Lengkap
 
 ### Automasi & Integrasi
 
-*[** Dokumentasi CLI **] (../ Cli.md) - Pemprosesan Batch Baris Perintah
-*[** python sdk **] (../ api-python-sdk.md)-automasi programatik
-*[** chloros+ ciri **] (../# chloros) - Keupayaan pemprosesan lanjutan
+*[** Dokumentasi CLI **](../ Cli.md) - Pemprosesan Batch Baris Perintah
+*[** python sdk **](../ api-python-sdk.md)-automasi programatik
+*[** chloros+ ciri **](../# chloros) - Keupayaan pemprosesan lanjutan
 
 ### Sokongan & Pembelajaran
 
-*[** faq **] (../ faq.md) - Soalan biasa dijawab
-*[** sasaran penentukuran **] (../ penentukuran-targets.md) - Memahami penentukuran refleksi
-*[** Kamera yang disokong **] (../ disokong-cameras.md) - Perkakasan yang serasi
+*[** faq **](../ faq.md) - Soalan biasa dijawab
+*[** sasaran penentukuran **](../ penentukuran-targets.md) - Memahami penentukuran refleksi
+*[** Kamera yang disokong **](../ disokong-cameras.md) - Perkakasan yang serasi
