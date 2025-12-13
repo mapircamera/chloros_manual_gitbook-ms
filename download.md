@@ -20,7 +20,7 @@ Keperluan sistem ###
 | ** paparan ** | 1920x1080 | 2560x1440 atau lebih tinggi |
 | ** Internet ** | Diperlukan untuk Pengaktifan Lesen | Diperlukan untuk Pengaktifan Lesen |
 
-{ % petunjuk gaya = "info" %}
+{% hint style="info" %}
 ** Percepatan GPU **: Pengguna Chloros+ dengan NVIDIA GPU (4GB+ VRAM) boleh menggunakan pecutan CUDA untuk pemprosesan yang lebih cepat.
 { % endhint %}
 
@@ -48,7 +48,7 @@ Keperluan sistem ###
 5. Pemasangan dan Lancarkan Kloros lengkap
 6. Log masuk dengan akaun Mapir Cloud Chloros+ anda (atau teruskan dengan versi percuma)
 
-{ % petunjuk gaya = "kejayaan" %}
+{% hint style="success" %}
 Pemasang secara automatik menambah `chloros-cli` ke laluan sistem anda untuk akses baris arahan.
 { % endhint %}
 

@@ -13,7 +13,7 @@ Sebelum mengklik butang Mula, sahkan bahawa semuanya sudah siap:
 *[] ** indeks dipilih ** - indeks multispektral yang dikehendaki ditambah (jika diperlukan)
 *[] ** Format eksport dipilih ** - Format output sesuai untuk aliran kerja anda
 
-{ % petunjuk gaya = "info" %}
+{% hint style="info" %}
 ** Petua **: Klik melalui beberapa imej dalam penyemak imbas fail untuk mengesahkannya dimuat dengan betul sebelum diproses.
 { % endhint %}
 
@@ -36,7 +36,7 @@ Butang Start/Play terletak di bar kepala kloros atas:
 3. Butang menjadi dilumpuhkan (kelabu keluar) semasa pemprosesan
 4. Kemas kini bar kemajuan, menunjukkan status pemprosesan
 
-{ % petunjuk gaya = "kejayaan" %}
+{% hint style="success" %}
 ** Pemprosesan Bermula **: Setelah diklik, Chloros secara automatik mengendalikan semua langkah pemprosesan - pengesanan sasaran, debayering, penentukuran, pengiraan indeks, dan eksport.
 { % endhint %}
 
@@ -96,7 +96,7 @@ Chloros beroperasi dalam dua mod pemprosesan yang berbeza bergantung pada lesen 
 * Skala dengan kiraan teras CPU
 * Percepatan GPU terus meningkatkan kelajuan
 
-{ % petunjuk gaya = "info" %}
+{% hint style="info" %}
 ** Chloros+ Speed ​​**: Pemprosesan selari boleh menjadi 5-10x lebih cepat daripada mod berurutan untuk dataset besar. Projek 500-imej yang mengambil masa 2 jam dalam mod percuma boleh disiapkan dalam 15-20 minit dengan Chloros+.
 { % endhint %}
 
@@ -184,7 +184,7 @@ Setelah bermula, keseluruhan saluran paip berjalan secara automatik:
 * Komputer mungkin kurang responsif semasa pemprosesan
 * Elakkan memulakan tugas intensif CPU yang lain
 
-{ % petunjuk gaya = "amaran" %}
+{% hint style="warning" %}
 ** Petua Prestasi **: Untuk prestasi kloros+ terbaik, tutup aplikasi lain dan biarkan kloros menggunakan sumber sistem penuh.
 { % endhint %}
 
@@ -241,7 +241,7 @@ Sekiranya anda perlu berhenti memproses:
 * Mulakan semula pemprosesan dari awal
 * Untuk pengalaman paling bersih, kloros sepenuhnya dan mulakan semula
 
-{ % petunjuk gaya = "amaran" %}
+{% hint style="warning" %}
 ** Tiada hasil separa **: Membatalkan membuang semua kemajuan. Chloros tidak menyimpan imej yang diproses sebahagiannya.
 { % endhint %}
 
@@ -270,7 +270,7 @@ Masa pemprosesan sebenar sangat berbeza berdasarkan:
 | 500 Imej | 2-3 jam | 45-60 min | 20-30 min |
 | 1000 Imej | 4-6 jam | 1.5-2 jam | 40-60 min |
 
-{ % petunjuk gaya = "info" %}
+{% hint style="info" %}
 ** Run First **: Pemprosesan awal mungkin mengambil masa lebih lama apabila Chloros membina cache dan profil. Pemprosesan data yang sama akan lebih cepat.
 { % endhint %}
 

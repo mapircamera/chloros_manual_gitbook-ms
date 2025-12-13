@@ -8,7 +8,7 @@ Sebelum memproses imej anda, penting untuk mengkonfigurasi tetapan projek anda u
 2. Klik tetapan projek ** ** <img src = "../. Gitbook/aset/icon_project-settings.jpg" alt = "" data-size = "line"> ikon di bar sisi kiri
 3. Panel Tetapan Projek memaparkan semua pilihan konfigurasi
 
-{ % petunjuk gaya = "info" %}
+{% hint style="info" %}
 ** Tetapan disimpan secara automatik ** dengan projek anda. Apabila anda membuka semula projek, semua tetapan dipulihkan.
 { % endhint %}
 
@@ -169,7 +169,7 @@ Jika menggunakan perakam Mapir Daq dengan GPS untuk geolokasi yang tepat:
 *** PIN PENDEDAHAN 2 **: Pilih Kamera Kedua atau "Jangan Gunakan"
 * Kamera yang sama tidak dapat diberikan kepada kedua -dua pin
 
-{ % petunjuk gaya = "amaran" %}
+{% hint style="warning" %}
 ** PENTING **: Pin pendedahan mesti ditugaskan dengan betul ke kamera masing -masing. Tugasan yang tidak betul akan mengakibatkan data geolokasi yang salah.
 { % endhint %}
 

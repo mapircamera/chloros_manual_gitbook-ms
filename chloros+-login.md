@@ -24,7 +24,7 @@ chloros-cli login <email> <password>
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{ % petunjuk gaya = "amaran" %}
+{% hint style="warning" %}
 ** Watak Khas **: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti `$`, `!`, Atau ruang.
 { % endhint %}
 

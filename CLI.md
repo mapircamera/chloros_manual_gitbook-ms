@@ -22,7 +22,7 @@ Keperluan ###
 | ** Internet ** | Diperlukan untuk Pengaktifan Lesen |
 | ** ruang cakera ** | Berbeza mengikut saiz projek |
 
-{ % petunjuk gaya = "amaran" %}
+{% hint style="warning" %}
 ** Keperluan Lesen **: CLI memerlukan langganan Chloros+ yang dibayar. Pelan standard (percuma) tidak mempunyai akses CLI. Lawati [https://cloud.mapir.camera/pricingś(https://cloud.mapir.camera/pricing) untuk menaik taraf.
 { % endhint %}
 
@@ -36,7 +36,7 @@ CLI secara automatik disertakan dengan pemasang kloros:
 2. Lengkapkan Wizard Pemasangan
 3. CLI Dipasang ke: `C: \ Program Files \ Chloros \ Resources \ Cli \ Chloros-cli.exe`
 
-{ % petunjuk gaya = "kejayaan" %}
+{% hint style="success" %}
 Pemasang secara automatik menambah `chloros-cli` ke laluan sistem anda. Mulakan semula terminal anda selepas pemasangan.
 { % endhint %}
 
@@ -131,7 +131,7 @@ chloros-cli login <email> <password>
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{ % petunjuk gaya = "amaran" %}
+{% hint style="warning" %}
 ** Watak Khas **: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti `$`, `!`, Atau ruang.
 { % endhint %}
 
@@ -412,7 +412,7 @@ The CLI uses **High Quality (Faster)** as the default and recommended debayer al
 * **Enabled by default** - Most users should keep this enabled
 * Use `--no-vignette` untuk melumpuhkan
 
-{ % petunjuk gaya = "kejayaan" %}
+{% hint style="success" %}
 ** Cadangan **: Sentiasa aktifkan pembetulan vignette untuk memastikan kecerahan seragam merentasi bingkai.
 { % endhint %}
 
@@ -424,7 +424,7 @@ Menukar nilai sensor mentah ke peratusan refleksi standard menggunakan panel pen
 * Memerlukan panel sasaran penentukuran dalam gambar
 * Gunakan `--no-reflectance` untuk melumpuhkan
 
-{ % petunjuk gaya = "info" %}
+{% hint style="info" %}
 ** Keperluan **: Pastikan panel penentukuran terdedah dengan betul dan dapat dilihat dalam imej anda untuk penukaran refleksi yang tepat.
 { % endhint %}
 
@@ -609,7 +609,7 @@ Masa pemprosesan biasa untuk 100 imej (12MP setiap satu):
 | ** Mod selari ** | 5-10 min | I7/Ryzen 7, 16GB RAM, SSD (sehingga 16 pekerja) |
 | ** Mod selari ** | 10-15 min | I5/Ryzen 5, 8GB RAM, HDD (sehingga 8 pekerja) |
 
-{ % petunjuk gaya = "info" %}
+{% hint style="info" %}
 ** Petua Prestasi **: Masa pemprosesan berbeza -beza berdasarkan kiraan imej, resolusi, dan spesifikasi komputer.
 { % endhint %}
 

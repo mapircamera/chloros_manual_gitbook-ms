@@ -54,7 +54,7 @@ Dropdown Layer ** Layer ** di bahagian atas kanan penonton imej membolehkan anda
 * Memeriksa kualiti gambar sasaran
 * Menyelesaikan masalah masalah penentukuran
 
-{ % petunjuk gaya = "info" %}
+{% hint style="info" %}
 ** Lapisan Sasaran **: Lapisan ini hanya muncul dalam lungsur turun untuk imej yang mengandungi sasaran penentukuran. Imej menangkap tetap tidak akan mempunyai pilihan ini.
 { % endhint %}
 
@@ -74,7 +74,7 @@ Dropdown Layer ** Layer ** di bahagian atas kanan penonton imej membolehkan anda
 * Memeriksa nilai piksel untuk ketepatan saintifik
 * Membandingkan dengan asal untuk melihat kesan penentukuran
 
-{ % petunjuk gaya = "kejayaan" %}
+{% hint style="success" %}
 ** Disyorkan **: Gunakan lapisan RAW (Refleksi) apabila memeriksa nilai piksel untuk pengukuran dan analisis saintifik.
 { % endhint %}
 

@@ -8,7 +8,7 @@ Sebaik sahaja anda telah membuat atau membuka projek di kloros, langkah seterusn
 2. Klik penyemak imbas fail ** <img src = "../.
 3. Panel penyemak imbas fail akan memaparkan senarai fail projek anda
 
-{ % petunjuk gaya = "info" %}
+{% hint style="info" %}
 ** Jenis fail yang disokong **: Chloros menyokong fail imej RAW+JPG dan JPG dari MAPIR Survey3W dan Kamera Survey3N. Hanya RAW+JPG yang disyorkan.
 { % endhint %}
 
@@ -116,7 +116,7 @@ Chloros secara automatik mengesan dan mengabaikan fail pendua:
 * Menghalang pemprosesan dua kali ganda
 * Mesej amaran dipaparkan apabila pendua dikesan
 
-{ % petunjuk gaya = "amaran" %}
+{% hint style="warning" %}
 ** PENTING **: Jangan ubah semula atau ubah suai fail imej asal anda sebelum mengimport. Chloros bergantung pada nama fail asal dan metadata untuk pemprosesan yang betul.
 { % endhint %}
 

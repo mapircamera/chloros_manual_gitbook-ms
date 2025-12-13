@@ -22,7 +22,7 @@ Apabila anda menyemak lajur sasaran untuk imej tertentu:
 * Pengesanan sasaran melengkapkan lebih cepat
 * Masa pemprosesan keseluruhan dikurangkan
 
-{ % petunjuk gaya = "kejayaan" %}
+{% hint style="success" %}
 ** Penambahbaikan kelajuan **: Menandai 2-3 imej sasaran dalam dataset 500-imej dapat mengurangkan masa pengesanan sasaran dari 30+ minit hingga bawah 1 minit.
 { % endhint %}
 
@@ -204,7 +204,7 @@ Walaupun tidak disyorkan untuk kerja saintifik, anda boleh memproses tanpa sasar
 3. Pembetulan vignette masih akan digunakan
 4. output tidak akan dikalibrasi untuk pemantulan mutlak
 
-{ % petunjuk gaya = "amaran" %}
+{% hint style="warning" %}
 ** Tidak disyorkan **: Tanpa penentukuran pemantulan, nilai piksel mewakili kecerahan relatif sahaja, bukan pengukuran refleksi saintifik. Gunakan sasaran penentukuran untuk keputusan yang tepat dan boleh diulang.
 { % endhint %}
 

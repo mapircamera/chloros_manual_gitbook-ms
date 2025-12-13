@@ -22,7 +22,7 @@ Keperluan ###
 | ** Memory ** | 8GB RAM Minimum (16GB disyorkan) |
 | ** Internet ** | Diperlukan untuk Pengaktifan Lesen |
 
-{ % petunjuk gaya = "amaran" %}
+{% hint style="warning" %}
 ** Keperluan Lesen **: Python SDK memerlukan langganan Chloros+ yang dibayar untuk akses API. Pelan standard (percuma) tidak mempunyai akses API/SDK. Lawati [https://cloud.mapir.camera/pricingś(https://cloud.mapir.camera/pricing) untuk menaik taraf.
 { % endhint %}
 
@@ -36,7 +36,7 @@ Pasang melalui PIP:
 pip install chloros-sdk
 ```
 
-{ % petunjuk gaya = "info" %}
+{% hint style="info" %}
 ** Persediaan pertama kali **: Sebelum menggunakan SDK, aktifkan lesen Chloros+ anda dengan membuka kloros, chloros (pelayar) atau chloros CLI dan log masuk dengan kelayakan anda. Ini hanya perlu dilakukan sekali.
 { % endhint %}
 
@@ -131,7 +131,7 @@ SDK menggunakan lesen yang sama seperti chloros, chloros (penyemak imbas), dan c
 2. Masukkan kelayakan kloros+ anda dan log masuk
 3. Lesen di -cache secara tempatan (berterusan merentasi reboot)
 
-{ % petunjuk gaya = "kejayaan" %}
+{% hint style="success" %}
 ** Persediaan satu kali **: Selepas log masuk melalui GUI atau CLI, SDK secara automatik menggunakan lesen cache. Tiada pengesahan tambahan diperlukan!
 { % endhint %}
 
@@ -315,7 +315,7 @@ Proses imej projek.
 
 ** Pulangan: ** `Dict` - Hasil Pemprosesan
 
-{ % petunjuk gaya = "amaran" %}
+{% hint style="warning" %}
 ** Mod Paralel **: Memerlukan Lesen Chloros+. Skala secara automatik ke teras CPU anda (sehingga 16 pekerja).
 { % endhint %}
 
