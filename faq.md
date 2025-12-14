@@ -41,7 +41,7 @@ No. Dataset Imej Survey3 mesti mempunyai pendedahan tetap/terkunci, jadi tiada k
 
 <details>
 
-<summary>Can Chloros process or analyze orthomosaic images?</summary>
+<summary>Bolehkah kloros memproses atau menganalisis imej orthomosaik?</summary>
 
 Tidak. Hanya imej kamera Mapir individu yang disokong, tidak dijahit imej seperti peta orthomosaik.
 
@@ -49,7 +49,7 @@ Tidak. Hanya imej kamera Mapir individu yang disokong, tidak dijahit imej sepert
 
 <details>
 
-<summary>How can I speed up the target detection step of Chloros?</summary>
+<summary>Bagaimanakah saya dapat mempercepatkan langkah pengesanan sasaran kloros?</summary>
 
 Dalam jadual penyemak imbas fail yang sebelum memilih imej sasaran di lajur kanan akan memberitahu kloros hanya melihat imej tersebut untuk sasaran penentukuran, sangat mempercepatkan pemprosesan.
 
@@ -65,7 +65,7 @@ Jika anda bercadang untuk memuat naik ke platform pemprosesan dalam talian kami 
 
 <details>
 
-<summary>Will MAPIR ever support X feature? I really wish MAPIR offered X.</summary>
+<summary>Adakah Mapir pernah menyokong ciri X? Saya sangat berharap Mapir ditawarkan X.</summary>
 
 Kami sentiasa berminat untuk menerima maklum balas mengenai produk kami. Jika anda menemui masalah dengan produk kami, atau mempunyai cadangan tentang bagaimana kami dapat memperbaiki produk kami, sila [hubungi kami](https://www.mapir.camera/community/contact) untuk berkongsi pemikiran anda. Kebanyakan R \ & D kami dipandu dengan mendengar keperluan terbesar pelanggan kami.
 
