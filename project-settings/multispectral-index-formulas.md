@@ -86,9 +86,7 @@ $$
 
 Pemalar gamma adalah fungsi pemberat yang bergantung kepada keadaan aerosol di atmosfera. Envi menggunakan nilai 1.7, yang merupakan nilai yang disyorkan dari Gitelson, Kaufman, dan Merzylak (1996, halaman 296).
 
-_Reference: Gitelson, A., Y. Kaufman, dan M. Merzylak. "Penggunaan saluran hijau dalam penderiaan jauh tumbuh-tumbuhan global dari EOS-Modi." Pengesan Alam Sekitar Jauh 58 (1996): 289-298._
-
-***
+_Reference: Gitelson, A., Y. Kaufman, dan M. Merzylak. "Penggunaan saluran hijau dalam penderiaan jauh tumbuh-tumbuhan global dari EOS-Modi." Pengesan Alam Sekitar Jauh 58 (1996): 289-298._***
 
 ## GCI - Indeks klorofil hijau
 
@@ -126,9 +124,7 @@ $$
 GNDVI = {(NIR - Green) \over (NIR + Green)  }
 $$
 
-_Reference: Gitelson, A., dan M. Merzlyak. "Penginderaan jauh kepekatan klorofil di daun tumbuhan yang lebih tinggi." Kemajuan dalam Penyelidikan Angkasa 22 (1998): 689-692._
-
-***
+_Reference: Gitelson, A., dan M. Merzlyak. "Penginderaan jauh kepekatan klorofil di daun tumbuhan yang lebih tinggi." Kemajuan dalam Penyelidikan Angkasa 22 (1998): 689-692._***
 
 ## Gosavi - Indeks tumbuh -tumbuhan diselaraskan tanah yang dioptimumkan hijau
 
@@ -150,9 +146,7 @@ $$
 GRVI = {NIR \over Green }
 $$
 
-_Reference: Sripada, R., et al. "Fotografi inframerah warna udara untuk menentukan keperluan nitrogen awal musim dalam jagung." Jurnal Agronomi 98 (2006): 968-977._
-
-***
+_Reference: Sripada, R., et al. "Fotografi inframerah warna udara untuk menentukan keperluan nitrogen awal musim dalam jagung." Jurnal Agronomi 98 (2006): 968-977._***
 
 ## gsavi - indeks tumbuh -tumbuhan diselaraskan tanah hijau
 
@@ -194,9 +188,7 @@ $$
 LCI = {NIR2 - RedEdge \over NIR2 + Red}
 $$
 
-_Reference: Datt, B. "Penginderaan jauh kandungan air di daun kayu putih." Jurnal Fisiologi Loji 154, no. 1 (1999): 30-36._
-
-***
+_Reference: Datt, B. "Penginderaan jauh kandungan air di daun kayu putih." Jurnal Fisiologi Loji 154, no. 1 (1999): 30-36._***
 
 ## MNLI - Indeks bukan linear yang diubahsuai
 
@@ -228,9 +220,7 @@ Indeks ini sama dengan NDVI tetapi membandingkan perbezaan antara NIR dengan Red
 
 $$
 NDRE = {NIR - RedEdge \over NIR + RedEdge  }
-$$
-
-***
+$$***
 
 ## NDVI - Indeks Vegetasi Perbezaan Normal
 
@@ -242,9 +232,7 @@ $$
 
 Nilai indeks ini berkisar antara -1 hingga 1. Julat umum untuk tumbuh -tumbuhan hijau adalah 0.2 hingga 0.8.
 
-_Reference: Rouse, J., R. Haas, J. Schell, dan D. Deering. Memantau sistem tumbuh -tumbuhan di dataran besar dengan ERTs. Simposium ERTS Ketiga, NASA (1973): 309-317._
-
-***
+_Reference: Rouse, J., R. Haas, J. Schell, dan D. Deering. Memantau sistem tumbuh -tumbuhan di dataran besar dengan ERTs. Simposium ERTS Ketiga, NASA (1973): 309-317._***
 
 ## NLI - Indeks bukan linear
 
@@ -254,9 +242,7 @@ $$
 NLI = {NIR^{2} - Red \over NIR^{2} + Red  }
 $$
 
-_Reference: Goel, N., dan W. Qin. "Pengaruh seni bina kanopi mengenai hubungan antara pelbagai indeks tumbuh -tumbuhan dan LAI dan FPAR: simulasi komputer." Ulasan Penginderaan Jauh 10 (1994): 309-347._
-
-***
+_Reference: Goel, N., dan W. Qin. "Pengaruh seni bina kanopi mengenai hubungan antara pelbagai indeks tumbuh -tumbuhan dan LAI dan FPAR: simulasi komputer." Ulasan Penginderaan Jauh 10 (1994): 309-347._ ***
 
 ## OSAVI - Indeks tumbuh -tumbuhan yang diselaraskan tanah yang dioptimumkan
 
@@ -266,9 +252,7 @@ $$
 OSAVI = {(NIR - Red) \over (NIR + Red + 0.16)  }
 $$
 
-_Reference: Rondeaux, G., M. Steven, dan F. Baret. "Pengoptimuman indeks tumbuh-tumbuhan yang disesuaikan dengan tanah." Pengesan Alam Sekitar Jauh 55 (1996): 95-107._
-
-***
+_Reference: Rondeaux, G., M. Steven, dan F. Baret. "Pengoptimuman indeks tumbuh-tumbuhan yang disesuaikan dengan tanah." Pengesan Alam Sekitar Jauh 55 (1996): 95-107._***
 
 ## RDVI - Indeks Vegetasi Perbezaan Renormalized
 
@@ -278,9 +262,7 @@ $$
 RDVI = {(NIR- Red) \over \sqrt{(NIR + Red)}  }
 $$
 
-_Reference: Roujean, J., dan F. Breon. "Menganggarkan par yang diserap oleh tumbuh -tumbuhan dari pengukuran refleksi dua arah." Pengesan Alam Sekitar Jauh 51 (1995): 375-384._
-
-***
+_Reference: Roujean, J., dan F. Breon. "Menganggarkan par yang diserap oleh tumbuh -tumbuhan dari pengukuran refleksi dua arah." Pengesan Alam Sekitar Jauh 51 (1995): 375-384._ ***
 
 ## Savi - Indeks tumbuh -tumbuhan yang diselaraskan tanah
 
@@ -314,9 +296,7 @@ $$
 VARI = {Green - Red \over Green + Red - Blue  }
 $$
 
-_Reference: Gitelson, A., et al. "Tumbuh -tumbuhan dan garisan tanah di ruang spektrum yang kelihatan: konsep dan teknik untuk anggaran jauh dari pecahan tumbuh -tumbuhan. Jurnal Antarabangsa Penginderaan Jauh 23 (2002): 2537-2562._
-
-***
+_Reference: Gitelson, A., et al. "Tumbuh -tumbuhan dan garisan tanah di ruang spektrum yang kelihatan: konsep dan teknik untuk anggaran jauh dari pecahan tumbuh -tumbuhan. Jurnal Antarabangsa Penginderaan Jauh 23 (2002): 2537-2562._***
 
 ## WDRVI - Indeks Vegetasi Julat Dinamik yang luas
 

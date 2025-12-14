@@ -14,11 +14,9 @@ Metalinks:
 
 32 -bit (pixel float 0.0 - 1.0) tiff (.tif) output format. Nilai piksel mewakili peratusan refleksi di mana 0.0 = 0% dan 1.0 = 100%.
 
-### ** jpg (8-bit) **
+### **jpg (8-bit)**8 -bit (nombor digital pixel 0 -255) jpg (.jpg) output format.
 
-8 -bit (nombor digital pixel 0 -255) jpg (.jpg) output format.
-
-### ** png (8-bit) **
+###**png (8-bit)**
 
 8 -bit (nombor digital pixel 0 - 255) png (.png) output format. Mampatan tanpa kehilangan sesuai untuk tontonan dan visualisasi web.
 

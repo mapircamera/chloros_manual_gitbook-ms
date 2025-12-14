@@ -7,10 +7,8 @@ Tetapan Projek <img src=".. Tetapan ini disimpan dengan projek anda dan boleh di
 Untuk mengakses tetapan projek:
 
 1. Buka projek di kloros
-2. Klik tetapan projek ** ** <img src="../. Gitbook/assets/icon_project-settings.jpg" alt="" data-size="line"> di bar sisi kiri
-3. Panel Tetapan akan memaparkan semua pilihan konfigurasi yang disediakan oleh kategori
-
-***
+2. Klik tetapan projek ** **<img src="../. Gitbook/assets/icon_project-settings.jpg" alt="" data-size="line"> di bar sisi kiri
+3. Panel Tetapan akan memaparkan semua pilihan konfigurasi yang disediakan oleh kategori***
 
 ## Pengesanan sasaran
 
@@ -121,9 +119,7 @@ Tetapan ini mengawal bagaimana kloros memproses dan menentukur imej anda.
   * Kamera tunggal + pin tunggal: pin 2 ditetapkan secara automatik ke "Jangan gunakan"
   * Kamera tunggal + dua pin: pin 2 ditetapkan secara automatik ke "Jangan gunakan"
   * Kamera berganda: pemilihan manual diperlukan
-* **NOTA**: Kamera yang sama tidak boleh diberikan kepada PIN 1 dan PIN 2 serentak.
-
-***
+* **NOTA**: Kamera yang sama tidak boleh diberikan kepada PIN 1 dan PIN 2 serentak.***
 
 ## indeks
 
@@ -167,20 +163,10 @@ Tetapan ini mengawal format dan kualiti imej diproses yang dieksport.
 ### Format imej yang dikalibrasi
 
 * **Jenis**: Pemilihan dropdown
-* **Pilihan**:
-  *** TIFF (16-bit) **-Format TIFF 16-bit yang tidak dikompresi
-  *** TIFF (32-bit, peratus) **-Tiff terapung 32-bit dengan nilai refleksi sebagai peratusan
-  *** png (8-bit) **-Format PNG 8-bit yang dimampatkan
-  *** jpg (8-bit) **-format jpeg 8-bit yang dimampatkan
+* **Pilihan**:***TIFF (16-bit)**-Format TIFF 16-bit yang tidak dikompresi***TIFF (32-bit, peratus)**-Tiff terapung 32-bit dengan nilai refleksi sebagai peratusan***png (8-bit)**-Format PNG 8-bit yang dimampatkan***jpg (8-bit)**-format jpeg 8-bit yang dimampatkan
 * **Lalai**: TIFF (16-bit)
 * **Penerangan**: Memilih format fail untuk menyimpan imej yang diproses dan ditentukur.
-* **Cadangan Format**:
-  *** TIFF (16-bit) **: Disyorkan untuk analisis saintifik dan aliran kerja profesional. Memelihara kualiti data maksimum tanpa artifak mampatan. Terbaik untuk analisis multispektral dan pemprosesan selanjutnya dalam perisian GIS.
-  *** TIFF (32-bit, peratus) **: Terbaik untuk aliran kerja yang memerlukan nilai refleksi sebagai peratusan (0-100%). Menawarkan ketepatan maksimum untuk pengukuran radiometrik.
-  *** PNG (8-bit) **: Baik untuk tontonan web dan visualisasi umum. Saiz fail yang lebih kecil dengan mampatan lossless, tetapi mengurangkan julat dinamik.
-  *** JPG (8-bit) **: Saiz fail terkecil, terbaik untuk pratonton dan paparan web sahaja. Menggunakan mampatan lossy yang tidak sesuai untuk analisis saintifik.
-
-***
+* **Cadangan Format**:***TIFF (16-bit)**: Disyorkan untuk analisis saintifik dan aliran kerja profesional. Memelihara kualiti data maksimum tanpa artifak mampatan. Terbaik untuk analisis multispektral dan pemprosesan selanjutnya dalam perisian GIS.***TIFF (32-bit, peratus)**: Terbaik untuk aliran kerja yang memerlukan nilai refleksi sebagai peratusan (0-100%). Menawarkan ketepatan maksimum untuk pengukuran radiometrik.***PNG (8-bit)**: Baik untuk tontonan web dan visualisasi umum. Saiz fail yang lebih kecil dengan mampatan lossless, tetapi mengurangkan julat dinamik.***JPG (8-bit)**: Saiz fail terkecil, terbaik untuk pratonton dan paparan web sahaja. Menggunakan mampatan lossy yang tidak sesuai untuk analisis saintifik.***
 
 ## Simpan templat projek
 
@@ -211,9 +197,7 @@ Tetapan ini menentukan di mana projek baru disimpan secara lalai.
   * Tetapkan ke pemacu rangkaian untuk kerjasama pasukan
   * Tukar ke pemacu dengan lebih banyak ruang penyimpanan untuk dataset yang besar
   * Mengatur projek mengikut tahun, pelanggan, atau jenis projek dalam folder yang berbeza
-* **Nota**: Menukar tetapan ini hanya mempengaruhi projek baru. Projek sedia ada kekal di lokasi asalnya.
-
-***
+* **Nota**: Menukar tetapan ini hanya mempengaruhi projek baru. Projek sedia ada kekal di lokasi asalnya.***
 
 ## Tetapan kegigihan
 
@@ -223,10 +207,10 @@ Semua tetapan projek disimpan secara automatik dengan fail projek anda (format p
 
 Tetapan digunakan mengikut urutan berikut:
 
-1. ** Default System ** - Default terbina dalam yang ditakrifkan oleh kloros
-2. ** Tetapan templat ** - Sekiranya anda memuatkan templat semasa membuat projek
-3. ** Tetapan projek yang disimpan ** - Tetapan disimpan dengan fail projek
-4. ** Pelarasan Manual ** - Sebarang perubahan yang anda buat semasa sesi semasa
+1.**Default System**- Default terbina dalam yang ditakrifkan oleh kloros
+2.**Tetapan templat**- Sekiranya anda memuatkan templat semasa membuat projek
+3.**Tetapan projek yang disimpan**- Tetapan disimpan dengan fail projek
+4.**Pelarasan Manual** - Sebarang perubahan yang anda buat semasa sesi semasa
 
 ### Tetapan dan pemprosesan imej
 
@@ -240,11 +224,11 @@ Kebanyakan tetapan berubah (terutamanya dalam kategori pemprosesan dan eksport) 
 
 ## Amalan terbaik
 
-1. ** Mulakan dengan lalai **: Tetapan lalai berfungsi dengan baik untuk kebanyakan sistem kamera Mapir dan aliran kerja biasa.
-2. ** Buat templat **: Sebaik sahaja anda telah mengoptimumkan tetapan untuk aliran kerja atau kamera tertentu, simpannya sebagai templat untuk memastikan konsistensi merentasi projek.
-3. ** Ujian sebelum pemprosesan penuh **: Apabila bereksperimen dengan tetapan baru, uji pada subset kecil imej sebelum memproses seluruh dataset anda.
-4. ** Dokumen tetapan anda **: Gunakan nama templat deskriptif yang menunjukkan sistem kamera, jenis pemprosesan, dan penggunaan yang dimaksudkan (mis., "SURVEY3 \ _RGB \ _NDVI \ _agriculture").
-5. ** Pemilihan Format Eksport **: Pilih format eksport anda berdasarkan penggunaan akhir anda:
+1.**Mulakan dengan lalai**: Tetapan lalai berfungsi dengan baik untuk kebanyakan sistem kamera Mapir dan aliran kerja biasa.
+2.**Buat templat**: Sebaik sahaja anda telah mengoptimumkan tetapan untuk aliran kerja atau kamera tertentu, simpannya sebagai templat untuk memastikan konsistensi merentasi projek.
+3.**Ujian sebelum pemprosesan penuh**: Apabila bereksperimen dengan tetapan baru, uji pada subset kecil imej sebelum memproses seluruh dataset anda.
+4.**Dokumen tetapan anda**: Gunakan nama templat deskriptif yang menunjukkan sistem kamera, jenis pemprosesan, dan penggunaan yang dimaksudkan (mis., "SURVEY3 \ _RGB \ _NDVI \ _agriculture").
+5.**Pemilihan Format Eksport**: Pilih format eksport anda berdasarkan penggunaan akhir anda:
    * Analisis saintifik → TIFF (16-bit atau 32-bit)
    * Pemprosesan GIS → TIFF (16-bit)
    * Visualisasi cepat → PNG (8-bit)
