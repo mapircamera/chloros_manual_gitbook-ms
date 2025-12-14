@@ -63,7 +63,7 @@ Chloros beroperasi dalam dua mod pemprosesan yang berbeza bergantung pada lesen 
 
 ** Masa Pemprosesan: **
 
-* Jauh lebih perlahan daripada kloros+ mod selari
+* Jauh lebih perlahan daripada Chloros+ mod selari
 * Sesuai untuk dataset kecil dan sederhana (<200 gambar)
 
 ### chloros+ mod (pemprosesan selari)
@@ -86,9 +86,9 @@ Chloros beroperasi dalam dua mod pemprosesan yang berbeza bergantung pada lesen 
 
 ** Interaksi Bar Kemajuan: **
 
-*** Hover Mouse ** Over Bar untuk melihat panel dropdown 4-peringkat terperinci
-*** Klik ** Bar Kemajuan untuk membekukan panel dropdown di tempatnya
-*** Klik Lagi ** untuk Membuat dan Sembunyikan Panel
+* **Hover Mouse** Over Bar untuk melihat panel dropdown 4-peringkat terperinci
+* **Klik** Bar Kemajuan untuk membekukan panel dropdown di tempatnya
+* **Klik Lagi** untuk Membuat dan Sembunyikan Panel
 
 ** Masa Pemprosesan: **
 
@@ -185,7 +185,7 @@ Setelah bermula, keseluruhan saluran paip berjalan secara automatik:
 * Elakkan memulakan tugas intensif CPU yang lain
 
 {% hint style="warning" %}
-** Petua Prestasi **: Untuk prestasi kloros+ terbaik, tutup aplikasi lain dan biarkan kloros menggunakan sumber sistem penuh.
+** Petua Prestasi **: Untuk prestasi Chloros+ terbaik, tutup aplikasi lain dan biarkan kloros menggunakan sumber sistem penuh.
 {% endhint %}
 
 ### Pemprosesan tidak boleh dijeda
@@ -205,10 +205,10 @@ Setelah bermula, keseluruhan saluran paip berjalan secara automatik:
 
 Semasa pemprosesan berjalan, anda boleh:
 
-*** Watch Bar Progress ** - Lihat Peratusan Penyelesaian Keseluruhan
-*** Lihat Peringkat Semasa ** - Mengesan, Menganalisis, Kalibrasi, atau Eksport
-*** Tab Log Periksa ** - Lihat mesej dan amaran pemprosesan terperinci
-*** Pratonton Imej Selesai ** - Beberapa fail eksport mungkin muncul semasa pemprosesan
+* **Watch Bar Progress** - Lihat Peratusan Penyelesaian Keseluruhan
+* **Lihat Peringkat Semasa** - Mengesan, Menganalisis, Kalibrasi, atau Eksport
+* **Tab Log Periksa** - Lihat mesej dan amaran pemprosesan terperinci
+* **Pratonton Imej Selesai** - Beberapa fail eksport mungkin muncul semasa pemprosesan
 
 Untuk maklumat terperinci mengenai pemantauan, lihat [Pemantauan Pemprosesan](Pemantauan-The-Processing.md).
 
@@ -256,7 +256,7 @@ Masa pemprosesan sebenar sangat berbeza berdasarkan:
 * Format input mentah vs jpg
 * Mod Pemprosesan (Percuma vs Chloros+)
 * Kelajuan CPU dan kiraan teras
-* Ketersediaan GPU (kloros+ sahaja)
+* Ketersediaan GPU (Chloros+ sahaja)
 * Bilangan indeks untuk dikira
 * Kerumitan format eksport
 
@@ -342,7 +342,7 @@ Pemprosesan ### bermula kemudian segera gagal
 1. ** Elakkan tidur sistem ** - Lumpuhkan mod penjimatan kuasa
 2. ** Simpan kloros di latar depan ** - atau sekurang -kurangnya kelihatan dalam bar tugas
 3. ** Memantau kemajuan sekali -sekala ** - periksa amaran atau kesilapan
-4. ** Jangan memuatkan aplikasi berat lain ** - terutamanya dengan mod kloros+ selari
+4. ** Jangan memuatkan aplikasi berat lain ** - terutamanya dengan mod Chloros+ selari
 
 ### chloros+ pecutan GPU
 

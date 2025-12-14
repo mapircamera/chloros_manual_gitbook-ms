@@ -6,10 +6,10 @@ Lapisan imej jatuh dalam penonton imej kloros membolehkan anda dengan cepat menu
 
 Di kloros, ** lapisan ** Rujuk kepada output imej yang berbeza yang tersedia untuk imej sumber tunggal. Apabila anda memproses imej, Chloros mencipta pelbagai versi:
 
-*** Imej Asal ** (JPG dan fail mentah dari kamera anda)
-*** Refleksi yang ditentukur ** output (jika penentukuran refleksi diaktifkan)
-*** Imej sasaran ** (jika imej mengandungi sasaran penentukuran)
-*** Imej Indeks ** (NDVI, NDRE, GNDVI, dll. Jika indeks dikonfigurasi)
+* **Imej Asal** (JPG dan fail mentah dari kamera anda)
+* **Refleksi yang ditentukur** output (jika penentukuran refleksi diaktifkan)
+* **Imej sasaran** (jika imej mengandungi sasaran penentukuran)
+* **Imej Indeks** (NDVI, NDRE, GNDVI, dll. Jika indeks dikonfigurasi)
 
 Dropdown Layer ** Layer ** di bahagian atas kanan penonton imej membolehkan anda dengan serta-merta menukar antara versi ini tanpa meninggalkan penonton.
 

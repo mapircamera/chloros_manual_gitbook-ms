@@ -117,7 +117,7 @@ chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 
 ### `Login` - Mengesahkan akaun
 
-Log masuk dengan kelayakan kloros+ anda untuk membolehkan pemprosesan CLI.
+Log masuk dengan kelayakan Chloros+ anda untuk membolehkan pemprosesan CLI.
 
 ** Sintaks: **
 
@@ -420,7 +420,7 @@ The CLI uses **High Quality (Faster)** as the default and recommended debayer al
 
 Menukar nilai sensor mentah ke peratusan refleksi standard menggunakan panel penentukuran.
 
-*** Diaktifkan secara lalai ** - penting untuk analisis tumbuh -tumbuhan
+* **Diaktifkan secara lalai** - penting untuk analisis tumbuh -tumbuhan
 * Memerlukan panel sasaran penentukuran dalam gambar
 * Gunakan `--no-reflectance` untuk melumpuhkan
 
@@ -432,8 +432,7 @@ Menukar nilai sensor mentah ke peratusan refleksi standard menggunakan panel pen
 
 ** Apa yang dilakukannya: ** Menggunakan pembetulan kinematik selepas diproses menggunakan data log DAQ-A-SD untuk ketepatan GPS yang lebih baik.
 
-*** dilumpuhkan secara lalai **
-* Gunakan `--ppk` to enable
+* **dilumpuhkan secara lalai** * Gunakan `--ppk` to enable
 * Requires .daq files in project folder from MAPIR DAQ-A-SD light sensor.
 
 ### Output Formats
@@ -683,7 +682,7 @@ Chloros+ license required for CLI access
 
 ** Penyelesaian: **
 
-1. Sahkan anda mempunyai langganan kloros+ aktif
+1. Sahkan anda mempunyai langganan Chloros+ aktif
 2. Log masuk dengan kelayakan anda:
 
 ```powershell

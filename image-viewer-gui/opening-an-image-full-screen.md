@@ -91,9 +91,7 @@ Semasa anda menggerakkan kursor tetikus anda ke atas imej, nilai piksel dipapark
 
 ** Lokasi Paparan Nilai: **
 
-*** Nombor terapung dan garis merah di indeks sebelah kanan LUT Legend Gradien **
-*** Apabila dizum lebih jauh, nilai terapung berhampiran kursor dan piksel yang diserlahkan **
-*Menunjukkan nilai untuk piksel ** di bawah kursor atau diserlahkan **
+* **Nombor terapung dan garis merah di indeks sebelah kanan LUT Legend Gradien** * **Apabila dizum lebih jauh, nilai terapung berhampiran kursor dan piksel yang diserlahkan** *Menunjukkan nilai untuk piksel ** di bawah kursor atau diserlahkan **
 * Kemas kini semasa anda memindahkan tetikus
 
 ***
@@ -146,8 +144,8 @@ Lihat [Index/Lut Sandbox](Index-Lut-Sandbox.md) untuk arahan terperinci.
 
 ### navigasi
 
-*** → ** (anak panah kanan): Gambar seterusnya
-*** ← ** (anak panah kiri): gambar sebelumnya
+* **→** (anak panah kanan): Gambar seterusnya
+* **←** (anak panah kiri): gambar sebelumnya
 * **Laman Utama**: Imej Pertama dalam Senarai
 * **end**: Imej terakhir dalam senarai
 
@@ -155,7 +153,7 @@ Lihat [Index/Lut Sandbox](Index-Lut-Sandbox.md) untuk arahan terperinci.
 
 ***+** atau ** = **: Zum masuk
 * **-**: Zum keluar
-*** 0 ** (sifar): Sesuai dengan skrin
+* **0** (sifar): Sesuai dengan skrin
 * **roda tetikus**: Zum masuk/keluar
 
 ### Lihat kawalan

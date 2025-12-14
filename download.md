@@ -84,7 +84,7 @@ Pemasangan kloros termasuk:
 
 ## Naik taraf ke Chloros+
 
-Buka kunci ciri lanjutan dengan langganan kloros+:
+Buka kunci ciri lanjutan dengan langganan Chloros+:
 
 *🚀 ** pemprosesan pelbagai threaded ** - Proses imej selari
 *⚡ ** GPU (CUDA) Percepatan ** - Leverage Nvidia GPU Power

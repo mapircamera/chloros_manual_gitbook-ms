@@ -85,9 +85,9 @@ Tetapkan parameter bahasa apabila memulakan SDK untuk mendapatkan mesej dan outp
 
 Semua 38 bahasa disokong sepenuhnya di seluruh:
 
-*** Desktop Chloros ** - Terjemahan GUI Lengkap
-*** Pelayar kloros ** - Antara muka web dalam semua bahasa
-*** chloros cli ** - antara muka baris dan mesej output
-*** Chloros Python SDK ** - Mesej dan Dokumentasi API
+* **Desktop Chloros** - Terjemahan GUI Lengkap
+* **Pelayar kloros** - Antara muka web dalam semua bahasa
+* **chloros cli** - antara muka baris dan mesej output
+* **Chloros Python SDK** - Mesej dan Dokumentasi API
 
 Sokongan bahasa memastikan pengguna di seluruh dunia dapat berfungsi dengan cekap dalam bahasa ibunda mereka tanpa halangan.

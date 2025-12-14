@@ -84,7 +84,7 @@ Konfigurasikan indeks tumbuh -tumbuhan yang hendak dikira dan dieksport.
 * **osavi**: berfungsi dengan baik dengan tanah yang kelihatan
 * **Evi**: Kawasan Indeks Kawasan Daun Tinggi (LAI)
 
-** Formula tersuai (kloros+ sahaja): **
+** Formula tersuai (Chloros+ sahaja): **
 
 * Buat formula indeks multispektral tersuai
 * Gunakan matematik band dengan semua saluran imej
@@ -203,7 +203,7 @@ Untuk tinjauan berulang di kawasan yang sama dari masa ke masa:
 Untuk projek dengan banyak imej (500+):
 
 * Pertimbangkan untuk memecah projek yang lebih kecil mengikut tarikh atau kawasan
-* Gunakan kloros+ pemprosesan selari untuk hasil yang lebih cepat
+* Gunakan Chloros+ pemprosesan selari untuk hasil yang lebih cepat
 * Pertimbangkan CLI atau API untuk automasi batch
 * Laraskan selang pengubahsuaian minimum untuk mengurangkan masa pengesanan sasaran
 

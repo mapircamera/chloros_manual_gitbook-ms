@@ -2,7 +2,7 @@
 
 ## Chloros dan kloros (penyemak imbas) Log masuk
 
-Pengguna <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> menu sidebar membolehkan anda log masuk ke kloros+ akaun anda dan membuka kunci ciri tambahan.
+Pengguna <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> menu sidebar membolehkan anda log masuk ke Chloros+ akaun anda dan membuka kunci ciri tambahan.
 
 Apabila log masuk butiran akaun anda akan ditunjukkan:
 
@@ -10,7 +10,7 @@ Apabila log masuk butiran akaun anda akan ditunjukkan:
 
 ## Log masuk CLI
 
-Log masuk dengan kelayakan kloros+ anda untuk membolehkan pemprosesan CLI.
+Log masuk dengan kelayakan Chloros+ anda untuk membolehkan pemprosesan CLI.
 
 ** Sintaks: **
 

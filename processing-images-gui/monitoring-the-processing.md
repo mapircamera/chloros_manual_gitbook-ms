@@ -34,9 +34,9 @@ Bagi pengguna dengan Lesen Chloros+:
 
 ** Ciri Interaktif: **
 
-*** Hover over ** Bar Progress untuk melihat panel 4-peringkat yang diperluas
-*** Klik ** Bar Kemajuan untuk membekukan/pin panel yang diperluaskan
-*** Klik Lagi ** untuk Membongkar dan Mengumpulkan Auto pada Cuti Tetikus
+* **Hover over** Bar Progress untuk melihat panel 4-peringkat yang diperluas
+* **Klik** Bar Kemajuan untuk membekukan/pin panel yang diperluaskan
+* **Klik Lagi** untuk Membongkar dan Mengumpulkan Auto pada Cuti Tetikus
 * Setiap peringkat menunjukkan kemajuan individu (0-100%)
 
 ***
@@ -76,7 +76,7 @@ Bagi pengguna dengan Lesen Chloros+:
 * Membaca imej EXIF ​​Metadata (cap waktu, tetapan pendedahan)
 * Menentukan strategi penentukuran berdasarkan cap waktu sasaran
 * Mengatur barisan pemprosesan imej
-* Menyediakan pekerja pemprosesan selari (hanya kloros+ sahaja)
+* Menyediakan pekerja pemprosesan selari (hanya Chloros+ sahaja)
 
 ** Tempoh: ** 5-30 saat
 
@@ -364,7 +364,7 @@ Berhenti memproses jika anda melihat:
 
 1. Pastikan pengudaraan yang mencukupi
 2. Debu bersih dari lubang komputer
-3. Kurangkan beban pemprosesan (gunakan mod percuma dan bukannya kloros+)
+3. Kurangkan beban pemprosesan (gunakan mod percuma dan bukannya Chloros+)
 4. Proses semasa waktu sejuk
 
 ***
@@ -374,7 +374,7 @@ Berhenti memproses jika anda melihat:
 Semasa pemprosesan selesai:
 
 * Bar kemajuan mencapai 100%
-*** "Pemprosesan Lengkap" ** Mesej muncul dalam Log Debug
+* **"Pemprosesan Lengkap"** Mesej muncul dalam Log Debug
 * Butang mula diaktifkan lagi
 * Semua fail output berada dalam subfolder model kamera
 

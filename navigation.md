@@ -18,7 +18,7 @@ Apabila diaktifkan, butang pemprosesan mula memulakan saluran paip pemprosesan i
 
 Dalam mod kloros percuma, yang memproses semua fail secara berurutan, bar kemajuan akan menunjukkan 2 peringkat: sasaran mengesan dan memproses.
 
-Dalam Mod Berlesen Chloros+ yang dibayar, yang memproses semua fail secara serentak, bar kemajuan menunjukkan 4 peringkat: mengesan, menganalisis, menentukur, mengeksport. Jika anda melayang kursor tetikus anda ke atas bar kloros+ kemajuan, ia akan menurunkan panel bar kemajuan 4 yang diperluaskan supaya anda boleh mengikuti. Mengklik bar kemajuan atas akan membekukan panel dropdown, mengklik sekali lagi.
+Dalam Mod Berlesen Chloros+ yang dibayar, yang memproses semua fail secara serentak, bar kemajuan menunjukkan 4 peringkat: mengesan, menganalisis, menentukur, mengeksport. Jika anda melayang kursor tetikus anda ke atas bar Chloros+ kemajuan, ia akan menurunkan panel bar kemajuan 4 yang diperluaskan supaya anda boleh mengikuti. Mengklik bar kemajuan atas akan membekukan panel dropdown, mengklik sekali lagi.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 

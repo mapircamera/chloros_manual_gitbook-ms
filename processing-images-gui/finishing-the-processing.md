@@ -39,11 +39,11 @@ Apabila pemprosesan berjaya, anda akan melihat beberapa petunjuk:
 
 ** Penonton yang disyorkan: **
 
-*** QGIS ** - Perisian GIS PERCUMA (terbaik untuk analisis multispektral georeferenced)
-*** Irfanview ** - Pemandangan imej yang cepat dan ringan (menyokong TIFF)
-*** Adobe Photoshop ** - Penyuntingan Profesional (Sokongan TIFF)
-*** Gimp ** - Alternatif percuma untuk Photoshop
-*** Foto Windows ** - Tontonan Asas (mungkin tidak menyokong tiff 16 -bit)
+* **QGIS** - Perisian GIS PERCUMA (terbaik untuk analisis multispektral georeferenced)
+* **Irfanview** - Pemandangan imej yang cepat dan ringan (menyokong TIFF)
+* **Adobe Photoshop** - Penyuntingan Profesional (Sokongan TIFF)
+* **Gimp** - Alternatif percuma untuk Photoshop
+* **Foto Windows** - Tontonan Asas (mungkin tidak menyokong tiff 16 -bit)
 
 ### Pratonton dalam penonton imej kloros
 

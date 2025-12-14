@@ -133,14 +133,14 @@ Jika kloros tidak mengesan sasaran anda dengan betul, laraskan tetapan ini dalam
 ** Kawasan sampel penentukuran minimum: **
 
 * **lalai**: 25 piksel
-*** Meningkatkan ** Sekiranya mendapat pengesanan palsu pada artifak kecil
-*** Kurangkan ** Sekiranya sasaran tidak dikesan
+* **Meningkatkan** Sekiranya mendapat pengesanan palsu pada artifak kecil
+* **Kurangkan** Sekiranya sasaran tidak dikesan
 
 ** Clustering Sasaran Minimum: **
 
 * **lalai**: 60
-*** Meningkatkan ** Sekiranya sasaran dibahagikan kepada pelbagai pengesanan
-*** Kurangkan ** Sekiranya sasaran dengan variasi warna tidak dikesan sepenuhnya
+* **Meningkatkan** Sekiranya sasaran dibahagikan kepada pelbagai pengesanan
+* **Kurangkan** Sekiranya sasaran dengan variasi warna tidak dikesan sepenuhnya
 
 ***
 
