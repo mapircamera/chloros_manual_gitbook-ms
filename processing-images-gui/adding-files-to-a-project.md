@@ -9,11 +9,7 @@ Sebaik sahaja anda telah membuat atau membuka projek di kloros, langkah seterusn
 3. Panel penyemak imbas fail akan memaparkan senarai fail projek anda
 
 {% hint style="info" %}**Jenis fail yang disokong**: Chloros menyokong fail imej RAW+JPG dan JPG dari MAPIR Survey3W dan Kamera Survey3N. Hanya RAW+JPG yang disyorkan.
-{ % endhint %}
-
-***
-
-## Menambah gambar ke projek anda
+{ % endhint %}***## Menambah gambar ke projek anda
 
 Terdapat dua cara utama untuk menambah imej ke projek anda:
 
@@ -21,18 +17,18 @@ Terdapat dua cara utama untuk menambah imej ke projek anda:
 
 Gunakan pilihan ini untuk mengimport fail imej individu atau pemilihan fail kecil.
 
-1. Klik butang**"Tambah Fail"** di bahagian atas panel penyemak imbas fail
+1. Klik butang**"Tambah Fail"**di bahagian atas panel penyemak imbas fail
 2. Navigasi ke folder yang mengandungi gambar anda
-3. Pilih satu atau lebih fail imej (tahan**ctrl ** untuk memilih pelbagai fail)
-4. Klik**"Buka"** untuk mengimport fail yang dipilih
+3. Pilih satu atau lebih fail imej (tahan**ctrl**untuk memilih pelbagai fail)
+4. Klik**"Buka"**untuk mengimport fail yang dipilih
 
 ### Kaedah 2: Tambah folder
 
 Gunakan pilihan ini untuk mengimport semua imej dari folder sekaligus.
 
-1. Klik butang**"Tambah Folder"** di bahagian atas panel penyemak imbas fail
+1. Klik butang**"Tambah Folder"**di bahagian atas panel penyemak imbas fail
 2. Navigasi ke dan pilih folder yang mengandungi gambar sesi tangkapan anda
-3. Klik**"Pilih Folder"** untuk mengimport semua imej yang disokong dari folder tersebut***
+3. Klik**"Pilih Folder"**untuk mengimport semua imej yang disokong dari folder tersebut***
 
 ## Memahami jadual penyemak imbas fail
 
@@ -66,9 +62,7 @@ Sebaik sahaja imej diimport, mereka muncul dalam jadual dengan lajur berikut:
 * Sangat mempercepat pengesanan sasaran semasa pemprosesan
 * Lihat [memilih imej sasaran](memilih sasaran-imej.md) untuk maklumat lanjut
 
-***
-
-## Menguruskan fail dalam projek anda
+***## Menguruskan fail dalam projek anda
 
 ### Membuang fail
 
@@ -83,7 +77,7 @@ Untuk membuang gambar yang tidak diingini dari projek anda:
 
 * **Sort mengikut lajur**: Klik mana -mana tajuk lajur untuk menyusun gambar
 * **timestamp sort**: berguna untuk mengatur urutan penangkapan kronologi
-* **Penapis Model Kamera**: Imej Kumpulan dengan Jenis Kamera Jika menggunakan pelbagai kamera ***
+* **Penapis Model Kamera**: Imej Kumpulan dengan Jenis Kamera Jika menggunakan pelbagai kamera***
 
 ## Pratonton imej
 
@@ -100,7 +94,7 @@ Klik mana -mana gambar kecil imej dalam penyemak imbas fail untuk memaparkannya 
 * **gambar sebelumnya**: Klik anak panah kiri atau tekan ← Kunci
 * **Imej Seterusnya**: Klik anak panah kanan atau tekan → kekunci
 * **Zum masuk/keluar**: Gunakan butang roda tetikus atau zum
-* **pan**: Klik dan seret pada imej ketika dizum masuk ***
+* **pan**: Klik dan seret pada imej ketika dizum masuk***
 
 ## Pengendalian fail pendua
 
@@ -112,18 +106,14 @@ Chloros secara automatik mengesan dan mengabaikan fail pendua:
 
 {% hint style="warning" %}
 **PENTING**: Jangan ubah semula atau ubah suai fail imej asal anda sebelum mengimport. Chloros bergantung pada nama fail asal dan metadata untuk pemprosesan yang betul.
-{ % endhint %}
-
-***
-
-## dataset kamera bercampur
+{ % endhint %}***## dataset kamera bercampur
 
 Jika projek anda mengandungi imej dari pelbagai kamera Mapir:
 
 1. Kloros secara automatik mengesan setiap model kamera
 2. Setiap jenis kamera diproses dengan profil penentukuran yang sesuai
 3. Pelayar fail memaparkan model kamera dalam lajur model kamera
-4. Pemprosesan menggunakan tetapan yang betul untuk setiap jenis kamera**Contoh Senario **: Survey3W RGN + Survey3n OCN Dual-Camera Persediaan***
+4. Pemprosesan menggunakan tetapan yang betul untuk setiap jenis kamera**Contoh Senario**: Survey3W RGN + Survey3n OCN Dual-Camera Persediaan***
 
 ## Amalan terbaik
 
@@ -146,9 +136,7 @@ Jika projek anda mengandungi imej dari pelbagai kamera Mapir:
 * Tempat sasaran dalam keadaan pencahayaan yang sama seperti kawasan penangkapan
 * Tandakan imej sasaran menggunakan kotak semak sasaran untuk mempercepat pemprosesan
 
-***
-
-## Isu dan penyelesaian biasa
+***## Isu dan penyelesaian biasa
 
 ### gambar tidak muncul selepas import**Kemungkinan Punca:**
 
@@ -158,9 +146,7 @@ Jika projek anda mengandungi imej dari pelbagai kamera Mapir:
 
 **Penyelesaian**: Sahkan format fail dan keserasian model kamera
 
-### Model kamera tidak dikesan
-
-**Kemungkinan Punca:**
+### Model kamera tidak dikesan**Kemungkinan Punca:**
 
 * Metadata EXIF ​​yang diubah suai
 * Imej diedit dalam perisian luaran
@@ -168,16 +154,12 @@ Jika projek anda mengandungi imej dari pelbagai kamera Mapir:
 
 **Penyelesaian**: Re-import asal, fail yang tidak diubahsuai dari kad kamera/sd
 
-### Hilang timestamps
-
-**Kemungkinan Punca:**
+### Hilang timestamps**Kemungkinan Punca:**
 
 * Jam kamera tidak ditetapkan dengan betul
 * Data EXIF ​​dilucutkan oleh perisian luaran
 
-**Penyelesaian**: Sahkan tetapan masa kamera betul semasa penangkapan ***
-
-## Langkah seterusnya
+**Penyelesaian**: Sahkan tetapan masa kamera betul semasa penangkapan***## Langkah seterusnya
 
 Setelah fail anda diimport:
 

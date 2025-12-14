@@ -11,7 +11,7 @@ Di kloros, **lapisan** Rujuk kepada output imej yang berbeza yang tersedia untuk
 * **Imej sasaran** (jika imej mengandungi sasaran penentukuran)
 * **Imej Indeks**(NDVI, NDRE, GNDVI, dll. Jika indeks dikonfigurasi)
 
-Dropdown Layer **Layer**di bahagian atas kanan penonton imej membolehkan anda dengan serta-merta menukar antara versi ini tanpa meninggalkan penonton.***
+Dropdown Layer**Layer**di bahagian atas kanan penonton imej membolehkan anda dengan serta-merta menukar antara versi ini tanpa meninggalkan penonton.***
 
 ## Jenis lapisan yang ada
 
@@ -101,14 +101,12 @@ Dropdown Layer **Layer**di bahagian atas kanan penonton imej membolehkan anda de
 * Mengenal pasti bidang minat
 * Mengesahkan gambar indeks sebelum menggunakan dalam GI atau analisis
 
-***
-
-## Menggunakan pemilih lapisan
+***## Menggunakan pemilih lapisan
 
 ### Membuka dropdown
 
 1. Buka gambar dalam mod skrin penuh (klik mana -mana lakaran kecil dalam penonton imej)
-2. Cari lekuk**Layer **di sudut kanan atas penonton
+2. Cari lekuk**Layer**di sudut kanan atas penonton
 3. Dropdown menunjukkan lapisan yang dipilih sekarang (mis., "JPG")
 4. Klik jatuh turun untuk melihat semua lapisan yang ada
 
@@ -134,9 +132,7 @@ Tidak semua lapisan disediakan untuk setiap imej:
 * ⚠️ mentah (reflektif) - Hanya selepas diproses dengan penentukuran refleksi diaktifkan
 * ⚠️ Raw ([index] index) - Hanya selepas diproses dengan indeks yang dikonfigurasikan
 
-***
-
-## Layer kegigihan
+***## Layer kegigihan
 
 ### menavigasi antara gambar
 
@@ -146,9 +142,7 @@ Apabila anda menavigasi ke imej yang berbeza (menggunakan kekunci anak panah ata
 * Jika melihat "mentah (indeks ndvi)", imej seterusnya menunjukkan "mentah (indeks ndvi)" (jika ada)
 * Sekiranya lapisan yang sama tidak wujud, lalai ke jpg
 
-**Contoh aliran kerja:**
-
-1. Buka imej 1, beralih ke mentah (indeks NDVI)
+**Contoh aliran kerja:**1. Buka imej 1, beralih ke mentah (indeks NDVI)
 2. Tekan → untuk melihat gambar 2
 3. Imej 2 memaparkan lapisan Raw (NDVI) secara automatik
 4. Teruskan menavigasi - semua imej menunjukkan lapisan NDVI
@@ -156,16 +150,15 @@ Apabila anda menavigasi ke imej yang berbeza (menggunakan kekunci anak panah ata
 
 ## Aliran kerja biasa
 
-### aliran kerja 1: sebelum/selepas perbandingan
-**Matlamat**: Bandingkan imej asal dan ditentukur
+### aliran kerja 1: sebelum/selepas perbandingan**Matlamat**: Bandingkan imej asal dan ditentukur
 
 1. Buka gambar yang diproses dalam penonton imej
-2. Pilih **mentah (asal)**dari dropdown
+2. Pilih**mentah (asal)**dari dropdown
 3. Perhatikan nilai vignetting dan tidak terjejas
 4. Beralih ke**mentah (reflektif)**dari dropdown
 5. Bandingkan - vignetting dikeluarkan, nilai ditentukur
 
-### aliran kerja 2: ulasan indeks**Matlamat **: Cepat semak keputusan NDVI di seluruh dataset
+### aliran kerja 2: ulasan indeks**Matlamat**: Cepat semak keputusan NDVI di seluruh dataset
 
 1. Buka gambar yang diproses pertama
 2. Pilih**RAW (Indeks NDVI)**dari Dropdown
@@ -174,7 +167,7 @@ Apabila anda menavigasi ke imej yang berbeza (menggunakan kekunci anak panah ata
 5. Teruskan melalui semua imej, memeriksa corak NDVI
 6. Tukar ke**mentah (indeks ndre)**untuk membandingkan
 
-### aliran kerja 3: pengesahan sasaran**Matlamat **: Sahkan semua imej sasaran dikesan dengan betul
+### aliran kerja 3: pengesahan sasaran**Matlamat**: Sahkan semua imej sasaran dikesan dengan betul
 
 1. Navigasi ke gambar sasaran
 2. Pilih**mentah (sasaran)**dari dropdown
@@ -182,11 +175,11 @@ Apabila anda menavigasi ke imej yang berbeza (menggunakan kekunci anak panah ata
 4. Navigasi ke gambar sasaran seterusnya
 5. Ulangi pengesahan untuk semua sasaran
 
-### aliran kerja 4: pemeriksaan nilai piksel**Matlamat **: Periksa nilai refleksi untuk ketepatan saintifik
+### aliran kerja 4: pemeriksaan nilai piksel**Matlamat**: Periksa nilai refleksi untuk ketepatan saintifik
 
 1. Buka gambar yang diproses
 2. Pilih**mentah (reflektif)**lapisan
-3. Dayakan**Pixel peratus **mod (butang di bar alat kanan atas)
+3. Dayakan**Pixel peratus**mod (butang di bar alat kanan atas)
 4. Pindahkan kursor ke kawasan tumbuh -tumbuhan
 5. Sahkan nilai piksel berada dalam julat yang dijangkakan (30-70% untuk NIR, 5-15% untuk merah)
 6. Periksa kawasan tanah dan air untuk nilai yang sesuai***
@@ -211,7 +204,7 @@ Lapisan yang berbeza menunjukkan julat nilai piksel yang berbeza:
 
 * **Range**: 0-65,535 (tiff 16-bit) atau 0.0-1.0 (32-bit peratus)
 * **Maksudnya**: Refleksi peratus yang dikalibrasi
-* **Gunakan**: Pengukuran dan analisis saintifik **Untuk tiff 16-bit:** Bahagikan sebanyak 65,535 untuk mendapatkan pemantulan peratus**untuk peratus 32-bit:** Nilai secara langsung mewakili peratus (0.5 = 50% refleksi)
+* **Gunakan**: Pengukuran dan analisis saintifik**Untuk tiff 16-bit:**Bahagikan sebanyak 65,535 untuk mendapatkan pemantulan peratus**untuk peratus 32-bit:** Nilai secara langsung mewakili peratus (0.5 = 50% refleksi)
 
 ### mentah (imej indeks)
 
@@ -243,34 +236,28 @@ Lapisan yang berbeza menunjukkan julat nilai piksel yang berbeza:
 
 * **Sentiasa periksa mentah (asal)**: Sahkan kualiti data sumber sebelum mempercayai output diproses
 * **Bandingkan Lapisan**: Gunakan lapisan Beralih untuk Mengesahkan Pemprosesan Berfungsi dengan betul
-* **Rentang Indeks Semak**: Gunakan mod peratus piksel dengan lapisan indeks untuk mengesahkan nilai adalah munasabah ***
+* **Rentang Indeks Semak**: Gunakan mod peratus piksel dengan lapisan indeks untuk mengesahkan nilai adalah munasabah***## Penyelesaian masalah
 
-## Penyelesaian masalah
-
-Lapisan ### tidak tersedia**Masalah **: Lapisan yang diharapkan tidak muncul dalam lungsur turun**Kemungkinan Punca:**
+Lapisan ### tidak tersedia**Masalah**: Lapisan yang diharapkan tidak muncul dalam lungsur turun**Kemungkinan Punca:**
 
 * Imej tidak diproses (hanya jpg dan mentah (asal) tersedia)
 * Penentukuran refleksi dilumpuhkan semasa pemprosesan
 * Indeks khusus tidak dikonfigurasi dalam tetapan projek
 * Imej adalah imej sasaran sahaja (tiada indeks yang dihasilkan untuk sasaran)
 
-**Penyelesaian:**
-
-1. Sahkan imej diproses (periksa folder output untuk fail yang diproses)
+**Penyelesaian:**1. Sahkan imej diproses (periksa folder output untuk fail yang diproses)
 2. Periksa tetapan projek untuk mengesahkan indeks dikonfigurasikan
 3. Pengkolot semula dengan indeks yang diingini diaktifkan
 
-### Lapisan yang salah ditunjukkan**Masalah **: Imej dibuka di lapisan yang tidak dijangka**Sebab **: Keutamaan lapisan dari imej sebelumnya dibawa ke hadapan, tetapi lapisan itu tidak wujud pada imej semasa**Penyelesaian **: Kloros secara automatik akan kembali ke JPG apabila lapisan pilihan tidak tersedia - ini adalah tingkah laku biasa
+### Lapisan yang salah ditunjukkan**Masalah**: Imej dibuka di lapisan yang tidak dijangka**Sebab**: Keutamaan lapisan dari imej sebelumnya dibawa ke hadapan, tetapi lapisan itu tidak wujud pada imej semasa**Penyelesaian**: Kloros secara automatik akan kembali ke JPG apabila lapisan pilihan tidak tersedia - ini adalah tingkah laku biasa
 
-### tidak dapat melihat sasaran penentukuran**Masalah **: Lapisan mentah (sasaran) tidak menunjukkan pengesanan sasaran**Kemungkinan Punca:**
+### tidak dapat melihat sasaran penentukuran**Masalah**: Lapisan mentah (sasaran) tidak menunjukkan pengesanan sasaran**Kemungkinan Punca:**
 
 * Sasaran tidak dikesan semasa pemprosesan
 * Imej sebenarnya tidak mengandungi sasaran
 * Tetapan pengesanan sasaran terlalu ketat
 
-**Penyelesaian:**
-
-1. Periksa log debug untuk mesej "sasaran dijumpai"
+**Penyelesaian:**1. Periksa log debug untuk mesej "sasaran dijumpai"
 2. Sahkan imej sebenarnya mengandungi sasaran penentukuran yang kelihatan
 3. Laraskan tetapan pengesanan sasaran dalam tetapan projek
 4. Lihat [memilih imej sasaran](../ pemprosesan-images-gui/memilih-target-imag.md)***
@@ -297,9 +284,7 @@ Untuk ujian dan visualisasi indeks interaktif:
 * **Pemetaan Warna Lut**: Sapukan kecerunan warna ke indeks skala kelabu
 * **Visualisasi Eksport**: Simpan Imej Indeks Berwarna
 
-Lihat [Index/Lut Sandbox](Index-Lut-Sandbox.md) untuk butirannya.
-
-***
+Lihat [Index/Lut Sandbox](Index-Lut-Sandbox.md) untuk butirannya.***
 
 ## Langkah seterusnya
 

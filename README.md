@@ -8,9 +8,7 @@ metaLinks: {}
 
 Chloros adalah aplikasi perisian dari [MAPIR](https://www.mapir.camera) untuk memproses imej dan data sensor lain.
 
-***
-
-Chloros boleh didapati dalam 4 mod permohonan:
+***Chloros boleh didapati dalam 4 mod permohonan:
 
 ## Chloros: Aplikasi GUI Desktop
 

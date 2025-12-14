@@ -182,9 +182,7 @@ Ciri ini membolehkan anda menyimpan tetapan projek semasa anda sebagai templat y
   1. Konfigurasikan semua tetapan projek yang anda inginkan
   2. Masukkan nama templat (mis., "Rededge Survey3 NDVI Standard")
   3. Klik ikon Simpan
-  4. Templat kini boleh dimuatkan semasa membuat projek baru
-
-***
+  4. Templat kini boleh dimuatkan semasa membuat projek baru***
 
 ## Simpan Folder Projek
 
@@ -197,9 +195,7 @@ Tetapan ini menentukan di mana projek baru disimpan secara lalai.
   * Tetapkan ke pemacu rangkaian untuk kerjasama pasukan
   * Tukar ke pemacu dengan lebih banyak ruang penyimpanan untuk dataset yang besar
   * Mengatur projek mengikut tahun, pelanggan, atau jenis projek dalam folder yang berbeza
-* **Nota**: Menukar tetapan ini hanya mempengaruhi projek baru. Projek sedia ada kekal di lokasi asalnya.***
-
-## Tetapan kegigihan
+* **Nota**: Menukar tetapan ini hanya mempengaruhi projek baru. Projek sedia ada kekal di lokasi asalnya.***## Tetapan kegigihan
 
 Semua tetapan projek disimpan secara automatik dengan fail projek anda (format projek `.mapir`). Apabila anda membuka semula projek, semua tetapan dipulihkan tepat seperti yang anda tinggalkan.
 
@@ -220,9 +216,7 @@ Kebanyakan tetapan berubah (terutamanya dalam kategori pemprosesan dan eksport) 
 * Direktori kerja
 * Format imej yang ditentukur (terpakai semasa mengeksport)
 
-***
-
-## Amalan terbaik
+***## Amalan terbaik
 
 1.**Mulakan dengan lalai**: Tetapan lalai berfungsi dengan baik untuk kebanyakan sistem kamera Mapir dan aliran kerja biasa.
 2.**Buat templat**: Sebaik sahaja anda telah mengoptimumkan tetapan untuk aliran kerja atau kamera tertentu, simpannya sebagai templat untuk memastikan konsistensi merentasi projek.

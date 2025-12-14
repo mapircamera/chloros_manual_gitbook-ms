@@ -8,16 +8,16 @@ Penonton Imej Chloros menyediakan antara muka skrin penuh yang berdedikasi untuk
 
 Cara yang paling biasa untuk membuka imej dalam penonton imej:
 
-1. Pastikan anda berada di **pelayar fail** tab <img src="../. Gitbook/assets/icon_file-browser.jpg" alt="" data-size="line">
-2. Klik mana -mana **gambar kecil gambar** dalam grid imej
-3. Imej dibuka di kawasan pratonton utama **(pusat skrin)
+1. Pastikan anda berada di **pelayar fail**tab <img src="../. Gitbook/assets/icon_file-browser.jpg" alt="" data-size="line">
+2. Klik mana -mana**gambar kecil gambar**dalam grid imej
+3. Imej dibuka di kawasan pratonton utama**(pusat skrin)
 4. Imej kini dimuatkan dan siap untuk melihat skrin penuh
 
 ### Membuka tab Penonton Imej
 
 Setelah imej dimuatkan di kawasan pratonton:
 
-1. Klik**Image Viewer **<img src="../. Gitbook/Aset/icon_image-viewer.jpg" alt="" data-size="line"> ikon di bar sisi kiri
+1. Klik**Image Viewer**<img src="../. Gitbook/Aset/icon_image-viewer.jpg" alt="" data-size="line"> ikon di bar sisi kiri
 2. Tab Penonton Imej dibuka, memaparkan skrin penuh imej yang dipilih
 3. Alat tontonan dan analisis lanjutan boleh didapati di bar sisi kiri***
 
@@ -30,7 +30,7 @@ Bahagian terbesar skrin menunjukkan imej anda:
 * **Resolusi Penuh**: Imej yang dipaparkan pada resolusi asli
 * **Zoomable**: Gunakan kawalan atau roda tetikus untuk mengezum
 * **Pannable**: Klik dan seret untuk bergerak ketika dizum
-* **nisbah aspek dikekalkan**: Skala imej secara proporsional ***
+* **nisbah aspek dikekalkan**: Skala imej secara proporsional***
 
 ## Pilihan tontonan
 
@@ -40,24 +40,17 @@ Bahagian terbesar skrin menunjukkan imej anda:
 
 Navigasi melalui set gambar anda menggunakan pintasan atau butang papan kekunci:
 
-* **Imej Seterusnya**: Klik → Butang atau tekan **→** (anak panah kanan)
-* **gambar sebelumnya**: klik ← butang atau tekan **←** (anak panah kiri)
+* **Imej Seterusnya**: Klik → Butang atau tekan**→** (anak panah kanan)
+* **gambar sebelumnya**: klik ← butang atau tekan**←** (anak panah kiri)
 * **Lompat ke imej tertentu**: Kembali ke pelayar fail dan klik gambar kecil yang dikehendaki
 
 #### Kawalan zum
 
-Laraskan pembesaran untuk memeriksa butiran imej:
-**Zum masuk:***
-
-Klik**+** (ditambah) butang
+Laraskan pembesaran untuk memeriksa butiran imej:**Zum masuk:***Klik**+** (ditambah) butang
 * Tekan **+**atau**=** kekunci
-*Tatal roda tetikus **up** **Zum keluar:***
-
-Klik**-** (tolak) butang
+*Tatal roda tetikus **up** **Zum keluar:***Klik**-** (tolak) butang
 * Tekan **-** (tolak) kekunci
-*Tatal roda tetikus **ke bawah** **sesuai untuk skrin:***
-
-Klik**↔** (Fit) Butang
+*Tatal roda tetikus **ke bawah** **sesuai untuk skrin:***Klik**↔** (Fit) Butang
 * Tekan **0** (sifar) kekunci
 * Klik dua kali pada gambar
 
@@ -66,21 +59,13 @@ Klik**↔** (Fit) Butang
 Apabila dizoom di luar saiz skrin:
 
 1. Pindahkan kursor tetikus ke atas gambar
-2. Klik dan **Tahan butang tetikus kiri**
-3.** Seret**untuk menggerakkan gambar di sekitar
-4. Siaran untuk menghentikan panning
-**Alternatif**: Gunakan kekunci anak panah untuk pan dengan kenaikan kecil
-
-***
-
-## Pemeriksaan nilai piksel
+2. Klik dan **Tahan butang tetikus kiri**3.** Seret**untuk menggerakkan gambar di sekitar
+4. Siaran untuk menghentikan panning**Alternatif**: Gunakan kekunci anak panah untuk pan dengan kenaikan kecil***## Pemeriksaan nilai piksel
 
 ### Melihat nilai piksel di kursor
 
 Semasa anda menggerakkan kursor tetikus anda ke atas imej, nilai piksel dipaparkan dalam masa nyata:**Lokasi Paparan Nilai:***
-** Nombor terapung dan garis merah di indeks sebelah kanan LUT Legend Gradien *** ** Apabila dizum lebih jauh, nilai terapung berhampiran kursor dan piksel yang diserlahkan***Menunjukkan nilai untuk piksel ** di bawah kursor atau diserlahkan***Kemas kini semasa anda memindahkan tetikus ***
-
-## Jenis gambar yang boleh anda lihat
+**Nombor terapung dan garis merah di indeks sebelah kanan LUT Legend Gradien*** **Apabila dizum lebih jauh, nilai terapung berhampiran kursor dan piksel yang diserlahkan***Menunjukkan nilai untuk piksel**di bawah kursor atau diserlahkan***Kemas kini semasa anda memindahkan tetikus***## Jenis gambar yang boleh anda lihat
 
 ### Imej asal (pra-pemprosesan)**RAW + JPG Imej dari Kamera:**
 
@@ -106,13 +91,11 @@ Semasa anda menggerakkan kursor tetikus anda ke atas imej, nilai piksel dipapark
 * Julat biasanya -1 hingga +1 untuk indeks normal
 * Boleh menggunakan luts warna untuk visualisasi
 
-***
-
-## Indeks dan aplikasi LUT
+***## Indeks dan aplikasi LUT
 
 Sapukan indeks multispektral dan jadual paparan warna:
 
-1. Cari**Indeks/Lut Sandbox **In**Image Viewer **<img src="../. Gitbook/assets/icon_image-viewer.jpg" alt="" data-size="line">
+1. Cari**Indeks/Lut Sandbox**In**Image Viewer**<img src="../. Gitbook/assets/icon_image-viewer.jpg" alt="" data-size="line">
 2. Pilih Indeks Vegetasi (NDVI, NDRE, dll.)
 3. Pilih formula multispektral, atau buat satu adat anda sendiri (chloros+ sahaja)
 4. Gunakan kecerunan lut warna untuk visualisasi
@@ -129,9 +112,7 @@ Lihat [Index/Lut Sandbox](Index-Lut-Sandbox.md) untuk arahan terperinci.***
 * **Laman Utama**: Imej Pertama dalam Senarai
 * **end**: Imej terakhir dalam senarai
 
-### Zoom
-
-***+** atau**=**: Zum masuk
+### Zoom***+**atau**=**: Zum masuk
 * **-**: Zum keluar
 * **0** (sifar): Sesuai dengan skrin
 * **roda tetikus**: Zum masuk/keluar
@@ -145,17 +126,13 @@ Lihat [Index/Lut Sandbox](Index-Lut-Sandbox.md) untuk arahan terperinci.***
 ### Lain -lain
 
 * **ctrl+s**: simpan gambar semasa
-* **f**: mod skrin penuh (jika ada)***
-
-### Mengesahkan pengiraan indeks
+* **f**: mod skrin penuh (jika ada)***### Mengesahkan pengiraan indeks
 
 Periksa indeks yang dikira dengan betul:
 
 1. Buka NDVI atau gambar indeks lain
-2. Periksa kawasan tumbuh -tumbuhan:***ndvi **: harus menunjukkan 0.4-0.9 untuk tanaman yang sihat***ndre **: Nilai yang lebih tinggi untuk pertumbuhan yang kuat***GNDVI **: Sama seperti NDVI tetapi sensitif klorofil
-3. Periksa bukan vegetasi:***tanah **: dekat 0 atau sedikit negatif***air **: Nilai negatif (-0.5 hingga 0)***
-
-## masalah tontonan penyelesaian masalah
+2. Periksa kawasan tumbuh -tumbuhan:***ndvi**: harus menunjukkan 0.4-0.9 untuk tanaman yang sihat***ndre**: Nilai yang lebih tinggi untuk pertumbuhan yang kuat***GNDVI**: Sama seperti NDVI tetapi sensitif klorofil
+3. Periksa bukan vegetasi:***tanah**: dekat 0 atau sedikit negatif***air**: Nilai negatif (-0.5 hingga 0)***## masalah tontonan penyelesaian masalah
 
 ### Imej tidak akan dibuka**Kemungkinan Punca:**
 
@@ -163,9 +140,7 @@ Periksa indeks yang dikira dengan betul:
 * Format fail yang tidak disokong
 * Memori yang tidak mencukupi untuk gambar yang besar
 
-**Penyelesaian:**
-
-1. Cuba buka di penonton luaran untuk mengesahkan integriti fail
+**Penyelesaian:**1. Cuba buka di penonton luaran untuk mengesahkan integriti fail
 2. Periksa format fail yang sesuai dengan jenis yang diharapkan
 3. Tutup aplikasi lain untuk memori percuma
 4. Cuba gambar yang lebih kecil/berbeza
@@ -176,9 +151,7 @@ Periksa indeks yang dikira dengan betul:
 * Imej terapung 32-bit dengan nilai yang tidak biasa
 * Ralat pengiraan indeks
 
-**Penyelesaian:**
-
-1. Semak nilai piksel - jika semua sangat rendah atau sangat tinggi, laraskan julat paparan
+**Penyelesaian:**1. Semak nilai piksel - jika semua sangat rendah atau sangat tinggi, laraskan julat paparan
 2. Cuba pembukaan di QGIS atau serupa dengan pelarasan auto-jarak
 3. Periksa log debug dari pemprosesan untuk kesilapan
 
@@ -189,9 +162,7 @@ Periksa indeks yang dikira dengan betul:
 * Data sensor cahaya tidak termasuk dalam input
 * Mod peratus bertukar dengan tidak betul
 
-**Penyelesaian:**
-
-1. Sahkan anda melihat output yang diproses (semak akhiran nama fail)
+**Penyelesaian:**1. Sahkan anda melihat output yang diproses (semak akhiran nama fail)
 2. Periksa keadaan butang mod peratus
 3. Bandingkan dengan imej yang diketahui-baik dari dataset yang sama***
 

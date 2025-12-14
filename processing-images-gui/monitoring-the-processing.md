@@ -10,10 +10,8 @@ Bar kemajuan di tajuk teratas menunjukkan status pemprosesan masa nyata dan pera
 
 Bagi pengguna tanpa lesen Chloros+:
 
-**Paparan kemajuan 2 peringkat:**
-1.** Sasaran Mengesan**- Mencari sasaran penentukuran dalam imej
-2.**Pemprosesan**- Memohon pembetulan dan mengeksport
-**Kemajuan bar menunjukkan:**
+**Paparan kemajuan 2 peringkat:**1.** Sasaran Mengesan**- Mencari sasaran penentukuran dalam imej
+2.**Pemprosesan**- Memohon pembetulan dan mengeksport**Kemajuan bar menunjukkan:**
 
 * Peratusan siap secara keseluruhan (0-100%)
 * Nama Peringkat Semasa
@@ -23,20 +21,16 @@ Bagi pengguna tanpa lesen Chloros+:
 
 Bagi pengguna dengan Lesen Chloros+:
 
-**Paparan kemajuan 4 peringkat:**
-1.** Mengesan**- Mencari sasaran penentukuran
+**Paparan kemajuan 4 peringkat:**1.** Mengesan**- Mencari sasaran penentukuran
 2.**Menganalisis**- Memeriksa imej dan menyediakan saluran paip
 3.**Menentukur**- Memohon pembetulan vignette dan refleksi
-4.**Mengeksport**- Menyimpan fail yang diproses
-**Ciri Interaktif:***
-**Hover over ** Bar Progress untuk melihat panel 4-peringkat yang diperluas
+4.**Mengeksport**- Menyimpan fail yang diproses**Ciri Interaktif:***
+**Hover over** Bar Progress untuk melihat panel 4-peringkat yang diperluas
 * **Klik** Bar Kemajuan untuk membekukan/pin panel yang diperluaskan
 * **Klik Lagi** untuk Membongkar dan Mengumpulkan Auto pada Cuti Tetikus
 * Setiap peringkat menunjukkan kemajuan individu (0-100%)
 
-***
-
-## Memahami setiap peringkat pemprosesan
+***## Memahami setiap peringkat pemprosesan
 
 ### Peringkat 1: Mengesan (Pengesanan Sasaran)**Apa yang berlaku:**
 
@@ -83,21 +77,21 @@ Bagi pengguna dengan Lesen Chloros+:
 
 ### Peringkat 3: Menentukur
 
-**Apa yang berlaku:*** ** debayering**: Menukar corak bayer mentah ke 3 saluran
+**Apa yang berlaku:*** **debayering**: Menukar corak bayer mentah ke 3 saluran
 * **Pembetulan Vignette**: Mengeluarkan kelebihan lensa gelap
 * **Penentukuran Refleksi**: Menormalkan dengan nilai sasaran
 * **Pengiraan indeks**: pengkomputeran indeks multispektral
 * Memproses setiap gambar melalui saluran paip penuh
 
-**Tempoh:** Majoriti jumlah masa pemprosesan (60-80%)**Petunjuk Kemajuan:**
+**Tempoh:**Majoriti jumlah masa pemprosesan (60-80%)**Petunjuk Kemajuan:**
 
 * Menentukur: 0% → 100%
 * Imej semasa diproses
 * Imej selesai / jumlah gambar
 
-**Tingkah laku pemprosesan:*** ** mod percuma**: memproses satu imej pada satu masa secara berurutan
+**Tingkah laku pemprosesan:*** **mod percuma**: memproses satu imej pada satu masa secara berurutan
 * **CHLOROS+ MODE**: Proses sehingga 16 imej secara serentak
-* **Percepatan GPU**: Mempercepatkan tahap ini **Apa yang perlu ditonton:**
+* **Percepatan GPU**: Mempercepatkan tahap ini**Apa yang perlu ditonton:**
 
 * Kemajuan yang mantap melalui kiraan imej
 * Periksa log debug untuk mesej penyelesaian per-imej
@@ -124,9 +118,7 @@ Bagi pengguna dengan Lesen Chloros+:
 * Kesalahan menulis fail
 * Penyiapan semua output yang dikonfigurasikan
 
-***
-
-## Tab Log Debug
+***## Tab Log Debug
 
 Log debug memberikan maklumat terperinci mengenai kemajuan pemprosesan dan sebarang isu yang dihadapi.
 
@@ -158,9 +150,7 @@ Isu bukan kritikal yang tidak berhenti diproses:
 [WARN] Tiada data GPS yang terdapat di IMG_0145.RAW
 [WARN] Sasaran Timestamp Gap Target> 30 minit
 [WARN] Kontras rendah dalam panel penentukuran - Keputusan mungkin berbeza -beza
-```
-
-**Tindakan:** Kajian amaran selepas diproses, tetapi jangan mengganggu
+```**Tindakan:**Kajian amaran selepas diproses, tetapi jangan mengganggu
 
 #### Mesej ralat (merah)
 
@@ -170,7 +160,7 @@ Isu kritikal yang boleh menyebabkan pemprosesan gagal:
 [Ralat] tidak dapat menulis fail - cakera penuh
 [Ralat] Fail imej yang rosak: IMG_0299.RAW
 [Ralat] Tiada sasaran yang dikesan - Membolehkan penentukuran refleksi atau menandakan imej sasaran
-```**Tindakan:** berhenti memproses, menyelesaikan ralat, mulakan semula
+```**Tindakan:**berhenti memproses, menyelesaikan ralat, mulakan semula
 
 ### mesej log biasa
 
@@ -188,14 +178,13 @@ Isu kritikal yang boleh menyebabkan pemprosesan gagal:
 Untuk menyalin log untuk menyelesaikan masalah atau sokongan:
 
 1. Buka panel log debug
-2. Klik**"Log Salin"** Butang (atau klik kanan → Pilih Semua)
+2. Klik**"Log Salin"**Butang (atau klik kanan → Pilih Semua)
 3. Tampal ke dalam fail teks atau e -mel
 4. Hantar ke Sokongan Mapir jika diperlukan***
 
 ## Pemantauan Sumber Sistem
 
-### Penggunaan CPU
-**Mod Percuma:**
+### Penggunaan CPU**Mod Percuma:**
 
 * 1 teras CPU di \ ~ 100%
 * Teras lain terbiar atau tersedia
@@ -256,9 +245,7 @@ Apabila pecutan GPU didayakan:
 * Elakkan pemacu rangkaian untuk dataset besar
 * Pastikan cakera tidak dekat kapasiti (mempengaruhi kelajuan menulis)
 
-***
-
-## Mengesan masalah semasa pemprosesan
+***## Mengesan masalah semasa pemprosesan
 
 Tanda -tanda amaran ###**Gerai Kemajuan (tiada perubahan selama 5+ minit):**
 
@@ -288,15 +275,11 @@ Berhenti memproses jika anda melihat:
 * ❌ Menyedari tetapan yang salah dikonfigurasikan
 * ❌ Imej yang salah diimport
 
-**Cara Berhenti:**
-1. Klik** Butang Berhenti/Batal **(menggantikan butang Mula)
+**Cara Berhenti:**1. Klik** Butang Berhenti/Batal**(menggantikan butang Mula)
 2. Pemprosesan Halts, Kemajuan hilang
-3. Betulkan masalah dan mulakan semula dari awal***
+3. Betulkan masalah dan mulakan semula dari awal***## menyelesaikan masalah semasa pemprosesan
 
-## menyelesaikan masalah semasa pemprosesan
-
-### pemprosesan sangat perlahan
-**Kemungkinan Punca:**
+### pemprosesan sangat perlahan**Kemungkinan Punca:**
 
 * Imej sasaran yang tidak bertanda (mengimbas semua imej)
 * HDD bukannya storan SSD
@@ -304,29 +287,21 @@ Berhenti memproses jika anda melihat:
 * Banyak indeks yang dikonfigurasikan
 * Akses pemacu rangkaian
 
-**Penyelesaian:**
-
-1. Sekiranya baru bermula dan dalam mengesan peringkat: Batalkan, tandakan sasaran, mulakan semula
+**Penyelesaian:**1. Sekiranya baru bermula dan dalam mengesan peringkat: Batalkan, tandakan sasaran, mulakan semula
 2. Untuk Masa Depan: Gunakan SSD, Kurangkan Indeks, Meningkatkan Perkakasan
 3. Pertimbangkan CLI untuk pemprosesan kumpulan dataset besar
 
-### "ruang cakera" amaran**Penyelesaian:**
-
-1. Percuma ruang cakera segera
+### "ruang cakera" amaran**Penyelesaian:**1. Percuma ruang cakera segera
 2. Pindahkan projek untuk memandu dengan lebih banyak ruang
 3. Mengurangkan bilangan indeks untuk mengeksport
 4. Gunakan format jpg dan bukannya TIFF (fail yang lebih kecil)
 
-### Mesej "fail yang rosak" kerap**Penyelesaian:**
-
-1. Imej semula salinan dari kad SD untuk memastikan integriti
+### Mesej "fail yang rosak" kerap**Penyelesaian:**1. Imej semula salinan dari kad SD untuk memastikan integriti
 2. Ujian kad SD untuk kesilapan
 3. Keluarkan fail yang rosak dari projek
 4. Teruskan memproses gambar yang tinggal
 
-### sistem terlalu panas / pendikit**Penyelesaian:**
-
-1. Pastikan pengudaraan yang mencukupi
+### sistem terlalu panas / pendikit**Penyelesaian:**1. Pastikan pengudaraan yang mencukupi
 2. Debu bersih dari lubang komputer
 3. Kurangkan beban pemprosesan (gunakan mod percuma dan bukannya Chloros+)
 4. Proses semasa waktu sejuk***
@@ -340,9 +315,7 @@ Semasa pemprosesan selesai:
 * Butang mula diaktifkan lagi
 * Semua fail output berada dalam subfolder model kamera
 
-***
-
-## Langkah seterusnya
+***## Langkah seterusnya
 
 Setelah pemprosesan selesai:
 

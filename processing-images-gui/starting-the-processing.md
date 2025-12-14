@@ -14,9 +14,7 @@ Sebelum mengklik butang Mula, sahkan bahawa semuanya sudah siap:
 * [] **Format eksport dipilih**- Format output sesuai untuk aliran kerja anda
 
 {% hint style="info" %}**Petua**: Klik melalui beberapa imej dalam penyemak imbas fail untuk mengesahkannya dimuat dengan betul sebelum diproses.
-{% endhint %}
-
-***
+{% endhint %}***
 
 ## Memulakan pemprosesan
 
@@ -30,31 +28,24 @@ Butang Start/Play terletak di bar kepala kloros atas:
 
 ### Klik untuk memulakan
 
-1. Klik butang **Play/Start** di tajuk atas
+1. Klik butang **Play/Start**di tajuk atas
 2. Pemprosesan bermula dengan segera
 3. Butang menjadi dilumpuhkan (kelabu keluar) semasa pemprosesan
 4. Kemas kini bar kemajuan, menunjukkan status pemprosesan
 
-{% hint style="success" %}
-**Pemprosesan Bermula**: Setelah diklik, Chloros secara automatik mengendalikan semua langkah pemprosesan - pengesanan sasaran, debayering, penentukuran, pengiraan indeks, dan eksport.
-{% endhint %}
-
-***
-
-## Memahami mod pemprosesan
+{% hint style="success" %}**Pemprosesan Bermula**: Setelah diklik, Chloros secara automatik mengendalikan semua langkah pemprosesan - pengesanan sasaran, debayering, penentukuran, pengiraan indeks, dan eksport.
+{% endhint %}***## Memahami mod pemprosesan
 
 Chloros beroperasi dalam dua mod pemprosesan yang berbeza bergantung pada lesen anda:
 
-### mod percuma (pemprosesan berurutan)**Tersedia untuk semua pengguna ** **Bagaimana ia berfungsi:**
+### mod percuma (pemprosesan berurutan)**Tersedia untuk semua pengguna** **Bagaimana ia berfungsi:**
 
 * Memproses gambar satu demi satu, secara berurutan
 * Operasi Single-Threaded
 * Penggunaan memori yang lebih rendah
 
-**Bar Kemajuan menunjukkan 2 peringkat:**
-1.** Sasaran Mengesan**- Mengimbas sasaran penentukuran
-2.**Pemprosesan**- Memohon penentukuran dan mengeksport imej
-**Masa Pemprosesan:**
+**Bar Kemajuan menunjukkan 2 peringkat:**1.** Sasaran Mengesan**- Mengimbas sasaran penentukuran
+2.**Pemprosesan**- Memohon penentukuran dan mengeksport imej**Masa Pemprosesan:**
 
 * Jauh lebih perlahan daripada Chloros+ mod selari
 * Sesuai untuk dataset kecil dan sederhana (<200 gambar)
@@ -68,15 +59,13 @@ Chloros beroperasi dalam dua mod pemprosesan yang berbeza bergantung pada lesen 
 * Menggunakan teras CPU berganda
 * Percepatan GPU (CUDA) Pilihan dengan kad grafik NVIDIA
 
-**Bar Kemajuan menunjukkan 4 peringkat:**
-1.** Mengesan**- Mencari sasaran penentukuran
+**Bar Kemajuan menunjukkan 4 peringkat:**1.** Mengesan**- Mencari sasaran penentukuran
 2.**Menganalisis**- Memeriksa metadata imej dan menyediakan saluran paip
 3.**Menentukur**- Memohon pembetulan dan penentukuran
-4.**Mengeksport**- Menyimpan imej dan indeks yang diproses
-**Interaksi Bar Kemajuan:***
-**Hover Mouse ** Over Bar untuk melihat panel dropdown 4-peringkat terperinci
+4.**Mengeksport**- Menyimpan imej dan indeks yang diproses**Interaksi Bar Kemajuan:***
+**Hover Mouse** Over Bar untuk melihat panel dropdown 4-peringkat terperinci
 * **Klik** Bar Kemajuan untuk membekukan panel dropdown di tempatnya
-* **Klik Lagi**untuk Membuat dan Sembunyikan Panel **Masa Pemprosesan:**
+* **Klik Lagi**untuk Membuat dan Sembunyikan Panel**Masa Pemprosesan:**
 
 * Jauh lebih cepat daripada mod percuma
 * Skala dengan kiraan teras CPU
@@ -84,12 +73,9 @@ Chloros beroperasi dalam dua mod pemprosesan yang berbeza bergantung pada lesen 
 
 {% hint style="info" %}
 **Chloros+ Speed ​​**: Pemprosesan selari boleh menjadi 5-10x lebih cepat daripada mod berurutan untuk dataset besar. Projek 500-imej yang mengambil masa 2 jam dalam mod percuma boleh disiapkan dalam 15-20 minit dengan Chloros+.
-{% endhint %}***
+{% endhint %}***## Apa yang berlaku semasa pemprosesan
 
-## Apa yang berlaku semasa pemprosesan
-
-### Peringkat 1: Pengesanan Sasaran
-**Apa yang dilakukan oleh kloros:**
+### Peringkat 1: Pengesanan Sasaran**Apa yang dilakukan oleh kloros:**
 
 * Mengimbas imej sasaran yang ditandakan (atau semua imej jika tiada yang ditandakan)
 * Mengenal pasti 4 panel penentukuran dalam setiap sasaran
@@ -104,15 +90,15 @@ Chloros beroperasi dalam dua mod pemprosesan yang berbeza bergantung pada lesen 
 * Menggunakan algoritma demosage berkualiti tinggi
 * Mengekalkan kualiti dan perincian imej maksimum
 
-**Tempoh:** Berbeza dengan kiraan imej dan kelajuan CPU
+**Tempoh:**Berbeza dengan kiraan imej dan kelajuan CPU
 
 ### Peringkat 3: Penentukuran**Apa yang dilakukan oleh kloros:***
-**Pembetulan Vignette **: Mengeluarkan kanta gelap di tepi
+**Pembetulan Vignette**: Mengeluarkan kanta gelap di tepi
 * **Penentukuran Refleksi**: Menormalkan menggunakan nilai refleksi sasaran
 * Menggunakan pembetulan di semua kumpulan/saluran
 * Menggunakan sasaran penentukuran yang sesuai untuk setiap imej berdasarkan cap waktu
 
-**Tempoh:** majoriti masa pemprosesan
+**Tempoh:**majoriti masa pemprosesan
 
 ### Peringkat 4: Pengiraan Indeks**Apa yang dilakukan oleh kloros:**
 
@@ -120,7 +106,7 @@ Chloros beroperasi dalam dua mod pemprosesan yang berbeza bergantung pada lesen 
 * Menggunakan matematik band untuk imej yang dikalibrasi
 * Menjana imej indeks untuk setiap indeks yang dipilih
 
-**Tempoh:** Beberapa saat setiap gambar
+**Tempoh:**Beberapa saat setiap gambar
 
 ### Peringkat 5: Eksport**Apa yang dilakukan oleh kloros:**
 
@@ -129,7 +115,7 @@ Chloros beroperasi dalam dua mod pemprosesan yang berbeza bergantung pada lesen 
 * Menulis fail ke subfolder model kamera
 * Memelihara nama fail asal dengan akhiran
 
-**Tempoh:** Berbeza mengikut format eksport dan saiz fail***
+**Tempoh:**Berbeza mengikut format eksport dan saiz fail***
 
 ## Tingkah laku pemprosesan
 
@@ -160,15 +146,14 @@ Setelah bermula, keseluruhan saluran paip berjalan secara automatik:
 **Petua Prestasi**: Untuk prestasi Chloros+ terbaik, tutup aplikasi lain dan biarkan kloros menggunakan sumber sistem penuh.
 {% endhint %}
 
-### Pemprosesan tidak boleh dijeda
-**Batasan penting:**
+### Pemprosesan tidak boleh dijeda**Batasan penting:**
 
 * Sekali bermula, pemprosesan tidak boleh dijeda
 * Anda boleh membatalkan pemprosesan, tetapi kemajuan hilang
 * Keputusan separa tidak disimpan
 * Mesti dimulakan semula dari awal jika dibatalkan
 
-**Petua Perancangan:** Untuk projek yang sangat besar, pertimbangkan pemprosesan dalam kelompok atau menggunakan CLI untuk kawalan yang lebih baik.***
+**Petua Perancangan:**Untuk projek yang sangat besar, pertimbangkan pemprosesan dalam kelompok atau menggunakan CLI untuk kawalan yang lebih baik.***
 
 ## Memantau pemprosesan anda
 
@@ -179,17 +164,13 @@ Semasa pemprosesan berjalan, anda boleh:
 * **Tab Log Periksa** - Lihat mesej dan amaran pemprosesan terperinci
 * **Pratonton Imej Selesai**- Beberapa fail eksport mungkin muncul semasa pemprosesan
 
-Untuk maklumat terperinci mengenai pemantauan, lihat [Pemantauan Pemprosesan](Pemantauan-The-Processing.md).
-
-***
-
-## Membatalkan pemprosesan
+Untuk maklumat terperinci mengenai pemantauan, lihat [Pemantauan Pemprosesan](Pemantauan-The-Processing.md).***## Membatalkan pemprosesan
 
 Sekiranya anda perlu berhenti memproses:
 
 ### cara membatalkan
 
-1. Cari butang**Stop/Batal **(menggantikan butang Mula semasa pemprosesan)
+1. Cari butang**Stop/Batal**(menggantikan butang Mula semasa pemprosesan)
 2. Klik butang STOP
 3. Pemprosesan berhenti segera
 4. Keputusan separa dibuang
@@ -210,9 +191,7 @@ Sekiranya anda perlu berhenti memproses:
 
 {% hint style="warning" %}
 **Tiada hasil separa**: Membatalkan membuang semua kemajuan. Chloros tidak menyimpan imej yang diproses sebahagiannya.
-{% endhint %}
-
-***
+{% endhint %}***
 
 ## anggaran masa pemprosesan
 
@@ -239,11 +218,7 @@ Masa pemprosesan sebenar sangat berbeza berdasarkan:
 
 {% hint style="info" %}
 **Run First**: Pemprosesan awal mungkin mengambil masa lebih lama apabila Chloros membina cache dan profil. Pemprosesan data yang sama akan lebih cepat.
-{% endhint %}
-
-***
-
-## masalah biasa pada permulaan
+{% endhint %}***## masalah biasa pada permulaan
 
 ### Butang Mula dilumpuhkan (kelabu keluar)**Kemungkinan Punca:**
 
@@ -252,9 +227,7 @@ Masa pemprosesan sebenar sangat berbeza berdasarkan:
 * Pemprosesan sebelumnya masih berjalan
 * Projek tidak dimuat sepenuhnya
 
-**Penyelesaian:**
-
-1. Tunggu backend untuk memulakan sepenuhnya (periksa ikon menu utama)
+**Penyelesaian:**1. Tunggu backend untuk memulakan sepenuhnya (periksa ikon menu utama)
 2. Sahkan imej diimport dalam penyemak imbas fail
 3. Mulakan semula kloros jika butang kekal dilumpuhkan
 4. Periksa log debug untuk mesej ralat
@@ -266,9 +239,7 @@ Pemprosesan ### bermula kemudian segera gagal**Kemungkinan Punca:**
 * Ruang cakera yang tidak mencukupi
 * Memori yang tidak mencukupi (RAM)
 
-**Penyelesaian:**
-
-1. Periksa log debug <img src="../. Gitbook/assets/icon_log.jpg" alt="" data-size="line"> untuk mesej ralat
+**Penyelesaian:**1. Periksa log debug <img src="../. Gitbook/assets/icon_log.jpg" alt="" data-size="line"> untuk mesej ralat
 2. Sahkan ruang cakera ada
 3. Cuba memproses subset kecil gambar
 4. Sahkan imej tidak rosak
@@ -279,9 +250,7 @@ Pemprosesan ### bermula kemudian segera gagal**Kemungkinan Punca:**
 * Imej sasaran tidak mengandungi sasaran yang kelihatan
 * Tetapan pengesanan sasaran terlalu ketat
 
-**Penyelesaian:**
-
-1. Ulasan [memilih imej sasaran](memilih-sasaran-imej.md)
+**Penyelesaian:**1. Ulasan [memilih imej sasaran](memilih-sasaran-imej.md)
 2. Tandakan gambar yang sesuai dalam lajur sasaran
 3. Sahkan sasaran dapat dilihat dalam imej yang ditandakan
 4. Laraskan tetapan pengesanan sasaran jika diperlukan***
@@ -310,9 +279,7 @@ Jika menggunakan pecutan GPU NVIDIA:
 1. Kemas kini pemacu Nvidia ke versi terkini
 2. Pastikan GPU mempunyai 4GB+ VRAM
 3. Tutup aplikasi intensif GPU (permainan, penyuntingan video)
-4. Memantau suhu GPU (pastikan penyejukan yang mencukupi)***
-
-## Langkah seterusnya
+4. Memantau suhu GPU (pastikan penyejukan yang mencukupi)***## Langkah seterusnya
 
 Setelah pemprosesan telah bermula:
 

@@ -16,11 +16,11 @@
 
 | Keperluan          | Perincian                                                             |
 | -------------------- | ------------------------------------------------------------------- |
-| **sistem operasi** | Windows 10/11 (64-bit)                                              |
-| **Lesen** | Chloros+ ([paid plan required](https://cloud.mapir.camera/pricing)) |
-| **Memori** | Minimum RAM 8GB (16GB disyorkan)                                  |
-| **Internet** | Diperlukan untuk pengaktifan lesen                                     |
-| **ruang cakera** | Berbeza mengikut saiz projek                                              |
+|**sistem operasi**| Windows 10/11 (64-bit)                                              |
+|**Lesen**| Chloros+ ([paid plan required](https://cloud.mapir.camera/pricing)) |
+|**Memori**| Minimum RAM 8GB (16GB disyorkan)                                  |
+|**Internet**| Diperlukan untuk pengaktifan lesen                                     |
+|**ruang cakera**| Berbeza mengikut saiz projek                                              |
 
 {% hint style="warning" %}**Keperluan Lesen**: CLI memerlukan langganan Chloros+ yang dibayar. Pelan standard (percuma) tidak mempunyai akses CLI. Lawati [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) untuk menaik taraf.
 {% endhint %}
@@ -31,8 +31,7 @@
 
 CLI secara automatik disertakan dengan pemasang kloros:
 
-1. Muat turun dan jalankan **chloros installer.exe**
-2. Lengkapkan Wizard Pemasangan
+1. Muat turun dan jalankan**chloros installer.exe**2. Lengkapkan Wizard Pemasangan
 3. CLI dipasang ke:`C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
 {% hint style="success" %}
@@ -103,9 +102,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
 {% hint style="warning" %}**Watak Khas**: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti`$`, `!`, atau ruang.
-{% endhint %}
-
-**Output:**<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***### `logout` - Clear Credentials
+{% endhint %}**Output:**<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***### `logout` - Clear Credentials
 
 Kosongkan kelayakan tersimpan dan logout dari akaun anda.**Sintaks:**```bash
 chloros-cli logout
@@ -204,9 +201,7 @@ chloros-cli language ja
 | `sl`    | Slovenia             | Slovenščina      |
 
 {% hint style="success" %}**Kegigihan Automatik**: Keutamaan bahasa anda disimpan`~/.chloros/cli_language.json`dan berterusan di semua sesi.
-{% endhint %}
-
-***### `set-project-folder` - Set Default Project Folder
+{% endhint %}***### `set-project-folder` - Set Default Project Folder
 
 Tukar lokasi folder projek lalai (dikongsi dengan GUI).**Sintaks:**```bash
 chloros-cli set-project-folder <folder-path>
@@ -240,22 +235,22 @@ chloros-cli --port 5001 process "C:\Datasets\Survey_001"
 
 ### Pemprosesan selari
 
-Chloros+ cli**skala secara automatik **pemprosesan selari untuk memadankan keupayaan komputer anda:**Bagaimana ia berfungsi:**
+Chloros+ cli**skala secara automatik**pemprosesan selari untuk memadankan keupayaan komputer anda:**Bagaimana ia berfungsi:**
 
 * Mengesan teras dan RAM CPU anda
 * Peruntukan Pekerja: **2 × CPU teras** (menggunakan hyperthreading)
- * **Maksimum: 16 pekerja selari**(untuk kestabilan)**Tier sistem:** | Jenis Sistem   | Cpu        | Ram      | Pekerja  | Prestasi     |
+ * **Maksimum: 16 pekerja selari**(untuk kestabilan)**Tier sistem:**| Jenis Sistem   | Cpu        | Ram      | Pekerja  | Prestasi     |
 | ------------- | ---------- | -------- | -------- | --------------- |
-|**High-end ** | 16+ teras  | 32+ GB   | Sehingga 16 | Kelajuan maksimum   |
-|**jarak pertengahan ** | 8-15 teras | 16-31 GB | 8-16     | Kelajuan yang sangat baik |
-|**Low-end ** | 4-7 teras  | 8-15 GB  | 4-8      | Kelajuan yang baik      |
+|**High-end**| 16+ teras  | 32+ GB   | Sehingga 16 | Kelajuan maksimum   |
+|**jarak pertengahan**| 8-15 teras | 16-31 GB | 8-16     | Kelajuan yang sangat baik |
+|**Low-end**| 4-7 teras  | 8-15 GB  | 4-8      | Kelajuan yang baik      |
 
 {% hint style="success" %}**Pengoptimuman automatik**: CLI secara automatik mengesan spesifikasi sistem anda dan mengkonfigurasi pemprosesan selari yang optimum. Tiada konfigurasi manual diperlukan!
 {% endhint %}
 
 ### Kaedah debayer
 
-CLI menggunakan **berkualiti tinggi (lebih cepat)**sebagai algoritma debayer lalai dan disyorkan:
+CLI menggunakan**berkualiti tinggi (lebih cepat)**sebagai algoritma debayer lalai dan disyorkan:
 
 | Kaedah                      | Kualiti | Kelajuan | Penerangan                                 |
 | --------------------------- | ------- | --- | ----------------------------------------------- |
@@ -282,7 +277,7 @@ Menukar nilai sensor mentah ke peratusan refleksi standard menggunakan panel pen
 **Keperluan**: Pastikan panel penentukuran terdedah dengan betul dan dapat dilihat dalam imej anda untuk penukaran refleksi yang tepat.
 {% endhint %}
 
-### Pembetulan PPK **Apa yang berlaku:** Applies Post-Processed Kinematic corrections using DAQ-A-SD log data for improved GPS accuracy.
+### Pembetulan PPK**Apa yang berlaku:** Applies Post-Processed Kinematic corrections using DAQ-A-SD log data for improved GPS accuracy.
 
 * **dilumpuhkan secara lalai**
 * Gunakan`--ppk`untuk membolehkan
@@ -433,7 +428,7 @@ if __name__ == '__main__':
 ### Aliran kerja standard
 
 1.**Input**: folder yang mengandungi pasangan gambar mentah/jpg
-2. **Discovery**: CLI Auto-Scan untuk fail imej yang disokong
+2.**Discovery**: CLI Auto-Scan untuk fail imej yang disokong
 3.**Pemprosesan**: Skala mod selari ke teras CPU anda (chloros+)
 4.**output**: Membuat subfolder model kamera dengan imej yang diproses
 
@@ -456,8 +451,8 @@ Masa pemprosesan biasa untuk 100 imej (12MP setiap satu):
 
 | Mod              | Masa      | Perkakasan                                     |
 | ----------------- | --------- | ------------------------------------------------ |
-| **mod selari** | 5-10 min  | I7/Ryzen 7, 16GB RAM, SSD (sehingga 16 pekerja) |
-| **mod selari** | 10-15 min | I5/Ryzen 5, 8GB RAM, HDD (sehingga 8 pekerja)   |
+|**mod selari**| 5-10 min  | I7/Ryzen 7, 16GB RAM, SSD (sehingga 16 pekerja) |
+|**mod selari**| 10-15 min | I5/Ryzen 5, 8GB RAM, HDD (sehingga 8 pekerja)   |
 
 {% hint style="info" %}**Petua Prestasi**: Masa pemprosesan berbeza -beza berdasarkan kiraan imej, resolusi, dan spesifikasi komputer.
 {% endhint %}***## Penyelesaian masalah
@@ -486,8 +481,7 @@ dir "C:\Program Files\Chloros\resources\cli\chloros-cli.exe"
 
 ***### Backend gagal bermula**Ralat:**```
 Backend failed to start within 30 seconds
-```**Penyelesaian:**
-1. Periksa sama ada backend sudah berjalan (tutup terlebih dahulu)
+```**Penyelesaian:**1. Periksa sama ada backend sudah berjalan (tutup terlebih dahulu)
 2. Periksa Windows Firewall tidak menyekat
 3. Cuba port yang berbeza:
 
@@ -501,8 +495,7 @@ chloros-cli --port 5001 process "C:\Datasets\Field_A"
 chloros-cli --restart process "C:\Datasets\Field_A"
 ```***### Isu lesen / pengesahan**Ralat:**```
 Chloros+ license required for CLI access
-```**Penyelesaian:**
-1. Sahkan anda mempunyai langganan kloros+ aktif
+```**Penyelesaian:**1. Sahkan anda mempunyai langganan kloros+ aktif
 2. Log masuk dengan kelayakan anda:
 
 ```powershell
@@ -515,14 +508,12 @@ chloros-cli login user@example.com 'password'
 chloros-cli status
 ```
 
-4. Sokongan Hubungi: info@mapir.camera***### Tiada imej yang dijumpai **Ralat:**```
+4. Sokongan Hubungi: info@mapir.camera***### Tiada imej yang dijumpai**Ralat:**```
 No images found in the specified folder
-```**Penyelesaian:**
-1. Sahkan folder mengandungi format yang disokong (.raw, .tif, .jpg)
+```**Penyelesaian:**1. Sahkan folder mengandungi format yang disokong (.raw, .tif, .jpg)
 2. Semak laluan folder betul (gunakan petikan untuk laluan dengan ruang)
 3. Pastikan anda membaca kebenaran untuk folder
-4. Semak sambungan fail betul***### Memproses gerai atau hang **Penyelesaian:**
-1. Semak ruang cakera yang ada (pastikan cukup untuk output)
+4. Semak sambungan fail betul***### Memproses gerai atau hang**Penyelesaian:**1. Semak ruang cakera yang ada (pastikan cukup untuk output)
 2. Tutup aplikasi lain untuk memori percuma
 3. Kurangkan kiraan gambar (proses dalam kelompok)***### Pelabuhan sudah digunakan**Ralat:**```
 Port 5000 is already in use
@@ -532,7 +523,7 @@ Port 5000 is already in use
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
 ```***## Soalan Lazim
 
-### S: Adakah saya memerlukan lesen untuk CLI?**A:**Yes! The CLI requires a paid**Chloros+ license **.
+### S: Adakah saya memerlukan lesen untuk CLI?**A:**Yes! The CLI requires a paid**Chloros+ license**.
 
 * ❌ Pelan standard (percuma): CLI dilumpuhkan
 * ✅ chloros+ (dibayar) rancangan: CLI diaktifkan sepenuhnya
@@ -546,7 +537,7 @@ Langgan di: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pric
 * RAM yang mencukupi (minimum 8GB, 16GB disyorkan)
 * Pengaktifan lesen GUI satu kali di mana-mana mesin
 
-***### S: Di manakah imej diproses disimpan?**A:**By default, processed images are saved in the**same folder as input **in camera-model subfolders (e.g., `Survey3N_RGN/`).
+***### S: Di manakah imej diproses disimpan?**A:**By default, processed images are saved in the**same folder as input**in camera-model subfolders (e.g., `Survey3N_RGN/`).
 
 Gunakan`-o`Pilihan untuk menentukan folder output yang berbeza:
 
@@ -586,7 +577,7 @@ chloros-cli language --help
 
 ### Saluran sokongan
 
-* **E -mel**: info@mapir.camera ***laman web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)***harga**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)***## Contoh lengkap
+* **E -mel**: info@mapir.camera***laman web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)***harga**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)***## Contoh lengkap
 
 ### Contoh 1: Pemprosesan Asas
 

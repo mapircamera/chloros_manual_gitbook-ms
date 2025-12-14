@@ -74,9 +74,7 @@ $$
 
 _Reference: Pinty, B., dan M. Verstraete. GEMI: Indeks bukan linear untuk memantau tumbuh-tumbuhan global dari satelit. Vegetation 101 (1992): 15-20._
 
-***
-
-## gari - indeks tahan atmosfera hijau
+***## gari - indeks tahan atmosfera hijau
 
 Indeks ini lebih sensitif terhadap pelbagai kepekatan klorofil dan kurang sensitif terhadap kesan atmosfera daripada NDVI.
 
@@ -98,9 +96,7 @@ $$
 
 Mempunyai panjang NIR dan panjang gelombang hijau memberikan ramalan yang lebih baik mengenai kandungan klorofil sambil membolehkan lebih banyak kepekaan dan nisbah isyarat-ke-bunyi yang lebih tinggi.
 
-_Reference: Gitelson, A., Y. Gritz, dan M. Merzlyak. "Hubungan antara kandungan klorofil daun dan pemantulan spektrum dan algoritma untuk penilaian klorofil yang tidak merosakkan di daun tumbuhan yang lebih tinggi." Jurnal Fisiologi Loji 160 (2003): 271-282._
-
-***
+_Reference: Gitelson, A., Y. Gritz, dan M. Merzlyak. "Hubungan antara kandungan klorofil daun dan pemantulan spektrum dan algoritma untuk penilaian klorofil yang tidak merosakkan di daun tumbuhan yang lebih tinggi." Jurnal Fisiologi Loji 160 (2003): 271-282._***
 
 ## GLI - Indeks daun hijau
 
@@ -114,9 +110,7 @@ Nilai GLI berkisar dari -1 hingga +1. Nilai negatif mewakili ciri tanah dan tida
 
 _Reference: Loaichi, M., M. Borman, dan D. Johnson. "Platform spasial dan fotografi udara untuk dokumentasi kesan ragut pada gandum." Geocarto International 16, No. 1 (2001): 65-70._
 
-***
-
-## GNDVI - Indeks Vegetasi Perbezaan Normal Perbezaan Hijau
+***## GNDVI - Indeks Vegetasi Perbezaan Normal Perbezaan Hijau
 
 Indeks ini sama dengan NDVI kecuali ia mengukur spektrum hijau dari 540 hingga 570 nm dan bukannya spektrum merah. Indeks ini lebih sensitif terhadap kepekatan klorofil daripada NDVI.
 
@@ -134,11 +128,7 @@ $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
 $$
 
-_Reference: Sripada, R., et al. "Menentukan Keperluan Nitrogen Dalam Musim Untuk Jagung Menggunakan Fotografi Inframerah Warna Udara." Ph.D. Disertasi, North Carolina State University, 2005._
-
-***
-
-## GRVI - Indeks Vegetasi Nisbah Hijau
+_Reference: Sripada, R., et al. "Menentukan Keperluan Nitrogen Dalam Musim Untuk Jagung Menggunakan Fotografi Inframerah Warna Udara." Ph.D. Disertasi, North Carolina State University, 2005._***## GRVI - Indeks Vegetasi Nisbah Hijau
 
 Indeks ini sensitif terhadap kadar fotosintesis di kanopi hutan, kerana refleksi hijau dan merah sangat dipengaruhi oleh perubahan pigmen daun.
 
@@ -178,9 +168,7 @@ Nilai LAI yang tinggi biasanya berkisar dari kira -kira 0 hingga 3.5. Walau baga
 
 _Reference: Boegh, E., H. Soegaard, N. Broge, C. Hasager, N. Jensen, K. Schelde, dan A. Thomsen. "Data pelbagai spektrum udara untuk mengukur indeks kawasan daun, kepekatan nitrogen dan kecekapan fotosintesis dalam bidang pertanian." Pengesan Alam Sekitar Jauh 81, no. 2-3 (2002): 179-193._
 
-***
-
-## LCI - Indeks klorofil daun
+***## LCI - Indeks klorofil daun
 
 Indeks ini digunakan untuk menganggarkan kandungan klorofil dalam tumbuhan yang lebih tinggi, sensitif terhadap variasi dalam refleksi yang disebabkan oleh penyerapan klorofil.
 
@@ -212,9 +200,7 @@ $$
 
 _Reference: Qi, J., A. Chehbouni, A. Huete, Y. Kerr, dan S. Sorooshian. "Indeks Vegetasi Larasan Tanah yang Diubahsuai." Pengesan Alam Sekitar Jauh 48 (1994): 119-126._
 
-***
-
-## ndre- perbezaan normal rededge
+***## ndre- perbezaan normal rededge
 
 Indeks ini sama dengan NDVI tetapi membandingkan perbezaan antara NIR dengan Rededge dan bukannya merah, yang sering mengesan tekanan tumbuh -tumbuhan lebih awal.
 
@@ -232,9 +218,7 @@ $$
 
 Nilai indeks ini berkisar antara -1 hingga 1. Julat umum untuk tumbuh -tumbuhan hijau adalah 0.2 hingga 0.8.
 
-_Reference: Rouse, J., R. Haas, J. Schell, dan D. Deering. Memantau sistem tumbuh -tumbuhan di dataran besar dengan ERTs. Simposium ERTS Ketiga, NASA (1973): 309-317._***
-
-## NLI - Indeks bukan linear
+_Reference: Rouse, J., R. Haas, J. Schell, dan D. Deering. Memantau sistem tumbuh -tumbuhan di dataran besar dengan ERTs. Simposium ERTS Ketiga, NASA (1973): 309-317._***## NLI - Indeks bukan linear
 
 Indeks ini mengandaikan bahawa hubungan antara indeks tumbuh-tumbuhan dan parameter biophysical permukaan tidak linear. Ia menyala hubungan dengan parameter permukaan yang cenderung tidak linear.
 
@@ -242,7 +226,7 @@ $$
 NLI = {NIR^{2} - Red \over NIR^{2} + Red  }
 $$
 
-_Reference: Goel, N., dan W. Qin. "Pengaruh seni bina kanopi mengenai hubungan antara pelbagai indeks tumbuh -tumbuhan dan LAI dan FPAR: simulasi komputer." Ulasan Penginderaan Jauh 10 (1994): 309-347._ ***
+_Reference: Goel, N., dan W. Qin. "Pengaruh seni bina kanopi mengenai hubungan antara pelbagai indeks tumbuh -tumbuhan dan LAI dan FPAR: simulasi komputer." Ulasan Penginderaan Jauh 10 (1994): 309-347._***
 
 ## OSAVI - Indeks tumbuh -tumbuhan yang diselaraskan tanah yang dioptimumkan
 
@@ -252,9 +236,7 @@ $$
 OSAVI = {(NIR - Red) \over (NIR + Red + 0.16)  }
 $$
 
-_Reference: Rondeaux, G., M. Steven, dan F. Baret. "Pengoptimuman indeks tumbuh-tumbuhan yang disesuaikan dengan tanah." Pengesan Alam Sekitar Jauh 55 (1996): 95-107._***
-
-## RDVI - Indeks Vegetasi Perbezaan Renormalized
+_Reference: Rondeaux, G., M. Steven, dan F. Baret. "Pengoptimuman indeks tumbuh-tumbuhan yang disesuaikan dengan tanah." Pengesan Alam Sekitar Jauh 55 (1996): 95-107._***## RDVI - Indeks Vegetasi Perbezaan Renormalized
 
 Indeks ini menggunakan perbezaan antara panjang gelombang inframerah dan merah, bersama-sama dengan NDVI, untuk menyerlahkan tumbuh-tumbuhan yang sihat. Ia tidak sensitif terhadap kesan tanah dan matahari melihat geometri.
 
@@ -262,7 +244,7 @@ $$
 RDVI = {(NIR- Red) \over \sqrt{(NIR + Red)}  }
 $$
 
-_Reference: Roujean, J., dan F. Breon. "Menganggarkan par yang diserap oleh tumbuh -tumbuhan dari pengukuran refleksi dua arah." Pengesan Alam Sekitar Jauh 51 (1995): 375-384._ ***
+_Reference: Roujean, J., dan F. Breon. "Menganggarkan par yang diserap oleh tumbuh -tumbuhan dari pengukuran refleksi dua arah." Pengesan Alam Sekitar Jauh 51 (1995): 375-384._***
 
 ## Savi - Indeks tumbuh -tumbuhan yang diselaraskan tanah
 
@@ -286,9 +268,7 @@ $$
 
 _Reference: Bannari, A., H. Asalhi, dan P. Teillet. "Indeks Vegetasi Perbezaan yang Diubah (TDVI) untuk Pemetaan Perlindungan Vegetasi" dalam Prosiding Geosains dan Simposium Penginderaan Jauh, Igarss '02, IEEE International, Jilid 5 (2002) ._
 
-***
-
-## Vari - Indeks tahan atmosfera yang kelihatan
+***## Vari - Indeks tahan atmosfera yang kelihatan
 
 Indeks ini didasarkan pada ARVI dan digunakan untuk menganggarkan pecahan tumbuh -tumbuhan di tempat kejadian dengan kepekaan yang rendah terhadap kesan atmosfera.
 

@@ -12,19 +12,14 @@ Apabila log masuk butiran akaun anda akan ditunjukkan:
 
 Log masuk dengan kelayakan Chloros+ anda untuk membolehkan pemprosesan CLI.
 
-**Sintaks:**
-
-```bash
+**Sintaks:**```bash
 chloros-cli login <email> <password>
-```**Contoh:**
-
-```powershell
+```**Contoh:**```powershell
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
 {% hint style="warning" %}**Watak Khas**: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti `$`, `!`, Atau ruang.
-{% endhint %}
-**output:**
+{% endhint %}**output:**
 
 <figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
 
