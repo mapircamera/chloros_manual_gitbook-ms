@@ -88,7 +88,7 @@ Chloros beroperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 * Skala dengan kiraan teras CPU
 * Pecutan GPU meningkatkan lagi kelajuan
 
-{% gaya pembayang="info" %}
+{% hint style="info" %}
 **Chloros+ Speed**: Pemprosesan selari boleh 5-10x lebih pantas daripada mod berjujukan untuk set data yang besar. Projek 500 imej yang mengambil masa 2 jam dalam mod percuma mungkin selesai dalam 15-20 minit dengan Chloros+.
 Petua {% %}
 

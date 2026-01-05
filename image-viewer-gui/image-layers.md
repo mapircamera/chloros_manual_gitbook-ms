@@ -50,7 +50,7 @@ Dalam Chloros, **lapisan** merujuk kepada output imej berbeza yang tersedia untu
 * Menyemak kualiti imej sasaran
 * Menyelesaikan masalah penentukuran
 
-{% gaya petunjuk="info" %}
+{% hint style="info" %}
 **Lapisan Sasaran**: Lapisan ini hanya muncul dalam lungsur turun untuk imej yang mengandungi sasaran penentukuran. Imej tangkapan biasa tidak akan mempunyai pilihan ini.
 Petua {% %}
 

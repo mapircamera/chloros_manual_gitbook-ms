@@ -161,7 +161,7 @@ chloros-cli logout
 ℹ Credentials cleared from cache
 ```
 
-{% gaya pembayang="info" %}
+{% hint style="info" %}
 **Pengguna SDK**: Python SDK juga menyediakan kaedah `logout()` terprogram untuk mengosongkan bukti kelayakan dalam skrip Python. Lihat dokumentasi [Python SDK](api-python-sdk.md#logout) untuk butiran.
 Petua {% %}
 
@@ -605,7 +605,7 @@ Masa pemprosesan biasa untuk 100 imej (12MP setiap satu):
 | **Mod Selari** | 5-10 min | i7/Ryzen 7, 16GB RAM, SSD (sehingga 16 pekerja) |
 | **Mod Selari** | 10-15 min | i5/Ryzen 5, 8GB RAM, HDD (sehingga 8 pekerja) |
 
-{% gaya petunjuk="info" %}
+{% hint style="info" %}
 **Petua Prestasi**: Masa pemprosesan berbeza-beza berdasarkan kiraan imej, peleraian dan spesifikasi komputer.
 Petua {% %}
 

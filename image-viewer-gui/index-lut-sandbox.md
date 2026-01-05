@@ -176,7 +176,7 @@ Petua {% %}
 3. Taip nilai minimum yang dikehendaki (cth., `0.2`)
 4. Tekan **Enter** atau klik di luar medan
 5. Ulang untuk medan **Nilai Maks** (cth., `0.9`)
-6. Visualisasi **kemas kini serta-merta**{% gaya pembayang="info" %}**Penskalaan Auto**: Apabila anda mula-mula menggunakan LUT, Chloros secara automatik menetapkan min/maks kepada julat data sebenar dalam imej. Anda kemudiannya boleh mengecilkan julat ini untuk memfokuskan pada julat nilai minat tertentu.
+6. Visualisasi **kemas kini serta-merta**{% hint style="info" %}**Penskalaan Auto**: Apabila anda mula-mula menggunakan LUT, Chloros secara automatik menetapkan min/maks kepada julat data sebenar dalam imej. Anda kemudiannya boleh mengecilkan julat ini untuk memfokuskan pada julat nilai minat tertentu.
 Petua {% %}
 
 **Contoh pelarasan julat NDVI:*** **Julat penuh**: `-1.0` hingga `1.0` (tunjukkan semua nilai yang mungkin)
@@ -253,7 +253,7 @@ Untuk kawalan penuh ke atas visualisasi anda, anda boleh mencipta **kecerunan wa
 * **Pengoptimuman cetakan**: Pilih warna yang berfungsi dalam kedua-dua percetakan warna dan skala kelabu
 * **Berbilang ambang**: Gunakan warna yang berbeza pada ambang nilai tertentu untuk pengelasan
 
-{% gaya petunjuk="info" %}
+{% hint style="info" %}
 **Menyimpan Kecerunan Tersuai**: Kecerunan tersuai boleh disimpan dan digunakan semula. Klik ikon simpan dalam panel LUT untuk mengekalkan skema warna tersuai anda untuk kegunaan masa hadapan.
 Petua {% %}
 
@@ -307,7 +307,7 @@ Memahami nilai piksel sebenar adalah penting untuk menetapkan julat LUT yang ber
 * **Keratan**: "Latar Belakang Asal" untuk melihat tanah dalam warna semula jadi
 * **Hasil**: Kecerunan warna hanya digunakan pada tumbuh-tumbuhan, tanah ditunjukkan sebagai imej asal
 
-{% gaya pembayang="info" %}
+{% hint style="info" %}
 **Julat Dinamik**: Tanaman, musim dan peringkat pertumbuhan yang berbeza akan mempunyai julat nilai yang berbeza. Sentiasa periksa nilai piksel dalam set data khusus anda sebelum menetapkan julat LUT.
 Petua {% %}
 
@@ -317,7 +317,7 @@ Petua {% %}
 
 ### Mencipta Formula Indeks Tersuai
 
-{% gaya petunjuk="info" %}
+{% hint style="info" %}
 **Tempat Buat**: Indeks tersuai boleh dikonfigurasikan dalam**Tetapan Projek** sebelum diproses, serta dalam bar sisi kotak pasir Pemapar Imej.
 Petua {% %}
 

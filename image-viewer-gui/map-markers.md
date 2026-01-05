@@ -9,7 +9,7 @@ Tab Peta memaparkan imej anda pada peta 2D interaktif berdasarkan koordinat GPS 
 3. Klik tab **Map** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tab di bar sisi kiri
 4. Peta akan memaparkan penanda pada setiap lokasi GPS imej
 
-{% gaya petunjuk="info" %}
+{% hint style="info" %}
 **GPS Diperlukan**: Hanya imej dengan koordinat GPS terbenam dalam metadata EXIF ​​mereka akan muncul pada peta. Pastikan kamera anda mendayakan GPS semasa tangkapan.
 Petua {% %}
 
@@ -36,7 +36,7 @@ Tab **Map**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> 
 
 * Ketinggian imej
 
-{% gaya pembayang="info" %}
+{% hint style="info" %}
 Mengklik pengepala lajur jadual juga mengisih data baris
 Petua {% %}
 
@@ -88,7 +88,7 @@ Tab Peta menyokong dua pembekal jubin untuk imejan peta latar belakang:
 
 Anda boleh memilih jenis lapisan peta (dari kiri ke kanan):
 
-&#x20;<img src="../.gitbook/assets/image (23).png" alt="" data-size="original">
+&#x20;<img src="../.gitbook/assets/image (23).png" alt="" data-size="line">
 
 ### Rupa bumi
 

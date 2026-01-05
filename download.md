@@ -20,7 +20,7 @@ Muat turun versi terkini Chloros untuk bermula dengan pemprosesan imej berbilang
 | **Paparan** | 1920x1080 | 2560x1440 atau lebih tinggi |
 | **Internet** | Diperlukan untuk pengaktifan lesen | Diperlukan untuk pengaktifan lesen |
 
-{% gaya petunjuk="info" %}
+{% hint style="info" %}
 **Pecutan GPU**: Pengguna Chloros+ dengan GPU NVIDIA (4GB+ VRAM) boleh menggunakan pecutan CUDA untuk pemprosesan yang jauh lebih pantas. Pengguna Chloros+ juga mendapat pemprosesan berbilang benang untuk kelajuan maksimum.
 Petua {% %}
 

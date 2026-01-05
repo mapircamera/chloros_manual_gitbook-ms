@@ -36,7 +36,7 @@ Pasang melalui pip:
 pip install chloros-sdk
 ```
 
-{% gaya pembayang="info" %}
+{% hint style="info" %}
 **Persediaan Kali Pertama**: Sebelum menggunakan SDK, aktifkan lesen Chloros+ anda dengan membuka Chloros, Chloros (Pelayar) atau Chloros XPROTX000232 dalam log masuk dengan cPROTX00232 anda. Ini hanya perlu dilakukan sekali sahaja.
 Petua {% %}
 
@@ -135,7 +135,7 @@ SDK menggunakan lesen yang sama seperti Chloros, Chloros (Pelayar) dan Chloros C
 **Sediaan Satu Kali**: Selepas log masuk melalui GUI atau CLI, SDK secara automatik menggunakan lesen cache. Tiada pengesahan tambahan diperlukan!
 Petua {% %}
 
-{% gaya pembayang="info" %}
+{% hint style="info" %}
 **Log Keluar**: Pengguna SDK boleh mengosongkan bukti kelayakan cache secara pemrograman menggunakan kaedah `logout()`. Lihat [kaedah log keluar()](#logout) dalam Rujukan API.
 Petua {% %}
 
@@ -402,7 +402,7 @@ print(f"Logout successful: {result}")
 # After logout, login required via GUI/CLI/Browser before next SDK use
 ```
 
-{% gaya petunjuk="info" %}
+{% hint style="info" %}
 **Pengesahan Semula Diperlukan**: Selepas memanggil `logout()`, anda mesti log masuk semula melalui Chloros, Chloros (Pelayar) atau Chloros CLI sebelum menggunakan CLI.256XPROTX.
 Petua {% %}
 
