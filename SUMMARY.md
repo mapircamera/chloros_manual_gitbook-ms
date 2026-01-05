@@ -1,34 +1,36 @@
 # Jadual kandungan
 
 * [Bermula](README.md)
-* [GUI: navigasi](navigation.md)
-* [GUI: Projek](projects.md)
-* [CLI: baris arahan](CLI.md)
-* [API: Python SDK](api-python-sdk.md)
-* [Kamera yang disokong](supported-cameras.md)
-* [Format imej output](output-image-formats.md)
-* [Chloros+ login](chloros+-login.md)
-* [Sasaran penentukuran](calibration-targets.md)
-* [Bahasa yang disokong](supported-languages.md)
-* [Muat turun](download.md)
-* [FAQ](faq.md)
+* [GUI : Navigasi](navigation.md)
+* [GUI : Projek](projects.md)
+* [CLI : Baris Perintah](CLI.md)
+* [API : Python SDK](api-python-sdk.md)
+* [Kamera Disokong](supported-cameras.md)
+* [Format Imej Output](output-image-formats.md)
+* [Log Masuk Chloros+](chloros+-login.md)
+* [Sasaran Penentukuran](calibration-targets.md)
+* [Bahasa yang Disokong](supported-languages.md)
+* [Muat Turun](download.md)
+* [Soalan Lazim](faq.md)
 
-## Imej Pemprosesan (GUI)
+## Memproses Imej (GUI)
 
-* [Menyesuaikan tetapan projek](processing-images-gui/adjusting-project-settings.md)
-* [Menambah fail ke projek](processing-images-gui/adding-files-to-a-project.md)
+* [Melaraskan Tetapan Projek](processing-images-gui/adjusting-project-settings.md)
+* [Menambah Fail pada Projek](processing-images-gui/adding-files-to-a-project.md)
 * [Memilih Imej Sasaran](processing-images-gui/choosing-target-images.md)
-* [Memulakan pemprosesan](processing-images-gui/starting-the-processing.md)
-* [Memantau pemprosesan](processing-images-gui/monitoring-the-processing.md)
-* [Menamatkan pemprosesan](processing-images-gui/finishing-the-processing.md)
+* [Memulakan Pemprosesan](processing-images-gui/starting-the-processing.md)
+* [Memantau Pemprosesan](processing-images-gui/monitoring-the-processing.md)
+* [Menyelesaikan Pemprosesan](processing-images-gui/finishing-the-processing.md)
 
-## Tetapan Projek
+## TETAPAN PROJEK
 
 * [Tetapan Projek](project-settings/project-settings.md)
-* [Formula Indeks Multispectral](project-settings/multispectral-index-formulas.md)
+* [Formula Indeks Berbilang Spektrum](project-settings/multispectral-index-formulas.md)
 
-## Penonton Imej (GUI)
+## PEMANDANG IMEJ (GUI)
 
-* [Membuka Skrin Penuh Imej](image-viewer-gui/opening-an-image-full-screen.md)
+* [Grid Imej](image-viewer-gui/image-grid.md)
+* [Membuka Imej Skrin Penuh](image-viewer-gui/opening-an-image-full-screen.md)
 * [Lapisan Imej](image-viewer-gui/image-layers.md)
-* [Index/Lut Sandbox](image-viewer-gui/index-lut-sandbox.md)
+* [Kotak Pasir Indeks/LUT](image-viewer-gui/index-lut-sandbox.md)
+* [Penanda Peta](image-viewer-gui/map-markers.md)
