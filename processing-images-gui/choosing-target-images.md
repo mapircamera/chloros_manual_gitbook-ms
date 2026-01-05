@@ -1,178 +1,207 @@
-# Memilih gambar sasaran
+# Memilih Imej Sasaran
 
-Menandai imej mana yang mengandungi sasaran penentukuran adalah langkah penting yang mempercepatkan saluran paip pemprosesan kloros. Dengan pra-memilih imej sasaran, anda menghapuskan keperluan kloros untuk mengimbas setiap imej dalam dataset anda untuk sasaran penentukuran.
+Menandai imej yang mengandungi sasaran penentukuran ialah langkah penting yang mempercepatkan saluran pemprosesan Chloros dengan ketara. Dengan pra-memilih imej sasaran, anda menghapuskan keperluan untuk Chloros untuk mengimbas setiap imej dalam set data anda untuk sasaran penentukuran.
 
-## Mengapa menandakan imej sasaran?
+## Mengapa Menandai Imej Sasaran?
 
-### kelajuan pemprosesan
+### Kelajuan Pemprosesan
 
-Tanpa menandakan imej sasaran, kloros mesti:
+Tanpa menandakan imej sasaran, Chloros mesti:
 
-* Imbas setiap gambar dalam projek anda
-* Jalankan algoritma pengesanan sasaran pada setiap gambar
-* Periksa beratus -ratus atau ribuan gambar yang tidak perlu
+* Imbas setiap imej dalam projek anda
+* Jalankan algoritma pengesanan sasaran pada setiap imej
+* Semak ratusan atau ribuan imej tanpa perlu
 
-**Hasil**: Pemprosesan boleh mengambil masa yang lebih lama, terutamanya untuk dataset yang besar.
+**Hasil**: Pemprosesan boleh mengambil masa yang lebih lama, terutamanya untuk set data yang besar.
 
-### dengan imej sasaran yang ditandakan
+### Dengan Imej Sasaran Bertanda
 
-Apabila anda menyemak lajur sasaran untuk imej tertentu:
+Apabila anda menyemak lajur Sasaran untuk imej tertentu:
 
-* Kloros hanya mengimbas imej yang diperiksa untuk sasaran
-* Pengesanan sasaran melengkapkan lebih cepat
-* Masa pemprosesan keseluruhan dikurangkan
+* Chloros hanya mengimbas imej yang diperiksa untuk mencari sasaran
+* Pengesanan sasaran selesai dengan lebih cepat
+* Keseluruhan masa pemprosesan sangat dikurangkan
 
-{% hint style="success" %}
-**Penambahbaikan kelajuan**: Menandai 2-3 imej sasaran dalam dataset 500-imej dapat mengurangkan masa pengesanan sasaran dari 30+ minit hingga bawah 1 minit.
-{% endhint %}***## Cara menandakan gambar sasaran
+{% gaya petunjuk="berjaya" %}
+**Peningkatan Kelajuan**: Menandai 2-3 imej sasaran dalam set data 500 imej boleh mengurangkan masa pengesanan sasaran daripada 30+ minit kepada kurang daripada 1 minit.
+Petua {% %}
 
-### Langkah 1: Kenal pasti gambar sasaran anda
+***
 
-Lihat melalui imej yang diimport anda dalam penyemak imbas fail dan mengenal pasti imej mana yang mengandungi sasaran penentukuran.**Senario biasa:***
-**Target Pra-Capture**: Ditangkap Sebelum Memulakan Sesi
-* **sasaran pasca menangkap**: ditangkap setelah menyelesaikan sesi
-* **sasaran dalam bidang**: sasaran yang diletakkan di kawasan penangkapan
-* **Pelbagai sasaran**: 2-3 Imej sasaran setiap sesi (disyorkan)
+## Cara Menandai Imej Sasaran
 
-### Langkah 2: Periksa lajur sasaran
+### Langkah 1: Kenal pasti Imej Sasaran Anda
+
+Lihat imej anda yang diimport dalam Pelayar Fail dan kenal pasti imej yang mengandungi sasaran penentukuran.
+
+**Senario biasa:*** **Sasaran pra-tangkap**: Ditangkap sebelum memulakan sesi
+* **Sasaran selepas tangkapan**: Ditangkap selepas melengkapkan sesi
+* **Sasaran dalam medan**: Sasaran diletakkan dalam kawasan tangkapan
+* **Berbilang sasaran**: 2-3 imej sasaran setiap sesi (disyorkan)
+
+### Langkah 2: Semak Lajur Sasaran
 
 Untuk setiap imej yang mengandungi sasaran penentukuran:
 
-1. Cari gambar dalam jadual penyemak imbas fail
-2. Cari lajur**sasaran** (lajur paling kanan)
-3. Klik kotak semak dalam lajur sasaran untuk gambar itu
-4. Ulangi semua imej yang mengandungi sasaran
+1. Cari imej dalam jadual Pelayar Fail
+2. Cari lajur **Sasaran** (lajur paling kanan)
+3. Klik kotak pilihan dalam lajur Sasaran untuk imej tersebut
+4. Ulang untuk semua imej yang mengandungi sasaran
 
-### Langkah 3: Sahkan pilihan anda
+### Langkah 3: Sahkan Pilihan Anda
 
-Sebelum diproses, semakan semula:
+Sebelum memproses, semak semula:
 
-* [] Semua imej dengan sasaran penentukuran diperiksa
-* [] Tidak ada gambar yang tidak sasaran yang disemak secara tidak sengaja
-* [] Sasaran jelas kelihatan dalam imej yang diperiksa
+* [ ] Semua imej dengan sasaran penentukuran disemak
+* [ ] Tiada imej bukan sasaran disemak secara tidak sengaja
+* [ ] Sasaran boleh dilihat dengan jelas dalam imej bertanda
 
-***## Amalan terbaik untuk imej sasaran
+***
 
-### Garis Panduan Tangkapan Sasaran**Masa:**
+## Amalan Terbaik untuk Imej Sasaran
 
-* Tangkap imej sasaran segera sebelum dan sepanjang sesi penangkapan anda
-* Dalam keadaan pencahayaan yang sama seperti sensor cahaya daq anda
-* Idealnya menangkap imej sasaran sekerap mungkin untuk hasil yang terbaik. Jika tidak, data sensor cahaya akan digunakan untuk menyesuaikan penentukuran dari masa ke masa.
+### Garis Panduan Tangkap Sasaran
+
+**Masa:**
+
+* Tangkap imej sasaran serta-merta sebelum dan sepanjang sesi tangkapan anda
+* Dalam keadaan pencahayaan yang sama seperti penderia cahaya DAQ anda
+* Sebaik-baiknya tangkap imej sasaran sekerap mungkin untuk hasil terbaik. Jika tidak, data sensor cahaya akan digunakan untuk melaraskan penentukuran dari semasa ke semasa.
 
 **Kedudukan Kamera:**
 
-* Pegang kamera di atas sasaran seperti yang dipusatkan dan mengisi sekitar 40-60% dari pusat imej.
-* Simpan kamera selari/nadir ke permukaan menargetkan
+* Pegang kamera di atas sasaran supaya berada di tengah dan mengisi sekitar 40-60% daripada pusat imej.
+* Pastikan kamera selari/nadir dengan permukaan sasaran
 
-**pencahayaan:**
+**Pencahayaan:**
 
-* Pencahayaan ambien yang sama seperti sensor cahaya daq anda
-* Elakkan bayang -bayang di permukaan sasaran
-* Jangan menyekat sumber cahaya anda dengan badan, kenderaan atau tumbuh -tumbuhan anda
+* Pencahayaan ambien yang sama seperti penderia cahaya DAQ anda
+* Elakkan bayang-bayang pada permukaan sasaran
+* Jangan sekat sumber cahaya anda dengan badan, kenderaan atau tumbuh-tumbuhan anda
 * Keadaan mendung memberikan hasil yang paling konsisten
 
-**Keadaan sasaran:**
+**Keadaan Sasaran:**
 
 * Pastikan panel sasaran bersih dan kering
-* Semua 4 panel harus kelihatan jelas dan tidak terhalang
-* Sasaran tegak lurus/nadir ke sumber cahaya jika boleh
+* Kesemua 4 panel hendaklah kelihatan jelas dan tidak terhalang
+* Sasarkan serenjang/nadir ke sumber cahaya jika boleh
 
-### Berapa banyak imej sasaran?
+### Berapa Banyak Imej Sasaran?
 
-**Minimum:**1 Imej sasaran setiap sesi.**Disyorkan:**3-5 Imej sasaran setiap sesi.**Jadual Amalan Terbaik:**
+**Minimum:**1 imej sasaran setiap sesi.**Disyorkan:** 3-5 imej sasaran setiap sesi.**Jadual amalan terbaik:**
 
-* 3-5 gambar yang ditangkap sejurus selepas sensor cahaya sedang merakam
+* 3-5 imej ditangkap sejurus selepas penderia cahaya merakam
 * Putar kamera antara tangkapan untuk hasil terbaik
-* Pilihan: Secara pertengahan sesi secara berkala jika keadaan pencahayaan sentiasa berubah
+* Pilihan: pertengahan sesi secara berkala jika keadaan pencahayaan sentiasa berubah
 
-***## Bekerja dengan pelbagai kamera
+***
 
-### setup dwi-kamera
+## Bekerja dengan Berbilang Kamera
 
-Jika menggunakan dua kamera MAPIR secara serentak (mis., Survey3W RGN + Survey3N OCN):
+### Persediaan Dwi-Kamera
 
-1. Tangkap imej sasaran dengan**kedua -dua kamera**pada masa yang sama
-2. Gunakan sasaran fizikal**yang sama**untuk kedua -dua kamera
-3. Tanda gambar sasaran untuk**kedua -dua jenis kamera**dalam penyemak imbas fail
+Jika menggunakan dua kamera MAPIR serentak (cth., Survey3W RGN + Survey3N OCN):
+
+1. Tangkap imej sasaran dengan **kedua-dua kamera** pada masa yang sama
+2. Gunakan **sasaran fizikal yang sama** untuk kedua-dua kamera
+3. Tandai imej sasaran untuk **kedua-dua jenis kamera** dalam Pelayar Fail
 4. Chloros akan menggunakan sasaran yang sesuai untuk setiap penentukuran kamera
 
-Lajur Model Kamera ###
+### Lajur Model Kamera
 
-Model kamera** ** lajur membantu mengenal pasti imej mana yang datang dari kamera mana:
+Lajur **Model Kamera** membantu mengenal pasti imej yang datang dari kamera mana:
 
-* SURVEY3W \ _RGN
-* SURVEY3N \ _OCN
-* SURVEY3W \ _RGB
+* Survey3W\_RGN
+* Survey3N\_OCN
+* Survey3W\_RGB
 * dll.
 
 Gunakan lajur ini untuk mengesahkan anda telah menandakan sasaran untuk setiap jenis kamera dalam projek anda.
 
-***## Tetapan Pengesanan Sasaran
+***
 
-### menyesuaikan kepekaan pengesanan
+## Tetapan Pengesanan Sasaran
 
-Jika kloros tidak mengesan sasaran anda dengan betul, laraskan tetapan ini dalam [tetapan projek](menyesuaikan-projek-penyediakan.md):**Kawasan sampel penentukuran minimum:***
-**lalai**: 25 piksel
-* **Meningkatkan** Sekiranya mendapat pengesanan palsu pada artifak kecil
-* **Kurangkan**Sekiranya sasaran tidak dikesan**Clustering Sasaran Minimum:*** **lalai**: 60
-* **Meningkatkan** Sekiranya sasaran dibahagikan kepada pelbagai pengesanan
-* **Kurangkan**Sekiranya sasaran dengan variasi warna tidak dikesan sepenuhnya***
+### Melaraskan Sensitiviti Pengesanan
 
-## masalah sasaran biasa
+Jika Chloros tidak mengesan sasaran anda dengan betul, laraskan tetapan ini dalam [Tetapan Projek](adjusting-project-settings.md):**Kawasan sampel penentukuran minimum:*** **Lalai**: 25 piksel
+* **Tingkatkan** jika mendapat pengesanan palsu pada artifak kecil
+* **Kurang** jika sasaran tidak dikesan**Pengkelompokan sasaran minimum:*** **Lalai**: 60
+* **Tingkatkan** jika sasaran dipecahkan kepada berbilang pengesanan
+* **Kurangkan** jika sasaran dengan variasi warna tidak dikesan sepenuhnya***
 
-### Masalah: Tiada sasaran yang dikesan**Kemungkinan Punca:**
+## Isu Imej Sasaran Biasa
 
-* Imej sasaran tidak ditandakan dalam penyemak imbas fail
-* Sasaran terlalu kecil dalam bingkai (<30% imej)
-* Pencahayaan yang lemah (bayang -bayang, silau)
+### Masalah: Tiada Sasaran Dikesan
+
+**Punca yang mungkin:**
+
+* Imej sasaran tidak ditanda dalam Pelayar Fail
+* Sasarkan terlalu kecil dalam bingkai (< 30% daripada imej)
+* Pencahayaan yang kurang baik (bayang-bayang, silau)
 * Tetapan pengesanan sasaran terlalu ketat
 
-**Penyelesaian:**1. Sahkan lajur sasaran diperiksa untuk imej yang betul
-2. Kaji semula kualiti imej sasaran dalam pratonton
-3. Menarik balik sasaran jika kualiti miskin
-4. Laraskan tetapan pengesanan sasaran jika diperlukan
+**Penyelesaian:**
 
-### Masalah: Pengesanan sasaran palsu**Kemungkinan Punca:**
+1. Sahkan lajur Sasaran disemak untuk imej yang betul
+2. Semak kualiti imej sasaran dalam pratonton
+3. Tangkap semula sasaran jika kualiti kurang baik
+4. Laraskan tetapan pengesanan sasaran jika perlu
 
-* Bangunan putih, kenderaan, atau penutup tanah tersilap untuk sasaran
-* Tompok cerah dalam tumbuh -tumbuhan
+### Masalah: Pengesanan Sasaran Palsu
+
+**Punca yang mungkin:**
+
+* Bangunan putih, kenderaan atau penutup tanah disalah anggap sebagai sasaran
+* Tompok terang dalam tumbuh-tumbuhan
 * Kepekaan pengesanan terlalu rendah
 
-**Penyelesaian:**1. Tandakan hanya imej sasaran sebenar untuk mengehadkan skop pengesanan
-2. Meningkatkan kawasan sampel penentukuran minimum
-3. Meningkatkan nilai clustering sasaran minimum
-4. Pastikan imej sasaran hanya menunjukkan sasaran (kekacauan latar belakang yang minimum)***
+**Penyelesaian:**
 
-## senarai semak pengesahan
+1. Tandakan hanya imej sasaran sebenar untuk mengehadkan skop pengesanan
+2. Tingkatkan kawasan sampel penentukuran minimum
+3. Meningkatkan nilai pengelompokan sasaran minimum
+4. Pastikan imej sasaran hanya menunjukkan sasaran (kekacauan latar belakang minimum)
+
+***
+
+## Senarai Semak Pengesahan
 
 Sebelum memulakan pemprosesan, sahkan pemilihan imej sasaran anda:
 
-* [] Sekurang -kurangnya 1 imej sasaran ditandakan setiap sesi
-* [] Kotak semak lajur sasaran diperiksa untuk semua imej sasaran
-* [] Imej sasaran yang ditangkap dalam jangka masa yang sama seperti tinjauan
-* [] Sasaran jelas kelihatan dalam pratonton apabila diklik
-* [] Semua 4 panel penentukuran dapat dilihat dalam setiap gambar sasaran
-* [] Tidak ada bayang -bayang atau halangan pada sasaran
-* [] Untuk dwi-kamera: sasaran ditandakan untuk kedua-dua jenis kamera
+* [ ] Sekurang-kurangnya 1 imej sasaran ditanda setiap sesi
+* [ ] Kotak pilihan lajur sasaran ditandakan untuk semua imej sasaran
+* [ ] Imej sasaran ditangkap dalam tempoh masa yang sama seperti tinjauan
+* [ ] Sasaran kelihatan jelas dalam pratonton apabila diklik
+* [ ] Kesemua 4 panel penentukuran kelihatan dalam setiap imej sasaran
+* [ ] Tiada bayang-bayang atau halangan pada sasaran
+* [ ] Untuk dwi-kamera: Sasaran ditanda untuk kedua-dua jenis kamera
 
-***## pemprosesan bebas sasaran
+***
 
-### Pemprosesan tanpa sasaran penentukuran
+## Pemprosesan Tanpa Sasaran
+
+### Pemprosesan Tanpa Sasaran Penentukuran
 
 Walaupun tidak disyorkan untuk kerja saintifik, anda boleh memproses tanpa sasaran:
 
-1. Tinggalkan semua kotak semak lajur sasaran yang tidak diselesaikan
-2.**Lumpuhkan**"Penentukuran Refleksi" dalam tetapan projek
-3. Pembetulan vignette masih akan digunakan
-4. output tidak akan dikalibrasi untuk pemantulan mutlak
+1. Biarkan semua kotak semak lajur Sasaran tidak ditandakan
+2. **Lumpuhkan** "Penentukuran pantulan" dalam Tetapan Projek
+3. Pembetulan vignet masih akan digunakan
+4. Output tidak akan ditentukur untuk pemantulan mutlak
 
-{% hint style="warning" %}**Tidak disyorkan**: Tanpa penentukuran pemantulan, nilai piksel mewakili kecerahan relatif sahaja, bukan pengukuran refleksi saintifik. Gunakan sasaran penentukuran untuk keputusan yang tepat dan boleh diulang.
-{% endhint %}***## Langkah seterusnya
+{% gaya petunjuk="amaran" %}
+**Tidak Disyorkan**: Tanpa penentukuran pantulan, nilai piksel mewakili kecerahan relatif sahaja, bukan ukuran pantulan saintifik. Gunakan sasaran penentukuran untuk hasil yang tepat dan boleh berulang.
+Petua {% %}
 
-Sebaik sahaja anda menandakan gambar sasaran anda:
+***
 
-1.**Mengkaji tetapan anda**-lihat [menyesuaikan tetapan projek](menyesuaikan-projek-penyetempatan.md)
-2.**Mula Pemprosesan**-Lihat [Memulakan Pemprosesan](permulaan-pemproses.md)
-3.**Memantau Kemajuan**-Lihat [Memantau pemprosesan](Pemantauan-The-Processing.md)
+## Langkah Seterusnya
 
-Untuk maklumat lanjut mengenai penentukuran mensasarkan diri mereka, lihat [sasaran penentukuran](../ penentukuran targets.md).
+Sebaik sahaja anda menandakan imej sasaran anda:
+
+1. **Semak tetapan anda** - Lihat [Melaraskan Tetapan Projek](adjusting-project-settings.md)
+2. **Mulakan pemprosesan** - Lihat [Memulakan Pemprosesan](starting-the-processing.md)
+3. **Pantau kemajuan** - Lihat [Memantau Pemprosesan](monitoring-the-processing.md)
+
+Untuk mendapatkan maklumat lanjut tentang sasaran penentukuran sendiri, lihat [Sasaran Penentukuran](../calibration-targets.md).

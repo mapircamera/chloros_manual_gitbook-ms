@@ -1,296 +1,333 @@
-# Lapisan imej
+# Lapisan Imej
 
-Lapisan imej jatuh dalam penonton imej kloros membolehkan anda dengan cepat menukar antara versi yang berbeza dari imej yang sama - dari tangkapan asal ke output refleksi yang diproses dan imej indeks yang dikira.
+Menu lungsur Lapisan Imej dalam Pemapar Imej Chloros membolehkan anda bertukar dengan cepat antara versi berbeza bagi imej yang sama - daripada tangkapan asal kepada output pemantulan yang diproses dan imej indeks yang dikira.
 
-## Apakah lapisan gambar?
+## Apakah itu Lapisan Imej?
 
-Di kloros, **lapisan** Rujuk kepada output imej yang berbeza yang tersedia untuk imej sumber tunggal. Apabila anda memproses imej, Chloros mencipta pelbagai versi:
+Dalam Chloros, **lapisan** merujuk kepada output imej berbeza yang tersedia untuk imej sumber tunggal. Apabila anda memproses imej, Chloros mencipta berbilang versi:
 
-* **Imej Asal** (JPG dan fail mentah dari kamera anda)
-* **Refleksi yang ditentukur** output (jika penentukuran refleksi diaktifkan)
+* **Imej asal** (Fail JPG dan RAW daripada kamera anda)
+* **Kalibrasi pantulan ditentukur** keluaran (jika penentukuran pantulan didayakan)
 * **Imej sasaran** (jika imej mengandungi sasaran penentukuran)
-* **Imej Indeks**(NDVI, NDRE, GNDVI, dll. Jika indeks dikonfigurasi)
+* **Imej indeks** (NDVI, NDRE, GNDVI, dsb. jika indeks telah dikonfigurasikan)**Layer Selector dropdown** di bahagian atas sebelah kanan Pemapar Imej membolehkan anda bertukar serta-merta antara versi ini tanpa meninggalkan pemapar.***
 
-Dropdown Layer**Layer**di bahagian atas kanan penonton imej membolehkan anda dengan serta-merta menukar antara versi ini tanpa meninggalkan penonton.***
-
-## Jenis lapisan yang ada
+## Jenis Lapisan Tersedia
 
 ### JPG
 
-* Imej pratonton JPG asal dari kamera anda
-* Sentiasa tersedia untuk semua gambar
+* Imej pratonton JPG asal daripada kamera anda
+* Sentiasa tersedia untuk semua imej
 * Tidak diproses, seperti yang ditangkap oleh kamera
-* Terpantas untuk memuatkan dan memaparkan
+* Paling cepat untuk dimuatkan dan dipaparkan
 
-**Bila hendak melihat:**
+**Bila untuk melihat:**
 
-* Pratonton cepat penangkapan asal
-* Memeriksa komposisi imej dan pembingkaian
-* Mengesahkan kualiti menangkap sebelum diproses
+* Pratonton pantas tangkapan asal
+* Menyemak komposisi imej dan pembingkaian
+* Mengesahkan kualiti tangkapan sebelum diproses
 
-### mentah (asal)
+### RAW (Asal)
 
-* Data sensor mentah asal dari kamera anda
-* Ditebah tanpa pemprosesan pos yang digunakan
-* Kedalaman bit yang lebih tinggi daripada JPG (biasanya data sensor 12-bit atau 14-bit)
+* Data sensor RAW asal daripada kamera anda
+* Debayered tanpa pemprosesan pos digunakan
+* Kedalaman bit yang lebih tinggi daripada JPG (biasanya data penderia 12-bit atau 14-bit)
 
-**Bila hendak melihat:**
+**Bila untuk melihat:**
 
 * Memeriksa kualiti data sensor asal
-* Memeriksa isu atau artifak sensor
-* Membandingkan sebelum/selepas memproses hasil
+* Menyemak isu atau artifak penderia
+* Membandingkan keputusan sebelum/selepas pemprosesan
 
-### mentah (sasaran)
+### RAW (Sasaran)
 
-* Hanya muncul untuk imej yang dikenal pasti sebagai sasaran penentukuran
-* Menunjukkan imej mentah asal dengan sasaran yang dikesan
+* Hanya muncul untuk imej yang dikenal pasti mengandungi sasaran penentukuran
+* Menunjukkan imej RAW asal dengan sasaran dikesan
 * Digunakan untuk mengesahkan pengesanan sasaran berjaya
 
-**Bila hendak melihat:**
+**Bila untuk melihat:**
 
-* Mengesahkan sasaran penentukuran dikesan dengan betul
-* Memeriksa kualiti gambar sasaran
-* Menyelesaikan masalah masalah penentukuran
+* Mengesahkan sasaran penentukuran telah dikesan dengan betul
+* Menyemak kualiti imej sasaran
+* Menyelesaikan masalah penentukuran
 
-{% hint style="info" %}
-**Lapisan Sasaran**: Lapisan ini hanya muncul dalam lungsur turun untuk imej yang mengandungi sasaran penentukuran. Imej menangkap tetap tidak akan mempunyai pilihan ini.
-{% endhint %}
+{% gaya petunjuk="info" %}
+**Lapisan Sasaran**: Lapisan ini hanya muncul dalam lungsur turun untuk imej yang mengandungi sasaran penentukuran. Imej tangkapan biasa tidak akan mempunyai pilihan ini.
+Petua {% %}
 
-### mentah (reflektif)
+### RAW (Pantulan)
 
-* Imej output refleksi yang dikalibrasi
+* Imej keluaran pemantulan yang ditentukur
 * Vignette diperbetulkan (jika didayakan dalam pemprosesan)
-* Reflectance ditentukur menggunakan data sasaran (jika diaktifkan)
-* Tiff berbilang band dengan semua saluran kamera
-* Nilai piksel mewakili pemantulan peratus (semasa menggunakan mod peratus)
-* Bersedia untuk memanipulasi dengan [Indeks/Lut Sandbox](Index-Lut-Sandbox.md)
+* Pantulan ditentukur menggunakan data sasaran (jika didayakan)
+* TIFF berbilang jalur dengan semua saluran kamera
+* Nilai piksel mewakili pantulan peratus (apabila menggunakan mod peratus)
+* Sedia untuk memanipulasi dengan [Index/LUT Sandbox](index-lut-sandbox.md)
 
-**Bila hendak melihat:**
+**Bila untuk melihat:**
 
-* Memeriksa hasil yang dikalibrasi
+* Memeriksa keputusan yang ditentukur
 * Mengesahkan kualiti penentukuran
-* Memeriksa nilai piksel untuk ketepatan saintifik
+* Menyemak nilai piksel untuk ketepatan saintifik
 * Membandingkan dengan asal untuk melihat kesan penentukuran
 
-{% hint style="success" %}
-**Disyorkan**: Gunakan lapisan RAW (Refleksi) apabila memeriksa nilai piksel untuk pengukuran dan analisis saintifik.
-{% endhint %}
+{% gaya petunjuk="berjaya" %}
+**Disyorkan**: Gunakan lapisan RAW (Reflectance) apabila menyemak nilai piksel untuk pengukuran dan analisis saintifik.
+Petua {% %}
 
-### mentah (indeks ndvi) ... dan serupa
+### RAW (NDVI Index)... dan seumpamanya
 
-* Imej Indeks Vegetasi Dikira (NDVI Dalam contoh ini)
-* Nama indeks berubah berdasarkan indeks mana yang dikonfigurasikan semasa pemprosesan
-* Contoh: mentah (indeks NDVI), mentah (indeks ndre), mentah (indeks gndvi), dll.
-* Imej kelabu-band tunggal menunjukkan hasil pengiraan indeks
-* Satu lapisan muncul untuk setiap indeks yang dikonfigurasikan dalam tetapan projek
+* Imej indeks tumbuh-tumbuhan yang dikira (NDVI dalam contoh ini)
+* Nama indeks berubah berdasarkan indeks yang telah dikonfigurasikan semasa pemprosesan
+* Contoh: RAW (NDVI Index), RAW (NDRE Index), RAW (GNDVI Index), dsb.
+* Imej skala kelabu jalur tunggal yang menunjukkan hasil pengiraan indeks
+* Satu lapisan muncul untuk setiap indeks yang dikonfigurasikan dalam Tetapan Projek
 
 **Nama indeks yang mungkin:**
 
-* Mentah (indeks NDVI)
-* Mentah (indeks ndre)
-* Mentah (indeks gndvi)
-* Mentah (indeks osavi)
-* Mentah (indeks evi)
-* Mentah (indeks savi)
-* Dan banyak lagi ... (lihat [formula indeks multispectral](../ Project-Settings/Multispectral-index-Formulas.md))
+* MENTAH (Indeks NDVI)
+* MENTAH (Indeks NDRE)
+* MENTAH (GNDVI Index)
+* MENTAH (Indeks OSAVI)
+* MENTAH (Indeks EVI)
+* MENTAH (Indeks SAVI)
+* Dan banyak lagi... (lihat [Formula Indeks Berbilangspek](../project-settings/multispectral-index-formulas.md))
 
-**Bila hendak melihat:**
+**Bila untuk melihat:**
 
-* Memeriksa hasil pengiraan indeks
-* Memeriksa julat nilai indeks
-* Mengenal pasti bidang minat
-* Mengesahkan gambar indeks sebelum menggunakan dalam GI atau analisis
-
-***## Menggunakan pemilih lapisan
-
-### Membuka dropdown
-
-1. Buka gambar dalam mod skrin penuh (klik mana -mana lakaran kecil dalam penonton imej)
-2. Cari lekuk**Layer**di sudut kanan atas penonton
-3. Dropdown menunjukkan lapisan yang dipilih sekarang (mis., "JPG")
-4. Klik jatuh turun untuk melihat semua lapisan yang ada
-
-### Lapisan menukar
-
-1. Klik Layer Dropdown untuk membuka senarai
-2. Semua lapisan yang ada untuk imej semasa ditunjukkan
-3. Klik nama lapisan untuk beralih ke versi itu
-4. Kemas kini imej segera untuk menunjukkan lapisan yang dipilih**Tukar cepat:**
-
-* Dropdown mengingati pilihan terakhir anda
-* Apabila menavigasi ke imej seterusnya, Chloros cuba menunjukkan jenis lapisan yang sama
-* Jika lapisan itu tidak wujud pada imej seterusnya, ia mungkir ke jpg
-
-### ketersediaan lapisan
-
-Tidak semua lapisan disediakan untuk setiap imej:
-
-**Sentiasa tersedia:***✅ jpg (Setiap gambar mempunyai pratonton JPG)**tersedia secara syarat:**
-
-* ⚠️ mentah (asal) - Hanya jika imej ditangkap dalam mod mentah atau mentah+jpg
-* ⚠️ mentah (sasaran) - Hanya jika imej mengandungi sasaran penentukuran yang dikesan
-* ⚠️ mentah (reflektif) - Hanya selepas diproses dengan penentukuran refleksi diaktifkan
-* ⚠️ Raw ([index] index) - Hanya selepas diproses dengan indeks yang dikonfigurasikan
-
-***## Layer kegigihan
-
-### menavigasi antara gambar
-
-Apabila anda menavigasi ke imej yang berbeza (menggunakan kekunci anak panah atau mengklik gambar kecil):**Keutamaan lapisan dipelihara:**
-
-* Jika melihat "mentah (reflektif)", imej seterusnya menunjukkan "mentah (reflektif)" (jika ada)
-* Jika melihat "mentah (indeks ndvi)", imej seterusnya menunjukkan "mentah (indeks ndvi)" (jika ada)
-* Sekiranya lapisan yang sama tidak wujud, lalai ke jpg
-
-**Contoh aliran kerja:**1. Buka imej 1, beralih ke mentah (indeks NDVI)
-2. Tekan → untuk melihat gambar 2
-3. Imej 2 memaparkan lapisan Raw (NDVI) secara automatik
-4. Teruskan menavigasi - semua imej menunjukkan lapisan NDVI
-5. Sangat berkesan untuk mengkaji hasil indeks di banyak imej***
-
-## Aliran kerja biasa
-
-### aliran kerja 1: sebelum/selepas perbandingan**Matlamat**: Bandingkan imej asal dan ditentukur
-
-1. Buka gambar yang diproses dalam penonton imej
-2. Pilih**mentah (asal)**dari dropdown
-3. Perhatikan nilai vignetting dan tidak terjejas
-4. Beralih ke**mentah (reflektif)**dari dropdown
-5. Bandingkan - vignetting dikeluarkan, nilai ditentukur
-
-### aliran kerja 2: ulasan indeks**Matlamat**: Cepat semak keputusan NDVI di seluruh dataset
-
-1. Buka gambar yang diproses pertama
-2. Pilih**RAW (Indeks NDVI)**dari Dropdown
-3. Gunakan → anak panah untuk menavigasi ke gambar seterusnya
-4. Lapisan NDVI berterusan secara automatik
-5. Teruskan melalui semua imej, memeriksa corak NDVI
-6. Tukar ke**mentah (indeks ndre)**untuk membandingkan
-
-### aliran kerja 3: pengesahan sasaran**Matlamat**: Sahkan semua imej sasaran dikesan dengan betul
-
-1. Navigasi ke gambar sasaran
-2. Pilih**mentah (sasaran)**dari dropdown
-3. Sahkan sasaran penentukuran jelas dan dikesan
-4. Navigasi ke gambar sasaran seterusnya
-5. Ulangi pengesahan untuk semua sasaran
-
-### aliran kerja 4: pemeriksaan nilai piksel**Matlamat**: Periksa nilai refleksi untuk ketepatan saintifik
-
-1. Buka gambar yang diproses
-2. Pilih**mentah (reflektif)**lapisan
-3. Dayakan**Pixel peratus**mod (butang di bar alat kanan atas)
-4. Pindahkan kursor ke kawasan tumbuh -tumbuhan
-5. Sahkan nilai piksel berada dalam julat yang dijangkakan (30-70% untuk NIR, 5-15% untuk merah)
-6. Periksa kawasan tanah dan air untuk nilai yang sesuai***
-
-## Memahami nilai piksel mengikut lapisan
-
-Lapisan yang berbeza menunjukkan julat nilai piksel yang berbeza:
-
-### JPG lapisan
-
-* **Range**: 0-255 (8-bit)
-* **Arti**: Nilai paparan, diperbetulkan gamma
-* **Gunakan**: pemeriksaan visual sahaja, bukan untuk pengukuran saintifik
-
-### mentah (asal)
-
-* **Range**: 0-65535 (16-bit)
-* **Arti**: Nombor digital sensor mentah
-* **Gunakan**: Memeriksa prestasi sensor, tidak ditentukur
-
-### mentah (reflektif)
-
-* **Range**: 0-65,535 (tiff 16-bit) atau 0.0-1.0 (32-bit peratus)
-* **Maksudnya**: Refleksi peratus yang dikalibrasi
-* **Gunakan**: Pengukuran dan analisis saintifik**Untuk tiff 16-bit:**Bahagikan sebanyak 65,535 untuk mendapatkan pemantulan peratus**untuk peratus 32-bit:** Nilai secara langsung mewakili peratus (0.5 = 50% refleksi)
-
-### mentah (imej indeks)
-
-* **julat**: Berbeza mengikut indeks (biasanya -1.0 hingga +1.0 untuk indeks normal)
-* **Arti**: Hasil Pengiraan Indeks
-* **Contoh**:
-  * NDVI: -1 hingga +1 (tumbuh -tumbuhan biasanya 0.4 hingga 0.9)
-  * Ndre: -1 hingga +1 (pengesanan tekanan)
-  * EVI: 0 hingga 1 (tumbuh -tumbuhan yang dipertingkatkan)
+* Meneliti keputusan pengiraan indeks
+* Menyemak julat nilai indeks
+* Mengenal pasti bidang yang diminati
+* Mengesahkan imej indeks sebelum digunakan dalam GIS atau analisis
 
 ***
 
-## petua dan amalan terbaik
+## Menggunakan Pemilih Lapisan
 
-### Beralih lapisan yang cekap
+### Membuka Dropdown
 
-* **Kesedaran Pintasan Papan Kekunci**: Walaupun tidak ada pintasan papan kekunci untuk lapisan, anak panah navigasi (←/→) bekerja di semua lapisan
-* **aliran kerja yang konsisten**: Pilih satu lapisan (mis., NDVI) dan semak semula dataset sebelum beralih ke yang lain
-* **perbandingan cepat**: togol antara asal dan refleksi untuk mengesahkan kualiti pemprosesan
+1. Buka imej dalam mod skrin penuh (klik mana-mana lakaran kecil dalam Pemapar Imej)
+2. Cari **lapisan lungsur turun** di penjuru kanan sebelah atas pemapar
+3. Menu lungsur menunjukkan lapisan yang sedang dipilih (cth., "JPG")
+4. Klik menu lungsur untuk melihat semua lapisan yang tersedia
 
-### Pertimbangan prestasi
+### Menukar Lapisan
 
-* **JPG memuat terpantas**: Gunakan untuk navigasi cepat melalui banyak gambar
-* **Lapisan mentah memuat lebih perlahan**: resolusi yang lebih tinggi dan kedalaman bit
-* **Lapisan Indeks**: Kelajuan yang serupa dengan lapisan refleksi
-* **Beban pertama adalah paling lambat**: Pandangan seterusnya lapisan yang sama cache dan lebih cepat
+1. Klik lungsur turun lapisan untuk membuka senarai
+2. Semua lapisan yang tersedia untuk imej semasa ditunjukkan
+3. Klik mana-mana nama lapisan untuk bertukar kepada versi itu
+4. Imej dikemas kini serta-merta untuk menunjukkan lapisan yang dipilih
 
-### pengesahan kualiti
+**Penukaran pantas:**
 
-* **Sentiasa periksa mentah (asal)**: Sahkan kualiti data sumber sebelum mempercayai output diproses
-* **Bandingkan Lapisan**: Gunakan lapisan Beralih untuk Mengesahkan Pemprosesan Berfungsi dengan betul
-* **Rentang Indeks Semak**: Gunakan mod peratus piksel dengan lapisan indeks untuk mengesahkan nilai adalah munasabah***## Penyelesaian masalah
+* Dropdown mengingati pilihan terakhir anda
+* Apabila menavigasi ke imej seterusnya, Chloros cuba untuk menunjukkan jenis lapisan yang sama
+* Jika lapisan itu tidak wujud pada imej seterusnya, ia lalai kepada JPG
 
-Lapisan ### tidak tersedia**Masalah**: Lapisan yang diharapkan tidak muncul dalam lungsur turun**Kemungkinan Punca:**
+### Ketersediaan Lapisan
 
-* Imej tidak diproses (hanya jpg dan mentah (asal) tersedia)
-* Penentukuran refleksi dilumpuhkan semasa pemprosesan
-* Indeks khusus tidak dikonfigurasi dalam tetapan projek
-* Imej adalah imej sasaran sahaja (tiada indeks yang dihasilkan untuk sasaran)
+Tidak semua lapisan tersedia untuk setiap imej:
 
-**Penyelesaian:**1. Sahkan imej diproses (periksa folder output untuk fail yang diproses)
-2. Periksa tetapan projek untuk mengesahkan indeks dikonfigurasikan
-3. Pengkolot semula dengan indeks yang diingini diaktifkan
+**Sentiasa tersedia:*** ✅ JPG (setiap imej mempunyai pratonton JPG)
 
-### Lapisan yang salah ditunjukkan**Masalah**: Imej dibuka di lapisan yang tidak dijangka**Sebab**: Keutamaan lapisan dari imej sebelumnya dibawa ke hadapan, tetapi lapisan itu tidak wujud pada imej semasa**Penyelesaian**: Kloros secara automatik akan kembali ke JPG apabila lapisan pilihan tidak tersedia - ini adalah tingkah laku biasa
+**Tersedia dengan syarat:**
 
-### tidak dapat melihat sasaran penentukuran**Masalah**: Lapisan mentah (sasaran) tidak menunjukkan pengesanan sasaran**Kemungkinan Punca:**
+* ⚠️ RAW (Asal) - Hanya jika imej telah ditangkap dalam mod RAW atau RAW+JPG
+* ⚠️ RAW (Sasaran) - Hanya jika imej mengandungi sasaran penentukuran yang dikesan
+* ⚠️ RAW (Reflectance) - Hanya selepas pemprosesan dengan penentukuran pantulan didayakan
+* ⚠️ RAW (\[Index] Index) - Hanya selepas pemprosesan dengan indeks dikonfigurasikan
+
+***
+
+## Kegigihan Lapisan
+
+### Menavigasi Antara Imej
+
+Apabila anda menavigasi ke imej lain (menggunakan kekunci anak panah atau mengklik lakaran kenit):**Pilihan lapisan dikekalkan:**
+
+* Jika melihat "RAW (Reflectance)", imej seterusnya menunjukkan "RAW (Reflectance)" (jika ada)
+* Jika melihat "RAW (NDVI Index)", imej seterusnya menunjukkan "RAW (NDVI Index)" (jika ada)
+* Jika lapisan yang sama tidak wujud, lalai kepada JPG
+
+**Contoh aliran kerja:**
+
+1. Buka Imej 1, tukar kepada RAW (NDVI Index)
+2. Tekan → untuk melihat Imej 2
+3. Imej 2 secara automatik memaparkan lapisan RAW (NDVI Index).
+4. Teruskan menavigasi - semua imej menunjukkan lapisan NDVI
+5. Sangat cekap untuk menyemak hasil indeks merentas banyak imej
+
+***
+
+## Aliran Kerja Biasa
+
+### Aliran Kerja 1: Sebelum/Selepas Perbandingan
+
+**Matlamat**: Bandingkan imej asal berbanding imej yang ditentukur
+
+1. Buka imej yang diproses dalam Pemapar Imej
+2. Pilih **RAW (Asal)** daripada lungsur turun
+3. Perhatikan nilai vignetting dan tidak ditentukur
+4. Tukar kepada **RAW (Reflectance)** daripada dropdown
+5. Bandingkan - vignetting dikeluarkan, nilai ditentukur
+
+### Aliran Kerja 2: Semakan Indeks
+
+**Matlamat**: Semak keputusan NDVI merentas set data dengan pantas
+
+1. Buka imej pertama yang diproses
+2. Pilih **RAW (NDVI Index)** daripada lungsur turun
+3. Gunakan → kekunci anak panah untuk menavigasi ke imej seterusnya
+4. Lapisan NDVI berterusan secara automatik
+5. Teruskan melalui semua imej, semak corak NDVI
+6. Tukar kepada **RAW (NDRE Index)** untuk membandingkan
+
+### Aliran Kerja 3: Pengesahan Sasaran
+
+**Matlamat**: Sahkan semua imej sasaran telah dikesan dengan betul
+
+1. Navigasi ke imej sasaran
+2. Pilih **RAW (Sasaran)** daripada lungsur turun
+3. Sahkan sasaran penentukuran jelas kelihatan dan dikesan
+4. Navigasi ke imej sasaran seterusnya
+5. Ulang pengesahan untuk semua sasaran
+
+### Aliran Kerja 4: Pemeriksaan Nilai Piksel
+
+**Matlamat**: Semak nilai pantulan untuk ketepatan saintifik
+
+1. Buka imej yang diproses
+2. Pilih lapisan **RAW (Reflectance)**
+
+3. Dayakan mod**Peratus Piksel** (butang di bar alat sebelah kanan atas)
+4. Gerakkan kursor ke atas kawasan tumbuh-tumbuhan
+5. Sahkan nilai piksel berada dalam julat jangkaan (30-70% untuk NIR, 5-15% untuk Red)
+6. Periksa kawasan tanah dan air untuk nilai yang sesuai
+
+***
+
+## Memahami Nilai Piksel mengikut Lapisan
+
+Lapisan yang berbeza menunjukkan julat nilai piksel yang berbeza:
+
+### Lapisan JPG
+
+* **Julat**: 0-255 (8-bit)
+* **Maksud**: Nilai paparan, diperbetulkan gamma
+* **Penggunaan**: Pemeriksaan visual sahaja, bukan untuk pengukuran saintifik
+
+### RAW (Asal)
+
+* **Julat**: 0-65535 (16-bit)
+* **Maksud**: Nombor digital penderia mentah
+* **Penggunaan**: Memeriksa prestasi penderia, tidak ditentukur
+
+### RAW (Pantulan)
+
+* **Julat**: 0-65,535 (16-bit TIFF) atau 0.0-1.0 (32-bit Peratus)
+* **Maksud**: Pemantulan peratusan yang ditentukur
+* **Kegunaan**: Pengukuran dan analisis saintifik**Untuk TIFF 16-bit:**Bahagikan sebanyak 65,535 untuk mendapatkan pemantulan peratus**Untuk Peratusan 32-bit:** Nilai secara langsung mewakili peratus (0.5 = 50% pemantulan)
+
+### RAW (Imej Indeks)
+
+* **Julat**: Berbeza mengikut indeks (biasanya -1.0 hingga +1.0 untuk indeks ternormal)
+* **Maksud**: Hasil pengiraan indeks
+* **Contoh**:
+  * NDVI: -1 hingga +1 (tumbuhan biasanya 0.4 hingga 0.9)
+  * NDRE: -1 hingga +1 (pengesanan tekanan)
+  * EVI: 0 hingga 1 (tumbuh-tumbuhan yang dipertingkatkan)
+
+***
+
+## Petua dan Amalan Terbaik
+
+### Penukaran Lapisan yang Cekap
+
+* **Kesedaran pintasan papan kekunci**: Walaupun tiada pintasan papan kekunci untuk lapisan, anak panah navigasi (←/→) berfungsi merentas semua lapisan
+* **Aliran kerja yang konsisten**: Pilih satu lapisan (cth., NDVI) dan semak keseluruhan set data sebelum beralih kepada yang lain
+* **Perbandingan pantas**: Togol antara Original dan Reflectance untuk mengesahkan kualiti pemprosesan
+
+### Pertimbangan Prestasi
+
+* **JPG dimuatkan paling cepat**: Gunakan untuk navigasi pantas melalui banyak imej
+* **Lapisan RAW dimuatkan lebih perlahan**: Peleraian yang lebih tinggi dan kedalaman bit
+* **Lapisan indeks**: Kelajuan yang sama dengan lapisan Reflectance
+* **Pemuatan pertama adalah paling perlahan**: Paparan seterusnya pada lapisan yang sama dicache dan lebih pantas
+
+### Pengesahan Kualiti
+
+* **Sentiasa semak RAW (Asal)**: Sahkan kualiti data sumber sebelum mempercayai output yang diproses
+* **Bandingkan lapisan**: Gunakan penukaran lapisan untuk mengesahkan pemprosesan berfungsi dengan betul
+* **Semak julat indeks**: Gunakan mod Peratusan Piksel dengan lapisan indeks untuk mengesahkan nilai adalah munasabah***
+
+## Menyelesaikan masalah
+
+### Lapisan Tidak Tersedia
+
+**Masalah**: Lapisan yang dijangkakan tidak muncul dalam lungsur turun**Punca yang mungkin:**
+
+* Imej tidak diproses (hanya JPG dan RAW (Asal) tersedia)
+* Penentukuran pantulan telah dilumpuhkan semasa pemprosesan
+* Indeks khusus tidak dikonfigurasikan dalam Tetapan Projek
+* Imej ialah imej sasaran sahaja (tiada indeks dihasilkan untuk sasaran)
+
+**Penyelesaian:**
+
+1. Sahkan imej telah diproses (semak folder output untuk fail yang diproses)
+2. Semak Tetapan Projek untuk mengesahkan indeks telah dikonfigurasikan
+3. Proses semula dengan indeks yang dikehendaki didayakan
+
+### Lapisan Salah Ditunjukkan
+
+**Masalah**: Imej dibuka dalam lapisan yang tidak dijangka**Punca**: Keutamaan lapisan daripada imej sebelumnya dibawa ke hadapan, tetapi lapisan itu tidak wujud pada imej semasa**Penyelesaian**: Chloros secara automatik kembali ke JPG apabila lapisan pilihan tidak tersedia - ini adalah tingkah laku biasa
+
+### Tidak Dapat Melihat Sasaran Penentukuran
+
+**Masalah**: Lapisan RAW (Sasaran) tidak menunjukkan pengesanan sasaran**Punca yang mungkin:**
 
 * Sasaran tidak dikesan semasa pemprosesan
 * Imej sebenarnya tidak mengandungi sasaran
 * Tetapan pengesanan sasaran terlalu ketat
 
-**Penyelesaian:**1. Periksa log debug untuk mesej "sasaran dijumpai"
-2. Sahkan imej sebenarnya mengandungi sasaran penentukuran yang kelihatan
-3. Laraskan tetapan pengesanan sasaran dalam tetapan projek
-4. Lihat [memilih imej sasaran](../ pemprosesan-images-gui/memilih-target-imag.md)***
+**Penyelesaian:**
 
-## Ciri -ciri yang berkaitan
+1. Semak Log Nyahpepijat untuk mesej "Sasaran ditemui".
+2. Sahkan imej sebenarnya mengandungi sasaran penentukuran yang boleh dilihat
+3. Laraskan tetapan pengesanan sasaran dalam Tetapan Projek
+4. Lihat [Memilih Imej Sasaran](../processing-images-gui/choosing-target-images.md)
 
-### alat penonton imej
+***
 
-Apabila melihat mana -mana lapisan, anda boleh menggunakan:
+## Ciri-ciri Berkaitan
 
-* **Kawalan Zum**: Magnify untuk memeriksa butiran
-* **pan**: Klik dan seret untuk bergerak di sekitar gambar zum
+### Alat Pemapar Imej
+
+Apabila melihat mana-mana lapisan, anda boleh menggunakan:
+
+* **Kawalan zum**: Besarkan untuk memeriksa butiran
+* **Sorot**: Klik dan seret untuk bergerak ke sekeliling imej yang dizum
 * **Pemeriksaan nilai piksel**: Lihat nilai di lokasi kursor
-* **anak panah navigasi**: bergerak antara imej sambil mengekalkan lapisan
-* **mod peratus piksel**: togol antara paparan DN dan peratus
+* **Anak panah navigasi**: Beralih antara imej sambil mengekalkan lapisan
+* **Mod Peratusan Pixel**: Togol antara paparan DN dan peratus
 
-Lihat [Membuka Skrin Penuh Imej](pembukaan-image-full-screen.md) untuk dokumentasi penonton imej lengkap.
+Lihat [Membuka Skrin Penuh Imej](opening-an-image-full-screen.md) untuk dokumentasi Pemapar Imej yang lengkap.
 
-### Indeks/Lut Sandbox
+### Kotak Pasir Indeks/LUT
 
 Untuk ujian dan visualisasi indeks interaktif:
 
 * **Pengiraan indeks masa nyata**: Uji formula indeks yang berbeza
-* **Pemetaan Warna Lut**: Sapukan kecerunan warna ke indeks skala kelabu
-* **Visualisasi Eksport**: Simpan Imej Indeks Berwarna
+* **Pemetaan warna LUT**: Gunakan kecerunan warna pada indeks skala kelabu
+* **Export visualisasi**: Simpan imej indeks berwarna
 
-Lihat [Index/Lut Sandbox](Index-Lut-Sandbox.md) untuk butirannya.***
+Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk butiran.
 
-## Langkah seterusnya
+***
 
-Sekarang anda memahami lapisan gambar:
+## Langkah Seterusnya
 
-* [ **Membuka Skrin Penuh Imej**](Pembukaan-An-Image-full-Screen.md)-Panduan Penonton Imej Lengkap
-* [ **indeks/lut sandbox**](index-lut-sandbox.md)-visualisasi indeks interaktif
-* [ **Formula Indeks Multispectral**](../ Project-Settings/Multispectral-index-Formulas.md)-Rujukan indeks yang tersedia
-* [ **Menamatkan pemprosesan**](../ pemprosesan-images-gui/penamat-the-processing.md)-Memahami output yang diproses
+Sekarang anda memahami lapisan imej:
+
+* [**Membuka Skrin Penuh Imej**](opening-an-image-full-screen.md) - Panduan Lengkap Pemapar Imej
+* [**Kotak Pasir Indeks/LUT**](index-lut-sandbox.md) - Visualisasi indeks interaktif
+* [**Rumus Indeks Berbilangspek**](../project-settings/multispectral-index-formulas.md) - Rujukan indeks tersedia
+* [**Menyelesaikan Pemprosesan**](../processing-images-gui/finishing-the-processing.md) - Memahami output yang diproses

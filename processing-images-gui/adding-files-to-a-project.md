@@ -1,199 +1,189 @@
-# Adding Files to a Project
+# Menambah Fail pada Projek
 
-Once you've created or opened a project in Chloros, the next step is to add your multispectral images to begin processing. The File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> tab makes it easy to import images and manage your dataset.
+Sebaik sahaja anda telah mencipta atau membuka projek dalam Chloros, langkah seterusnya ialah menambah imej berbilang spektrum anda untuk memulakan pemprosesan. Tab Pelayar Fail<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> memudahkan anda mengimport imej dan mengurus set data anda.
 
-## Accessing the File Browser
+## Mengakses Pelayar Fail
 
-1. Open or create a project in Chloros
-2. Click the **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> icon in the left sidebar
-3. The File Browser panel will display your project's file list
+1. Buka atau cipta projek dalam Chloros
+2. Klik ikon **Pelayar Fail** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> di bar sisi kiri
+3. Panel Pelayar Fail akan memaparkan senarai fail projek anda
 
 {% hint style="info" %}
-**Supported File Types**: Chloros supports RAW+JPG and JPG image files from MAPIR Survey3W and Survey3N cameras. Only RAW+JPG are recommended.
-{% endhint %}
+**Jenis Fail yang Disokong**: Chloros menyokong fail imej RAW+JPG dan JPG daripada kamera MAPIR Survey3W dan Survey3N. Hanya RAW+JPG disyorkan.
+Petua {% %}
 
 ***
 
-## Adding Images to Your Project
+## Menambah Imej pada Projek Anda
 
-There are two primary ways to add images to your project:
+Terdapat dua cara utama untuk menambah imej pada projek anda:
 
-### Method 1: Add Files
+### Kaedah 1: Tambah Fail
 
-Use this option to import individual image files or a small selection of files.
+Gunakan pilihan ini untuk mengimport fail imej individu atau pilihan kecil fail.
 
-1. Click the **"Add Files"** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> button at the top of the File Browser panel
-2. Navigate to the folder containing your images
-3. Select one or more image files (hold **Ctrl** to select multiple files)
-4. Click **"Open"** to import the selected files
+1. Klik butang **"Tambah Fail"** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> di bahagian atas panel Penyemak Imbas Fail
+2. Navigasi ke folder yang mengandungi imej anda
+3. Pilih satu atau lebih fail imej (tahan **Ctrl** untuk memilih berbilang fail)
+4. Klik **"Buka"** untuk mengimport fail yang dipilih
 
-### Method 2: Add Folder
+### Kaedah 2: Tambah Folder
 
-Use this option to import all images from a folder at once.
+Gunakan pilihan ini untuk mengimport semua imej dari folder sekaligus.
 
-1. Click the **"Add Folder"** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> button at the top of the File Browser panel
-2. Navigate to and select the folder containing your capture session images
-3. Click **"Select Folder"** to import all supported images from that folder
+1. Klik butang **"Tambah Folder"** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> di bahagian atas panel Penyemak Imbas Fail
+2. Navigasi ke dan pilih folder yang mengandungi imej sesi tangkapan anda
+3. Klik **"Pilih Folder"** untuk mengimport semua imej yang disokong daripada folder itu***
 
-***
+## Memahami Jadual Pelayar Fail
 
-## Understanding the File Browser Table
+Setelah imej diimport, ia muncul dalam jadual dengan lajur berikut:
 
-Once images are imported, they appear in a table with the following columns:
+### Nama Fail
 
-### File Name
+* Nama fail asal daripada kamera
+* Mengekalkan konvensyen penamaan kamera (cth., IMG\_0001.RAW)
 
-* Original filename from the camera
-* Maintains camera naming convention (e.g., IMG\_0001.RAW)
+### Cap masa
 
-### Timestamp
+* Tarikh dan masa imej ditangkap
+* Diekstrak daripada metadata EXIF ​​imej
+* Digunakan untuk penyegerakan PPK dan pengesanan sasaran penentukuran
 
-* Date and time the image was captured
-* Extracted from image EXIF metadata
-* Used for PPK synchronization and calibration target detection
+### Model Kamera
 
-### Camera Model
+* Kamera dan konfigurasi penapis dikesan secara automatik
+* Contoh: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
+* Digunakan untuk menggunakan profil pemprosesan yang betul
 
-* Automatically detected camera and filter configuration
-* Examples: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
-* Used to apply correct processing profiles
+### Lajur Sasaran (Kotak Semak)
 
-### Target Column (Checkbox)
-
-* Check this box for images that contain calibration targets
-* Greatly speeds up target detection during processing
-* See [Choosing Target Images](choosing-target-images.md) for details
+* Tandai kotak ini untuk imej yang mengandungi sasaran penentukuran
+* Sangat mempercepatkan pengesanan sasaran semasa pemprosesan
+* Lihat [Memilih Imej Sasaran](choosing-target-images.md) untuk butiran
 
 ***
 
-## Managing Files in Your Project
+## Mengurus Fail dalam Projek Anda
 
-### Removing Files
+### Mengalih keluar Fail
 
-To remove unwanted images from your project:
+Untuk mengalih keluar imej yang tidak diingini daripada projek anda:
 
-1. Select one or more images in the File Browser table
-2. Click the **"Remove Selected"** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> button
-3. Confirm removal (files are not deleted from disk, only removed from the project)
+1. Pilih satu atau lebih imej dalam jadual Pelayar Fail
+2. Klik butang **"Alih Keluar Dipilih"** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
+3. Sahkan penyingkiran (fail tidak dipadamkan daripada cakera, hanya dialih keluar daripada projek)
 
-### Sorting and Filtering
+### Isih dan Penapisan
 
-* **Sort by column**: Click any column header to sort images
-* **Timestamp sort**: Useful for organizing chronological capture sequences
-* **Camera model filter**: Group images by camera type if using multiple cameras
+* **Isih mengikut lajur**: Klik mana-mana pengepala lajur untuk mengisih imej
+* **Isih cap masa**: Berguna untuk mengatur urutan tangkapan kronologi
+* **Penapis model kamera**: Himpunkan imej mengikut jenis kamera jika menggunakan berbilang kamera***
 
-***
+## Pratonton Imej
 
-## Image Preview
+### Melihat Imej Penuh
 
-### Viewing Full Image
+Klik mana-mana imej kecil imej dalam Pelayar Fail untuk memaparkannya dalam kawasan pratonton utama:
 
-Click any image thumbnail in the File Browser to display it in the main preview area:
+1. Imej muncul dalam panel pratonton tengah
+2. Gunakan kawalan zum untuk memeriksa butiran imej
+3. Navigasi antara imej menggunakan kekunci anak panah
 
-1. Image appears in the center preview panel
-2. Use zoom controls to inspect image details
-3. Navigate between images using arrow keys
+### Navigasi Pantas
 
-### Quick Navigation
+* **Imej Sebelumnya**: Klik anak panah kiri atau tekan kekunci ←
+* **Imej Seterusnya**: Klik anak panah kanan atau tekan kekunci →
+* **Zum Masuk/Keluar**: Gunakan roda tetikus atau butang zum
+* **Sorot**: Klik dan seret pada imej apabila dizum masuk***
 
-* **Previous Image**: Click left arrow or press ← key
-* **Next Image**: Click right arrow or press → key
-* **Zoom In/Out**: Use mouse wheel or zoom buttons
-* **Pan**: Click and drag on image when zoomed in
+## Pengendalian Fail Pendua
 
-***
+Chloros secara automatik mengesan dan mengabaikan fail pendua:
 
-## Duplicate File Handling
+* Fail dengan nama fail yang sama dilangkau
+* Mencegah pemprosesan dua kali secara tidak sengaja
+* Mesej amaran dipaparkan apabila pendua dikesan
 
-Chloros automatically detects and ignores duplicate files:
-
-* Files with identical filenames are skipped
-* Prevents accidental double-processing
-* Warning message displayed when duplicates are detected
-
-{% hint style="warning" %}
-**Important**: Do not rename or modify your original image files before importing. Chloros relies on original filenames and metadata for proper processing.
-{% endhint %}
+{% gaya petunjuk="amaran" %}
+**Penting**: Jangan menamakan semula atau mengubah suai fail imej asal anda sebelum mengimport. Chloros bergantung pada nama fail dan metadata asal untuk pemprosesan yang betul.
+Petua {% %}
 
 ***
 
-## Mixed Camera Datasets
+## Set Data Kamera Bercampur
 
-If your project contains images from multiple MAPIR cameras:
+Jika projek anda mengandungi imej daripada berbilang kamera MAPIR:
 
-1. Chloros automatically detects each camera model
-2. Each camera type is processed with its appropriate calibration profile
-3. File Browser displays camera model in the Camera Model column
-4. Processing applies correct settings for each camera type
+1. Chloros secara automatik mengesan setiap model kamera
+2. Setiap jenis kamera diproses dengan profil penentukuran yang sesuai
+3. Pelayar Fail memaparkan model kamera dalam lajur Model Kamera
+4. Pemprosesan menggunakan tetapan yang betul untuk setiap jenis kamera
 
-**Example scenario**: Survey3W RGN + Survey3N OCN dual-camera setup
+**Contoh senario**: Survey3W RGN + Survey3N OCN persediaan dwi-kamera***
 
-***
+## Amalan Terbaik
 
-## Best Practices
+### Susun Sebelum Import
 
-### Organize Before Import
+* Simpan imej sasaran penentukuran dalam folder yang sama dengan imej tinjauan
+* Kekalkan struktur folder asal daripada kamera/kad SD anda
+* Jangan campurkan set data daripada sesi berbeza dalam satu projek
 
-* Keep calibration target images in the same folder as survey images
-* Maintain original folder structure from your camera/SD card
-* Don't mix datasets from different sessions in one project
+### Penamaan Fail
 
-### File Naming
+* Kekalkan nama fail kamera asal (IMG\_0001.RAW, dsb.)
+* Jangan namakan semula fail sebelum diimport
+* Nama asal mengandungi metadata penting
 
-* Preserve original camera filenames (IMG\_0001.RAW, etc.)
-* Don't rename files before import
-* Original names contain important metadata
+### Imej Sasaran Penentukuran
 
-### Calibration Target Images
-
-* Always include 1-2 calibration target images per session
-* Capture targets before and after the capture session
-* Place targets in the same lighting conditions as capture area
-* Mark target images using the Target checkbox to speed up processing
+* Sentiasa sertakan 1-2 imej sasaran penentukuran setiap sesi
+* Tangkap sasaran sebelum dan selepas sesi tangkapan
+* Letakkan sasaran dalam keadaan pencahayaan yang sama seperti kawasan tangkapan
+* Tandai imej sasaran menggunakan kotak semak Sasaran untuk mempercepatkan pemprosesan
 
 ***
 
-## Common Issues and Solutions
+## Isu dan Penyelesaian Biasa
 
-### Images Not Appearing After Import
+### Imej Tidak Muncul Selepas Import
 
-**Possible causes:**
+**Punca yang mungkin:**
 
-* File format not supported (only RAW+JPG and JPG from MAPIR cameras)
-* Images are from non-MAPIR cameras (see [Supported Cameras](../supported-cameras.md))
-* File corruption or incomplete transfer from SD card
+* Format fail tidak disokong (hanya RAW+JPG dan JPG daripada kamera MAPIR)
+* Imej adalah daripada kamera bukan MAPIR (lihat [Kamera Disokong](../supported-cameras.md))
+* Fail rasuah atau pemindahan tidak lengkap daripada kad SD
 
-**Solution**: Verify file format and camera model compatibility
+**Penyelesaian**: Sahkan format fail dan keserasian model kamera
 
-### Camera Model Not Detected
+### Model Kamera Tidak Dikesan
 
-**Possible causes:**
+**Punca yang mungkin:**
 
-* Modified EXIF metadata
-* Images edited in external software
-* Incomplete file transfer
+* Metadata EXIF ​​yang diubah suai
+* Imej disunting dalam perisian luaran
+* Pemindahan fail tidak lengkap
 
-**Solution**: Re-import original, unmodified files from camera/SD card
+**Penyelesaian**: Import semula fail asal yang tidak diubah suai daripada kamera/kad SD
 
-### Missing Timestamps
+### Cap Masa Tiada
 
-**Possible causes:**
+**Punca yang mungkin:**
 
-* Camera clock not set correctly
-* EXIF data stripped by external software
+* Jam kamera tidak ditetapkan dengan betul
+* Data EXIF ​​dilucutkan oleh perisian luaran
 
-**Solution**: Verify camera time settings were correct during capture
+**Penyelesaian**: Sahkan tetapan masa kamera adalah betul semasa tangkapan***
 
-***
+## Langkah Seterusnya
 
-## Next Steps
+Setelah fail anda diimport:
 
-Once your files are imported:
+1. **Semak senarai fail** - Pastikan semua imej dimuatkan dengan betul
+2. **Semak model kamera** - Sahkan pengesanan kamera yang betul
+3. **Tandai imej sasaran** - Lihat [Memilih Imej Sasaran](choosing-target-images.md)
+4. **Laraskan tetapan** - Konfigurasikan pilihan pemprosesan dalam [Tetapan Projek](adjusting-project-settings.md)
+5. **Mulakan pemprosesan** - Lihat [Memulakan Pemprosesan](starting-the-processing.md)
 
-1. **Review the file list** - Ensure all images loaded correctly
-2. **Check camera models** - Verify correct camera detection
-3. **Mark target images** - See [Choosing Target Images](choosing-target-images.md)
-4. **Adjust settings** - Configure processing options in [Project Settings](adjusting-project-settings.md)
-5. **Start processing** - See [Starting the Processing](starting-the-processing.md)
-
-For detailed information about project configuration, see [Adjusting Project Settings](adjusting-project-settings.md).
+Untuk maklumat terperinci tentang konfigurasi projek, lihat [Melaraskan Tetapan Projek](adjusting-project-settings.md).

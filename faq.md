@@ -1,72 +1,72 @@
 ---
-Penerangan: Soalan yang sering ditanya
-Metalinks:
-  Ganti:
-    - https://app.gitbook.com/s/o044kn3ws0uidvomskcr/faq
+description: Frequently Asked Questions
+metaLinks:
+  alternates:
+    - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/faq
 ---
 
-# FAQ
+# Soalan Lazim
 
-<details>
+<butiran>
 
-<summary>Bolehkah saya memproses imej dari kamera yang bukan jenama Mapir dengan kloros?</summary>
+<summary>Bolehkah saya memproses imej daripada kamera yang bukan jenama MAPIR dengan Chloros?</summary>
 
-Tidak, kloros hanya menyokong pemprosesan imej kamera Mapir. Sila lihat senarai [model kamera yang disokong](disokong kamer.md) untuk maklumat lanjut. Kami menawarkan pemprosesan kamera lain di Mapir Cloud, lihat senarai penuh [di sini](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
+Tidak, Chloros hanya menyokong pemprosesan imej kamera MAPIR. Sila lihat senarai [model kamera yang disokong](supported-cameras.md) untuk mendapatkan maklumat lanjut. Kami menawarkan pemprosesan kamera lain pada MAPIR Cloud, lihat senarai penuh [di sini](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
 
-</details>
+</detail>
 
-<details>
+<butiran>
 
-<summary>Bolehkah saya menentukur gambar saya untuk pemantulan tanpa sasaran penentukuran?</summary>
+<summary>Bolehkah saya menentukur imej saya untuk pemantulan tanpa sasaran penentukuran?</summary>
 
-Tidak. Tanpa imej sasaran penentukuran yang ditangkap apabila imej bukan sasaran ditangkap, anda tidak akan dapat mengaitkan nilai piksel imej kepada peratus refleksi yang diketahui. Jika anda juga tidak memasukkan log dari sensor cahaya MAPIR maka spektrum cahaya ambien tidak akan diukur, dan hasil refleksi tidak akan tepat.
+Tidak. Tanpa imej sasaran penentukuran yang ditangkap sekitar apabila imej bukan sasaran ditangkap, anda tidak akan dapat mengaitkan nilai piksel imej dengan peratus pemantulan yang diketahui. Jika anda juga tidak memasukkan log daripada penderia cahaya MAPIR maka spektrum cahaya ambien tidak akan diukur dan hasil pemantulan tidak akan tepat.
 
-</details>
+</detail>
 
-<details>
+<butiran>
 
-<summary>Bolehkah saya mengedit imej saya sebelum diproses di kloros?</summary>
+<summary>Bolehkah saya mengedit imej saya sebelum memproses dalam Chloros?</summary>
 
-Tidak. Chloros menganggap data input belum diubahsuai. Jangan ubah nama fail.
+Tidak. Chloros menganggap data input belum diubah suai. Jangan tukar nama fail.
 
-</details>
+</detail>
 
-<details>
+<butiran>
 
-<summary>Bolehkah saya menetapkan kamera Mapir Survey3 saya untuk pendedahan auto dan memproses imej di kloros?</summary>
+<summary>Bolehkah saya menetapkan kamera MAPIR Survey3 saya kepada pendedahan automatik dan memproses imej dalam Chloros?</summary>
 
-No. Dataset Imej Survey3 mesti mempunyai pendedahan tetap/terkunci, jadi tiada kelajuan pengatup auto atau ISO auto. Semua imej model kamera yang sama mesti mempunyai kelajuan pengatup yang sama dan ISO (pendedahan).
+Tidak. Survey3 set data imej mesti mempunyai pendedahan tetap/terkunci, jadi tiada kelajuan pengatup automatik atau ISO automatik. Semua imej model kamera yang sama mesti mempunyai kelajuan pengatup dan ISO (pendedahan) yang sama.
 
-</details>
+</detail>
 
-<details>
+<butiran>
 
-<summary>Bolehkah kloros memproses atau menganalisis imej orthomosaik?</summary>
+<summary>Bolehkah Chloros memproses atau menganalisis imej orthomosaic?</summary>
 
-Tidak. Hanya imej kamera Mapir individu yang disokong, tidak dijahit imej seperti peta orthomosaik.
+Tidak. Hanya imej kamera MAPIR individu disokong, bukan imej bercantum seperti peta orthomosaic.
 
-</details>
+</detail>
 
-<details>
+<butiran>
 
-<summary>Bagaimanakah saya dapat mempercepatkan langkah pengesanan sasaran kloros?</summary>
+<summary>Bagaimanakah saya boleh mempercepatkan langkah pengesanan sasaran Chloros?</summary>
 
-Dalam jadual penyemak imbas fail yang sebelum memilih imej sasaran di lajur kanan akan memberitahu kloros hanya melihat imej tersebut untuk sasaran penentukuran, sangat mempercepatkan pemprosesan.
+Dalam jadual penyemak imbas fail, pra-memilih imej sasaran dalam lajur kanan akan memberitahu Chloros untuk hanya melihat dalam imej tersebut untuk sasaran penentukuran, dengan sangat mempercepatkan pemprosesan.
 
-</details>
+</detail>
 
-<details>
+<butiran>
 
 <summary>Jika saya akan memuat naik imej saya ke <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud</a> patutkah saya memproses dalam Chloros sebelum memuat naik?</summary>
 
-Jika anda bercadang untuk memuat naik ke platform pemprosesan dalam talian kami [Mapir Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription) Jangan edit imej sebelum dimuat naik. Awan akan melakukan semua pemprosesan yang sama dan banyak lagi.
+Jika anda bercadang untuk memuat naik ke platform pemprosesan dalam talian kami [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription) jangan edit imej sebelum memuat naik. Cloud akan melakukan semua pemprosesan yang sama dan banyak lagi.
 
-</details>
+</detail>
 
-<details>
+<butiran>
 
-<summary>Adakah Mapir pernah menyokong ciri X? Saya sangat berharap Mapir ditawarkan X.</summary>
+<summary>Adakah MAPIR akan menyokong ciri X? Saya sangat berharap MAPIR ditawarkan X.</summary>
 
-Kami sentiasa berminat untuk menerima maklum balas mengenai produk kami. Jika anda menemui masalah dengan produk kami, atau mempunyai cadangan tentang bagaimana kami dapat memperbaiki produk kami, sila [hubungi kami](https://www.mapir.camera/community/contact) untuk berkongsi pemikiran anda. Kebanyakan R \ & D kami dipandu dengan mendengar keperluan terbesar pelanggan kami.
+Kami sentiasa berminat untuk menerima maklum balas mengenai produk kami. Jika anda menemui masalah dengan produk kami, atau mempunyai cadangan tentang cara kami boleh menambah baik produk kami, sila [HUBUNGI KAMI](https://www.mapir.camera/community/contact) untuk berkongsi pendapat anda. Kebanyakan R\&D kami dipandu dengan mendengar keperluan terbesar pelanggan kami.
 
-</details>
+</detail>

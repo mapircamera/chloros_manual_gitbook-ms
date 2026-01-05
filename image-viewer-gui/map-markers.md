@@ -1,165 +1,163 @@
-# Map Markers
+# Penanda Peta
 
-The Map tab displays your images on an interactive 2D map based on their GPS coordinates. This provides a geographic overview of your capture session and helps you visualize spatial coverage. It is also useful when first importing your images to quickly remove any images you do not need to process.
+Tab Peta memaparkan imej anda pada peta 2D interaktif berdasarkan koordinat GPS mereka. Ini memberikan gambaran keseluruhan geografi bagi sesi tangkapan anda dan membantu anda menggambarkan liputan spatial. Ia juga berguna apabila mula-mula mengimport imej anda untuk mengalih keluar mana-mana imej yang anda tidak perlu proses dengan cepat.
 
-## Accessing the Map Tab
+## Mengakses Tab Peta
 
-1. Open or create a project in Chloros
-2. Import images that contain GPS metadata
-3. Click the **Map** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tab in the left sidebar
-4. The map will display markers at each image's GPS location
+1. Buka atau cipta projek dalam Chloros
+2. Import imej yang mengandungi metadata GPS
+3. Klik tab **Map** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tab di bar sisi kiri
+4. Peta akan memaparkan penanda pada setiap lokasi GPS imej
 
-{% hint style="info" %}
-**GPS Required**: Only images with embedded GPS coordinates in their EXIF metadata will appear on the map. Ensure your camera has GPS enabled during capture.
-{% endhint %}
-
-***
-
-## Adjusting Images from Map Tab
-
-The **Map** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tab has the same add  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  and remove  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  file buttons as the [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> tab does. It also shows the same project file table list but with different column headers:
-
-### File Name
-
-* Original filename from the camera
-* Maintains camera naming convention (e.g., IMG\_0001.RAW)
-
-### Latitude
-
-* The image's latitude
-
-### Longitude
-
-* The image's longitude
-
-### Altitude
-
-* The image's altitude
-
-{% hint style="info" %}
-Clicking the table column headers also sorts the row data
-{% endhint %}
+{% gaya petunjuk="info" %}
+**GPS Diperlukan**: Hanya imej dengan koordinat GPS terbenam dalam metadata EXIF ​​mereka akan muncul pada peta. Pastikan kamera anda mendayakan GPS semasa tangkapan.
+Petua {% %}
 
 ***
 
-## Image Markers
+## Melaraskan Imej daripada Tab Peta
 
-Each image with GPS data is represented by a marker on the map:
+Tab **Map**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> mempunyai penambahan yang sama <img src="../.gitbook/assets/image.png" alt="" data-size="line"> <img src="../.ng"imagebook (aset) yang sama.=". data-size="line"> dan alih keluar butang fail <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> sebagai [**Pelayar Fail**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_PG-file" data-size="line"> tab tidak. Ia juga menunjukkan senarai jadual fail projek yang sama tetapi dengan pengepala lajur yang berbeza:
 
-### Marker Display
+### Nama Fail
 
-* Markers indicate the exact GPS coordinates where each image was captured
-* Clustered markers may group together when zoomed out
-* Zoom in to see individual image locations
+* Nama fail asal daripada kamera
+* Mengekalkan konvensyen penamaan kamera (cth., IMG\_0001.RAW)
 
-{% hint style="success" %}
-SUPER-ZOOM: When you reach the maximum zoom level from the map tile provider the tile is then enlarged upon further zoom, allowing you to see markers that are close together.
-{% endhint %}
+### Latitud
 
-### Hover Preview
+* Latitud imej
 
-* **Hover your mouse** over any marker to see a thumbnail preview of that image
-* This allows quick visual identification without leaving the map view
-* Useful for locating specific images within a large capture session
+### Longitud
+
+* Longitud imej
+
+### Ketinggian
+
+* Ketinggian imej
+
+{% gaya pembayang="info" %}
+Mengklik pengepala lajur jadual juga mengisih data baris
+Petua {% %}
 
 ***
 
-## Map Tile Providers
+## Penanda Imej
 
-{% hint style="success" %}
-**Automatic Selection**: Chloros automatically chooses the tile service that provides the best zoom level for your current map location. You can manually switch between providers if desired.
-{% endhint %}
+Setiap imej dengan data GPS diwakili oleh penanda pada peta:
 
-The Map tab supports two tile providers for the background map imagery:
+### Paparan Penanda
 
-### Google Maps
+* Penanda menunjukkan koordinat GPS yang tepat di mana setiap imej telah ditangkap
+* Penanda berkelompok mungkin berkumpul bersama apabila dizum keluar
+* Zum masuk untuk melihat lokasi imej individu
 
-* Standard satellite and map imagery from Google
-* Best for general worldwide coverage
+{% gaya petunjuk="berjaya" %}
+SUPER-ZOOM: Apabila anda mencapai tahap zum maksimum daripada pembekal jubin peta, jubin kemudiannya dibesarkan apabila zum selanjutnya, membolehkan anda melihat penanda yang berdekatan.
+Petua {% %}
+
+### Pratonton Tuding
+
+* **Tuding tetikus anda** pada mana-mana penanda untuk melihat pratonton lakaran kecil imej itu
+* Ini membolehkan pengenalan visual pantas tanpa meninggalkan paparan peta
+* Berguna untuk mencari imej tertentu dalam sesi tangkapan besar
+
+***
+
+## Pembekal Jubin Peta
+
+{% gaya petunjuk="berjaya" %}
+**Pemilihan Automatik**: Chloros secara automatik memilih perkhidmatan jubin yang menyediakan tahap zum terbaik untuk lokasi peta semasa anda. Anda boleh bertukar secara manual antara pembekal jika mahu.
+Petua {% %}
+
+Tab Peta menyokong dua pembekal jubin untuk imejan peta latar belakang:
+
+### Peta Google
+
+* Imej satelit dan peta standard daripada Google
+* Terbaik untuk liputan umum di seluruh dunia
 
 ### ESRI
 
-* Satellite and aerial imagery from ESRI ArcGIS
-* Often provides higher resolution imagery in certain regions
+* Imej satelit dan udara daripada ESRI ArcGIS
+* Selalunya memberikan imejan resolusi lebih tinggi di kawasan tertentu
 
 ***
 
-## Map Tile Types
+## Jenis Jubin Peta
 
-You can choose the map layer type (from left to right):
+Anda boleh memilih jenis lapisan peta (dari kiri ke kanan):
 
 &#x20;<img src="../.gitbook/assets/image (23).png" alt="" data-size="original">
 
-### Terrain
+### Rupa bumi
 
-Shows elevation profiles and map tiles with details (roads, etc)
+Menunjukkan profil ketinggian dan jubin peta dengan butiran (jalan raya, dll)
 
-### Map
+### Peta
 
-Shows standard (lower bandwidth) map tiles with details (roads, etc)
+Menunjukkan jubin peta standard (jalur lebar lebih rendah) dengan butiran (jalan raya, dll)
 
-### Satellite
+### Satelit
 
-Shows detailed (higher bandwidth) satellite map tiles
+Menunjukkan jubin peta satelit terperinci (jalur lebar lebih tinggi).
 
-### Hybrid
+### Hibrid
 
-Shows satellite map tiles with added details (roads, etc)
-
-***
-
-## Map Navigation
-
-### Zoom Controls
-
-* **Zoom In/Out**: Use mouse scroll wheel or zoom buttons
-* **Fullscreen**: Fullscreen the map
-
-### Pan Controls
-
-* **Pan**: Click and drag to move around the map
+Menunjukkan jubin peta satelit dengan butiran tambahan (jalan raya, dll)
 
 ***
 
-## Use Cases
+## Navigasi Peta
 
-### Flight Path Visualization
+### Kawalan Zum
 
-* View the coverage area of drone capture sessions
-* Identify gaps in image coverage
-* Verify flight path execution
+* **Zum Masuk/Keluar**: Gunakan roda skrol tetikus atau butang zum
+* **Skrin penuh**: Skrin penuh peta
 
-### Ground Survey Review
+### Kawalan Kuali
 
-* See the spatial distribution of ground-based captures
-* Locate calibration target images relative to survey area
-* Plan additional capture locations
+* **Sorot**: Klik dan seret untuk bergerak di sekitar peta***
 
-### Quality Control
+## Kes Penggunaan
 
-* Quickly identify images captured in unexpected locations
-* Verify GPS accuracy across the dataset
-* Cross-reference image locations with field notes
+### Visualisasi Laluan Penerbangan
+
+* Lihat kawasan liputan sesi tangkapan dron
+* Kenal pasti jurang dalam liputan imej
+* Sahkan pelaksanaan laluan penerbangan
+
+### Kajian Tinjauan Tanah
+
+* Lihat taburan spatial tangkapan berasaskan darat
+* Cari imej sasaran penentukuran berbanding dengan kawasan tinjauan
+* Rancang lokasi tangkapan tambahan
+
+### Kawalan Kualiti
+
+* Mengenal pasti imej yang ditangkap dengan cepat di lokasi yang tidak dijangka
+* Sahkan ketepatan GPS merentas set data
+* Lokasi imej rujukan silang dengan nota lapangan
 
 ***
 
-## Troubleshooting
+## Menyelesaikan masalah
 
-### No Markers Appearing
+### Tiada Penanda Muncul
 
-**Possible causes:**
+**Punca yang mungkin:**
 
-* Images do not contain GPS metadata
-* GPS was disabled on camera during capture
-* EXIF data was stripped by external software
+* Imej tidak mengandungi metadata GPS
+* GPS telah dilumpuhkan pada kamera semasa tangkapan
+* Data EXIF ​​​​dilucutkan oleh perisian luaran
 
-**Solution**: Verify GPS is enabled on your camera and re-import original files
+**Penyelesaian**: Sahkan GPS didayakan pada kamera anda dan import semula fail asal
 
-### Markers in Wrong Location
+### Penanda di Lokasi yang Salah
 
-**Possible causes:**
+**Punca yang mungkin:**
 
-* Camera GPS had poor satellite fix
-* GPS drift during capture
+* GPS kamera mempunyai pembetulan satelit yang lemah
+* GPS hanyut semasa tangkapan
 
-**Solution**: This is typically a capture-time issue; consider using PPK/RTK GPS for precision applications
+**Penyelesaian**: Ini biasanya isu masa tangkapan; pertimbangkan untuk menggunakan GPS PPK/RTK untuk aplikasi ketepatan

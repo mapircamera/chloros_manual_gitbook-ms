@@ -1,48 +1,48 @@
 # API : Python SDK
 
-The **Chloros Python SDK** provides programmatic access to the Chloros image processing engine, enabling automation, custom workflows, and seamless integration with your Python applications and research pipelines.
+**Chloros Python SDK** menyediakan akses terprogram kepada enjin pemprosesan imej Chloros, membolehkan automasi, aliran kerja tersuai dan penyepaduan lancar dengan aplikasi dan saluran paip penyelidikan Python anda.
 
-### Key Features
+### Ciri Utama
 
-* 🐍 **Native Python** - Clean, Pythonic API for image processing
-* 🔧 **Full API Access** - Complete control over Chloros processing
-* 🚀 **Automation** - Build custom batch processing workflows
-* 🔗 **Integration** - Embed Chloros in existing Python applications
-* 📊 **Research-Ready** - Perfect for scientific analysis pipelines
-* ⚡ **Parallel Processing** - Scales to your CPU cores (Chloros+)
+* 🍅 **Python asli** - Bersih, Pythonic API untuk pemprosesan imej
+* 🔧 **Akses API Penuh** - Kawalan sepenuhnya ke atas pemprosesan Chloros
+* 🚀 **Automasi** - Bina aliran kerja pemprosesan kelompok tersuai
+* 🔗 **Integrasi** - Benamkan Chloros dalam aplikasi Python sedia ada
+* 📊 **Sedia Penyelidikan** - Sesuai untuk saluran paip analisis saintifik
+* ⚡ **Pemprosesan Selari** - Skala kepada teras CPU anda (Chloros+)
 
-### Requirements
+### Keperluan
 
-| Requirement          | Details                                                             |
+| Keperluan | Butiran |
 | -------------------- | ------------------------------------------------------------------- |
-| **Chloros Desktop**  | Must be installed locally                                           |
-| **License**          | Chloros+ ([paid plan required](https://cloud.mapir.camera/pricing)) |
-| **Operating System** | Windows 10/11 (64-bit)                                              |
-| **Python**           | Python 3.7 or higher                                                |
-| **Memory**           | 8GB RAM minimum (16GB recommended)                                  |
-| **Internet**         | Required for license activation                                     |
+| **Chloros Desktop** | Mesti dipasang secara tempatan |
+| **Lesen** | Chloros+ ([pelan berbayar diperlukan](https://cloud.mapir.camera/pricing)) |
+| **Sistem Pengendalian** | Windows 10/11 (64-bit) |
+| **Python** | Python 3.7 atau lebih tinggi |
+| **Memori** | 8GB RAM minimum (16GB disyorkan) |
+| **Internet** | Diperlukan untuk pengaktifan lesen |
 
-{% hint style="warning" %}
-**License Requirement**: The Python SDK requires a paid Chloros+ subscription for API access. Standard (free) plans do not have API/SDK access. Visit [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) to upgrade.
-{% endhint %}
+{% gaya petunjuk="amaran" %}
+**Keperluan Lesen**: Python SDK memerlukan langganan Chloros+ berbayar untuk akses API. Pelan standard (percuma) tidak mempunyai akses API/SDK. Lawati [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) untuk menaik taraf.
+Petua {% %}
 
-## Quick Start
+## Mula Pantas
 
-### Installation
+### Pemasangan
 
-Install via pip:
+Pasang melalui pip:
 
 ```bash
 pip install chloros-sdk
 ```
 
-{% hint style="info" %}
-**First-Time Setup**: Before using the SDK, activate your Chloros+ license by opening Chloros, Chloros (Browser) or Chloros CLI and logging in with your credentials. This only needs to be done once.
-{% endhint %}
+{% gaya pembayang="info" %}
+**Persediaan Kali Pertama**: Sebelum menggunakan SDK, aktifkan lesen Chloros+ anda dengan membuka Chloros, Chloros (Pelayar) atau Chloros XPROTX000232 dalam log masuk dengan cPROTX00232 anda. Ini hanya perlu dilakukan sekali sahaja.
+Petua {% %}
 
-### Basic Usage
+### Penggunaan Asas
 
-Process a folder with just a few lines:
+Proses folder dengan hanya beberapa baris:
 
 ```python
 from chloros_sdk import process_folder
@@ -51,9 +51,9 @@ from chloros_sdk import process_folder
 results = process_folder("C:\\DroneImages\\Flight001")
 ```
 
-### Full Control
+### Kawalan Penuh
 
-For advanced workflows:
+Untuk aliran kerja lanjutan:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -80,39 +80,39 @@ chloros.process(mode="parallel", wait=True)
 
 ***
 
-## Installation Guide
+## Panduan Pemasangan
 
-### Prerequisites
+### Prasyarat
 
-Before installing the SDK, ensure you have:
+Sebelum memasang SDK, pastikan anda mempunyai:
 
-1. **Chloros Desktop** installed ([download](download.md))
-2. **Python 3.7+** installed ([python.org](https://www.python.org))
-3. **Active Chloros+ license** ([upgrade](https://cloud.mapir.camera/pricing))
+1. **Chloros Desktop** dipasang ([muat turun](download.md))
+2. **Python 3.7+** dipasang ([python.org](https://www.python.org))
+3. **lesen Chloros+ aktif** ([naik taraf](https://cloud.mapir.camera/pricing))
 
-### Install via pip
+### Pasang melalui pip
 
-**Standard installation:**
+**Pemasangan standard:**
 
 ```bash
 pip install chloros-sdk
 ```
 
-**With progress monitoring support:**
+**Dengan sokongan pemantauan kemajuan:**
 
 ```bash
 pip install chloros-sdk[progress]
 ```
 
-**Development installation:**
+**Pemasangan pembangunan:**
 
 ```bash
 pip install chloros-sdk[dev]
 ```
 
-### Verify Installation
+### Sahkan Pemasangan
 
-Test that the SDK is installed correctly:
+Uji bahawa SDK dipasang dengan betul:
 
 ```python
 import chloros_sdk
@@ -121,27 +121,27 @@ print(f"Chloros SDK version: {chloros_sdk.__version__}")
 
 ***
 
-## First-Time Setup
+## Persediaan Kali Pertama
 
-### License Activation
+### Pengaktifan Lesen
 
-The SDK uses the same license as Chloros, Chloros (Browser), and Chloros CLI. Activate once via the GUI or CLI:
+SDK menggunakan lesen yang sama seperti Chloros, Chloros (Pelayar) dan Chloros CLI. Aktifkan sekali melalui GUI atau CLI:
 
-1. Open **Chloros or Chloros (Browser)** and login on the User <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> tab. Or, open the **CLI**.
-2. Enter your Chloros+ credentials and log in
-3. License is cached locally (persists across reboots)
+1. Buka **Chloros atau Chloros (Pelayar)**dan log masuk pada tab Pengguna <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line">. Atau, buka**CLI**.
+2. Masukkan bukti kelayakan Chloros+ anda dan log masuk
+3. Lesen dicache secara setempat (berterusan sepanjang but semula)
 
-{% hint style="success" %}
-**One-Time Setup**: After logging in via the GUI or CLI, the SDK automatically uses the cached license. No additional authentication needed!
-{% endhint %}
+{% gaya petunjuk="berjaya" %}
+**Sediaan Satu Kali**: Selepas log masuk melalui GUI atau CLI, SDK secara automatik menggunakan lesen cache. Tiada pengesahan tambahan diperlukan!
+Petua {% %}
 
-{% hint style="info" %}
-**Logout**: SDK users can programmatically clear cached credentials using the `logout()` method. See [logout() method](#logout) in the API Reference.
-{% endhint %}
+{% gaya pembayang="info" %}
+**Log Keluar**: Pengguna SDK boleh mengosongkan bukti kelayakan cache secara pemrograman menggunakan kaedah `logout()`. Lihat [kaedah log keluar()](#logout) dalam Rujukan API.
+Petua {% %}
 
-### Test Connection
+### Sambungan Ujian
 
-Verify the SDK can connect to Chloros:
+Sahkan SDK boleh menyambung ke Chloros:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -156,13 +156,13 @@ print(f"Backend running: {status['running']}")
 
 ***
 
-## API Reference
+## Rujukan API
 
-### ChlorosLocal Class
+### Kelas ChlorosLocal
 
-Main class for local Chloros image processing.
+Kelas utama untuk pemprosesan imej Chloros tempatan.
 
-#### Constructor
+#### Pembina
 
 ```python
 ChlorosLocal(
@@ -174,17 +174,17 @@ ChlorosLocal(
 )
 ```
 
-**Parameters:**
+**Parameter:**
 
-| Parameter                 | Type | Default                   | Description                           |
-| ------------------------- | ---- | ------------------------- | ------------------------------------- |
-| `api_url`                 | str  | `"http://localhost:5000"` | URL of local Chloros backend          |
-| `auto_start_backend`      | bool | `True`                    | Automatically start backend if needed |
-| `backend_exe`             | str  | `None` (auto-detect)      | Path to backend executable            |
-| `timeout`                 | int  | `30`                      | Request timeout in seconds            |
-| `backend_startup_timeout` | int  | `60`                      | Timeout for backend startup (seconds) |
+| Parameter | Taip | Lalai | Penerangan |
+| -------------------------- | ---- | -------------------------- | ------------------------------------- |
+| `api_url` | str | `"http://localhost:5000"` | URL daripada bahagian belakang Chloros tempatan |
+| `auto_start_backend` | bool | `True` | Mulakan bahagian belakang secara automatik jika perlu |
+| `backend_exe` | str | `None` (auto-kesan) | Laluan ke bahagian belakang boleh laku |
+| `timeout` | int | `30` | Minta tamat masa dalam beberapa saat |
+| `backend_startup_timeout` | int | `60` | Tamat masa untuk permulaan bahagian belakang (saat) |
 
-**Examples:**
+**Contoh:**
 
 ```python
 # Default (auto-start backend)
@@ -202,22 +202,20 @@ chloros = ChlorosLocal(timeout=60)
 
 ***
 
-### Methods
+### Kaedah
 
 #### `create_project(project_name, camera=None)`
 
-Create a new Chloros project.
+Buat projek Chloros baharu.
 
-**Parameters:**
+**Parameter:**
 
-| Parameter      | Type | Required | Description                                              |
+| Parameter | Taip | Diperlukan | Penerangan |
 | -------------- | ---- | -------- | -------------------------------------------------------- |
-| `project_name` | str  | Yes      | Name for the project                                     |
-| `camera`       | str  | No       | Camera template (e.g., "Survey3N\_RGN", "Survey3W\_OCN") |
+| `project_name` | str | Ya | Nama untuk projek |
+| `camera` | str | Tidak | Templat kamera (cth., "Survey3N\_RGN", "Survey3W\_OCN") |
 
-**Returns:** `dict` - Project creation response
-
-**Example:**
+**Pemulangan:** `dict` - Respons penciptaan projek**Contoh:**
 
 ```python
 # Basic project
@@ -231,18 +229,16 @@ chloros.create_project("DroneField_A", camera="Survey3N_RGN")
 
 #### `import_images(folder_path, recursive=False)`
 
-Import images from a folder.
+Import imej dari folder.
 
-**Parameters:**
+**Parameter:**
 
-| Parameter     | Type     | Required | Description                        |
-| ------------- | -------- | -------- | ---------------------------------- |
-| `folder_path` | str/Path | Yes      | Path to folder with images         |
-| `recursive`   | bool     | No       | Search subfolders (default: False) |
+| Parameter | Taip | Diperlukan | Penerangan |
+| ------------- | -------- | -------- | ------------------------------------ |
+| `folder_path` | str/Laluan | Ya | Laluan ke folder dengan imej |
+| `recursive` | bool | Tidak | Cari subfolder (lalai: Palsu) |
 
-**Returns:** `dict` - Import results with file count
-
-**Example:**
+**Pemulangan:** `dict` - Import hasil carian dengan kiraan fail**Contoh:**
 
 ```python
 # Import from folder
@@ -256,32 +252,28 @@ chloros.import_images("C:\\DroneImages", recursive=True)
 
 #### `configure(**settings)`
 
-Configure processing settings.
+Konfigurasikan tetapan pemprosesan.
 
-**Parameters:**
+**Parameter:**
 
-| Parameter                 | Type | Default                 | Description                     |
-| ------------------------- | ---- | ----------------------- | ------------------------------- |
-| `debayer`                 | str  | "High Quality (Faster)" | Debayer method                  |
-| `vignette_correction`     | bool | `True`                  | Enable vignette correction      |
-| `reflectance_calibration` | bool | `True`                  | Enable reflectance calibration  |
-| `indices`                 | list | `None`                  | Vegetation indices to calculate |
-| `export_format`           | str  | "TIFF (16-bit)"         | Output format                   |
-| `ppk`                     | bool | `False`                 | Enable PPK corrections          |
-| `custom_settings`         | dict | `None`                  | Advanced custom settings        |
+| Parameter | Taip | Lalai | Penerangan |
+| -------------------------- | ---- | ------------------------ | ------------------------------- |
+| `debayer` | str | "Kualiti Tinggi (Lebih Cepat)" | Kaedah Debayer |
+| `vignette_correction` | bool | `True` | Dayakan pembetulan vignet |
+| `reflectance_calibration` | bool | `True` | Dayakan penentukuran pantulan |
+| `indices` | senarai | `None` | Indeks tumbuh-tumbuhan untuk dikira |
+| `export_format` | str | "TIFF (16-bit)" | Format output |
+| `ppk` | bool | `False` | Dayakan pembetulan PPK |
+| `custom_settings` | dict | `None` | Tetapan tersuai lanjutan |
 
-**Export Formats:**
+**Format Eksport:**
 
-* `"TIFF (16-bit)"` - Recommended for GIS/photogrammetry
-* `"TIFF (32-bit, Percent)"` - Scientific analysis
-* `"PNG (8-bit)"` - Visual inspection
-* `"JPG (8-bit)"` - Compressed output
+* `"TIFF (16-bit)"` - Disyorkan untuk GIS/fotogrametri
+* `"TIFF (32-bit, Percent)"` - Analisis saintifik
+* `"PNG (8-bit)"` - Pemeriksaan visual
+* `"JPG (8-bit)"` - Output termampat
 
-**Available Indices:**
-
-NDVI, NDRE, GNDVI, OSAVI, CIG, EVI, SAVI, MSAVI, MTVI2, and more.
-
-**Example:**
+**Indeks yang Tersedia:**NDVI, NDRE, GNDVI, OSAVI, CIG, EVI, SAVI, MSAVI0, XPROTX02, MSAVI0, XPROTX02, MSAVI0, MSAVI0, MSAVI0, MSAVI0, 88XPROTX0, MSAVI0, NDVI000282NDVI000282XPROTX000282**Contoh:**
 
 ```python
 # Basic configuration
@@ -306,24 +298,24 @@ chloros.configure(
 
 #### `process(mode="parallel", wait=True, progress_callback=None)`
 
-Process the project images.
+Memproses imej projek.
 
-**Parameters:**
+**Parameter:**
 
-| Parameter           | Type     | Default      | Description                               |
-| ------------------- | -------- | ------------ | ----------------------------------------- |
-| `mode`              | str      | `"parallel"` | Processing mode: "parallel" or "serial"   |
-| `wait`              | bool     | `True`       | Wait for completion                       |
-| `progress_callback` | callable | `None`       | Progress callback function(progress, msg) |
-| `poll_interval`     | float    | `2.0`        | Polling interval for progress (seconds)   |
+| Parameter | Taip | Lalai | Penerangan |
+| ------------------- | -------- | ------------ | ---------------------------------------- |
+| `mode` | str | `"parallel"` | Mod pemprosesan: "selari" atau "siri" |
+| `wait` | bool | `True` | Tunggu sehingga selesai |
+| `progress_callback` | boleh dipanggil | `None` | Fungsi panggil balik kemajuan(progres, msg) |
+| `poll_interval` | terapung | `2.0` | Selang pengundian untuk kemajuan (saat) |
 
-**Returns:** `dict` - Processing results
+**Pemulangan:** `dict` - Memproses hasil
 
-{% hint style="warning" %}
-**Parallel Mode**: Requires Chloros+ license. Automatically scales to your CPU cores (up to 16 workers).
-{% endhint %}
+{% gaya petunjuk="amaran" %}
+**Mod Selari**: Memerlukan lesen Chloros+. Skala secara automatik kepada teras CPU anda (sehingga 16 pekerja).
+Petua {% %}
 
-**Example:**
+**Contoh:**
 
 ```python
 # Simple processing
@@ -347,11 +339,9 @@ chloros.process(wait=False)
 
 #### `get_config()`
 
-Get current project configuration.
+Dapatkan konfigurasi projek semasa.
 
-**Returns:** `dict` - Current project configuration
-
-**Example:**
+**Pemulangan:** `dict` - Konfigurasi projek semasa**Contoh:**
 
 ```python
 config = chloros.get_config()
@@ -362,11 +352,9 @@ print(config['Project Settings'])
 
 #### `get_status()`
 
-Get backend status information.
+Dapatkan maklumat status bahagian belakang.
 
-**Returns:** `dict` - Backend status
-
-**Example:**
+**Pemulangan:** `dict` - Status hujung belakang**Contoh:**
 
 ```python
 status = chloros.get_status()
@@ -378,9 +366,9 @@ print(f"URL: {status['url']}")
 
 #### `shutdown_backend()`
 
-Shutdown the backend (if started by SDK).
+Matikan bahagian belakang (jika dimulakan oleh SDK).
 
-**Example:**
+**Contoh:**
 
 ```python
 chloros.shutdown_backend()
@@ -390,18 +378,16 @@ chloros.shutdown_backend()
 
 #### `logout()`
 
-Clear cached credentials from the local system.
+Kosongkan bukti kelayakan cache daripada sistem setempat.
 
-**Description:**
+**Penerangan:**
 
-Programmatically logs out by removing cached authentication credentials. This is useful for:
-* Switching between different Chloros+ accounts
-* Clearing credentials in automated environments
-* Security purposes (e.g., removing credentials before uninstalling)
+Log keluar secara pemrograman dengan mengalih keluar bukti kelayakan pengesahan cache. Ini berguna untuk:
+* Bertukar antara akaun Chloros+ yang berbeza
+* Membersihkan kelayakan dalam persekitaran automatik
+* Tujuan keselamatan (cth., mengalih keluar bukti kelayakan sebelum menyahpasang)
 
-**Returns:** `dict` - Logout operation result
-
-**Example:**
+**Pemulangan:** `dict` - Hasil operasi Log Keluar**Contoh:**
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -416,35 +402,33 @@ print(f"Logout successful: {result}")
 # After logout, login required via GUI/CLI/Browser before next SDK use
 ```
 
-{% hint style="info" %}
-**Re-authentication Required**: After calling `logout()`, you must log in again via Chloros, Chloros (Browser), or Chloros CLI before using the SDK.
-{% endhint %}
+{% gaya petunjuk="info" %}
+**Pengesahan Semula Diperlukan**: Selepas memanggil `logout()`, anda mesti log masuk semula melalui Chloros, Chloros (Pelayar) atau Chloros CLI sebelum menggunakan CLI.256XPROTX.
+Petua {% %}
 
 ***
 
-### Convenience Functions
+### Fungsi Keselesaan
 
 #### `process_folder(folder_path, **options)`
 
-One-line convenience function to process a folder.
+Fungsi kemudahan satu baris untuk memproses folder.
 
-**Parameters:**
+**Parameter:**
 
-| Parameter                 | Type     | Default         | Description                    |
-| ------------------------- | -------- | --------------- | ------------------------------ |
-| `folder_path`             | str/Path | Required        | Path to folder with images     |
-| `project_name`            | str      | Auto-generated  | Project name                   |
-| `camera`                  | str      | `None`          | Camera template                |
-| `indices`                 | list     | `["NDVI"]`      | Indices to calculate           |
-| `vignette_correction`     | bool     | `True`          | Enable vignette correction     |
-| `reflectance_calibration` | bool     | `True`          | Enable reflectance calibration |
-| `export_format`           | str      | "TIFF (16-bit)" | Output format                  |
-| `mode`                    | str      | `"parallel"`    | Processing mode                |
-| `progress_callback`       | callable | `None`          | Progress callback              |
+| Parameter | Taip | Lalai | Penerangan |
+| -------------------------- | -------- | --------------- | ------------------------------ |
+| `folder_path` | str/Laluan | Diperlukan | Laluan ke folder dengan imej |
+| `project_name` | str | Dijana secara automatik | Nama projek |
+| `camera` | str | `None` | Templat kamera |
+| `indices` | senarai | `["NDVI"]` | Indeks untuk dikira |
+| `vignette_correction` | bool | `True` | Dayakan pembetulan vignet |
+| `reflectance_calibration` | bool | `True` | Dayakan penentukuran pantulan |
+| `export_format` | str | "TIFF (16-bit)" | Format output |
+| `mode` | str | `"parallel"` | Mod pemprosesan |
+| `progress_callback` | boleh dipanggil | `None` | Panggil balik kemajuan |
 
-**Returns:** `dict` - Processing results
-
-**Example:**
+**Pemulangan:** `dict` - Memproses hasil**Contoh:**
 
 ```python
 from chloros_sdk import process_folder
@@ -473,9 +457,9 @@ results = process_folder(
 
 ***
 
-## Context Manager Support
+## Sokongan Pengurus Konteks
 
-The SDK supports context managers for automatic cleanup:
+SDK menyokong pengurus konteks untuk pembersihan automatik:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -491,11 +475,11 @@ with ChlorosLocal() as chloros:
 
 ***
 
-## Complete Examples
+## Contoh Lengkap
 
-### Example 1: Basic Processing
+### Contoh 1: Pemprosesan Asas
 
-Process a folder with default settings:
+Proses folder dengan tetapan lalai:
 
 ```python
 from chloros_sdk import process_folder
@@ -508,9 +492,9 @@ print(f"Processing complete: {results}")
 
 ***
 
-### Example 2: Custom Workflow
+### Contoh 2: Aliran Kerja Tersuai
 
-Full control over processing pipeline:
+Kawalan penuh ke atas saluran paip pemprosesan:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -550,9 +534,9 @@ print("Processing complete!")
 
 ***
 
-### Example 3: Batch Processing Multiple Folders
+### Contoh 3: Memproses Kelompok Berbilang Folder
 
-Process multiple flight datasets:
+Memproses beberapa set data penerbangan:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -602,9 +586,9 @@ print("All flights processed!")
 
 ***
 
-### Example 4: Research Pipeline Integration
+### Contoh 4: Penyepaduan Saluran Paip Penyelidikan
 
-Integrate Chloros with data analysis:
+Sepadukan Chloros dengan analisis data:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -657,9 +641,9 @@ print(df)
 
 ***
 
-### Example 5: Custom Progress Monitoring
+### Contoh 5: Pemantauan Kemajuan Tersuai
 
-Advanced progress tracking with logging:
+Penjejakan kemajuan lanjutan dengan pengelogan:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -696,9 +680,9 @@ logging.info("Processing complete!")
 
 ***
 
-### Example 6: Error Handling
+### Contoh 6: Pengendalian Ralat
 
-Robust error handling for production use:
+Pengendalian ralat yang teguh untuk kegunaan pengeluaran:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -748,9 +732,9 @@ else:
 
 ***
 
-### Example 7: Account Management and Logout
+### Contoh 7: Pengurusan Akaun dan Log Keluar
 
-Manage credentials programmatically:
+Urus kelayakan secara pemrograman:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -791,9 +775,9 @@ if switch_account():
 
 ***
 
-### Example 8: Command-Line Tool
+### Contoh 8: Alat Baris Perintah
 
-Build a custom CLI tool with the SDK:
+Bina alat CLI tersuai dengan SDK:
 
 ```python
 #!/usr/bin/env python
@@ -866,7 +850,7 @@ if __name__ == '__main__':
     sys.exit(main())
 ```
 
-**Usage:**
+**Penggunaan:**
 
 ```bash
 # Process multiple folders
@@ -878,11 +862,11 @@ python my_processor.py --logout
 
 ***
 
-## Exception Handling
+## Pengendalian Pengecualian
 
-The SDK provides specific exception classes for different error types:
+SDK menyediakan kelas pengecualian khusus untuk jenis ralat yang berbeza:
 
-### Exception Hierarchy
+### Hierarki Pengecualian
 
 ```python
 ChlorosError                    # Base exception
@@ -894,7 +878,7 @@ ChlorosError                    # Base exception
 └── ChlorosConfigurationError  # Configuration errors
 ```
 
-### Exception Examples
+### Contoh Pengecualian
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -919,11 +903,11 @@ except ChlorosError as e:
 
 ***
 
-## Advanced Topics
+## Topik Lanjutan
 
-### Custom Backend Configuration
+### Konfigurasi Bahagian Belakang Tersuai
 
-Use a custom backend location or configuration:
+Gunakan lokasi atau konfigurasi bahagian belakang tersuai:
 
 ```python
 chloros = ChlorosLocal(
@@ -934,9 +918,9 @@ chloros = ChlorosLocal(
 )
 ```
 
-### Non-Blocking Processing
+### Pemprosesan Tidak Menyekat
 
-Start processing and continue with other tasks:
+Mula memproses dan teruskan dengan tugas lain:
 
 ```python
 # Start processing (non-blocking)
@@ -956,9 +940,9 @@ while True:
 print("Processing complete!")
 ```
 
-### Memory Management
+### Pengurusan Memori
 
-For large datasets, process in batches:
+Untuk set data yang besar, proses dalam kelompok:
 
 ```python
 from pathlib import Path
@@ -983,15 +967,13 @@ for i in range(0, len(images), batch_size):
 
 ***
 
-## Troubleshooting
+## Menyelesaikan masalah
 
-### Backend Not Starting
+### Bahagian Belakang Tidak Bermula
 
-**Issue:** SDK fails to start backend
+**Isu:** SDK gagal untuk memulakan hujung belakang**Penyelesaian:**
 
-**Solutions:**
-
-1. Verify Chloros Desktop is installed:
+1. Sahkan Chloros Desktop dipasang:
 
 ```python
 import os
@@ -999,8 +981,8 @@ backend_path = r"C:\Program Files\MAPIR\Chloros\resources\backend\chloros-backen
 print(f"Backend exists: {os.path.exists(backend_path)}")
 ```
 
-2. Check Windows Firewall isn't blocking
-3. Try manual backend path:
+2. Semak Windows Firewall tidak menyekat
+3. Cuba laluan hujung belakang manual:
 
 ```python
 chloros = ChlorosLocal(backend_exe="C:\\Path\\To\\chloros-backend.exe")
@@ -1008,14 +990,10 @@ chloros = ChlorosLocal(backend_exe="C:\\Path\\To\\chloros-backend.exe")
 
 ***
 
-### License Not Detected
+### Lesen Tidak Dikesan**Isu:** SDK memberi amaran tentang kehilangan lesen**Penyelesaian:**
 
-**Issue:** SDK warns about missing license
-
-**Solutions:**
-
-1. Open Chloros, Chloros (Browser) or Chloros CLI and login.
-2. Verify license is cached:
+1. Buka Chloros, Chloros (Pelayar) atau Chloros CLI dan log masuk.
+2. Sahkan lesen dicache:
 
 ```python
 from pathlib import Path
@@ -1026,7 +1004,7 @@ cache_path = Path(os.getenv('APPDATA')) / 'Chloros' / 'cache'
 print(f"Cache exists: {cache_path.exists()}")
 ```
 
-3. If experiencing credential issues, clear cached credentials and re-login:
+3. Jika mengalami isu kelayakan, kosongkan bukti kelayakan cache dan log masuk semula:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -1038,15 +1016,11 @@ chloros.logout()
 # Then login again via Chloros, Chloros (Browser), or Chloros CLI
 ```
 
-4. Contact support: info@mapir.camera
+4. Hubungi sokongan: info@mapir.camera
 
 ***
 
-### Import Errors
-
-**Issue:** `ModuleNotFoundError: No module named 'chloros_sdk'`
-
-**Solutions:**
+### Ralat Import**Isu:** `ModuleNotFoundError: No module named 'chloros_sdk'`**Penyelesaian:**
 
 ```bash
 # Verify installation
@@ -1062,36 +1036,28 @@ python -c "import sys; print(sys.path)"
 
 ***
 
-### Processing Timeout
+### Tamat Masa Pemprosesan**Isu:** Tamat masa pemprosesan**Penyelesaian:**
 
-**Issue:** Processing times out
-
-**Solutions:**
-
-1. Increase timeout:
+1. Tingkatkan tamat masa:
 
 ```python
 chloros = ChlorosLocal(timeout=120)  # 2 minutes
 ```
 
-2. Process smaller batches
-3. Check available disk space
-4. Monitor system resources
+2. Proses kelompok yang lebih kecil
+3. Semak ruang cakera yang tersedia
+4. Pantau sumber sistem
 
 ***
 
-### Port Already in Use
-
-**Issue:** Backend port 5000 occupied
-
-**Solutions:**
+### Pelabuhan Sudah Digunakan**Isu:** Port hujung belakang 5000 diduduki**Penyelesaian:**
 
 ```python
 # Use different port
 chloros = ChlorosLocal(api_url="http://localhost:5001")
 ```
 
-Or find and close conflicting process:
+Atau cari dan tutup proses bercanggah:
 
 ```powershell
 # PowerShell
@@ -1100,36 +1066,34 @@ Get-NetTCPConnection -LocalPort 5000
 
 ***
 
-## Performance Tips
+## Petua Prestasi
 
-### Optimize Processing Speed
+### Optimumkan Kelajuan Pemprosesan
 
-1. **Use Parallel Mode** (requires Chloros+)
+1. **Gunakan Mod Selari** (memerlukan Chloros+)
 
 ```python
 chloros.process(mode="parallel")  # Up to 16 workers
 ```
 
-2. **Reduce Output Resolution** (if acceptable)
+2. **Kurangkan Resolusi Output** (jika boleh diterima)
 
 ```python
 chloros.configure(export_format="PNG (8-bit)")  # Faster than TIFF
 ```
 
-3. **Disable Unnecessary Indices**
+3. **Lumpuhkan Indeks Tidak Perlu**
 
 ```python
 # Only calculate needed indices
 chloros.configure(indices=["NDVI"])  # Not all indices
 ```
 
-4. **Process on SSD** (not HDD)
+4. **Proses pada SSD** (bukan HDD)***
 
-***
+### Pengoptimuman Memori
 
-### Memory Optimization
-
-For large datasets:
+Untuk set data yang besar:
 
 ```python
 # Process in batches instead of all at once
@@ -1138,9 +1102,9 @@ For large datasets:
 
 ***
 
-### Background Processing
+### Pemprosesan Latar Belakang
 
-Free up Python for other tasks:
+Kosongkan Python untuk tugasan lain:
 
 ```python
 chloros.process(wait=False)  # Non-blocking
@@ -1151,9 +1115,9 @@ chloros.process(wait=False)  # Non-blocking
 
 ***
 
-## Integration Examples
+## Contoh Integrasi
 
-### Django Integration
+### Integrasi Django
 
 ```python
 # views.py
@@ -1171,7 +1135,7 @@ def process_images_view(request):
             return JsonResponse({'success': False, 'error': str(e)})
 ```
 
-### Flask API
+### Kelalang API
 
 ```python
 # app.py
@@ -1195,7 +1159,7 @@ if __name__ == '__main__':
     app.run()
 ```
 
-### Jupyter Notebook
+### Buku Nota Jupyter
 
 ```python
 # notebook.ipynb
@@ -1226,49 +1190,41 @@ chloros.process(progress_callback=notebook_progress)
 
 ***
 
-## FAQ
+## Soalan Lazim
 
-### Q: Does the SDK require an internet connection?
+### S: Adakah SDK memerlukan sambungan internet?
 
-**A:** Only for initial license activation. After logging in via Chloros, Chloros (Browser) or Chloros CLI the license is cached locally and works offline for 30 days.
+**J:** Hanya untuk pengaktifan lesen awal. Selepas log masuk melalui Chloros, Chloros (Pelayar) atau Chloros CLI, lesen dicache secara setempat dan berfungsi di luar talian selama 30 hari.***
 
-***
+### S: Bolehkah saya menggunakan SDK pada pelayan tanpa GUI?**J:** Ya! Keperluan:
 
-### Q: Can I use the SDK on a server without GUI?
-
-**A:** Yes! Requirements:
-
-* Windows Server 2016 or later
-* Chloros installed (one-time)
-* License activated on any machine (cached license copied to server)
+* Windows Server 2016 atau lebih baru
+* Chloros dipasang (sekali)
+* Lesen diaktifkan pada mana-mana mesin (lesen cache disalin ke pelayan)
 
 ***
 
-### Q: What's the difference between Desktop, CLI, and SDK?
+### S: Apakah perbezaan antara Desktop, CLI dan SDK?
 
-| Feature         | Desktop GUI | CLI Command Line | Python SDK  |
+| Ciri | GUI Desktop | CLI Baris Perintah | Python SDK |
 | --------------- | ----------- | ---------------- | ----------- |
-| **Interface**   | Point-click | Command          | Python API  |
-| **Best For**    | Visual work | Scripting        | Integration |
-| **Automation**  | Limited     | Good             | Excellent   |
-| **Flexibility** | Basic       | Good             | Maximum     |
-| **License**     | Chloros+    | Chloros+         | Chloros+    |
+| **Antaramuka** | Klik titik | Perintah | Python API |
+| **Terbaik Untuk** | Kerja visual | Skrip | Integrasi |
+| **Automasi** | Terhad | Baik | Cemerlang |
+| **Fleksibiliti** | Asas | Baik | Maksimum |
+| **Lesen** | Chloros+ | Chloros+ | Chloros+ |***
+
+### S: Bolehkah saya mengedarkan apl yang dibina dengan SDK?**J:** Kod SDK boleh disepadukan ke dalam aplikasi anda, tetapi:
+
+* Pengguna akhir memerlukan Chloros dipasang
+* Pengguna akhir memerlukan lesen Chloros+ aktif
+* Pengedaran komersial memerlukan pelesenan OEM
+
+Hubungi info@mapir.camera untuk pertanyaan OEM.
 
 ***
 
-### Q: Can I distribute apps built with the SDK?
-
-**A:** SDK code can be integrated into your applications, but:
-
-* End users need Chloros installed
-* End users need active Chloros+ licenses
-* Commercial distribution requires OEM licensing
-
-Contact info@mapir.camera for OEM inquiries.
-
-***
-
-### Q: How do I update the SDK?
+### S: Bagaimanakah cara saya mengemas kini SDK?
 
 ```bash
 pip install --upgrade chloros-sdk
@@ -1276,11 +1232,12 @@ pip install --upgrade chloros-sdk
 
 ***
 
-### Q: Where are processed images saved?
+### S: Di manakah imej yang diproses disimpan?
 
-By default, in the Project Path :
+Secara lalai, dalam Laluan Projek :
 
 ```
+
 Project_Path/
 └── MyProject/
     └── Survey3N_RGN/          # Processed outputs
@@ -1288,9 +1245,7 @@ Project_Path/
 
 ***
 
-### Q: Can I process images from Python scripts running on schedule?
-
-**A:** Yes! Use Windows Task Scheduler with Python scripts:
+### S: Bolehkah saya memproses imej daripada skrip Python berjalan mengikut jadual?**J:** Ya! Gunakan Windows Task Scheduler dengan skrip Python:
 
 ```python
 # scheduled_processing.py
@@ -1300,13 +1255,11 @@ from chloros_sdk import process_folder
 results = process_folder("C:\\Flights\\Today")
 ```
 
-Schedule via Task Scheduler to run daily.
+Jadualkan melalui Penjadual Tugas untuk dijalankan setiap hari.
 
 ***
 
-### Q: Does the SDK support async/await?
-
-**A:** Current version is synchronous. For async behavior, use `wait=False` or run in separate thread:
+### S: Adakah SDK menyokong async/menunggu?**J:** Versi semasa adalah segerak. Untuk tingkah laku tak segerak, gunakan `wait=False` atau jalankan dalam urutan berasingan:
 
 ```python
 import threading
@@ -1322,9 +1275,7 @@ thread.start()
 
 ***
 
-### Q: How do I switch between different Chloros+ accounts?
-
-**A:** Use the `logout()` method to clear cached credentials, then re-login with the new account:
+### S: Bagaimanakah cara saya bertukar antara akaun Chloros+ yang berbeza?**J:** Gunakan kaedah `logout()` untuk mengosongkan bukti kelayakan cache, kemudian log masuk semula dengan akaun baharu:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -1336,30 +1287,28 @@ chloros.logout()
 # Re-login via Chloros, Chloros (Browser), or Chloros CLI with new account
 ```
 
-After logout, authenticate with the new account via the GUI, Browser, or CLI before using the SDK again.
+Selepas log keluar, sahkan dengan akaun baharu melalui GUI, Penyemak Imbas atau CLI sebelum menggunakan SDK sekali lagi.
 
 ***
 
-## Getting Help
+## Mendapatkan Bantuan
 
-### Documentation
+### Dokumentasi
 
-* **API Reference**: This page
+* **Rujukan API**: Halaman ini
 
-### Support Channels
+### Saluran Sokongan
 
-* **Email**: info@mapir.camera
-* **Website**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* **Pricing**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
+* **E-mel**: info@mapir.camera
+* **Tapak web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* **Harga**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
-### Sample Code
+### Kod Contoh
 
-All examples listed here are tested and production-ready. Copy and adapt them for your use case.
+Semua contoh yang disenaraikan di sini telah diuji dan sedia pengeluaran. Salin dan sesuaikan mereka untuk kes penggunaan anda.
 
 ***
 
-## License
+## Lesen**Perisian Milik** - Hak Cipta (c) 2025 MAPIR Inc.
 
-**Proprietary Software** - Copyright (c) 2025 MAPIR Inc.
-
-SDK requires an active Chloros+ subscription. Unauthorized use, distribution, or modification is prohibited.
+SDK memerlukan langganan Chloros+ yang aktif. Penggunaan, pengedaran atau pengubahsuaian yang tidak dibenarkan adalah dilarang.

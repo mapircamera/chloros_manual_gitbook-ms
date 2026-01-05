@@ -1,366 +1,352 @@
-# Starting the Processing
+# Memulakan Pemprosesan
 
-Once you've imported your images, marked your calibration targets, and configured your project settings, you're ready to begin processing. This page guides you through initiating the Chloros processing pipeline.
+Setelah anda mengimport imej anda, menandakan sasaran penentukuran anda dan mengkonfigurasikan tetapan projek anda, anda sudah bersedia untuk memulakan pemprosesan. Halaman ini membimbing anda untuk memulakan saluran pemprosesan Chloros.
 
-## Pre-Processing Checklist
+## Senarai Semak Pra-Pemprosesan
 
-Before clicking the Start button, verify that everything is ready:
+Sebelum mengklik butang Mula, sahkan bahawa semuanya sudah sedia:
 
-* [ ] **Files imported** - All images appear in File Browser
-* [ ] **Target images marked** - Target column checked for calibration images
-* [ ] **Camera models detected** - Camera Model column shows correct cameras
-* [ ] **Settings configured** - Project Settings reviewed and adjusted
-* [ ] **Indices selected** - Desired multispectral indices added (if needed)
-* [ ] **Export format chosen** - Output format appropriate for your workflow
-
-{% hint style="info" %}
-**Tip**: Click through a few images in the File Browser to verify they loaded correctly before processing.
-{% endhint %}
-
-***
-
-## Starting the Processing
-
-### Locate the Start Button
-
-The Start/Play button is located in the top header bar of Chloros:
-
-* Position: Top center of the window
-* Icon: **Play/Start button** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
-* Status: Button is enabled (bright) when ready to process
-
-### Click to Start
-
-1. Click the **Play/Start button** in the top header
-2. Processing begins immediately
-3. The button becomes disabled (grayed out) during processing
-4. Progress bar updates, showing processing status
-
-{% hint style="success" %}
-**Processing Started**: Once clicked, Chloros automatically handles all processing steps - target detection, debayering, calibration, index calculation, and export.
-{% endhint %}
-
-***
-
-## Understanding Processing Modes
-
-Chloros operates in two different processing modes depending on your license:
-
-### Free Mode (Sequential Processing)
-
-**Available to all users**
-
-**How it works:**
-
-* Processes images one at a time, sequentially
-* Single-threaded operation
-* Lower memory usage
-
-**Progress bar shows 2 stages:**
-
-1. **Target Detect** - Scanning for calibration targets
-2. **Processing** - Applying calibration and exporting images
-
-**Processing time:**
-
-* Much slower than Chloros+ parallel mode
-* Suitable for small to medium datasets (< 200 images)
-
-### Chloros+ Mode (Parallel Processing)
-
-**Requires Chloros+ license**
-
-**How it works:**
-
-* Processes multiple images simultaneously
-* Multi-threaded operation (up to 16 parallel workers)
-* Utilizes multiple CPU cores
-* Optional GPU (CUDA) acceleration with NVIDIA graphics cards
-
-**Progress bar shows 4 stages:**
-
-1. **Detecting** - Finding calibration targets
-2. **Analyzing** - Examining image metadata and preparing pipeline
-3. **Calibrating** - Applying corrections and calibrations
-4. **Exporting** - Saving processed images and indices
-
-**Progress bar interaction:**
-
-* **Hover mouse** over bar to see detailed 4-stage dropdown panel
-* **Click** progress bar to freeze the dropdown panel in place
-* **Click again** to unfreeze and hide panel
-
-**Processing time:**
-
-* Significantly faster than free mode
-* Scales with CPU core count
-* GPU acceleration further improves speed
+* [ ] **Fail diimport** - Semua imej muncul dalam Pelayar Fail
+* [ ] **Imej sasaran ditanda** - Lajur sasaran disemak untuk imej penentukuran
+* [ ] **Model kamera dikesan** - Lajur Model Kamera menunjukkan kamera yang betul
+* [ ] **Tetapan dikonfigurasikan** - Tetapan Projek disemak dan dilaraskan
+* [ ] **Indeks dipilih** - Indeks berbilang spektrum yang dikehendaki ditambah (jika perlu)
+* [ ] **Format eksport dipilih** - Format output sesuai untuk aliran kerja anda
 
 {% hint style="info" %}
-**Chloros+ Speed**: Parallel processing can be 5-10x faster than sequential mode for large datasets. A 500-image project that takes 2 hours in free mode may complete in 15-20 minutes with Chloros+.
-{% endhint %}
+**Petua**: Klik beberapa imej dalam Pelayar Fail untuk mengesahkan ia dimuatkan dengan betul sebelum memproses.
+Petua {% %}
 
 ***
 
-## What Happens During Processing
+## Memulakan Pemprosesan
 
-### Stage 1: Target Detection
+### Cari Butang Mula
 
-**What Chloros does:**
+Butang Mula/Main terletak di bar pengepala atas Chloros:
 
-* Scans marked target images (or all images if none marked)
-* Identifies the 4 calibration panels in each target
-* Extracts reflectance values from target panels
-* Records target timestamps for calibration scheduling
+* Kedudukan: Tengah atas tingkap
+* Ikon: **Butang Main/Mula** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
+* Status: Butang didayakan (terang) apabila sedia untuk diproses
 
-**Duration:** 1-30 seconds (with marked targets), 5-30+ minutes (unmarked)
+### Klik untuk Mula
 
-### Stage 2: Debayering (RAW Conversion)
+1. Klik butang **Main/Mula** dalam pengepala atas
+2. Pemprosesan bermula serta-merta
+3. Butang menjadi dilumpuhkan (kelabukan) semasa pemprosesan
+4. Kemas kini bar kemajuan, menunjukkan status pemprosesan
 
-**What Chloros does:**
-
-* Converts RAW Bayer pattern data to full RGB images
-* Applies high-quality demosaicing algorithm
-* Preserves maximum image quality and detail
-
-**Duration:** Varies by image count and CPU speed
-
-### Stage 3: Calibration
-
-**What Chloros does:**
-
-* **Vignette correction**: Removes lens darkening at edges
-* **Reflectance calibration**: Normalizes using target reflectance values
-* Applies corrections across all bands/channels
-* Uses appropriate calibration target for each image based on timestamp
-
-**Duration:** Majority of processing time
-
-### Stage 4: Index Calculation
-
-**What Chloros does:**
-
-* Calculates configured multispectral indices (NDVI, NDRE, etc.)
-* Applies band math to calibrated images
-* Generates index images for each selected index
-
-**Duration:** A few seconds per image
-
-### Stage 5: Export
-
-**What Chloros does:**
-
-* Saves calibrated images in selected format
-* Exports index images with configured LUT colors
-* Writes files to camera model subfolders
-* Preserves original filenames with suffixes
-
-**Duration:** Varies by export format and file size
+{% gaya petunjuk="berjaya" %}
+**Pemprosesan Dimulakan**: Setelah diklik, Chloros secara automatik mengendalikan semua langkah pemprosesan - pengesanan sasaran, debayering, penentukuran, pengiraan indeks dan eksport.
+Petua {% %}
 
 ***
 
-## Processing Behavior
+## Memahami Mod Pemprosesan
 
-### Automatic Processing Pipeline
+Chloros beroperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 
-Once started, the entire pipeline runs automatically:
+### Mod Percuma (Pemprosesan Berjujukan)
 
-* No user interaction needed
-* All configured steps execute in sequence
-* Progress updates shown in real-time
+**Tersedia untuk semua pengguna**
 
-### Computer Usage During Processing
+**Cara ia berfungsi:**
 
-**Free Mode:**
+* Memproses imej satu demi satu, secara berurutan
+* Operasi berulir tunggal
+* Penggunaan memori yang lebih rendah
 
-* Relatively low CPU usage (single-threaded)
-* Computer remains responsive for other tasks
-* Safe to minimize Chloros and work in other applications
+**Bar kemajuan menunjukkan 2 peringkat:**
 
-**Chloros+ Parallel Mode:**
+1.**Target Detect** - Mengimbas untuk sasaran penentukuran
+2. **Memproses** - Menggunakan penentukuran dan mengeksport imej**Masa pemprosesan:**
 
-* High CPU usage (multi-threaded, up to 16 cores)
-* With GPU acceleration: High GPU usage
-* Computer may be less responsive during processing
-* Avoid starting other CPU-intensive tasks
+* Jauh lebih perlahan daripada mod selari Chloros+
+* Sesuai untuk set data kecil hingga sederhana (< 200 imej)
 
-{% hint style="warning" %}
-**Performance Tip**: For best Chloros+ performance, close other applications and let Chloros use full system resources.
-{% endhint %}
+### Mod Chloros+ (Pemprosesan Selari)
 
-### Processing Cannot Be Paused
+**Memerlukan lesen Chloros+**
 
-**Important limitations:**
+**Cara ia berfungsi:**
 
-* Once started, processing cannot be paused
-* You can cancel processing, but progress is lost
-* Partial results are not saved
-* Must restart from beginning if canceled
+* Memproses berbilang imej serentak
+* Operasi berbilang benang (sehingga 16 pekerja selari)
+* Menggunakan berbilang teras CPU
+* Pilihan pecutan GPU (CUDA) dengan kad grafik NVIDIA
 
-**Planning tip:** For very large projects, consider processing in batches or using CLI for better control.
+**Bar kemajuan menunjukkan 4 peringkat:**
 
-***
+1.**Mengesan** - Mencari sasaran penentukuran
+2. **Menganalisis** - Memeriksa metadata imej dan menyediakan saluran paip
+3. **Menentukur** - Menggunakan pembetulan dan penentukuran
+4. **Mengeksport** - Menyimpan imej dan indeks yang diproses**Interaksi bar kemajuan:*** **Tuding tetikus** di atas bar untuk melihat panel lungsur turun 4 peringkat terperinci
+* **Klik** bar kemajuan untuk membekukan panel lungsur di tempatnya
+* **Klik sekali lagi** untuk menyahbeku dan menyembunyikan panel**Masa pemprosesan:**
 
-## Monitoring Your Processing
+* Jauh lebih pantas daripada mod percuma
+* Skala dengan kiraan teras CPU
+* Pecutan GPU meningkatkan lagi kelajuan
 
-While processing runs, you can:
-
-* **Watch progress bar** - See overall completion percentage
-* **View current stage** - Detect, Analyze, Calibrate, or Export
-* **Check log tab** - See detailed processing messages and warnings
-* **Preview completed images** - Some export files may appear during processing
-
-For detailed information on monitoring, see [Monitoring the Processing](monitoring-the-processing.md).
+{% gaya pembayang="info" %}
+**Chloros+ Speed**: Pemprosesan selari boleh 5-10x lebih pantas daripada mod berjujukan untuk set data yang besar. Projek 500 imej yang mengambil masa 2 jam dalam mod percuma mungkin selesai dalam 15-20 minit dengan Chloros+.
+Petua {% %}
 
 ***
 
-## Canceling Processing
+## Perkara Yang Berlaku Semasa Pemprosesan
 
-If you need to stop processing:
+### Peringkat 1: Pengesanan Sasaran
 
-### How to Cancel
+**Apa yang dilakukan oleh Chloros:**
 
-1. Locate the **Stop/Cancel button** (replaces Start button during processing)
-2. Click the Stop button
-3. Processing halts immediately
-4. Partial results are discarded
+* Mengimbas imej sasaran bertanda (atau semua imej jika tiada bertanda)
+* Mengenal pasti 4 panel penentukuran dalam setiap sasaran
+* Mengekstrak nilai pantulan daripada panel sasaran
+* Merekod cap masa sasaran untuk penjadualan penentukuran
 
-### When to Cancel
+**Tempoh:** 1-30 saat (dengan sasaran yang ditanda), 5-30+ minit (tidak bertanda)
 
-**Valid reasons to cancel:**
+### Peringkat 2: Debayering (Penukaran RAW)
 
-* Realized incorrect settings were used
-* Forgot to mark target images
-* Wrong images imported
-* System running too slow or unresponsive
+**Apa yang dilakukan oleh Chloros:**
 
-**After canceling:**
+* Menukar data corak RAW Bayer kepada imej RGB penuh
+* Menggunakan algoritma demosaicing berkualiti tinggi
+* Mengekalkan kualiti dan perincian imej maksimum
 
-* Review and fix any issues
-* Adjust settings as needed
-* Restart processing from the beginning
-* For the cleanest experience, completely close Chloros and restart
+**Tempoh:** Berbeza mengikut kiraan imej dan kelajuan CPU
 
-{% hint style="warning" %}
-**No Partial Results**: Canceling discards all progress. Chloros does not save partially processed images.
-{% endhint %}
+### Peringkat 3: Penentukuran
+
+**Apa yang dilakukan oleh Chloros:*** **Pembetulan vignet**: Menghilangkan gelap kanta di tepi
+* **Penentukuran pantulan**: Menormalkan menggunakan nilai pemantulan sasaran
+* Menggunakan pembetulan merentas semua jalur/saluran
+* Menggunakan sasaran penentukuran yang sesuai untuk setiap imej berdasarkan cap masa
+
+**Tempoh:** Majoriti masa pemprosesan
+
+### Peringkat 4: Pengiraan Indeks
+
+**Apa yang dilakukan oleh Chloros:**
+
+* Mengira indeks berbilang spektrum yang dikonfigurasikan (NDVI, NDRE, dsb.)
+* Menggunakan matematik jalur pada imej yang ditentukur
+* Menjana imej indeks untuk setiap indeks yang dipilih
+
+**Tempoh:** Beberapa saat setiap imej
+
+### Peringkat 5: Eksport
+
+**Apa yang dilakukan oleh Chloros:**
+
+* Menyimpan imej yang ditentukur dalam format yang dipilih
+* Mengeksport imej indeks dengan warna LUT yang dikonfigurasikan
+* Menulis fail ke subfolder model kamera
+* Mengekalkan nama fail asal dengan akhiran
+
+**Tempoh:** Berbeza mengikut format eksport dan saiz fail***
+
+## Kelakuan Memproses
+
+### Saluran Paip Pemprosesan Automatik
+
+Sebaik sahaja dimulakan, keseluruhan saluran paip berjalan secara automatik:
+
+* Tiada interaksi pengguna diperlukan
+* Semua langkah yang dikonfigurasikan dilaksanakan mengikut urutan
+* Kemas kini kemajuan ditunjukkan dalam masa nyata
+
+### Penggunaan Komputer Semasa Pemprosesan
+
+**Mod Percuma:**
+
+* Penggunaan CPU yang agak rendah (berbenang tunggal)
+* Komputer kekal responsif untuk tugasan lain
+* Selamat untuk meminimumkan Chloros dan berfungsi dalam aplikasi lain
+
+**Chloros+ Mod Selari:**
+
+* Penggunaan CPU yang tinggi (berbilang benang, sehingga 16 teras)
+* Dengan pecutan GPU: Penggunaan GPU yang tinggi
+* Komputer mungkin kurang responsif semasa pemprosesan
+* Elakkan memulakan tugas intensif CPU yang lain
+
+{% gaya petunjuk="amaran" %}
+**Petua Prestasi**: Untuk prestasi Chloros+ terbaik, tutup aplikasi lain dan biarkan Chloros menggunakan sumber sistem penuh.
+Petua {% %}
+
+### Pemprosesan Tidak Boleh Dijeda
+
+**Had penting:**
+
+* Setelah dimulakan, pemprosesan tidak boleh dijeda
+* Anda boleh membatalkan pemprosesan, tetapi kemajuan hilang
+* Keputusan separa tidak disimpan
+* Mesti dimulakan semula dari awal jika dibatalkan
+
+**Petua perancangan:** Untuk projek yang sangat besar, pertimbangkan untuk memproses secara berkelompok atau menggunakan CLI untuk kawalan yang lebih baik.***
+
+## Memantau Pemprosesan Anda
+
+Semasa pemprosesan berjalan, anda boleh:
+
+* **Tonton bar kemajuan** - Lihat peratusan penyiapan keseluruhan
+* **Lihat peringkat semasa** - Kesan, Analisis, Kalibrasi atau Eksport
+* **Semak tab log** - Lihat mesej dan amaran pemprosesan terperinci
+* **Pratonton imej yang telah siap** - Sesetengah fail eksport mungkin muncul semasa pemprosesan
+
+Untuk maklumat terperinci tentang pemantauan, lihat [Memantau Pemprosesan](monitoring-the-processing.md).
 
 ***
 
-## Processing Time Estimates
+## Membatalkan Pemprosesan
 
-Actual processing time varies greatly based on:
+Jika anda perlu menghentikan pemprosesan:
 
-* Number of images
-* Image resolution
-* RAW vs JPG input format
-* Processing mode (Free vs Chloros+)
-* CPU speed and core count
-* GPU availability (Chloros+ only)
-* Number of indices to calculate
-* Export format complexity
+### Cara Membatalkan
 
-### Rough Estimates (Chloros+, 12MP images, modern CPU)
+1. Cari **butang Berhenti/Batal** (menggantikan butang Mula semasa pemprosesan)
+2. Klik butang Berhenti
+3. Pemprosesan dihentikan serta-merta
+4. Keputusan separa dibuang
 
-| Image Count | Free Mode | Chloros+ (CPU) | Chloros+ (GPU) |
+### Bila Batal
+
+**Sebab yang sah untuk membatalkan:**
+
+* Menyedari tetapan yang salah telah digunakan
+* Terlupa untuk menandakan imej sasaran
+* Imej salah diimport
+* Sistem berjalan terlalu perlahan atau tidak bertindak balas
+
+**Selepas membatalkan:**
+
+* Semak dan selesaikan sebarang isu
+* Laraskan tetapan mengikut keperluan
+* Mulakan semula pemprosesan dari awal
+* Untuk pengalaman paling bersih, tutup sepenuhnya Chloros dan mulakan semula
+
+{% gaya petunjuk="amaran" %}
+**Tiada Keputusan Separa**: Pembatalan membuang semua kemajuan. Chloros tidak menyimpan imej yang diproses separa.
+Petua {% %}
+
+***
+
+## Anggaran Masa Pemprosesan
+
+Masa pemprosesan sebenar sangat berbeza berdasarkan:
+
+* Bilangan imej
+* Resolusi imej
+* Format input RAW vs JPG
+* Mod pemprosesan (Percuma lwn Chloros+)
+* Kelajuan CPU dan kiraan teras
+* Ketersediaan GPU (Chloros+ sahaja)
+* Bilangan indeks untuk dikira
+* Kerumitan format eksport
+
+### Anggaran Kasar (Chloros+, imej 12MP, CPU moden)
+
+| Kiraan Imej | Mod Percuma | Chloros+ (CPU) | Chloros+ (GPU) |
 | ----------- | --------- | -------------- | -------------- |
-| 50 images   | 15-20 min | 5-8 min        | 3-5 min        |
-| 100 images  | 30-40 min | 10-15 min      | 5-8 min        |
-| 200 images  | 1-1.5 hrs | 20-30 min      | 10-15 min      |
-| 500 images  | 2-3 hrs   | 45-60 min      | 20-30 min      |
-| 1000 images | 4-6 hrs   | 1.5-2 hrs      | 40-60 min      |
+| 50 imej | 15-20 min | 5-8 min | 3-5 min |
+| 100 imej | 30-40 min | 10-15 min | 5-8 min |
+| 200 imej | 1-1.5 jam | 20-30 min | 10-15 min |
+| 500 imej | 2-3 jam | 45-60 min | 20-30 min |
+| 1000 imej | 4-6 jam | 1.5-2 jam | 40-60 min |
 
 {% hint style="info" %}
-**First Run**: Initial processing may take longer as Chloros builds caches and profiles. Subsequent processing of similar datasets will be faster.
-{% endhint %}
+**Larian Pertama**: Pemprosesan awal mungkin mengambil masa lebih lama kerana Chloros membina cache dan profil. Pemprosesan seterusnya set data serupa akan menjadi lebih cepat.
+{% petua %}
 
 ***
 
-## Common Issues at Start
+## Isu Biasa pada Mula
 
-### Start Button Disabled (Grayed Out)
+### Butang Mula Dilumpuhkan (Berkelabu)
 
-**Possible causes:**
+**Punca yang mungkin:**
 
-* No images imported
-* Backend not fully started
-* Previous processing still running
-* Project not fully loaded
+* Tiada imej diimport
+* Bahagian belakang tidak dimulakan sepenuhnya
+* Pemprosesan sebelumnya masih berjalan
+* Projek tidak dimuatkan sepenuhnya
 
-**Solutions:**
+**Penyelesaian:**
 
-1. Wait for backend to fully initialize (check main menu icon)
-2. Verify images are imported in File Browser
-3. Restart Chloros if button remains disabled
-4. Check Debug Log for error messages
+1. Tunggu hujung belakang untuk dimulakan sepenuhnya (semak ikon menu utama)
+2. Sahkan imej diimport dalam Pelayar Fail
+3. Mulakan semula Chloros jika butang kekal dilumpuhkan
+4. Semak Log Nyahpepijat untuk mendapatkan mesej ralat
 
-### Processing Starts Then Immediately Fails
+### Pemprosesan Bermula Kemudian Gagal Serta-merta
 
-**Possible causes:**
+**Punca yang mungkin:**
 
-* No valid images in project
-* Corrupted image files
-* Insufficient disk space
-* Insufficient memory (RAM)
+* Tiada imej yang sah dalam projek
+* Fail imej rosak
+* Ruang cakera tidak mencukupi
+* Memori (RAM) tidak mencukupi
 
-**Solutions:**
+**Penyelesaian:**
 
-1. Check Debug Log <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> for error messages
-2. Verify disk space available
-3. Try processing a smaller subset of images
-4. Verify images are not corrupted
+1. Semak Log Nyahpepijat <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> untuk mendapatkan mesej ralat
+2. Sahkan ruang cakera tersedia
+3. Cuba memproses subset imej yang lebih kecil
+4. Sahkan imej tidak rosak
 
-### "No Targets Detected" Warning
+### Amaran "Tiada Sasaran Dikesan".
 
-**Possible causes:**
+**Punca yang mungkin:**
 
-* Forgot to mark target images
-* Target images don't contain visible targets
-* Target detection settings too strict
+* Terlupa untuk menandakan imej sasaran
+* Imej sasaran tidak mengandungi sasaran yang boleh dilihat
+* Tetapan pengesanan sasaran terlalu ketat
 
-**Solutions:**
+**Penyelesaian:**
 
-1. Review [Choosing Target Images](choosing-target-images.md)
-2. Mark appropriate images in Target column
-3. Verify targets are visible in marked images
-4. Adjust target detection settings if needed
-
-***
-
-## Tips for Successful Processing
-
-### Before Starting
-
-1. **Test with small subset first** - Process 10-20 images to verify settings
-2. **Check available disk space** - Ensure 2-3x dataset size free
-3. **Close unnecessary applications** - Free up system resources
-4. **Verify target images** - Preview marked targets to ensure quality
-5. **Save project** - Project auto-saves, but good practice to save manually
-
-### During Processing
-
-1. **Avoid system sleep** - Disable power saving modes
-2. **Keep Chloros in foreground** - Or at least visible in taskbar
-3. **Monitor progress occasionally** - Check for warnings or errors
-4. **Don't load other heavy applications** - Especially with Chloros+ parallel mode
-
-### Chloros+ GPU Acceleration
-
-If using NVIDIA GPU acceleration:
-
-1. Update NVIDIA drivers to latest version
-2. Ensure GPU has 4GB+ VRAM
-3. Close GPU-intensive applications (games, video editing)
-4. Monitor GPU temperature (ensure adequate cooling)
+1. Semak [Memilih Imej Sasaran](choosing-target-images.md)
+2. Tandakan imej yang sesuai dalam lajur Sasaran
+3. Sahkan sasaran kelihatan dalam imej bertanda
+4. Laraskan tetapan pengesanan sasaran jika perlu
 
 ***
 
-## Next Steps
+## Petua Pemprosesan yang Berjaya
 
-Once processing has started:
+### Sebelum Bermula
 
-1. **Monitor the progress** - See [Monitoring the Processing](monitoring-the-processing.md)
-2. **Wait for completion** - Processing runs automatically
-3. **Review results** - See [Finishing the Processing](finishing-the-processing.md)
+1. **Uji dengan subset kecil dahulu** - Proses 10-20 imej untuk mengesahkan tetapan
+2. **Semak ruang cakera yang tersedia** - Pastikan saiz set data 2-3x percuma
+3. **Tutup aplikasi yang tidak diperlukan** - Kosongkan sumber sistem
+4. **Sahkan imej sasaran** - Pratonton sasaran bertanda untuk memastikan kualiti
+5. **Simpan projek** - Projek simpan secara automatik, tetapi amalan yang baik untuk menyimpan secara manual
 
-For information about what to do during processing, see [Monitoring the Processing](monitoring-the-processing.md).
+### Semasa Pemprosesan
+
+1. **Elakkan sistem tidur** - Lumpuhkan mod penjimatan kuasa
+2. **Kekalkan Chloros di latar depan** - Atau sekurang-kurangnya kelihatan dalam bar tugas
+3. **Pantau kemajuan sekali-sekala** - Semak amaran atau ralat
+4. **Jangan muatkan aplikasi berat lain** - Terutamanya dengan mod selari Chloros+
+
+### Chloros+ Pecutan GPU
+
+Jika menggunakan pecutan GPU NVIDIA:
+
+1. Kemas kini pemacu NVIDIA kepada versi terkini
+2. Pastikan GPU mempunyai 4GB+ VRAM
+3. Tutup aplikasi intensif GPU (permainan, penyuntingan video)
+4. Pantau suhu GPU (pastikan penyejukan yang mencukupi)
+
+***
+
+## Langkah Seterusnya
+
+Setelah pemprosesan telah bermula:
+
+1. **Pantau kemajuan** - Lihat [Memantau Pemprosesan](monitoring-the-processing.md)
+2. **Tunggu sehingga selesai** - Pemprosesan berjalan secara automatik
+3. **Semakan keputusan** - Lihat [Menyelesaikan Pemprosesan](finishing-the-processing.md)
+
+Untuk maklumat tentang perkara yang perlu dilakukan semasa pemprosesan, lihat [Memantau Pemprosesan](monitoring-the-processing.md).

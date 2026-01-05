@@ -1,48 +1,49 @@
-# CLI : Command Line
+# CLI : Baris Perintah
 
 <figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>
 
-The **Chloros CLI** provides powerful command-line access to the Chloros image processing engine, enabling automation, scripting, and headless operation for your imaging workflows.
+**Chloros CLI** menyediakan akses baris perintah yang berkuasa kepada enjin pemprosesan imej Chloros, membolehkan automasi, penskripan dan operasi tanpa kepala untuk aliran kerja pengimejan anda.
 
-### Key Features
+### Ciri Utama
 
-* 🚀 **Automation** - Script batch processing of multiple datasets
-* 🔗 **Integration** - Embed in existing workflows and pipelines
-* 💻 **Headless Operation** - Run without GUI
-* 🌍 **Multi-Language** - Support for 38 languages
-* ⚡ **Parallel Processing** - Dynamically scales to your CPU (up to 16 parallel workers)
+* 🚀 **Automasi** - Pemprosesan kelompok skrip berbilang set data
+* 🔗 **Integrasi** - Benamkan dalam aliran kerja dan saluran paip sedia ada
+* 💻 **Operasi Tanpa Kepala** - Jalankan tanpa GUI
+* 🌍 **Berbilang Bahasa** - Sokongan untuk 38 bahasa
+* ⚡ **Pemprosesan Selari** - Skala secara dinamik kepada CPU anda (sehingga 16 pekerja selari)
 
-### Requirements
+### Keperluan
 
-| Requirement          | Details                                                             |
+| Keperluan | Butiran |
 | -------------------- | ------------------------------------------------------------------- |
-| **Operating System** | Windows 10/11 (64-bit)                                              |
-| **License**          | Chloros+ ([paid plan required](https://cloud.mapir.camera/pricing)) |
-| **Memory**           | 8GB RAM minimum (16GB recommended)                                  |
-| **Internet**         | Required for license activation                                     |
-| **Disk Space**       | Varies by project size                                              |
+| **Sistem Pengendalian** | Windows 10/11 (64-bit) |
+| **Lesen** | Chloros+ ([pelan berbayar diperlukan](https://cloud.mapir.camera/pricing)) |
+| **Memori** | 8GB RAM minimum (16GB disyorkan) |
+| **Internet** | Diperlukan untuk pengaktifan lesen |
+| **Ruang Cakera** | Berbeza mengikut saiz projek |
 
-{% hint style="warning" %}
-**License Requirement**: The CLI requires a paid Chloros+ subscription. Standard (free) plans do not have CLI access. Visit [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) to upgrade.
-{% endhint %}
+{% gaya petunjuk="amaran" %}
+**Keperluan Lesen**: CLI memerlukan langganan Chloros+ berbayar. Pelan standard (percuma) tidak mempunyai akses CLI. Lawati [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) untuk menaik taraf.
+Petua {% %}
 
-## Quick Start
+## Mula Pantas
 
-### Installation
+### Pemasangan
 
-The CLI is automatically included with the Chloros installer:
+CLI disertakan secara automatik dengan pemasang Chloros:
 
-1. Download and run **Chloros Installer.exe**
-2. Complete the installation wizard
-3. CLI installed to: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
+1. Muat turun dan jalankan **Chloros Installer.exe**
 
-{% hint style="success" %}
-The installer automatically adds `chloros-cli` to your system PATH. Restart your terminal after installation.
-{% endhint %}
+2. Lengkapkan wizard pemasangan
+3. CLI dipasang pada: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
-### First-Time Setup
+{% gaya pembayang="berjaya" %}
+Pemasang secara automatik menambah `chloros-cli` pada PATH sistem anda. Mulakan semula terminal anda selepas pemasangan.
+Petua {% %}
 
-Before using the CLI, activate your Chloros+ license:
+### Persediaan Kali Pertama
+
+Sebelum menggunakan CLI, aktifkan lesen Chloros+ anda:
 
 ```bash
 # Login with your Chloros+ account
@@ -55,9 +56,9 @@ chloros-cli status
 chloros-cli process "C:\Images\Dataset001"
 ```
 
-### Basic Usage
+### Penggunaan Asas
 
-Process a folder with default settings:
+Proses folder dengan tetapan lalai:
 
 ```powershell
 chloros-cli process "C:\Images\Dataset001"
@@ -65,9 +66,9 @@ chloros-cli process "C:\Images\Dataset001"
 
 ***
 
-## Command Reference
+## Rujukan Perintah
 
-### General Syntax
+### Sintaks Umum
 
 ```
 chloros-cli [global-options] <command> [command-options]
@@ -75,118 +76,114 @@ chloros-cli [global-options] <command> [command-options]
 
 ***
 
-## Commands
+## Perintah
 
-### `process` - Process Images
+### `process` - Proses Imej
 
-Process images in a folder with calibration.
+Proses imej dalam folder dengan penentukuran.
 
-**Syntax:**
+**Sintaks:**
 
 ```bash
 chloros-cli process <input-folder> [options]
 ```
 
-**Example:**
+**Contoh:**
 
 ```powershell
 chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 ```
 
-#### Process Command Options
+#### Pilihan Perintah Proses
 
-| Option                | Type    | Default        | Description                                                                            |
-| --------------------- | ------- | -------------- | -------------------------------------------------------------------------------------- |
-| `<input-folder>`      | Path    | _Required_     | Folder containing RAW/JPG multispectral images                                         |
-| `-o, --output`        | Path    | Same as input  | Output folder for processed images                                                     |
-| `-n, --project-name`  | String  | Auto-generated | Custom project name                                                                    |
-| `--vignette`          | Flag    | Enabled        | Enable vignette correction                                                             |
-| `--no-vignette`       | Flag    | -              | Disable vignette correction                                                            |
-| `--reflectance`       | Flag    | Enabled        | Enable reflectance calibration                                                         |
-| `--no-reflectance`    | Flag    | -              | Disable reflectance calibration                                                        |
-| `--ppk`               | Flag    | Disabled       | Apply PPK corrections from .daq light sensor data                                      |
-| `--format`            | Choice  | TIFF (16-bit)  | Output format: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
-| `--min-target-size`   | Integer | Auto           | Minimum target size in pixels for calibration panel detection                          |
-| `--target-clustering` | Integer | Auto           | Target clustering threshold (0-100)                                                    |
-| `--exposure-pin-1`    | String  | None           | Lock exposure for camera model (Pin 1)                                                 |
-| `--exposure-pin-2`    | String  | None           | Lock exposure for camera model (Pin 2)                                                 |
-| `--recal-interval`    | Integer | Auto           | Recalibration interval in seconds                                                      |
-| `--timezone-offset`   | Integer | 0              | Timezone offset in hours                                                               |
+| Pilihan | Taip | Lalai | Penerangan |
+| ---------------------- | ------- | -------------- | ------------------------------------------------------------------------------------ |
+| `<input-folder>` | Laluan | _Diperlukan_ | Folder yang mengandungi imej berbilang spektrum RAW/JPG |
+| `-o, --output` | Laluan | Sama seperti input | Folder output untuk imej yang diproses |
+| `-n, --project-name` | Rentetan | Dijana secara automatik | Nama projek tersuai |
+| `--vignette` | Benderakan | Didayakan | Dayakan pembetulan vignet |
+| `--no-vignette` | Benderakan | - | Lumpuhkan pembetulan vignet |
+| `--reflectance` | Benderakan | Didayakan | Dayakan penentukuran pantulan |
+| `--no-reflectance` | Benderakan | - | Lumpuhkan penentukuran pantulan |
+| `--ppk` | Benderakan | Dilumpuhkan | Gunakan pembetulan PPK daripada data penderia cahaya .daq |
+| `--format` | Pilihan | TIFF (16-bit) | Format output: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
+| `--min-target-size` | Integer | Auto | Saiz sasaran minimum dalam piksel untuk pengesanan panel penentukuran |
+| `--target-clustering` | Integer | Auto | Ambang pengelompokan sasaran (0-100) |
+| `--exposure-pin-1` | Rentetan | Tiada | Dedahan kunci untuk model kamera (Pin 1) |
+| `--exposure-pin-2` | Rentetan | Tiada | Dedahan kunci untuk model kamera (Pin 2) |
+| `--recal-interval` | Integer | Auto | Selang penentukuran semula dalam saat |
+| `--timezone-offset` | Integer | 0 | Zon waktu diimbangi dalam jam |
 
 ***
 
-### `login` - Authenticate Account
+### `login` - Sahkan Akaun
 
-Login with your Chloros+ credentials to enable CLI processing.
+Log masuk dengan bukti kelayakan Chloros+ anda untuk mendayakan pemprosesan CLI.
 
-**Syntax:**
+**Sintaks:**
 
 ```bash
 chloros-cli login <email> <password>
 ```
 
-**Example:**
+**Contoh:**
 
 ```powershell
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{% hint style="warning" %}
-**Special Characters**: Use single quotes around passwords containing characters like `$`, `!`, or spaces.
-{% endhint %}
+{% gaya petunjuk="amaran" %}
+**Watak Khas**: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti `$`, `!` atau ruang.
+Petua {% %}
 
-**Output:**
+**Keluaran:**<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+### `logout` - Kosongkan Bukti Kelayakan
 
-***
+Kosongkan bukti kelayakan yang disimpan dan log keluar daripada akaun anda.
 
-### `logout` - Clear Credentials
-
-Clear stored credentials and logout from your account.
-
-**Syntax:**
+**Sintaks:**
 
 ```bash
 chloros-cli logout
 ```
 
-**Example:**
+**Contoh:**
 
 ```powershell
 chloros-cli logout
 ```
 
-**Output:**
+**Keluaran:**
 
 ```
 ✓ Logout successful
 ℹ Credentials cleared from cache
 ```
 
-{% hint style="info" %}
-**SDK Users**: The Python SDK also provides a programmatic `logout()` method for clearing credentials within Python scripts. See the [Python SDK documentation](api-python-sdk.md#logout) for details.
-{% endhint %}
+{% gaya pembayang="info" %}
+**Pengguna SDK**: Python SDK juga menyediakan kaedah `logout()` terprogram untuk mengosongkan bukti kelayakan dalam skrip Python. Lihat dokumentasi [Python SDK](api-python-sdk.md#logout) untuk butiran.
+Petua {% %}
 
 ***
 
-### `status` - Check License Status
+### `status` - Semak Status Lesen
 
-Display current license and authentication status.
+Paparkan status lesen dan pengesahan semasa.
 
-**Syntax:**
+**Sintaks:**
 
 ```bash
 chloros-cli status
 ```
 
-**Example:**
+**Contoh:**
 
 ```powershell
 chloros-cli status
 ```
 
-**Output:**
+**Keluaran:**
 
 ```
 ╔══════════════════════════════════════╗
@@ -201,31 +198,29 @@ chloros-cli status
 
 ***
 
-### `export-status` - Check Export Progress
+### `export-status` - Semak Kemajuan Eksport
 
-Monitor Thread 4 export progress during or after processing.
+Pantau kemajuan eksport Thread 4 semasa atau selepas pemprosesan.
 
-**Syntax:**
+**Sintaks:**
 
 ```bash
 chloros-cli export-status
 ```
 
-**Example:**
+**Contoh:**
 
 ```powershell
 chloros-cli export-status
 ```
 
-**Use Case:** Call this command while processing is running to check export progress.
+**Kes Penggunaan:** Panggil arahan ini semasa pemprosesan sedang berjalan untuk menyemak kemajuan eksport.***
 
-***
+### `language` - Urus Bahasa Antara Muka
 
-### `language` - Manage Interface Language
+Lihat atau tukar bahasa antara muka CLI.
 
-View or change the CLI interface language.
-
-**Syntax:**
+**Sintaks:**
 
 ```bash
 # Show current language
@@ -238,7 +233,7 @@ chloros-cli language --list
 chloros-cli language <language-code>
 ```
 
-**Examples:**
+**Contoh:**
 
 ```powershell
 # View current language
@@ -254,66 +249,66 @@ chloros-cli language es
 chloros-cli language ja
 ```
 
-#### Supported Languages (38 Total)
+#### Bahasa yang Disokong (38 Jumlah)
 
-| Code    | Language              | Native Name      |
-| ------- | --------------------- | ---------------- |
-| `en`    | English               | English          |
-| `es`    | Spanish               | Español          |
-| `pt`    | Portuguese            | Português        |
-| `fr`    | French                | Français         |
-| `de`    | German                | Deutsch          |
-| `it`    | Italian               | Italiano         |
-| `ja`    | Japanese              | 日本語              |
-| `ko`    | Korean                | 한국어              |
-| `zh`    | Chinese (Simplified)  | 简体中文             |
-| `zh-TW` | Chinese (Traditional) | 繁體中文             |
-| `ru`    | Russian               | Русский          |
-| `nl`    | Dutch                 | Nederlands       |
-| `ar`    | Arabic                | العربية          |
-| `pl`    | Polish                | Polski           |
-| `tr`    | Turkish               | Türkçe           |
-| `hi`    | Hindi                 | हिंदी            |
-| `id`    | Indonesian            | Bahasa Indonesia |
-| `vi`    | Vietnamese            | Tiếng Việt       |
-| `th`    | Thai                  | ไทย              |
-| `sv`    | Swedish               | Svenska          |
-| `da`    | Danish                | Dansk            |
-| `no`    | Norwegian             | Norsk            |
-| `fi`    | Finnish               | Suomi            |
-| `el`    | Greek                 | Ελληνικά         |
-| `cs`    | Czech                 | Čeština          |
-| `hu`    | Hungarian             | Magyar           |
-| `ro`    | Romanian              | Română           |
-| `uk`    | Ukrainian             | Українська       |
-| `pt-BR` | Brazilian Portuguese  | Português Brasileiro |
-| `zh-HK` | Cantonese             | 粵語             |
-| `ms`    | Malay                 | Bahasa Melayu    |
-| `sk`    | Slovak                | Slovenčina       |
-| `bg`    | Bulgarian             | Български        |
-| `hr`    | Croatian              | Hrvatski         |
-| `lt`    | Lithuanian            | Lietuvių         |
-| `lv`    | Latvian               | Latviešu         |
-| `et`    | Estonian              | Eesti            |
-| `sl`    | Slovenian             | Slovenščina      |
+| Kod | Bahasa | Nama Asli |
+| ------- | ---------------------- | ---------------- |
+| `en` | Inggeris | Inggeris |
+| `es` | Sepanyol | Español |
+| `pt` | Portugis | Português |
+| `fr` | Perancis | Français |
+| `de` | Jerman | Deutsch |
+| `it` | Itali | Italiano |
+| `ja` | Jepun | 日本語 |
+| `ko` | Korea | 한국어 |
+| `zh` | Cina (Mudah) | 简体中文 |
+| `zh-TW` | Cina (Tradisional) | 繁體中文 |
+| `ru` | Rusia | Русский |
+| `nl` | Belanda | Belanda |
+| `ar` | Bahasa Arab | العربية |
+| `pl` | Poland | Polski |
+| `tr` | Turki | Türkçe |
+| `hi` | Hindi | हिंदी |
+| `id` | Indonesia | Bahasa Indonesia |
+| `vi` | Vietnam | Tiếng Việt |
+| `th` | Thai | ไทย |
+| `sv` | Sweden | Svenska |
+| `da` | Denmark | Dansk |
+| `no` | bahasa Norway | Norsk |
+| `fi` | Bahasa Finland | Suomi |
+| `el` | Greek | Ελληνικά |
+| `cs` | Czech | Čeština |
+| `hu` | Bahasa Hungary | Magyar |
+| `ro` | Bahasa Romania | Română |
+| `uk` | Ukraine | Українська |
+| `pt-BR` | Portugis Brazil | Português Brasileiro |
+| `zh-HK` | Kantonis | 粵語 |
+| `ms` | Melayu | Bahasa Melayu |
+| `sk` | Bahasa Slovak | Slovenčina |
+| `bg` | Bahasa Bulgaria | Български |
+| `hr` | Bahasa Croatia | Hrvatski |
+| `lt` | Bahasa Lithuania | Lietuvių |
+| `lv` | Bahasa Latvia | Latviešu |
+| `et` | Estonia | Eesti |
+| `sl` | Bahasa Slovenia | Slovenščina |
 
-{% hint style="success" %}
-**Automatic Persistence**: Your language preference is saved to `~/.chloros/cli_language.json` and persists across all sessions.
-{% endhint %}
+{% gaya petunjuk="berjaya" %}
+**Kegigihan Automatik**: Pilihan bahasa anda disimpan ke `~/.chloros/cli_language.json` dan berterusan merentas semua sesi.
+Petua {% %}
 
 ***
 
-### `set-project-folder` - Set Default Project Folder
+### `set-project-folder` - Tetapkan Folder Projek Lalai
 
-Change the default project folder location (shared with GUI).
+Tukar lokasi folder projek lalai (dikongsi dengan GUI).
 
-**Syntax:**
+**Sintaks:**
 
 ```bash
 chloros-cli set-project-folder <folder-path>
 ```
 
-**Example:**
+**Contoh:**
 
 ```powershell
 chloros-cli set-project-folder "C:\Projects\2025"
@@ -321,23 +316,23 @@ chloros-cli set-project-folder "C:\Projects\2025"
 
 ***
 
-### `get-project-folder` - Show Project Folder
+### `get-project-folder` - Tunjukkan Folder Projek
 
-Display the current default project folder location.
+Paparkan lokasi folder projek lalai semasa.
 
-**Syntax:**
+**Sintaks:**
 
 ```bash
 chloros-cli get-project-folder
 ```
 
-**Example:**
+**Contoh:**
 
 ```powershell
 chloros-cli get-project-folder
 ```
 
-**Output:**
+**Keluaran:**
 
 ```
 ℹ Current project folder: C:\Projects\2025
@@ -345,11 +340,11 @@ chloros-cli get-project-folder
 
 ***
 
-### `reset-project-folder` - Reset to Default
+### `reset-project-folder` - Tetapkan Semula kepada Lalai
 
-Reset the project folder to the default location.
+Tetapkan semula folder projek ke lokasi lalai.
 
-**Syntax:**
+**Sintaks:**
 
 ```bash
 chloros-cli reset-project-folder
@@ -357,19 +352,19 @@ chloros-cli reset-project-folder
 
 ***
 
-## Global Options
+## Pilihan Global
 
-These options apply to all commands:
+Pilihan ini digunakan untuk semua arahan:
 
-| Option          | Type    | Default       | Description                                      |
+| Pilihan | Taip | Lalai | Penerangan |
 | --------------- | ------- | ------------- | ------------------------------------------------ |
-| `--backend-exe` | Path    | Auto-detected | Path to backend executable                       |
-| `--port`        | Integer | 5000          | Backend API port number                          |
-| `--restart`     | Flag    | -             | Force restart backend (kills existing processes) |
-| `--version`     | Flag    | -             | Show version information and exit                |
-| `--help`        | Flag    | -             | Show help information and exit                   |
+| `--backend-exe` | Laluan | Auto dikesan | Laluan ke bahagian belakang boleh laku |
+| `--port` | Integer | 5000 | Bahagian belakang API nombor port |
+| `--restart` | Benderakan | - | Paksa mulakan semula hujung belakang (membunuh proses sedia ada) |
+| `--version` | Benderakan | - | Tunjukkan maklumat versi dan keluar |
+| `--help` | Benderakan | - | Tunjukkan maklumat bantuan dan keluar |
 
-**Example with Global Options:**
+**Contoh dengan Pilihan Global:**
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Survey_001"
@@ -377,80 +372,76 @@ chloros-cli --port 5001 process "C:\Datasets\Survey_001"
 
 ***
 
-## Processing Settings Guide
+## Panduan Tetapan Pemprosesan
 
-### Parallel Processing
+### Pemprosesan Selari
 
-Chloros+ CLI **automatically scales** parallel processing to match your computer's capabilities:
+Chloros+ CLI **skala automatik**pemprosesan selari untuk dipadankan dengan keupayaan komputer anda:**Cara Ia Berfungsi:**
 
-**How It Works:**
+* Mengesan teras CPU dan RAM anda
+* Memperuntukkan pekerja: **2× teras CPU** (menggunakan hyperthreading)
+* **Maksimum: 16 pekerja selari** (untuk kestabilan)**Tingkat Sistem:**
 
-* Detects your CPU cores and RAM
-* Allocates workers: **2× CPU cores** (uses hyperthreading)
-* **Maximum: 16 parallel workers** (for stability)
-
-**System Tiers:**
-
-| System Type   | CPU        | RAM      | Workers  | Performance     |
+| Jenis Sistem | CPU | RAM | Pekerja | Persembahan |
 | ------------- | ---------- | -------- | -------- | --------------- |
-| **High-End**  | 16+ cores  | 32+ GB   | Up to 16 | Maximum speed   |
-| **Mid-Range** | 8-15 cores | 16-31 GB | 8-16     | Excellent speed |
-| **Low-End**   | 4-7 cores  | 8-15 GB  | 4-8      | Good speed      |
+| **High-End** | 16+ teras | 32+ GB | Sehingga 16 | Kelajuan maksimum |
+| **Julat Pertengahan** | 8-15 teras | 16-31 GB | 8-16 | Kelajuan yang sangat baik |
+| **Low-End** | 4-7 teras | 8-15 GB | 4-8 | Kelajuan yang baik |
 
-{% hint style="success" %}
-**Automatic Optimization**: The CLI automatically detects your system specs and configures optimal parallel processing. No manual configuration needed!
-{% endhint %}
+{% gaya pembayang="berjaya" %}
+**Pengoptimuman Automatik**: CLI secara automatik mengesan spesifikasi sistem anda dan mengkonfigurasi pemprosesan selari yang optimum. Tiada konfigurasi manual diperlukan!
+Petua {% %}
 
-### Debayer Methods
+### Kaedah Debayer
 
-The CLI uses **High Quality (Faster)** as the default and recommended debayer algorithm:
+CLI menggunakan **Kualiti Tinggi (Lebih Cepat)** sebagai algoritma debayer lalai dan disyorkan:
 
-| Method                      | Quality | Speed | Description                                 |
-| --------------------------- | ------- | ----- | ------------------------------------------- |
-| **High Quality (Faster)** ⭐ | ⭐⭐⭐⭐    | ⚡⚡⚡   | Edge-aware algorithm (default, recommended) |
+| Kaedah | Kualiti | Kelajuan | Penerangan |
+| --------------------------- | ------- | ----- | ------------------------------------------ |
+| **Kualiti Tinggi (Lebih Cepat)** ⭐ | ⭐⭐⭐⭐ | ⚡⚡⚡ | Algoritma sedar tepi (lalai, disyorkan) |
 
-### Vignette Correction
+### Pembetulan Vignette
 
-**What it does:** Corrects light falloff at image edges (darker corners common in camera imagery).
+**Apa yang dilakukannya:** Membetulkan kejatuhan cahaya pada tepi imej (sudut gelap biasa dalam imejan kamera).
 
-* **Enabled by default** - Most users should keep this enabled
-* Use `--no-vignette` to disable
+* **Didayakan secara lalai** - Kebanyakan pengguna harus memastikan ini didayakan
+* Gunakan `--no-vignette` untuk melumpuhkan
 
-{% hint style="success" %}
-**Recommendation**: Always enable vignette correction to ensure uniform brightness across the frame.
-{% endhint %}
+{% gaya petunjuk="berjaya" %}
+**Cadangan**: Sentiasa dayakan pembetulan vignet untuk memastikan kecerahan seragam merentasi bingkai.
+Petua {% %}
 
-### Reflectance Calibration
+### Penentukuran Pantulan
 
-Converts raw sensor values to standardized reflectance percentages using calibration panels.
+Menukar nilai sensor mentah kepada peratusan pemantulan piawai menggunakan panel penentukuran.
 
-* **Enabled by default** - Essential for vegetation analysis
-* Requires calibration target panels in images
-* Use `--no-reflectance` to disable
+* **Didayakan secara lalai** - Penting untuk analisis tumbuh-tumbuhan
+* Memerlukan panel sasaran penentukuran dalam imej
+* Gunakan `--no-reflectance` untuk melumpuhkan
 
 {% hint style="info" %}
-**Requirements**: Ensure calibration panels are properly exposed and visible in your images for accurate reflectance conversion.
-{% endhint %}
+**Keperluan**: Pastikan panel penentukuran didedahkan dengan betul dan kelihatan dalam imej anda untuk penukaran pantulan yang tepat.
+Petua {% %}
 
-### PPK Corrections
+### Pembetulan PPK
 
-**What it does:** Applies Post-Processed Kinematic corrections using DAQ-A-SD log data for improved GPS accuracy.
+**Apa yang dilakukannya:** Menggunakan pembetulan Kinematik Pasca Diproses menggunakan data log DAQ-A-SD untuk ketepatan GPS yang dipertingkatkan.
 
-* **Disabled by default**
-* Use `--ppk` to enable
-* Requires .daq files in project folder from MAPIR DAQ-A-SD light sensor.
+* **Dilumpuhkan secara lalai**
+* Gunakan `--ppk` untuk mendayakan
+* Memerlukan fail .daq dalam folder projek daripada penderia cahaya MAPIR DAQ-A-SD.
 
-### Output Formats
+### Format Output
 
-<table><thead><tr><th width="197">Format</th><th width="130.20001220703125">Bit Depth</th><th width="116.5999755859375">File Size</th><th>Best For</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>16-bit integer</td><td>Large</td><td>GIS analysis, photogrammetry (recommended)</td></tr><tr><td><strong>TIFF (32-bit, Percent)</strong></td><td>32-bit float</td><td>Very Large</td><td>Scientific analysis, research</td></tr><tr><td><strong>PNG (8-bit)</strong></td><td>8-bit integer</td><td>Medium</td><td>Visual inspection, web sharing</td></tr><tr><td><strong>JPG (8-bit)</strong></td><td>8-bit integer</td><td>Small</td><td>Quick preview, compressed output</td></tr></tbody></table>
+<table><thead><tr><th width="197">Format</th><th width="130.20001220703125">Kedalaman Bit</th><th width="116.5999755859375">Saiz Fail</th><th>Terbaik Untuk</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>integer 16-bit</td><td>Besar</td><td>Analisis GIS, fotogrametri (disyorkan)</td></tr><tr><td><strong>TIFF (32-bit, Peratus)</strong></td><td>Apungan 32-bit</td><td>Sangat Besar</td><td>Analisis saintifik, penyelidikan</td></tr><tr><td><strong>X4PROTX000TX2 (8-bit)</strong></td><td>8-bit integer</td><td>Sederhana</td><td>Pemeriksaan visual, perkongsian web</td></tr><tr><td><strong>JPG (8-bit)</strong></td><td>8-bit integer</td><td>Kecil</td><td> pratonton, output termampat</td></tr></tbody></table>
 
 ***
 
-## Automation & Scripting
+## Automasi & Skrip
 
-### PowerShell Batch Processing
+### Pemprosesan Kelompok PowerShell
 
-Process multiple dataset folders automatically:
+Proses berbilang folder set data secara automatik:
 
 ```powershell
 # process_all_datasets.ps1
@@ -474,9 +465,9 @@ foreach ($dataset in $datasets) {
 Write-Host "All datasets processed!" -ForegroundColor Green
 ```
 
-### Windows Batch Script
+### Skrip Kelompok Windows
 
-Simple loop for batch processing:
+Gelung mudah untuk pemprosesan kelompok:
 
 ```batch
 @echo off
@@ -501,9 +492,9 @@ echo All datasets processed!
 pause
 ```
 
-### Python Automation Script
+### Skrip Automasi Python
 
-Advanced automation with error handling:
+Automasi lanjutan dengan pengendalian ralat:
 
 ```python
 import subprocess
@@ -582,18 +573,19 @@ if __name__ == '__main__':
 
 ***
 
-## Processing Workflow
+## Memproses Aliran Kerja
 
-### Standard Workflow
+### Aliran Kerja Standard
 
-1. **Input**: Folder containing RAW/JPG image pairs
-2. **Discovery**: CLI auto-scans for supported image files
-3. **Processing**: Parallel mode scales to your CPU cores (Chloros+)
-4. **Output**: Creates camera-model subfolders with processed images
+1. **Input**: Folder yang mengandungi pasangan imej RAW/JPG
+2. **Penemuan**: CLI auto-imbasan untuk fail imej yang disokong
+3. **Pemprosesan**: Skala mod selari kepada teras CPU anda (Chloros+)
+4. **Output**: Mencipta subfolder model kamera dengan imej yang diproses
 
-### Example Output Structure
+### Contoh Struktur Output
 
 ```
+
 MyProject/
 ├── project.json                             # Project metadata
 ├── 2025_0203_193056_008.JPG                # Original JPG
@@ -604,72 +596,71 @@ MyProject/
     └── ...
 ```
 
-### Processing Time Estimates
+### Anggaran Masa Pemprosesan
 
-Typical processing times for 100 images (12MP each):
+Masa pemprosesan biasa untuk 100 imej (12MP setiap satu):
 
-| Mode              | Time      | Hardware                                     |
-| ----------------- | --------- | -------------------------------------------- |
-| **Parallel Mode** | 5-10 min  | i7/Ryzen 7, 16GB RAM, SSD (up to 16 workers) |
-| **Parallel Mode** | 10-15 min | i5/Ryzen 5, 8GB RAM, HDD (up to 8 workers)   |
+| Mod | Masa | Perkakasan |
+| ----------------- | --------- | ------------------------------------------ |
+| **Mod Selari** | 5-10 min | i7/Ryzen 7, 16GB RAM, SSD (sehingga 16 pekerja) |
+| **Mod Selari** | 10-15 min | i5/Ryzen 5, 8GB RAM, HDD (sehingga 8 pekerja) |
 
-{% hint style="info" %}
-**Performance Tip**: Processing time varies based on image count, resolution, and computer specs.
-{% endhint %}
+{% gaya petunjuk="info" %}
+**Petua Prestasi**: Masa pemprosesan berbeza-beza berdasarkan kiraan imej, peleraian dan spesifikasi komputer.
+Petua {% %}
 
 ***
 
-## Troubleshooting
+## Menyelesaikan masalah
 
-### CLI Not Found
+### CLI Tidak Ditemui
 
-**Error:**
+**Ralat:**
 
 ```
 'chloros-cli' is not recognized as an internal or external command
 ```
 
-**Solutions:**
+**Penyelesaian:**
 
-1. Verify installation location:
+1. Sahkan lokasi pemasangan:
 
 ```powershell
 dir "C:\Program Files\Chloros\resources\cli\chloros-cli.exe"
 ```
 
-2. Use full path if not in PATH:
+2. Gunakan laluan penuh jika tidak dalam PATH:
 
 ```powershell
 "C:\Program Files\Chloros\resources\cli\chloros-cli.exe" process "C:\Datasets\Field_A"
 ```
 
-3. Add to PATH manually:
-   * Open System Properties → Environment Variables
-   * Edit PATH variable
-   * Add: `C:\Program Files\Chloros\resources\cli`
-   * Restart terminal
+3. Tambahkan pada PATH secara manual:
+   * Sifat Sistem Terbuka → Pembolehubah Persekitaran
+   * Edit pembolehubah PATH
+   * Tambah: `C:\Program Files\Chloros\resources\cli`
+   * Mulakan semula terminal
 
 ***
 
-### Backend Failed to Start
-
-**Error:**
+### Bahagian Belakang Gagal Dimulakan**Ralat:**
 
 ```
+
 Backend failed to start within 30 seconds
 ```
 
-**Solutions:**
+**Penyelesaian:**
 
-1. Check if backend already running (close it first)
-2. Check Windows Firewall is not blocking
-3. Try different port:
+1. Semak sama ada bahagian belakang sudah berjalan (tutup dahulu)
+2. Periksa Windows Firewall tidak menyekat
+3. Cuba port yang berbeza:
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
 ```
 
-4. Force restart backend:
+4. Paksa mulakan semula hujung belakang:
 
 ```powershell
 chloros-cli --restart process "C:\Datasets\Field_A"
@@ -677,71 +668,66 @@ chloros-cli --restart process "C:\Datasets\Field_A"
 
 ***
 
-### License / Authentication Issues
-
-**Error:**
+### Isu Lesen / Pengesahan**Ralat:**
 
 ```
+
 Chloros+ license required for CLI access
 ```
 
-**Solutions:**
+**Penyelesaian:**
 
-1. Verify you have an active Chloros+ subscription
-2. Login with your credentials:
+1. Sahkan anda mempunyai langganan Chloros+ yang aktif
+2. Log masuk dengan kelayakan anda:
 
 ```powershell
 chloros-cli login user@example.com 'password'
 ```
 
-3. Check license status:
+3. Semak status lesen:
 
 ```powershell
 chloros-cli status
 ```
 
-4. Contact support: info@mapir.camera
+4. Hubungi sokongan: info@mapir.camera
 
 ***
 
-### No Images Found
-
-**Error:**
+### Tiada Imej Ditemui**Ralat:**
 
 ```
+
 No images found in the specified folder
 ```
 
-**Solutions:**
+**Penyelesaian:**
 
-1. Verify folder contains supported formats (.RAW, .TIF, .JPG)
-2. Check folder path is correct (use quotes for paths with spaces)
-3. Ensure you have read permissions for the folder
-4. Check file extensions are correct
-
-***
-
-### Processing Stalls or Hangs
-
-**Solutions:**
-
-1. Check available disk space (ensure enough for output)
-2. Close other applications to free memory
-3. Reduce image count (process in batches)
+1. Sahkan folder mengandungi format yang disokong (.RAW, .TIF, .JPG)
+2. Semak laluan folder adalah betul (gunakan petikan untuk laluan dengan ruang)
+3. Pastikan anda telah membaca kebenaran untuk folder tersebut
+4. Semak sambungan fail adalah betul
 
 ***
 
-### Port Already in Use
+### Memproses Gerai atau Gantung**Penyelesaian:**
 
-**Error:**
+1. Semak ruang cakera yang tersedia (pastikan cukup untuk output)
+2. Tutup aplikasi lain untuk membebaskan memori
+3. Kurangkan kiraan imej (proses dalam kelompok)
+
+***
+
+### Pelabuhan Sudah Digunakan**Ralat:**
 
 ```
+
 Port 5000 is already in use
 ```
 
-**Solution:**
+**Penyelesaian:**
 
-Specify a different port:
+Tentukan port yang berbeza:
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
@@ -749,35 +735,31 @@ chloros-cli --port 5001 process "C:\Datasets\Field_A"
 
 ***
 
-## FAQ
+## Soalan Lazim
 
-### Q: Do I need a license for the CLI?
+### S: Adakah saya memerlukan lesen untuk CLI?
 
-**A:** Yes! The CLI requires a paid **Chloros+ license**.
+**J:**Ya! CLI memerlukan lesen**Chloros+ berbayar.
 
-* ❌ Standard (free) plan: CLI disabled
-* ✅ Chloros+ (paid) plans: CLI fully enabled
+* ❌ Pelan standard (percuma): CLI dilumpuhkan
+* ✅ Pelan Chloros+ (berbayar): CLI didayakan sepenuhnya
 
-Subscribe at: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
-
-***
-
-### Q: Can I use the CLI on a server without GUI?
-
-**A:** Yes! The CLI runs completely headless. Requirements:
-
-* Windows Server 2016 or later
-* Visual C++ Redistributable installed
-* Sufficient RAM (8GB minimum, 16GB recommended)
-* One-time GUI license activation on any machine
+Langgan di: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
 ***
 
-### Q: Where are processed images saved?
+### S: Bolehkah saya menggunakan CLI pada pelayan tanpa GUI?**J:** Ya! CLI berjalan tanpa kepala sepenuhnya. Keperluan:
 
-**A:** By default, processed images are saved in the **same folder as input** in camera-model subfolders (e.g., `Survey3N_RGN/`).
+* Windows Server 2016 atau lebih baru
+* Visual C++ Redistributable dipasang
+* RAM yang mencukupi (minimum 8GB, disyorkan 16GB)
+* Satu kali pengaktifan lesen GUI pada mana-mana mesin
 
-Use `-o` option to specify different output folder:
+***
+
+### S: Di manakah imej yang diproses disimpan?**J:**Secara lalai, imej yang diproses disimpan dalam**folder yang sama seperti input** dalam subfolder model kamera (cth., `Survey3N_RGN/`).
+
+Gunakan pilihan `-o` untuk menentukan folder output yang berbeza:
 
 ```powershell
 chloros-cli process "C:\Input" -o "D:\Output"
@@ -785,15 +767,9 @@ chloros-cli process "C:\Input" -o "D:\Output"
 
 ***
 
-### Q: Can I process multiple folders at once?
+### S: Bolehkah saya memproses berbilang folder sekaligus?**J:** Tidak secara langsung dalam satu arahan, tetapi anda boleh menggunakan skrip untuk memproses folder secara berurutan. Lihat bahagian [Automasi & Skrip](CLI.md#automation--scripting).***
 
-**A:** Not directly in one command, but you can use scripting to process folders sequentially. See [Automation & Scripting](CLI.md#automation--scripting) section.
-
-***
-
-### Q: How do I save CLI output to a log file?
-
-**PowerShell:**
+### S: Bagaimanakah cara saya menyimpan output CLI ke fail log?**PowerShell:**
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" | Tee-Object -FilePath "processing.log"
@@ -807,45 +783,38 @@ chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
 
 ***
 
-### Q: What happens if I press Ctrl+C during processing?
+### S: Apakah yang berlaku jika saya menekan Ctrl+C semasa pemprosesan?**J:** CLI akan:
 
-**A:** The CLI will:
+1. Hentikan pemprosesan dengan baik
+2. Tutup bahagian belakang
+3. Keluar dengan kod 130
 
-1. Stop processing gracefully
-2. Shut down the backend
-3. Exit with code 130
-
-Partially processed images may remain in the output folder.
+Imej yang diproses separa mungkin kekal dalam folder output.
 
 ***
 
-### Q: Can I automate CLI processing?
+### S: Bolehkah saya mengautomasikan pemprosesan CLI?**J:** Sudah tentu! CLI direka untuk automasi. Lihat [Automasi & Skrip](CLI.md#automation--scripting) untuk contoh PowerShell, Batch dan Python.***
 
-**A:** Absolutely! The CLI is designed for automation. See [Automation & Scripting](CLI.md#automation--scripting) for PowerShell, Batch, and Python examples.
-
-***
-
-### Q: How do I check the CLI version?
-
-**A:**
+### S: Bagaimanakah cara saya menyemak versi CLI?**J:**
 
 ```powershell
 chloros-cli --version
 ```
 
-**Output:**
+**Keluaran:**
 
 ```
+
 Chloros CLI 1.0.2
 ```
 
 ***
 
-## Getting Help
+## Mendapatkan Bantuan
 
-### Command-Line Help
+### Bantuan Baris Perintah
 
-View help information directly in the CLI:
+Lihat maklumat bantuan terus dalam CLI:
 
 ```powershell
 # General help
@@ -857,19 +826,17 @@ chloros-cli login --help
 chloros-cli language --help
 ```
 
-### Support Channels
+### Saluran Sokongan
 
-* **Email**: info@mapir.camera
-* **Website**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* **Pricing**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
+* **E-mel**: info@mapir.camera
+* **Tapak web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* **Harga**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)***
 
-***
+## Contoh Lengkap
 
-## Complete Examples
+### Contoh 1: Pemprosesan Asas
 
-### Example 1: Basic Processing
-
-Process with default settings (vignette, reflectance):
+Proses dengan tetapan lalai (vignet, pantulan):
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A_2025_01_15"
@@ -877,9 +844,9 @@ chloros-cli process "C:\Datasets\Field_A_2025_01_15"
 
 ***
 
-### Example 2: High-Quality Scientific Output
+### Contoh 2: Output Saintifik Berkualiti Tinggi
 
-32-bit float TIFF:
+Terapung 32-bit TIFF:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -890,9 +857,9 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ***
 
-### Example 3: Fast Preview Processing
+### Contoh 3: Pemprosesan Pratonton Pantas
 
-8-bit PNG without calibration for quick review:
+8-bit PNG tanpa penentukuran untuk semakan pantas:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -903,9 +870,9 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ***
 
-### Example 4: PPK-Corrected Processing
+### Contoh 4: Pemprosesan Dibetulkan PPK
 
-Apply PPK corrections with reflectance:
+Gunakan pembetulan PPK dengan pemantulan:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -915,9 +882,9 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ***
 
-### Example 5: Custom Output Location
+### Contoh 5: Lokasi Output Tersuai
 
-Process to different drive with specific format:
+Proses ke pemacu yang berbeza dengan format tertentu:
 
 ```powershell
 chloros-cli process "C:\Input\Raw_Images" ^
@@ -927,9 +894,9 @@ chloros-cli process "C:\Input\Raw_Images" ^
 
 ***
 
-### Example 6: Authentication Workflow
+### Contoh 6: Aliran Kerja Pengesahan
 
-Complete authentication flow:
+Aliran pengesahan lengkap:
 
 ```powershell
 # Step 1: Login
@@ -947,9 +914,9 @@ chloros-cli logout
 
 ***
 
-### Example 7: Multi-Language Usage
+### Contoh 7: Penggunaan Pelbagai Bahasa
 
-Change interface language:
+Tukar bahasa antara muka:
 
 ```powershell
 # List available languages

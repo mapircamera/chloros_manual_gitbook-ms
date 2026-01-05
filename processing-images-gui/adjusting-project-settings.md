@@ -1,148 +1,177 @@
-# Menyesuaikan tetapan projek
+# Melaraskan Tetapan Projek
 
-Sebelum memproses imej anda, penting untuk mengkonfigurasi tetapan projek anda untuk memenuhi keperluan aliran kerja anda. Tetapan Projek <IMG SRC = "..
+Sebelum memproses imej anda, adalah penting untuk mengkonfigurasi tetapan projek anda agar sepadan dengan keperluan aliran kerja anda. Panel Tetapan Projek <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> menyediakan kawalan menyeluruh ke atas penentukuran, pilihan pemprosesan, indeks berbilang spektrum dan format eksport.
 
 ## Mengakses Tetapan Projek
 
-1. Buka projek anda di kloros
-2. Klik tetapan projek ** **<img src="../. Gitbook/assets/icon_project-settings.jpg" alt="" data-size="line"> ikon di bar sisi kiri
+1. Buka projek anda dalam Chloros
+2. Klik ikon **Tetapan Projek** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> di bar sisi kiri
 3. Panel Tetapan Projek memaparkan semua pilihan konfigurasi
 
-{% hint style="info" %}**Tetapan disimpan secara automatik**dengan projek anda. Apabila anda membuka semula projek, semua tetapan dipulihkan.
-{% endhint %}***
+{% hint style="info" %}
+**Tetapan disimpan secara automatik** dengan projek anda. Apabila anda membuka semula projek, semua tetapan dipulihkan.
+Petua {% %}
 
-## Persediaan cepat untuk aliran kerja biasa
+***
 
-### Tetapan lalai (disyorkan untuk kebanyakan pengguna)
+## Persediaan Pantas untuk Aliran Kerja Biasa
 
-Untuk aliran kerja kamera Mapir Survey3 biasa, tetapan lalai berfungsi dengan baik:
+### Tetapan Lalai (Disyorkan untuk Kebanyakan Pengguna)
 
-* ✅ **pembetulan vignette**: diaktifkan
-* ✅ **Penentukuran Refleksi**: Diaktifkan (memerlukan imej sasaran Mapir)
-* ✅ **kaedah debayer**: berkualiti tinggi (lebih cepat)
-* ✅ **Format Eksport**: TIFF (16-bit)
+Untuk aliran kerja kamera MAPIR biasa Survey3, tetapan lalai berfungsi dengan baik:
 
-Hanya mengimport imej anda dan mula memproses dengan lalai ini.***## Gambaran keseluruhan tetapan projek
+* ✅ **Pembetulan vignet**: Didayakan
+* ✅ **Penentukuran pantulan**: Didayakan (memerlukan imej sasaran MAPIR)
+* ✅ **Kaedah Debayer**: Kualiti Tinggi (Lebih Cepat)
+* ✅ **Format eksport**: TIFF (16-bit)
 
-Panel Tetapan Projek dianjurkan ke dalam beberapa kategori. Berikut adalah ringkasan setiap bahagian. Untuk dokumentasi lengkap, lihat [Tetapan Projek](../ Project-Settings/Project-Settings.md).
+Hanya import imej anda dan mula memproses dengan lalai ini.
 
-### Pengesanan sasaran
+***
 
-Mengawal bagaimana kloros mengenal pasti sasaran penentukuran dalam imej anda.**Tetapan utama:***
-**Kawasan sampel penentukuran minimum**: ambang saiz untuk pengesanan sasaran (lalai: 25 piksel)
-* **kluster sasaran minimum**: ambang persamaan untuk mengumpulkan kawasan sasaran (lalai: 60)**Bila hendak menyesuaikan:**
+## Gambaran Keseluruhan Tetapan Projek
 
-* Meningkatkan kawasan sampel jika mendapat pengesanan palsu
+Panel Tetapan Projek disusun ke dalam beberapa kategori. Di bawah adalah ringkasan setiap bahagian. Untuk dokumentasi lengkap, lihat [Tetapan Projek](../project-settings/project-settings.md).
+
+### Pengesanan Sasaran
+
+Mengawal cara Chloros mengenal pasti sasaran penentukuran dalam imej anda.
+
+**Tetapan utama:*** **Kawasan sampel penentukuran minimum**: Ambang saiz untuk pengesanan sasaran (lalai: 25 piksel)
+* **Pengkelompokan sasaran minimum**: Ambang kesamaan untuk mengumpulkan wilayah sasaran (lalai: 60)**Bila untuk melaraskan:**
+
+* Tingkatkan kawasan sampel jika mendapat pengesanan palsu
 * Kurangkan jika sasaran tidak dikesan
-* Laraskan clustering jika sasaran dibahagikan kepada pelbagai pengesanan
+* Laraskan pengelompokan jika sasaran dipecahkan kepada berbilang pengesanan
 
-### Pemprosesan
+### Memproses
 
-Pilihan pemprosesan imej utama dan penentukuran.
+Pilihan pemprosesan dan penentukuran imej utama.
 
-**Tetapan utama:*** **Pembetulan Vignette**: Mengimbangi lensa gelap di tepi ✅ disyorkan
-* **Penentukuran Refleksi**: Menormalkan nilai menggunakan sasaran penentukuran ✅ Disyorkan
-* **kaedah debayer**: Algoritma untuk menukar mentah ke 3-channels multi-spectral
-* **Selang pengubahsuaian minimum**: Masa antara menggunakan sasaran penentukuran (0 = Gunakan semua)**Tetapan Lanjutan:***
-**Offset Zon Time Sensor Light**: Untuk Penyegerakan Masa PPK (Lalai: 0)
-* **Memohon pembetulan PPK**: Menggunakan data pin GPS/pendedahan dari fail .daq
-* **PIN Pendedahan 1/2**: Menetapkan kamera ke pin pendedahan untuk persediaan dwi-kamera
+**Tetapan utama:*** **Pembetulan vignet**: Mengimbangi kegelapan kanta di tepi ✅ Disyorkan
+* **Penentukuran pantulan**: Menormalkan nilai menggunakan sasaran penentukuran ✅ Disyorkan
+* **Kaedah Debayer**: Algoritma untuk menukar RAW kepada 3-saluran berbilang spektrum
+* **Selang penentukuran semula minimum**: Masa antara menggunakan sasaran penentukuran (0 = gunakan semua)**Tetapan lanjutan:*** **Zon waktu sensor cahaya mengimbangi**: Untuk penyegerakan masa PPK (lalai: 0)
+* **Gunakan pembetulan PPK**: Menggunakan data GPS/pin pendedahan daripada fail .daq
+* **Pin Pendedahan 1/2**: Berikan kamera kepada pin pendedahan untuk persediaan dwi-kamera
 
-### indeks (indeks multispektral)
+### Indeks (Indeks Berbilangspek)
 
-Konfigurasikan indeks tumbuh -tumbuhan yang hendak dikira dan dieksport.**Cara menambah indeks:**1. Klik**"Tambah Indeks"**Butang
-2. Pilih indeks dari menu dropdown (NDVI, NDRE, GNDVI, dll.)
+Konfigurasikan indeks tumbuh-tumbuhan untuk dikira dan dieksport.
+
+**Cara menambah indeks:**
+
+1. Klik butang**"Tambah indeks"**
+
+2. Pilih indeks daripada menu lungsur (NDVI, NDRE, GNDVI, dsb.)
 3. Konfigurasikan tetapan visualisasi (warna LUT, julat nilai)
-4. Tambah indeks berganda seperti yang diperlukan**indeks popular:*** **ndvi**: Kesihatan tumbuh -tumbuhan umum (yang paling biasa)
-* **ndre**: Pengesanan tekanan awal dengan rededge
-* **gndvi**: kepekatan klorofil sensitif
-* **osavi**: berfungsi dengan baik dengan tanah yang kelihatan
-* **Evi**: Kawasan Indeks Kawasan Daun Tinggi (LAI)**Formula tersuai (Chloros+ sahaja):**
+4. Tambah berbilang indeks mengikut keperluan
 
-* Buat formula indeks multispektral tersuai
+**Indeks popular:*** **NDVI**: Kesihatan tumbuh-tumbuhan umum (paling biasa)
+* **NDRE**: Pengesanan tekanan awal dengan RedEdge
+* **GNDVI**: Kepekatan klorofil sensitif
+* **OSAVI**: Berfungsi dengan baik dengan tanah yang boleh dilihat
+* **EVI**: Kawasan indeks kawasan daun tinggi (LAI)**Formula tersuai (Chloros+ sahaja):**
+
+* Cipta formula indeks berbilang spektrum tersuai
 * Gunakan matematik band dengan semua saluran imej
 * Simpan formula tersuai untuk digunakan semula
 
-Untuk semua indeks dan formula yang ada, lihat [Formula Indeks Multispectral](../ Project-Settings/Multispectral-Index-Formulas.md).
+Untuk semua indeks dan formula yang tersedia, lihat [Formula Indeks Berbilang Spektrum](../project-settings/multispectral-index-formulas.md).
 
 ### Eksport
 
 Mengawal format dan kualiti fail output.
 
-**Format yang ada:*** **TIFF (16-bit)**: Disyorkan untuk analisis GIS dan saintifik (0-65,535 julat)
-* **TIFF (32-bit, peratus)**: Nilai pemantulan terapung (0.0-1.0 julat)
-* **png (8-bit)**: mampatan tanpa kehilangan untuk visualisasi (julat 0-255)
-* **jpg (8-bit)**: fail terkecil, mampatan lossy (julat 0-255)***## Menyimpan dan memuatkan tetapan
+**Format yang tersedia:*** **TIFF (16-bit)**: Disyorkan untuk GIS dan analisis saintifik (julat 0-65,535)
+* **TIFF (32-bit, Peratus)**: Nilai pemantulan titik terapung (julat 0.0-1.0)
+* **PNG (8-bit)**: Mampatan tanpa rugi untuk visualisasi (julat 0-255)
+* **JPG (8-bit)**: Fail terkecil, mampatan lossy (julat 0-255)***
 
-### Simpan templat projek
+## Tetapan Menyimpan dan Memuatkan
 
-Buat templat yang boleh diguna semula untuk aliran kerja yang konsisten:
+### Simpan Templat Projek
+
+Cipta templat boleh guna semula untuk aliran kerja yang konsisten:
 
 1. Konfigurasikan semua tetapan yang dikehendaki dalam panel Tetapan Projek
-2. Tatal ke**"Simpan Templat Projek"**Seksyen di bahagian bawah
-3. Masukkan nama templat deskriptif (mis., "Survey3n \ _rgn \ _agriculture")
-4. Klik ikon Simpan**Faedah:**
+2. Tatal ke bahagian **"Simpan Templat Projek"** di bahagian bawah
+3. Masukkan nama templat deskriptif (cth., "Survey3N\_RGN\_Agriculture")
+4. Klik ikon simpan
 
-* Memohon tetapan yang sama di pelbagai projek
+**Faedah:**
+
+* Gunakan tetapan yang sama merentas berbilang projek
 * Kongsi konfigurasi dengan ahli pasukan
-* Mengekalkan konsistensi untuk tinjauan berulang
+* Kekalkan konsistensi untuk tinjauan berulang
 
-### Templat beban pada projek baru
+### Muatkan Templat pada Projek Baharu
 
-Semasa membuat projek baru:
+Apabila membuat projek baharu:
 
-1. Pilih **"Projek Baru"**dari Menu Utama
-2. Pilih**"Beban Dari Templat"**Pilihan
-3. Pilih templat yang disimpan
+1. Pilih **"Projek Baharu"** daripada menu utama
+2. Pilih pilihan **"Muat daripada templat"**
+
+3. Pilih templat anda yang disimpan
 4. Semua tetapan digunakan secara automatik
 
-### Direktori kerja**"Simpan Folder Projek"** Menetapkan Menentukan Di mana Projek Baru Dibuat Secara Lalai:
+### Direktori Kerja
 
-* **Lokasi lalai**: `c: \ users [username] \ chloros projects`
-* **Tukar Lokasi**: Klik edit ikon dan pilih folder baru
-* **bila hendak berubah**:
+Tetapan **"Simpan Folder Projek"** menentukan tempat projek baharu dibuat secara lalai:
+
+* **Lokasi lalai**: `C:\Users\[Username]\Chloros Projects`
+* **Tukar lokasi**: Klik ikon edit dan pilih folder baharu
+* **Bila untuk menukar**:
   * Pemacu rangkaian untuk kerjasama pasukan
-  * Pemacu yang berbeza dengan lebih banyak ruang penyimpanan
-  * Struktur folder teratur mengikut tahun/pelanggan
+  * Pemacu yang berbeza dengan lebih banyak ruang storan
+  * Struktur folder tersusun mengikut tahun/pelanggan
 
 ***
 
-## ppk (kinematik pasca diproses)
+## Persediaan PPK (Kinematik Pasca Diproses).
 
-Jika menggunakan perakam Mapir Daq dengan GPS untuk geolokasi yang tepat:
+Jika menggunakan perakam MAPIR DAQ dengan GPS untuk geolokasi yang tepat:
 
 ### Prasyarat
 
-* Modul Mapir Daq dengan GPS (GNSS)
-* .daq fail log dengan entri pin pendedahan
-* Kamera yang disambungkan ke pin pendedahan DAQ semasa sesi penangkapan
+* MAPIR DAQ dengan modul GPS (GNSS).
+* Fail log .daq dengan entri pin pendedahan
+* Kamera disambungkan ke pin pendedahan DAQ semasa sesi tangkapan
 
 ### Langkah Konfigurasi
 
 1. Letakkan fail log .daq dalam folder projek anda
-2. Dalam Tetapan Projek, aktifkan **"Gunakan pembetulan PPK"**kotak semak
-3. Tetapkan**"Offset Zon Time Sensor Cahaya"**Jika diperlukan (lalai: 0 untuk UTC)
-4. Berikan kamera ke pin pendedahan:***Kamera tunggal**: Secara automatik ditugaskan ke pin 1***Dua kamera**: Secara manual berikan setiap kamera untuk membetulkan pin**Tugasan PIN Pendedahan:***
-**PIN PENDEDAHAN 1**: Pilih Model Kamera dari Dropdown
-* **PIN PENDEDAHAN 2**: Pilih Kamera Kedua atau "Jangan Gunakan"
-* Kamera yang sama tidak dapat diberikan kepada kedua -dua pin
+2. Dalam Tetapan Projek, dayakan kotak pilihan **"Gunakan pembetulan PPK"**
 
-{% hint style="warning" %}
-**PENTING**: Pin pendedahan mesti ditugaskan dengan betul ke kamera masing -masing. Tugasan yang tidak betul akan mengakibatkan data geolokasi yang salah.
-{% endhint %}***## Senario lanjutan
+3. Tetapkan**"Zon waktu penderia cahaya mengimbangi"** jika perlu (lalai: 0 untuk UTC)
+4. Tetapkan kamera pada pin pendedahan:
+   * **Kamera tunggal**: Ditugaskan secara automatik kepada Pin 1
+   * **Kamera dwi**: Tetapkan setiap kamera secara manual untuk membetulkan pin**Tugas Pin Pendedahan:*** **Pin Pendedahan 1**: Pilih model kamera daripada lungsur turun
+* **Pin Pendedahan 2**: Pilih kamera kedua atau "Jangan Gunakan"
+* Kamera yang sama tidak boleh diberikan kepada kedua-dua pin
 
-### Projek Multi-Camera
+{% gaya petunjuk="amaran" %}
+**Penting**: Pin pendedahan mesti ditetapkan dengan betul pada kamera masing-masing. Tugasan yang salah akan mengakibatkan data geolokasi yang salah.
+Petua {% %}
 
-Semasa memproses imej dari pelbagai kamera Mapir dalam satu projek:
+***
 
-1. Kloros secara automatik mengesan setiap model kamera
+## Senario Lanjutan
+
+### Projek Berbilang Kamera
+
+Apabila memproses imej daripada berbilang kamera MAPIR dalam satu projek:
+
+1. Chloros secara automatik mengesan setiap model kamera
 2. Setiap kamera mendapat profil pemprosesan yang sesuai
-3. PPK: Berikan secara manual setiap kamera untuk membetulkan pin pendedahan
-4. Semua kamera menggunakan format dan indeks eksport yang sama**Contoh**: survey3w rgn + survey3n ocn dual-camera rig
+3. PPK: Tetapkan setiap kamera secara manual untuk membetulkan pin pendedahan
+4. Semua kamera menggunakan format dan indeks eksport yang sama
 
-### tinjauan masa atau pelbagai tarikh
+**Contoh**: Survey3W RGN + Survey3N OCN pelantar dwi-kamera
 
-Untuk tinjauan berulang di kawasan yang sama dari masa ke masa:
+### Tinjauan Selang Masa atau Berbilang Tarikh
+
+Untuk tinjauan berulang di kawasan yang sama dari semasa ke semasa:
 
 1. Buat templat dengan tetapan standard anda
 2. Gunakan persediaan sasaran penentukuran yang konsisten setiap sesi
@@ -150,35 +179,37 @@ Untuk tinjauan berulang di kawasan yang sama dari masa ke masa:
 4. Gunakan tetapan yang sama untuk hasil yang setanding
 5. Eksport dalam format yang sama untuk analisis temporal
 
-### dataset besar
+### Set Data Besar
 
 Untuk projek dengan banyak imej (500+):
 
-* Pertimbangkan untuk memecah projek yang lebih kecil mengikut tarikh atau kawasan
-* Gunakan Chloros+ pemprosesan selari untuk hasil yang lebih cepat
-* Pertimbangkan CLI atau API untuk automasi batch
-* Laraskan selang pengubahsuaian minimum untuk mengurangkan masa pengesanan sasaran
+* Pertimbangkan untuk memecahkan projek yang lebih kecil mengikut tarikh atau kawasan
+* Gunakan Chloros+ pemprosesan selari untuk hasil yang lebih pantas
+* Pertimbangkan CLI atau API untuk automasi kelompok
+* Laraskan selang penentukuran semula minimum untuk mengurangkan masa pengesanan sasaran
 
 ***
 
-## Mengesahkan tetapan anda
+## Mengesahkan Tetapan Anda
 
 Sebelum mula memproses, semak tetapan utama ini:
 
-* [] Model kamera dikesan dengan betul dalam penyemak imbas fail
-* [] Pembetulan vignette diaktifkan
-* [] Penentukuran refleksi diaktifkan
-* [] Sekurang -kurangnya satu imej sasaran penentukuran yang diimport
-* [] Indeks multispektral yang dikehendaki ditambah
-* [] Format eksport sesuai untuk aliran kerja anda
-* [] Tetapan PPK dikonfigurasi (jika menggunakan .daq dengan peristiwa expure)
+* [ ] Model kamera dikesan dengan betul dalam Pelayar Fail
+* [ ] Pembetulan vignet didayakan
+* [ ] Penentukuran pantulan didayakan
+* [ ] Sekurang-kurangnya satu imej sasaran penentukuran diimport
+* [ ] Indeks berbilang spektrum yang dikehendaki ditambah
+* [ ] Format eksport yang sesuai untuk aliran kerja anda
+* [ ] Tetapan PPK dikonfigurasikan (jika menggunakan .daq dengan peristiwa pendedahan)
 
-***## Langkah seterusnya
+***
+
+## Langkah Seterusnya
 
 Setelah tetapan anda dikonfigurasikan:
 
-1.**Tandakan imej sasaran penentukuran**-lihat [memilih imej sasaran](memilih sasaran-imej.md)
-2.**Mula Pemprosesan**-Lihat [Memulakan Pemprosesan](permulaan-pemproses.md)
-3.**Memantau Kemajuan**-Lihat [Memantau pemprosesan](Pemantauan-The-Processing.md)
+1. **Tandakan imej sasaran penentukuran** - Lihat [Memilih Imej Sasaran](choosing-target-images.md)
+2. **Mulakan pemprosesan** - Lihat [Memulakan Pemprosesan](starting-the-processing.md)
+3. **Pantau kemajuan** - Lihat [Memantau Pemprosesan](monitoring-the-processing.md)
 
-Untuk butiran lengkap mengenai semua tetapan yang tersedia, lihat dokumentasi rujukan [Projek-Settings/Project-Settings.md) [Project Settings/Project-Settings.md).
+Untuk butiran lengkap tentang semua tetapan yang tersedia, lihat dokumentasi rujukan [Tetapan Projek](../project-settings/project-settings.md).
