@@ -20,7 +20,7 @@ chloros-cli login <email> <password>
 
 {% hint style="info" %}
 **Pengguna SDK**: Python SDK juga menyediakan kaedah `logout()` terprogram untuk mengosongkan bukti kelayakan cache. Lihat dokumentasi [Python SDK](api-python-sdk.md#logout) untuk mendapatkan butiran.
-Petua {% %}
+{% endhint %}
 
 **Contoh:**
 
@@ -30,7 +30,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 {% gaya petunjuk="amaran" %}
 **Watak Khas**: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti `$`, `!` atau ruang.
-Petua {% %}
+{% endhint %}
 
 **Keluaran:**
 

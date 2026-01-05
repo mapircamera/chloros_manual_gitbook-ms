@@ -22,9 +22,9 @@ Apabila anda menyemak lajur Sasaran untuk imej tertentu:
 * Pengesanan sasaran selesai dengan lebih cepat
 * Keseluruhan masa pemprosesan sangat dikurangkan
 
-{% gaya petunjuk="berjaya" %}
+{% hint style="success" %}
 **Peningkatan Kelajuan**: Menandai 2-3 imej sasaran dalam set data 500 imej boleh mengurangkan masa pengesanan sasaran daripada 30+ minit kepada kurang daripada 1 minit.
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -192,7 +192,7 @@ Walaupun tidak disyorkan untuk kerja saintifik, anda boleh memproses tanpa sasar
 
 {% gaya petunjuk="amaran" %}
 **Tidak Disyorkan**: Tanpa penentukuran pantulan, nilai piksel mewakili kecerahan relatif sahaja, bukan ukuran pantulan saintifik. Gunakan sasaran penentukuran untuk hasil yang tepat dan boleh berulang.
-Petua {% %}
+{% endhint %}
 
 ***
 

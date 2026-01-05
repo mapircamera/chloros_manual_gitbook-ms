@@ -22,7 +22,7 @@ Muat turun versi terkini Chloros untuk bermula dengan pemprosesan imej berbilang
 
 {% hint style="info" %}
 **Pecutan GPU**: Pengguna Chloros+ dengan GPU NVIDIA (4GB+ VRAM) boleh menggunakan pecutan CUDA untuk pemprosesan yang jauh lebih pantas. Pengguna Chloros+ juga mendapat pemprosesan berbilang benang untuk kelajuan maksimum.
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -47,9 +47,9 @@ Petua {% %}
 5. Selesaikan pemasangan dan lancarkan Chloros, Chloros (Pelayar) atau Chloros CLI
 6. Log masuk dengan akaun [MAPIR Cloud Chloros+ anda](https://cloud.mapir.camera/pricing) (atau teruskan dengan versi percuma)
 
-{% gaya petunjuk="berjaya" %}
+{% hint style="success" %}
 Pemasang secara automatik menambah `chloros-cli` pada PATH sistem anda untuk akses baris arahan.
-Petua {% %}
+{% endhint %}
 
 ***
 

@@ -10,7 +10,7 @@ Sebaik sahaja anda telah mencipta atau membuka projek dalam Chloros, langkah set
 
 {% hint style="info" %}
 **Jenis Fail yang Disokong**: Chloros menyokong fail imej RAW+JPG dan JPG daripada kamera MAPIR Survey3W dan Survey3N. Hanya RAW+JPG disyorkan.
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -107,7 +107,7 @@ Chloros secara automatik mengesan dan mengabaikan fail pendua:
 
 {% gaya petunjuk="amaran" %}
 **Penting**: Jangan menamakan semula atau mengubah suai fail imej asal anda sebelum mengimport. Chloros bergantung pada nama fail dan metadata asal untuk pemprosesan yang betul.
-Petua {% %}
+{% endhint %}
 
 ***
 

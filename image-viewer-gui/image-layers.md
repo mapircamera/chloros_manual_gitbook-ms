@@ -52,7 +52,7 @@ Dalam Chloros, **lapisan** merujuk kepada output imej berbeza yang tersedia untu
 
 {% hint style="info" %}
 **Lapisan Sasaran**: Lapisan ini hanya muncul dalam lungsur turun untuk imej yang mengandungi sasaran penentukuran. Imej tangkapan biasa tidak akan mempunyai pilihan ini.
-Petua {% %}
+{% endhint %}
 
 ### RAW (Pantulan)
 
@@ -70,9 +70,9 @@ Petua {% %}
 * Menyemak nilai piksel untuk ketepatan saintifik
 * Membandingkan dengan asal untuk melihat kesan penentukuran
 
-{% gaya petunjuk="berjaya" %}
+{% hint style="success" %}
 **Disyorkan**: Gunakan lapisan RAW (Reflectance) apabila menyemak nilai piksel untuk pengukuran dan analisis saintifik.
-Petua {% %}
+{% endhint %}
 
 ### RAW (NDVI Index)... dan seumpamanya
 

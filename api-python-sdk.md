@@ -24,7 +24,7 @@
 
 {% gaya petunjuk="amaran" %}
 **Keperluan Lesen**: Python SDK memerlukan langganan Chloros+ berbayar untuk akses API. Pelan standard (percuma) tidak mempunyai akses API/SDK. Lawati [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) untuk menaik taraf.
-Petua {% %}
+{% endhint %}
 
 ## Mula Pantas
 
@@ -38,7 +38,7 @@ pip install chloros-sdk
 
 {% hint style="info" %}
 **Persediaan Kali Pertama**: Sebelum menggunakan SDK, aktifkan lesen Chloros+ anda dengan membuka Chloros, Chloros (Pelayar) atau Chloros XPROTX000232 dalam log masuk dengan cPROTX00232 anda. Ini hanya perlu dilakukan sekali sahaja.
-Petua {% %}
+{% endhint %}
 
 ### Penggunaan Asas
 
@@ -131,13 +131,13 @@ SDK menggunakan lesen yang sama seperti Chloros, Chloros (Pelayar) dan Chloros C
 2. Masukkan bukti kelayakan Chloros+ anda dan log masuk
 3. Lesen dicache secara setempat (berterusan sepanjang but semula)
 
-{% gaya petunjuk="berjaya" %}
+{% hint style="success" %}
 **Sediaan Satu Kali**: Selepas log masuk melalui GUI atau CLI, SDK secara automatik menggunakan lesen cache. Tiada pengesahan tambahan diperlukan!
-Petua {% %}
+{% endhint %}
 
 {% hint style="info" %}
 **Log Keluar**: Pengguna SDK boleh mengosongkan bukti kelayakan cache secara pemrograman menggunakan kaedah `logout()`. Lihat [kaedah log keluar()](#logout) dalam Rujukan API.
-Petua {% %}
+{% endhint %}
 
 ### Sambungan Ujian
 
@@ -313,7 +313,7 @@ Memproses imej projek.
 
 {% gaya petunjuk="amaran" %}
 **Mod Selari**: Memerlukan lesen Chloros+. Skala secara automatik kepada teras CPU anda (sehingga 16 pekerja).
-Petua {% %}
+{% endhint %}
 
 **Contoh:**
 
@@ -404,7 +404,7 @@ print(f"Logout successful: {result}")
 
 {% hint style="info" %}
 **Pengesahan Semula Diperlukan**: Selepas memanggil `logout()`, anda mesti log masuk semula melalui Chloros, Chloros (Pelayar) atau Chloros CLI sebelum menggunakan CLI.256XPROTX.
-Petua {% %}
+{% endhint %}
 
 ***
 

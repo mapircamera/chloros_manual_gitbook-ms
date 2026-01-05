@@ -15,7 +15,7 @@ Sebelum mengklik butang Mula, sahkan bahawa semuanya sudah sedia:
 
 {% hint style="info" %}
 **Petua**: Klik beberapa imej dalam Pelayar Fail untuk mengesahkan ia dimuatkan dengan betul sebelum memproses.
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -36,9 +36,9 @@ Butang Mula/Main terletak di bar pengepala atas Chloros:
 3. Butang menjadi dilumpuhkan (kelabukan) semasa pemprosesan
 4. Kemas kini bar kemajuan, menunjukkan status pemprosesan
 
-{% gaya petunjuk="berjaya" %}
+{% hint style="success" %}
 **Pemprosesan Dimulakan**: Setelah diklik, Chloros secara automatik mengendalikan semua langkah pemprosesan - pengesanan sasaran, debayering, penentukuran, pengiraan indeks dan eksport.
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -90,7 +90,7 @@ Chloros beroperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 
 {% hint style="info" %}
 **Chloros+ Speed**: Pemprosesan selari boleh 5-10x lebih pantas daripada mod berjujukan untuk set data yang besar. Projek 500 imej yang mengambil masa 2 jam dalam mod percuma mungkin selesai dalam 15-20 minit dengan Chloros+.
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -174,7 +174,7 @@ Sebaik sahaja dimulakan, keseluruhan saluran paip berjalan secara automatik:
 
 {% gaya petunjuk="amaran" %}
 **Petua Prestasi**: Untuk prestasi Chloros+ terbaik, tutup aplikasi lain dan biarkan Chloros menggunakan sumber sistem penuh.
-Petua {% %}
+{% endhint %}
 
 ### Pemprosesan Tidak Boleh Dijeda
 
@@ -229,7 +229,7 @@ Jika anda perlu menghentikan pemprosesan:
 
 {% gaya petunjuk="amaran" %}
 **Tiada Keputusan Separa**: Pembatalan membuang semua kemajuan. Chloros tidak menyimpan imej yang diproses separa.
-Petua {% %}
+{% endhint %}
 
 ***
 

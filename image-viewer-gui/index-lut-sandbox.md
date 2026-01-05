@@ -30,9 +30,9 @@ Kotak Pasir menyediakan:
 * Intensif masa
 * Terbaik apabila tetapan dimuktamadkan
 
-{% gaya petunjuk="berjaya" %}
+{% hint style="success" %}
 **Aliran Kerja Terbaik**: Gunakan Kotak Pasir untuk mencuba dan mencari tetapan indeks dan LUT yang optimum, kemudian gunakan tetapan tersebut semasa Pemprosesan Projek untuk keseluruhan set data anda.
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -116,7 +116,7 @@ Untuk dokumentasi formula indeks yang lengkap, lihat [Formula Indeks Berbilang S
 
 {% gaya pembayang="berjaya" %}
 **Kuasa Visualisasi**: Menggunakan LUT warna pada imej indeks skala kelabu menjadikannya secara dramatik lebih mudah untuk mengenal pasti corak, anomali dan kawasan yang diminati sepintas lalu.
-Petua {% %}
+{% endhint %}
 
 ### Menggunakan LUT pada Imej Indeks
 
@@ -138,9 +138,9 @@ Sebaik sahaja anda mempunyai imej indeks yang ditunjukkan
 3. Pilih kecerunan yang dikehendaki
 4. Imej **kemas kini serta-merta** dengan warna baharu apabila kotak Indeks ditandakan
 
-{% gaya petunjuk="berjaya" %}
+{% hint style="success" %}
 **Amalan Terbaik**: Untuk indeks tumbuh-tumbuhan seperti NDVI, kecerunan Red-Yellow-Green adalah paling intuitif kerana ia sejajar dengan persatuan warna semula jadi (hijau=sihat, kuning=sederhana, merah=tekanan).
-Petua {% %}
+{% endhint %}
 
 ### Melaraskan Kelas Warna
 
@@ -177,7 +177,7 @@ Petua {% %}
 4. Tekan **Enter** atau klik di luar medan
 5. Ulang untuk medan **Nilai Maks** (cth., `0.9`)
 6. Visualisasi **kemas kini serta-merta**{% hint style="info" %}**Penskalaan Auto**: Apabila anda mula-mula menggunakan LUT, Chloros secara automatik menetapkan min/maks kepada julat data sebenar dalam imej. Anda kemudiannya boleh mengecilkan julat ini untuk memfokuskan pada julat nilai minat tertentu.
-Petua {% %}
+{% endhint %}
 
 **Contoh pelarasan julat NDVI:*** **Julat penuh**: `-1.0` hingga `1.0` (tunjukkan semua nilai yang mungkin)
 * **Tertumpu pada tumbuh-tumbuhan**: `0.2` hingga `0.9` (tidak termasuk tanah kosong dan air)
@@ -209,7 +209,7 @@ Apabila nilai piksel berada di luar julat min/maks yang ditentukan, anda boleh m
 
 {% gaya petunjuk="amaran" %}
 **Had Ketelusan**: Piksel lutsinar akan muncul sebagai warna latar belakang dalam pemapar. Apabila dieksport semasa pemprosesan, ketelusan dikekalkan dalam format PNG tetapi bukan dalam JPG.
-Petua {% %}
+{% endhint %}
 
 #### 3. Latar Belakang Indeks
 
@@ -255,7 +255,7 @@ Untuk kawalan penuh ke atas visualisasi anda, anda boleh mencipta **kecerunan wa
 
 {% hint style="info" %}
 **Menyimpan Kecerunan Tersuai**: Kecerunan tersuai boleh disimpan dan digunakan semula. Klik ikon simpan dalam panel LUT untuk mengekalkan skema warna tersuai anda untuk kegunaan masa hadapan.
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -272,9 +272,9 @@ Semua pelarasan LUT dalam kotak pasir mengemas kini imej **segera dan interaktif
 * **Ubah suai keratan** → Paparan latar belakang berubah serta-merta
 * **Edit warna** → Kecerunan tersuai digunakan serta-merta**Tiada butang "Guna" diperlukan** - semua perubahan adalah secara langsung dan interaktif!
 
-{% gaya petunjuk="berjaya" %}
+{% hint style="success" %}
 **Maklum Balas Langsung**: Maklum balas visual segera membolehkan anda bereksperimen dengan pantas dengan tetapan berbeza sehingga anda menemui visualisasi optimum untuk keperluan analisis anda.
-Petua {% %}
+{% endhint %}
 
 ### Aliran Kerja Penapisan Berulang
 
@@ -309,7 +309,7 @@ Memahami nilai piksel sebenar adalah penting untuk menetapkan julat LUT yang ber
 
 {% hint style="info" %}
 **Julat Dinamik**: Tanaman, musim dan peringkat pertumbuhan yang berbeza akan mempunyai julat nilai yang berbeza. Sentiasa periksa nilai piksel dalam set data khusus anda sebelum menetapkan julat LUT.
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -319,7 +319,7 @@ Petua {% %}
 
 {% hint style="info" %}
 **Tempat Buat**: Indeks tersuai boleh dikonfigurasikan dalam**Tetapan Projek** sebelum diproses, serta dalam bar sisi kotak pasir Pemapar Imej.
-Petua {% %}
+{% endhint %}
 
 **Untuk membuat indeks tersuai:**
 
@@ -354,7 +354,7 @@ Exponential index:
 
 {% gaya petunjuk="amaran" %}
 **Pengesahan Formula**: Pastikan formula anda menggunakan jalur yang tersedia dalam kamera anda. Contohnya, RedEdge hanya tersedia pada kamera dengan penapis RedEdge.
-Petua {% %}
+{% endhint %}
 
 ***
 

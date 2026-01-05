@@ -11,7 +11,7 @@ Tab Peta memaparkan imej anda pada peta 2D interaktif berdasarkan koordinat GPS 
 
 {% hint style="info" %}
 **GPS Diperlukan**: Hanya imej dengan koordinat GPS terbenam dalam metadata EXIF ​​mereka akan muncul pada peta. Pastikan kamera anda mendayakan GPS semasa tangkapan.
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -38,7 +38,7 @@ Tab **Map**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> 
 
 {% hint style="info" %}
 Mengklik pengepala lajur jadual juga mengisih data baris
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -52,9 +52,9 @@ Setiap imej dengan data GPS diwakili oleh penanda pada peta:
 * Penanda berkelompok mungkin berkumpul bersama apabila dizum keluar
 * Zum masuk untuk melihat lokasi imej individu
 
-{% gaya petunjuk="berjaya" %}
+{% hint style="success" %}
 SUPER-ZOOM: Apabila anda mencapai tahap zum maksimum daripada pembekal jubin peta, jubin kemudiannya dibesarkan apabila zum selanjutnya, membolehkan anda melihat penanda yang berdekatan.
-Petua {% %}
+{% endhint %}
 
 ### Pratonton Tuding
 
@@ -66,9 +66,9 @@ Petua {% %}
 
 ## Pembekal Jubin Peta
 
-{% gaya petunjuk="berjaya" %}
+{% hint style="success" %}
 **Pemilihan Automatik**: Chloros secara automatik memilih perkhidmatan jubin yang menyediakan tahap zum terbaik untuk lokasi peta semasa anda. Anda boleh bertukar secara manual antara pembekal jika mahu.
-Petua {% %}
+{% endhint %}
 
 Tab Peta menyokong dua pembekal jubin untuk imejan peta latar belakang:
 

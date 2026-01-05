@@ -24,7 +24,7 @@
 
 {% gaya petunjuk="amaran" %}
 **Keperluan Lesen**: CLI memerlukan langganan Chloros+ berbayar. Pelan standard (percuma) tidak mempunyai akses CLI. Lawati [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) untuk menaik taraf.
-Petua {% %}
+{% endhint %}
 
 ## Mula Pantas
 
@@ -39,7 +39,7 @@ CLI disertakan secara automatik dengan pemasang Chloros:
 
 {% gaya pembayang="berjaya" %}
 Pemasang secara automatik menambah `chloros-cli` pada PATH sistem anda. Mulakan semula terminal anda selepas pemasangan.
-Petua {% %}
+{% endhint %}
 
 ### Persediaan Kali Pertama
 
@@ -134,7 +134,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 {% gaya petunjuk="amaran" %}
 **Watak Khas**: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti `$`, `!` atau ruang.
-Petua {% %}
+{% endhint %}
 
 **Keluaran:**<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
 
@@ -163,7 +163,7 @@ chloros-cli logout
 
 {% hint style="info" %}
 **Pengguna SDK**: Python SDK juga menyediakan kaedah `logout()` terprogram untuk mengosongkan bukti kelayakan dalam skrip Python. Lihat dokumentasi [Python SDK](api-python-sdk.md#logout) untuk butiran.
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -292,9 +292,9 @@ chloros-cli language ja
 | `et` | Estonia | Eesti |
 | `sl` | Bahasa Slovenia | Slovenščina |
 
-{% gaya petunjuk="berjaya" %}
+{% hint style="success" %}
 **Kegigihan Automatik**: Pilihan bahasa anda disimpan ke `~/.chloros/cli_language.json` dan berterusan merentas semua sesi.
-Petua {% %}
+{% endhint %}
 
 ***
 
@@ -390,7 +390,7 @@ Chloros+ CLI **skala automatik**pemprosesan selari untuk dipadankan dengan keupa
 
 {% gaya pembayang="berjaya" %}
 **Pengoptimuman Automatik**: CLI secara automatik mengesan spesifikasi sistem anda dan mengkonfigurasi pemprosesan selari yang optimum. Tiada konfigurasi manual diperlukan!
-Petua {% %}
+{% endhint %}
 
 ### Kaedah Debayer
 
@@ -407,9 +407,9 @@ CLI menggunakan **Kualiti Tinggi (Lebih Cepat)** sebagai algoritma debayer lalai
 * **Didayakan secara lalai** - Kebanyakan pengguna harus memastikan ini didayakan
 * Gunakan `--no-vignette` untuk melumpuhkan
 
-{% gaya petunjuk="berjaya" %}
+{% hint style="success" %}
 **Cadangan**: Sentiasa dayakan pembetulan vignet untuk memastikan kecerahan seragam merentasi bingkai.
-Petua {% %}
+{% endhint %}
 
 ### Penentukuran Pantulan
 
@@ -421,7 +421,7 @@ Menukar nilai sensor mentah kepada peratusan pemantulan piawai menggunakan panel
 
 {% hint style="info" %}
 **Keperluan**: Pastikan panel penentukuran didedahkan dengan betul dan kelihatan dalam imej anda untuk penukaran pantulan yang tepat.
-Petua {% %}
+{% endhint %}
 
 ### Pembetulan PPK
 
@@ -607,7 +607,7 @@ Masa pemprosesan biasa untuk 100 imej (12MP setiap satu):
 
 {% hint style="info" %}
 **Petua Prestasi**: Masa pemprosesan berbeza-beza berdasarkan kiraan imej, peleraian dan spesifikasi komputer.
-Petua {% %}
+{% endhint %}
 
 ***
 
