@@ -88,7 +88,7 @@ Tab Peta menyokong dua pembekal jubin untuk imejan peta latar belakang:
 
 Anda boleh memilih jenis lapisan peta (dari kiri ke kanan):
 
-&#x20;<img src="../.gitbook/assets/image (23).png" alt="" data-size="line">
+&#x20;<img src="../.gitbook/assets/image (23).png" alt="" data-size="original">
 
 ### Rupa bumi
 
