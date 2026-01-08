@@ -2,11 +2,13 @@
 
 Tab Peta memaparkan imej anda pada peta 2D interaktif berdasarkan koordinat GPS mereka. Ini memberikan gambaran keseluruhan geografi bagi sesi tangkapan anda dan membantu anda menggambarkan liputan spatial. Ia juga berguna apabila mula-mula mengimport imej anda untuk mengalih keluar mana-mana imej yang anda tidak perlu proses dengan cepat.
 
+<figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
+
 ## Mengakses Tab Peta
 
 1. Buka atau cipta projek dalam Chloros
 2. Import imej yang mengandungi metadata GPS
-3. Klik tab **Map** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tab di bar sisi kiri
+3. Klik tab **Peta** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> di bar sisi kiri
 4. Peta akan memaparkan penanda pada setiap lokasi GPS imej
 
 {% hint style="info" %}
@@ -17,7 +19,7 @@ Tab Peta memaparkan imej anda pada peta 2D interaktif berdasarkan koordinat GPS 
 
 ## Melaraskan Imej daripada Tab Peta
 
-Tab **Map**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> mempunyai penambahan yang sama <img src="../.gitbook/assets/image.png" alt="" data-size="line"> <img src="../.ng"imagebook (aset) yang sama.=". data-size="line"> dan alih keluar butang fail <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> sebagai [**Pelayar Fail**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_PG-file" data-size="line"> tab tidak. Ia juga menunjukkan senarai jadual fail projek yang sama tetapi dengan pengepala lajur yang berbeza:
+Tab **Map** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> mempunyai add <img src="../.gitbook/assets/image.png" alt="" data-size="line"> <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> dan alih keluar butang fail <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> yang sama seperti yang dilakukan oleh tab [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) XPROTX000037. Ia juga menunjukkan senarai jadual fail projek yang sama tetapi dengan pengepala lajur yang berbeza:
 
 ### Nama Fail
 
@@ -117,7 +119,9 @@ Menunjukkan jubin peta satelit dengan butiran tambahan (jalan raya, dll)
 
 ### Kawalan Kuali
 
-* **Sorot**: Klik dan seret untuk bergerak di sekitar peta***
+* **Sorot**: Klik dan seret untuk bergerak di sekitar peta
+
+***
 
 ## Kes Penggunaan
 
@@ -135,7 +139,7 @@ Menunjukkan jubin peta satelit dengan butiran tambahan (jalan raya, dll)
 
 ### Kawalan Kualiti
 
-* Mengenal pasti imej yang ditangkap dengan cepat di lokasi yang tidak dijangka
+* Mengenal pasti imej yang ditangkap di lokasi yang tidak dijangka dengan pantas
 * Sahkan ketepatan GPS merentas set data
 * Lokasi imej rujukan silang dengan nota lapangan
 
@@ -148,7 +152,7 @@ Menunjukkan jubin peta satelit dengan butiran tambahan (jalan raya, dll)
 **Punca yang mungkin:**
 
 * Imej tidak mengandungi metadata GPS
-* GPS telah dilumpuhkan pada kamera semasa tangkapan
+* GPS dilumpuhkan pada kamera semasa tangkapan
 * Data EXIF ​​​​dilucutkan oleh perisian luaran
 
 **Penyelesaian**: Sahkan GPS didayakan pada kamera anda dan import semula fail asal

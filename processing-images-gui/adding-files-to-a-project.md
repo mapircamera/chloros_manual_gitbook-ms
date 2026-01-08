@@ -1,6 +1,6 @@
 # Menambah Fail pada Projek
 
-Sebaik sahaja anda telah mencipta atau membuka projek dalam Chloros, langkah seterusnya ialah menambah imej berbilang spektrum anda untuk memulakan pemprosesan. Tab Pelayar Fail<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> memudahkan anda mengimport imej dan mengurus set data anda.
+Setelah anda mencipta atau membuka projek dalam Chloros, langkah seterusnya ialah menambah imej berbilang spektrum anda untuk mula memproses. Tab File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> memudahkan anda mengimport imej dan mengurus set data anda.
 
 ## Mengakses Pelayar Fail
 
@@ -33,7 +33,9 @@ Gunakan pilihan ini untuk mengimport semua imej dari folder sekaligus.
 
 1. Klik butang **"Tambah Folder"** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> di bahagian atas panel Penyemak Imbas Fail
 2. Navigasi ke dan pilih folder yang mengandungi imej sesi tangkapan anda
-3. Klik **"Pilih Folder"** untuk mengimport semua imej yang disokong daripada folder itu***
+3. Klik **"Pilih Folder"** untuk mengimport semua imej yang disokong daripada folder itu
+
+***
 
 ## Memahami Jadual Pelayar Fail
 
@@ -62,6 +64,12 @@ Setelah imej diimport, ia muncul dalam jadual dengan lajur berikut:
 * Sangat mempercepatkan pengesanan sasaran semasa pemprosesan
 * Lihat [Memilih Imej Sasaran](choosing-target-images.md) untuk butiran
 
+### Melihat Metadata Imej
+
+Mengklik butang togol di penjuru kanan sebelah atas di atas jadual menunjukkan metadata imej yang dipilih dalam kawasan grid imej.
+
+<figure><img src="../.gitbook/assets/chloros_grid_meta.gif" alt=""><figcaption></figcaption></figure>
+
 ***
 
 ## Mengurus Fail dalam Projek Anda
@@ -78,13 +86,15 @@ Untuk mengalih keluar imej yang tidak diingini daripada projek anda:
 
 * **Isih mengikut lajur**: Klik mana-mana pengepala lajur untuk mengisih imej
 * **Isih cap masa**: Berguna untuk mengatur urutan tangkapan kronologi
-* **Penapis model kamera**: Himpunkan imej mengikut jenis kamera jika menggunakan berbilang kamera***
+* **Penapis model kamera**: Himpunkan imej mengikut jenis kamera jika menggunakan berbilang kamera
+
+***
 
 ## Pratonton Imej
 
 ### Melihat Imej Penuh
 
-Klik mana-mana imej kecil imej dalam Pelayar Fail untuk memaparkannya dalam kawasan pratonton utama:
+Klik mana-mana lakaran kecil imej dalam Pelayar Fail untuk memaparkannya dalam kawasan pratonton utama:
 
 1. Imej muncul dalam panel pratonton tengah
 2. Gunakan kawalan zum untuk memeriksa butiran imej
@@ -95,7 +105,9 @@ Klik mana-mana imej kecil imej dalam Pelayar Fail untuk memaparkannya dalam kawa
 * **Imej Sebelumnya**: Klik anak panah kiri atau tekan kekunci ←
 * **Imej Seterusnya**: Klik anak panah kanan atau tekan kekunci →
 * **Zum Masuk/Keluar**: Gunakan roda tetikus atau butang zum
-* **Sorot**: Klik dan seret pada imej apabila dizum masuk***
+* **Sorot**: Klik dan seret pada imej apabila dizum masuk
+
+***
 
 ## Pengendalian Fail Pendua
 
@@ -105,7 +117,7 @@ Chloros secara automatik mengesan dan mengabaikan fail pendua:
 * Mencegah pemprosesan dua kali secara tidak sengaja
 * Mesej amaran dipaparkan apabila pendua dikesan
 
-{% gaya petunjuk="amaran" %}
+{% hint style="warning" %}
 **Penting**: Jangan menamakan semula atau mengubah suai fail imej asal anda sebelum mengimport. Chloros bergantung pada nama fail dan metadata asal untuk pemprosesan yang betul.
 {% endhint %}
 
@@ -120,7 +132,9 @@ Jika projek anda mengandungi imej daripada berbilang kamera MAPIR:
 3. Pelayar Fail memaparkan model kamera dalam lajur Model Kamera
 4. Pemprosesan menggunakan tetapan yang betul untuk setiap jenis kamera
 
-**Contoh senario**: Survey3W RGN + Survey3N OCN persediaan dwi-kamera***
+**Senario contoh**: Survey3W RGN + Survey3N OCN persediaan dwi-kamera
+
+***
 
 ## Amalan Terbaik
 
@@ -174,7 +188,9 @@ Jika projek anda mengandungi imej daripada berbilang kamera MAPIR:
 * Jam kamera tidak ditetapkan dengan betul
 * Data EXIF ​​dilucutkan oleh perisian luaran
 
-**Penyelesaian**: Sahkan tetapan masa kamera adalah betul semasa tangkapan***
+**Penyelesaian**: Sahkan tetapan masa kamera adalah betul semasa tangkapan
+
+***
 
 ## Langkah Seterusnya
 

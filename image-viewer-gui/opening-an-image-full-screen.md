@@ -32,7 +32,9 @@ Bahagian terbesar skrin menunjukkan imej anda:
 * **Leraian penuh**: Imej dipaparkan pada resolusi asli
 * **Boleh Zum**: Gunakan kawalan atau roda tetikus untuk mengezum
 * **Boleh Pann**: Klik dan seret untuk bergerak apabila dizum
-* **Nisbah aspek dikekalkan**: Skala imej secara berkadar***
+* **Nisbah aspek dikekalkan**: Skala imej secara berkadar
+
+***
 
 ## Pilihan Melihat
 
@@ -42,24 +44,25 @@ Bahagian terbesar skrin menunjukkan imej anda:
 
 Navigasi melalui set imej anda menggunakan pintasan papan kekunci atau butang:
 
-* **Imej seterusnya**: Klik butang → atau tekan kekunci**→** (Anak Panah Kanan).
-* **Imej sebelumnya**: Klik butang ← atau tekan kekunci**←** (Anak Panah Kiri)
+* **Imej seterusnya**: Klik butang → atau tekan kekunci **→** (Anak Panah Kanan).
+* **Imej sebelumnya**: Klik butang ← atau tekan kekunci **←** (Anak Panah Kiri)
 * **Lompat ke imej tertentu**: Kembali ke Pelayar Fail dan klik lakaran kecil yang diingini
 
 #### Kawalan Zum
 
 Laraskan pembesaran untuk memeriksa butiran imej:
 
-**Zum Masuk:*** Klik butang **+** (Plus).
-* Tekan kekunci ******atau**=*** Tatal roda tetikus **ke atas**
+**Zum Masuk:**
 
-**Zum Keluar:*** Klik butang **−** (Tolak).
+* Klik butang **+** (Plus).
+* Tekan kekunci ****** atau **=**
+* Tatal roda tetikus **ke atas**
+
+**Zum Keluar:**
+
+* Klik butang **−** (Tolak).
 * Tekan kekunci **−** (Tolak).
 * Tatal roda tetikus **ke bawah**
-
-**Muat pada Skrin:*** Klik butang **↔** (Muat).
-* Tekan kekunci **0** (Sifar).
-* Klik dua kali pada imej
 
 #### Sorot Apabila Dizum
 
@@ -67,40 +70,50 @@ Apabila dizum masuk melebihi saiz skrin:
 
 1. Gerakkan kursor tetikus ke atas imej
 2. Klik dan **tahan butang kiri tetikus**
-
-3.**Seret** untuk mengalihkan imej
+3. **Seret** untuk mengalihkan imej
 4. Lepaskan untuk berhenti menyorot
 
-**Alternatif**: Gunakan kekunci anak panah untuk menyorot dalam kenaikan kecil***
+**Alternatif**: Gunakan kekunci anak panah untuk menyorot dalam kenaikan kecil
+
+***
 
 ## Pemeriksaan Nilai Piksel
 
 ### Melihat Nilai Piksel pada Kursor
 
-Semasa anda menggerakkan kursor tetikus anda ke atas imej, nilai piksel dipaparkan dalam masa nyata:**Lokasi paparan nilai:*** **Nombor terapung dan garis merah dalam indeks sebelah kanan LUT lagenda kecerunan*** **Apabila dizum masuk lebih jauh, nilai terapung berhampiran kursor dan piksel yang diserlahkan*** Menunjukkan nilai untuk piksel **di bawah kursor atau diserlahkan*** Kemas kini semasa anda menggerakkan tetikus
+Semasa anda menggerakkan kursor tetikus anda ke atas imej, nilai piksel dipaparkan dalam masa nyata:
+
+**Lokasi paparan nilai:**
+
+* **Nombor terapung dan garis merah dalam indeks sebelah kanan LUT lagenda kecerunan**
+* **Apabila dizum masuk lebih jauh, nilai terapung berhampiran kursor dan piksel yang diserlahkan**
+* Menunjukkan nilai untuk piksel **di bawah kursor atau diserlahkan**
+* Kemas kini semasa anda menggerakkan tetikus
 
 ***
 
 ## Jenis Imej Anda Boleh Lihat
 
-### Imej Asal (Pra-Pemprosesan)
+### JPG
 
-**Imej RAW + JPG daripada kamera:**
+**Imej JPG daripada kamera:**
 
-* Paparkan data RAW seperti yang dipratonton
+* Paparkan data JPG seperti yang dipratonton
 * Tunjukkan nilai asal yang tidak diperbetulkan
 * Berguna untuk menyemak kualiti imej sebelum diproses
 
-### Imej Pantulan Ditentukur
+### RAW (Asal)
+
+### RAW (Pantulan)
 
 **Selepas diproses:**
 
 * Vignette diperbetulkan
 * Pantulan ditentukur
-* TIFF berbilang jalur (Red, Green, NIR, dsb.)
+* Berbilang jalur TIFF (Red, Green, NIR, dsb.)
 * Data saintifik sedia untuk dianalisis
 
-### Imej Indeks
+### RAW (Indeks)
 
 **NDVI, NDRE, GNDVI, dsb. (\_NDVI.tif files):**
 
@@ -115,13 +128,13 @@ Semasa anda menggerakkan kursor tetikus anda ke atas imej, nilai piksel dipapark
 
 Gunakan indeks berbilang spektrum dan Jadual Carian berwarna:
 
-1. Cari **Kotak Pasir Indeks/LUT**dalam**Pemapar Imej** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> bar sisi
+1. Cari **Index/LUT Sandbox** dalam **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sidebar
 2. Pilih indeks tumbuh-tumbuhan (NDVI, NDRE, dsb.)
 3. Pilih formula berbilang spektrum, atau cipta formula tersuai anda sendiri (Chloros+ sahaja)
 4. Gunakan kecerunan LUT warna untuk visualisasi
 5. Laraskan julat nilai dan ambang
 
-Lihat [Kotak Pasir Indeks/LUT](index-lut-sandbox.md) untuk arahan terperinci.
+Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk mendapatkan arahan terperinci.
 
 ***
 
@@ -136,21 +149,11 @@ Lihat [Kotak Pasir Indeks/LUT](index-lut-sandbox.md) untuk arahan terperinci.
 
 ### Zum
 
-* ******atau**=**: Zum masuk
+* ****** atau **=**: Zum masuk
 * **−**: Zum keluar
-* **0** (Sifar): Muat pada skrin
 * **Roda Tetikus**: Zum masuk/keluar
 
-### Lihat Kawalan
-
-* **P**: Togol mod peratusan piksel
-* **L**: Togol panel lapisan
-* **Esc**: Tutup skrin penuh atau kembali ke Penyemak Imbas Fail
-
-### Lain-lain
-
-* **Ctrl+S**: Simpan imej semasa
-* **F**: Mod skrin penuh (jika ada)***
+***
 
 ### Mengesahkan Pengiraan Indeks
 
@@ -163,7 +166,9 @@ Semak bahawa indeks dikira dengan betul:
    * **GNDVI**: Serupa dengan NDVI tetapi sensitif terhadap klorofil
 3. Periksa bukan tumbuh-tumbuhan:
    * **Tanah**: Berhampiran 0 atau negatif sedikit
-   * **Air**: Nilai negatif (-0.5 hingga 0)***
+   * **Air**: Nilai negatif (-0.5 hingga 0)
+
+***
 
 ## Menyelesaikan Masalah Melihat
 
@@ -203,7 +208,7 @@ Semak bahawa indeks dikira dengan betul:
 * Melihat imej yang salah (asal vs diproses)
 * Penentukuran tidak digunakan dengan betul
 * Data penderia cahaya tidak disertakan dalam input
-* Mod peratusan ditogol secara salah
+* Mod peratusan ditogol secara tidak betul
 
 **Penyelesaian:**
 
