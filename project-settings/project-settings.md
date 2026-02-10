@@ -1,6 +1,6 @@
 # Tetapan Projek
 
-Bar sisi Tetapan Projek <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> dalam Chloros membolehkan anda mengkonfigurasi semua aspek pemprosesan imej, pengesanan sasaran penentukuran, pengiraan indeks berbilang spektrum dan pilihan eksport untuk projek anda. Tetapan ini disimpan dengan projek anda dan boleh disimpan sebagai templat untuk digunakan semula merentas berbilang projek.
+Bar sisi Tetapan Projek <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> dalam Chloros membolehkan anda mengkonfigurasi semua aspek pemprosesan imej, pengesanan sasaran penentukuran, pilihan pengekstrakan berbilang spektrum, pengekstrakan projek. Tetapan ini disimpan dengan projek anda dan boleh disimpan sebagai templat untuk digunakan semula merentas berbilang projek.
 
 ## Mengakses Tetapan Projek
 
@@ -60,9 +60,10 @@ Tetapan ini mengawal cara Chloros memproses dan menentukur imej anda.
 
 * **Jenis**: Pilihan lungsur turun
 * **Pilihan**:
-  * Kualiti Tinggi (Lebih Cepat) - Pada masa ini satu-satunya pilihan yang tersedia
-* **Lalai**: Kualiti Tinggi (Lebih Cepat)
-* **Penerangan**: Memilih algoritma demosaicing yang digunakan untuk menukar data penderia corak Bayer mentah kepada imej berwarna penuh. Kaedah "Kualiti Tinggi (Lebih Cepat)" memberikan keseimbangan optimum antara kelajuan pemprosesan dan kualiti imej.
+  * Standard (Pantas, Kualiti Sederhana)
+  * Sedar Tekstur (Lambat, Kualiti Tertinggi) \[Chloros+]
+* **Lalai**: Standard (Pantas, Kualiti Sederhana)
+* **Penerangan**: Memilih algoritma demosaicing yang digunakan untuk menukar data penderia corak Bayer mentah kepada imej berwarna penuh. Kaedah "Standard (Pantas, Kualiti Sederhana)" menyediakan keseimbangan optimum antara kelajuan pemprosesan dan kualiti imej. "Texture Aware (Slow, Highest Quality)" \[Chloros+] menggunakan debayer sedar tepi berkualiti tinggi digabungkan dengan model denoising AI/ML yang menghilangkan hampir semua hingar debayering. Model Texture Aware memerlukan memori GPU (VRAM) untuk dijalankan. Kami mengesyorkan menggunakannya apabila anda mempunyai >4GB VRAM tersedia untuk pemprosesan yang lebih pantas.
 * **Nota**: Kaedah debayer tambahan boleh ditambah dalam versi masa depan Chloros.
 
 ### Selang penentukuran semula minimum
@@ -102,10 +103,10 @@ Tetapan ini mengawal cara Chloros memproses dan menentukur imej anda.
   * Nama model kamera dikesan dalam projek
   * "Jangan Gunakan" - Abaikan pin pendedahan ini
 * **Lalai**: Auto-dipilih berdasarkan konfigurasi projek
-* **Penerangan**: Tetapkan kamera khusus kepada Pin Pendedahan 1 untuk penyegerakan masa PPK. Pin pendedahan merekodkan masa yang tepat apabila pengatup kamera dicetuskan, yang penting untuk geolokasi PPK yang tepat.
+* **Penerangan**: Berikan kamera khusus kepada Pin Dedahan 1 untuk penyegerakan masa PPK. Pin pendedahan merekodkan masa yang tepat apabila pengatup kamera dicetuskan, yang penting untuk geolokasi PPK yang tepat.
 * **Tingkah laku pemilihan automatik**:
   * Kamera tunggal + pin tunggal: Memilih kamera secara automatik
-  * Kamera tunggal + dua pin: Pin 1 secara automatik diberikan kepada kamera
+  * Kamera tunggal + dua pin: Pin 1 diperuntukkan secara automatik kepada kamera
   * Berbilang kamera: Pemilihan manual diperlukan
 
 ### Pin Pendedahan 2
@@ -154,7 +155,7 @@ Tetapan ini membolehkan anda mengkonfigurasi indeks berbilang spektrum untuk ana
 * **Sintaks formula**: Operasi matematik standard disokong, termasuk:
   * Aritmetik: `+`, `-`, `*`, `/`
   * Tanda kurung untuk susunan operasi
-  * Rujukan jalur: NIR, Red, Green, Blue, RedEdge, Cyan, Orange0, Orange0, Orange0, Orange0, Orange0 NIR2
+  * Rujukan jalur: NIR, Red, Green, Blue, RedEdge, Cyan, Orange0, Orange0, Orange0, Orange0, Orange0, Orange0 NIR2
 
 ***
 
@@ -168,7 +169,7 @@ Tetapan ini mengawal format dan kualiti imej yang diproses yang dieksport.
 * **Pilihan**:
   * **TIFF (16-bit)** - Format 16-bit TIFF tidak dimampatkan
   * **TIFF (32-bit, Peratus)** - 32-bit titik terapung TIFF dengan nilai pantulan sebagai peratusan
-  * **PNG (8-bit)** - Mampat 8-bit format PNG
+  * **PNG (8-bit)** - Format 8-bit PNG mampat
   * **JPG (8-bit)** - Format 8-bit JPEG mampat
 * **Lalai**: TIFF (16-bit)
 * **Penerangan**: Memilih format fail untuk menyimpan imej yang diproses dan ditentukur.
@@ -217,7 +218,7 @@ Semua tetapan projek disimpan secara automatik dengan fail projek anda (`.mapir`
 
 Tetapan digunakan dalam susunan berikut:
 
-1. **Lalai sistem** - Lalai terbina dalam ditakrifkan oleh Chloros
+1. **Kelalaian sistem** - Kelalaian terbina dalam ditakrifkan oleh Chloros
 2. **Tetapan templat** - Jika anda memuatkan templat semasa membuat projek
 3. **Tetapan projek disimpan** - Tetapan disimpan dengan fail projek
 4. **Pelarasan manual** - Sebarang perubahan yang anda buat semasa sesi semasa
@@ -246,4 +247,4 @@ Kebanyakan perubahan tetapan (terutamanya dalam kategori Pemprosesan dan Eksport
 
 ***
 
-Untuk mendapatkan maklumat lanjut tentang indeks berbilang spektrum dalam Chloros, lihat halaman [Formula Indeks Berbilang Spektrum](multispectral-index-formulas.md).
+Untuk mendapatkan maklumat lanjut tentang indeks berbilangspek dalam Chloros, lihat halaman [Formula Indeks Berbilangspektrum](multispectral-index-formulas.md).

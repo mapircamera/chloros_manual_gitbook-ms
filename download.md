@@ -11,17 +11,17 @@ Muat turun versi terkini Chloros untuk bermula dengan pemprosesan imej berbilang
 ### Keperluan Sistem
 
 | Keperluan | Minimum | Disyorkan |
-| -------------------- | ------------------------------- | ------------------------------- |
+| -------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
 | **Sistem Pengendalian** | Windows 10 (64-bit) | Windows 11 (64-bit) |
 | **Pemproses** | Intel Core i5 atau setara | Intel Core i7 atau lebih baik |
 | **Memori (RAM)** | 8GB | 16GB atau lebih |
 | **Kad Grafik** | DirectX 11 serasi | GPU NVIDIA dengan 4GB+ VRAM |
 | **Storan** | 6GB ruang kosong | SSD dengan 10GB+ ruang kosong |
 | **Paparan** | 1920x1080 | 2560x1440 atau lebih tinggi |
-| **Internet** | Diperlukan untuk pengaktifan lesen | Diperlukan untuk pengaktifan lesen |
+| **Internet** | Diperlukan untuk pengaktifan lesen \[pilihan] Chloros+ | Diperlukan untuk pengaktifan lesen \[pilihan] Chloros+ |
 
 {% hint style="info" %}
-**Pecutan GPU**: Pengguna Chloros+ dengan GPU NVIDIA (4GB+ VRAM) boleh menggunakan pecutan CUDA untuk pemprosesan yang jauh lebih pantas. Pengguna Chloros+ juga mendapat pemprosesan berbilang benang untuk kelajuan maksimum.
+**Pecutan GPU**: Pengguna Chloros+ dengan GPU NVIDIA boleh menggunakan pecutan CUDA untuk pemprosesan yang lebih pantas. Pengguna Chloros+ juga mendapat pemprosesan berbilang benang untuk kelajuan maksimum.
 {% endhint %}
 
 ***
@@ -32,9 +32,9 @@ Muat turun versi terkini Chloros untuk bermula dengan pemprosesan imej berbilang
 
 ### Keluaran Stabil Terkini
 
-**Chloros Installer untuk Windows*** **Versi**: 1.0.4
-* **Tarikh Tayangan**: 5 Januari 2026
-* **Saiz Fail (Muat Turun)**: 1.8GB
+**Chloros Installer untuk Windows*** **Versi**: 1.0.5
+* **Tarikh Tayangan**: 10 Februari 2026
+* **Saiz Fail (Muat Turun)**: 1.6GB
 * **Saiz Fail (Dipasang)**: 5.7GB
 * **Jenis Fail**: .exe (Pemasang Windows)
 
@@ -44,7 +44,7 @@ Muat turun versi terkini Chloros untuk bermula dengan pemprosesan imej berbilang
 2. Dwiklik pemasang untuk memulakan pemasangan
 3. Ikut gesaan wizard pemasangan
 4. Pilih direktori pemasangan (lalai: `C:\Program Files\[USER]\Chloros\`)
-5. Selesaikan pemasangan dan lancarkan Chloros, Chloros (Pelayar) atau Chloros CLI
+5. Selesaikan pemasangan dan lancarkan Chloros atau Chloros CLI
 6. Log masuk dengan akaun [MAPIR Cloud Chloros+ anda](https://cloud.mapir.camera/pricing) (atau teruskan dengan versi percuma)
 
 {% hint style="success" %}
@@ -69,8 +69,7 @@ pip install chloros-sdk
 
 Pemasangan Chloros termasuk:
 
-* ✅ **Chloros** - Antara muka grafik berciri penuh
-* ✅ **Chloros (Pelayar)** - Antara muka berasaskan web untuk sistem berspesifikasi rendah
+* ✅ **Chloros** - Antara muka grafik berciri penuh (GUI)
 * ✅ **Chloros CLI** - Antara muka baris perintah (memerlukan lesen Chloros+)
 * ✅ **Chloros SDK** - Python API (memerlukan lesen Chloros+)
 * ✅ **Profil Kamera** - Templat kamera MAPIR prakonfigurasi***
@@ -84,6 +83,7 @@ Buka kunci ciri lanjutan dengan langganan Chloros+:
 * 💻 **CLI Access** - Automatik dengan alatan baris arahan
 * 🍅 **Python SDK** - Akses API Terprogram
 * 📱 **Berbilang Peranti** - Gunakan pada 2-10+ peranti (bergantung kepada pelan)
+* **🐻 Kaedah Debayer Sedar Tekstur Lanjutan** - debayer sedar tepi berkualiti tinggi digabungkan dengan model denoising AI/ML yang menghilangkan hampir semua bunyi debayering.&#x20;
 * 🧮 **Formula Tersuai** - Buat indeks berbilang spektrum tersuai
 
 <p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Lihat Pelan Chloros+ &#x26; Harga</a></p>
@@ -98,11 +98,10 @@ Buka kunci ciri lanjutan dengan langganan Chloros+:
 
 * Pastikan anda mempunyai hak pentadbir
 * Lumpuhkan sementara perisian antivirus
-* Pastikan anda memenuhi keperluan sistem minimum
+* Semak sama ada anda memenuhi keperluan sistem minimum
 
 **Permohonan tidak akan bermula:**
 
-* Cuba versi Chloros (Pelayar).
 * Sahkan Windows 10/11 (64-bit) dipasang
 * Kemas kini pemacu grafik
 * Semak Windows Event Viewer untuk butiran ralat
@@ -125,6 +124,17 @@ Perlukan bantuan dengan pemasangan atau persediaan?
 * ❓ **Soalan Lazim**: [Soalan Lazim](faq.md)***
 
 ## Log Tukar
+
+<butiran>
+
+<summary>Versi 1.0.5</summary>
+
+#### **Tarikh Tayangan**: 10 Februari 2026**Ciri Baharu*** **Kaedah Texture Aware Debayer \[Chloros+ Only] -** Texture Aware menggunakan debayer sedar tepi berkualiti tinggi yang digabungkan dengan model denoising AI/ML yang menghilangkan hampir semua hingar debayering.
+* **Sokongan untuk Sasaran Penentukuran T4P*** **Pemprosesan GPU Chloros+ yang lebih pantas, pengurusan memori yang lebih baik**
+
+**Pembetulan Pepijat*** Bahagian hadapan (GUI) baharu sepenuhnya, seharusnya berfungsi pada semua komputer Windows sekarang.
+
+</detail>
 
 <butiran>
 
@@ -157,7 +167,7 @@ Perlukan bantuan dengan pemasangan atau persediaan?
 
 ***
 
-## Perjanjian Lesen**Perisian Milik** - Hak Cipta (c) 2025 MAPIR Inc.
+## Perjanjian Lesen**Perisian Milik** - Hak Cipta (c) 2026 MAPIR Inc.
 
 Penggunaan, pengedaran atau pengubahsuaian yang tidak dibenarkan adalah dilarang.
 

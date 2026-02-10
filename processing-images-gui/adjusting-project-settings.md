@@ -22,7 +22,7 @@ Untuk aliran kerja kamera MAPIR biasa Survey3, tetapan lalai berfungsi dengan ba
 
 * ✅ **Pembetulan vignet**: Didayakan
 * ✅ **Penentukuran pantulan**: Didayakan (memerlukan imej sasaran MAPIR)
-* ✅ **Kaedah Debayer**: Kualiti Tinggi (Lebih Cepat)
+* ✅ **Kaedah Debayer**: Standard (Pantas, Kualiti Sederhana)
 * ✅ **Format eksport**: TIFF (16-bit)
 
 Hanya import imej anda dan mula memproses dengan lalai ini.
@@ -55,7 +55,19 @@ Pilihan pemprosesan dan penentukuran imej utama.
 * **Gunakan pembetulan PPK**: Menggunakan data GPS/pin pendedahan daripada fail .daq
 * **Pin Pendedahan 1/2**: Berikan kamera kepada pin pendedahan untuk persediaan dwi-kamera
 
-### Indeks (Indeks Berbilangspek)
+### Kaedah Debayer
+
+Pada masa ini kami menawarkan 2 kaedah debayering dalam Chloros:
+
+#### Standard (Pantas, Kualiti Sederhana)
+
+Debayer standard memproses dengan cepat tetapi menunjukkan bunyi warna debayering, menghasilkan imej yang kurang tepat dan lebih bising.
+
+#### Sedar Tekstur (Lambat, Kualiti Tertinggi) \[Chloros+ Sahaja]
+
+Texture Aware menggunakan debayer sedar tepi berkualiti tinggi digabungkan dengan model denoising AI/ML yang menghilangkan hampir semua bunyi debayering. Model Texture Aware memerlukan memori GPU (VRAM) untuk dijalankan. Kami mengesyorkan menggunakannya apabila anda mempunyai >4GB VRAM tersedia untuk pemprosesan yang lebih pantas.
+
+### Indeks (Indeks Berbilang Spektrum)
 
 Konfigurasikan indeks tumbuh-tumbuhan untuk dikira dan dieksport.
 
@@ -88,7 +100,7 @@ Mengawal format dan kualiti fail output.
 * **PNG (8-bit)**: Mampatan tanpa rugi untuk visualisasi (julat 0-255)
 * **JPG (8-bit)**: Fail terkecil, mampatan lossy (julat 0-255)***
 
-## Tetapan Menyimpan dan Memuatkan
+## Menyimpan dan Memuatkan Tetapan
 
 ### Simpan Templat Projek
 
@@ -144,13 +156,13 @@ Jika menggunakan perakam MAPIR DAQ dengan GPS untuk geolokasi yang tepat:
 2. Dalam Tetapan Projek, dayakan kotak pilihan **"Gunakan pembetulan PPK"**
 
 3. Tetapkan**"Zon waktu penderia cahaya mengimbangi"** jika perlu (lalai: 0 untuk UTC)
-4. Tetapkan kamera pada pin pendedahan:
+4. Tetapkan kamera kepada pin pendedahan:
    * **Kamera tunggal**: Ditugaskan secara automatik kepada Pin 1
    * **Kamera dwi**: Tetapkan setiap kamera secara manual untuk membetulkan pin**Tugas Pin Pendedahan:*** **Pin Pendedahan 1**: Pilih model kamera daripada lungsur turun
 * **Pin Pendedahan 2**: Pilih kamera kedua atau "Jangan Gunakan"
 * Kamera yang sama tidak boleh diberikan kepada kedua-dua pin
 
-{% gaya petunjuk="amaran" %}
+{% hint style="warning" %}
 **Penting**: Pin pendedahan mesti ditetapkan dengan betul pada kamera masing-masing. Tugasan yang salah akan mengakibatkan data geolokasi yang salah.
 {% endhint %}
 
