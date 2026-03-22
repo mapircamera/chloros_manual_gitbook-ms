@@ -10,25 +10,27 @@
 * 🔗 **Integrasi** - Benamkan dalam aliran kerja dan saluran paip sedia ada
 * 💻 **Operasi Tanpa Kepala** - Jalankan tanpa GUI
 * 🌍 **Berbilang Bahasa** - Sokongan untuk 38 bahasa
-* ⚡ **Pemprosesan Selari** - Skala secara dinamik kepada CPU anda (sehingga 16 pekerja selari)
+* ⚡ **Pemprosesan Selari** - [Penyesuaian Pengiraan Dinamik](processing-architecture/dynamic-compute-adaptation.md) dioptimumkan secara automatik untuk perkakasan anda
 
 ### Keperluan
 
 | Keperluan | Butiran |
 | -------------------- | ------------------------------------------------------------------- |
-| **Sistem Pengendalian** | Windows 10/11 (64-bit) |
+| **Sistem Pengendalian** | Windows 10/11 (64-bit), Linux x86_64 (amd64), Linux arm64 (NVIDIA Jetson JetPack 6) |
 | **Lesen** | Chloros+ ([pelan berbayar diperlukan](https://cloud.mapir.camera/pricing)) |
 | **Memori** | 8GB RAM minimum (16GB disyorkan) |
 | **Internet** | Diperlukan untuk pengaktifan lesen |
 | **Ruang Cakera** | Berbeza mengikut saiz projek |
 
-{% gaya petunjuk="amaran" %}
+{% hint style="warning" %}
 **Keperluan Lesen**: CLI memerlukan langganan Chloros+ berbayar. Pelan standard (percuma) tidak mempunyai akses CLI. Lawati [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) untuk menaik taraf.
 {% endhint %}
 
 ## Mula Pantas
 
 ### Pemasangan
+
+#### Windows
 
 CLI disertakan secara automatik dengan pemasang Chloros:
 
@@ -37,15 +39,31 @@ CLI disertakan secara automatik dengan pemasang Chloros:
 2. Lengkapkan wizard pemasangan
 3. CLI dipasang pada: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
-{% gaya pembayang="berjaya" %}
+{% hint style="success" %}
 Pemasang secara automatik menambah `chloros-cli` pada PATH sistem anda. Mulakan semula terminal anda selepas pemasangan.
 {% endhint %}
+
+#### Linux
+
+Pasang pakej `.deb` untuk seni bina anda:
+
+```bash
+# Linux amd64
+sudo dpkg -i chloros-amd64.deb
+
+# Linux arm64 (NVIDIA Jetson, JetPack 6)
+sudo dpkg -i chloros-arm64-jp6.deb
+```
+
+Untuk persediaan Linux terperinci, lihat [Pemasangan Linux](linux/linux-installation.md).
 
 ### Persediaan Kali Pertama
 
 Sebelum menggunakan CLI, aktifkan lesen Chloros+ anda:
 
-```bash
+**Windows:**
+
+```powershell
 # Login with your Chloros+ account
 chloros-cli login user@example.com 'your_password'
 
@@ -56,12 +74,33 @@ chloros-cli status
 chloros-cli process "C:\Images\Dataset001"
 ```
 
+**Linux:**
+
+```bash
+# Login with your Chloros+ account
+chloros-cli login user@example.com 'your_password'
+
+# Check license status
+chloros-cli status
+
+# Process your first project
+chloros-cli process ~/images/dataset001
+```
+
 ### Penggunaan Asas
 
 Proses folder dengan tetapan lalai:
 
+**Windows:**
+
 ```powershell
 chloros-cli process "C:\Images\Dataset001"
+```
+
+**Linux:**
+
+```bash
+chloros-cli process ~/images/dataset001
 ```
 
 ***
@@ -90,8 +129,12 @@ chloros-cli process <input-folder> [options]
 
 **Contoh:**
 
-```powershell
+```bash
+# Windows
 chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
+
+# Linux
+chloros-cli process ~/datasets/survey_001 --vignette --reflectance
 ```
 
 #### Pilihan Perintah Proses
@@ -109,6 +152,9 @@ chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 | `--format` | Pilihan | TIFF (16-bit) | Format output: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
 | `--min-target-size` | Integer | Auto | Saiz sasaran minimum dalam piksel untuk pengesanan panel penentukuran |
 | `--target-clustering` | Integer | Auto | Ambang pengelompokan sasaran (0-100) |
+| `--debayer` | Pilihan | `standard` | Kaedah Debayer: `standard` atau `texture-aware` (Chloros+ sahaja) |
+| `--target`, `--targets` | Benderakan | Dilumpuhkan | Hanya cari sasaran penentukuran dalam subfolder "sasaran" atau "sasaran" (mempercepatkan pemprosesan) |
+| `--indices` | Senaraikan | Tiada | Indeks tumbuh-tumbuhan untuk dikira (cth., `--indices NDVI NDRE GNDVI`) |
 | `--exposure-pin-1` | Rentetan | Tiada | Dedahan kunci untuk model kamera (Pin 1) |
 | `--exposure-pin-2` | Rentetan | Tiada | Dedahan kunci untuk model kamera (Pin 2) |
 | `--recal-interval` | Integer | Auto | Selang penentukuran semula dalam saat |
@@ -128,11 +174,11 @@ chloros-cli login <email> <password>
 
 **Contoh:**
 
-```powershell
+```bash
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{% gaya petunjuk="amaran" %}
+{% hint style="warning" %}
 **Watak Khas**: Gunakan petikan tunggal di sekitar kata laluan yang mengandungi aksara seperti `$`, `!` atau ruang.
 {% endhint %}
 
@@ -150,7 +196,7 @@ chloros-cli logout
 
 **Contoh:**
 
-```powershell
+```bash
 chloros-cli logout
 ```
 
@@ -179,7 +225,7 @@ chloros-cli status
 
 **Contoh:**
 
-```powershell
+```bash
 chloros-cli status
 ```
 
@@ -210,7 +256,7 @@ chloros-cli export-status
 
 **Contoh:**
 
-```powershell
+```bash
 chloros-cli export-status
 ```
 
@@ -235,7 +281,7 @@ chloros-cli language <language-code>
 
 **Contoh:**
 
-```powershell
+```bash
 # View current language
 chloros-cli language
 
@@ -300,7 +346,7 @@ chloros-cli language ja
 
 ### `set-project-folder` - Tetapkan Folder Projek Lalai
 
-Tukar lokasi folder projek lalai (dikongsi dengan GUI).
+Tukar lokasi folder projek lalai (dikongsi dengan GUI pada Windows).
 
 **Sintaks:**
 
@@ -310,8 +356,12 @@ chloros-cli set-project-folder <folder-path>
 
 **Contoh:**
 
-```powershell
+```bash
+# Windows
 chloros-cli set-project-folder "C:\Projects\2025"
+
+# Linux
+chloros-cli set-project-folder ~/projects/2025
 ```
 
 ***
@@ -328,14 +378,19 @@ chloros-cli get-project-folder
 
 **Contoh:**
 
-```powershell
+```bash
 chloros-cli get-project-folder
 ```
 
 **Keluaran:**
 
 ```
+
+# Windows
 ℹ Current project folder: C:\Projects\2025
+
+# Linux
+ℹ Current project folder: /home/user/.local/share/chloros/projects
 ```
 
 ***
@@ -352,53 +407,122 @@ chloros-cli reset-project-folder
 
 ***
 
+### `selftest` - Jalankan Diagnostik Sistem
+
+Jalankan 7 pemeriksaan diagnostik untuk mengesahkan konfigurasi sistem anda.
+
+**Sintaks:**
+
+```bash
+chloros-cli selftest
+```
+
+**Diagnostik dilakukan:**
+
+1. Semakan versi
+2. Ketersediaan pelabuhan (5000)
+3. Permulaan belakang
+4. Ujian ketersambungan API
+5. Maklumat sistem dan pengesanan GPU
+6. Pengesahan model Denoiser
+7. Semakan ketersediaan CUDA
+
+{% hint style="info" %}
+**Berguna untuk menyelesaikan masalah**: Jalankan `selftest` selepas pemasangan untuk mengesahkan sistem anda dikonfigurasikan dengan betul, terutamanya pada Linux/Jetson di mana persediaan GPU dan CUDA mungkin memerlukan pengesahan.
+{% endhint %}
+
+***
+
+### `update` - Semak Kemas Kini (Linux Sahaja)
+
+Semak dan pasang kemas kini CLI pada sistem Linux.
+
+**Sintaks:**
+
+```bash
+# Check for updates without installing
+chloros-cli update --check
+
+# Check for and install updates
+chloros-cli update
+```
+
+| Pilihan | Penerangan |
+| --------- | ------------------------------------ |
+| `--check` | Semak kemas kini sahaja, jangan pasang |
+
+{% hint style="info" %}
+Perintah ini tersedia pada Linux sahaja. Pada Windows, kemas kini dihantar melalui pemasang.
+{% endhint %}
+
+***
+
 ## Pilihan Global
 
 Pilihan ini digunakan untuk semua arahan:
 
 | Pilihan | Taip | Lalai | Penerangan |
-| --------------- | ------- | ------------- | ------------------------------------------------ |
+| ----------------- | ------- | ------------- | ------------------------------------------------ |
 | `--backend-exe` | Laluan | Auto dikesan | Laluan ke bahagian belakang boleh laku |
 | `--port` | Integer | 5000 | Bahagian belakang API nombor port |
 | `--restart` | Benderakan | - | Paksa mulakan semula hujung belakang (membunuh proses sedia ada) |
 | `--version` | Benderakan | - | Tunjukkan maklumat versi dan keluar |
 | `--help` | Benderakan | - | Tunjukkan maklumat bantuan dan keluar |
 
+{% hint style="info" %}
+**Pengesanan auto belakang**: Laluan `--backend-exe` dikesan secara automatik setiap platform:
+* **Windows**: `C:\Program Files\MAPIR\Chloros\resources\backend\chloros-backend.exe`
+* **Linux (.deb)**: `/usr/lib/chloros/chloros-backend`
+* **Linux (manual)**: `/opt/mapir/chloros/backend/chloros-backend`
+{% endhint %}
+
 **Contoh dengan Pilihan Global:**
+
+**Windows:**
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Survey_001"
+```
+
+**Linux:**
+
+```bash
+chloros-cli --port 5001 process ~/datasets/survey_001
 ```
 
 ***
 
 ## Panduan Tetapan Pemprosesan
 
-### Pemprosesan Selari
+### Pemprosesan Selari & Penyesuaian Pengiraan Dinamik
 
-Chloros+ CLI **skala automatik**pemprosesan selari untuk dipadankan dengan keupayaan komputer anda:**Cara Ia Berfungsi:**
+Chloros 1.1.0 termasuk [Penyesuaian Pengiraan Dinamik](processing-architecture/dynamic-compute-adaptation.md) — enjin pemprosesan **mengesan perkakasan anda secara automatik** dan memilih strategi optimum:
 
-* Mengesan teras CPU dan RAM anda
-* Memperuntukkan pekerja: **2× teras CPU** (menggunakan hyperthreading)
-* **Maksimum: 16 pekerja selari** (untuk kestabilan)**Tingkat Sistem:**
+| Platform | Strategi | Pekerja | Talian Paip | Nota |
+| --- | --- | --- | --- | --- |
+| **Jetson Nano 8GB** | `GPU_SINGLE` | 1 | `tiled_gpu` | Cekap ingatan, bersiri |
+| **Jetson Orin NX 16GB** | `GPU_PARALLEL` | 3 | `fused_gpu` | Pemprosesan GPU serentak |
+| **Desktop dengan 8GB GPU** | `GPU_SINGLE` | 3 | `tiled_gpu` | Prestasi desktop yang baik |
+| **Desktop dengan 12GB+ GPU** | `GPU_PARALLEL` | 3-4 | `fused_gpu` | Prestasi desktop optimum |
+| **Sistem CPU sahaja** | `CPU_PARALLEL` | teras - 1 | `cpu_fallback` | Tiada GPU diperlukan |
 
-| Jenis Sistem | CPU | RAM | Pekerja | Persembahan |
-| ------------- | ---------- | -------- | -------- | --------------- |
-| **High-End** | 16+ teras | 32+ GB | Sehingga 16 | Kelajuan maksimum |
-| **Julat Pertengahan** | 8-15 teras | 16-31 GB | 8-16 | Kelajuan yang sangat baik |
-| **Low-End** | 4-7 teras | 8-15 GB | 4-8 | Kelajuan yang baik |
-
-{% gaya pembayang="berjaya" %}
-**Pengoptimuman Automatik**: CLI secara automatik mengesan spesifikasi sistem anda dan mengkonfigurasi pemprosesan selari yang optimum. Tiada konfigurasi manual diperlukan!
+{% hint style="success" %}
+**Tiada konfigurasi manual diperlukan!** Chloros mengesan secara automatik penderia terma CPU, GPU, RAM dan (pada Jetson) anda, kemudian mengkonfigurasi saluran paip pemprosesan optimum secara automatik.
 {% endhint %}
 
 ### Kaedah Debayer
 
-CLI menggunakan **Kualiti Tinggi (Lebih Cepat)** sebagai algoritma debayer lalai dan disyorkan:
+| Kaedah | CLI Bendera | Kualiti | Kelajuan | Lesen |
+| --- | --- | --- | --- | --- |
+| **Standard (Pantas, Kualiti Sederhana)** | `--debayer standard` | Baik | Cepat | Percuma / Chloros+ |
+| **Tekstur Sedar (Lambat, Kualiti Tertinggi)** | `--debayer texture-aware` | Tertinggi | Perlahan | Chloros+ sahaja |
 
-| Kaedah | Kualiti | Kelajuan | Penerangan |
-| --------------------------- | ------- | ----- | ------------------------------------------ |
-| **Kualiti Tinggi (Lebih Cepat)** ⭐ | ⭐⭐⭐⭐ | ⚡⚡⚡ | Algoritma sedar tepi (lalai, disyorkan) |
+Kaedah debayer lalai ialah **Standard**. Kaedah**Texture Aware** menggunakan model denoising AI/ML untuk output kualiti tertinggi tetapi memerlukan lesen Chloros+ dan GPU NVIDIA.
+
+```bash
+# Use Texture Aware debayer (Chloros+ only)
+chloros-cli process ~/datasets/field_a --debayer texture-aware
+```
 
 ### Pembetulan Vignette
 
@@ -425,7 +549,7 @@ Menukar nilai sensor mentah kepada peratusan pemantulan piawai menggunakan panel
 
 ### Pembetulan PPK
 
-**Apa yang dilakukannya:** Menggunakan pembetulan Kinematik Pasca Diproses menggunakan data log DAQ-A-SD untuk ketepatan GPS yang dipertingkatkan.
+**Apa yang dilakukan:** Menggunakan pembetulan Kinematik Pasca Diproses menggunakan data log DAQ-A-SD untuk ketepatan GPS yang dipertingkatkan.
 
 * **Dilumpuhkan secara lalai**
 * Gunakan `--ppk` untuk mendayakan
@@ -433,15 +557,15 @@ Menukar nilai sensor mentah kepada peratusan pemantulan piawai menggunakan panel
 
 ### Format Output
 
-<table><thead><tr><th width="197">Format</th><th width="130.20001220703125">Kedalaman Bit</th><th width="116.5999755859375">Saiz Fail</th><th>Terbaik Untuk</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>integer 16-bit</td><td>Besar</td><td>Analisis GIS, fotogrametri (disyorkan)</td></tr><tr><td><strong>TIFF (32-bit, Peratus)</strong></td><td>Apungan 32-bit</td><td>Sangat Besar</td><td>Analisis saintifik, penyelidikan</td></tr><tr><td><strong>X4PROTX000TX2 (8-bit)</strong></td><td>8-bit integer</td><td>Sederhana</td><td>Pemeriksaan visual, perkongsian web</td></tr><tr><td><strong>JPG (8-bit)</strong></td><td>8-bit integer</td><td>Kecil</td><td> pratonton, output termampat</td></tr></tbody></table>
+<table><thead><tr><th width="197">Format</th><th width="130.20001220703125">Kedalaman Bit</th><th width="116.5999755859375">Saiz Fail</th><th>Terbaik Untuk</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>integer 16-bit</td><td>Besar</td><td>Analisis GIS, fotogrametri (disyorkan)</td></strong><tr>><PROTX0TX0tr>3><PROTX0TX-2 Peratus)</strong></td><td>Apungan 32-bit</td><td>Sangat Besar</td><td>Analisis saintifik, penyelidikan</td></tr><tr><td><strong>PNG (8-bit)</strong></td><td>integer 8-bit</td><td>Sederhana>web</td><td> perkongsian</td></tr><tr><td><strong>JPG (8-bit)</strong></td><td>8-bit integer</td><td>Kecil</td><td>Pratonton pantas, output dimampatkan</td></tr></tbody></table>
 
 ***
 
 ## Automasi & Skrip
 
-### Pemprosesan Kelompok PowerShell
+### Pemprosesan Kelompok PowerShell (Windows)
 
-Proses berbilang folder set data secara automatik:
+Proses berbilang folder set data secara automatik pada Windows:
 
 ```powershell
 # process_all_datasets.ps1
@@ -465,9 +589,9 @@ foreach ($dataset in $datasets) {
 Write-Host "All datasets processed!" -ForegroundColor Green
 ```
 
-### Skrip Kelompok Windows
+### Skrip Kelompok Windows (Windows)
 
-Gelung mudah untuk pemprosesan kelompok:
+Gelung mudah untuk pemprosesan kelompok pada Windows:
 
 ```batch
 @echo off
@@ -492,9 +616,35 @@ echo All datasets processed!
 pause
 ```
 
-### Skrip Automasi Python
+### Pemprosesan Kelompok Bash (Linux)
 
-Automasi lanjutan dengan pengendalian ralat:
+Proses berbilang folder set data pada Linux:
+
+```bash
+#!/bin/bash
+# process_all_datasets.sh
+
+for dataset in ~/datasets/2026/*/; do
+    name=$(basename "$dataset")
+    echo "Processing $name..."
+
+    chloros-cli process "$dataset" \
+        --vignette \
+        --reflectance
+
+    if [ $? -eq 0 ]; then
+        echo "✓ $name complete"
+    else
+        echo "✗ $name failed"
+    fi
+done
+
+echo "All datasets processed!"
+```
+
+### Skrip Automasi Python (Rentas Platform)
+
+Automasi lanjutan dengan pengendalian ralat (berfungsi pada Windows dan Linux):
 
 ```python
 import subprocess
@@ -519,6 +669,9 @@ def process_dataset(input_folder):
 
 def main():
     """Process all datasets in a directory"""
+    # Adjust path for your platform
+    # Windows: Path('C:/Datasets/2025')
+    # Linux:   Path.home() / 'datasets' / '2025'
     datasets_dir = Path('C:/Datasets/2025')
     log_file = Path('processing_log.txt')
     
@@ -600,13 +753,16 @@ MyProject/
 
 Masa pemprosesan biasa untuk 100 imej (12MP setiap satu):
 
-| Mod | Masa | Perkakasan |
-| ----------------- | --------- | ------------------------------------------ |
-| **Mod Selari** | 5-10 min | i7/Ryzen 7, 16GB RAM, SSD (sehingga 16 pekerja) |
-| **Mod Selari** | 10-15 min | i5/Ryzen 5, 8GB RAM, HDD (sehingga 8 pekerja) |
+| Platform | Mod | Anggaran Masa | Nota |
+| --- | --- | --- | --- |
+| **Desktop 12GB+ GPU** | `GPU_PARALLEL` | 5-10 min | Pilihan terpantas |
+| **GPU 8GB Desktop** | `GPU_SINGLE` | 10-15 min | Prestasi yang baik |
+| **Jetson Orin NX 16GB** | `GPU_PARALLEL` | 15-25 min | Pengiraan tepi |
+| **Jetson Nano 8GB** | `GPU_SINGLE` | 30-60 min | Kekangan ingatan |
+| **CPU sahaja** | `CPU_PARALLEL` | 20-40 min | Tiada GPU diperlukan |
 
 {% hint style="info" %}
-**Petua Prestasi**: Masa pemprosesan berbeza-beza berdasarkan kiraan imej, peleraian dan spesifikasi komputer.
+**Petua Prestasi**: Masa pemprosesan berbeza-beza berdasarkan kiraan imej, peleraian, kaedah debayer dan perkakasan. Texture Aware debayer mengambil masa yang lebih lama daripada Standard. Lihat [Dynamic Compute Adaptation](processing-architecture/dynamic-compute-adaptation.md) untuk butiran.
 {% endhint %}
 
 ***
@@ -615,13 +771,13 @@ Masa pemprosesan biasa untuk 100 imej (12MP setiap satu):
 
 ### CLI Tidak Ditemui
 
-**Ralat:**
+**Windows Ralat:**
 
 ```
 'chloros-cli' is not recognized as an internal or external command
 ```
 
-**Penyelesaian:**
+**Windows Penyelesaian:**
 
 1. Sahkan lokasi pemasangan:
 
@@ -641,6 +797,33 @@ dir "C:\Program Files\Chloros\resources\cli\chloros-cli.exe"
    * Tambah: `C:\Program Files\Chloros\resources\cli`
    * Mulakan semula terminal
 
+**Linux Ralat:**
+
+```
+chloros-cli: command not found
+```
+
+**Linux Penyelesaian:**
+
+1. Sahkan pemasangan:
+
+```bash
+which chloros-cli
+dpkg -L chloros-amd64  # or chloros-arm64-jp6
+```
+
+2. Muat semula shell anda:
+
+```bash
+source ~/.bashrc
+```
+
+3. Semak kebenaran:
+
+```bash
+sudo chmod +x /usr/bin/chloros-cli
+```
+
 ***
 
 ### Bahagian Belakang Gagal Dimulakan**Ralat:**
@@ -653,17 +836,31 @@ Backend failed to start within 30 seconds
 **Penyelesaian:**
 
 1. Semak sama ada bahagian belakang sudah berjalan (tutup dahulu)
-2. Periksa Windows Firewall tidak menyekat
+2. Semak firewall tidak menyekat (Windows) atau semak ketersediaan port (Linux: `lsof -i :5000`)
 3. Cuba port yang berbeza:
 
-```powershell
+```bash
+# Windows
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
+
+# Linux
+chloros-cli --port 5001 process ~/datasets/field_a
 ```
 
 4. Paksa mulakan semula hujung belakang:
 
-```powershell
+```bash
+# Windows
 chloros-cli --restart process "C:\Datasets\Field_A"
+
+# Linux
+chloros-cli --restart process ~/datasets/field_a
+```
+
+5. Pada Linux, semak bahagian belakang boleh laku wujud:
+
+```bash
+ls -la /usr/lib/chloros/chloros-backend
 ```
 
 ***
@@ -680,13 +877,13 @@ Chloros+ license required for CLI access
 1. Sahkan anda mempunyai langganan Chloros+ yang aktif
 2. Log masuk dengan kelayakan anda:
 
-```powershell
+```bash
 chloros-cli login user@example.com 'password'
 ```
 
 3. Semak status lesen:
 
-```powershell
+```bash
 chloros-cli status
 ```
 
@@ -727,10 +924,20 @@ Port 5000 is already in use
 
 **Penyelesaian:**
 
-Tentukan port yang berbeza:
+**Windows:**
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
+```
+
+**Linux:**
+
+```bash
+# Find what's using port 5000
+lsof -i :5000
+
+# Use a different port
+chloros-cli --port 5001 process ~/datasets/field_a
 ```
 
 ***
@@ -748,12 +955,17 @@ Langgan di: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pric
 
 ***
 
-### S: Bolehkah saya menggunakan CLI pada pelayan tanpa GUI?**J:** Ya! CLI berjalan tanpa kepala sepenuhnya. Keperluan:
-
+### S: Bolehkah saya menggunakan CLI pada pelayan tanpa GUI?**J:** Ya! CLI berjalan tanpa kepala sepenuhnya. Ini ialah kes penggunaan utama pada Linux.**Windows Server:**
 * Windows Server 2016 atau lebih baru
 * Visual C++ Redistributable dipasang
-* RAM yang mencukupi (minimum 8GB, disyorkan 16GB)
-* Satu kali pengaktifan lesen GUI pada mana-mana mesin
+
+**Linux Server:**
+* Ubuntu 20.04+ / Debian 11+ (amd64) atau JetPack 6 (arm64)
+* Pasang melalui pakej `.deb`
+
+**Kedua-dua platform:**
+* Minimum 8GB RAM (16GB disyorkan)
+* Satu kali pengaktifan lesen: `chloros-cli login user@example.com 'password'`
 
 ***
 
@@ -761,8 +973,12 @@ Langgan di: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pric
 
 Gunakan pilihan `-o` untuk menentukan folder output yang berbeza:
 
-```powershell
+```bash
+# Windows
 chloros-cli process "C:\Input" -o "D:\Output"
+
+# Linux
+chloros-cli process ~/input -o ~/output
 ```
 
 ***
@@ -781,6 +997,12 @@ chloros-cli process "C:\Datasets\Field_A" | Tee-Object -FilePath "processing.log
 chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
 ```
 
+**Linux Bash:**
+
+```bash
+chloros-cli process ~/datasets/field_a 2>&1 | tee processing.log
+```
+
 ***
 
 ### S: Apakah yang berlaku jika saya menekan Ctrl+C semasa pemprosesan?**J:** CLI akan:
@@ -793,11 +1015,11 @@ Imej yang diproses separa mungkin kekal dalam folder output.
 
 ***
 
-### S: Bolehkah saya mengautomasikan pemprosesan CLI?**J:** Sudah tentu! CLI direka untuk automasi. Lihat [Automasi & Skrip](CLI.md#automation--scripting) untuk contoh PowerShell, Batch dan Python.***
+### S: Bolehkah saya mengautomasikan pemprosesan CLI?**J:** Sudah tentu! CLI direka untuk automasi. Lihat [Automasi & Skrip](CLI.md#automation--scripting) untuk contoh PowerShell (Windows), Kelompok (Windows), Bash (Linux) dan Python (cross-platform).***
 
 ### S: Bagaimanakah cara saya menyemak versi CLI?**J:**
 
-```powershell
+```bash
 chloros-cli --version
 ```
 
@@ -805,7 +1027,7 @@ chloros-cli --version
 
 ```
 
-Chloros CLI 1.0.2
+Chloros CLI 1.1.0
 ```
 
 ***
@@ -816,7 +1038,7 @@ Chloros CLI 1.0.2
 
 Lihat maklumat bantuan terus dalam CLI:
 
-```powershell
+```bash
 # General help
 chloros-cli --help
 
@@ -838,8 +1060,16 @@ chloros-cli language --help
 
 Proses dengan tetapan lalai (vignet, pantulan):
 
+**Windows:**
+
 ```powershell
 chloros-cli process "C:\Datasets\Field_A_2025_01_15"
+```
+
+**Linux:**
+
+```bash
+chloros-cli process ~/datasets/field_a_2025_01_15
 ```
 
 ***
@@ -848,10 +1078,21 @@ chloros-cli process "C:\Datasets\Field_A_2025_01_15"
 
 Terapung 32-bit TIFF:
 
+**Windows:**
+
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
   --format "TIFF (32-bit, Percent)" ^
   --vignette ^
+  --reflectance
+```
+
+**Linux:**
+
+```bash
+chloros-cli process ~/datasets/field_a \
+  --format "TIFF (32-bit, Percent)" \
+  --vignette \
   --reflectance
 ```
 
@@ -861,10 +1102,21 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 8-bit PNG tanpa penentukuran untuk semakan pantas:
 
+**Windows:**
+
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
   --format "PNG (8-bit)" ^
   --no-vignette ^
+  --no-reflectance
+```
+
+**Linux:**
+
+```bash
+chloros-cli process ~/datasets/field_a \
+  --format "PNG (8-bit)" \
+  --no-vignette \
   --no-reflectance
 ```
 
@@ -874,9 +1126,19 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 Gunakan pembetulan PPK dengan pemantulan:
 
+**Windows:**
+
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
   --ppk ^
+  --reflectance
+```
+
+**Linux:**
+
+```bash
+chloros-cli process ~/datasets/field_a \
+  --ppk \
   --reflectance
 ```
 
@@ -884,7 +1146,9 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ### Contoh 5: Lokasi Output Tersuai
 
-Proses ke pemacu yang berbeza dengan format tertentu:
+Proses ke lokasi lain dengan format tertentu:
+
+**Windows:**
 
 ```powershell
 chloros-cli process "C:\Input\Raw_Images" ^
@@ -892,13 +1156,21 @@ chloros-cli process "C:\Input\Raw_Images" ^
   --format "TIFF (16-bit)"
 ```
 
+**Linux:**
+
+```bash
+chloros-cli process ~/input/raw_images \
+  -o ~/output/processed \
+  --format "TIFF (16-bit)"
+```
+
 ***
 
 ### Contoh 6: Aliran Kerja Pengesahan
 
-Aliran pengesahan lengkap:
+Aliran pengesahan lengkap (sama pada semua platform):
 
-```powershell
+```bash
 # Step 1: Login
 chloros-cli login user@example.com 'MyP@ssw0rd'
 
@@ -906,7 +1178,9 @@ chloros-cli login user@example.com 'MyP@ssw0rd'
 chloros-cli status
 
 # Step 3: Process images
-chloros-cli process "C:\Datasets\Field_A"
+# Windows: chloros-cli process "C:\Datasets\Field_A"
+# Linux:   chloros-cli process ~/datasets/field_a
+chloros-cli process ~/datasets/field_a
 
 # Step 4: Logout (optional, when switching accounts)
 chloros-cli logout
@@ -916,9 +1190,9 @@ chloros-cli logout
 
 ### Contoh 7: Penggunaan Pelbagai Bahasa
 
-Tukar bahasa antara muka:
+Tukar bahasa antara muka (sama pada semua platform):
 
-```powershell
+```bash
 # List available languages
 chloros-cli language --list
 
@@ -926,7 +1200,9 @@ chloros-cli language --list
 chloros-cli language es
 
 # Process with Spanish interface
-chloros-cli process "C:\Vuelos\Campo_A"
+# Windows: chloros-cli process "C:\Vuelos\Campo_A"
+# Linux:   chloros-cli process ~/vuelos/campo_a
+chloros-cli process ~/vuelos/campo_a
 
 # Change back to English
 chloros-cli language en

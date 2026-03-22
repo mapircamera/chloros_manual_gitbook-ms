@@ -98,7 +98,7 @@ Menunjukkan profil ketinggian dan jubin peta dengan butiran (jalan raya, dll)
 
 ### Peta
 
-Menunjukkan jubin peta standard (lebar jalur yang lebih rendah) dengan butiran (jalan raya, dll)
+Menunjukkan jubin peta standard (jalur lebar lebih rendah) dengan butiran (jalan raya, dll)
 
 ### Satelit
 

@@ -7,7 +7,7 @@ Bar sisi Tetapan Projek <img src="../.gitbook/assets/icon_project-settings.JPG" 
 Untuk mengakses Tetapan Projek:
 
 1. Buka projek dalam Chloros
-2. Klik tab **Tetapan Projek** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> di bar sisi kiri
+2. Klik tab **Tetapan Projek** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> dalam bar sisi kiri
 3. Panel tetapan akan memaparkan semua pilihan konfigurasi tersedia yang disusun mengikut kategori
 
 ***
@@ -47,7 +47,7 @@ Tetapan ini mengawal cara Chloros memproses dan menentukur imej anda.
 * **Jenis**: Kotak semak
 * **Lalai**: Didayakan (ditandai)
 * **Penerangan**: Menggunakan pembetulan vignet untuk mengimbangi kegelapan kanta di tepi imej. Vignetting ialah fenomena optik biasa di mana sudut dan tepi imej kelihatan lebih gelap daripada bahagian tengah kerana ciri kanta.
-* **Bila untuk melumpuhkan**: Hanya lumpuhkan jika kombinasi kamera/kanta anda telah menggunakan pembetulan vignet, atau jika anda ingin membetulkan vignetting secara manual dalam pemprosesan pasca.
+* **Bila untuk melumpuhkan**: Hanya lumpuhkan jika kombinasi kamera/kanta anda telah menggunakan pembetulan vignet, atau jika anda ingin membetulkan vignet secara manual dalam pemprosesan pasca.
 
 ### Penentukuran pantulan / imbangan putih
 
@@ -131,13 +131,13 @@ Tetapan ini membolehkan anda mengkonfigurasi indeks berbilang spektrum untuk ana
 ### Tambah indeks
 
 * **Jenis**: Panel konfigurasi indeks khas
-* **Penerangan**: Membuka panel interaktif di mana anda boleh memilih dan mengkonfigurasi indeks tumbuh-tumbuhan berbilang spektrum (NDVI, NDRE, EVI, dll.) untuk mengira semasa pemprosesan imej. Anda boleh menambah berbilang indeks, setiap satu dengan tetapan visualisasinya sendiri.
+* **Penerangan**: Membuka panel interaktif di mana anda boleh memilih dan mengkonfigurasi indeks tumbuh-tumbuhan berbilang spektrum (NDVI, NDRE, EVI, dsb.) untuk mengira semasa pemprosesan imej. Anda boleh menambah berbilang indeks, setiap satu dengan tetapan visualisasinya sendiri.
 * **Indeks yang tersedia**: Sistem ini termasuk 30+ indeks berbilang spektrum yang dipratakrifkan termasuk:
   * NDVI (Indeks Tumbuhan Perbezaan Normal)
   * NDRE (Perbezaan Normal RedEdge)
   * EVI (Indeks Tumbuhan Dipertingkat)
   * GNDVI, SAVI, OSAVI, MSAVI2
-  * Dan banyak lagi (lihat [Formula Indeks Berbilang Spektrum](multispectral-index-formulas.md) untuk senarai lengkap)
+  * Dan banyak lagi (lihat [Rumus Indeks Berbilang Spektrum](multispectral-index-formulas.md) untuk senarai lengkap)
 * **Ciri**:
   * Pilih daripada formula indeks yang telah ditetapkan
   * Konfigurasikan kecerunan warna visualisasi (LUT - Jadual Carian)
@@ -155,7 +155,7 @@ Tetapan ini membolehkan anda mengkonfigurasi indeks berbilang spektrum untuk ana
 * **Sintaks formula**: Operasi matematik standard disokong, termasuk:
   * Aritmetik: `+`, `-`, `*`, `/`
   * Tanda kurung untuk susunan operasi
-  * Rujukan jalur: NIR, Red, Green, Blue, RedEdge, Cyan, Orange0, Orange0, Orange0, Orange0, Orange0, Orange0 NIR2
+  * Rujukan jalur: NIR, Red, Green, Blue, RedEdge, Cyan, Orange000072XPROTX0, Orange0, Orange0, XPROTX0000720XPROTX0 NIR2
 
 ***
 
@@ -168,13 +168,13 @@ Tetapan ini mengawal format dan kualiti imej yang diproses yang dieksport.
 * **Jenis**: Pilihan lungsur turun
 * **Pilihan**:
   * **TIFF (16-bit)** - Format 16-bit TIFF tidak dimampatkan
-  * **TIFF (32-bit, Peratus)** - 32-bit titik terapung TIFF dengan nilai pantulan sebagai peratusan
-  * **PNG (8-bit)** - Format 8-bit PNG mampat
+  * **TIFF (32-bit, Peratus)** - titik terapung 32-bit TIFF dengan nilai pantulan sebagai peratusan
+  * **PNG (8-bit)** - Mampat 8-bit format PNG
   * **JPG (8-bit)** - Format 8-bit JPEG mampat
 * **Lalai**: TIFF (16-bit)
 * **Penerangan**: Memilih format fail untuk menyimpan imej yang diproses dan ditentukur.
 * **Syor format**:
-  * **TIFF (16-bit)**: Disyorkan untuk analisis saintifik dan aliran kerja profesional. Mengekalkan kualiti data maksimum tanpa artifak mampatan. Terbaik untuk analisis multispektral dan pemprosesan selanjutnya dalam perisian GIS.
+  * **TIFF (16-bit)**: Disyorkan untuk analisis saintifik dan aliran kerja profesional. Mengekalkan kualiti data maksimum tanpa artifak mampatan. Terbaik untuk analisis multispektral dan pemprosesan lanjut dalam perisian GIS.
   * **TIFF (32-bit, Peratus)**: Terbaik untuk aliran kerja yang memerlukan nilai pantulan sebagai peratusan (0-100%). Menawarkan ketepatan maksimum untuk pengukuran radiometrik.
   * **PNG (8-bit)**: Baik untuk tontonan web dan visualisasi umum. Saiz fail yang lebih kecil dengan pemampatan tanpa kerugian, tetapi mengurangkan julat dinamik.
   * **JPG (8-bit)**: Saiz fail terkecil, terbaik untuk pratonton dan paparan web sahaja. Menggunakan mampatan lossy yang tidak sesuai untuk analisis saintifik.***
@@ -202,7 +202,8 @@ Ciri ini membolehkan anda menyimpan tetapan projek semasa anda sebagai templat b
 Tetapan ini menentukan tempat projek baharu disimpan secara lalai.
 
 * **Jenis**: Paparan laluan direktori + butang Edit
-* **Lalai**: `C:\Users\[Username]\Chloros Projects`
+* **Lalai (Windows)**: `C:\Users\[Username]\Chloros Projects`
+* **Lalai (Linux)**: `~/.local/share/chloros/projects`
 * **Penerangan**: Menunjukkan direktori lalai semasa di mana projek Chloros baharu dicipta. Klik ikon edit untuk memilih direktori lain.
 * **Bila untuk menukar**:
   * Tetapkan kepada pemacu rangkaian untuk kerjasama pasukan
@@ -218,7 +219,7 @@ Semua tetapan projek disimpan secara automatik dengan fail projek anda (`.mapir`
 
 Tetapan digunakan dalam susunan berikut:
 
-1. **Kelalaian sistem** - Kelalaian terbina dalam ditakrifkan oleh Chloros
+1. **Lalai sistem** - Lalai terbina dalam ditakrifkan oleh Chloros
 2. **Tetapan templat** - Jika anda memuatkan templat semasa membuat projek
 3. **Tetapan projek disimpan** - Tetapan disimpan dengan fail projek
 4. **Pelarasan manual** - Sebarang perubahan yang anda buat semasa sesi semasa
@@ -247,4 +248,4 @@ Kebanyakan perubahan tetapan (terutamanya dalam kategori Pemprosesan dan Eksport
 
 ***
 
-Untuk mendapatkan maklumat lanjut tentang indeks berbilangspek dalam Chloros, lihat halaman [Formula Indeks Berbilangspektrum](multispectral-index-formulas.md).
+Untuk mendapatkan maklumat lanjut tentang indeks berbilang spektrum dalam Chloros, lihat halaman [Formula Indeks Berbilangspektrum](multispectral-index-formulas.md).

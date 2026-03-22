@@ -12,7 +12,7 @@ metaLinks:
 
 ### TIFF (32-bit, Peratus %)
 
-Output format 32-bit (pixel float 0.0 - 1.0) TIFF (.tif). Nilai piksel mewakili peratusan pantulan dengan 0.0 = 0% dan 1.0 = 100%.
+32-bit (apungan piksel 0.0 - 1.0) output format TIFF (.tif). Nilai piksel mewakili peratusan pantulan dengan 0.0 = 0% dan 1.0 = 100%.
 
 ### **JPG (8-bit)**
 
@@ -20,4 +20,4 @@ Output format JPG (.jpg) 8-bit (nombor digital piksel 0 -255).
 
 ### **PNG (8-bit)**
 
-8-bit (nombor digital piksel 0 - 255) output format PNG (.png). Mampatan tanpa rugi sesuai untuk tontonan dan visualisasi web.
+Output format 8-bit (nombor digital piksel 0 - 255) PNG (.png). Pemampatan tanpa rugi sesuai untuk tontonan dan visualisasi web.

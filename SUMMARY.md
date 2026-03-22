@@ -7,7 +7,7 @@
 * [API : Python SDK](api-python-sdk.md)
 * [Kamera Disokong](supported-cameras.md)
 * [Format Imej Output](output-image-formats.md)
-* [Log Masuk Chloros+](chloros+-login.md)
+* [Chloros+ Log Masuk](chloros+-login.md)
 * [Sasaran Penentukuran](calibration-targets.md)
 * [Bahasa yang Disokong](supported-languages.md)
 * [Muat Turun](download.md)
@@ -34,3 +34,14 @@
 * [Lapisan Imej](image-viewer-gui/image-layers.md)
 * [Kotak Pasir Indeks/LUT](image-viewer-gui/index-lut-sandbox.md)
 * [Penanda Peta](image-viewer-gui/map-markers.md)
+
+## Linux & Pengkomputeran Tepi
+
+* [Linux Gambaran Keseluruhan](linux/linux-overview.md)
+* [Pemasangan Linux](linux/linux-installation.md)
+* [Panduan NVIDIA Jetson](linux/nvidia-jetson-guide.md)
+
+## Seni Bina Pemprosesan
+
+* [Penyesuaian Pengiraan Dinamik](processing-architecture/dynamic-compute-adaptation.md)
+* [Saluran Paip Pemprosesan](processing-architecture/processing-pipeline.md)

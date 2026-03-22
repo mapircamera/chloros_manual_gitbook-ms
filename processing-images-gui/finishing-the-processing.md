@@ -59,7 +59,7 @@ Lihat [Pemapar Imej](../image-viewer-gui/opening-an-image-full-screen.md) untuk 
 
 ### Semak Amaran atau Ralat
 
-1. Buka **Debug Log** tab <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line">
+1. Buka **Log Nyahpepijat** <img src="../.gitbook/assets/icon_log.JPG" tab alt="" data-size="line">
 2. Tatal melalui mesej
 3. Cari amaran kuning atau ralat merah
 4. Semak sebarang isu yang dinyatakan
@@ -109,7 +109,7 @@ Untuk menyimpan rekod pemprosesan atau menghantar kepada Sokongan MAPIR:
 2. Periksa model kamera dikesan dengan betul
 3. Hubungi sokongan MAPIR jika vignetting berterusan
 
-### Isu: Warna atau Nilai yang Salah
+### Isu: Warna atau Nilai yang salah
 
 **Punca yang mungkin:**
 
@@ -125,7 +125,7 @@ Untuk menyimpan rekod pemprosesan atau menghantar kepada Sokongan MAPIR:
 3. Semak kualiti imej sasaran
 4. Proses semula dengan sasaran yang betul ditanda
 
-### Isu: NDVI Nilai Nampak Salah
+### Isu: Nilai NDVI Nampak Salah
 
 **Julat NDVI dijangka:*** **Air, batu, tanah**: -0.1 hingga 0.2
 * **Tumbuhan jarang/tidak sihat**: 0.2 hingga 0.4

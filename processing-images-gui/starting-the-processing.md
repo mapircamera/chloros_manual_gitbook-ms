@@ -70,17 +70,17 @@ Chloros beroperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 
 **Cara ia berfungsi:**
 
-* Memproses berbilang imej serentak
-* Operasi berbilang benang (sehingga 16 pekerja selari)
-* Menggunakan berbilang teras CPU
-* Pilihan pecutan GPU (CUDA) dengan kad grafik NVIDIA
+* Memproses berbilang imej secara serentak menggunakan [talian paip pemprosesan 4-benang](../processing-architecture/processing-pipeline.md)
+* [Penyesuaian Pengiraan Dinamik](../processing-architecture/dynamic-compute-adaptation.md) secara automatik memilih strategi optimum untuk perkakasan anda
+* Pecutan GPU (CUDA) dengan kad grafik NVIDIA (desktop dan Jetson)
+* Skala daripada Jetson Nano (1 pekerja) ke desktop dengan 12GB+ GPU (3-4 pekerja)
 
-**Bar kemajuan menunjukkan 4 peringkat:**
+**Bar kemajuan menunjukkan 4 peringkat** (sepadan dengan 4 utas saluran paip):
 
-1.**Mengesan** - Mencari sasaran penentukuran
-2. **Menganalisis** - Memeriksa metadata imej dan menyediakan saluran paip
-3. **Menentukur** - Menggunakan pembetulan dan penentukuran
-4. **Mengeksport** - Menyimpan imej dan indeks yang diproses**Interaksi bar kemajuan:*** **Tuding tetikus** di atas bar untuk melihat panel lungsur turun 4 peringkat terperinci
+1. **Mengesan** (Benang 1) - Mencari sasaran penentukuran
+2. **Menganalisis** (Benang 2) - Memeriksa metadata imej dan penentukuran pengkomputeran
+3. **Menentukur** (Benang 3) - Penyahbayar GPU, pembetulan vignet, pengiraan indeks
+4. **Mengeksport** (Benang 4) - Menyimpan imej dan indeks yang diproses**Interaksi bar kemajuan:*** **Tuding tetikus** di atas bar untuk melihat panel lungsur turun 4 peringkat terperinci
 * **Klik** bar kemajuan untuk membekukan panel lungsur di tempatnya
 * **Klik sekali lagi** untuk menyahbeku dan menyembunyikan panel**Masa pemprosesan:**
 
@@ -89,7 +89,7 @@ Chloros beroperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 * Pecutan GPU meningkatkan lagi kelajuan
 
 {% hint style="info" %}
-**Chloros+ Speed**: Pemprosesan selari boleh 5-10x lebih pantas daripada mod berjujukan untuk set data yang besar. Projek 500 imej yang mengambil masa 2 jam dalam mod percuma mungkin selesai dalam 15-20 minit dengan Chloros+.
+**Chloros+ Kelajuan**: Pemprosesan selari boleh 5-10x lebih pantas daripada mod berjujukan untuk set data yang besar. Projek 500 imej yang mengambil masa 2 jam dalam mod percuma mungkin selesai dalam 15-20 minit dengan Chloros+.
 {% endhint %}
 
 ***
@@ -172,7 +172,7 @@ Sebaik sahaja dimulakan, keseluruhan saluran paip berjalan secara automatik:
 * Komputer mungkin kurang responsif semasa pemprosesan
 * Elakkan memulakan tugas intensif CPU yang lain
 
-{% gaya petunjuk="amaran" %}
+{% hint style="warning" %}
 **Petua Prestasi**: Untuk prestasi Chloros+ terbaik, tutup aplikasi lain dan biarkan Chloros menggunakan sumber sistem penuh.
 {% endhint %}
 
@@ -227,7 +227,7 @@ Jika anda perlu menghentikan pemprosesan:
 * Mulakan semula pemprosesan dari awal
 * Untuk pengalaman paling bersih, tutup sepenuhnya Chloros dan mulakan semula
 
-{% gaya petunjuk="amaran" %}
+{% hint style="warning" %}
 **Tiada Keputusan Separa**: Pembatalan membuang semua kemajuan. Chloros tidak menyimpan imej yang diproses separa.
 {% endhint %}
 
@@ -257,8 +257,8 @@ Masa pemprosesan sebenar sangat berbeza berdasarkan:
 | 1000 imej | 4-6 jam | 1.5-2 jam | 40-60 min |
 
 {% hint style="info" %}
-**Larian Pertama**: Pemprosesan awal mungkin mengambil masa lebih lama kerana Chloros membina cache dan profil. Pemprosesan seterusnya set data serupa akan menjadi lebih cepat.
-{% petua %}
+**Larian Pertama**: Pemprosesan awal mungkin mengambil masa yang lebih lama kerana Chloros membina cache dan profil. Pemprosesan seterusnya set data serupa akan menjadi lebih cepat.
+{% endhint %}
 
 ***
 

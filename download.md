@@ -10,6 +10,8 @@ Muat turun versi terkini Chloros untuk bermula dengan pemprosesan imej berbilang
 
 ### Keperluan Sistem
 
+#### Windows
+
 | Keperluan | Minimum | Disyorkan |
 | -------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
 | **Sistem Pengendalian** | Windows 10 (64-bit) | Windows 11 (64-bit) |
@@ -20,27 +22,47 @@ Muat turun versi terkini Chloros untuk bermula dengan pemprosesan imej berbilang
 | **Paparan** | 1920x1080 | 2560x1440 atau lebih tinggi |
 | **Internet** | Diperlukan untuk pengaktifan lesen \[pilihan] Chloros+ | Diperlukan untuk pengaktifan lesen \[pilihan] Chloros+ |
 
+#### Linux amd64 (x86\_64)
+
+| Keperluan | Minimum | Disyorkan |
+| ----------------- | -------------------------- | -------------------------- |
+| **Pengagihan** | Ubuntu 20.04+ / Debian 11+ | Ubuntu 22.04+ |
+| **Pemproses** | x86\_64 (Intel/AMD) | Intel Core i7 atau lebih baik |
+| **Memori (RAM)** | 8GB | 16GB atau lebih |
+| **Kad Grafik** | Tiada (pemprosesan CPU) | GPU NVIDIA dengan 4GB+ VRAM |
+| **Storan** | 2GB ruang kosong | SSD dengan 10GB+ percuma |
+| **Python** | Python 3.7+ (untuk SDK) | Python 3.10+ |
+
+#### Linux arm64 (NVIDIA Jetson)
+
+| Keperluan | Minimum | Disyorkan |
+| ---------------- | ---------------------------- | ------------------------------- |
+| **Platform** | NVIDIA Jetson dengan JetPack 6 | Jetson Orin NX 16GB atau AGX Orin |
+| **Memori (RAM)** | 8GB (GPU/CPU dikongsi) | 16GB+ dikongsi |
+| **Storan** | 2GB ruang kosong | NVMe SSD dengan 10GB+ percuma |
+| **Python** | Python 3.7+ (untuk SDK) | Python 3.10+ |
+
 {% hint style="info" %}
-**Pecutan GPU**: Pengguna Chloros+ dengan GPU NVIDIA boleh menggunakan pecutan CUDA untuk pemprosesan yang lebih pantas. Pengguna Chloros+ juga mendapat pemprosesan berbilang benang untuk kelajuan maksimum.
+**Pecutan GPU**: Pengguna Chloros+ dengan GPU NVIDIA boleh menggunakan pecutan CUDA untuk pemprosesan yang jauh lebih pantas. Ini berfungsi pada kedua-dua Windows (GPU desktop) dan Linux (GPU desktop dan NVIDIA Jetson). Pengguna Chloros+ juga mendapat pemprosesan berbilang benang untuk kelajuan maksimum.
 {% endhint %}
 
 ***
 
 ## Muat turun Chloros
 
-### <a href="https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link" class="button primary">Muat turun Chloros Di Sini</a>
+### Keluaran Stabil Terkini (23 Mac 2026): Versi 1.1.0
 
-### Keluaran Stabil Terkini
+### <a href="https://drive.google.com/uc?export=download&#x26;id=1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4" class="button primary">Muat turun Chloros untuk Windows (.exe)</a>
 
-**Chloros Installer untuk Windows*** **Versi**: 1.0.5
-* **Tarikh Tayangan**: 10 Februari 2026
-* **Saiz Fail (Muat Turun)**: 1.6GB
-* **Saiz Fail (Dipasang)**: 5.7GB
-* **Jenis Fail**: .exe (Pemasang Windows)
+### <a href="https://drive.google.com/uc?export=download&#x26;id=1dB8-ke3wxNXpw_e1qJ4BhwBpCoNd4kLS" class="button primary">Muat turun Chloros untuk Linux amd64 (.deb)</a>
 
-#### **Langkah Pemasangan:**
+### <a href="https://drive.google.com/uc?export=download&#x26;id=1d1OwdcYA4Rf4jkuPi2IBeWT2772_HnyO" class="button primary">Muat turun Chloros untuk Linux arm64 / Jetson (.deb)</a>
 
-1. Muat turun fail `CHLOROS INSTALLER - CURRENT VERSION.exe`
+#### Pemasang Windows (GUI + CLI + Bahagian Belakang)
+
+* **Jenis Fail**: .exe (Pemasang Windows)**Langkah Pemasangan:**
+
+1. Muat turun fail .exe di atas
 2. Dwiklik pemasang untuk memulakan pemasangan
 3. Ikut gesaan wizard pemasangan
 4. Pilih direktori pemasangan (lalai: `C:\Program Files\[USER]\Chloros\`)
@@ -49,6 +71,40 @@ Muat turun versi terkini Chloros untuk bermula dengan pemprosesan imej berbilang
 
 {% hint style="success" %}
 Pemasang secara automatik menambah `chloros-cli` pada PATH sistem anda untuk akses baris arahan.
+{% endhint %}
+
+#### Linux amd64 (.Pakej deb — CLI + Bahagian Belakang)
+
+* **Jenis Fail**: .deb (pakej Debian/Ubuntu)
+* **Seni Bina**: x86\_64 (amd64)
+
+```bash
+sudo dpkg -i chloros-amd64.deb
+chloros-cli --version  # Verify installation
+```
+
+#### Linux arm64 — NVIDIA Jetson (Pakej .deb — CLI + Bahagian Belakang)
+
+* **Jenis Fail**: .deb (JetPack 6)
+* **Seni Bina**: aarch64 (arm64)
+
+```bash
+sudo dpkg -i chloros-arm64-jp6.deb
+chloros-cli --version  # Verify installation
+```
+
+Lihat [Linux Installation](linux/linux-installation.md) untuk arahan persediaan terperinci dan [NVIDIA Jetson Guide](linux/nvidia-jetson-guide.md) untuk panduan khusus Jetson.
+
+#### Python SDK (Semua Platform)
+
+```bash
+pip install chloros-sdk
+```
+
+Lihat [API : Python SDK](api-python-sdk.md) untuk dokumentasi.
+
+{% hint style="info" %}
+**Pengguna Linux**: Pakej `.deb` memasang CLI dan bahagian belakang. Python SDK dipasang secara berasingan melalui pip. Tiada GUI untuk Linux — semua interaksi adalah melalui CLI atau SDK.
 {% endhint %}
 
 ***
@@ -63,16 +119,27 @@ Untuk pemaju dan aliran kerja automasi, pasang Chloros Python SDK:
 pip install chloros-sdk
 ```
 
-**Dokumentasi**: [API: Python SDK](api-python-sdk.md)**Keperluan**: Desktop Chloros mesti dipasang, log masuk lesen Chloros+ diperlukan***
+**Dokumentasi**: [API: Python SDK](api-python-sdk.md)**Keperluan**: Chloros mesti dipasang (pemasang Windows atau Linux `.deb` pakej), Chloros+ log masuk lesen diperlukan***
 
 ## Apa yang Termasuk
 
-Pemasangan Chloros termasuk:
+### Pemasang Windows
 
-* ✅ **Chloros** - Antara muka grafik berciri penuh (GUI)
+* ✅ **Chloros GUI** - Antara muka grafik berciri penuh
 * ✅ **Chloros CLI** - Antara muka baris perintah (memerlukan lesen Chloros+)
-* ✅ **Chloros SDK** - Python API (memerlukan lesen Chloros+)
-* ✅ **Profil Kamera** - Templat kamera MAPIR prakonfigurasi***
+* ✅ **Chloros Backend** - Enjin pemprosesan
+* ✅ **Profil Kamera** - Templat kamera MAPIR prakonfigurasi
+
+### Pakej Linux .deb
+
+* ✅ **Chloros CLI** - Antara muka baris perintah (memerlukan lesen Chloros+)
+* ✅ **Chloros Backend** - Enjin pemprosesan
+* ✅ **Profil Kamera** - Templat kamera MAPIR prakonfigurasi
+* ❌ Tiada GUI — Linux tanpa kepala CLI/SDK sahaja
+
+### Python SDK (pip, semua platform)
+
+* ✅ **Chloros SDK** - Python API (memerlukan lesen Chloros+)***
 
 ## Naik taraf kepada Chloros+
 
@@ -83,7 +150,7 @@ Buka kunci ciri lanjutan dengan langganan Chloros+:
 * 💻 **CLI Access** - Automatik dengan alatan baris arahan
 * 🍅 **Python SDK** - Akses API Terprogram
 * 📱 **Berbilang Peranti** - Gunakan pada 2-10+ peranti (bergantung kepada pelan)
-* **🐻 Kaedah Debayer Sedar Tekstur Lanjutan** - debayer sedar tepi berkualiti tinggi digabungkan dengan model denoising AI/ML yang menghilangkan hampir semua bunyi debayering.&#x20;
+* **🐻 Kaedah Debayer Sedar Tekstur Lanjutan** - debayer sedar tepi berkualiti tinggi digabungkan dengan model denoising AI/ML yang menghilangkan hampir semua bunyi debayering.
 * 🧮 **Formula Tersuai** - Buat indeks berbilang spektrum tersuai
 
 <p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Lihat Pelan Chloros+ &#x26; Harga</a></p>
@@ -98,14 +165,21 @@ Buka kunci ciri lanjutan dengan langganan Chloros+:
 
 * Pastikan anda mempunyai hak pentadbir
 * Lumpuhkan sementara perisian antivirus
-* Semak sama ada anda memenuhi keperluan sistem minimum
+* Pastikan anda memenuhi keperluan sistem minimum
 
-**Permohonan tidak akan bermula:**
+**Permohonan tidak akan bermula (Windows):**
 
 * Sahkan Windows 10/11 (64-bit) dipasang
 * Kemas kini pemacu grafik
 * Semak Windows Event Viewer untuk butiran ralat
 * Hubungi sokongan dengan log ralat
+
+**CLI tidak akan bermula (Linux):**
+
+* Sahkan pakej `.deb` dipasang dengan betul: `dpkg -l | grep chloros`
+* Semak kebenaran: `sudo chmod +x /usr/bin/chloros-cli`
+* Jalankan diagnostik: `chloros-cli selftest`
+* Semak perpustakaan yang hilang: `ldd /usr/lib/chloros/chloros-backend | grep "not found"`
 
 **Isu pengaktifan lesen:**
 
@@ -127,9 +201,33 @@ Perlukan bantuan dengan pemasangan atau persediaan?
 
 <butiran>
 
+<summary>Versi 1.1.0 (Terbaru)</summary>
+
+**Tarikh Tayangan: Mac 2026**
+
+**Ciri Baharu*** **Sokongan Linux** — CLI dan SDK asli untuk Linux amd64 (x86\_64) dan arm64 (NVIDIA Jetson JetPack 6). Pasang melalui pakej `.deb`.
+* **Sokongan NVIDIA Jetson** — Pemprosesan dioptimumkan untuk peranti tepi Jetson Nano, Orin Nano, Orin NX dan AGX Orin.
+* **Penyesuaian Pengiraan Dinamik** — Pengesanan perkakasan automatik dan pengoptimuman strategi pemprosesan. Chloros menyesuaikan diri dengan perkakasan anda daripada Jetson Nano kepada stesen kerja berbilang GPU.
+* **Saluran Paip Pemprosesan 4-Benang** — Pengesanan Serentak, Penentukuran, Pemprosesan dan Eksport benang dengan peruntukan memori GPU dinamik.
+* **Perintah CLI baharu** — `selftest` (diagnostik sistem) dan `update` (pengurusan kemas kini Linux).
+* **Bendera Proses CLI baharu** — `--debayer` (standard/sedar tekstur), `--indices` (nyatakan indeks), `--target` (cari subfolder sasaran terlebih dahulu untuk pengesanan lebih pantas).
+* **Item Menu GUI Baharu** — Tambah Fail, Tambah Folder dan Mula/Hentikan Pemprosesan kini boleh diakses daripada menu lungsur utama.**Peningkatan**
+
+* Pengesanan auto bahagian belakang merentas platform (laluan Windows dan Linux)
+* SDK `get_status()` dipertingkat dengan penjejakan kemajuan setiap utas
+* Pengecualian SDK baharu: `ChlorosConfigurationError`, `ChlorosAuthenticationError`
+* Pengurusan terma dan pendikit penyesuaian untuk NVIDIA Jetson
+* Pengurusan memori automatik dengan sandaran OOM kepada pemprosesan GPU berjubin
+
+</detail>
+
+<butiran>
+
 <summary>Versi 1.0.5</summary>
 
-#### **Tarikh Tayangan**: 10 Februari 2026**Ciri Baharu*** **Kaedah Texture Aware Debayer \[Chloros+ Only] -** Texture Aware menggunakan debayer sedar tepi berkualiti tinggi yang digabungkan dengan model denoising AI/ML yang menghilangkan hampir semua hingar debayering.
+**Tarikh Tayangan: 10 Februari 2026**
+
+**Ciri Baharu*** **Kaedah Texture Aware Debayer \[Chloros+ Only] -** Texture Aware menggunakan debayer sedar tepi berkualiti tinggi digabungkan dengan model denoising AI/ML yang menghilangkan hampir semua hingar debayering.
 * **Sokongan untuk Sasaran Penentukuran T4P*** **Pemprosesan GPU Chloros+ yang lebih pantas, pengurusan memori yang lebih baik**
 
 **Pembetulan Pepijat*** Bahagian hadapan (GUI) baharu sepenuhnya, seharusnya berfungsi pada semua komputer Windows sekarang.
@@ -140,7 +238,9 @@ Perlukan bantuan dengan pemasangan atau persediaan?
 
 <summary>Versi 1.0.4</summary>
 
-#### **Tarikh Tayangan**: 5 Januari 2026**Ciri Baharu*** **Togol Imej/Metadata**: Togol ditambahkan dalam Pelayar Fail untuk melihat metadata imej yang dipilih dalam jadual dan bukannya grid imej
+**Tarikh Tayangan: 5 Januari 2026**
+
+**Ciri Baharu*** **Togol Imej/Metadata**: Togol ditambahkan dalam Pelayar Fail untuk melihat metadata imej yang dipilih dalam jadual dan bukannya grid imej
 * **Peluncur Zum Grid Imej**: Peluncur UI baharu untuk melaraskan saiz lakaran kenit (juga menyokong CTRL + roda tetikus)
 * **Butang Eksport Grid Imej**: Butang di baris atas untuk menukar imej kecil daripada JPG kepada eksport yang diproses (Sasaran, Reflectance, Indeks, LUT)
 * **Tab Peta**: Peta 2D interaktif baharu yang menunjukkan imej penanda lokasi GPS
@@ -155,7 +255,9 @@ Perlukan bantuan dengan pemasangan atau persediaan?
 
 <summary>Versi 1.0.3</summary>
 
-#### **Tarikh Tayangan**: 20 Disember 2025**Ciri Baharu*** Pelancaran Awal
+**Tarikh Tayangan: 20 Disember 2025**
+
+**Ciri Baharu*** Pelancaran Awal
 
 **Peningkatan*** Pelancaran Awal
 

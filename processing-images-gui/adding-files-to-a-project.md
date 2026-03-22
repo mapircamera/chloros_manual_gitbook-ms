@@ -1,6 +1,6 @@
 # Menambah Fail pada Projek
 
-Sebaik sahaja anda telah mencipta atau membuka projek dalam Chloros, langkah seterusnya ialah menambah imej berbilang spektrum anda untuk memulakan pemprosesan. Tab Pelayar Fail<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> memudahkan anda mengimport imej dan mengurus set data anda.
+Setelah anda mencipta atau membuka projek dalam Chloros, langkah seterusnya ialah menambah imej berbilang spektrum anda untuk mula memproses. Tab Pelayar Fail<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> memudahkan anda mengimport imej dan mengurus set data anda.
 
 ## Mengakses Pelayar Fail
 

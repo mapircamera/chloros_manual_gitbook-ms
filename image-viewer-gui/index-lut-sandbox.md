@@ -54,21 +54,21 @@ Kotak pasir membolehkan anda:
 Kotak Pasir Indeks/LUT diakses dalam **Pemapar Imej** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab bar sisi:
 
 1. Klik imej dalam grid imej penyemak imbas fail, ia dibuka dalam tab **Pemapar Imej** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab
-2. Klik **the Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab untuk membuka bar sisi pop-keluar kiri jika ia belum dibuka
+2. Klik **Pemapar Imej** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab untuk membuka bar sisi pop keluar kiri jika ia belum dibuka
 
 ### Memilih Imej untuk Menggunakan Indeks/LUT
 
-Untuk bekerja dengan indeks dalam Pemapar Imej <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> kotak pasir:
+Untuk bekerja dengan indeks dalam kotak pasir Pemapar Imej <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">:
 
 1. **Buka imej** dari grid imej utama dengan mengklik padanya
-2. Tab **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> kemudiannya akan dibuka
+2. Tab **Pemapar Imej** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> kemudiannya akan dibuka
 3. Klik menu lungsur **Lapisan** (atas kanan pemapar)
 4. Pilih lapisan daripada menu lungsur:
    * RAW (Pantulan)
 
 ### Menggunakan Indeks pada Imej
 
-Sebaik sahaja imej adalah skrin penuh dan **Pemapar Imej** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> bar sisi tab dibuka:
+Sebaik sahaja imej berada dalam skrin penuh dan bar sisi tab **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> dibuka:
 
 1. Tandakan kotak Indeks di bahagian atas bar sisi
 2. Pilih penapis kamera anda daripada menu lungsur kiri
@@ -114,7 +114,7 @@ Untuk dokumentasi formula indeks yang lengkap, lihat [Formula Indeks Berbilang S
 * Skala kelabu: Saintifik dan neutral, menunjukkan data mentah
 * Warna LUT: Intuitif dan berkesan, menyerlahkan corak dan perbezaan
 
-{% gaya pembayang="berjaya" %}
+{% hint style="success" %}
 **Kuasa Visualisasi**: Menggunakan LUT warna pada imej indeks skala kelabu menjadikannya secara dramatik lebih mudah untuk mengenal pasti corak, anomali dan kawasan yang diminati sepintas lalu.
 {% endhint %}
 
@@ -139,7 +139,7 @@ Sebaik sahaja anda mempunyai imej indeks yang ditunjukkan
 4. Imej **kemas kini serta-merta** dengan warna baharu apabila kotak Indeks ditandakan
 
 {% hint style="success" %}
-**Amalan Terbaik**: Untuk indeks tumbuh-tumbuhan seperti NDVI, kecerunan Red-Yellow-Green adalah paling intuitif kerana ia sejajar dengan persatuan warna semula jadi (hijau=sihat, kuning=sederhana, merah=tekanan).
+**Amalan Terbaik**: Untuk indeks tumbuh-tumbuhan seperti NDVI, kecerunan Red-Yellow-Green adalah paling intuitif kerana ia selaras dengan persatuan warna semula jadi (hijau=sihat, kuning=sederhana, merah=tekanan).
 {% endhint %}
 
 ### Melaraskan Kelas Warna
@@ -155,7 +155,7 @@ Sebaik sahaja anda mempunyai imej indeks yang ditunjukkan
 3. Keluarkan bilangan kelas dengan mengklik dua kali pada swatch warna
 4. Kemas kini kecerunan **dalam masa nyata** pada imej**Kesan pada visualisasi:*** **Kurang kelas** (3-5): Mencipta zon berbeza, klasifikasi dipermudahkan, lebih mudah untuk membezakan kategori
 * **Kelas sederhana** (6-10): Pendekatan seimbang, bagus untuk kebanyakan aplikasi
-* **Lebih banyak kelas** (15-20): Peralihan lancar, variasi terperinci, penampilan fotografi**Bila hendak digunakan:*** **Beberapa kelas (3-5)**: Slaid pembentangan, peta klasifikasi, laporan ringkas
+* **Lagi kelas** (15-20): Peralihan lancar, variasi terperinci, penampilan fotografi**Bila hendak digunakan:*** **Beberapa kelas (3-5)**: Slaid pembentangan, peta klasifikasi, laporan ringkas
 * **Kelas sederhana (6-10)**: Analisis umum, perincian seimbang, laporan standard
 * **Banyak kelas (15-20)**: Analisis saintifik, pemeriksaan terperinci, output kualiti penerbitan
 
@@ -180,7 +180,7 @@ Sebaik sahaja anda mempunyai imej indeks yang ditunjukkan
 {% endhint %}
 
 **Contoh pelarasan julat NDVI:*** **Julat penuh**: `-1.0` hingga `1.0` (tunjukkan semua nilai yang mungkin)
-* **Tertumpu pada tumbuh-tumbuhan**: `0.2` hingga `0.9` (tidak termasuk tanah kosong dan air)
+* **Tertumpu kepada tumbuh-tumbuhan**: `0.2` hingga `0.9` (tidak termasuk tanah kosong dan air)
 * **Tumbuhan yang sihat sahaja**: `0.5` hingga `0.9` (serlahkan hanya tumbuhan yang cergas)
 * **Pengesanan tekanan**: `0.2` hingga `0.5` (menekankan kawasan masalah)
 * **Julat tersuai**: Laraskan berdasarkan nilai piksel yang anda perhatikan**Mengapa melaraskan julat?*** **Tingkatkan kontras** dalam kawasan minat anda
@@ -205,10 +205,10 @@ Apabila nilai piksel berada di luar julat min/maks yang ditentukan, anda boleh m
 
 * Piksel **di luar julat**menjadi**lutsinar sepenuhnya*** Hanya piksel **dalam julat** menunjukkan kecerunan warna
 * **Kes penggunaan**: Tindanan GIS, mengasingkan julat nilai tertentu, menyerlahkan kawasan yang menarik sahaja
-* **Contoh**: Tunjukkan hanya NDVI 0.4-0.7 dalam warna, semua yang lain lutsinar
+* **Contoh**: Tunjukkan hanya NDVI 0.4-0.7 dalam warna, semua yang lain telus
 
-{% gaya petunjuk="amaran" %}
-**Had Ketelusan**: Piksel lutsinar akan muncul sebagai warna latar belakang dalam pemapar. Apabila dieksport semasa pemprosesan, ketelusan dikekalkan dalam format PNG tetapi bukan dalam JPG.
+{% hint style="warning" %}
+**Penghadan Ketelusan**: Piksel lutsinar akan muncul sebagai warna latar belakang dalam pemapar. Apabila dieksport semasa pemprosesan, ketelusan dikekalkan dalam format PNG tetapi bukan dalam JPG.
 {% endhint %}
 
 #### 3. Latar Belakang Indeks
@@ -326,7 +326,7 @@ Memahami nilai piksel sebenar adalah penting untuk menetapkan julat LUT yang ber
 1.**Buka Tetapan Projek** (sebelum diproses) atau bar sisi kotak pasir Pemapar Imej
 2. Navigasi ke **Indeks formula dropdown**
 
-3. Cari pilihan**"Tersuai"** (mesti dilog masuk dengan lesen Chloros+)
+3. Cari pilihan**"Custom"** (mesti dilog masuk dengan lesen Chloros+)
 4. **Tentukan formula anda** menggunakan pembolehubah jalur:
    * Nama jalur: `NIR`, `Red`, `Green`, `Blue`, `RedEdge`, dsb.
    * Operator: `+`, `-`, `*`, `/`, `^` (eksponen)
@@ -352,7 +352,7 @@ Exponential index:
 (NIR / Red) ^ 2
 ```
 
-{% gaya petunjuk="amaran" %}
+{% hint style="warning" %}
 **Pengesahan Formula**: Pastikan formula anda menggunakan jalur yang tersedia dalam kamera anda. Contohnya, RedEdge hanya tersedia pada kamera dengan penapis RedEdge.
 {% endhint %}
 

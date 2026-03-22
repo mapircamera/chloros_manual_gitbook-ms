@@ -1,6 +1,6 @@
 # Lapisan Imej
 
-Menu lungsur Lapisan Imej dalam Pemapar Imej Chloros membolehkan anda bertukar dengan cepat antara versi berbeza bagi imej yang sama - daripada tangkapan asal kepada output pemantulan yang diproses dan imej indeks yang dikira.
+Menu lungsur Lapisan Imej dalam Pemapar Imej Chloros membolehkan anda menukar dengan cepat antara versi berbeza imej yang sama - daripada tangkapan asal kepada output pemantulan yang diproses dan imej indeks yang dikira.
 
 ## Apakah itu Lapisan Imej?
 
@@ -9,7 +9,7 @@ Dalam Chloros, **lapisan** merujuk kepada output imej berbeza yang tersedia untu
 * **Imej asal** (Fail JPG dan RAW daripada kamera anda)
 * **Kalibrasi pantulan ditentukur** keluaran (jika penentukuran pantulan didayakan)
 * **Imej sasaran** (jika imej mengandungi sasaran penentukuran)
-* **Imej indeks** (NDVI, NDRE, GNDVI, dsb. jika indeks telah dikonfigurasikan)**Layer Selector dropdown** di bahagian atas sebelah kanan Pemapar Imej membolehkan anda bertukar serta-merta antara versi ini tanpa meninggalkan pemapar.***
+* **Imej indeks** (NDVI, NDRE, GNDVI, dsb. jika indeks dikonfigurasikan)**Layer Selector dropdown** di bahagian atas sebelah kanan Pemapar Imej membolehkan anda bertukar serta-merta antara versi ini tanpa meninggalkan pemapar.***
 
 ## Jenis Lapisan Tersedia
 
@@ -86,7 +86,7 @@ Dalam Chloros, **lapisan** merujuk kepada output imej berbeza yang tersedia untu
 
 * MENTAH (Indeks NDVI)
 * MENTAH (Indeks NDRE)
-* MENTAH (GNDVI Index)
+* MENTAH (Indeks GNDVI)
 * MENTAH (Indeks OSAVI)
 * MENTAH (Indeks EVI)
 * MENTAH (Indeks SAVI)
@@ -167,15 +167,15 @@ Apabila anda menavigasi ke imej lain (menggunakan kekunci anak panah atau mengkl
 1. Buka imej yang diproses dalam Pemapar Imej
 2. Pilih **RAW (Asal)** daripada lungsur turun
 3. Perhatikan nilai vignetting dan tidak ditentukur
-4. Tukar kepada **RAW (Reflectance)** daripada dropdown
+4. Beralih kepada **RAW (Reflectance)** dari dropdown
 5. Bandingkan - vignetting dikeluarkan, nilai ditentukur
 
 ### Aliran Kerja 2: Semakan Indeks
 
-**Matlamat**: Semak keputusan NDVI merentas set data dengan pantas
+**Matlamat**: Semak hasil NDVI merentas set data dengan pantas
 
 1. Buka imej pertama yang diproses
-2. Pilih **RAW (NDVI Index)** daripada lungsur turun
+2. Pilih **RAW (NDVI Index)** daripada menu lungsur
 3. Gunakan → kekunci anak panah untuk menavigasi ke imej seterusnya
 4. Lapisan NDVI berterusan secara automatik
 5. Teruskan melalui semua imej, semak corak NDVI
@@ -268,7 +268,7 @@ Lapisan yang berbeza menunjukkan julat nilai piksel yang berbeza:
 * Imej tidak diproses (hanya JPG dan RAW (Asal) tersedia)
 * Penentukuran pantulan telah dilumpuhkan semasa pemprosesan
 * Indeks khusus tidak dikonfigurasikan dalam Tetapan Projek
-* Imej ialah imej sasaran sahaja (tiada indeks dihasilkan untuk sasaran)
+* Imej ialah imej sasaran sahaja (tiada indeks yang dihasilkan untuk sasaran)
 
 **Penyelesaian:**
 
@@ -278,7 +278,7 @@ Lapisan yang berbeza menunjukkan julat nilai piksel yang berbeza:
 
 ### Lapisan Salah Ditunjukkan
 
-**Masalah**: Imej dibuka dalam lapisan yang tidak dijangka**Punca**: Keutamaan lapisan daripada imej sebelumnya dibawa ke hadapan, tetapi lapisan itu tidak wujud pada imej semasa**Penyelesaian**: Chloros secara automatik kembali ke JPG apabila lapisan pilihan tidak tersedia - ini adalah tingkah laku biasa
+**Masalah**: Imej dibuka dalam lapisan yang tidak dijangka**Punca**: Pilihan lapisan daripada imej sebelumnya dibawa ke hadapan, tetapi lapisan itu tidak wujud pada imej semasa**Penyelesaian**: Chloros secara automatik kembali ke JPG apabila lapisan pilihan tidak tersedia - ini adalah tingkah laku biasa
 
 ### Tidak Dapat Melihat Sasaran Penentukuran
 

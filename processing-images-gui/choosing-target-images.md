@@ -18,7 +18,7 @@ Tanpa menandakan imej sasaran, Chloros mesti:
 
 Apabila anda menyemak lajur Sasaran untuk imej tertentu:
 
-* Chloros hanya mengimbas imej yang diperiksa untuk mencari sasaran
+* Chloros hanya mengimbas imej yang diperiksa untuk sasaran
 * Pengesanan sasaran selesai dengan lebih cepat
 * Keseluruhan masa pemprosesan sangat dikurangkan
 
@@ -32,7 +32,7 @@ Apabila anda menyemak lajur Sasaran untuk imej tertentu:
 
 ### Langkah 1: Kenal pasti Imej Sasaran Anda
 
-Lihat imej anda yang diimport dalam Pelayar Fail dan kenal pasti imej yang mengandungi sasaran penentukuran.
+Semak imej anda yang diimport dalam Pelayar Fail dan kenal pasti imej yang mengandungi sasaran penentukuran.
 
 **Senario biasa:*** **Sasaran pra-tangkap**: Ditangkap sebelum memulakan sesi
 * **Sasaran selepas tangkapan**: Ditangkap selepas melengkapkan sesi
@@ -84,7 +84,7 @@ Sebelum memproses, semak semula:
 
 * Pastikan panel sasaran bersih dan kering
 * Kesemua 4 panel hendaklah kelihatan jelas dan tidak terhalang
-* Sasarkan serenjang/nadir ke sumber cahaya jika boleh
+* Sasar berserenjang/nadir ke sumber cahaya jika boleh
 
 ### Berapa Banyak Imej Sasaran?
 
@@ -170,8 +170,8 @@ Jika Chloros tidak mengesan sasaran anda dengan betul, laraskan tetapan ini dala
 Sebelum memulakan pemprosesan, sahkan pemilihan imej sasaran anda:
 
 * [ ] Sekurang-kurangnya 1 imej sasaran ditanda setiap sesi
-* [ ] Kotak pilihan lajur sasaran ditandakan untuk semua imej sasaran
-* [ ] Imej sasaran ditangkap dalam tempoh masa yang sama seperti tinjauan
+* [ ] Kotak semak lajur sasaran ditandakan untuk semua imej sasaran
+* [ ] Imej sasaran ditangkap dalam jangka masa yang sama seperti tinjauan
 * [ ] Sasaran kelihatan jelas dalam pratonton apabila diklik
 * [ ] Kesemua 4 panel penentukuran kelihatan dalam setiap imej sasaran
 * [ ] Tiada bayang-bayang atau halangan pada sasaran
@@ -190,7 +190,7 @@ Walaupun tidak disyorkan untuk kerja saintifik, anda boleh memproses tanpa sasar
 3. Pembetulan vignet masih akan digunakan
 4. Output tidak akan ditentukur untuk pemantulan mutlak
 
-{% gaya petunjuk="amaran" %}
+{% hint style="warning" %}
 **Tidak Disyorkan**: Tanpa penentukuran pantulan, nilai piksel mewakili kecerahan relatif sahaja, bukan ukuran pantulan saintifik. Gunakan sasaran penentukuran untuk hasil yang tepat dan boleh berulang.
 {% endhint %}
 

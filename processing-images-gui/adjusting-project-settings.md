@@ -100,7 +100,7 @@ Mengawal format dan kualiti fail output.
 * **PNG (8-bit)**: Mampatan tanpa rugi untuk visualisasi (julat 0-255)
 * **JPG (8-bit)**: Fail terkecil, mampatan lossy (julat 0-255)***
 
-## Menyimpan dan Memuatkan Tetapan
+## Tetapan Menyimpan dan Memuatkan
 
 ### Simpan Templat Projek
 
@@ -156,7 +156,7 @@ Jika menggunakan perakam MAPIR DAQ dengan GPS untuk geolokasi yang tepat:
 2. Dalam Tetapan Projek, dayakan kotak pilihan **"Gunakan pembetulan PPK"**
 
 3. Tetapkan**"Zon waktu penderia cahaya mengimbangi"** jika perlu (lalai: 0 untuk UTC)
-4. Tetapkan kamera kepada pin pendedahan:
+4. Tetapkan kamera pada pin pendedahan:
    * **Kamera tunggal**: Ditugaskan secara automatik kepada Pin 1
    * **Kamera dwi**: Tetapkan setiap kamera secara manual untuk membetulkan pin**Tugas Pin Pendedahan:*** **Pin Pendedahan 1**: Pilih model kamera daripada lungsur turun
 * **Pin Pendedahan 2**: Pilih kamera kedua atau "Jangan Gunakan"
@@ -183,7 +183,7 @@ Apabila memproses imej daripada berbilang kamera MAPIR dalam satu projek:
 
 ### Tinjauan Selang Masa atau Berbilang Tarikh
 
-Untuk tinjauan berulang di kawasan yang sama dari semasa ke semasa:
+Untuk tinjauan berulang di kawasan yang sama dari masa ke masa:
 
 1. Buat templat dengan tetapan standard anda
 2. Gunakan persediaan sasaran penentukuran yang konsisten setiap sesi

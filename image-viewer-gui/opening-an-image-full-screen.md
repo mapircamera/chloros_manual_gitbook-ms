@@ -119,7 +119,7 @@ Gunakan indeks berbilang spektrum dan Jadual Carian berwarna:
 4. Gunakan kecerunan LUT warna untuk visualisasi
 5. Laraskan julat nilai dan ambang
 
-Lihat [Kotak Pasir Indeks/LUT](index-lut-sandbox.md) untuk arahan terperinci.
+Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk mendapatkan arahan terperinci.
 
 ***
 
@@ -143,7 +143,7 @@ Lihat [Kotak Pasir Indeks/LUT](index-lut-sandbox.md) untuk arahan terperinci.
 Semak bahawa indeks dikira dengan betul:
 
 1. Buka NDVI atau imej indeks lain
-2. Periksa kawasan tumbuh-tumbuhan:
+2. Semak kawasan tumbuh-tumbuhan:
    * **NDVI**: Harus menunjukkan 0.4-0.9 untuk tumbuhan yang sihat
    * **NDRE**: Nilai yang lebih tinggi untuk pertumbuhan yang cergas
    * **GNDVI**: Serupa dengan NDVI tetapi sensitif terhadap klorofil

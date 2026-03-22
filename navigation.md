@@ -8,23 +8,36 @@ Dari kiri ke kanan pengepala atas mengandungi:
 
 ### <img src=".gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line"> Menu Utama
 
-Dari menu utama anda boleh memulakan projek baharu, membuka projek sedia ada atau membuka folder projek.
+<figure><img src=".gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+
+Dari menu utama anda boleh:
+
+* **Projek Baharu** — buat projek baharu
+* **Projek Buka** — buka projek sedia ada
+* **Buka Folder Projek** — buka folder projek dalam penjelajah fail anda
+* **Tambah Fail** — tambah fail imej individu pada projek semasa _(kelihatan selepas projek dibuka)_
+* **Tambah Folder** — tambah folder imej pada projek semasa _(kelihatan selepas projek dibuka)_
+* **Mula Pemprosesan / Hentikan Pemprosesan** — mulakan atau hentikan saluran paip pemprosesan imej _(didayakan selepas fail ditambah)_
+
+{% hint style="info" %}
+**Windows sahaja**: GUI Desktop Chloros tersedia pada Windows. Pengguna Linux harus melihat dokumentasi [CLI](CLI.md) dan [Python SDK](api-python-sdk.md) untuk pemprosesan tanpa kepala.
+{% endhint %}
 
 ### <img src=".gitbook/assets/image (2) (1).png" alt="" data-size="line"> Butang Main/Mula
 
 Apabila didayakan, butang mula memproses memulakan saluran paip pemprosesan imej.
 
-### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Bar Kemajuan <img src=".gitbook/assets/image (5).png" alt="" data-size="line">
+### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Bar Kemajuan <img src=".gitbook/assets/image (5).png" alt="" XPROTX000>014XPROTX000>014XPROTX
 
 Dalam mod Chloros percuma, yang memproses semua fail secara berurutan, bar kemajuan akan menunjukkan 2 peringkat: Pengesanan Sasaran dan Pemprosesan.
 
-Dalam mod berlesen Chloros+ berbayar, yang memproses semua fail secara serentak, bar kemajuan menunjukkan 4 peringkat: Mengesan, Menganalisis, Menentukur, Mengeksport. Jika anda menuding kursor tetikus anda pada bar kemajuan Chloros+, ia akan menurunkan panel 4 bar kemajuan yang dilanjutkan supaya anda boleh mengikutinya. Mengklik bar kemajuan atas akan membekukan panel lungsur, mengklik sekali lagi menyahbekukannya.
+Dalam mod berlesen Chloros+ berbayar, yang memproses semua fail serentak, bar kemajuan menunjukkan 4 peringkat: Mengesan, Menganalisis, Menentukur, Mengeksport. Jika anda menuding kursor tetikus anda pada bar kemajuan Chloros+, ia akan menurunkan panel 4 bar kemajuan yang dilanjutkan supaya anda boleh mengikutinya. Mengklik bar kemajuan atas akan membekukan panel lungsur, mengklik sekali lagi menyahbekukannya.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 
 ## Menu Sampingan
 
-Menu bar sisi kiri mengandungi pelbagai ikon untuk berinteraksi:
+Menu bar sisi kiri mengandungi pelbagai ikon untuk berinteraksi dengan:
 
 #### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Tetapan Projek](project-settings/project-settings.md)
 

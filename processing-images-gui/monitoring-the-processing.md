@@ -21,7 +21,7 @@ Untuk pengguna tanpa lesen Chloros+:
 
 ### Chloros+ Bar Kemajuan
 
-Untuk pengguna dengan lesen Chloros+:
+Untuk pengguna yang mempunyai lesen Chloros+:
 
 **Paparan Kemajuan 4 Peringkat:**
 
@@ -37,11 +37,15 @@ Untuk pengguna dengan lesen Chloros+:
 
 ## Memahami Setiap Peringkat Pemprosesan
 
+{% hint style="info" %}
+**Senibina Saluran Paip**: 4 peringkat GUI ini sepadan dengan [talian paip pemprosesan 4-benang](../processing-architecture/processing-pipeline.md). Pada sistem dengan pecutan GPU, Thread 3 (Calibrating) mendapat manfaat daripada [Dynamic Compute Adaptation](../processing-architecture/dynamic-compute-adaptation.md) yang mengoptimumkan pemprosesan untuk perkakasan khusus anda.
+{% endhint %}
+
 ### Peringkat 1: Pengesanan (Pengesanan Sasaran)
 
 **Apa yang berlaku:**
 
-* Chloros mengimbas imej yang ditanda dengan kotak semak Sasaran
+* Chloros mengimbas imej yang ditanda dengan kotak pilihan Sasaran
 * Algoritma penglihatan komputer mengenal pasti 4 panel penentukuran
 * Nilai pantulan diekstrak daripada setiap panel
 * Cap masa sasaran direkodkan untuk penjadualan penentukuran yang betul
@@ -67,7 +71,7 @@ Untuk pengguna dengan lesen Chloros+:
 
 **Apa yang berlaku:**
 
-* Membaca metadata EXIF ​​imej (cap masa, tetapan pendedahan)
+* Membaca metadata EXIF imej (cap masa, tetapan pendedahan)
 * Menentukan strategi penentukuran berdasarkan cap masa sasaran
 * Mengadakan baris gilir pemprosesan imej
 * Menyediakan pekerja pemprosesan selari (Chloros+ sahaja)
@@ -304,7 +308,7 @@ Hentikan pemprosesan jika anda melihat:
 
 ***
 
-## Penyelesaian Masalah Semasa Pemprosesan
+## Menyelesaikan Masalah Semasa Pemprosesan
 
 ### Pemprosesan Sangat Lambat
 
@@ -371,4 +375,4 @@ Setelah pemprosesan selesai:
 3. **Semak Log Nyahpepijat** - Semak sebarang amaran atau ralat
 4. **Pratonton imej yang diproses** - Gunakan Pemapar Imej atau perisian luaran
 
-Untuk mendapatkan maklumat tentang menyemak dan menggunakan hasil yang diproses anda, lihat [Menyelesaikan Pemprosesan](finishing-the-processing.md).
+Untuk mendapatkan maklumat tentang menyemak dan menggunakan hasil proses anda, lihat [Menyiapkan Pemprosesan](finishing-the-processing.md).

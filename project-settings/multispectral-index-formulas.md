@@ -10,7 +10,7 @@ metaLinks:
 
 Formula indeks di bawah menggunakan gabungan julat penghantaran purata penapis Survey3:
 
-<table><thead><tr><th align="center">Survey3 Warna Penapis</th><th width="196.199951171875" align="center">Survey3 Nama Penapis</th><th width="159.8001048828Julat Transmisi" (FWHM)</th><th align="center">Purata Penghantaran</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - XPROTX00009d8 align="center">468-483nm</td><td align="center">475nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- XPROTX00011t4 align="center">476-512nm</td><td align="center">494nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558nm</td><td align="center">547nm</td></tr><tr><td align="center">Oranged</td><td align="center">OCN - Orange</td><td align="center">598-640nm</td><td align="center">619nm</td></tr><tr><td align="center">XPROXt><PROTXd align="center">RGN - Red</td><td align="center">653-668nm</td><td align="center">661nm</td></tr><tr><td align="center">XPROXt><tdPROTX000109 align="center">Re - RedEdge</td><td align="center">712-735nm</td><td align="center">724nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798-848nm</td><td align="center">823nm</td></tr><tr><td align="center">XPROTX00010td6 align="center">RGN | NGB | NIR - NIR2</td><td align="center">835-865nm</td><td align="center">850nm</td></tr></tbody></table>
+<table><thead><tr><th align="center">Survey3 Warna Penapis</th><th width="196.199951171875" align="center">Survey3 Nama Penapis</th><th width="159.8001048828Julat Transmisi" (FWHM)</th><th align="center">Purata Penghantaran</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - XPROTX00009d8 align="center">468-483nm</td><td align="center">475nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- XPROTX00011t4 align="center">476-512nm</td><td align="center">494nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558nm</td><td align="center">547nm</td></tr><tr><td align="center">Oranged</td><td align="center">OCN - Orange</td><td align="center">598-640nm</td><td align="center">619nm</td></tr><tr><td align="center">XPROXt><PROTXd align="center">RGN - Red</td><td align="center">653-668nm</td><td align="center">661nm</td></tr><tr><td align="center">XPROXt><td align="center">XPROXt><td align="center">XPROXt><td align="center" RedEdge</td><td align="center">712-735nm</td><td align="center">724nm</td></tr><tr><td align="center">NIR1</td><td align="PROTX00" -XPRO22Xcenter NIR1</td><td align="center">798-848nm</td><td align="center">823nm</td></tr><tr><td align="center">NIR2</td><td align="PROTX00" | NGB | NIR - NIR2</td><td align="center">835-865nm</td><td align="center">850nm</td></tr></tbody></table>
 
 Apabila formula ini digunakan nama mungkin berakhir dengan "\_1" atau "\_2", yang sepadan dengan penapis NIR, sama ada NIR1 atau NIR2 digunakan.
 
@@ -78,7 +78,7 @@ _Rujukan: Pinty, B., dan M. Verstraete. GEMI: Indeks Bukan Linear untuk Memantau
 
 ## GARI - Green Indeks Tahan Atmosfera
 
-Indeks ini lebih sensitif kepada julat luas kepekatan klorofil dan kurang sensitif terhadap kesan atmosfera berbanding NDVI.
+Indeks ini lebih sensitif kepada julat luas kepekatan klorofil dan kurang sensitif kepada kesan atmosfera berbanding NDVI.
 
 $$
 GARI = {NIR - [Green - \gamma(Blue - Red)] \over NIR + [Green - \gamma(Blue - Red)]   }
@@ -212,7 +212,7 @@ _Rujukan: Yang, Z., P. Willis, dan R. Mueller. "Kesan Imej AWIFS Dipertingkat Ni
 
 ## MSAVI2 - Indeks Tumbuhan Terlaras Tanah Ubahsuai 2
 
-Indeks ini ialah versi yang lebih ringkas bagi indeks MSAVI yang dicadangkan oleh Qi, et al (1994), yang menambah baik daripada Indeks Tumbuhan Terlaras Tanah (SAVI). Ia mengurangkan bunyi tanah dan meningkatkan julat dinamik isyarat tumbuh-tumbuhan. MSAVI2 adalah berdasarkan kaedah induktif yang tidak menggunakan nilai _L_ malar (seperti SAVI) untuk menyerlahkan tumbuh-tumbuhan yang sihat.
+Indeks ini ialah versi yang lebih ringkas bagi indeks MSAVI yang dicadangkan oleh Qi, et al (1994), yang menambah baik pada Indeks Tumbuhan Terlaras Tanah (SAVI). Ia mengurangkan bunyi tanah dan meningkatkan julat dinamik isyarat tumbuh-tumbuhan. MSAVI2 adalah berdasarkan kaedah induktif yang tidak menggunakan nilai _L_ malar (seperti SAVI) untuk menyerlahkan tumbuh-tumbuhan yang sihat.
 
 $$
 MSAVI2 = {2 * NIR + 1 - \sqrt{(2 * NIR + 1)^{2} - 8(NIR - Red)} \over 2}
@@ -320,7 +320,7 @@ _Rujukan: Gitelson, A., et al. "Tumbuhan dan Garisan Tanah dalam Ruang Spektrum 
 
 ## WDRVI - Indeks Tumbuhan Julat Dinamik Luas
 
-Indeks ini serupa dengan NDVI, tetapi ia menggunakan pekali pemberat (_a_) untuk mengurangkan jurang perbezaan antara sumbangan isyarat inframerah dekat dan merah kepada NDVI. WDRVI amat berkesan dalam adegan yang mempunyai ketumpatan tumbuh-tumbuhan sederhana hingga tinggi apabila NDVI melebihi 0.6. NDVI cenderung mendatar apabila pecahan tumbuh-tumbuhan dan indeks kawasan daun (LAI) meningkat, manakala WDRVI lebih sensitif kepada julat pecahan tumbuh-tumbuhan yang lebih luas dan kepada perubahan dalam LAI.
+Indeks ini serupa dengan NDVI, tetapi ia menggunakan pekali pemberat (_a_) untuk mengurangkan jurang perbezaan antara sumbangan isyarat inframerah dekat dan merah kepada NDVI. WDRVI amat berkesan dalam adegan yang mempunyai kepadatan tumbuh-tumbuhan sederhana hingga tinggi apabila NDVI melebihi 0.6. NDVI cenderung mendatar apabila pecahan tumbuh-tumbuhan dan indeks kawasan daun (LAI) meningkat, manakala WDRVI lebih sensitif kepada julat pecahan tumbuh-tumbuhan yang lebih luas dan kepada perubahan dalam LAI.
 
 $$
 WDRVI = {(\alpha * NIR- Red) \over (\alpha * NIR + Red)}

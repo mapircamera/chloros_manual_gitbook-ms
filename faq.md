@@ -70,3 +70,49 @@ Jika anda bercadang untuk memuat naik ke platform pemprosesan dalam talian kami 
 Kami sentiasa berminat untuk menerima maklum balas mengenai produk kami. Jika anda menemui masalah dengan produk kami, atau mempunyai cadangan tentang cara kami boleh menambah baik produk kami, sila [HUBUNGI KAMI](https://www.mapir.camera/community/contact) untuk berkongsi pendapat anda. Kebanyakan R\&D kami dipandu dengan mendengar keperluan terbesar pelanggan kami.
 
 </detail>
+
+<butiran>
+
+<summary>Adakah Chloros tersedia untuk Linux?</summary>
+
+Ya! Chloros 1.1.0 menyokong Linux amd64 (x86\_64) dan arm64 (NVIDIA Jetson JetPack 6) melalui pakej `.deb`. CLI dan Python SDK disokong sepenuhnya pada Linux. Tiada GUI untuk Linux — semua interaksi adalah melalui [CLI](CLI.md) atau [Python SDK](api-python-sdk.md). Lihat [Linux Overview](linux/linux-overview.md) untuk butiran.
+
+</detail>
+
+<butiran>
+
+<summary>Bolehkah saya menjalankan Chloros pada NVIDIA Jetson?</summary>
+
+Ya! Chloros 1.1.0 menyokong platform NVIDIA Jetson termasuk Jetson Nano, Orin Nano, Orin NX dan AGX Orin yang menjalankan JetPack 6. Chloros secara automatik mengesan model Jetson anda dan mengoptimumkan strategi pemprosesannya. Lihat [Panduan NVIDIA Jetson](linux/nvidia-jetson-guide.md) untuk arahan persediaan dan penggunaan.
+
+</detail>
+
+<butiran>
+
+<summary>Adakah Chloros mengoptimumkan secara automatik untuk perkakasan saya?</summary>
+
+Ya! Chloros 1.1.0 termasuk [Penyesuaian Pengiraan Dinamik](processing-architecture/dynamic-compute-adaptation.md) yang mengesan secara automatik penderia terma CPU, GPU, RAM dan (pada Jetson) anda. Ia kemudian memilih strategi pemprosesan yang optimum — daripada `GPU_PARALLEL` pada sistem memori tinggi kepada `GPU_SINGLE` pada peranti terhalang kepada `CPU_PARALLEL` pada sistem tanpa GPU NVIDIA. Tiada konfigurasi manual diperlukan.
+
+</detail>
+
+<butiran>
+
+<summary>Apakah saluran paip pemprosesan 4-benang?</summary>
+
+Chloros 1.1.0 menggunakan seni bina saluran paip 4-benang untuk pengguna Chloros+: Thread 1 (Pengesanan) memuatkan imej dan mengesan sasaran penentukuran, Thread 2 (Calibration) mengira penentukuran pantulan, Benang 3 (Pemprosesan) melakukan penentukuran dan pecutan GPU4 (Eksport) menulis fail output. Berbilang imej boleh berada dalam urutan yang berbeza serentak untuk daya pemprosesan maksimum. Lihat [Processing Pipeline](processing-architecture/processing-pipeline.md) untuk butiran.
+
+</detail>
+
+<butiran>
+
+<summary>Bagaimana cara saya menjalankan diagnostik pada pemasangan Chloros saya?</summary>
+
+Gunakan arahan `selftest` untuk menjalankan 7 diagnostik sistem termasuk semakan versi, ketersediaan port, permulaan bahagian belakang, sambungan API, maklumat sistem, model denoiser dan ketersediaan CUDA:
+
+```bash
+chloros-cli selftest
+```
+
+Ini amat berguna pada sistem Linux/Jetson untuk mengesahkan persediaan GPU dan CUDA.
+
+</detail>
