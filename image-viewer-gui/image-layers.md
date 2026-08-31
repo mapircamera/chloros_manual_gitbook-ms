@@ -1,333 +1,282 @@
 # Lapisan Imej
 
-Menu lungsur Lapisan Imej dalam Pemapar Imej Chloros membolehkan anda menukar dengan cepat antara versi berbeza imej yang sama - daripada tangkapan asal kepada output pemantulan yang diproses dan imej indeks yang dikira.
+**Senarai lungsur lapisan** di bahagian atas kanan Pemapar Imej menukar antara setiap versi imej yang anda lihat — daripada tangkapan sumber melalui setiap produk yang diproses hingga imej indeks yang dikira — tanpa meninggalkan pemapar.
 
-## Apakah itu Lapisan Imej?
+## Apakah Lapisan Imej?
 
-Dalam Chloros, **lapisan** merujuk kepada output imej berbeza yang tersedia untuk imej sumber tunggal. Apabila anda memproses imej, Chloros mencipta berbilang versi:
+&quot;Lapisan&quot; dalamChloros
 
-* **Imej asal** (Fail JPG dan RAW daripada kamera anda)
-* **Kalibrasi pantulan ditentukur** keluaran (jika penentukuran pantulan didayakan)
-* **Imej sasaran** (jika imej mengandungi sasaran penentukuran)
-* **Imej indeks** (NDVI, NDRE, GNDVI, dsb. jika indeks dikonfigurasikan)**Layer Selector dropdown** di bahagian atas sebelah kanan Pemapar Imej membolehkan anda bertukar serta-merta antara versi ini tanpa meninggalkan pemapar.***
+ialah satu **fail produk**yang didaftarkan terhadap satu imej sumber. Import memberikan anda fail sumber; pemprosesan menambah satu lapisan untuk setiap produk yang dihasilkan oleh larian. Fail yang dieksport mengekalkan nama fail sumber — adalah**folder** yang mengenal pasti produk, dan nama lapisan adalah labelChloros
 
-## Jenis Lapisan Tersedia
+untuk folder tersebut.
 
-### JPG
+<!-- SCREENSHOT-NEEDED: Image Viewer full screen with the layer dropdown open on a processed LATTICE multispectral image, showing the full list: TIFF base, RAW (Original), RAW (Debayered), RAW (Preview), RAW (Radiance), RAW (Reflectance), and one RAW (NDVI Index) entry. -->
 
-* Imej pratonton JPG asal daripada kamera anda
-* Sentiasa tersedia untuk semua imej
-* Tidak diproses, seperti yang ditangkap oleh kamera
-* Paling cepat untuk dimuatkan dan dipaparkan
+***
 
-**Bila untuk melihat:**
+## Senarai lapisan
 
-* Pratonton pantas tangkapan asal
-* Menyemak komposisi imej dan pembingkaian
-* Mengesahkan kualiti tangkapan sebelum diproses
+### Sentiasa ada
 
-### RAW (Asal)
+| Lapisan | Apa itu |
+| --- | --- |
+| **JPG**(atau**PNG
 
-* Data sensor RAW asal daripada kamera anda
-* Debayered tanpa pemprosesan pos digunakan
-* Kedalaman bit yang lebih tinggi daripada JPG (biasanya data penderia 12-bit atau 14-bit)
+**/**TIFF
 
-**Bila untuk melihat:**
+**) | Fail asas yang disertakan dengan tangkapan. ImportSurvey3
 
-* Memeriksa kualiti data sensor asal
-* Menyemak isu atau artifak penderia
-* Membandingkan keputusan sebelum/selepas pemprosesan
+mengimport `.JPG` di sebelah setiap `.RAW`; tangkapan LATTICE membawa pratonton paparanPNG
 
-### RAW (Sasaran)
+atauTIFF
 
-* Hanya muncul untuk imej yang dikenal pasti mengandungi sasaran penentukuran
-* Menunjukkan imej RAW asal dengan sasaran dikesan
-* Digunakan untuk mengesahkan pengesanan sasaran berjaya
+. Dilabel mengikut apa yang sebenarnya diimport |
+| **RAW (Asli)** | Rangka mentah sumber, telah menjalani debayering untuk paparan tanpa sebarang pembetulan. Tersedia sejak saat diimport — tidak memerlukan pemprosesan |
 
-**Bila untuk melihat:**
+Satu tangkapan LATTICE yang fail asasnya **ialah** bingkai mentahnya tidak mempunyai entri asas berasingan: `RAW (Original)` sudah merangkuminya.
 
-* Mengesahkan sasaran penentukuran telah dikesan dengan betul
-* Menyemak kualiti imej sasaran
-* Menyelesaikan masalah penentukuran
+### Produk pemprosesanSurvey3
+
+
+
+| Lapisan | Ditulis ke | Wujud apabila |
+| --- | --- | --- |
+| **RAW (Sasaran)** | — | Bingkai dikenal pasti mengandungi sasaran penentukuran |
+| **RAW (Refleksan)** | `Reflectance_Calibrated_Images/` | Penentukuran refleksan berjaya dijalankan pada bingkai ini |
+| **Betul Vignette**| `Vignette_Corrected_Images/` | Bingkai tidak dapat dikalibrasi reflektansi**dan** *pembetulan Vignette* diaktifkan |
+| **Respon Sensor**| `Sensor_Response_Images/` | Bingkai tidak dapat dikalibrasi reflektansi**dan** *pembetulan Vignette* dimatikan |
+| **Imbangan Putih** | `White_Balanced_Images/` | Satu produk imbangan putih telah ditulis |
 
 {% hint style="info" %}
-**Lapisan Sasaran**: Lapisan ini hanya muncul dalam lungsur turun untuk imej yang mengandungi sasaran penentukuran. Imej tangkapan biasa tidak akan mempunyai pilihan ini.
+**Pembetulan Vignette dan Tindak Balas Sensor adalah alternatif, bukan kedua-duanya.** Hanya satu produk sandaran tidak dikalibrasi wujud bagi setiap larian, untuk setiap model kamera, dan suis *Pembetulan Vignette* memilih yang mana satu. Lihat [Tetapan Projek](../project-settings/project-settings.md).
 {% endhint %}
 
-### RAW (Pantulan)
+### Tahap LATTICE
 
-* Imej keluaran pemantulan yang ditentukur
-* Vignette diperbetulkan (jika didayakan dalam pemprosesan)
-* Pantulan ditentukur menggunakan data sasaran (jika didayakan)
-* TIFF berbilang jalur dengan semua saluran kamera
-* Nilai piksel mewakili pantulan peratus (apabila menggunakan mod peratus)
-* Sedia untuk memanipulasi dengan [Index/LUT Sandbox](index-lut-sandbox.md)
+LATTICE menangkap fan out ke dalam tahap-tahap ini dalam satu pas pemprosesan. Tahap yang wujud bergantung pada suis eksport bagi setiap produk dalam Tetapan Projek dan pada apa yang terpakai kepada kamera.
 
-**Bila untuk melihat:**
+| Lapisan | Ditulis ke | Terpakai kepada |
+| --- | --- | --- |
+| **RAW (Debayered)** | `Debayered_Images/` |RGB
 
-* Memeriksa keputusan yang ditentukur
-* Mengesahkan kualiti penentukuran
-* Menyemak nilai piksel untuk ketepatan saintifik
-* Membandingkan dengan asal untuk melihat kesan penentukuran
+dan multispektral |
+| **RAW (Prviakli)** | `Preview_Images/` | Multispektral (regangan warna palsu) |
+| **Imbangan Putih** | `Preview_Images/` |RGB
 
-{% hint style="success" %}
-**Disyorkan**: Gunakan lapisan RAW (Reflectance) apabila menyemak nilai piksel untuk pengukuran dan analisis saintifik.
+kamera induk — pratontonRGB
+
+didaftarkan di bawah nama ini supaya selari dengan lapisanSurvey3
+
+yang bernama sama |
+| **RAW (Radiance)** | `Radiance_Images/` | Multispektral sahaja |
+| **RAW (Refleksan)** | `Reflectance_Calibrated_Images/` | Multispektral sahaja, dan hanya apabila rekod sinaran ke bawah `.daq` yang sepadan atau sasaran dalam bingkai yang lulus QA menutupi bingkai |
+
+RGB
+
+kamera induk tidak mempunyai radiometri bagi setiap jalur, jadi radiasi dan pantulan diabaikan untuknya sebagai **tidak terpakai** — log menyatakan demikian dan bukannya gagal secara senyap.
+
+### Lapisan Indeks, LUT dan sandbox
+
+| Corak lapisan | Contoh | Asalnya dari |
+| --- | --- | --- |
+| **RAW (Indeks `<INDEX>`)** | `RAW (NDVI Index)` | Satu bagi setiap indeks yang dikonfigurasikan dalam Tetapan Projek, dikira semasa pemprosesan |
+| **`<INDEX>` LUT** | `NDVI LUT` | Versi peta warna bagi satu indeks |
+| **Sandbox (`<Name>` `<Index\|LUT>` `<NNN>`)** | `Sandbox (NDVI LUT 003)` | Satu bagi setiap larian eksport [Index/LUT Sandbox](index-lut-sandbox.md) |
+
+Jika nama indeks yang sama dikonfigurasikan lebih daripada sekali dengan tetapan berbeza, yang kedua dan seterusnya akan mendapat nombor dalam nama (`RAW (NDVI2 Index)`) supaya lapisan-lapisan tersebut masih dapat dibezakan.
+
+***
+
+## Menggunakan pemilih lapisan
+
+1. Buka imej pada skrin penuh dengan mengklik lakaran kecil dalam grid
+2. Klik **menu lungsur lapisan** di bahagian atas kanan pemapar
+3. Pilih lapisan — imej akan dikemas kini serta-merta
+
+Senarai lungsur meletakkan **JPG, RAW (Asal), RAW (Sasaran), RAW (Refleksan)** di tempat pertama, mengikut susunan itu, dan menyenaraikan semua yang lain selepasnya mengikut susunan produk didaftarkan.
+
+### Keutamaan lapisan semasa anda menavigasi
+
+Menekan **←**/**→** akan bergerak ke imej seterusnya dan cuba mengekalkan anda pada lapisan yang sama:
+
+1. **Padanan tepat dahulu** — jika imej seterusnya mempunyai lapisan dengan nama yang sama, anda akan mendapatkannya. Inilah yang mengekalkan anda pada `RAW (NDVI Index)` semasa menelusuri satu set keseluruhan
+2. **Kemudian padanan mengikut jenis** — lapisan indeks mencari mana-mana lapisan indeks, LUT untuk mana-mana LUT, pantulan untuk pantulan, sasaran untuk sasaran, asal untuk asal, asas untuk asas
+3. **Kemudian, untuk lapisan eksport sahaja** — nama dikekalkan walaupun senarai lapisan belum mengemas kini, kerana fail tersebut sudah wujud di cakera. Ini membolehkan anda menyemak produk semasa sesi pelaksanaan masih menulisnya.
+4. **Jika tidak** — lapisan pertama yang tersedia, yang biasanya adalah imej asas.
+
+Fail sidecar `.daq` dan `.csv` dalam projek diabaikan oleh navigasi kekunci anak panah, jadi langkah demi langkah melalui imej tidak akan berhenti pada rakaman penderia cahaya.
+
+Zoom dan pan turut dibawa ke imej seterusnya, yang memudahkan perbandingan sebelum/selepas pada kedudukan medan yang sama.
+
+***
+
+## Memahami nilai piksel mengikut lapisan
+
+Panel [Nilai Penunjuk](opening-an-image-full-screen.md#cursor-values) melaporkan nilai sebenar bagi setiap saluran di bawah penunjuk anda, dalam unit yang digunakan oleh lapisan tersebut. Ruang lajunya berubah mengikut lapisan:
+
+| Lapisan | Unit dilaporkan | Nota |
+| --- | --- | --- |
+| Asas (JPG /PNG
+
+/ pratontonTIFF
+
+) | DN, 0–255 | Nilai paparan, diperbetulkan gamma padaRGB
+
+. Pemeriksaan visual sahaja |
+| RAW (Asli) | DN | Nombor digital sensor mentah. Paksis histogram memberitahu anda kedalaman: 255 (8-bit), 4095 (12-bit) atau 65535 (16-bit) |
+| RAW (Debayered) | DN | Linear, tiada regangan paparan |
+| RAW (Prviu) / Imbangan Putih | DN | Paparan produk — diregangkan atau diperbetulkan gamma. Bukan untuk pengukuran |
+| RAW (Radiasi) | **W/m²/sr/nm** | Radiasi fizikal Float32. Tiada lajur DN |
+| RAW (Refleksansi) | DN **dan %** | Peratusan dikira dengan skala tersendiri fail tersebut — lihat di bawah |
+| Eksport Indeks / LUT / sandbox | Nilai indeks, atau komponenRGB
+
+| Fail indeks saluran tunggal melaporkan nilai indeks; fail LUT peta warna melaporkan komponenRed
+
+/Green
+
+/Blue
+
+|
+
+### Reflektan: skala adalah setiap fail
+
+{% hint style="warning" %}
+**&quot;Bahagi dengan 65,535&quot; hanya betul untukSurvey3
+
+.** Reflektansi LATTICE disimpan pada skala yang berbeza, dan mencampurkan kedua-dua pembahagi adalah cara paling biasa untuk mendapatkan nilai reflektansi yang tepat separuh daripada nilai sebenar.
 {% endhint %}
 
-### RAW (NDVI Index)... dan seumpamanya
+| Sumber | DN yang sama dengan pantulan 1.0 | Dikenal pasti oleh |
+| --- | --- | --- |
+| **LATTICE**(M3C / M3M) |**32768** | Tag XMP `Chloros:PixelScale=32768` yang dicop ke dalam setiap eksport pantulan LATTICE. Ruang lebih 2× bermaksud ρ di atas 1.0 boleh diwakili dan bukannya dipotong |
+| **Survey3**| **65535** | Tiada tag skala XMPChloros
 
-* Imej indeks tumbuh-tumbuhan yang dikira (NDVI dalam contoh ini)
-* Nama indeks berubah berdasarkan indeks yang telah dikonfigurasikan semasa pemprosesan
-* Contoh: RAW (NDVI Index), RAW (NDRE Index), RAW (GNDVI Index), dsb.
-* Imej skala kelabu jalur tunggal yang menunjukkan hasil pengiraan indeks
-* Satu lapisan muncul untuk setiap indeks yang dikonfigurasikan dalam Tetapan Projek
+— penulisan kalibrasiSurvey3
 
-**Nama indeks yang mungkin:**
+menulis ρ × dtype-max dan memotong pada 1.0 |
 
-* MENTAH (Indeks NDVI)
-* MENTAH (Indeks NDRE)
-* MENTAH (Indeks GNDVI)
-* MENTAH (Indeks OSAVI)
-* MENTAH (Indeks EVI)
-* MENTAH (Indeks SAVI)
-* Dan banyak lagi... (lihat [Formula Indeks Berbilangspek](../project-settings/multispectral-index-formulas.md))
+Untuk GIS dan skrip: baca `Chloros:PixelScale` daripada fail dan bahagikannya. Jika tag tiada, fail itu adalah berskalaSurvey3
 
-**Bila untuk melihat:**
+(65535). Pemapar, kotak pasir indeks/LUT dan eksport indeks semua mentafsir skala dengan cara yang sama, jadi nombor yang anda baca pada penuding adalah nombor yang digunakan dalam matematik indeks.
 
-* Meneliti keputusan pengiraan indeks
-* Menyemak julat nilai indeks
-* Mengenal pasti bidang yang diminati
-* Mengesahkan imej indeks sebelum digunakan dalam GIS atau analisis
+Penyimpanan khusus format di atas skala itu:
 
-***
+* **TIFF
 
-## Menggunakan Pemilih Lapisan
+(32-bit, Peratus)** menyimpan DN / 65535 sebagai titik terapung
+* **PNG
 
-### Membuka Dropdown
+(8-bit)**dan**JPG (8-bit)** menyimpan DN × 255 / 65535
+* Eksport **TIFF
 
-1. Buka imej dalam mod skrin penuh (klik mana-mana lakaran kecil dalam Pemapar Imej)
-2. Cari **lapisan lungsur turun** di penjuru kanan sebelah atas pemapar
-3. Menu lungsur menunjukkan lapisan yang sedang dipilih (cth., "JPG")
-4. Klik menu lungsur untuk melihat semua lapisan yang tersedia
+8-bit daripada tangkapan sumber 8-bit** dipangkas kepada 0–255 dan bukannya diskala semula, dan sengaja tidak mempunyai tag skala. Panel mencetak DN hanya untuk fail-fail tersebut, tanpa lajur peratus
 
-### Menukar Lapisan
+### Julat nilai indeks
 
-1. Klik lungsur turun lapisan untuk membuka senarai
-2. Semua lapisan yang tersedia untuk imej semasa ditunjukkan
-3. Klik mana-mana nama lapisan untuk bertukar kepada versi itu
-4. Imej dikemas kini serta-merta untuk menunjukkan lapisan yang dipilih
+| Keluarga indeks | Julat tipikal | Bacaan |
+| --- | --- | --- |
+| Perbezaan normalisasi (NDVI
 
-**Penukaran pantas:**
+,GNDVI
 
-* Dropdown mengingati pilihan terakhir anda
-* Apabila menavigasi ke imej seterusnya, Chloros cuba untuk menunjukkan jenis lapisan yang sama
-* Jika lapisan itu tidak wujud pada imej seterusnya, ia lalai kepada JPG
+,NDRE
 
-### Ketersediaan Lapisan
+, ENDVI…) | −1 hingga +1 | Tumbuhan sihat biasanya 0.4–0.9; tanah terbukak hampir 0; air bernilai negatif |
+| Disesuaikan tanah (SAVI
 
-Tidak semua lapisan tersedia untuk setiap imej:
+,OSAVI
 
-**Sentiasa tersedia:*** ✅ JPG (setiap imej mempunyai pratonton JPG)
+, MSAVI2…) | lebih kurang −1 hingga +1.5 | Bacaan serupa denganNDVI
 
-**Tersedia dengan syarat:**
+dengan latar belakang tanah dipadamkan |
+| Peratusan (GRVI
 
-* ⚠️ RAW (Asal) - Hanya jika imej telah ditangkap dalam mod RAW atau RAW+JPG
-* ⚠️ RAW (Sasaran) - Hanya jika imej mengandungi sasaran penentukuran yang dikesan
-* ⚠️ RAW (Reflectance) - Hanya selepas pemprosesan dengan penentukuran pantulan didayakan
-* ⚠️ RAW (\[Index] Index) - Hanya selepas pemprosesan dengan indeks dikonfigurasikan
+,GCI
+
+, MSR, CIRE…) | tidak terhad ke atas | Peratusan meningkat tanpa had apabila pembilang bergerak ke arah sifar |
+|EVI
+
+/LAI
+
+| 0 hingga ~1, 0 hingga ~3.5 | Awan dan piksel tepu lain mendorong kedua-duanya keluar daripada julat — topengkan dahulu |
+
+Lihat [Formula Indeks Multispektral](../project-settings/multispectral-index-formulas.md) untuk formula tepat di sebalik setiap pratetap.
 
 ***
 
-## Kegigihan Lapisan
+## Aliran kerja biasa
 
-### Menavigasi Antara Imej
+### Perbandingan sebelum / selepas
 
-Apabila anda menavigasi ke imej lain (menggunakan kekunci anak panah atau mengklik lakaran kenit):**Pilihan lapisan dikekalkan:**
+1. Pilih **RAW (Asli)** dan perhatikan kesan vignetting dan nilai yang belum dikalibrasi
+2. Tukar kepada **RAW (Refleksan)**
 
-* Jika melihat "RAW (Reflectance)", imej seterusnya menunjukkan "RAW (Reflectance)" (jika ada)
-* Jika melihat "RAW (NDVI Index)", imej seterusnya menunjukkan "RAW (NDVI Index)" (jika ada)
-* Jika lapisan yang sama tidak wujud, lalai kepada JPG
+3. Bandingkan — penyingkiran vignetting, nilai telah dikalibrasi. Zum dan pan dikekalkan, jadi anda melihat kawasan yang sama
 
-**Contoh aliran kerja:**
+### Semak satu indeks merentasi satu set keseluruhan
 
-1. Buka Imej 1, tukar kepada RAW (NDVI Index)
-2. Tekan → untuk melihat Imej 2
-3. Imej 2 secara automatik memaparkan lapisan RAW (NDVI Index).
-4. Teruskan menavigasi - semua imej menunjukkan lapisan NDVI
-5. Sangat cekap untuk menyemak hasil indeks merentas banyak imej
+1. Buka imej pertama yang diproses dan pilih lapisan indeks
+2. Tekan **→** berulang kali — lapisan indeks mengikut anda dari satu imej ke imej lain
+3. Perhatikan histogram di bar sisi semasa anda menavigasi: bingkai yang pengagihan datanya melonjak patut diperiksa dengan lebih teliti
 
-***
+### Semak sasaran penentukuran
 
-## Aliran Kerja Biasa
+1. Pilih **RAW (Sasaran)** pada bingkai sasaran
+2. Pastikan sasaran dapat dilihat dengan jelas dan dikesan
+3. Beralih ke bingkai sasaran seterusnya — lapisan sasaran akan mengikutinya
 
-### Aliran Kerja 1: Sebelum/Selepas Perbandingan
+### Semak nilai pantulan untuk ketepatan
 
-**Matlamat**: Bandingkan imej asal berbanding imej yang ditentukur
+1. Pilih **RAW (Pantulan)**
 
-1. Buka imej yang diproses dalam Pemapar Imej
-2. Pilih **RAW (Asal)** daripada lungsur turun
-3. Perhatikan nilai vignetting dan tidak ditentukur
-4. Beralih kepada **RAW (Reflectance)** dari dropdown
-5. Bandingkan - vignetting dikeluarkan, nilai ditentukur
+2. Baca lajur**%** dalam panel Nilai Penunjuk — ia sudah diskalakan dengan betul untuk fail tersebut
+3. Semak logik terhadap bahan yang diketahui dalam bingkai: tumbuhan yang sihat mempunyai nilai pantulan yang tinggi dalam julat hijau (NIR
 
-### Aliran Kerja 2: Semakan Indeks
-
-**Matlamat**: Semak hasil NDVI merentas set data dengan pantas
-
-1. Buka imej pertama yang diproses
-2. Pilih **RAW (NDVI Index)** daripada menu lungsur
-3. Gunakan → kekunci anak panah untuk menavigasi ke imej seterusnya
-4. Lapisan NDVI berterusan secara automatik
-5. Teruskan melalui semua imej, semak corak NDVI
-6. Tukar kepada **RAW (NDRE Index)** untuk membandingkan
-
-### Aliran Kerja 3: Pengesahan Sasaran
-
-**Matlamat**: Sahkan semua imej sasaran telah dikesan dengan betul
-
-1. Navigasi ke imej sasaran
-2. Pilih **RAW (Sasaran)** daripada lungsur turun
-3. Sahkan sasaran penentukuran jelas kelihatan dan dikesan
-4. Navigasi ke imej sasaran seterusnya
-5. Ulang pengesahan untuk semua sasaran
-
-### Aliran Kerja 4: Pemeriksaan Nilai Piksel
-
-**Matlamat**: Semak nilai pantulan untuk ketepatan saintifik
-
-1. Buka imej yang diproses
-2. Pilih lapisan **RAW (Reflectance)**
-
-3. Dayakan mod**Peratus Piksel** (butang di bar alat sebelah kanan atas)
-4. Gerakkan kursor ke atas kawasan tumbuh-tumbuhan
-5. Sahkan nilai piksel berada dalam julat jangkaan (30-70% untuk NIR, 5-15% untuk Red)
-6. Periksa kawasan tanah dan air untuk nilai yang sesuai
+) dan rendah dalam julat merah; sasaran penentukuran sepatutnya menunjukkan bacaan yang hampir dengan nilai pantulan yang diterbitkan
 
 ***
 
-## Memahami Nilai Piksel mengikut Lapisan
+## Penyelesaian Masalah
 
-Lapisan yang berbeza menunjukkan julat nilai piksel yang berbeza:
+### Lapisan yang saya jangkakan tiada dalam senarai lungsur
 
-### Lapisan JPG
+**Punca yang mungkin**
 
-* **Julat**: 0-255 (8-bit)
-* **Maksud**: Nilai paparan, diperbetulkan gamma
-* **Penggunaan**: Pemeriksaan visual sahaja, bukan untuk pengukuran saintifik
+* Imej tidak pernah diproses — hanya base dan `RAW (Original)` wujud
+* Butang eksport produk tidak dicentang dalam Tetapan Projek
+* Produk tidak terpakai untuk kamera tersebut (radiasi dan pantulan pada tuan rumahRGB
 
-### RAW (Asal)
+; sebarang indeks pada kamera mono M3M jalur tunggal)
+* Kalibrasi reflektansi tiada data untuk diproses — tiada liputan sinaran bawah `.daq` dan tiada sasaran dalam bingkai yang lulus QA — jadi bingkai itu kembali kepada Betulkan Vignette atau Tindak Balas Sensor
 
-* **Julat**: 0-65535 (16-bit)
-* **Maksud**: Nombor digital penderia mentah
-* **Penggunaan**: Memeriksa prestasi penderia, tidak ditentukur
+**Apa yang perlu dilakukan**
 
-### RAW (Pantulan)
+1. Semak log larian:Chloros
 
-* **Julat**: 0-65,535 (16-bit TIFF) atau 0.0-1.0 (32-bit Peratus)
-* **Maksud**: Pemantulan peratusan yang ditentukur
-* **Kegunaan**: Pengukuran dan analisis saintifik**Untuk TIFF 16-bit:**Bahagikan sebanyak 65,535 untuk mendapatkan pemantulan peratus**Untuk Peratusan 32-bit:** Nilai secara langsung mewakili peratus (0.5 = 50% pemantulan)
+menyatakan bila produk eksport yang diminta tidak dapat dihasilkan dan sebabnya
+2. Semak suis eksport bagi setiap produk dalam [Seting Projek](../project-settings/project-settings.md)
+3. Sahkan folder produk wujud dalam pokok output projek
+4. Proses semula dengan produk diaktifkan
 
-### RAW (Imej Indeks)
+### Senarai lapisan kelihatan lapuk
 
-* **Julat**: Berbeza mengikut indeks (biasanya -1.0 hingga +1.0 untuk indeks ternormal)
-* **Maksud**: Hasil pengiraan indeks
-* **Contoh**:
-  * NDVI: -1 hingga +1 (tumbuhan biasanya 0.4 hingga 0.9)
-  * NDRE: -1 hingga +1 (pengesanan tekanan)
-  * EVI: 0 hingga 1 (tumbuh-tumbuhan yang dipertingkatkan)
+Chloros
 
-***
+mengimbas semula folder produk projek semasa proses berjalan dan membaiki pendaftaran lapisan yang hilang berdasarkan apa yang sebenarnya ada pada cakera, jadi lapisan yang telah selesai dieksport akan muncul bersendirian dalam tinjauan. Beralih dari imej dan kembali memaksa penyelesaian baru.
 
-## Petua dan Amalan Terbaik
+### Nilai pantulan kelihatan separuh daripada nilai sepatutnya
 
-### Penukaran Lapisan yang Cekap
+Anda hampir pasti membahagikan fail LATTICE dengan 65535. Gunakan `Chloros:PixelScale` (32768), atau baca lajur **%**, yang telah pun menerapkannya.
 
-* **Kesedaran pintasan papan kekunci**: Walaupun tiada pintasan papan kekunci untuk lapisan, anak panah navigasi (←/→) berfungsi merentas semua lapisan
-* **Aliran kerja yang konsisten**: Pilih satu lapisan (cth., NDVI) dan semak keseluruhan set data sebelum beralih kepada yang lain
-* **Perbandingan pantas**: Togol antara Original dan Reflectance untuk mengesahkan kualiti pemprosesan
+### Lapisan indeks wujud tetapi imejnya kosong
 
-### Pertimbangan Prestasi
-
-* **JPG dimuatkan paling cepat**: Gunakan untuk navigasi pantas melalui banyak imej
-* **Lapisan RAW dimuatkan lebih perlahan**: Peleraian yang lebih tinggi dan kedalaman bit
-* **Lapisan indeks**: Kelajuan yang sama dengan lapisan Reflectance
-* **Pemuatan pertama adalah paling perlahan**: Paparan seterusnya pada lapisan yang sama dicache dan lebih pantas
-
-### Pengesahan Kualiti
-
-* **Sentiasa semak RAW (Asal)**: Sahkan kualiti data sumber sebelum mempercayai output yang diproses
-* **Bandingkan lapisan**: Gunakan penukaran lapisan untuk mengesahkan pemprosesan berfungsi dengan betul
-* **Semak julat indeks**: Gunakan mod Peratusan Piksel dengan lapisan indeks untuk mengesahkan nilai adalah munasabah***
-
-## Menyelesaikan masalah
-
-### Lapisan Tidak Tersedia
-
-**Masalah**: Lapisan yang dijangkakan tidak muncul dalam lungsur turun**Punca yang mungkin:**
-
-* Imej tidak diproses (hanya JPG dan RAW (Asal) tersedia)
-* Penentukuran pantulan telah dilumpuhkan semasa pemprosesan
-* Indeks khusus tidak dikonfigurasikan dalam Tetapan Projek
-* Imej ialah imej sasaran sahaja (tiada indeks yang dihasilkan untuk sasaran)
-
-**Penyelesaian:**
-
-1. Sahkan imej telah diproses (semak folder output untuk fail yang diproses)
-2. Semak Tetapan Projek untuk mengesahkan indeks telah dikonfigurasikan
-3. Proses semula dengan indeks yang dikehendaki didayakan
-
-### Lapisan Salah Ditunjukkan
-
-**Masalah**: Imej dibuka dalam lapisan yang tidak dijangka**Punca**: Pilihan lapisan daripada imej sebelumnya dibawa ke hadapan, tetapi lapisan itu tidak wujud pada imej semasa**Penyelesaian**: Chloros secara automatik kembali ke JPG apabila lapisan pilihan tidak tersedia - ini adalah tingkah laku biasa
-
-### Tidak Dapat Melihat Sasaran Penentukuran
-
-**Masalah**: Lapisan RAW (Sasaran) tidak menunjukkan pengesanan sasaran**Punca yang mungkin:**
-
-* Sasaran tidak dikesan semasa pemprosesan
-* Imej sebenarnya tidak mengandungi sasaran
-* Tetapan pengesanan sasaran terlalu ketat
-
-**Penyelesaian:**
-
-1. Semak Log Nyahpepijat untuk mesej "Sasaran ditemui".
-2. Sahkan imej sebenarnya mengandungi sasaran penentukuran yang boleh dilihat
-3. Laraskan tetapan pengesanan sasaran dalam Tetapan Projek
-4. Lihat [Memilih Imej Sasaran](../processing-images-gui/choosing-target-images.md)
-
-***
-
-## Ciri-ciri Berkaitan
-
-### Alat Pemapar Imej
-
-Apabila melihat mana-mana lapisan, anda boleh menggunakan:
-
-* **Kawalan zum**: Besarkan untuk memeriksa butiran
-* **Sorot**: Klik dan seret untuk bergerak ke sekeliling imej yang dizum
-* **Pemeriksaan nilai piksel**: Lihat nilai di lokasi kursor
-* **Anak panah navigasi**: Beralih antara imej sambil mengekalkan lapisan
-* **Mod Peratusan Pixel**: Togol antara paparan DN dan peratus
-
-Lihat [Membuka Skrin Penuh Imej](opening-an-image-full-screen.md) untuk dokumentasi Pemapar Imej yang lengkap.
-
-### Kotak Pasir Indeks/LUT
-
-Untuk ujian dan visualisasi indeks interaktif:
-
-* **Pengiraan indeks masa nyata**: Uji formula indeks yang berbeza
-* **Pemetaan warna LUT**: Gunakan kecerunan warna pada indeks skala kelabu
-* **Export visualisasi**: Simpan imej indeks berwarna
-
-Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk butiran.
+Indeks memerlukan jalur yang tidak dimiliki oleh lapisan anda — contohnya indeks yang membaca saluran ketiga pada fail satu atau dua saluran. Tukar kepada lapisan berbilang-jalur (reflektan atau debayered), atau pilih indeks yang sesuai dengan penapis kamera.
 
 ***
 
 ## Langkah Seterusnya
 
-Sekarang anda memahami lapisan imej:
-
-* [**Membuka Skrin Penuh Imej**](opening-an-image-full-screen.md) - Panduan Lengkap Pemapar Imej
-* [**Kotak Pasir Indeks/LUT**](index-lut-sandbox.md) - Visualisasi indeks interaktif
-* [**Rumus Indeks Berbilangspek**](../project-settings/multispectral-index-formulas.md) - Rujukan indeks tersedia
-* [**Menyelesaikan Pemprosesan**](../processing-images-gui/finishing-the-processing.md) - Memahami output yang diproses
+* [**Membuka Imej Penuh Skrin**](opening-an-image-full-screen.md) — bacaan kursor, histogram dan kawalan GSD
+* [**Sandbox Indeks/LUT**](index-lut-sandbox.md) — visualisasi dan eksport indeks interaktif
+* [**Formula Indeks Multispektral**](../project-settings/multispectral-index-formulas.md) — rujukan indeks
+* [**Menyiapkan Pemprosesan**](../processing-images-gui/finishing-the-processing.md) — pokok folder output yang ditunjukkan oleh lapisan-lapisan ini

@@ -1,203 +1,230 @@
 # Memantau Pemprosesan
 
-Setelah pemprosesan dimulakan, Chloros menyediakan beberapa cara untuk memantau kemajuan, menyemak isu dan memahami perkara yang berlaku dengan set data anda. Halaman ini menerangkan cara menjejak pemprosesan anda dan mentafsir maklumat yang diberikan oleh Chloros.
+Setelah pemprosesan bermula,Chloros
+
+menyediakan beberapa cara untuk memantau kemajuan, menyemak isu, dan memahami apa yang berlaku dengan set data anda. Halaman ini menerangkan cara menjejaki pemprosesan anda dan mentafsir maklumat yang disediakan olehChloros
+
+.
 
 ## Gambaran Keseluruhan Bar Kemajuan
 
-Bar kemajuan dalam pengepala atas menunjukkan status pemprosesan masa nyata dan peratusan penyiapan.
+Bar kemajuan di tajuk utama bahagian atas memaparkan status pemprosesan masa nyata dan peratusan penyiapan. Kemajuan disiarkan secara langsung dari backend melalui Acara Hantar Pelayan (SSE), jadi bar tersebut mencerminkan apa yang sebenarnya dilakukan oleh saluran pemprosesan.
 
 ### Bar Kemajuan Mod Percuma
 
-Untuk pengguna tanpa lesen Chloros+:
+Untuk pengguna tanpa lesenChloros
 
-**Paparan Kemajuan 2 Peringkat:**
++:
 
-1.**Target Detect** - Mencari sasaran penentukuran dalam imej
-2. **Pemprosesan** - Menggunakan pembetulan dan mengeksport**Bar kemajuan menunjukkan:**
+**Paparan Kemajuan 2-Tahap:**
+
+1.**Pengesanan Sasaran** - Menemukan sasaran penentukuran dalam imej
+2. **Pemprosesan** - Mengaplikasikan pembetulan dan mengeksport**Bar kemajuan menunjukkan:**
 
 * Peratusan penyiapan keseluruhan (0-100%)
-* Nama pentas semasa
-* Penggambaran bar mendatar mudah
+* Nama peringkat semasa
+* Visualisasi bar mendatar ringkas
 
-### Chloros+ Bar Kemajuan
+### Bar KemajuanChloros
 
-Untuk pengguna yang mempunyai lesen Chloros+:
++
 
-**Paparan Kemajuan 4 Peringkat:**
+Untuk pengguna dengan lesenChloros
 
-1.**Mengesan** - Mencari sasaran penentukuran
-2. **Menganalisis** - Memeriksa imej dan menyediakan saluran paip
-3. **Menentukur** - Menggunakan pembetulan vignet dan pantulan
-4. **Mengeksport** - Menyimpan fail yang diproses**Ciri Interaktif:*** **Tuding pada** bar kemajuan untuk melihat panel 4 peringkat yang dikembangkan
-* **Klik** bar kemajuan untuk membekukan/pin panel yang dikembangkan
-* **Klik sekali lagi** untuk menyahbeku dan menyembunyikan secara automatik pada cuti tetikus
++:
+
+**Paparan Kemajuan 4-Peringkat:**
+
+1.**Mengesani** - Mencari sasaran penentukuran
+2. **Menganalisis** - Menyemak imej dan menyediakan saluran
+3. **Menentukurkan** - Mengaplikasikan pembetulan viniet dan pantulan
+4. **Mengeksport** - Menyimpan fail yang diproses**Ciri Interaktif:*** **Tudingkan tetikus** ke atas bar kemajuan untuk melihat panel 4-peringkat yang diperluas
+* **Klik** bar kemajuan untuk membekukan/menetap panel yang diperluas
+* **Klik sekali lagi** untuk membuka beku dan menyembunyikan secara automatik apabila tetikus dikeluarkan
 * Setiap peringkat menunjukkan kemajuan individu (0-100%)
+
+{% hint style="info" %}
+**ParitiCLI**: semasa pelaksanaan `chloros-cli process`, empat thread yang sama melaporkan sebagai Mengesan, Menganalisis, Pemprosesan, Pengeksportan, dan `chloros-cli export-status` memaparkan kemajuan eksport Thread-4 secara langsung daripada terminal lain. Lihat [RujukanCLI
+
+](../reference/cli-reference.md).
+{% endhint %}
 
 ***
 
-## Memahami Setiap Peringkat Pemprosesan
+## Memahami Setiap Tahap Pemprosesan
 
 {% hint style="info" %}
-**Senibina Saluran Paip**: 4 peringkat GUI ini sepadan dengan [talian paip pemprosesan 4-benang](../processing-architecture/processing-pipeline.md). Pada sistem dengan pecutan GPU, Thread 3 (Calibrating) mendapat manfaat daripada [Dynamic Compute Adaptation](../processing-architecture/dynamic-compute-adaptation.md) yang mengoptimumkan pemprosesan untuk perkakasan khusus anda.
+**Senibina Saluran**: 4 peringkat GUI ini sepadan dengan [saluran pemprosesan 4-benang](../processing-architecture/processing-pipeline.md). Pada sistem dengan pecutan GPU, Thread 3 (Kalibrasi) mendapat manfaat daripada [Penyesuaian Komputasi Dinamik](../processing-architecture/dynamic-compute-adaptation.md) yang mengoptimumkan pemprosesan untuk perkakasan khusus anda.
 {% endhint %}
 
-### Peringkat 1: Pengesanan (Pengesanan Sasaran)
+### Fasa 1: Pengesanan (Pengesanan Sasaran)
 
 **Apa yang berlaku:**
 
-* Chloros mengimbas imej yang ditanda dengan kotak pilihan Sasaran
-* Algoritma penglihatan komputer mengenal pasti 4 panel penentukuran
+*Chloros
+
+mengimbas imej yang anda semak dengan kotak semak Sasaran (semua imej hanya apabila tiada yang disemak)
+* Algoritma penglihatan komputer mengenal pasti panel penentukuran
 * Nilai pantulan diekstrak daripada setiap panel
 * Cap masa sasaran direkodkan untuk penjadualan penentukuran yang betul
 
 **Tempoh:**
 
-* Dengan sasaran yang ditanda: 10-60 saat
-* Tanpa sasaran yang ditanda: 5-30+ minit (mengimbas semua imej)
+* Dengan sasaran yang ditandakan: 10-60 saat
+* Tanpa sasaran yang ditandakan: 5-30+ minit (mengimbas semua imej)
 
 **Penunjuk kemajuan:**
 
 * Mengesan: 0% → 100%
-* Bilangan imej yang diimbas
-* Sasaran yang ditemui dikira
+* Bilangan imej yang diimbas (mengira hanya imej yang sebenarnya diimbas)
+* Bilangan sasaran yang ditemui
 
-**Perkara yang perlu diperhatikan:**
+**Apa yang perlu diperhatikan:**
 
-* Hendaklah selesai dengan cepat jika sasaran ditanda dengan betul
-* Jika mengambil masa terlalu lama, sasaran mungkin tidak ditanda
-* Semak Log Nyahpepijat untuk mesej "Sasaran ditemui".
+* Seharusnya selesai dengan cepat jika sasaran ditandakan dengan betul
+* Jika mengambil masa terlalu lama, mungkin sasaran tidak ditandakan
+* Semak Log Ralat untuk mesej &quot;Sasaran ditemui&quot;
 
-### Peringkat 2: Menganalisis
+### Fasa 2: Menganalisis
 
 **Apa yang berlaku:**
 
 * Membaca metadata EXIF imej (cap masa, tetapan pendedahan)
-* Menentukan strategi penentukuran berdasarkan cap masa sasaran
-* Mengadakan baris gilir pemprosesan imej
-* Menyediakan pekerja pemprosesan selari (Chloros+ sahaja)
+* Menentukan strategi penentukuran berdasarkan cap masa sasaran dan data DAQ downwelling yang tersedia
+* Mengatur barisan pemprosesan imej
+* Menyediakan pekerja pemprosesan selari (Chloros
+
++ sahaja)
 
 **Tempoh:** 5-30 saat**Penunjuk kemajuan:**
 
 * Menganalisis: 0% → 100%
-* Peringkat cepat, biasanya cepat selesai
+* Fasa pantas, biasanya selesai dengan cepat
 
-**Perkara yang perlu diperhatikan:**
+**Apa yang perlu diperhatikan:**
 
-* Hendaklah maju secara berterusan tanpa jeda
-* Amaran tentang kehilangan metadata akan muncul dalam Log Nyahpepijat
+* Seharusnya berkemajuan dengan mantap tanpa henti
+* Amaran tentang metadata yang hilang akan muncul dalam Log Ralat
 
-### Peringkat 3: Penentukuran
+### Fasa 3: Kalibrasi
 
-**Apa yang berlaku:*** **Debayering**: Menukar corak RAW Bayer kepada 3 saluran
-* **Pembetulan vignet**: Menanggalkan kegelapan tepi kanta
-* **Penentukuran pantulan**: Menormalkan dengan nilai sasaran
-* **Pengiraan indeks**: Mengira indeks berbilang spektrum
-* Memproses setiap imej melalui saluran paip penuh
+**Apa yang berlaku:*** **Debayering**: Menukar corak Bayer RAW kepada 3 saluran (dilangkau untuk modul mono LATTICE, dengan nota)
+* **Pembetulan Vignette**: Menghilangkan penggelapan di tepi lensa
+* **Kalibrasi reflektansi**: Menormalisasi dengan nilai sasaran dan/atau DAQ downwelling
+* **Pengiraan indeks**: Mengira indeks multispektral
+* Memproses setiap imej melalui keseluruhan saluran
 
-**Tempoh:** Majoriti jumlah masa pemprosesan (60-80%)**Penunjuk kemajuan:**
+**Tempoh:** Kebanyakan daripada jumlah masa pemprosesan (60-80%)**Penunjuk kemajuan:**
 
-* Penentukuran: 0% → 100%
-* Imej semasa sedang diproses
-* Imej selesai / Jumlah imej
+* Kalibrasi: 0% → 100%
+* Imej semasa diproses
+* Imej siap / Jumlah imej
 
-**Tingkah laku pemprosesan:*** **Mod percuma**: Memproses satu imej pada satu masa secara berurutan
-* **Chloros+ mod**: Memproses sehingga 16 imej serentak
-* **Pecutan GPU**: Mempercepatkan peringkat ini dengan ketara**Perkara yang perlu diperhatikan:**
+**Tingkah laku pemprosesan:*** **Mod bebas**: Memproses satu imej pada satu masa secara bersiri
+* **ModChloros
 
-* Kemajuan mantap melalui kiraan imej
-* Semak Log Nyahpepijat untuk mesej penyiapan setiap imej
++**: Menggunakan kolam pekerja yang menyesuaikan mengikut perkakasan — 1-4 pekerja serentak pada sistem GPU (mengikut VRAM), satu pekerja bagi setiap teras fizikal (dikurangkan satu) pada sistem CPU sahaja. Lihat [Penyesuaian Komputasi Dinamik](../processing-architecture/dynamic-compute-adaptation.md)
+* **Pecutan GPU**: Mempercepat peringkat ini dengan ketara**Apa yang perlu diperhatikan:**
+
+* Kemajuan yang sekata melalui kiraan imej
+* Semak Log Ralat untuk mesej penyempurnaan bagi setiap imej
 * Amaran tentang kualiti imej atau isu penentukuran
 
-### Peringkat 4: Mengeksport
+### Fasa 4: Eksport
 
 **Apa yang berlaku:**
 
-* Menulis imej yang ditentukur ke cakera dalam format yang dipilih
-* Mengeksport imej indeks berbilang spektrum dengan warna LUT
-* Mencipta subfolder model kamera
-* Mengekalkan nama fail asal dengan akhiran yang sesuai
+* Menulis imej yang diproses ke cakera dalam format yang dipilih, sebaik sahaja ia siap
+* **LATTICE**: setiap bingkai disalurkan ke setiap produk yang diaktifkan (debayered / pratonton / radiance / pantulan)
+* Mengeksport imej indeks multispektral dengan warna LUT
+* Mencipta pokok keluaran `<project>/<camera>/<format>/<Product>_Images/` — fail yang dieksport mengekalkan nama fail sumber; folder mengenal pasti produk
 
 **Tempoh:** 10-20% daripada jumlah masa pemprosesan**Penunjuk kemajuan:**
 
-* Mengeksport: 0% → 100%
+* Pengeksportan: 0% → 100%
 * Fail sedang ditulis
-* Format eksport dan destinasi
+* Format dan destinasi eksport
 
-**Perkara yang perlu diperhatikan:**
+**Apa yang perlu diperhatikan:**
 
 * Amaran ruang cakera
-* Ralat menulis fail
-* Penyiapan semua output yang dikonfigurasikan
+* Ralat penulisan fail
+* Penyempurnaan semua keluaran yang dikonfigurasikan
 
 ***
 
-## Tab Log Nyahpepijat
+## Tab Log Ralat
 
-Log Nyahpepijat menyediakan maklumat terperinci tentang kemajuan pemprosesan dan sebarang isu yang dihadapi.
+Log Ralat menyediakan maklumat terperinci tentang kemajuan pemprosesan dan sebarang isu yang dihadapi. Mesej permulaan backend juga dimainkan semula ke dalam konsol log, jadi log tersebut menceritakan keseluruhan cerita walaupun anda membukanya lewat.
 
-### Mengakses Log Nyahpepijat
+### Mengakses Log Ralat
 
-1. Klik ikon **Log Nyahpepijat** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> di bar sisi kiri
-2. Panel log terbuka menunjukkan mesej pemprosesan masa nyata
-3. Tatal automatik untuk menunjukkan mesej terkini
+1. Klik ikon **Debug Log**<img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line">
 
-### Memahami Mesej Log
+di bar sisi kiri
+2. Panel log dibuka, memaparkan mesej pemprosesan masa nyata
+3. Menatal secara automatik untuk memaparkan mesej terkini
+
+<!-- SCREENSHOT-NEEDED: Debug Log tab open at the end of a completed run, showing real backend log lines including the [RUN-SUMMARY] lines (images / camera groups / targets / calibrated / files written) -->
+
+### Memahami Mesej Log  Baris log
+
+Chloros
+
+diawali dengan tag bersarang yang menamakan subsistem — contohnya `[PROCESSING]`, `[RUN-SUMMARY]`, `[LATTICE-EXPORT]`, `[EXPORT-CHECK]`, `[IMPORT-LEVEL]`. Yang paling penting untuk diketahui ialah **ringkasan larian**, dicetak di akhir setiap larian (termasuk larian yang dihentikan):
+
+```
+[RUN-SUMMARY] 49 image(s) in 2 camera group(s); 4 target(s) detected; 45 image(s) calibrated; 180 file(s) written.
+```
+
+Baris petunjuk tambahan `[RUN-SUMMARY]` akan muncul apabila sesuatu perlu dijelaskan — contohnya larian yang tidak menghasilkan apa-apa, atau kamera yang produk yang diminta diabaikan kerana tidak terpakai. Baris `[EXPORT-CHECK]` menerangkan tentang pengabaian bagi setiap kamera (contohnya mengapa kameraRGB
+
+tidak menerima produk sinaran).
+
+Keparahan mesej umum (contoh di bawah adalah untuk ilustrasi, bukan secara harfiah):
 
 #### Mesej Maklumat (Putih/Kelabu)
 
-Kemas kini pemprosesan biasa:
-
-```
-[INFO] Processing started
-[INFO] Target detected in IMG_0015.RAW - 4 panels found
-[INFO] Calibrating IMG_0234.RAW
-[INFO] Exported NDVI image: IMG_0234_NDVI.tif
-[INFO] Processing complete
-```
+Kemas kini pemprosesan biasa: pemprosesan bermula, sasaran dikesan (dengan kiraan panel), kemajuan penentukuran setiap imej, fail dieksport, pemprosesan selesai.
 
 #### Mesej Amaran (Kuning)
 
-Isu bukan kritikal yang tidak berhenti memproses:
+Isu tidak kritikal yang tidak menghentikan pemprosesan — contohnya data GPS hilang dalam satu bingkai, jurang cap masa yang besar antara imej sasaran, atau kontras rendah dalam panel penentukuran.
 
-```
-[WARN] No GPS data found in IMG_0145.RAW
-[WARN] Target image timestamp gap > 30 minutes
-[WARN] Low contrast in calibration panel - results may vary
-```
+**Tindakan:** Semak amaran selepas pemprosesan, tetapi jangan mengganggu
 
-**Tindakan:** Semak amaran selepas pemprosesan, tetapi jangan ganggu
+#### Mesej Ralat (Red
 
-#### Mesej Ralat (Red)
+)
 
-Isu kritikal yang mungkin menyebabkan pemprosesan gagal:
-
-```
-[ERROR] Cannot write file - disk full
-[ERROR] Corrupted image file: IMG_0299.RAW
-[ERROR] No targets detected - enable reflectance calibration or mark target images
-```
+Isu kritikal yang mungkin menyebabkan pemprosesan gagal — contohnya cakera penuh, fail imej rosak, atau tiada sasaran dikesan semasa penentukuran pantulan diminta.
 
 **Tindakan:** Hentikan pemprosesan, selesaikan ralat, mulakan semula
 
-### Mesej Log Biasa
+### Situasi Log Biasa
 
-| Mesej | Maksudnya | Tindakan Diperlukan |
-| -------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
-| "Sasaran dikesan dalam \[nama fail]" | Sasaran penentukuran berjaya ditemui | Tiada - biasa |
-| "Memproses imej X daripada Y" | Kemas kini kemajuan semasa | Tiada - biasa |
-| "Tiada sasaran ditemui" | Tiada sasaran penentukuran dikesan | Tandai imej sasaran atau lumpuhkan penentukuran pantulan |
-| "Ruang cakera tidak mencukupi" | Storan tidak mencukupi untuk output | Kosongkan ruang cakera |
-| "Melangkau fail rosak" | Fail imej rosak | Salin semula fail daripada kad SD |
-| "Data PPK digunakan" | Pembetulan GPS daripada fail .daq digunakan | Tiada - biasa |
+| Situasi                             | Maksud                                       | Tindakan yang Perlu Diambil                                         |
+| ------------------------------------- | --------------------------------------------- | ----------------------------------------------------- |
+| Sasaran dikesan dalam \[nama_fail]        | Sasaran penentukuran berjaya ditemui         | Tiada - normal                                         |
+| Baris kemajuan setiap imej              | Kemas kini kemajuan semasa                      | Tiada - normal                                         |
+| Tiada sasaran ditemui                      | Tiada sasaran penentukuran dikesan               | Tanda imej sasaran atau nyahdayakan penentukuran pantulan |
+| Ruang cakera tidak mencukupi               | Penyimpanan tidak mencukupi untuk keluaran                 | Bebaskan ruang cakera                                    |
+| Melangkau fail rosak               | Fail imej rosak                         | Salin semula fail dari kad SD                             |
+| `[IMPORT-LEVEL] Skipping ... no raw source` | Rakaman tanpa bingkai mentah tidak dapat diproses | Rakam semula dengan mentah, atau gunakanCLI
+
+`--input-level`  |
+| `[RUN-SUMMARY] ... 0 file(s) written` | Jalankan tidak menghasilkan produk imej — dilaporkan sebagai kegagalan dengan petunjuk | Baca baris petunjuk; semak apa yang dilangkau dan mengapa |
 
 ### Menyalin Data Log
 
-Untuk menyalin log untuk penyelesaian masalah atau sokongan:
+Untuk menyalin log bagi penyelesaian masalah atau sokongan:
 
-1. Buka panel Log Nyahpepijat
-2. Klik butang **"Salin Log"** (atau klik kanan → Pilih Semua)
+1. Buka panel Log Ralat
+2. Klik butang **&quot;Salin Log&quot;** (atau klik kanan → Pilih Semua)
 3. Tampal ke dalam fail teks atau e-mel
-4. Hantar kepada sokongan MAPIR jika perlu
+4. Hantar ke sokonganMAPIR
+
+jika perlu
 
 ***
 
@@ -205,66 +232,75 @@ Untuk menyalin log untuk penyelesaian masalah atau sokongan:
 
 ### Penggunaan CPU
 
-**Mod Percuma:**
+**Mod Bebas:**
 
 * 1 teras CPU pada \~100%
-* Teras lain melahu atau tersedia
+* Teras lain tidak aktif atau tersedia
 * Sistem kekal responsif
 
-**Chloros+ Mod Selari:**
+**Chloros
 
-* Berbilang teras pada 80-100% (sehingga 16 teras)
-* Penggunaan CPU keseluruhan yang tinggi
-* Sistem mungkin berasa kurang responsif
++ Mod Paralel:**
+
+* Pelbagai teras pada penggunaan tinggi — berapa banyak bergantung pada strategi yang dipilih oleh [Dynamic Compute Adaptation](../processing-architecture/dynamic-compute-adaptation.md)
+* Sistem mungkin terasa kurang responsif
 
 **Untuk memantau:**
 
-* Windows Pengurus Tugas (Ctrl+Shift+Esc)
-* Tab prestasi → bahagian CPU
-* Cari proses "Chloros" atau "chloros-backend".
+*Windows
 
-### Penggunaan Memori (RAM).
+Task Manager (Ctrl+Shift+Esc)
+* Tab Prestasi → bahagian CPU
+* Cari proses &quot;Chloros
+
+&quot; atau &quot;chloros-backend&quot;
+
+### Penggunaan Memori (RAM)
 
 **Penggunaan biasa:**
 
-* Projek kecil (< 100 imej): 2-4 GB
+* Projek kecil (&lt; 100 imej): 2-4 GB
 * Projek sederhana (100-500 imej): 4-8 GB
 * Projek besar (500+ imej): 8-16 GB
-* Chloros+ mod selari menggunakan lebih banyak RAM
+*Chloros
 
-**Jika ingatan rendah:**
++ mod selari menggunakan lebih banyak RAM
 
-* Proses kelompok yang lebih kecil
+**Jika memori rendah:**
+
+* Proses kumpulan yang lebih kecil
 * Tutup aplikasi lain
-* Tingkatkan RAM jika kerap memproses set data yang besar
+* Tingkatkan RAM jika kerap memproses set data besar
 
-### Penggunaan GPU (Chloros+ dengan CUDA)
+### Penggunaan GPU (Chloros
 
-Apabila pecutan GPU didayakan:
++ dengan CUDA)
+
+Apabila pecutan GPU diaktifkan:
 
 * GPU NVIDIA menunjukkan penggunaan yang tinggi (60-90%)
-* Penggunaan VRAM meningkat (memerlukan 4GB+ VRAM)
-* Peringkat penentukuran adalah jauh lebih pantas
+* Penggunaan VRAM meningkat (memerlukan 4GB+ VRAM; 7GB+ untuk debayering Texture Aware serentak)
+* Tahap penentukuran adalah jauh lebih pantas
 
 **Untuk memantau:**
 
-* Ikon Dulang Sistem NVIDIA
-* Pengurus Tugas → Prestasi → GPU
-* GPU-Z atau alat pemantauan yang serupa
+* Ikon NVIDIA di System Tray
+* Task Manager → Performance → GPU
+* GPU-Z atau alat pemantauan serupa
 
-### Cakera I/O
+### I/O Cakera
 
-**Apa yang diharapkan:**
+**Apa yang boleh dijangkakan:**
 
-* Bacaan cakera tinggi semasa peringkat Menganalisis
-* Tulis cakera tinggi semasa peringkat Mengeksport
+* Bacaan cakera yang tinggi semasa peringkat Menganalisis
+* Penulisan cakera yang tinggi semasa peringkat Mengeksport
 * SSD jauh lebih pantas daripada HDD
 
 **Petua prestasi:**
 
 * Gunakan SSD untuk folder projek apabila boleh
-* Elakkan pemacu rangkaian untuk set data yang besar
-* Pastikan cakera tidak hampir kapasiti (menjejaskan kelajuan tulis)
+* Elakkan pemacu rangkaian untuk set data besar
+* Pastikan cakera tidak hampir penuh (menjejaskan kelajuan menulis)
 
 ***
 
@@ -272,97 +308,109 @@ Apabila pecutan GPU didayakan:
 
 ### Tanda Amaran
 
-**Gerai kemajuan (tiada perubahan selama 5+ minit):**
+**Kemajuan terhenti (tiada perubahan selama 5+ minit):**
 
-* Semak Log Nyahpepijat untuk mencari ralat
-* Sahkan ruang cakera tersedia
-* Semak Pengurus Tugas untuk memastikan Chloros sedang berjalan
+* Semak Log Ralat untuk ralat
+* Semak ruang cakera yang tersedia
+* Semak Pengurus Tugas (Task Manager) untuk memastikanChloros
 
-**Mesej ralat kerap muncul:**
+sedang berjalan
 
-* Berhenti memproses dan menyemak ralat
+**Mesej ralat muncul dengan kerap:**
+
+* Hentikan pemprosesan dan semak semula ralat
 * Punca biasa: ruang cakera, fail rosak, masalah memori
-* Lihat bahagian Penyelesaian masalah di bawah
+* Lihat bahagian Penyelesaian Masalah di bawah
 
-**Sistem menjadi tidak bertindak balas:**
+**Sistem menjadi tidak responsif:**
 
-* Chloros+ mod selari menggunakan terlalu banyak sumber
+*Chloros
+
++ mod selari menggunakan terlalu banyak sumber
 * Pertimbangkan untuk mengurangkan tugas serentak atau menaik taraf perkakasan
-* Mod percuma kurang intensif sumber
+* Mod percuma menggunakan sumber yang kurang
 
-### Bila Hentikan Pemprosesan
+### Bila hendak Hentikan Pemprosesan
 
 Hentikan pemprosesan jika anda melihat:
 
-* ❌ Ralat "Disk penuh" atau "Tidak boleh menulis fail".
-* ❌ Ralat rasuah fail imej berulang
+* ❌ Ralat &quot;Cakera penuh&quot; atau &quot;Tidak dapat menulis fail&quot;
+* ❌ Ralat kerosakan fail imej berulang
 * ❌ Sistem beku sepenuhnya (tidak bertindak balas)
-* ❌ Menyedari tetapan yang salah telah dikonfigurasikan
-* ❌ Imej salah diimport
+* ❌ Sedar bahawa tetapan yang salah telah dikonfigurasikan
+* ❌ Imej yang salah diimport
 
-**Cara berhenti:**
+**Cara menghentikan:**
 
-1. Klik**Butang Berhenti/Batal** (menggantikan butang Mula)
-2. Pemprosesan terhenti, kemajuan hilang
-3. Selesaikan isu dan mulakan semula dari awal
+1. Klik butang**Hentikan** (menggantikan butang Mula) — sekali sudah memadai
+2. Bar akan memaparkan &quot;Berhenti...&quot; sementara imej yang sedang diproses selesai, kemudian pelaksanaan akan berakhir dalam keadaan berhenti
+3. Produk yang telah dieksport akan kekal pada cakera; log akan mencetak laporan `[RUN-SUMMARY]` yang jujur tentang apa yang telah diselesaikan
+4. Betulkan isu dan mulakan semula — pelaksanaan akan bermula dari awal
 
 ***
 
-## Menyelesaikan Masalah Semasa Pemprosesan
+## Penyelesaian Masalah Semasa Pemprosesan
 
 ### Pemprosesan Sangat Lambat
 
 **Punca yang mungkin:**
 
-* Imej sasaran yang tidak ditanda (mengimbas semua imej)
-* HDD dan bukannya storan SSD
+* Imej sasaran tidak ditandakan (mengimbas semua imej)
+* Penyimpanan HDD bukannya SSD
 * Sumber sistem tidak mencukupi
 * Banyak indeks dikonfigurasikan
 * Akses pemacu rangkaian
 
 **Penyelesaian:**
 
-1. Jika baru bermula dan dalam peringkat Mengesan: Batal, tandakan sasaran, mulakan semula
-2. Untuk masa hadapan: Gunakan SSD, kurangkan indeks, tingkatkan perkakasan
-3. Pertimbangkan CLI untuk memproses kumpulan data yang besar
+1. Jika baru bermula dan berada dalam peringkat Mengesan: Hentikan, tandakan sasaran, mulakan semula
+2. Untuk masa hadapan: Gunakan SSD, kurangkan indeks, naik taraf perkakasan
+3. PertimbangkanCLI
 
-### Amaran "Ruang Cakera".
+untuk pemprosesan pukal set data besar
+
+### Amaran &quot;Ruang Cakera&quot;
 
 **Penyelesaian:**
 
-1. Kosongkan ruang cakera serta-merta
-2. Gerakkan projek untuk memandu dengan lebih banyak ruang
+1. Bebaskan ruang cakera dengan segera
+2. Pindahkan projek ke pemacu dengan ruang yang lebih besar
 3. Kurangkan bilangan indeks untuk dieksport
-4. Gunakan format JPG dan bukannya TIFF (fail yang lebih kecil)
+4. Lumpuhkan produk eksport LATTICE yang anda tidak perlukan (Penyediaan Projek → Pemprosesan)
+5. Gunakan format JPG sebaliknyaTIFF
 
-### Mesej "Fail Rosak" yang kerap
+(fail yang lebih kecil)
+
+### Mesej &quot;Fail Rosak&quot; Berulang-ulang
 
 **Penyelesaian:**
 
-1. Salin semula imej daripada kad SD untuk memastikan integriti
+1. Salin semula imej dari kad SD untuk memastikan integriti
 2. Uji kad SD untuk ralat
-3. Alih keluar fail rosak daripada projek
-4. Teruskan memproses imej yang tinggal
+3. Buang fail yang rosak daripada projek
+4. Teruskan pemprosesan imej yang tinggal
 
-### Sistem Terlalu Panas / Pendikit
+### Sistem Terlalu Panas / Pelambatan
 
 **Penyelesaian:**
 
 1. Pastikan pengudaraan yang mencukupi
-2. Bersihkan habuk dari lubang komputer
-3. Kurangkan beban pemprosesan (gunakan mod Percuma dan bukannya Chloros+)
-4. Proses pada waktu hari yang lebih sejuk
+2. Bersihkan habuk dari lubang pengudaraan komputer
+3. Kurangkan beban pemprosesan (gunakan Mod Percuma bukannyaChloros
+
++)
+4. Proses semasa waktu yang lebih sejuk dalam sehari
 
 ***
 
-## Memproses Pemberitahuan Lengkap
+## Notifikasi Pemprosesan Siap
 
 Apabila pemprosesan selesai:
 
 * Bar kemajuan mencapai 100%
-* **Mesej "Pemprosesan Selesai"** muncul dalam Log Nyahpepijat
-* Butang mula didayakan semula
-* Semua fail output berada dalam subfolder model kamera
+* Baris `[RUN-SUMMARY]` muncul dalam Log Ralat dengan kiraan akhir
+* Butang Mula diaktifkan semula
+* Semua fail keluaran berada di struktur output per-kamera projek: `<project>/<camera>/<format>/<Product>_Images/`
 
 ***
 
@@ -370,9 +418,9 @@ Apabila pemprosesan selesai:
 
 Setelah pemprosesan selesai:
 
-1. **Semakan keputusan** - Lihat [Menyelesaikan Pemprosesan](finishing-the-processing.md)
-2. **Semak folder output** - Sahkan semua fail yang dieksport dengan betul
-3. **Semak Log Nyahpepijat** - Semak sebarang amaran atau ralat
-4. **Pratonton imej yang diproses** - Gunakan Pemapar Imej atau perisian luaran
+1. **Semak keputusan** - Lihat [Menyiapkan Pemprosesan](finishing-the-processing.md)
+2. **Semak folder keluaran** - Sahkan semua fail dieksport dengan betul
+3. **Semak Log Ralat** - Periksa sebarang amaran atau ralat
+4. **Praperiksa imej yang diproses** - Gunakan Pemapar Imej atau perisian luaran
 
-Untuk mendapatkan maklumat tentang menyemak dan menggunakan hasil proses anda, lihat [Menyiapkan Pemprosesan](finishing-the-processing.md).
+Untuk maklumat tentang menyemak dan menggunakan keputusan yang diproses, lihat [Menyiapkan Pemprosesan](finishing-the-processing.md).

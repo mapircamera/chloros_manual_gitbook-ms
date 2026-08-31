@@ -1,165 +1,152 @@
 # Penanda Peta
 
-Tab Peta memaparkan imej anda pada peta 2D interaktif berdasarkan koordinat GPS mereka. Ini memberikan gambaran keseluruhan geografi bagi sesi tangkapan anda dan membantu anda menggambarkan liputan spatial. Ia juga berguna apabila mula-mula mengimport imej anda untuk mengalih keluar mana-mana imej yang anda tidak perlu proses dengan cepat.
+Tab Peta meletakkan imej anda pada peta 2D interaktif berdasarkan koordinat GPS mereka. Ia memberikan anda gambaran geografi sesi tangkapan dan merupakan cara terpantas, sejurus selepas pengimportan, untuk membuang imej yang anda tidak mahu diproses.
 
 <figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
 
 ## Mengakses Tab Peta
 
-1. Buka atau cipta projek dalam Chloros
-2. Import imej yang mengandungi metadata GPS
-3. Klik tab **Peta** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> dalam bar sisi kiri
-4. Peta akan memaparkan penanda pada setiap lokasi GPS imej
+1. Buka atau buat projek dalam Chloros
+2. Impor imej yang mengandungi metadata GPS
+3. Klik tab **Peta** <img src="../.gitbook/assets/image (3) (1).png" alt="" data-size="line"> di bar sisi kiri
+4. Peta memaparkan penanda di setiap lokasi GPS imej
 
 {% hint style="info" %}
-**GPS Diperlukan**: Hanya imej dengan koordinat GPS terbenam dalam metadata EXIF mereka akan muncul pada peta. Pastikan kamera anda mendayakan GPS semasa tangkapan.
+**GPS diperlukan**: hanya imej yang mempunyai koordinat GPS dalam metadata EXIF mereka akan muncul di peta. Imej tanpa koordinat masih ada dalam projek dan masih diproses seperti biasa — ia hanya tidak mempunyai penanda.
 {% endhint %}
 
 ***
 
-## Melaraskan Imej daripada Tab Peta
+## Mengatur Imej daripada Tab Peta
 
-Tab **Map**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> mempunyai penambahan yang sama <img src="../.gitbook/assets/image.png" XPROTX000020X0PROTX0XPROTX000020X0PROTX0XPROTX2TX000020X0PROTX01XPROTX000020X0PROTX0100020X0PROTX01XPROTX000020X0PROTX01XPROTX000020X0PROTX01XPROTX000020X0PROTX01XPROTX000020X0PROTX01XPROTX src="../.gitbook/assets/image (1).png" alt="" data-size="line"> dan alih keluar <img src="../.gitbook/assets/image (2).png" alt="" data-size="line" the** button [File assets/image (2).png"**Pelayar**](../processing-images-gui/adding-files-to-a-project.md) tab <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> boleh. Ia juga menunjukkan senarai jadual fail projek yang sama tetapi dengan pengepala lajur yang berbeza:
+Tab **Peta**<img src="../.gitbook/assets/image (3) (1).png" alt="" data-size="line"> mempunyai butang fail yang sama untuk menambah <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> dan membuang <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line"> seperti tab [**Penyemak Imbas Fail**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">. Ia memaparkan senarai fail projek yang sama, dengan lajur geografi:
 
-### Nama Fail
-
-* Nama fail asal daripada kamera
-* Mengekalkan konvensyen penamaan kamera (cth., IMG\_0001.RAW)
-
-### Latitud
-
-* Latitud imej
-
-### Longitud
-
-* Longitud imej
-
-### Ketinggian
-
-* Ketinggian imej
+| Lajur        | Kandungan                                                           |
+| ------------- | ------------------------------------------------------------------ |
+| **Nama**      | Nama fail seperti yang dikeluarkan dari kamera                        |
+| **Lintang**  | Darjah perpuluhan, enam perpuluhan tempat                            |
+| **Bujur**    | Darjah perpuluhan, enam perpuluhan tempat                            |
+| **Altitud** | Meter, satu perpuluhan — `-` apabila imej tidak mempunyai altitud |
 
 {% hint style="info" %}
-Mengklik pengepala lajur jadual juga mengisih data baris
+Klik mana-mana tajuk lajur untuk menyusun mengikutnya; klik sekali lagi untuk membalikkan susunan.
+{% endhint %}
+
+{% hint style="warning" %}
+**Altitud ialah ketinggian di atas paras laut, bukan ketinggian di atas tanah.** Nilai ini diperoleh daripada tag EXIF `GPSAltitude` imej, yang dirujuk kepada paras laut rata-rata. Ia bukan ketinggian penerbangan di atas kawasan, dan Chloros tidak akan mengira jarak sampel tanah daripadanya — di atas padang yang 300 m di atas paras laut, sebuah dron pada 100 m AGL merekodkan kira-kira 400 m di sini. Gunakan lajur ini untuk mengesan nilai luar biasa dan mengesahkan ketinggian penerbangan yang konsisten, bukan sebagai ukuran AGL.
 {% endhint %}
 
 ***
 
 ## Penanda Imej
 
-Setiap imej dengan data GPS diwakili oleh penanda pada peta:
+Setiap imej dengan data GPS mendapat penanda pada koordinatnya.
 
-### Paparan Penanda
+### Paparan penanda
 
-* Penanda menunjukkan koordinat GPS yang tepat di mana setiap imej telah ditangkap
-* Penanda berkelompok mungkin berkumpul bersama apabila dizum keluar
-* Zum masuk untuk melihat lokasi imej individu
+* Penanda terletak pada koordinat tepat yang direkodkan untuk setiap tangkapan
+* Penanda yang rapat mungkin bertindih secara visual apabila zum keluar — zum masuk untuk memisahkannya
+* Penanda yang dipilih dan diserlahkan dilukis di atas yang lain
+
+### Pratonton tetikus terapung
+
+* **Tetikus terapung** pada mana-mana penanda untuk memaparkan lakaran kecil imej tersebut dengan nama failnya
+* **Klik**penanda untuk memilih imej dan**menancapkan** tetingkap timbul — ia akan kekal sehingga anda klik di tempat lain. Semasa tetingkap timbul ditancapkan, mengapungkan tetikus ke atas penanda lain tidak akan menutupnya
+* Ini adalah cara terpantas untuk mencari satu bingkai tertentu dalam sesi yang besar tanpa meninggalkan peta
+
+<figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption><p>Tab Peta memplot setiap imej bergeotag dalam projek</p></figcaption></figure>
+
+### Super-zoom
 
 {% hint style="success" %}
-SUPER-ZOOM: Apabila anda mencapai tahap zum maksimum daripada pembekal jubin peta, jubin kemudiannya dibesarkan apabila zum selanjutnya, membolehkan anda melihat penanda yang berdekatan.
+**SUPER-ZOOM**: apabila anda mencapai tahap zum maksimum yang disokong oleh penyedia jubin, zum masuk selanjutnya akan membesarkan jubin tersebut dan bukannya berhenti, supaya anda dapat memisahkan penanda yang terletak hampir bertindih.
 {% endhint %}
 
-### Pratonton Tuding
-
-* **Tuding tetikus anda** pada mana-mana penanda untuk melihat pratonton lakaran kecil imej itu
-* Ini membolehkan pengenalan visual pantas tanpa meninggalkan paparan peta
-* Berguna untuk mencari imej tertentu dalam sesi tangkapan besar
+* Super-zoom diaktifkan hanya apabila anda **di** tahap zum maksimum penyedia untuk lokasi tersebut dan jubin telah selesai dimuat. Di bawahnya, zum bertindak seperti biasa
+* Julatnya ialah **1× hingga 32×** di atas tahap zum maksimum penyedia itu sendiri
+* Penunjuk di penjuru memaparkan super-zoom semasa sebagai peratusan, dan butang **×** di sebelahnya membawa anda kembali ke zoom biasa dengan satu klik
+* Mengecilkan zoom sentiasa disalurkan terus ke peta itu sendiri, jadi anda tidak akan terperangkap dalam super-zoom
+* Membesar dan mengalih semasa super-zoom menghantar semula offset yang terhasil kepada peta, jadi kawasan di luar pusat yang anda alihkan terus meminta jubin dan bukannya menjadi kosong
+* Penanda dilukis sebagai elemen vektor dan bukannya dirasterkan, jadi ia kekal tajam pada setiap tahap super-zoom
 
 ***
 
-## Pembekal Jubin Peta
+## Penyedia Jubin Peta
 
 {% hint style="success" %}
-**Pemilihan Automatik**: Chloros secara automatik memilih perkhidmatan jubin yang menyediakan tahap zum terbaik untuk lokasi peta semasa anda. Anda boleh bertukar secara manual antara pembekal jika mahu.
+**Pilihan automatik**: Chloros memilih perkhidmatan jubin yang menawarkan tahap zum terbaik untuk lokasi imej anda. Anda boleh menukarnya secara manual pada bila-bila masa.
 {% endhint %}
 
-Tab Peta menyokong dua pembekal jubin untuk imejan peta latar belakang:
-
-### Peta Google
-
-* Imej satelit dan peta standard daripada Google
-* Terbaik untuk liputan umum di seluruh dunia
-
-### ESRI
-
-* Imej satelit dan udara daripada ESRI ArcGIS
-* Selalunya memberikan imejan resolusi lebih tinggi di kawasan tertentu
-
-***
+| Penyedia        | Nota                                                                                                                                                             |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Peta Google** | Liputan global meluas; menyokong keempat-empat jenis jubin                                                                                                            |
+| **Esri ArcGIS**| Gambar udara beresolusi lebih tinggi di kawasan tertentu. Jenis jubin**Terrain** tidak ditawarkan untuk Esri dan butangnya dilumpuhkan semasa Esri dipilih |***
 
 ## Jenis Jubin Peta
 
-Anda boleh memilih jenis lapisan peta (dari kiri ke kanan):
+Pilih jenis lapisan peta dengan butang (dari kiri ke kanan):
 
-&#x20;<img src="../.gitbook/assets/image (23).png" alt="" data-size="original">
+![](&lt;../.gitbook/assets/image (14).png&gt;)
 
-### Rupa bumi
+| Jenis                 | Menunjukkan                                                                |
+| -------------------- | -------------------------------------------------------------------- |
+| **Terrain**          | Bayangan ketinggian dengan butiran peta (jalan, label). Google sahaja       |
+| **Map**              | Jubin peta jalan standard — pilihan jalur lebar terendah              |
+| **Satelit**        | Imej satelit terperinci, tiada label — pilihan jalur lebar tertinggi |
+| **Hibrid** (laluan) | Imej satelit dengan jalan raya dan label yang dilukis di atasnya                |
 
-Menunjukkan profil ketinggian dan jubin peta dengan butiran (jalan raya, dll)
-
-### Peta
-
-Menunjukkan jubin peta standard (jalur lebar lebih rendah) dengan butiran (jalan raya, dll)
-
-### Satelit
-
-Menunjukkan jubin peta satelit terperinci (jalur lebar lebih tinggi).
-
-### Hibrid
-
-Menunjukkan jubin peta satelit dengan butiran tambahan (jalan raya, dll)
-
-***
+Tab Peta dibuka pada **Hibrid**. Pilihan anda akan dibawa semasa menukar penyedia jika penyedia tersebut menyokongnya.***
 
 ## Navigasi Peta
 
-### Kawalan Zum
-
-* **Zum Masuk/Keluar**: Gunakan roda skrol tetikus atau butang zum
-* **Skrin penuh**: Skrin penuh peta
-
-### Kawalan Kuali
-
-* **Sorot**: Klik dan seret untuk bergerak di sekitar peta***
+* **Zoom**: roda tatal tetikus, atau butang zum pada peta
+* **Alih**: klik dan seret
+* **Penuh Skrin**: kawalan penuh skrin mengembangkan peta ke seluruh tetingkap***
 
 ## Kes Penggunaan
 
-### Visualisasi Laluan Penerbangan
+### Semakan laluan penerbangan
 
-* Lihat kawasan liputan sesi tangkapan dron
-* Kenal pasti jurang dalam liputan imej
-* Sahkan pelaksanaan laluan penerbangan
+* Lihat kawasan liputan sesi dron dengan sekilas pandang
+* Kenal pasti celah di mana laluan terlepas
+* Sahkan penerbangan mengikut corak yang dirancang
 
-### Kajian Tinjauan Tanah
+### Semakan tinjauan darat
 
-* Lihat taburan spatial tangkapan berasaskan darat
-* Cari imej sasaran penentukuran berbanding dengan kawasan tinjauan
-* Rancang lokasi tangkapan tambahan
+* Lihat bagaimana tangkapan berasaskan darat diedarkan
+* Lokasikan bingkai sasaran penentukuran berbanding kawasan tinjauan
+* Putuskan di mana tangkapan tambahan diperlukan
 
-### Kawalan Kualiti
+### Kawalan kualiti
 
-* Mengenal pasti imej yang ditangkap dengan cepat di lokasi yang tidak dijangka
-* Sahkan ketepatan GPS merentas set data
-* Lokasi imej rujukan silang dengan nota lapangan
+* Cari imej yang dirakam di tempat yang tidak dijangka dan buang sebelum pemprosesan
+* Susun mengikut Altitud untuk mengesan bingkai yang dirakam pada ketinggian yang salah, atau yang penetapan GPS-nya lemah
+* Sahkan lokasi imej dengan nota lapangan
 
 ***
 
-## Menyelesaikan masalah
+## Penyelesaian Masalah
 
-### Tiada Penanda Muncul
+### Tiada penanda muncul
 
-**Punca yang mungkin:**
+**Punca yang mungkin**
 
-* Imej tidak mengandungi metadata GPS
-* GPS telah dilumpuhkan pada kamera semasa tangkapan
-* Data EXIF ​​dilucutkan oleh perisian luaran
+* Imej tidak mempunyai metadata GPS
+* GPS dilumpuhkan pada kamera semasa mengambil gambar
+* Data EXIF telah dipadam oleh perisian lain sebelum diimport
 
-**Penyelesaian**: Sahkan GPS didayakan pada kamera anda dan import semula fail asal
+**Apa yang perlu dilakukan**: sahkan GPS diaktifkan pada kamera dan import semula fail asal. Anda boleh menyemak sama ada fail tertentu mempunyai koordinat dengan mencarinya dalam jadual fail tab Peta — imej tanpa koordinat tidak mempunyai baris di sana.
 
-### Penanda di Lokasi yang Salah
+### Penanda berada di tempat yang salah
 
-**Punca yang mungkin:**
+**Punca yang mungkin**: penetapan satelit yang buruk semasa pengambilan, atau pergeseran GPS semasa sesi.**Apa yang perlu dilakukan**: ini adalah isu semasa pengambilan dan bukannya sesuatu yang boleh diperbetulkan oleh Chloros selepas itu. Untuk kerja yang memerlukan ketepatan tinggi, gunakan aliran kerja GPS PPK/RTK — lihat tetapan**Terapkan Pembetulan PPK** dalam [Tetapan Projek](../project-settings/project-settings.md).
 
-* GPS kamera mempunyai pembetulan satelit yang lemah
-* GPS hanyut semasa tangkapan
+### Peta kosong atau jubin berhenti dimuat
 
-**Penyelesaian**: Ini biasanya isu masa tangkapan; pertimbangkan untuk menggunakan GPS PPK/RTK untuk aplikasi ketepatan
+Penyedia jubin adalah perkhidmatan dalam talian. Jika jubin berhenti sampai, semak sambungan rangkaian mesin, kemudian cuba menukar penyedia. Jika anda telah memperbesarkan gambar dengan melampau, tekan butang **×** tetapkan semula untuk kembali ke tahap zum biasa dan biarkan peta meminta semula jubin.***
+
+## Halaman berkaitan
+
+* [**Grid Imej**](image-grid.md) — set imej yang sama seperti imej kecil
+* [**Membuka Imej Penuh Skrin**](opening-an-image-full-screen.md) — memeriksa satu imej dengan terperinci
+* [**Menambah Fail ke Projek**](../processing-images-gui/adding-files-to-a-project.md) — butang tambah/buang fail yang dikongsi oleh tab ini

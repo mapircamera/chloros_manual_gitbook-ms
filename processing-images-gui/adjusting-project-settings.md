@@ -1,218 +1,326 @@
-# Melaraskan Tetapan Projek
+# Mengatur Tetapan Projek
 
-Sebelum memproses imej anda, adalah penting untuk mengkonfigurasi tetapan projek anda agar sepadan dengan keperluan aliran kerja anda. Panel Tetapan Projek <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> menyediakan kawalan menyeluruh ke atas penentukuran, pilihan pemprosesan, indeks berbilang spektrum dan format eksport.
+Sebelum memproses imej anda, adalah penting untuk mengkonfigurasi tetapan projek anda agar sesuai dengan keperluan aliran kerja anda. Panel Tetapan Projek <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> menyediakan kawalan menyeluruh ke atas penentukuran, pilihan pemprosesan, indeks multispektral, dan format eksport.
 
 ## Mengakses Tetapan Projek
 
 1. Buka projek anda dalam Chloros
-2. Klik ikon **Tetapan Projek** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> di bar sisi kiri
+2. Klik ikon **Project Settings** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> di bar sisi kiri
 3. Panel Tetapan Projek memaparkan semua pilihan konfigurasi
 
+<figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption><p>Panel Tetapan Projek — Paparan, Pengesanan Sasaran dan Pemprosesan</p></figcaption></figure>
+
 {% hint style="info" %}
-**Tetapan disimpan secara automatik** dengan projek anda. Apabila anda membuka semula projek, semua tetapan dipulihkan.
+**Tetapan disimpan secara automatik** bersama projek anda. Apabila anda membuka semula projek, semua tetapan akan dipulihkan.
 {% endhint %}
 
 ***
 
-## Persediaan Pantas untuk Aliran Kerja Biasa
+## Tetapan Pantas untuk Aliran Kerja Biasa
 
 ### Tetapan Lalai (Disyorkan untuk Kebanyakan Pengguna)
 
-Untuk aliran kerja kamera MAPIR biasa Survey3, tetapan lalai berfungsi dengan baik:
+Tetapan lalai berfungsi dengan baik untuk aliran kerjaSurvey3
+dan LATTICE tipikal:
 
-* ✅ **Pembetulan vignet**: Didayakan
-* ✅ **Penentukuran pantulan**: Didayakan (memerlukan imej sasaran MAPIR)
+* ✅ **Pembetulan Vignette**: Diaktifkan
+* ✅ **Kalibrasi pantulan / imbangan putih**: Diaktifkan (menggunakan sasaranMAPIR
+dan/atau data penderia cahaya DAQ)
 * ✅ **Kaedah Debayer**: Standard (Pantas, Kualiti Sederhana)
-* ✅ **Format eksport**: TIFF (16-bit)
+* ✅ **Format eksport**:TIFF
+(16-bit)
+* ✅ **Semua produk eksport**: Diaktifkan (LATTICE secara automatik menangkap fan out ke dalam debayered, pratonton, radiance, dan reflectance)
 
-Hanya import imej anda dan mula memproses dengan lalai ini.
+Cukup import imej anda dan mulakan pemprosesan dengan tetapan lalai ini.
 
 ***
 
 ## Gambaran Keseluruhan Tetapan Projek
 
-Panel Tetapan Projek disusun ke dalam beberapa kategori. Di bawah adalah ringkasan setiap bahagian. Untuk dokumentasi lengkap, lihat [Tetapan Projek](../project-settings/project-settings.md).
+Panel Tetapan Projek disusun ke dalam seksyen di bawah. Dua seksyen tambahan — **Penderia Cahaya DAQ**dan**Penjajaran Susunan** — akan muncul secara automatik apabila projek anda mengandungi fail yang berkaitan. Untuk dokumentasi lengkap, lihat [Tetapan Projek](../project-settings/project-settings.md).
+
+### Paparan
+
+* **Resolusi Miniatur Imej**: Resolusi miniatur grid-imej. Pilihan:**Laras lalai (512 px)**,**1024 px**,**2048 px**,**Resolusi penuh**. Hanya untuk paparan — tidak pernah menjejaskan pemprosesan. Nilai yang lebih tinggi kelihatan lebih tajam apabila diperbesarkan tetapi memuat lebih perlahan.
 
 ### Pengesanan Sasaran
 
-Mengawal cara Chloros mengenal pasti sasaran penentukuran dalam imej anda.
+Mengawal caraChloros
+mengenal pasti sasaran penentukuran dalam imej anda.
 
-**Tetapan utama:*** **Kawasan sampel penentukuran minimum**: Ambang saiz untuk pengesanan sasaran (lalai: 25 piksel)
-* **Pengkelompokan sasaran minimum**: Ambang kesamaan untuk mengumpulkan wilayah sasaran (lalai: 60)**Bila untuk melaraskan:**
+**Pilihan utama:*** **Keluasan sampel penentukuran minimum (px)**: Ambang saiz untuk pengesanan sasaran (lalai:**25**, julat 0–10000)
+* **Pengelompokan Sasaran Minimum (0-100)**: Ambang keserupaan untuk pengelompokan kawasan sasaran (lalai:**60**)**Bilakah hendak melaraskan:**
 
-* Tingkatkan kawasan sampel jika mendapat pengesanan palsu
-* Kurangkan jika sasaran tidak dikesan
-* Laraskan pengelompokan jika sasaran dipecahkan kepada berbilang pengesanan
+*   Tingkatkan kawasan sampel jika terdapat pengesanan palsu
+*   Kurangkan jika sasaran tidak dikesan
+*   Laraskan pengklusteran jika sasaran dipecahkan kepada beberapa pengesanan
 
-### Memproses
+{% hint style="info" %}
+Pilihan ini diwarnakan kelabu apabila **Penentukuran pantulan / imbangan putih** dilumpuhkan — jika dilumpuhkan, pengesanan sasaran langsung tidak akan dijalankan.
+{% endhint %}
 
-Pilihan pemprosesan dan penentukuran imej utama.
+### Pemprosesan
 
-**Tetapan utama:*** **Pembetulan vignet**: Mengimbangi kegelapan kanta di tepi ✅ Disyorkan
-* **Penentukuran pantulan**: Menormalkan nilai menggunakan sasaran penentukuran ✅ Disyorkan
-* **Kaedah Debayer**: Algoritma untuk menukar RAW kepada 3-saluran berbilang spektrum
-* **Selang penentukuran semula minimum**: Masa antara menggunakan sasaran penentukuran (0 = gunakan semua)**Tetapan lanjutan:*** **Zon waktu sensor cahaya mengimbangi**: Untuk penyegerakan masa PPK (lalai: 0)
-* **Gunakan pembetulan PPK**: Menggunakan data GPS/pin pendedahan daripada fail .daq
-* **Pin Pendedahan 1/2**: Berikan kamera kepada pin pendedahan untuk persediaan dwi-kamera
+Pilihan utama pemprosesan imej dan penentukuran.
+
+**Pilihan utama:*** **Pembetulan vignet**: Mengimbangi penggelapan lensa di tepi ✅ Disyorkan
+* **Kalibrasi reflektansi / imbangan putih**: Mengkalibrasi imej menggunakan sasaran yang dikesan (Survey3
+) dan/atau data penderia cahaya DAQ (LATTICE) ✅ Disyorkan
+* **Kaedah Debayer**: Algoritma untuk menukar RAW kepada multispektral 3-saluran
+* **Jarak antara penentukuran semula minimum**: Masa minimum dalam saat antara penggunaan sasaran penentukuran (laluan:**0** = gunakan semua, julat 0–3600)**Produk sandaran tanpa penentukuran:**Apabila sesebuah bingkai tidak dapat dikalibrasi pantulan (tiada sasaran tersedia, atau penentukuran dilumpuhkan), ia akan dieksport sebagai salah satu daripada dua produk sandaran —**hanya satu daripada pasangan itu wujud bagi setiap pelaksanaan**, dipilih oleh suis pembetulan Vignette:
+
+* **Eksport tindak balas sensor**: menulis `Sensor_Response_Images` — digunakan apabila pembetulan Vignette**dimatikan*** **Eksport pembetulan vignet**: menulis `Vignette_Corrected_Images` — digunakan apabila pembetulan Vignette di**aktifkan**Petak semak yang tidak aktif akan diwarnakan kelabu. Menyahsemak petak aktif akan menyebabkan fail tersebut langsung tidak ditulis.**Produk eksport LATTICE** (ditunjukkan untuk setiap projek; ia terpakai pada tangkapan LATTICE):
+
+* **Eksport debayered**: imej linear debayered (`Debayered_Images`). Terpakai pada modulRGB
+dan multispektral.
+* **Previu Eksport**: pratonton paparan (`Preview_Images`).RGB
+= imbangan putih (DAQ-illuminant apabila tersedia, jika tidak dunia-kelabu) + gamma; multispektral = regangan warna palsu.
+* **Eksport radiasi**: float32 radiasi spektral (`Radiance_Images`, W/m²/sr/nm). Modul multispektral sahaja — tidak terpakai untuk indukRGB
+.
+* ****Eksport pantulan**: uint16 pantulan (`Reflectance_Calibrated_Images`, DN 32768 = ρ 1.0) apabila terdapat bacaan `.daq` ke bawah atau sasaran dalam bingkai yang menutupi bingkai. Modul multispektral sahaja.
+
+Kesemuanya **diaktifkan secara lalai**— satu bingkai mentah LATTICE yang diimport disalurkan ke setiap produk yang diaktifkan dan berkenaan dalam satu langkah pemprosesan. Petak semak**Eksport pantulan** akan diwarnakan kelabu apabila Kalibrasi pantulan dimatikan. Seting yang dimatikan oleh suis induk akan sentiasa dipaparkan dalam warna kelabu dengan petua alat yang menyatakan nama suis yang perlu diubah.**Seting Lanjutan:*** **Perbezaan zon waktu penderia cahaya**: Jam dari UTC untuk padanan zon waktu penderia cahaya (lalai: 0, julat −12 hingga +12)
+* **Terapkan pembetulan PPK**: Menggunakan data GPS/pin pendedahan daripada fail `.daq` (lalai: tidak diaktifkan)
+* **Pin Pendedahan 1/2**: Menugaskan kamera kepada pin pendedahan untuk susunan dwi-kamera
+
+{% hint style="info" %}
+**Tahap input LATTICE adalah automatik.** Rakaman LATTICE membawa tahap pemprosesan mereka dalam metadata XMP, dan pemprosesan sentiasa memasuki aliran kerja pada bingkai mentah — tiada apa-apa untuk dikonfigurasikan dalam GUI. (PenandaCLI
+`--input-level` wujud sebagai override untuk pengguna mahir bagi rakaman yang kehilangan metadata; lihat [RujukanCLI
+](../reference/cli-reference.md).)
+{% endhint %}
 
 ### Kaedah Debayer
 
-Pada masa ini kami menawarkan 2 kaedah debayering dalam Chloros:
+Kami kini menawarkan 2 kaedah debayering dalamChloros
+:
 
 #### Standard (Pantas, Kualiti Sederhana)
 
-Debayer standard memproses dengan cepat tetapi menunjukkan bunyi warna debayering, menghasilkan imej yang kurang tepat dan lebih bising.
+Debayer Standard memproses dengan pantas tetapi menunjukkan hingar warna debayering, menghasilkan imej yang kurang tepat dan lebih berhingar.
 
-#### Sedar Tekstur (Lambat, Kualiti Tertinggi) \[Chloros+ Sahaja]
+#### Sedar Tekstur (Lambat, Kualiti Tertinggi) \[HanyaChloros
++]
 
-Texture Aware menggunakan debayer sedar tepi berkualiti tinggi digabungkan dengan model denoising AI/ML yang menghilangkan hampir semua bunyi debayering. Model Texture Aware memerlukan memori GPU (VRAM) untuk dijalankan. Kami mengesyorkan menggunakannya apabila anda mempunyai >4GB VRAM tersedia untuk pemprosesan yang lebih pantas.
+Sedar Tekstur menggunakan debayer sedar-tepi berkualiti tinggi yang digabungkan dengan model penyahbisuan AI/ML yang membuang hampir semua bunyi debayering. Model ini memerlukan memori GPU (VRAM) untuk dijalankan: dengan **7 GB VRAM atau lebih** ia boleh memproses berbilang imej serentak; di bawah 7 GB ia menjalankan satu imej pada satu masa (lebih perlahan dengan ketara). Lihat [Penyesuaian Komputasi Dinamik](../processing-architecture/dynamic-compute-adaptation.md).
 
-### Indeks (Indeks Berbilang Spektrum)
+{% hint style="info" %}
+**Penangkapan LATTICE sentiasa menggunakan demosaik Standard.** Tiada model Texture Aware yang dilatih untuk LATTICE, jadi pilihan ini tidak ditawarkan untuk imej LATTICE — imejSurvey3
+dalam projek yang sama masih boleh menggunakannya.
+{% endhint %}
 
-Konfigurasikan indeks tumbuh-tumbuhan untuk dikira dan dieksport.
+### Indeks (Indeks Multispektral)
 
-**Cara menambah indeks:**
+Konfigurasikan indeks vegetasi yang ingin dikira dan dieksport. Tetingkap lungsur GUI menawarkan **27 formula indeks terbina dalam**.**Cara menambah indeks:**
 
-1. Klik butang**"Tambah indeks"**
+1. Klik butang**&quot;Tambah indeks&quot;**
 
-2. Pilih indeks daripada menu lungsur (NDVI, NDRE, GNDVI, dsb.)
+2. Pilih indeks daripada menu lungsur (NDVI
+,NDRE
+,GNDVI
+, dan lain-lain)
 3. Konfigurasikan tetapan visualisasi (warna LUT, julat nilai)
-4. Tambah berbilang indeks mengikut keperluan
+4. Tambah beberapa indeks mengikut keperluan
 
-**Indeks popular:*** **NDVI**: Kesihatan tumbuh-tumbuhan umum (paling biasa)
-* **NDRE**: Pengesanan tekanan awal dengan RedEdge
-* **GNDVI**: Kepekatan klorofil sensitif
-* **OSAVI**: Berfungsi dengan baik dengan tanah yang boleh dilihat
-* **EVI**: Kawasan indeks kawasan daun tinggi (LAI)**Formula tersuai (Chloros+ sahaja):**
+**Indeks Popular:*** **NDVI**: Kesihatan vegetasi umum (yang paling biasa)
+* **NDRE**: Pengesanan tekanan awal denganRedEdge
+* **GNDVI**: Sensitif terhadap kepekatan klorofil
+* **OSAVI**: Berfungsi dengan baik pada tanah yang kelihatan
+* **EVI**: Kawasan dengan indeks kawasan daun tinggi (LAI
+)
 
-* Cipta formula indeks berbilang spektrum tersuai
-* Gunakan matematik band dengan semua saluran imej
+**Formula tersuai:**
+
+* Buat formula indeks multispektral tersuai dengan matematik jalur merentasi semua saluran imej
 * Simpan formula tersuai untuk digunakan semula
+* Formula tersuai adalah ciriChloros
++; ketersediaannya bergantung pada peringkat pelan anda
 
-Untuk semua indeks dan formula yang tersedia, lihat [Formula Indeks Berbilang Spektrum](../project-settings/multispectral-index-formulas.md).
+Untuk semua indeks dan formula yang tersedia — termasuk nama yang hanya terdapat dalam GUI dan yang juga berfungsi dalamCLI
+/SDK
+— lihat [Formula Indeks Multispektral](../project-settings/multispectral-index-formulas.md).
 
 ### Eksport
 
-Mengawal format dan kualiti fail output.
+Mengawal format fail output.
 
-**Format yang tersedia:*** **TIFF (16-bit)**: Disyorkan untuk GIS dan analisis saintifik (julat 0-65,535)
-* **TIFF (32-bit, Peratus)**: Nilai pemantulan titik terapung (julat 0.0-1.0)
-* **PNG (8-bit)**: Mampatan tanpa rugi untuk visualisasi (julat 0-255)
-* **JPG (8-bit)**: Fail terkecil, mampatan lossy (julat 0-255)***
+**Format yang tersedia**(tetapan:**Format imej dikalibrasi**, lalai**TIFF
+(16-bit)**):
 
-## Tetapan Menyimpan dan Memuatkan
+* **TIFF
+(16-bit)**: Disyorkan untuk GIS dan analisis saintifik
+* **TIFF
+(32-bit, Peratus)**: Nilai titik apung
+* **PNG
+(8-bit)**: Pemampatan tanpa kehilangan untuk visualisasi
+* **JPG (8-bit)**: Fail terkecil, pemampatan berkehilangan
+
+Keluaran ditulis di bawah folder projek, dikelompokkan mengikut kamera dan format: `<project>/<camera>/<format>/<Product>_Images/`. Radiance **sentiasa** ditulis sebagai float32 ke dalam folder `tiff32` tanpa mengira tetapan ini. Fail yang dieksport mengekalkan nama fail sumber — folder mengenal pasti produk. Lihat [Menyiapkan Pemprosesan](finishing-the-processing.md) untuk keseluruhan struktur output.
+
+{% hint style="warning" %}
+**Membaca nilai pantulan**: DN yang bermaksud ρ = 1.0 bergantung pada kamera sumber — LATTICE menggunakan 32768 (ditandakan sebagai XMP `Chloros:PixelScale`),Survey3
+menggunakan 65535. Baca tag tersebut dan bukannya menganggapnya sebagai nilai malar. Lihat [Format Imej Keluaran](../output-image-formats.md).
+{% endhint %}
+
+### Penderia Cahaya DAQ
+
+Bahagian ini menyenaraikan setiap fail DAQ downwelling (`.daq` / `.csv`) dalam projek anda, satu baris bagi setiap fail, memaparkan model sensor, nama fail, dan pembetulan **cap** diffuser yang digunakan untuk fail tersebut.
+
+* **Cap keutamaan (semua fail)**: satu menu lungsur tunggal untuk seluruh projek.**Auto** (laluan lalai) menggunakan cap yang dirakam bagi setiap fail — cahaya matahari dianggap wujud jika tiada apa-apa yang dirakam, kerana semua DAQMAPIR
+dihantar dengan pembetul cahaya matahari. Memilih cap akan menimpa setiap fail: rakaman mentah diperbetulkan dengannya, dan rakaman yang sudah mempunyai cap akan dirujuk semula (pembetulan yang dirakam dibatalkan, dan cap yang dipilih digunakan).
+* Baris memberi amaran apabila cap yang direkodkan adalah lalai yang diandaikan oleh hab dan bukannya disahkan oleh pengendali, dan apabila cap yang dipilih tiada profil untuk model peranti tersebut (penguasaan ditolak untuk fail tersebut).
+
+Rakaman DAQ yang dibuat dalam tab Light Sensors ditambah ke projek terbuka secara automatik, dan fail `.daq` / `.csv` yang diimport akan muncul di sini sebaik sahaja ia ditambah.
+
+<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption><p>Tetapan Projek Rendah — Indeks, format Eksport, bahagian Penderia Cahaya DAQ, dan kawalan templat/folder projek</p></figcaption></figure>### Penyelarasan Susunan
+
+Bahagian ini muncul **hanya** apabila sekurang-kurangnya satu imej dalam projek mengandungi transformasi penyelarasan modul-ke-modul yang dicop oleh susunan LATTICE semasa pengambilan (`Chloros:Alignment*` XMP). Ia menunjukkan berapa banyak imej mempunyai tag dan kamera mana yang menjadi rujukan, dengan kawalan berikut:
+
+* **Terapkan penjajaran tatasusunan** (lanjutan: aktif): memutarbelitkan setiap produk yang diproses (debayered / pratonton / sinaran / pantulan / indeks) ke dalam geometri rujukan bersama tatasusunan. Tidak aktif = mengeksport dalam geometri sensor asal.
+* **Pot ke tumpang tindih biasa** (lalai: aktif): pot eksport yang selari ke kawasan yang dikongsi semua modul, supaya setiap jalur mempunyai jejak yang sama. Matikan mengekalkan kanvas penderia penuh (isi hitam di luar sumber).
+* **Pengasingan semula**:**Bilinear (halus, lalai)**,**Terdekat (pelihara nilai tepat)**— tiada pencampuran antara piksel, untuk analisis radiometrik yang ketat — atau**Kubik (paling tajam)**.***
+
+## Menyimpan dan Memuat Tetapan
 
 ### Simpan Templat Projek
 
-Cipta templat boleh guna semula untuk aliran kerja yang konsisten:
+Buat templat yang boleh digunakan semula untuk aliran kerja yang konsisten:
 
-1. Konfigurasikan semua tetapan yang dikehendaki dalam panel Tetapan Projek
-2. Tatal ke bahagian **"Simpan Templat Projek"** di bahagian bawah
-3. Masukkan nama templat deskriptif (cth., "Survey3N\_RGN\_Agriculture")
+1. Konfigurasikan semua tetapan yang diingini dalam panel Tetapan Projek
+2. Tatal ke bahagian **&quot;Simpan Templat Projek&quot;** di bahagian bawah
+3. Masukkan nama templat yang menerangkan (contohnya, &quot;Survey3N
+
+\_RGN\_Agriculture&quot;)
 4. Klik ikon simpan
 
-**Faedah:**
+**Manfaat:**
 
-* Gunakan tetapan yang sama merentas berbilang projek
+* Terapkan tetapan yang sama merentas pelbagai projek
 * Kongsi konfigurasi dengan ahli pasukan
-* Kekalkan konsistensi untuk tinjauan berulang
+* Kekalkan keseragaman untuk tinjauan berulang
 
-### Muatkan Templat pada Projek Baharu
+### Memuat Templat pada Projek Baharu
 
-Apabila membuat projek baharu:
+Apabila mencipta projek baharu:
 
-1. Pilih **"Projek Baharu"** daripada menu utama
-2. Pilih pilihan **"Muat daripada templat"**
-
-3. Pilih templat anda yang disimpan
-4. Semua tetapan digunakan secara automatik
+1. Pilih **&quot;Projek Baharu&quot;** daripada menu utama
+2. Pilih templat projek dalam pemilih templat pilihan
+3. Semua tetapan daripada templat akan digunakan secara automatik
 
 ### Direktori Kerja
 
-Tetapan **"Simpan Folder Projek"** menentukan tempat projek baharu dibuat secara lalai:
+Pengesetan **&quot;Direktori Kerja&quot;** menentukan di mana projek baharu dibuat secara lalai:
 
 * **Lokasi lalai**: `C:\Users\[Username]\Chloros Projects`
-* **Tukar lokasi**: Klik ikon edit dan pilih folder baharu
-* **Bila untuk menukar**:
-  * Pemacu rangkaian untuk kerjasama pasukan
-  * Pemacu yang berbeza dengan lebih banyak ruang storan
-  * Struktur folder tersusun mengikut tahun/pelanggan
+* **Ubah lokasi**: Klik ikon sunting dan pilih folder baharu
+* **Dikongsi denganCLI**: `chloros-cli` menggunakan tetapan folder projek lalai yang sama
+* **Bilakah hendak menukar**:
+  * Pemandu rangkaian untuk kerjasama pasukan
+  * Pemandu berbeza dengan lebih ruang simpanan
+  * Struktur folder yang teratur mengikut tahun/klien
 
 ***
 
-## Persediaan PPK (Kinematik Pasca Diproses).
+## Penyediaan PPK (Kinematik Pascaproses)
 
-Jika menggunakan perakam MAPIR DAQ dengan GPS untuk geolokasi yang tepat:
+Jika menggunakan perekod DAQMAPIR
+
+dengan GPS untuk geolokasi tepat:
 
 ### Prasyarat
 
-* MAPIR DAQ dengan modul GPS (GNSS).
+* DAQMAPIR
+
+dengan modul GPS (GNSS)
 * Fail log .daq dengan entri pin pendedahan
-* Kamera disambungkan ke pin pendedahan DAQ semasa sesi tangkapan
+* Kamera disambungkan ke pin pendedahan DAQ semasa sesi pengambilan
 
 ### Langkah Konfigurasi
 
 1. Letakkan fail log .daq dalam folder projek anda
-2. Dalam Tetapan Projek, dayakan kotak pilihan **"Gunakan pembetulan PPK"**
+2. Dalam Tetapan Projek, aktifkan kotak semak **&quot;Terapkan pembetulan PPK&quot;**
 
-3. Tetapkan**"Zon waktu penderia cahaya mengimbangi"** jika perlu (lalai: 0 untuk UTC)
-4. Tetapkan kamera pada pin pendedahan:
-   * **Kamera tunggal**: Ditugaskan secara automatik kepada Pin 1
-   * **Kamera dwi**: Tetapkan setiap kamera secara manual untuk membetulkan pin**Tugas Pin Pendedahan:*** **Pin Pendedahan 1**: Pilih model kamera daripada lungsur turun
-* **Pin Pendedahan 2**: Pilih kamera kedua atau "Jangan Gunakan"
+3. Tetapkan**&quot;Ofset zon waktu penderia cahaya&quot;** jika perlu (lalai: 0 untuk UTC)
+4. Tugaskan kamera kepada pin pendedahan:
+   * **Satu kamera**: Secara automatik ditugaskan kepada Pin 1
+   * **Dua kamera**: Tugaskan setiap kamera secara manual kepada pin yang betul**Penugasan Pin Pendedahan:*** **Pin Pendedahan 1**: Pilih model kamera daripada senarai lungsur
+* **Pin Pendedahan 2**: Pilih kamera kedua atau &quot;Jangan Gunakan&quot;
 * Kamera yang sama tidak boleh diberikan kepada kedua-dua pin
 
 {% hint style="warning" %}
-**Penting**: Pin pendedahan mesti ditetapkan dengan betul pada kamera masing-masing. Tugasan yang salah akan mengakibatkan data geolokasi yang salah.
+**Penting**: Pin pendedahan mesti ditetapkan dengan betul kepada kamera masing-masing. Penetapan yang salah akan mengakibatkan data geolokasi yang tidak betul.
 {% endhint %}
 
 ***
 
 ## Senario Lanjutan
 
-### Projek Berbilang Kamera
+### Projek Pelbagai Kamera
 
-Apabila memproses imej daripada berbilang kamera MAPIR dalam satu projek:
+Apabila memproses imej daripada beberapa kameraMAPIR
 
-1. Chloros secara automatik mengesan setiap model kamera
-2. Setiap kamera mendapat profil pemprosesan yang sesuai
-3. PPK: Tetapkan setiap kamera secara manual untuk membetulkan pin pendedahan
-4. Semua kamera menggunakan format dan indeks eksport yang sama
+dalam satu projek:
 
-**Contoh**: Survey3W RGN + Survey3N OCN pelantar dwi-kamera
+1.Chloros
 
-### Tinjauan Selang Masa atau Berbilang Tarikh
+mengesan secara automatik setiap model kamera (sama adaSurvey3
+
+atau LATTICE)
+2. Setiap kamera mendapat profil pemprosesan yang sesuai, dan setiap kamera mendapat pokok folder keluaran tersendiri
+3. PPK: Tugaskan secara manual setiap kameraSurvey3
+
+kepada pin pendedahan yang betul
+4. Semua kamera menggunakan format eksport dan indeks yang sama
+
+**Contoh**:Survey3W
+
+RGN
+
++Survey3N
+
+OCN
+
+rig kamera dwi, atau susunan LATTICE yang menggabungkan indukRGB
+
+dengan modul jalur sempit
+
+### Tinjauan Lajur Masa atau Pelbagai Tarikh
 
 Untuk tinjauan berulang di kawasan yang sama dari masa ke masa:
 
 1. Buat templat dengan tetapan standard anda
-2. Gunakan persediaan sasaran penentukuran yang konsisten setiap sesi
+2. Gunakan tetapan sasaran penentukuran yang konsisten setiap sesi
 3. Proses setiap tarikh sebagai projek berasingan
-4. Gunakan tetapan yang sama untuk hasil yang setanding
+4. Gunakan tetapan yang sama untuk keputusan yang boleh dibandingkan
 5. Eksport dalam format yang sama untuk analisis temporal
 
 ### Set Data Besar
 
 Untuk projek dengan banyak imej (500+):
 
-* Pertimbangkan untuk memecahkan projek yang lebih kecil mengikut tarikh atau kawasan
-* Gunakan Chloros+ pemprosesan selari untuk hasil yang lebih pantas
-* Pertimbangkan CLI atau API untuk automasi kelompok
-* Laraskan selang penentukuran semula minimum untuk mengurangkan masa pengesanan sasaran
+* Pertimbangkan untuk membahagikan kepada projek yang lebih kecil mengikut tarikh atau kawasan
+* Gunakan pemprosesan selari untuk keputusan yang lebih pantas
+* PertimbangkanCLI
+
+atauAPI
+
+untuk automasi pukal
+* Laraskan selang penalaan semula minimum untuk mengurangkan masa pengesanan sasaran
 
 ***
 
 ## Mengesahkan Tetapan Anda
 
-Sebelum mula memproses, semak tetapan utama ini:
+Sebelum memulakan pemprosesan, semak tetapan utama ini:
 
 * [ ] Model kamera dikesan dengan betul dalam Pelayar Fail
-* [ ] Pembetulan vignet didayakan
-* [ ] Penentukuran pantulan didayakan
-* [ ] Sekurang-kurangnya satu imej sasaran penentukuran diimport
-* [ ] Indeks berbilang spektrum yang dikehendaki ditambah
-* [ ] Format eksport yang sesuai untuk aliran kerja anda
-* [ ] Tetapan PPK dikonfigurasikan (jika menggunakan .daq dengan peristiwa pendedahan)
+* [ ] Pembetulan vignet diaktifkan
+* [ ] Kalibrasi reflektansi diaktifkan
+* [ ] UntukSurvey3
+
+: sekurang-kurangnya satu imej sasaran kalibrasi diimport dan diperiksa; untuk LATTICE: satu sasaran dan/atau rakaman `.daq` downwelling wujud
+* [ ] Indeks multispektral yang diingini ditambah
+* [ ] Format eksport sesuai untuk aliran kerja anda
+* [ ] Tetapan PPK dikonfigurasikan (jika menggunakan .daq dengan acara pendedahan)
 
 ***
 
@@ -224,4 +332,4 @@ Setelah tetapan anda dikonfigurasikan:
 2. **Mulakan pemprosesan** - Lihat [Memulakan Pemprosesan](starting-the-processing.md)
 3. **Pantau kemajuan** - Lihat [Memantau Pemprosesan](monitoring-the-processing.md)
 
-Untuk butiran lengkap tentang semua tetapan yang tersedia, lihat dokumentasi rujukan [Tetapan Projek](../project-settings/project-settings.md).
+Untuk butiran lengkap mengenai semua tetapan yang tersedia, lihat dokumentasi rujukan [Tetapan Projek](../project-settings/project-settings.md).

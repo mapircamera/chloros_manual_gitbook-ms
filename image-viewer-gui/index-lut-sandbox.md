@@ -1,373 +1,299 @@
 # Kotak Pasir Indeks/LUT
 
-Kotak Pasir Indeks/LUT ialah ruang kerja interaktif dalam Pemapar Imej Chloros yang membolehkan anda mencuba pengiraan indeks berbilang spektrum dan visualisasi warna dalam masa nyata. Alat berkuasa ini membantu anda menguji indeks yang berbeza, memperhalusi julat nilai dan membuat visualisasi sedia penerbitan tanpa memproses semula keseluruhan set data anda.
+Sandbox Indeks/LUT ialah ruang kerja interaktif dalam bar sisi Pemapar Imej Chloros. Anda memilih formula, mengikat saluran kamera anda kepadanya, mewarnakannya dengan gradien dan melaras julat nilai — dan imej akan dikemas kini secara langsung semasa anda melakukannya. Sejak versi 1.2.0, anda juga boleh **menyimpan apa yang telah anda bina**, untuk satu imej atau untuk keseluruhan projek, tanpa pemprosesan semula.
 
-## Apakah itu Kotak Pasir Indeks/LUT?
+## Kegunaan Sandbox
 
-### Tujuan
-
-Kotak Pasir menyediakan:
-
-* **Pengiraan indeks masa nyata** - Gunakan sebarang indeks tumbuh-tumbuhan serta-merta
-* **Pelarasan LUT interaktif** - Perhaluskan kecerunan dan julat warna
-* **Pengoptimuman aliran kerja** - Tentukan tetapan terbaik sebelum pemprosesan kelompok
-
-### Kotak pasir lwn. Pemprosesan Projek
-
-**Kotak Pasir Indeks/LUT (Interaktif):**
-
-* Imej tunggal pada satu masa
-* Maklum balas segera
-* Eksperimen dan berulang
-* Tiada perubahan kekal pada fail
-* Sesuai untuk meneroka dan menguji
-
-**Pemprosesan Projek (Batch):**
-
-* Keseluruhan set data sekali gus
-* Tetapan pra-konfigurasi
-* Fail keluaran kekal
-* Intensif masa
-* Terbaik apabila tetapan dimuktamadkan
+| Sandbox Indeks/LUT (interaktif)        | Pemprosesan Projek (batch)       |
+| -------------------------------------- | -------------------------------- |
+| Satu imej pada satu masa, maklum balas segera  | Keseluruhan set data dalam satu larian     |
+| Eksperimental dan berulang-ulang             | Tetapan yang telah ditetapkan          |
+| Menghasilkan secara langsung; menyimpan hanya apabila diminta  | Sentiasa menulis fail produk      |
+| Sesuai untuk mencari tetapan yang betul | Terbaik setelah tetapan muktamad |
 
 {% hint style="success" %}
-**Aliran Kerja Terbaik**: Gunakan Kotak Pasir untuk mencuba dan mencari tetapan indeks dan LUT yang optimum, kemudian gunakan tetapan tersebut semasa Pemprosesan Projek untuk keseluruhan set data anda.
+**Aliran kerja biasa**: laraskan di Sandbox sehingga visualisasinya memuaskan hati anda, kemudian sama ada eksport terus dari Sandbox, atau salin tetapan indeks dan LUT yang sama ke dalam [Tetapan Projek](../project-settings/project-settings.md) supaya larian pemprosesan seterusnya menyematkannya ke dalam setiap imej.
 {% endhint %}
 
 ***
 
-## Bekerja dengan Kotak Pasir Indeks/LUT
+## Membuka Sandbox
 
-### Memahami Indeks Pra-Kira
+1. Klik imej dalam grid — ia akan dibuka penuh skrin dalam tab **Pemandang Imej** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">
+2. Klik ikon **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> untuk membuka bar sisi kiri jika ia belum terbuka
+3. Pilih lapisan berbilang jalur daripada menu lungsur lapisan di bahagian atas kanan — **RAW (Reflectance)** adalah pilihan biasa, kerana nilai indeks yang dikira pada pantulan yang dikalibrasi boleh dibandingkan antara imej
 
-Dalam Chloros, indeks boleh digunakan semasa pemprosesan projek. Untuk menentukan tetapan indeks dan LUT yang anda mahu gunakan untuk eksport, adalah paling mudah untuk menggunakan kotak pasir pemapar imej.
+Bar sisi memaparkan, dari atas ke bawah:
 
-Kotak pasir membolehkan anda:
+* nama imej dan model kameranya
+* butang **Eksport/Simpan Imej(e)** — muncul setelah Indeks atau LUT dicentang
+* kotak semak **Indeks**dan**LUT**
+* panel konfigurasi indeks
+* panel **Nilai Kursor** dengan bacaan, histogram dan kawalan GSD
 
-* **Gunakan indeks dan kecerunan warna (LUT) baharu** untuk menggambarkan data
-* **Laraskan tetapan visualisasi** secara interaktif
-* **Lihat** imej indeks yang telah dikira
-* **Periksa** nilai piksel pada semua peringkat zum
+{% hint style="warning" %}
+**Tidak tersedia untuk kamera mono.** Pada imej LATTICE M3M jalur tunggal, kedua-dua kotak semak dilumpuhkan, dengan petua alat _&quot;Tidak tersedia untuk penderia mono (M3M)&quot;_ — indeks berbilang jalur tidak ditakrifkan pada satu jalur. Untuk mengira indeks daripada kamera M3M, gabungkan dua atau lebih menjadi susunan berbilang jalur yang selari dan gunakan enjin indeks LATTICE.
+{% endhint %}
 
-### Membuka Kotak Pasir
+***
 
-Kotak Pasir Indeks/LUT diakses dalam **Pemapar Imej** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab bar sisi:
+## Mengaplikasikan indeks
 
-1. Klik imej dalam grid imej penyemak imbas fail, ia dibuka dalam tab **Pemapar Imej** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab
-2. Klik **Pemapar Imej** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab untuk membuka bar sisi pop keluar kiri jika ia belum dibuka
+1. Centang kotak **Index** di bahagian atas bar sisi
+2. Pilih penapis kamera anda daripada lungsur kiri (`RGN`, `OCN`, `NGB`, `RGB`, `RE`, `NIR`)
+3. Pilih formula indeks daripada menu lungsur di sebelah kanan — 27 formula terbina dalam, serta sebarang formula tersuai yang telah anda simpan
+4. Formula itu dipaparkan sebagai persamaan matematik di bawah, dengan bulatan kosong pada setiap slot jalur. **Seret bulatan saluran berwarna ke atas slot** untuk mengikatnya
+5. Setelah setiap slot yang digunakan oleh formula diikat, imej akan dikemas kini dan memaparkan nilai indeks
+6. Pindahkan penunjuk ke atas imej untuk membaca nilai; panel **Nilai Penunjuk** menambah baris indeks dengan nilai di bawah penunjuk
 
-### Memilih Imej untuk Menggunakan Indeks/LUT
+Klik dua kali slot yang terikat untuk membersihkannya. Formula tidak lengkap adalah keadaan tarikan pertengahan yang normal, bukan ralat — imej tidak akan dikemas kini sehingga formula itu lengkap.
 
-Untuk bekerja dengan indeks dalam kotak pasir Pemapar Imej <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">:
+Lingkaran saluran berwarna kod: merah = Red, hijau = Green, biru = Blue, jingga = Orange, sian = Cyan, ungu = NIR, magenta = RE. Warna yang sama digunakan untuk titik saluran dan lengkung histogram dalam panel Nilai Penunjuk.
 
-1. **Buka imej** dari grid imej utama dengan mengklik padanya
-2. Tab **Pemapar Imej** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> kemudiannya akan dibuka
-3. Klik menu lungsur **Lapisan** (atas kanan pemapar)
-4. Pilih lapisan daripada menu lungsur:
-   * RAW (Pantulan)
-
-### Menggunakan Indeks pada Imej
-
-Sebaik sahaja imej berada dalam skrin penuh dan bar sisi tab **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> dibuka:
-
-1. Tandakan kotak Indeks di bahagian atas bar sisi
-2. Pilih penapis kamera anda daripada menu lungsur kiri
-3. Pilih formula indeks yang dikehendaki daripada menu lungsur kanan
-4. Seret bulatan warna saluran penapis ke lokasi dalam formula indeks di bawah
-5. Setelah formula sah, imej akan mengemas kini dan menunjukkan nilai indeks
-6. Gerakkan kursor tetikus anda untuk melihat nilai di lokasi kursor
-7. Zum masuk untuk melihat piksel individu dan nilai yang berkaitan dengannya
-
-Setiap indeks mempunyai julat nilai dan makna tertentu:
-
-#### Contoh NDVI
+### Contoh Indeks NDVI
 
 ```
 
 Formula: (NIR - Red) / (NIR + Red)
 
-For Survey3W RGN camera:
-NIR = 850nm band
-Red = 661nm band
+For a Survey3W RGN camera:
+  NIR = 850 nm band
+  Red = 661 nm band
 
-Result range: -1.0 to +1.0
-Typical vegetation: 0.4 to 0.9
-Stressed vegetation: 0.2 to 0.4
-Bare soil: 0.0 to 0.2
-Water: -0.1 to 0.1
+Result range:          -1.0 to +1.0
+Typical vegetation:     0.4 to 0.9
+Stressed vegetation:    0.2 to 0.4
+Bare soil:              0.0 to 0.2
+Water:                 -0.1 to 0.1
 ```
 
-Untuk dokumentasi formula indeks yang lengkap, lihat [Formula Indeks Berbilang Spektrum](../project-settings/multispectral-index-formulas.md).
+Untuk rujukan formula lengkap — ketiga-tiga senarai pratetap dan nama yang berfungsi di mana — lihat [Formula Indeks Multispektral](../project-settings/multispectral-index-formulas.md).
+
+### Dengan Indeks dicentang tetapi tiada LUT
+
+Imej dilukis dalam **skala kelabu**, diregangkan di antara dua nilai ambang. Ini disengajakan: imej indeks adalah data skalar, dan skala kelabu adalah pameran yang paling tepat untuknya. Tambah LUT apabila anda mahukan warna.***
+
+## Menggunakan LUT (Jadual Rujukan)
+
+Jadual Rujukan (Look-Up Table) memetakan nilai indeks kepada warna: input NDVI 0.65, output hijau tertentu. Ia tidak mengubah data — ia mengubah cara anda membacanya.
+
+### Menambah LUT
+
+1. Klik butang **<img src="../.gitbook/assets/image (1) (1) (1).png" alt="" data-size="line">&quot;+ Tambah LUT&quot;** di bawah formula
+2. Pilih gradasi warna
+3. Tetapkan minimum dan maksimum pemotongan
+4. Pilih Mod Pemotongan
+5. Centang kotak **LUT** di bar sisi untuk memaparkannya
+
+Kotak semak **LUT** kekal dilumpuhkan sehingga LUT benar-benar telah dikonfigurasikan pada indeks.
+
+### Memilih gradasi warna
+
+Tudingkan tetikus pada **bar gradasi**untuk membuka senarai pratetap — Chloros disertakan dengan**tujuh** pratetap gradasi:
+
+| # | Gradasi                            | Bentuk                                                               |
+| - | ----------------------------------- | ------------------------------------------------------------------- |
+| 1 | Red → Kuning → Green (**lalai**)  | Berpencar — menepati intuisi vegetasi biasa, hijau = sihat |
+| 2 | Ungu → Kuning → Green             | Berpencar, dengan hujung gelap yang ketara                                  |
+| 3 | Coklat → Putih → Blue                | Berpencar di sekitar titik tengah cerah                                   |
+| 4 | Hitam → Ungu → Merah jambu → Kuning pucat | Bersiri, gelap ke cerah                                           |
+| 5 | Red → Kuning → Blue                 | Berpencar di sekitar titik tengah yang terang                                   |
+| 6 | Ungu → Blue → Green → Kuning      | Bersiri, gelap ke terang                                           |
+| 7 | Orange → Putih → Ungu             | Berpencar di sekitar titik tengah yang terang                                   |
+
+Gradien **menyebar**meletakkan warna neutral di tengah tetingkap anda, yang sesuai digunakan apabila titik tengah itu bermaksud sesuatu (seperti ambang atau tarikh asas). Gradien**berurutan** bergerak secara monoton daripada gelap ke terang, yang sesuai untuk kuantiti yang hanya mempunyai &quot;lebih&quot; dan &quot;kurang&quot;.
+
+Setiap pratet mempunyai tujuh hentian warna. Klik pratet dan imej akan dikemas kini serta-merta (apabila kotak LUT dicentang).
+
+### Mengedit hentian warna
+
+Di bawah bar gradien terdapat satu baris sampel warna, satu untuk setiap hentian:
+
+* **Menukar warna**: klik sampel warna untuk membuka pemilih warna (roda warna, gelangsar RGB/HSV, atau kod hex seperti `#FF0000`)
+* **Tambah hentian**: klik butang**+** di hujung baris — satu hentian putih akan ditambah
+* **Keluarkan hentian**:**klik dua kali** pada sampel warna
+* **Simpan gradien yang disunting**: klik ikon simpan di sebelah bar gradien untuk menambah gradien yang telah anda sunting ke dalam senarai pratetap supaya anda boleh memilihnya semula
+
+Gradien yang telah anda konfigurasikan pada indeks disimpan bersama indeks tersebut dalam tetapan projek, jadi ia kekal walaupun projek ditutup dan dibuka semula.
+
+**Lebih sedikit hentian**menghasilkan zon yang jelas yang terbaca sebagai pengelasan;**lebih banyak hentian** menghasilkan peralihan yang lancar, hampir seperti fotografi. Tiga hingga lima hentian sesuai untuk slaid pembentangan dan peta pengelasan; enam hingga sepuluh sesuai untuk analisis umum; lima belas atau lebih sesuai untuk pemeriksaan terperinci dan carta penerbitan.
+
+### Menetapkan julat nilai
+
+Kawal selia ambang adalah **gelangsar dwi-pemegang**yang berjalan dari −1 hingga +1, dengan kotak teks boleh sunting di setiap hujung untuk nilai tepat, dan butang**AUTO**.
+
+* Seret mana-mana pemegang, atau taip nombor ke dalam kotaknya dan tekan Enter
+* **AUTO**menetapkan julat kepada**peratusan ke-2 dan ke-98** nilai indeks sah imej — satu titik permulaan yang baik yang mengabaikan nilai luar biasa. Chloros mengebulatkan hasil secara adaptif, kepada 4 tempat perpuluhan untuk julat yang sangat sempit, 3 untuk julat yang sempit, dan 2 sebaliknya
+* Sebarang pelarasan manual diutamakan berbanding AUTO sehingga anda menekan AUTO semula
+
+Contoh tetingkap NDVI:
+
+| Matlamat                                    | Min  | Max |
+| --------------------------------------- | ---- | --- |
+| Tunjukkan semuanya                         | −1.0 | 1.0 |
+| Vegetasi sahaja, kecualikan tanah dan air | 0.2  | 0.9 |
+| Tumbuhan sihat sahaja                 | 0.5  | 0.9 |
+| Tekankan tekanan                     | 0.2  | 0.5 |
+
+Mengecilkan tetingkap meningkatkan kontras dalam kawasan minat anda dan menolak segala-galanya yang lain ke luar julat — di mana **Mod Pemotongan** menentukan apa yang berlaku kepadanya.***
+
+## Mod pemotongan
+
+Apabila nilai indeks piksel jatuh di luar tetingkap min/maks, Mod Pemotongan menentukan bagaimana ia dilukis.
+
+| Label lungsur                  | Nilai yang disimpan      | Pigmen yang berada di luar julat dilukis sebagai                                                                                                |
+| ------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Minimum &amp; Maksimum** (lalai) | `clip`            | Warna hujung terdekat pada rona — nilai di bawah minimum mengambil warna pertama, nilai di atas maksimum mengambil warna terakhir |
+| **Latar Belakang Telus**      | `transparent`     | Telus sepenuhnya (alpha sebenar)                                                                                                  |
+| **Latar Belakang Indeks**| `indexColor`      | Skala kelabu, diregangkan merentasi julat indeks**penuh** imej, jadi struktur di luar julat masih kelihatan dalam warna kelabu                |
+| **Latar Belakang Asal**         | `backgroundColor` | Imej asas itu sendiri, jadi lapisan warna terletak di atas pemandangan sebenar                                                |
+
+| Mod                       | Terbaik untuk                               | Rupa                                      |
+| -------------------------- | -------------------------------------- | ----------------------------------------- |
+| **Minimum &amp; Maksimum**      | Paparan data penuh, analisis saintifik | Setiap piksel diberi warna                |
+| **Latar Belakang Telus**    | Lapisan GIS, mengasingkan jalur nilai   | Warna di dalam tetingkap, tiada di luar |
+| **Latar Belakang Indeks**       | Penekanan sambil mengekalkan konteks data    | Berwarna di dalam, kelabu di luar               |
+| **Latar Belakang Asli**    | Laporan dan pembentangan              | Berwarna di dalam, gambar di luar         |
+
+{% hint style="info" %}
+Piksel tanpa data sentiasa telus, dalam setiap mod.Piksel yang indeksnya tidak terhingga (pembahagian 0/0) atau tepatnya −1.0 atau +1.0 (penjaga ketepuan, apabila satu jalur dibaca sifar manakala yang lain tidak) dianggap sebagai tiada data dan bukannya nilai melampau. Ini memastikan sorotan yang melampau dan bayang-bayang gelap tidak muncul dalam skala warna anda, bukannya diwarnakan sebagai bacaan paling melampau dalam bingkai. Peraturan yang sama menentukan piksel mana yang menyumbang kepada ambang AUTO dan histogram indeks, jadi ketiga-tiganya sepadan.
+{% endhint %}
+
+Keterbeningan dikekalkan apabila eksport ditulis sebagai PNG. Ia tidak dapat diwakili dalam JPG.
 
 ***
 
-## Bekerja dengan LUT (Jadual Carian)
+## Membaca nilai semasa melaras
 
-### Apakah itu LUT?
+Panel **Nilai Penunjuk** di bawah panel konfigurasi adalah instrumen pengukuran untuk Sandbox:
 
-**Jadual Carian Atas (LUT)** memetakan nilai indeks berangka kepada warna untuk visualisasi:
+* Gerakkan penunjuk ke atas imej dan baca nilai sumber bagi setiap saluran, serta nilai indeks dalam barisnya sendiri
+* Hidupkan butang **INDEX** di atas histogram untuk melihat pengagihan nilai indeks dalam bingkai, dengan dua ambang klip anda digambarkan sebagai garisan putus-putus jingga dan nilai kursor sebagai garisan putih — ini adalah cara terpantas untuk memilih tetingkap yang sebenarnya mengandungi data anda
+* Hidupkan **CURSOR** untuk melihat garisan penanda pada nilai di bawah penuding
+* Zum melebihi 60× (kurang jika saiz blok GSD ditetapkan) untuk menyerlahkan piksel individu yang dipaparkan dengan nilai terapung
 
-* **Input**: Nilai piksel indeks (cth., NDVI 0.65)
-* **Output**: Warna RGB (cth., hijau terang)
-* **Tujuan**: Jadikan corak lebih mudah dilihat dan ditafsir**Skala kelabu lwn. Warna LUT:**
+Rutin praktikal:
 
-* Skala kelabu: Saintifik dan neutral, menunjukkan data mentah
-* Warna LUT: Intuitif dan berkesan, menyerlahkan corak dan perbezaan
-
-{% hint style="success" %}
-**Kuasa Visualisasi**: Menggunakan LUT warna pada imej indeks skala kelabu menjadikannya secara dramatik lebih mudah untuk mengenal pasti corak, anomali dan kawasan yang diminati sepintas lalu.
-{% endhint %}
-
-### Menggunakan LUT pada Imej Indeks
-
-Sebaik sahaja anda mempunyai imej indeks yang ditunjukkan
-
-1. Klik butang <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> "+Tambah LUT"
-2. Pilih kecerunan warna
-3. Laraskan titik akhir min/maks keratan
-4. Laraskan Mod Keratan
-5. Tandai kotak Indeks dalam **Pemapar Imej** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> bar sisi tab untuk menggunakan LUT
-
-### Memilih Kecerunan Warna
-
-**Memilih kecerunan:**
-
-1. Dalam panel LUT, cari**bar kecerunan berwarna**
-
-2. Tuding tetikus anda di atasnya untuk melihat pratetap kecerunan yang tersedia
-3. Pilih kecerunan yang dikehendaki
-4. Imej **kemas kini serta-merta** dengan warna baharu apabila kotak Indeks ditandakan
-
-{% hint style="success" %}
-**Amalan Terbaik**: Untuk indeks tumbuh-tumbuhan seperti NDVI, kecerunan Red-Yellow-Green adalah paling intuitif kerana ia selaras dengan persatuan warna semula jadi (hijau=sihat, kuning=sederhana, merah=tekanan).
-{% endhint %}
-
-### Melaraskan Kelas Warna
-
-**Kawalan Kelas**menentukan bilangan langkah warna diskret yang muncul dalam kecerunan anda:**Pilihan kiraan kelas:*** **2-5 kelas**: Kategori yang sangat luas, zon yang berbeza
-* **6-10 kelas**: Seimbang, bagus untuk pengelasan
-* **11-20 kelas**: Kecerunan licin, penampilan berterusan
-* **20+ kelas**: Hampir berterusan, kelancaran maksimum**Cara melaraskan:**
-
-1. Dalam panel LUT, cari**petak swatch warna di bawah bar kecerunan**
-
-2. Laraskan bilangan kelas dengan menambah dengan butang +
-3. Keluarkan bilangan kelas dengan mengklik dua kali pada swatch warna
-4. Kemas kini kecerunan **dalam masa nyata** pada imej**Kesan pada visualisasi:*** **Kurang kelas** (3-5): Mencipta zon berbeza, klasifikasi dipermudahkan, lebih mudah untuk membezakan kategori
-* **Kelas sederhana** (6-10): Pendekatan seimbang, bagus untuk kebanyakan aplikasi
-* **Lagi kelas** (15-20): Peralihan lancar, variasi terperinci, penampilan fotografi**Bila hendak digunakan:*** **Beberapa kelas (3-5)**: Slaid pembentangan, peta klasifikasi, laporan ringkas
-* **Kelas sederhana (6-10)**: Analisis umum, perincian seimbang, laporan standard
-* **Banyak kelas (15-20)**: Analisis saintifik, pemeriksaan terperinci, output kualiti penerbitan
-
-### Julat Nilai Penalaan Halus
-
-**kawalan julat nilai**menentukan nilai indeks yang memetakan warna dalam kecerunan anda:**Kawalan julat dalam panel LUT:*** **Nilai minimum**: Sempadan bawah skala warna
-* **Nilai maksimum**: Sempadan atas skala warna
-* **Nilai perantaraan**: Diedarkan secara automatik antara min dan maks (berdasarkan kiraan kelas)
-
-#### Melaraskan Nilai Min/Maks
-
-**Untuk melaraskan julat nilai:**
-
-1. Dalam panel LUT, cari medan input**Min Value**dan**Max Value**
-
-2. Klik medan**Nilai Min**
-
-3. Taip nilai minimum yang dikehendaki (cth., `0.2`)
-4. Tekan **Enter** atau klik di luar medan
-5. Ulang untuk medan **Nilai Maks** (cth., `0.9`)
-6. Visualisasi **kemas kini serta-merta**{% hint style="info" %}**Penskalaan Auto**: Apabila anda mula-mula menggunakan LUT, Chloros secara automatik menetapkan min/maks kepada julat data sebenar dalam imej. Anda kemudiannya boleh mengecilkan julat ini untuk memfokuskan pada julat nilai minat tertentu.
-{% endhint %}
-
-**Contoh pelarasan julat NDVI:*** **Julat penuh**: `-1.0` hingga `1.0` (tunjukkan semua nilai yang mungkin)
-* **Tertumpu kepada tumbuh-tumbuhan**: `0.2` hingga `0.9` (tidak termasuk tanah kosong dan air)
-* **Tumbuhan yang sihat sahaja**: `0.5` hingga `0.9` (serlahkan hanya tumbuhan yang cergas)
-* **Pengesanan tekanan**: `0.2` hingga `0.5` (menekankan kawasan masalah)
-* **Julat tersuai**: Laraskan berdasarkan nilai piksel yang anda perhatikan**Mengapa melaraskan julat?*** **Tingkatkan kontras** dalam kawasan minat anda
-* **Kecualikan nilai yang tidak berkaitan** (cth., badan air, tanah kosong)
-* **Standarkan visualisasi** merentas berbilang imej atau tarikh
-* **Tekankan perbezaan halus** dalam julat nilai yang sempit
-
-### Menggunting Nilai Luar Julat
-
-Apabila nilai piksel berada di luar julat min/maks yang ditentukan, anda boleh mengawal cara ia dipaparkan menggunakan **mod keratan**.
-
-#### **Pilihan mod keratan yang tersedia:**
-
-#### 1. Minimum dan Maksimum
-
-* Piksel **di bawah minimum**→ paparan menggunakan**warna pertama** dalam kecerunan (cth., merah)
-* Piksel **di atas maksimum**→ paparan menggunakan**warna terakhir** dalam kecerunan (cth., hijau)
-* **Kes penggunaan**: Tekankan keterlaluan, tunjukkan julat data penuh dengan warna tepu pada had
-* **Contoh**: Nilai NDVI di bawah 0.2 semuanya kelihatan merah, nilai di atas 0.9 semuanya kelihatan hijau
-
-#### 2. Latar Belakang Lutsinar
-
-* Piksel **di luar julat**menjadi**lutsinar sepenuhnya*** Hanya piksel **dalam julat** menunjukkan kecerunan warna
-* **Kes penggunaan**: Tindanan GIS, mengasingkan julat nilai tertentu, menyerlahkan kawasan yang menarik sahaja
-* **Contoh**: Tunjukkan hanya NDVI 0.4-0.7 dalam warna, semua yang lain telus
-
-{% hint style="warning" %}
-**Penghadan Ketelusan**: Piksel lutsinar akan muncul sebagai warna latar belakang dalam pemapar. Apabila dieksport semasa pemprosesan, ketelusan dikekalkan dalam format PNG tetapi bukan dalam JPG.
-{% endhint %}
-
-#### 3. Latar Belakang Indeks
-
-* Piksel **julat luar**dipaparkan dalam**skala kelabu** (menunjukkan nilai indeks mentah)
-* Piksel **dalam julat**menunjukkan**kecerunan warna*** **Kes penggunaan**: Serlahkan halus, kekalkan konteks sambil menekankan bidang yang diminati
-* **Contoh**: Tumbuhan bertekanan yang diserlahkan warna (NDVI 0.3-0.5) sambil menunjukkan kawasan yang sihat dalam warna kelabu
-
-#### 4. Latar Belakang Asal
-
-* Piksel **julat luar**memaparkan**imej berbilang spektrum asal*** Piksel **dalam julat**menunjukkan**kecerunan warna*** **Kes penggunaan**: Paling intuitif - menggabungkan konteks imej semula jadi dengan tindanan warna analitik
-* **Contoh**: Lihat rupa medan/pangkas sebenar dengan kawasan tegasan berkod warna bertindih
-
-### Memilih Mod Keratan yang Betul
-
-| Mod Keratan | Terbaik Untuk | Gaya Visualisasi |
-| -------------------------- | ------------------------------------------ | ---------------------------- |
-| **Minimum dan Maksimum** | Paparan data penuh, analisis saintifik | Semua piksel berwarna |
-| **Latar Belakang Lutsinar** | Tindanan GIS, mengasingkan julat tertentu | Warna pada julat, kosong melebihi |
-| **Latar Belakang Indeks** | Penekanan halus, mengekalkan konteks data | Warna pada julat, kelabu melebihi |
-| **Latar Belakang Asal** | Laporan, pembentangan, analisis intuitif | Warna pada julat, foto melebihi |
-
-### Mencipta Warna LUT Tersuai
-
-Untuk kawalan penuh ke atas visualisasi anda, anda boleh mencipta **kecerunan warna tersuai** dengan mengedit hentian warna individu.**Untuk mencipta kecerunan tersuai:**
-
-1. Dalam panel LUT, cari**bar pratonton kecerunan**
-
-2. Cari**petak swatch warna** di bawah kecerunan
-3. **Klik hentian warna** untuk memilihnya
-4. **pemilih warna** dibuka
-5. Pilih warna baharu menggunakan:
-   * **Roda warna**: Pemilihan warna visual
-   * **Peluncur RGB/HSV**: Kawalan warna yang tepat
-   * **Entri kod Hex**: Spesifikasi warna yang tepat (cth., `#FF0000` untuk merah)
-6. Klik pada pemilih warna **untuk menggunakan warna baharu**
-
-7. Kecerunan**kemas kini serta-merta** pada imej**Menambah atau mengalih keluar warna berhenti:*** **Tambah hentian**: Klik ikon + untuk menambah swatch baharu di penghujung
-* **Alih keluar hentian**: Klik dua kali pada segi empat sama warna untuk mengeluarkan swatch**Strategi penyesuaian:*** **Kecerunan terbalik**: Terbalikkan susunan warna untuk membalikkan maksud (cth., hijau=rendah, merah=tinggi)
-* **Warna jenama**: Padankan palet warna organisasi anda untuk laporan
-* **Mesra rabun warna**: Gunakan gabungan oren-biru atau ungu-kuning
-* **Pengoptimuman cetakan**: Pilih warna yang berfungsi dalam kedua-dua percetakan warna dan skala kelabu
-* **Berbilang ambang**: Gunakan warna yang berbeza pada ambang nilai tertentu untuk pengelasan
-
-{% hint style="info" %}
-**Menyimpan Kecerunan Tersuai**: Kecerunan tersuai boleh disimpan dan digunakan semula. Klik ikon simpan dalam panel LUT untuk mengekalkan skema warna tersuai anda untuk kegunaan masa hadapan.
-{% endhint %}
+1. Catatkan nilai di atas vegetasi sihat, vegetasi tertekan, tanah terbukak dan air
+2. Perhatikan di mana kluster-kluster itu terletak pada histogram indeks
+3. Tetapkan min/maks untuk membingkai kluster yang anda ambil berat
+4. Pilih mod pemangkasan — _Latar Belakang Asli_ mengekalkan pemandangan di sekelilingnya dapat dilihat
 
 ***
 
-## Aliran Kerja Interaktif
+## Mengeksport dari Sandbox
 
-### Kemas Kini Masa Nyata
+Semua yang di atas adalah pratonton langsung sehingga anda menyimpannya. Butang **Eksport/Simpan Imej(e)** di bahagian atas bar sisi akan membuka satu tetingkap yang tergelincir di atas bar sisi (bukannya menutupi imej, supaya anda masih boleh melihat apa yang anda pertimbangkan).
 
-Semua pelarasan LUT dalam kotak pasir mengemas kini imej **segera dan interaktif**:
+<figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>### Pilihan
 
-* **Tukar lapisan** → Imej berubah serta-merta
-* **Pilih kecerunan** → Kemas kini warna serta-merta
-* **Laraskan julat nilai** → Kontras perubahan dalam masa nyata
-* **Tukar kelas** → Kemas kini kelancaran kecerunan serta-merta
-* **Ubah suai keratan** → Paparan latar belakang berubah serta-merta
-* **Edit warna** → Kecerunan tersuai digunakan serta-merta**Tiada butang "Guna" diperlukan** - semua perubahan adalah secara langsung dan interaktif!
+| Pilihan                          | Kesan                                                                                                                                                |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Terapkan pada imej semasa**      | Menyimpan imej yang dipaparkan tepat seperti mana, dengan tetapan ini                                                                                                |
+| **Terapan pada semua imej projek** | Mengjalankan semula konfigurasi yang sama pada setiap imej dalam projek. Imej yang tiada jalur yang diperlukan oleh indeks ini akan dilangkau, dan tidak dianggap sebagai kegagalan |
+| **Bar gradien Indeks/LUT**      | Juga menulis imej legenda berasingan bagi setiap eksport, dengan julat nilai dilabelkan                                                                     |
+| **Histogram Indeks**             | Juga menulis imej histogram berasingan bagi setiap eksport, memaparkan data min/maks dan ambang klip                                               |
 
-{% hint style="success" %}
-**Maklum Balas Langsung**: Maklum balas visual segera membolehkan anda bereksperimen dengan pantas dengan tetapan berbeza sehingga anda menemui visualisasi optimum untuk keperluan analisis anda.
-{% endhint %}
+Jika **saiz blok GSD** tab imej melebihi 1, panel akan memberitahu anda sebelum anda mengesahkan: eksport akan menyimpan apa yang anda lihat, termasuk purata blok. Tetapkan kawalan GSD kembali kepada 1 terlebih dahulu jika anda mahukan resolusi penuh.
 
-### Aliran Kerja Penapisan Berulang
+### Ke mana fail disimpan
 
-**Aliran kerja pengoptimuman LUT biasa:**
+Setiap klik pada **Eksport**akan memperuntukkan satu**folder baru yang tidak pernah digunakan semula**:
 
-1.**Pilih lapisan indeks** (cth., RAW (Pantulan))
-2. **Gunakan indeks** - Pilih penapis kamera dan formula indeks, seret bulatan berwarna ke lokasi yang sesuai dalam formula indeks
-3. **Gunakan kecerunan LUT** - Mulakan dengan pratetap Red-Yellow-Green
-4. **Periksa nilai piksel** - Gerakkan kursor ke sekeliling, julat nilai nota
-5. **Laraskan min/maks** - Sempit untuk memfokus pada tumbuh-tumbuhan (cth., 0.2 hingga 0.9)
-6. **Pilih keratan** - Cuba "Latar Belakang Asal" untuk konteks
-7. **Perhalusi warna** - Sesuaikan kecerunan jika diperlukan untuk penekanan khusus
-8. **Tamatkan tetapan**- Tetapan dokumen dan salin ke Tetapan Projek untuk pemprosesan eksport
+```
+<project folder>/Sandbox_Exports/<IndexName>_<Index|LUT>_<NNN>/
+```
 
-### Pemeriksaan Nilai Piksel
+Contohnya: `Sandbox_Exports/NDVI_LUT_001/`, kemudian `Sandbox_Exports/NDVI_LUT_002/` untuk larian seterusnya. Penomboran ini diperoleh dengan mengimbas apa yang sudah ada pada cakera, jadi ia kekal walaupun anda memulakan semula atau memadamkan folder secara manual. Tiada apa-apa yang akan ditimpa — tujuan utama Sandbox adalah untuk membandingkan satu percubaan dengan yang sebelumnya.
 
-Memahami nilai piksel sebenar adalah penting untuk menetapkan julat LUT yang berkesan:**Cara memeriksa nilai:**
+Di dalam folder, bagi setiap imej:
 
-1. Nilai piksel menunjukkan apabila imej mempunyai sama ada Indeks, atau kedua-dua Indeks dan LUT**kotak ditandai**.
-2. **Alihkan kursor anda** ke atas kawasan imej yang berbeza
-3. **Perhatikan nilai piksel** yang dipaparkan dalam legenda semasa anda menuding
-4. Zum masuk untuk melihat piksel individu yang diserlahkan dengan nilai terapung
-5. **Ambil nota** julat nilai untuk ciri yang berbeza:
-   * **Tumbuhan yang sihat**: cth., NDVI 0.55-0.85
-   * **Tumbuhan tertekan**: cth., NDVI 0.30-0.50
-   * **Tanah kosong**: cth., NDVI 0.05-0.25
-   * **Air** (jika ada): cth., NDVI -0.05 hingga 0.10**Menggunakan nilai piksel untuk menetapkan julat LUT:**Selepas memeriksa nilai piksel, laraskan LUT min/maks anda dengan sewajarnya:**Contoh senario:*** **Pemerhatian**: Nilai tanah = 0.05-0.25, Tertekan = 0.25-0.50, Sihat = 0.50-0.85
-* **Matlamat**: Visualisasikan kesihatan tumbuhan sahaja (tidak termasuk tanah)
-* **Tetapan LUT**: Min = `0.25`, Maks = `0.85`
-* **Keratan**: "Latar Belakang Asal" untuk melihat tanah dalam warna semula jadi
-* **Hasil**: Kecerunan warna hanya digunakan pada tumbuh-tumbuhan, tanah ditunjukkan sebagai imej asal
+| Fail                                                   | Kandungan                                                   |
+| ------------------------------------------------------ | ---------------------------------------------------------- |
+| `<source name>_<IndexName>_<Index\|LUT>.png`           | Imej yang dirender, piksel demi piksel apa yang dipaparkan oleh pemapar |
+| `<source name>_<IndexName>_<Index\|LUT>_legend.png`    | Fail sampingan bar gradien, jika diminta                     |
+| `<source name>_<IndexName>_<Index\|LUT>_histogram.png` | Fail sampingan histogram indeks, jika diminta                  |
 
-{% hint style="info" %}
-**Julat Dinamik**: Tanaman, musim dan peringkat pertumbuhan yang berbeza akan mempunyai julat nilai yang berbeza. Sentiasa periksa nilai piksel dalam set data khusus anda sebelum menetapkan julat LUT.
-{% endhint %}
+Kedua-dua sidecar sentiasa ditulis pada **resolusi penuh**, walaupun imej utama di-block-average: saiz blok adalah resolusi paparan, dan kedua-dua sidecar membaca nilai indeks sebenar setiap piksel. Mereka juga mencetak lebih banyak maklumat berbanding versi pada skrin — kedua-duanya mencatat tetingkap regangan _dan_ nilai min/maks sebenar data, jadi legenda yang disimpan masih boleh dibaca beberapa bulan kemudian tanpa membuka projek.
+
+### Kemajuan dan keputusan
+
+Eksport keseluruhan projek mengambil masa beberapa minit, jadi jalannya proses melaporkan kemajuan melalui saluran langsung dan bukannya menunggu:
+
+* Bar kemajuan memaparkan `current / total` dan fail yang sedang ditulis
+* Apabila selesai, panel melaporkan berapa banyak imej telah dieksport, berapa banyak yang dilangkau, dan laluan folder output
+* Imej yang dilangkau disenaraikan dengan sebabnya (sehingga lima ditunjukkan, kemudian satu baris &quot;+N lagi&quot;). Sebab biasa ialah lapisan yang tidak mempunyai saluran yang diperlukan oleh indeks ini
+* Jika **tiada** imej dalam projek yang boleh menggunakan indeks tersebut, proses itu akan melaporkan kegagalan dan bukannya meninggalkan anda dengan folder kosong
+
+Hanya satu eksport sandbox boleh dijalankan pada satu-satu masa. Permintaan untuk memulakan yang kedua sementara yang pertama masih dijalankan akan ditolak dengan mesej yang jelas, dan bukannya membenarkan dua proses bersaing untuk fail projek yang sama.
+
+### Grid mengambil alih larian
+
+Setiap larian yang selesai akan muncul sebagai butang tersendiri dalam bar alat [grid imej](image-grid.md), dilabelkan `<IndexName> <Index|LUT> <NNN>`. Begitulah cara anda membandingkan larian: eksport dua kali dengan gradien atau ambang yang berbeza, kemudian bertukar antara dua butang pada grid.
 
 ***
 
-## Indeks Tersuai (Chloros+)
+## Formula indeks tersuai (Chloros
 
-### Mencipta Formula Indeks Tersuai
++)
 
 {% hint style="info" %}
-**Tempat Buat**: Indeks tersuai boleh dikonfigurasikan dalam**Tetapan Projek** sebelum diproses, serta dalam bar sisi kotak pasir Pemapar Imej.
+**Tempat menciptanya**: di bar sisi Sandbox, atau dalam**Tetapan Projek** sebelum pemprosesan. Kedua-duanya menulis ke senarai peringkat projek yang sama.
 {% endhint %}
 
-**Untuk membuat indeks tersuai:**
+1. Buka pengira formula tersuai daripada menu lungsur formula indeks (memerlukan log masuk dengan langgananChloros
 
-1.**Buka Tetapan Projek** (sebelum diproses) atau bar sisi kotak pasir Pemapar Imej
-2. Navigasi ke **Indeks formula dropdown**
-
-3. Cari pilihan**"Custom"** (mesti dilog masuk dengan lesen Chloros+)
-4. **Tentukan formula anda** menggunakan pembolehubah jalur:
-   * Nama jalur: `NIR`, `Red`, `Green`, `Blue`, `RedEdge`, dsb.
-   * Operator: `+`, `-`, `*`, `/`, `^` (eksponen)
-   * Fungsi: `sqrt()`, `abs()`, dsb. (jika disokong)
-   * Tanda kurung: `()` untuk susunan operasi
-5. **Namakan indeks anda** (cth., "MyIndex" atau "CustomNDVI")
-6. **Simpan konfigurasi**
-
-**Contoh formula tersuai:**
++ yang layak)
+2. Tulis formula menggunakan **simbol jalur** `x`, `y`, `z`, `a`, `b`, `c` — bukan nama kumpulan
+3. Pengendali yang tersedia: `+`, `-`, `*`, `/`, `^`, dan `()` untuk pengelompokan
+4. Fungsi yang tersedia: `sqrt()`, `log()`, `ln()`, `abs()`, `sign()`, `log1p()`, `log2()`
+5. Namakan dan simpannya — ia akan muncul di bahagian bawah menu lungsur formula dan anda mengikat slotnya dengan menyeret bulatan saluran, sama seperti pratetap terbina dalam
 
 ```
 
-Modified NDVI with offset:
-(NIR - Red) / (NIR + Red + 0.5)
-
-Simple ratio:
-NIR / Red
-
-Complex multi-band:
-(NIR - Red) / (NIR + Red - Blue)
-
-Exponential index:
-(NIR / Red) ^ 2
+Modified NDVI with an offset:   (y-x)/(y+x+0.5)
+Simple ratio:                   y/x
+Three-band difference:          (y-x)/(y+x-z)
+Squared ratio:                  (y/x)^2
 ```
 
 {% hint style="warning" %}
-**Pengesahan Formula**: Pastikan formula anda menggunakan jalur yang tersedia dalam kamera anda. Contohnya, RedEdge hanya tersedia pada kamera dengan penapis RedEdge.
+**Formula tersuai hanya untuk GUI.** PilihanCLI
+
+/SDK
+
+`--indices` mengembangkan 22 nama pratetap terbina dalam dan secara senyap melangkau apa sahaja yang lain, termasuk formula tersuai anda. Untuk memproses formula tersuai secara pukal, konfigurasikan ia dalam Tetapan Projek dan jalankan pemprosesan, atau gunakan eksport &quot;Terapkan pada semua imej projek&quot; di Sandbox.
 {% endhint %}
+
+***
+
+## Penyelesaian Masalah
+
+### &quot;Lapisan ini tidak mempunyai saluran yang diperlukan oleh indeks ini&quot;
+
+Formula ini membaca kedudukan saluran yang tidak dimiliki oleh lapisan semasa — contohnya indeks tiga-slot pada fail satu atau dua saluran. Tukar kepada lapisan berbilang jalur (pantulan atau debayered), atau pilih indeks yang sesuai dengan penapis kamera anda.
+
+### &quot;Tidak dapat mencapai backend pemprosesan imej&quot;
+
+Backend tidak memberi maklum balas. Semak tab Log; jika backend sedang dihidupkan semula, Sandbox akan pulih dengan sendirinya setelah ia kembali.
+
+### Imej tidak berubah apabila saya menyeret bulatan
+
+Formula belum lengkap lagi. Formula yang tidak lengkap akan dianggap sebagai keadaan seretan pertengahan biasa — tiada apa-apa yang dipaparkan dan tiada apa-apa yang dilaporkan sebagai ralat. Isi setiap slot yang digunakan oleh formula.
+
+### Keseluruhan imej berwarna satu warna
+
+Tetingkap klip anda mungkin berada jauh di luar data. Tekan **AUTO**untuk menyelaraskannya pada peratusan ke-2/98, atau hidupkan histogram**INDEX** untuk melihat di mana data sebenarnya terletak.
+
+### Warna yang dieksport tidak sepadan dengan apa yang saya lihat
+
+Ia sepatutnya sepadan — laluan eksport adalah cerminan sengaja pratonton langsung, termasuk alfa mod pemotongan, dan purata blok diterapkan _selepas_ pewarnaan dengan tepat seperti yang dilakukan oleh pemapar. Jika ia berbeza, semak bahawa saiz blok GSD tidak berubah antara melihat dan mengeksport.
 
 ***
 
 ## Langkah Seterusnya
 
-Kini setelah anda memahami Kotak Pasir Indeks/LUT:
-
-* **Gunakan pada pemprosesan**: Gunakan tetapan yang ditemui dalam [Tetapan Projek](../project-settings/project-settings.md)
-* **Proses kelompok**: Gunakan indeks yang dioptimumkan pada set data penuh
-* **Ketahui lebih lanjut**: Baca [Formula Indeks Berbilang Spektrum](../project-settings/multispectral-index-formulas.md)
-
-Dokumentasi berkaitan:
-
-* [**Lapisan Imej**](image-layers.md) - Pengurusan lapisan dan visualisasi
-* [**Membuka Skrin Penuh Imej**](opening-an-image-full-screen.md) - Asas Pemapar Imej
-* [**Memproses Imej (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Aliran kerja pemprosesan penuh
+* [**Lapisan Imej**](image-layers.md) — lapisan mana untuk menjalankan indeks, dan apa maksud nilainya
+* [**Membuka Imej Penuh Skrin**](opening-an-image-full-screen.md) — bacaan kursor, histogram dan kawalan GSD secara terperinci
+* [**Formula Indeks Multispektral**](../project-settings/multispectral-index-formulas.md) — setiap pratetap, pada setiap permukaan
+* [**Tetapan Projek**](../project-settings/project-settings.md) — membakar tetapan yang anda temui ke dalam pelaksanaan pemprosesan
