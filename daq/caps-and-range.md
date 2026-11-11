@@ -1,12 +1,10 @@
 # Profil Topi &amp; Julat Terkalibrasi
 
-> Penutup itu sendiri — penutup mana dihantar dengan sensor mana, bagaimana ia dipasang, dan tingkah laku optiknya — didokumenkan dalam **[manual pengguna DAQ](https://mapir.gitbook.io/daq)**. Halaman ini menerangkan cara *memberitahu* penutup yang dipasang kepadaChloros
-
+> Penutup itu sendiri — penutup mana dihantar dengan penderia mana, bagaimana ia dipasang, dan tingkah laku optiknya — didokumenkan dalam **[manual pengguna DAQ](https://mapir.gitbook.io/daq)**. Halaman ini menerangkan cara *memberitahu* penutup yang dipasang kepada Chloros
 , yang menjadikan pembetulan itu tepat.
 
-Setiap penentukuran radiometrik kilang bagi penderia cahaya DAQ menerangkan penderia *tanpa penutup*. Penutup fizikal yang dipasang di atas penyebar mengubah cahaya yang dikumpul oleh penderia, jadiChloros
-
-menerapkan **profil pembetulan penutup** yang diukur di kilang di atas pakej penentukuran. Menyatakan topi yang betul adalah sebahagian daripada mendapatkan data yang dikalibrasi — halaman ini menerangkan topi yang wujud bagi setiap model, cara menyatakannya, dan apakah julat spektral terkalibrasi sebenar bagi penderia tersebut.
+Setiap penentukuran radiometrik kilang bagi penderia cahaya DAQ menerangkan penderia *tanpa penutup*. Penutup fizikal yang dipasang di atas penyebar mengubah cahaya yang dikumpul oleh penderia, jadi Chloros
+menerapkan **profil pembetulan penutup** yang diukur di kilang di atas pakej penentukuran. Menyatakan topi yang betul adalah sebahagian daripada mendapatkan data yang dikalibrasi — halaman ini menerangkan topi yang wujud bagi setiap model, cara untuk menyatakannya, dan apakah julat spektral terkalibrasi sebenar bagi penderia itu.
 
 ## Ketersediaan penutup mengikut model
 
@@ -21,10 +19,10 @@ Nota khusus model:
 
 * **DAQ-M mempunyai satu profil penutup: `sunshine_cosine`.** Bare-plus-Sunshine-cap adalah definisi produknya, dan DAQ-M kosong tidak memerlukan profil geometri.
 * **DAQ-U kosong adalah benar-benar kosong** — ia langsung tidak memerlukan profil geometri, itulah sebabnya tiada profil `none` wujud untuknya.
-* **`none` pada DAQ-E BUKAN no-op.** Diffuser DAQ-E yang terbenam dan dilapisi kaca mempunyai pembetulan geometri sebenar tersendiri, jadi &quot;tiada penutup&quot; itu sendiri adalah profil yang diukur pada model ini.
-* DAQ-E tanpa penutup **tidak boleh mengukur cahaya matahari langsung pada apa jua ketinggian** — penutup Sunshine adalah konfigurasi lapangan. Jangan merancang kerja luar menggunakan DAQ-E tanpa penutup.
+* **`none` pada DAQ-E TIDAK merupakan no-op.** Diffuser DAQ-E yang terbenam dan dilapisi kaca mempunyai pembetulan geometri sebenar tersendiri, jadi &quot;tanpa penutup&quot; itu sendiri merupakan profil yang diukur pada model ini.
+* DAQ-E tanpa penutup **tidak dapat mengukur cahaya matahari langsung pada apa jua ketinggian** — penutup Sunshine adalah konfigurasi lapangan. Jangan merancang kerja luar menggunakan DAQ-E tanpa penutup.
 
-Dalam tetapan setiap penderia GUI (ikon gear dalam tab Penderia Cahaya), menu lungsur **Cap** juga menawarkan &quot;Tiada (penderia kosong)&quot; pada DAQ-U dan DAQ-M — pada kedua-dua model itu, &quot;kosong&quot; hanya bermaksud tiada pembetulan topi digunakan, mengikut nota di atas. Pilihnya hanya apabila penutupnya telah tanggal secara fizikal.
+Dalam tetapan setiap penderia GUI (ikon gear dalam tab Penderia Cahaya), menu lungsur **Cap** juga menawarkan &quot;Tiada (penderia kosong)&quot; pada DAQ-U dan DAQ-M — pada kedua-dua model tersebut, &quot;kosong&quot; hanya bermaksud tiada pembetulan topi digunakan, seperti yang dinyatakan dalam nota di atas. Pilihnya hanya apabila penutupnya telah tanggal secara fizikal.
 
 ## Menyatakan penutup — dan mengapa ia penting
 
@@ -33,16 +31,15 @@ Dalam tetapan setiap penderia GUI (ikon gear dalam tab Penderia Cahaya), menu lu
 1. **Pembetulan secara langsung** yang digunakan pada setiap spektrum.
 2. **Cap penutup yang ditulis ke dalam setiap rakaman `.daq`**, yang dipercayai oleh pemprosesan pantulan seterusnya.
 
-Penutup Sunshine meredam cahaya kira-kira **12× mengikut reka bentuk**, jadi merekod dengan penutup yang salah yang diisytiharkan akan menyebabkan spektra terskala salah pada faktor tersebut. Nyatakan perubahan penutup dengan segera.
+Penutup Sunshine memudarkan kira-kira **12× mengikut reka bentuk**, jadi merakam dengan penutup yang dinyatakan salah akan menykala semula spektra dengan faktor yang sama. Nyatakan perubahan penutup dengan segera.
 
 ### Menetapkan penutup
 
-GUI: tab Penderia Cahaya → ikon gear pada baris penderia → menu lungsur **Cap**. Lalai untuk setiap model ialah `sunshine_cosine` (semua penderia DAQ dihantar dengan pembetul kosinus dipasang), dan pilihan ini kekal dengan projek.
+GUI: Tab Light Sensors → ikon gear pada baris penderia → menu lungsur **Cap**. Lalai untuk setiap model ialah `sunshine_cosine`, satu andaian (DAQ-U, DAQ-M dan DAQ-E dihantar tanpa cap, dan rakaman menganggap cap telah ditetapkan sehingga anda memilih satu), dan pilihan ini kekal dengan projek.
 
 
 
 CLI<!-- SCREENSHOT-NEEDED: DAQ tab per-sensor settings modal (gear icon) scrolled to the Cap dropdown, open to show the per-model choices with "Sunshine (cosine corrector)" selected. Use a connected DAQ-E so the Hostname/Firmware/PTP rows are also visible above it. -->
-
 (backend mesti sedang berjalan):
 
 ```bash
@@ -54,38 +51,39 @@ chloros-cli daq pool-set-cap --sensor-id daq-e-def330 --cap-id fov_45
 ```
 
 CLI
+menerima keseluruhan senarai `cap_id` secara sintaksis (`{none, fov_15, fov_30, fov_45, fov_60, fov_90, sunshine_cosine}`); setiap profil disahkan terhadap model sensor semasa sambungan, jadi ID topi yang tidak tersedia (contohnya ID E-only pada DAQ-U) akan gagal dengan ralat jelas dan bukannya diperbetulkan secara salah. Lalai backend apabila tiada apa-apa yang dihantar ialah `sunshine_cosine`.
 
-menerima keseluruhan senarai `cap_id` secara sintaksis (`{none, fov_15, fov_30, fov_45, fov_60, fov_90, sunshine_cosine}`); setiap profil disahkan terhadap model sensor semasa sambungan, jadi ID topi yang tidak tersedia (contohnya ID E-only pada DAQ-U) akan gagal dengan ralat jelas dan bukannya membetulkan secara salah. Lalai backend apabila tiada apa-apa yang dihantar ialah `sunshine_cosine`.
+PythonSDK
+: namakan cap pada masa sambungan dengan `connect_daq_sensor(cap_id="sunshine_cosine")`, atau tukarnya semasa runtime dengan `DAQSensorSession.set_cap("fov_45")`; lihat [Rujukan SDK
+](../reference/sdk-reference.md#daq-sensor-sessions).
 
-Python
+Lanjutan: profil dihantar dalam pemasangan `daq/cap_profiles/<u|m|e>/<cap_id>.json` dan boleh diimbangi oleh pengguna di `~/.chloros/daq_cap_profiles/<u|m|e>/<cap_id>.json`.
 
-SDK
+Selain daripada penapis, sensor yang tidak pernah dikalibrasi semula secara automatik menerima penambahbaikan dark-offset kecil yang diperoleh daripada armada — tiada sebarang tindakan pengguna diperlukan.
 
-Nota: `cap_id` **bukan** tombolSDK
+## DAQ-E-S: penyebar tetap dan kecenderungan
 
-— `connect_daq_sensor()` / `DAQSensorSession` tidak mendedahkan sebarang parameter cap. Pilih cap melalui arahanCLI
+**DAQ-E-S** adalah sebuah DAQ-E dengan dua perbezaan yang penting bagi Chloros
+. Segala perkara lain (penemuan, penyambungan, PTP, rakaman, tetapan peranti) berfungsi dengan tepat seperti untuk DAQ-E.
 
-di atas atau menu lungsur GUI; lihat [RujukanSDK
+* **Penghamburnya adalah kekal, jadi ia tidak memerlukan pembetulan topi.** Penghambur telah dipasang pada unit semasa pengesahan kilangannya diukur, jadi pengesahan itu sudah membaca iradiasi sinaran ke bawah yang sebenar. Chloros
+tidak menerapkan sebarang profil topi padanya tidak kira apa yang diminta: mana-mana topi yang dinamakan untuknya akan diabaikan dengan mesej, rakaman-rakamannya menyatakan topi itu berasal daripada model, dan amaran topi-andaian tidak akan muncul untuknya. Dalam Tetapan Projek → Penderia Cahaya DAQ, barisnya tidak menunjukkan sebarang penutup, dan penimbalan penutup di seluruh projek tidak menyentuhnya. Jangan terapkan profil penutup pada datanya secara manual: pembetulan Sinar Matahari di atasnya akan membaca kira-kira 11× lebih tinggi.
+* **Ia dilengkapi penderia pecut 3-paksi.** Tindak balas kosinus penyebar hanya sah selagi ia rata, jadi sensor yang condong melaporkan iradiasi yang salah tanpa sebarang simptom lain. Setiap bacaan DAQ-E-S oleh itu membawa kemiringan, putaran dan condongannya, dan `.daq` yang dirakam daripadanya menyimpannya di sebelah setiap spektrum (`imu_tilt_deg`, `imu_roll_deg`, `imu_pitch_deg`, …), jadi anda boleh membezakan awan daripada dudukan yang terhentak.
 
-](../reference/sdk-reference.md).
+Untuk setiap medan sikap dan bagaimana ralat dalam aliran sikap dilaporkan, lihat [DAQ-E-S dalam Rujukan CLI
+](../reference/cli-reference.md#daq-e-s--fixed-diffuser-and-tilt-sensor).
 
-Lanjutan: profil dihantar bersama pemasanganChloros
+## Prestasi topi cahaya matahari (konfigurasi luar)
 
-di `daq/cap_profiles/<u|m|e>/<cap_id>.json` dan boleh diimbangi semula bagi setiap pengguna di `~/.chloros/daq_cap_profiles/<u|m|e>/<cap_id>.json`.
+Nilai yang boleh dijadikan asas prosedur:
 
-Selain daripada penutup, penderia yang tidak pernah dikalibrasi semula secara automatik menerima penambahbaikan gelap-pengeseran kecil yang diperoleh daripada armada — tiada tindakan pengguna terlibat.
-
-## Prestasi penutup cahaya matahari (konfigurasi luar)
-
-Nombor yang boleh anda gunakan untuk membina prosedur:
-
-| Harta | Nilai |
+| Sifat | Nilai |
 | --- | --- |
-| Lapangan pandangan | Hemisfera 180° |
+| Sudut pandangan | Hemisfera 180° |
 | Ralat tindak balas kosinus | ≤ ±4 % sehingga 60° sudut insiden; ≤ ±4.5 % sehingga 70° |
 | Had matahari rendah | Tidak disyorkan di bawah ~15° ketinggian matahari |
 | Pelemahan | ~12× (mengikut reka bentuk) |
-| Ulangan pemasangan semula penutup | ≈ 1.5 % |
+| Ulang-ulik pemasangan semula penutup | ≈ 1.5 % |
 | Iradiasi kuantitatif | Purata bacaan **≥ 15 saat** (ciri instrumen, bukan kecacatan) |
 
 Untuk mana-mana nombor iradiasi kuantitatif — termasuk rujukan pantulan — gunakan purata bacaan sekurang-kurangnya 15 saat dan bukannya satu bingkai.
@@ -97,8 +95,7 @@ Untuk mana-mana nombor iradiasi kuantitatif — termasuk rujukan pantulan — gu
 | Pengambilan sampel spektral | 340–1010 nm pada selang 5 nm (135 titik) |
 | Julat kalibrasi radiometrik | **~374–974 nm** (dipaksakan dalam perisian) |
 
-Penderia melaporkan keseluruhan grid 340–1010 nm, tetapi penguatan radiometrik yang boleh dijejaki NIST merangkumi ~374–974 nm.Chloros
-
-**menolak pembahagian reflektansi mutlak** untuk mana-mana jalur kamera yang kurang daripada separuh berat spektralnya berada dalam julat tersebut, melaporkan sebab langganan `dls-uncalibrated-band-<nm>` dan bukannya menghasilkan produk yang tidak dikalibrasi. Antara SKU kamera yang dihantar, hanya penapis F988 berada di luar julat ini; ia menggunakan aliran kerja panel pantulan sebaliknya — lihat [Aliran Kerja Pantulan](reflectance.md).
+Penderia melaporkan keseluruhan grid 340–1010 nm, tetapi penguatan radiometrik yang boleh dijejaki NIST merangkumi ~374–974 nm. Chloros
+**menolak pembahagian pantulan mutlak** untuk mana-mana jalur kamera yang kurang daripada separuh berat spektralnya berada dalam julat tersebut, melaporkan sebab langganan `dls-uncalibrated-band-<nm>` dan bukannya menghasilkan produk yang tidak dikalibrasi. Antara SKU kamera yang dihantar, hanya penapis F988 jatuh di luar julat ini; ia sebaliknya menggunakan aliran kerja panel pantulan — lihat [Aliran Kerja Pantulan](reflectance.md).
 
 Untuk model sensor, pengangkut, dan ID sensor, lihat [Rangkuman DAQ](README.md). Untuk maklumat tentang bagaimana cap topi digunakan semasa pemprosesan, lihat [Perekodan &amp; Format .daq](recording.md).

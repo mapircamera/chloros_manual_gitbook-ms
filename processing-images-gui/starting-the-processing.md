@@ -4,17 +4,17 @@ Setelah anda mengimport imej anda, menandakan sasaran penentukuran anda, dan men
 
 ## Senarai Semak Pra-Pemprosesan
 
-Sebelum mengklik butang Mulakan, sahkan bahawa semuanya sudah siap:
+Sebelum mengklik butang Mula, sahkan bahawa semuanya sudah siap:
 
 * [ ] **Fail diimport** - Semua imej muncul dalam Pelayar Fail
-* [ ] **Imej sasaran ditandakan** - Baris Sasaran dicentang untuk imej penentukuran (atau rakaman `.daq` diimport untuk LATTICE)
+* [ ] **Imej sasaran ditandakan** - Baris Sasaran disemak untuk imej penentukuran (atau rakaman `.daq` diimport untuk LATTICE)
 * [ ] **Model kamera dikesan** - Ruang Model Kamera memaparkan kamera yang betul
-* [ ] **Tetapan dikonfigurasikan** - Tetapan Projek telah disemak dan disesuaikan
-* [ ] **Indeks terpilih** - Indeks multispektral yang diingini telah ditambah (jika perlu)
-* [ ] **Format eksport dipilih** - Format keluaran yang sesuai untuk aliran kerja anda
+* [ ] **Tetapan dikonfigurasikan** - Tetapan Projek disemak dan disesuaikan
+* [ ] **Indeks terpilih** - Indeks multispektral yang diingini ditambah (jika perlu)
+* [ ] **Format eksport dipilih** - Format output yang sesuai untuk aliran kerja anda
 
 {% hint style="info" %}
-**Petua**: Klik pada beberapa imej dalam Pelayar Fail untuk mengesahkan ia dimuat dengan betul sebelum pemprosesan.
+**Petua**: Klik beberapa imej dalam Pelayar Fail untuk mengesahkan ia dimuat dengan betul sebelum diproses.
 {% endhint %}
 
 ***
@@ -44,7 +44,7 @@ Butang Mula/Main terletak di bar tajuk atas Chloros:
 
 ## Memahami Mod Pemprosesan
 
-Chlorosberoperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
+Chloros beroperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 
 ### Mod Percuma (Pemprosesan Bersiri)
 
@@ -59,10 +59,10 @@ Chlorosberoperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 **Bar kemajuan menunjukkan 2 peringkat:**
 
 1.**Pengesanan Sasaran** - Menyeken untuk sasaran penentukuran
-2. **Pemprosesan** - Memohon penentukuran dan mengeksport imej**Masa pemprosesan:**
+2. **Pemprosesan** - Mengaplikasikan penentukuran dan mengeksport imej**Masa pemprosesan:**
 
-* Lebih perlahan berbanding mod selari Chloros+
-* Sesuai untuk set data kecil hingga sederhana (&lt; 200 imej)
+*   Lebih perlahan berbanding mod selari Chloros+
+*   Sesuai untuk set data kecil hingga sederhana (&lt; 200 imej)
 
 ### Mod Chloros+ (Pemprosesan Selari)
 
@@ -72,43 +72,43 @@ Chlorosberoperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 
 * Memproses berbilang imej serentak menggunakan [saluran pemprosesan 4-benang](../processing-architecture/processing-pipeline.md)
 * [Penyesuaian Komputasi Dinamik](../processing-architecture/dynamic-compute-adaptation.md) secara automatik memilih strategi terbaik untuk perkakasan anda pada permulaan larian
-* Pecutan GPU (CUDA) dengan kad grafik NVIDIA (desktop dan Jetson)
-* **Jumlah pekerja menyesuaikan mengikut perkakasan**: Strategi GPU menjalankan**1-4 pekerja serentak** (disesuaikan mengikut VRAM — Jetson dengan memori rendah menjalankan 1, GPU desktop 12GB+ menjalankan sehingga 4); Sistem hanya CPU menjalankan satu pekerja bagi setiap teras fizikal, tolak satu**Bar kemajuan menunjukkan 4 peringkat** (sepadan dengan 4 benang paip):
+* Pecutan GPU (CUDA) dengan kad grafik NVIDIA
+* **Bilangan pekerja adalah adaptif mengikut perkakasan**: Strategi GPU menjalankan**2-4 pekerja serentak** (disesuaikan mengikut VRAM — 3 pada GPU 2-12GB, 2 hingga 4 pada GPU 12GB+) Sistem CPU sahaja menjalankan satu pekerja bagi setiap teras fizikal, tolak satu**Bar kemajuan menunjukkan 4 peringkat** (berkaitan dengan 4 benang paip):
 
-1. **Mengesani** (Benang 1) - Menemukan sasaran penentukuran
-2. **Menganalisis** (Thread 2) - Menyemak metadata imej dan mengira penentukuran
-3. **Menentukur** (Thread 3) - Debayering, pembetulan vignette, penentukuran, pengiraan indeks
-4. **Mengimport** (Thread 4) - Menyimpan imej yang diproses dan indeks**Interaksi bar kemajuan:*** **Tuding tetikus** ke atas bar untuk melihat panel lungsur 4 peringkat terperinci
+1. **Mengesani** (Benang 1) - Mencari sasaran penentukuran
+2. **Menganalisis** (Benang 2) - Menyemak metadata imej dan mengira penentukuran
+3. **Menentukur** (Benang 3) - Debayering, pembetulan viniet, penentukuran, pengiraan indeks
+4. **Mengeksport** (Benang 4) - Menyimpan imej yang diproses dan indeks**Interaksi bar kemajuan:*** **Tuding tetikus** ke atas bar untuk melihat panel lungsur 4 peringkat terperinci
 * **Klik** bar kemajuan untuk membekukan panel lungsur di tempatnya
-* **Klik lagi** untuk membuka bekuan dan menyembunyikan panel**Masa pemprosesan:**
+* **Klik sekali lagi** untuk membuka bekuan dan menyembunyikan panel**Masa pemprosesan:**
 
 *   Lebih pantas dengan ketara berbanding mod percuma
 *   Pecutan GPU meningkatkan kelajuan dengan lebih lanjut
 
 {% hint style="info" %}
-**Kelajuan Chloros+**: Pemprosesan selari boleh 5-10x lebih pantas daripada mod bersiri untuk set data yang besar. Projek 500 imej yang mengambil masa 2 jam dalam mod percuma mungkin siap dalam 15-20 minit dengan Chloros+.
+**Kelajuan Chloros+**: Pemprosesan selari boleh 5-10 kali lebih pantas daripada mod bersiri untuk set data yang besar. Projek 500 imej yang mengambil masa 2 jam dalam mod percuma mungkin siap dalam 15-20 minit dengan Chloros+.
 {% endhint %}
 
 ***
 
-## Apa yang Terjadi Semasa Pemprosesan
+## Apa Yang Terjadi Semasa Pemprosesan
 
 ### Peringkat 1: Pengesanan Sasaran
 
 **Apa yang dilakukan oleh Chloros:**
 
-*   Mengimbas imej yang anda tandakan dalam lajur Sasaran (semua imej jika tiada yang ditandakan)
-*   Mengecam panel penentukuran dalam setiap sasaran
-*   Mengasingkan nilai pantulan daripada panel sasaran
-*   Merekod cap masa sasaran untuk penjadualan penentukuran
+* Mengimbas imej yang anda tandakan dalam lajur Sasaran (semua imej jika tiada yang ditandakan)
+* Mengecam panel penentukuran dalam setiap sasaran
+* Mengambil nilai pantulan daripada panel sasaran
+* Merekod cap masa sasaran untuk penjadualan kalibrasi
 
-**Tempoh:** 1-30 saat (dengan sasaran yang ditandakan), 5-30+ minit (tanpa tanda)
+**Tempoh:** 1-30 saat (dengan sasaran yang ditandakan), 5-30+ minit (tidak ditandakan)
 
-### Fasa 2: Debayering (Penukaran RAW)
+### Peringkat 2: Debayering (Penukaran RAW)
 
 **Apa yang dilakukan oleh Chloros:**
 
-* Menukar data corak Bayer RAW kepada imej 3-saluran penuh (modul mono LATTICE kekal satu-gelombang — debayering dilangkau untuknya dengan catatan dalam log)
+* Menukar data corak Bayer RAW kepada imej 3-saluran penuh (modul LATTICE mono kekal satu-gelombang — debayering dilangkau untuknya dengan nota dalam log)
 * Mengaplikasikan algoritma demosaicing yang dipilih
 * Memelihara kualiti dan perincian imej maksimum
 
@@ -117,30 +117,30 @@ Chlorosberoperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 ### Fasa 3: Kalibrasi
 
 **Apa yang dilakukan oleh Chloros:*** **Pembetulan Vignette**: Menghilangkan penggelapan lensa di tepi
-* **Kalibrasi pantulan**: Menormalisasi menggunakan nilai pantulan sasaran dan/atau data DAQ downwelling
+* **Kalibrasi reflektansi**: Menormalkan menggunakan nilai reflektansi sasaran dan/atau data DAQ downwelling
 * Menerapkan pembetulan pada semua jalur/saluran
-* Menggunakan rujukan penentukuran yang sesuai untuk setiap imej berdasarkan cop masa
+* Menggunakan rujukan kalibrasi yang sesuai untuk setiap imej berdasarkan cop masa
 
 **Tempoh:** Kebanyakan masa pemprosesan
 
-### Tahap 4: Pengiraan Indeks
+### Fasa 4: Pengiraan Indeks
 
 **Apa yang dilakukan oleh Chloros:**
 
 * Mengira indeks multispektral yang dikonfigurasikan (NDVI, NDRE, dan lain-lain)
-* Mengaplikasikan matematik jalur kepada imej yang telah dikalibrasi
+* Mengaplikasikan matematik jalur pada imej yang telah dikalibrasi
 * Menghasilkan imej indeks untuk setiap indeks yang dipilih
 
 **Tempoh:** Beberapa saat setiap imej
 
-### Peringkat 5: Eksport
+### Fasa 5: Eksport
 
 **Apa yang dilakukan oleh Chloros:**
 
 * Menyimpan imej yang diproses dalam format yang dipilih
-* **LATTICE fan-out**: setiap bingkai LATTICE mentah dieksport sebagai setiap produk yang diaktifkan dalam satu kali proses — debayered, pratonton, radiance (sentiasa float32), pantulan
-* Menulis fail ke dalam pokok keluaran projek: `<project>/<camera>/<format>/<Product>_Images/`
-* **Menjaga nama fail sumber** — folder itu mengenal pasti produk, tiada sambungan ditambah**Tempoh:** Berbeza mengikut format eksport dan saiz fail***
+* **LATTICE fan-out**: setiap bingkai LATTICE mentah dieksport sebagai setiap produk yang diaktifkan dalam satu kali proses — debayered, pratonton, sinaran (sentiasa float32), pantulan
+* Menulis fail ke dalam pokok output projek: `<project>/<camera>/<format>/<Product>_Images/`
+* **Menjaga nama fail sumber** — folder mengenal pasti produk, tiada sambungan ditambah**Tempoh:** Berbeza mengikut format eksport dan saiz fail***
 
 ## Kelakuan Pemprosesan
 
@@ -148,10 +148,10 @@ Chlorosberoperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 
 Setelah dimulakan, keseluruhan saluran akan berjalan secara automatik:
 
-* Tiada campur tangan pengguna diperlukan
+* Tiada interaksi pengguna diperlukan
 * Semua langkah yang dikonfigurasikan dijalankan secara bersiri
 * Kemas kini kemajuan dipaparkan secara masa nyata
-* Fail yang dieksport ditulis ke cakera apabila ia siap — anda boleh membuka keluaran yang telah selesai sementara proses masih berjalan
+* Fail yang dieksport ditulis ke cakera sebaik sahaja ia siap — anda boleh membuka keluaran yang telah selesai sementara proses masih berjalan
 
 ### Penggunaan Komputer Semasa Pemprosesan
 
@@ -161,9 +161,9 @@ Setelah dimulakan, keseluruhan saluran akan berjalan secara automatik:
 * Komputer kekal responsif untuk tugas lain
 * Selamat untuk meminimumkan Chloros dan bekerja dalam aplikasi lain
 
-**Mod Selari Chloros+:**
+**Mod Paralel Chloros+:**
 
-* Penggunaan CPU yang tinggi merentasi kolam pekerja strategi
+* Penggunaan CPU yang tinggi di seluruh kumpulan pekerja strategi
 * Dengan pecutan GPU: Penggunaan GPU yang tinggi
 * Komputer mungkin kurang responsif semasa pemprosesan
 * Elakkan memulakan tugas lain yang memakan banyak CPU
@@ -174,20 +174,20 @@ Setelah dimulakan, keseluruhan saluran akan berjalan secara automatik:
 
 ### Pemprosesan Tidak Boleh Dipause (Tetapi Pemberhentian Bersih)
 
-* Setelah dimulakan, pemprosesan tidak boleh dipause dan disambung semula kemudian
+* Setelah dimulakan, pemprosesan tidak boleh ditangguhkan dan disambung semula kemudian
 * Mengklik **Hentikan** menghentikan pelaksanaan dengan sempurna pada klik pertama
 * Produk yang telah dieksport sebelum dihentikan kekal di cakera
-* Pelaksanaan yang dihentikan melaporkan dengan tepat apa yang telah disiapkannya (lihat baris `[RUN-SUMMARY]` dalam log)
+* Pelaksanaan yang dihentikan melaporkan dengan jujur apa yang telah disiapkannya (lihat baris `[RUN-SUMMARY]` dalam log)
 * Satu larian baru memulakan saluran daripada awal
 
-**Petua perancangan:** Untuk projek yang sangat besar, pertimbangkan untuk memproses secara pukal atau menggunakan CLI untuk kawalan yang lebih baik.***
+**Petua perancangan:** Untuk projek yang sangat besar, pertimbangkan untuk memproses secara bersiri atau menggunakan CLI untuk kawalan yang lebih baik.***
 
 ## Memantau Pemprosesan Anda
 
 Semasa pemprosesan dijalankan, anda boleh:
 
-* **Menonton bar kemajuan** - Lihat peratusan penyiapan keseluruhan
-* **Lihat peringkat semasa** - Mengesan, Menganalisis, Kalibrasi, atau Mengeksport
+* **Pantau bar kemajuan** - Lihat peratusan penyempurnaan keseluruhan
+* **Lihat peringkat semasa** - Mengesan, Menganalisis, Menentukur, atau Mengeksport
 * **Semak tab log** - Lihat mesej pemprosesan terperinci dan amaran
 * **Pratinjau imej yang telah selesai** - Fail eksport muncul di cakera semasa pemprosesan
 
@@ -203,13 +203,13 @@ Jika anda perlu menghentikan pemprosesan:
 
 1. Lokasikan butang **Henti** (menggantikan butang Mula semasa pemprosesan)
 2. Klik sekali — bar akan memaparkan **&quot;Berhenti...&quot;** sementara imej yang sedang diproses selesai
-3. Proses akan berakhir dalam keadaan berhenti sepenuhnya dan log akan mencetak `[RUN-SUMMARY]` yang jujur tentang apa yang telah diselesaikan
+3. Proses akan berakhir dalam keadaan berhenti sepenuhnya dan log akan mencetak laporan `[RUN-SUMMARY]` yang jujur tentang apa yang telah diselesaikan
 
-### Bila Perlu Berhenti
+### Bila hendak Berhenti
 
-**Sebab sah untuk berhenti:**
+**Alasan sah untuk berhenti:**
 
-* Sedar tetapan yang salah digunakan
+* Sedar tetapan yang salah telah digunakan
 * Terlupa menandakan imej sasaran
 * Imej yang salah diimport
 * Sistem berjalan terlalu perlahan atau tidak responsif
@@ -224,12 +224,12 @@ Jika anda perlu menghentikan pemprosesan:
 
 ## Anggaran Masa Pemprosesan
 
-Masa pemprosesan sebenar berbeza-beza bergantung kepada:
+Masa pemprosesan sebenar berbeza dengan ketara berdasarkan:
 
 * Bilangan imej
 * Resolusi imej
 * Format input RAW vs JPG
-* Mod pemprosesan (Free vs Chloros+)
+* Mod pemprosesan (Percuma vs Chloros+)
 * Kelajuan CPU dan bilangan teras
 * Ketersediaan GPU (Chloros+ sahaja)
 * Bilangan indeks untuk dikira
@@ -241,17 +241,17 @@ Masa pemprosesan sebenar berbeza-beza bergantung kepada:
 | ----------- | --------- | -------------- | -------------- |
 | 50 imej   | 15-20 min | 5-8 min        | 3-5 min        |
 | 100 imej  | 30-40 min | 10-15 min      | 5-8 min        |
-| 200 imej   | 1-1.5 jam | 20-30 minit   | 10-15 minit   |
-| 500 imej   | 2-3 jam   | 45-60 minit   | 20-30 minit   |
+| 200 imej   | 1-1.5 jam | 20-30 minit | 10-15 minit |
+| 500 imej   | 2-3 jam  | 45-60 minit | 20-30 minit |
 | 1000 imej | 4-6 jam   | 1.5-2 jam      | 40-60 min      |
 
 {% hint style="info" %}
-**Jalankan Pertama Kali**: Pemprosesan awal mungkin mengambil masa lebih lama kerana Chloros membina cache dan profil. Pemprosesan set data yang serupa selepas ini akan menjadi lebih pantas.
+**Jalankan Pertama Kali**: Pemprosesan awal mungkin mengambil masa lebih lama kerana Chloros membina cache dan profil. Pemprosesan susulan bagi set data yang serupa akan menjadi lebih pantas.
 {% endhint %}
 
 ***
 
-## Isu Lazim Semasa Memulakan
+## Isu Biasa Semasa Memulakan
 
 ### Butang Mula Dilumpuhkan (Kelabu)
 
@@ -280,28 +280,32 @@ Masa pemprosesan sebenar berbeza-beza bergantung kepada:
 
 **Penyelesaian:**
 
-1. Semak Log Perbaikan (Debug Log) <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> untuk mesej ralat
+1. Semak Log Ralat <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> untuk mesej ralat
 2. Semak ruang cakera yang tersedia
 3. Cuba memproses subset imej yang lebih kecil
 4. Semak imej tidak rosak
 
-### Proses Berhenti Secara Tiba-Tiba
+### Proses Berhenti Tetapi Tidak Menulis Imej
 
-**Punca yang mungkin:*** Tiada imej sah dalam projek
-* Fail imej rosak
-* Ruang cakera tidak mencukupi
-* Memori (RAM) tidak mencukupi
+Sebuah proses yang meminta produk imej tetapi tidak menulis sebarang imej dianggap sebagai **kegagalan, bukan kejayaan** — Chloros melaporkannya dengan jelas:
+
+* Log GUI mencetak petunjuk `[RUN-SUMMARY]` yang menamakan punca yang mungkin — tiada imej diimport, tiada sasaran dikesan, atau setiap produk yang diminta dilangkau kerana tidak terpakai (contohnya meminta radiasi/refleksi daripada kamera hanya RGB)
+* Setara CLI (`chloros-cli process`) mencetak `Processing finished but wrote no image products.` dan **keluar dengan nilai tidak sifar**, supaya skrip boleh mengdeteksinya
+* Pelaksanaan khusus hanya untuk metadata (setiap produk eksport dilumpuhkan, tiada indeks) masih dikira sebagai kejayaan
+
+Rujuk [Rujukan [CLI]](../reference/cli-reference.md#a-run-that-writes-no-images-fails) untuk semantik penuh.
+
+### Folder Projek Terlalu Dalam untuk Komputer Ini
+
+**Hanya untuk Windows, baharu dalam 1.3.0.**Windows dihantar dengan laluan panjang dimatikan, dan tiada laluan fail boleh lebih panjang daripada 260 aksara. Produk Chloros terletak sehingga kira-kira 130 aksara di bawah folder projek, jadi folder projek yang lebih dalam daripada itu tidak dapat menerima produknya. Daripada menjalankan dan tidak menulis apa-apa, Chloros kini menyemak sebelum pemprosesan bermula:
+
+* Mengklik Start tidak memulakan larian: bar kemajuan menunjukkan sebab, dan Log Ralat (Debug Log) memaparkan `[PROCESS] refused: The project folder is too deep for this computer…`. Mesej itu memberikan panjang folder projek dan folder projek terpanjang yang muat.
+* Mencipta atau membuka projek dalam folder yang terlalu dalam walaupun untuk fail projek itu sendiri juga akan ditolak. Petak mesej menyatakan sebab, dengan panjang folder projek terpanjang yang sesuai dan cara untuk mengaktifkan laluan panjang, dan tiada apa-apa yang diwujudkan atau dibuka; Logs Debug merekodkannya sebagai `[PROJECT] refused: …`. Menduplikasi projek di bawah nama yang lebih panjang juga boleh melebihi had: salinan dibuat tetapi tidak dibuka, dan mesej yang sama menyatakan sebabnya.
 
 **Penyelesaian:**
 
-1. Semak Log Ralat  untuk mesej ralat
-2. Semak log GUI mencetak petunjuk `[RUN-SUMMARY]` yang menamakan punca yang mungkin — tiada imej diimport, tiada sasaran dikesan, atau setiap produk yang diminta diabaikan kerana tidak terpakai (contohnya meminta rad)
-
-* Log GUI mencetak petunjuk `[RUN-SUMMARY]` yang menamakan punca yang mungkin — tiada imej diimport, tiada sasaran dikesan, atau setiap produk yang diminta diabaikan kerana tidak terpakai (contohnya meminta radiasi/refleksi daripada kamera yang hanya mempunyai RGB)
-* Setara CLI (`chloros-cli process`) mencetak `Processing finished but wrote no image products.` dan **keluar dengan nilai tidak sifar**, supaya skrip boleh mengesaninya
-* Pelaksanaan khusus hanya untuk metadata (setiap produk eksport dilumpuhkan, tiada indeks) masih dikira sebagai berjaya
-
-Rujuk [Rujukan CLI](../reference/cli-reference.md#a-run-that-writes-no-images-fails) untuk semantik penuh.
+1. Simpan projek dalam folder yang lebih pendek — ubah**Direktori Kerja** dalam [Seting Projek](../project-settings/project-settings.md) dan cipta semula projek itu, atau
+2. Aktifkan laluan panjang Windows dan mulakan semula Chloros: jalankan semula pemasang Chloros dengan kotak **Benarkan laluan panjang Windows** dicentang (ia dicentang secara lalai), atau gunakan Dasar Kumpulan: *Konfigurasi Komputer &gt; Templat Pentadbiran &gt; Sistem &gt; Sistem Fail &gt; Benarkan laluan panjang Win32*.
 
 ### Amaran &quot;Tiada Sasaran Dikesan&quot;
 
@@ -325,19 +329,19 @@ Rujuk [Rujukan CLI](../reference/cli-reference.md#a-run-that-writes-no-images-fa
 ### Sebelum Memulakan
 
 1. **Uji dengan subset kecil terlebih dahulu** - Proses 10-20 imej untuk mengesahkan tetapan
-2. **Semak ruang cakera yang tersedia** - Pastikan terdapat ruang kosong bersaiz 2-3 kali ganda saiz set data (lebih banyak jika semua produk LATTICE diaktifkan)
+2. **Semak ruang cakera yang tersedia** - Pastikan terdapat ruang kosong bersaiz 2-3x saiz set data (lebih banyak jika semua produk LATTICE diaktifkan)
 3. **Tutup aplikasi yang tidak perlu** - Bebaskan sumber sistem
 4. **Semak imej sasaran** - Pratonton sasaran yang ditandakan untuk memastikan kualitinya
-5. **Simpan projek** - Projek akan menyimpan secara automatik, tetapi adalah amalan baik untuk menyimpan secara manual
+5. **Simpan projek** - Projek akan menyimpan secara automatik, tetapi adalah amalan yang baik untuk menyimpan secara manual
 
 ### Semasa Pemprosesan
 
 1. **Elakkan sistem tidur** - Lumpuhkan mod penjimatan kuasa
-2. **Jaga agar tetingkap Chloros kekal di latar hadapan** - Atau sekurang-kurangnya kelihatan di bar tugas
-3. **Pantau kemajuan sekali-sekala** - Semak amaran atau ralat
+2. **Jaga agar Chloros berada di latar hadapan** - Atau sekurang-kurangnya kelihatan di bar tugas
+3. **Pantau kemajuan dari semasa ke semasa** - Semak amaran atau ralat
 4. **Jangan muat turun aplikasi berat lain** - Terutamanya dalam mod selari Chloros+
 
-### Chloros+ Pecutan GPU
+### Pecutan GPU Chloros+
 
 Jika menggunakan pecutan GPU NVIDIA:
 

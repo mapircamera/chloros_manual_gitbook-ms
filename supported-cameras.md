@@ -4,44 +4,31 @@ metaLinks:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/supported-cameras
 ---
 
-# Kamera yang disokong
+# Kamera Disokong
 
 Chloros
-
-memproses imej daripada dua keluarga kameraMAPIR
-
+memproses imej daripada dua keluarga kamera MAPIR
 pada **semua platform** (Windows
-
-,Linux
-
-amd64, danLinux
-
+, Linux
+amd64, dan Linux
 arm64/Jetson):
 
-* **Survey3** — kameraSurvey3W
-
-(luas) danSurvey3N
-
+* **Survey3** — kamera Survey3W
+(luas) dan Survey3N
 (sempit). Input: `RAW+JPG`.
-* **LATTICE**— modul kamera multispektral M3C dan M3M. Input: `.tif`/`.tiff` captures. Kamera LATTICE juga boleh**dikawal secara langsung** daripadaChloros
-
+* **LATTICE**— modul kamera multispektral M3C dan M3M. Input: tangkapan `.tif`/`.tiff`. Kamera LATTICE juga boleh**dikawal secara langsung** daripada Chloros
 — melalui tab GUI Cameras (Windows
-
-) atau `chloros-cli lattice` /Python
-
+) atau `chloros-cli lattice` / Python
 SDK
-
 (Windows
-
-danLinux
-
+dan Linux
 ) — termasuk susunan multi-kamera yang diselaraskan. Lihat [panduan LATTICE](lattice/).
 
 Saluran pemprosesan juga menerima fail input `.dng`.
 
-##Survey3
+## Survey3
 
-<table data-header-hidden><thead><tr><th width="156">Pengeluar</th><th width="250">Model Kamera</th><th width="138">Model Penapis</th><th width="187">Jenis Imej</th></tr></thead><tbody><tr><td><strong>Pengeluar</strong></td><td><strong>Model Kamera</strong></td><td><strong>Model Penapis</strong></td><td><strong>Jenis Imej</strong></td></tr><tr><td>MAPIR</td><td>Survey3W, Survey3N</td><td>RGB</td><td>RAW+JPG, JPG</td></tr><tr><td>MAPIR</td><td>Survey3W, Survey3N</td><td>RGN</td><td>RAW+JPG, JPG</td></tr><tr><td>MAPIR</td><td>Survey3W, Survey3N</td><td>OCN</td><td>RAW+JPG, JPG</td></tr><tr><td>MAPIR</td><td>Survey3W, Survey3N</td><td>NGB</td><td>RAW+JPG, JPG</td></tr><tr><td>MAPIR</td><td>Survey3W, Survey3N</td><td>RE</td><td>RAW+JPG, JPG</td></tr><tr><td>MAPIR</td><td>Survey3W, Survey3N</td><td>NIR</td><td>RAW+JPG, JPG</td></tr></tbody></table>## LATTICE
+<table data-header-hidden><thead><tr><th width="156">Pengilang</th><th width="250">Model Kamera</th><th width="138">Model Penapis</th><th width="187">Jenis Imej</th></tr></thead><tbody><tr><td><strong>Pengilang</strong></td><td><strong>Model Kamera</strong></td><td><strong>Model Penapis</strong></td><td><strong>Jenis Imej</strong></td></tr><tr><td>MAPIR</td><td>Survey3W, Survey3N</td><td>RGB</td><td>RAW+JPG, JPG</td></tr><tr><td>MAPIR</td><td>Survey3W, Survey3N</td><td>RGN</td><td>RAW+JPG, JPG</td></tr><tr><td>MAPIR</td><td>Survey3W, Survey3N</td><td>OCN</td><td>RAW+JPG, JPG</td></tr><tr><td>MAPIR</td><td>Survey3W, Survey3N</td><td>NGB</td><td>RAW+JPG, JPG</td></tr><tr><td>MAPIR</td><td>Survey3W, Survey3N</td><td>RE</td><td>RAW+JPG, JPG</td></tr><tr><td>MAPIR</td><td>Survey3W, Survey3N</td><td>NIR</td><td>RAW+JPG, JPG</td></tr></tbody></table>## LATTICE
 
 Barisan LATTICE adalah sistem kamera multispektral modular yang dibina berdasarkan sensor global-shutter Sony IMX265 (3.1 MP, piksel 3.45 µm). Setiap kamera menyimpan identitinya sebagai rentetan model:
 
@@ -51,53 +38,51 @@ Barisan LATTICE adalah sistem kamera multispektral modular yang dibina berdasark
 
 Chloros
 
-memaparkannya dengan awalan `LATT-` (contohnya `LATT-M3M-L41-F550`), dan rentetan model menggerakkan segala-galanya seterusnya — profil sensor, susun atur jalur, dan penentukuran diselesaikan secara automatik; tiada apa-apa yang perlu dikonfigurasikan bagi setiap kamera. Nombor lensa ialah **sudut pandangan mendatar dalam darjah**: `L41` = sempit 41°, `L87` = lebar 87°.
+menampilkannya dengan awalan `LATT-` (contohnya `LATT-M3M-L41-F550`), dan rentetan model ini menggerakkan segala-galanya seterusnya — profil sensor, susun atur jalur, dan penentukuran diselesaikan secara automatik; tiada apa-apa yang perlu dikonfigurasikan bagi setiap kamera. Nombor lensa ialah **medan pandangan mendatar dalam darjah**: `L41` = sempit 41°, `L87` = lebar 87°.
 
 Terdapat dua konfigurasi sensor:
 
 | Konfigurasi | Sensor      | Jenis penapis                           | Jalur setiap kamera                                                        |
 | ------------- | ----------- | ------------------------------------- | ----------------------------------------------------------------------- |
-| **M3C**       | Warna Bayer | Pelbagai jalur pas | 3 jalur spektral daripada satu pendedahan tunggal                                |
-| **M3M**       | Monochrom  | Penapis gangguan jalur sempit tunggal | 1 jalur kalibrasi — gabungkan beberapa kamera M3M untuk indeks vegetasi |
+| **M3C**       | Warna Bayer | Penapis jalur-lepasan tiga                                                                          | 3 jalur spektral daripada satu pendedahan tunggal                                                                          |
+| **M3M**       | Monochrom | Penapis gangguan jalur-sempit tunggal                                                          | 1 jalur kalibrasi — gabungkan beberapa kamera M3M untuk indeks vegetasi |
 
 ### Pilihan penapis M3C (Bayer)
 
-| Penapis | Jalur (nama @ pusat nm /FWHM
+| Penapis | Julat (nama @ tengah nm / FWHM
 
 nm)       |
 | ------ | ---------------------------------------- |
-| `FRGB` |Blue
+| `FRGB` | Biru 475/30 · Hijau 550/30 · Merah 625/30 |
+| `FRGN` | Merah 660/21 · Green
 
-475/30 ·Green
-
-550/30 ·Red
-
-625/30  |
-| `FRGN` |Red
-
-660/21 ·Green
-
-550/30 ·NIR
+550/30 · NIR
 
 850/30   |
-| `FOCN` |Orange
+| `FOCN` | Orange
 
-615/21 ·Cyan
+618.4/46 · Cyan
 
-490/38 ·NIR
+494.1/40 · NIR
 
-808/14 |
-| `FNGB` |Blue
+821.6/54 (diukur — lihat di bawah) |
+| `FNGB` | Blue
 
-475/30 ·Green
+475/30 · Green
 
-550/30 ·NIR
+550/30 · NIR
 
-850/30 |
+850/30  |
+
+Untuk `FOCN` nilai adalah jalur separuh maksimum **diukur** penapis (Chloros
+
+1.3.0 dan ke atas; versi terdahulu menggunakan nilai helaian spesifikasi 615/21 · 490/38 · 808/14). Nama jalur kekal `Orange_615`, `Cyan_490` dan `NIR_808`, dan pusat serta lebar yang diukur adalah apa yang dicop oleh Chloros
+
+ke dalam setiap eksport yang dikalibrasi.
 
 ### Katalog penapis M3M (mono) — 23 SKU
 
-Nombor F ialah label SKU; jalur yang diukur (ditempa pada setiap eksport yang dikalibrasi) ialah imbasan penapis bagi setiap lot:
+Nombor F ialah label SKU; jalur yang diukur (dicop ke dalam setiap eksport yang dikalibrasi) ialah imbasan penapis bagi setiap lot:
 
 | SKU    | Pusat (nm, diukur) | TepiFWHM
 
@@ -121,20 +106,20 @@ Nombor F ialah label SKU; jalur yang diukur (ditempa pada setiap eksport yang di
 | F808   | 810.3                 | 789–832         | 43         |
 | F832   | 826.1                 | 810–843         | 33         |
 | F850   | 846.5                 | 828–865         | 37         |
-| F880   | — (nominal)           | 867–893         | 26         |
+| F880   | — (nominasi)           | 867–893         | 26         |
 | F905   | — (nominasi)           | 892–920         | 28         |
 | F940   | 940.6                 | 923–958         | 35         |
 | F950   | 945.1                 | 929–961         | 32         |
 | F988 † | 985.3                 | 968–1003        | 35         |
 
-&quot;Pinggir jalur diukur pada nilai lebar penuh pada separuh maksimum daripada imbasan penapis setiap lot olehMAPIR
+&quot;Pinggir jalur diukur pada nilai lebar penuh pada separuh maksimum daripada imbasan penapis setiap lot oleh MAPIR
 
-— nilai yang sama yang dicop olehChloros
+— nilai yang sama yang dicop oleh Chloros
 
 ke dalam setiap eksport yang dikalibrasi.&quot; &quot;— (nominal)&quot; = tiada imbasan lot lagi; bagi SKU tersebut, pusat yang dinyatakan ialah nombor SKU dan lebarnya ialah angka pengeluar.
 
-† Reflektan F988 dikalibrasi menggunakan panel reflektansi dalam adegan: jalur itu terletak di luar julat kalibrasi penderia cahaya DAQ, jadiChloros
+† &quot;Refleksan F988 dikalibrasi menggunakan panel reflektansi dalam adegan: jalur ini terletak di luar julat kalibrasi penderia cahaya DAQ, jadi Chloros
 
-menggunakan tangkapan panel terkini anda dan menyimpannya di antara penjejakan panel. Lihat [Sasaran Kalibrasi](calibration-targets.md).
+menggunakan tangkapan panel terkini anda dan menyimpannya di antara sesi penalaan panel.&quot; Lihat [Sasaran Kalibrasi](calibration-targets.md).
 
 Untuk kawalan kamera secara langsung, susunan, penyediaan rangkaian, dan rantaian pemprosesan radiometrik, lihat [panduan LATTICE](lattice/).

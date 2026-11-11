@@ -4,24 +4,63 @@ Manual ini ditulis untuk dua khalayak: manusia, dan pembantu AI yang semakin ker
 
 Chloros versi: **
 
-1.2.0**. CLI / SDK platform: Windows 10/11 x64 dan Linux (x86_64 / Jetson aarch64).
+1.3.0**. Platform CLI/SDK: Windows 10/11 x64 dan Linux (x86\_64 / Jetson aarch64).
 
 ## Apa yang perlu diberikan kepada pembantu anda
 
 | Sumber | URL | Kegunaannya |
-| --- | --- | --- |
 | **llms.txt** | `https://mapir.gitbook.io/chloros/llms.txt` | Indeks boleh dibaca mesin bagi setiap halaman dalam manual ini. |
-| **Rujukan CLI** | `https://mapir.gitbook.io/chloros/reference/cli-reference` | Permukaan arahan `chloros-cli` yang lengkap: setiap arahan, bendera, lalai, kod keluar, dan peraturan folder keluaran. Ditulis untuk kegunaan LLM. |
-| **Rujukan SDK** | `https://mapir.gitbook.io/chloros/reference/sdk-reference` | Permukaan arahan `chloros_sdk` yang lengkap: setiap arahan, bendera, lalai, kod keluar, dan peraturan folder keluaran. Ditulis untuk penggunaan LLM. |
-| **Sebarang halaman sebagai Markdown mentah** | sambungkan `.md` ke halaman URL | contohnya `https://mapir.gitbook.io/chloros/reference/sdk-reference.md` memulangkan halaman sebagai Markdown mentah — sesuai untuk ditampal ke tetingkap konteks atau diambil daripada ejen. |
+| **Rujukan**CLI** | `https://mapir.gitbook.io/chloros/reference/cli-reference` | Antara muka arahan `chloros-cli` yang lengkap: setiap arahan, penanda, lalai, kod keluar, dan peraturan folder keluaran. Ditulis untuk penggunaan LLM. |
+| **Rujukan SDK** | `https://mapir.gitbook.io/chloros/reference/sdk-reference` | Antara muka Python `chloros_sdk` yang lengkap: setiap kelas, tandatangan, pengecualian, dan contoh kerja. Ditulis untuk kegunaan LLM. |
+| **Sebarang halaman sebagai Markdown mentah** | sambungkan `.md` ke URL halaman | contohnya `https://mapir.gitbook.io/chloros/reference/sdk-reference.md` memulangkan halaman sebagai Markdown mentah — sesuai untuk ditampal ke dalam tetingkap konteks atau diambil daripada ejen. |
 
 Pautan dalam manual: [Rujukan CLI](reference/cli-reference.md) · [Rujukan SDK](reference/sdk-reference.md).
 
 {% hint style="info" %}
-Kedua-dua halaman rujukan ini lengkap berdiri sendiri: seorang pembantu yang telah membaca salah satunya tidak memerlukan baki manual untuk menulis skrip yang betul.
+Kedua-dua halaman rujukan ini lengkap bersendirian: seorang pembantu yang telah membaca salah satunya tidak memerlukan baki manual untuk menulis skrip yang betul.
 {% endhint %}
 
-## Resipi pantas
+## Biarkan pembantu anda menjalankan Chloros secara langsung: `chloros-mcp`
+
+Semua yang di atas membolehkan pembantu anda *menulis* skrip atau arahan. Dengan `chloros-mcp`, seorang pembantu yang bertutur dalam [Model Context Protocol](https://modelcontextprotocol.io) (MCP), seperti Claude Desktop, Claude Code atau Cursor, mengendalikan Chloros itu sendiri. Anda bertanya dalam bahasa biasa dan ia memanggil alat pelayan:
+
+* **Proses imej:** buat projek, import folder rakaman, pilih tetapan, proses, dan laporkan apa yang dieksport oleh larian.
+* **Jalankan perkakasan:** sambungkan kamera LATTICE, susunan dan penderia cahaya DAQ, pratonton, tetapkan pendedahan dan warna, rakam, rekod, dan kemas kini firmware.
+
+```text
+You:  Process the flight in D:\Flights\2026-10-17 to reflectance and NDVI.
+
+You:  Show me what the array sees, then capture reflectance every 10 seconds
+      for 5 minutes.
+```
+
+Alat pelayan merangkumi apa yang dilakukan oleh [Python SDK](api-python-sdk.md). Ia dipasang bersama SDK, jadi biasanya tiada apa-apa lagi yang perlu dipasang: pada Windows, pemasang Chloros meletakkan `chloros-mcp.exe` dalam folder `Scripts` Python anda, dan pemasang Linux meletakkan `chloros-mcp` dalam `/usr/bin`.
+
+**Claude Code:**
+
+```bash
+claude mcp add chloros -- chloros-mcp
+```
+
+**Claude Desktop:**tambahkan ini ke `claude_desktop_config.json` (**Tetapan &gt; Pembangun &gt; Sunting Konfig**membukanya), kemudian mulakan semula Claude Desktop.**Cursor** menggunakan kemasukan yang sama dalam `~/.cursor/mcp.json`.
+
+```json
+{
+  "mcpServers": {
+    "chloros": {"command": "chloros-mcp"}
+  }
+}
+```
+
+Jika klien mengatakan pelayan gagal dimulakan, `chloros-mcp` mungkin tidak berada pada `PATH` yang dilihatnya: masukkan laluan penuh sebaliknya (`where chloros-mcp` pada Windows, `which chloros-mcp` pada Linux).
+
+Anda perlu memasang Chloros pada komputer yang sama dan log masuk di sana, dalam aplikasi atau dengan `chloros-cli login`, pada mana-mana peringkat berbayar Chloros+ (Copper atau ke atas). Pelayan tidak boleh log masuk untuk anda.
+
+{% hint style="info" %}
+Penyediaan klien untuk setiap aplikasi, pilihan, setiap alat dan bagaimana sesuatu pelaksanaan berkelakuan: [Pelayan MCP (Penolong AI)](reference/sdk-reference.md#mcp-server-ai-assistants) dalam Rujukan SDK.
+{% endhint %}
+
+## Resipi arahan
 
 Salin, isi `<placeholders>`, dan tampal ke dalam pembantu anda.
 
@@ -37,7 +76,7 @@ Then write a script for <Windows PowerShell | bash> that:
    "Where the outputs land" folder rules.
 ```
 
-### 2. Pantau secara pukal direktori tangkapan
+### 2. Pantau secara bersiri direktori tangkapan
 
 ```
 
@@ -49,7 +88,7 @@ After each run, print every hint from result["summary"]["hints"] and treat
 a run with zero image products as a failure for that folder.
 ```
 
-### 3. Sambungkan susunan LATTICE dan rakam
+### 3. Sambungkan tatasusunan LATTICE dan rakam
 
 ```
 
@@ -73,23 +112,24 @@ Read https://mapir.gitbook.io/chloros/reference/cli-reference.md (section
 ```
 
 {% hint style="warning" %}
-Skrip DAQ dari baris perintah sentiasa melalui keluarga `daq pool-*` (`pool-connect`, `pool-list`, `pool-latest`, `pool-stream`, `pool-record`, `pool-set-cap`, `pool-disconnect`). Subperintah `daq` lain yang mungkin dicipta oleh pembantu anda tidak tersedia dalam binaan yang dihantar dan akan keluar dengan ralat.
+Skrip DAQ dari baris perintah sentiasa melalui keluarga `daq pool-*` (`pool-connect`, `pool-list`, `pool-latest`, `pool-stream`, `pool-record`, `pool-set-cap`, `pool-disconnect`). Subperintah `daq` lain yang mungkin dicipta oleh pembantu anda tidak tersedia dalam binaan yang diedarkan dan akan keluar dengan ralat.
 {% endhint %}
 
 ## Mengapa skrip yang ditulis oleh AI berfungsi dengan baik bersama Chloros
 
-Setiap satunya adalah tingkah laku sebenar yang disahkan bagi Chloros 1.2.0 — ia menghapuskan mod kegagalan klasik dalam automasi yang ditulis oleh mesin:
+Setiap satunya adalah tingkah laku sebenar yang disahkan bagi Chloros 1.3.0 — ia menghapuskan mod kegagalan klasik dalam automasi yang ditulis oleh mesin:
 
-* **Tiada tarian persediaan.**Pembantu sambungan pintar SDK (`connect_camera`, `connect_array`, `connect_daq_sensor`) dan titik kemasukan pemprosesan (`ChlorosLocal`, `process_folder`)**memulakan secara automatik backend tempatan**. Skrip yang dijana tidak memerlukan GUI dibuka atau pelayan yang dimulakan secara manual — ia hanya memerlukan pakej desktop/CLI dipasang.
-* **Seluruh aliran kerja adalah satu panggilan.** `chloros_sdk.process_folder("path", indices=["NDVI"])` menjalankan import → penentukuran → pantulan → eksport indeks dari awal hingga akhir. Luas permukaan yang lebih kecil, lebih sedikit tempat bagi skrip yang dijana untuk melakukan kesilapan.
-* **Jalankan tanpa output mengesan sendiri.** Selepas `process()`, ringkasan jalankan dilampirkan pada keputusan, dan setiap petunjuk pemprosesan (contohnya *mengapa* sesuatu larian tidak menghasilkan sebarang output) turut disiarkan semula sebagai Python `UserWarning` — jadi walaupun skrip yang tidak pernah memeriksa result dict akan memaparkan diagnosis tersebut.
-* **CLI gagal dengan bunyi nyaring.**Jalankan `chloros-cli process` yang meminta produk tetapi tidak menulis sebarang produk mencetak `Processing finished but wrote no image products.` dan**keluar dengan nilai bukan sifar**, jadi skrip shell dan CI mengesaninya dengan pemeriksaan kod keluar biasa. Jalankan yang berjaya melaporkan `Image products written: N`.
+* **Tiada tarian persediaan.**Pembantu sambungan pintar SDK (`connect_camera`, `connect_array`, `connect_daq_sensor`) dan titik permulaan pemprosesan (`ChlorosLocal`, `process_folder`)**memulakan backend tempatan secara automatik**. Skrip yang dijana tidak memerlukan GUI dibuka atau pelayan yang dimulakan secara manual — ia hanya memerlukan pakej desktop/CLI dipasang.
+* **Seluruh paip adalah satu panggilan.** `chloros_sdk.process_folder("path", indices=["NDVI"])` menjalankan import → penentukuran → pantulan → eksport indeks dari awal hingga akhir. Luas permukaan yang lebih kecil, lebih sedikit tempat bagi skrip yang dijana untuk melakukan kesilapan.
+* **Jalankan tanpa output mendiagnosis sendiri.** Selepas `process()`, ringkasan jalankan dilampirkan pada keputusan, dan setiap petunjuk pemprosesan (contohnya *mengapa* sesuatu pelaksanaan tidak menghasilkan sebarang output) turut disiarkan semula sebagai `UserWarning` **Python** — jadi walaupun skrip yang tidak pernah memeriksa result dict akan memaparkan diagnosis tersebut.
+* **CLI gagal dengan jelas.**Sebuah larian `chloros-cli process` yang meminta produk tetapi tidak menulis sebarang produk mencetak `Processing finished but wrote no image products.` dan**keluar dengan nilai tidak sifar**, jadi skrip shell dan CI mengesaninya dengan pemeriksaan kod keluar biasa. Jalankan yang berjaya melaporkan `Image products written: N`, ditambah `(plus M clamp masks)` apabila topeng ditulis. Perintah tangkapan juga menamakan setiap fail yang tidak dapat mereka tulis dan keluar dengan `1`.
+* **Laluan relatif bermaksud apa yang dijangkakan oleh skrip.** Dengan backend tempatan, laluan output relatif (`-o out/` dalam CLI, `output_dir="out/"` dalam SDK) diselesaikan berdasarkan folder di mana arahan atau skrip dijalankan.
 
-Satu asimetri yang perlu diketahui oleh pembantu: `process()` pada SDK sengaja **tidak** memaparkan ralat untuk larian tanpa hasil — sebaliknya ia melaporkannya melalui ringkasan/petunjuk. Jika saluran Python perlu berhenti pada larian kosong, semak ringkasan (resipi 2 melakukannya).
+Satu ketidaksymmetri yang perlu diketahui oleh pembantu: `process()` dalam SDK sengaja **tidak** membangkitkan ralat pada larian sifar-hasil — sebaliknya ia melaporkan melalui ringkasan/petunjuk. Jika paip Python perlu berhenti apabila dijalankan kosong, semak ringkasan (resipi 2 melakukannya).
 
-## Peringatan
+## Perlu Diingat
 
-* **Log masuk Chloros diperlukan.** CLI dan SDK memerlukan tahap Chloros berbayar, dikuatkuasakan di pihak pelayan: permintaan akan gagal dengan `401 AUTH_REQUIRED` apabila tidak log masuk dan `403 PLAN_UPGRADE_REQUIRED` pada tahap percuma. Jalankan `chloros-cli login` sekali pada setiap mesin sebelum menjalankan skrip yang dijana. Lihat [Chloros+ Login](chloros+-login.md).
-* **Perintah tangkapan mengendalikan perkakasan sebenar.** Perintah `lattice` / `daq` / `project` dan objek sesi SDK menyambung, menstrim, dan mencetuskan kamera serta penderia fizikal. Semak skrip yang dijana sebelum ia dijalankan buat kali pertama, dan jalankan ia dengan kehadiran perkakasan.
-* **Semak keluaran secara rawak.** Sahkan folder produk dan beberapa nilai piksel sebelum menerbitkan keputusan. Khususnya, TIFF reflektansi diskalakan mengikut sumber — baca tag XMP `Chloros:PixelScale` (LATTICE: 32768 = 1.0 pantulan; Survey3: 65535) bukannya menganggap pembahagi. Kedua-dua halaman rujukan mendokumentasikan perkara ini di bawah &quot;Membaca piksel pantulan&quot;.
-* **Kesilapan kecil yang boleh mengganggu kod yang dijana:**`pool-record` menulis ke dalam sistem fail**hos belakang** (default `~/Documents/DAQ Live View/`); pada mesin dengan beberapa antara muka rangkaian, utamakan `daq pool-connect --eth-host <ip-or-hostname>` berbanding penemuan automatik; dan gunakan `http://127.0.0.1:5000` (jangan sekali-kali `localhost`) di mana-mana URL belakang muncul.
+* **Log masuk Chloros+ diperlukan.**CLI dan SDK memerlukan tahap**berbayar** Chloros+, dikuatkuasakan di pihak pelayan: permintaan akan gagal dengan `401 AUTH_REQUIRED` apabila tidak log masuk dan `403 PLAN_UPGRADE_REQUIRED` pada tahap percuma. Jalankan `chloros-cli login` sekali pada setiap mesin sebelum menjalankan skrip yang dijana. Lihat [Log Masuk Chloros+](chloros+-login.md).
+* **Perintah tangkapan mengendalikan perkakasan sebenar.** `lattice` / `daq` / Perintah `project`, objek sesi SDK dan alat `chloros-mcp` menyambung, menstrim, dan mencetuskan kamera serta sensor fizikal. Semak skrip yang dijana sebelum ia dijalankan buat pertama kali, dan jalankan ia dengan perkakasan hadir.
+* **Semak keluaran secara rawak.** Sahkan folder produk dan beberapa nilai piksel sebelum menerbitkan keputusan. Secara khusus, TIFF reflektansi diskalakan mengikut sumber — baca tag XMP `Chloros:PixelScale` (fail LATTICE membawanya: 32768 = 1.0 reflektansi; Fail Survey3 tidak melakukannya, dan menggunakan 65535 = 1.0) bukannya menganggap pembahagi. Kedua-dua halaman rujukan mendokumentasikan perkara ini di bawah &quot;Membaca piksel pantulan&quot;.
+* **Kesilapan kecil yang boleh mengganggu kod yang dijana:**`pool-record` menulis ke dalam sistem fail**hos belakang** (default `~/Documents/DAQ Live View/`); pada mesin dengan beberapa antara muka rangkaian, utamakan `daq pool-connect --eth-host <ip-or-hostname>` berbanding penemuan automatik; gunakan `http://127.0.0.1:5000` (jangan sekali-kali `localhost`) di mana-mana URL belakang muncul; skrip yang menelusuri pokok keluaran projek harus melangkau folder `clamp_masks/` (fail `*_clampmask.tif` mereka adalah topeng, bukan imej — lihat [Format Imej Keluaran](output-image-formats.md#clamp-masks)); dan pada Windows di mana laluan panjang dilumpuhkan, pastikan folder projek pendek — folder projek yang lebih dalam daripada kira-kira 130 aksara akan ditolak sebelum pemprosesan bermula.
