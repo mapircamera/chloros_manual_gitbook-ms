@@ -17,35 +17,35 @@ Kecuali anda menukarnya dalam [Tetapan Projek](project-settings/project-settings
 
 ## Projek Baru
 
-<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>Pilih &quot;Projek Baru&quot; daripada menu utama dan masukkan nama unik untuk projek anda.
+<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>Pilih "Projek Baru" daripada menu utama dan masukkan nama unik untuk projek anda.
 
-Jika anda telah menyimpan sebarang templat projek, menu lungsur **Pilih Templat** akan muncul di bawah medan nama — memilih salah satu daripadanya akan memulakan projek baru daripada tetapan templat tersebut. Skrip templat disimpan daripada [Tetapan Projek](project-settings/project-settings.md): masukkan nama dalam medan &quot;Nama Simpan Skrip Templat Projek&quot; dan klik ikon simpan.
+Jika anda telah menyimpan sebarang templat projek, menu lungsur **Pilih Templat** akan muncul di bawah medan nama — memilih salah satu daripadanya akan memulakan projek baru daripada tetapan templat tersebut. Skrip templat disimpan daripada [Tetapan Projek](project-settings/project-settings.md): masukkan nama dalam medan "Nama Simpan Skrip Templat Projek" dan klik ikon simpan.
 
 ## Buka Projek
 
 <figure><img src=".gitbook/assets/v120-open-project.jpg" alt=""><figcaption><p>Projek Terbuka menyenaraikan setiap projek dalam folder projek anda, dengan <strong>Buka Folder Projek</strong> di bahagian bawah</p></figcaption></figure>
 
-Pilih &quot;Buka Projek&quot; untuk melihat senarai projek sedia ada dalam Folder Projek. Jika tiada projek wujud, menu sisi sekunder tidak akan dibuka. Anda boleh melihat beberapa projek yang dicipta oleh GUI (t1, t2, t3) tersenarai dalam foto di atas. Projek DATE\_TIME telah dibuat oleh CLI menggunakan skema penamaan projek lalai. Mengklik mana-mana nama projek akan membukanya.
+Pilih "Buka Projek" untuk melihat senarai projek sedia ada dalam Folder Projek. Jika tiada projek wujud, menu sisi sekunder tidak akan dibuka. Anda boleh melihat beberapa projek yang dicipta oleh GUI (t1, t2, t3) tersenarai dalam foto di atas. Projek DATE\_TIME telah dibuat oleh CLI menggunakan skema penamaan projek lalai. Mengklik mana-mana nama projek akan membukanya.
 
-Mengklik butang &quot;Open Project Folder&quot; akan membuka pengurus fail komputer anda pada laluan projek tersebut. Anda boleh menyesuaikan laluan projek dalam [Tetapan Projek](project-settings/project-settings.md).
+Mengklik butang "Open Project Folder" akan membuka pengurus fail komputer anda pada laluan projek tersebut. Anda boleh menyesuaikan laluan projek dalam [Tetapan Projek](project-settings/project-settings.md).
 
 Jika mana-mana fail imej sumber projek telah dipindahkan atau dipadamkan sejak kali terakhir ia dibuka, Chloros akan memaparkan dialog yang menyenaraikan dengan tepat fail yang hilang, bukannya membuka grid kosong.
 
 ## Mendua Projek
 
-Tersedia setelah projek dibuka. Pilih &quot;Mendua Projek&quot; untuk menyalin projek semasa dengan nama baru — Chloros mencadangkan nama kosong seterusnya (contohnya &quot;MyProject (2)&quot;) — dan salinan itu dibuka serta-merta.
+Tersedia setelah projek dibuka. Pilih "Mendua Projek" untuk menyalin projek semasa dengan nama baru — Chloros mencadangkan nama kosong seterusnya (contohnya "MyProject (2)") — dan salinan itu dibuka serta-merta.
 
 ## Tambah Fail
 
-Selepas projek dibuka, pilih &quot;Tambah Fail&quot; daripada menu utama untuk menambah fail imej secara individu ke dalam projek semasa. Ini mencerminkan fungsi tambah pada pelayar fail tetapi boleh diakses terus daripada menu utama untuk kemudahan.
+Selepas projek dibuka, pilih "Tambah Fail" daripada menu utama untuk menambah fail imej secara individu ke dalam projek semasa. Ini mencerminkan fungsi tambah pada pelayar fail tetapi boleh diakses terus daripada menu utama untuk kemudahan.
 
 ## Tambah Folder
 
-Selepas projek dibuka, pilih &quot;Tambah Folder&quot; daripada menu utama untuk menambah folder imej ke dalam projek semasa. Anda boleh memilih berbilang folder dalam satu langkah. Fail dwi salinan akan diabaikan.
+Selepas projek dibuka, pilih "Tambah Folder" daripada menu utama untuk menambah folder imej ke dalam projek semasa. Anda boleh memilih berbilang folder dalam satu langkah. Fail dwi salinan akan diabaikan.
 
 ## Mulakan / Hentikan Pemprosesan
 
-Selepas fail ditambah ke dalam projek, &quot;Mulakan Pemprosesan&quot; akan tersedia dalam menu utama. Ini adalah tindakan yang sama seperti mengklik butang Main/Mulakan di bar tajuk atas. Semasa pemprosesan, item menu akan bertukar kepada &quot;Hentikan Pemprosesan&quot; untuk membolehkan anda menghentikan aliran kerja.
+Selepas fail ditambah ke dalam projek, "Mulakan Pemprosesan" akan tersedia dalam menu utama. Ini adalah tindakan yang sama seperti mengklik butang Main/Mulakan di bar tajuk atas. Semasa pemprosesan, item menu akan bertukar kepada "Hentikan Pemprosesan" untuk membolehkan anda menghentikan aliran kerja.
 
 ## Sambung ke Kamera / Sambung ke Penderia Cahaya
 

@@ -62,7 +62,7 @@ Chloros beroperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 2. **Pemprosesan** - Mengaplikasikan penentukuran dan mengeksport imej**Masa pemprosesan:**
 
 *   Lebih perlahan berbanding mod selari Chloros+
-*   Sesuai untuk set data kecil hingga sederhana (&lt; 200 imej)
+*   Sesuai untuk set data kecil hingga sederhana (< 200 imej)
 
 ### Mod Chloros+ (Pemprosesan Selari)
 
@@ -202,7 +202,7 @@ Jika anda perlu menghentikan pemprosesan:
 ### Cara Menghentikan
 
 1. Lokasikan butang **Henti** (menggantikan butang Mula semasa pemprosesan)
-2. Klik sekali — bar akan memaparkan **&quot;Berhenti...&quot;** sementara imej yang sedang diproses selesai
+2. Klik sekali — bar akan memaparkan **"Berhenti..."** sementara imej yang sedang diproses selesai
 3. Proses akan berakhir dalam keadaan berhenti sepenuhnya dan log akan mencetak laporan `[RUN-SUMMARY]` yang jujur tentang apa yang telah diselesaikan
 
 ### Bila hendak Berhenti
@@ -305,9 +305,9 @@ Rujuk [Rujukan [CLI]](../reference/cli-reference.md#a-run-that-writes-no-images-
 **Penyelesaian:**
 
 1. Simpan projek dalam folder yang lebih pendek — ubah**Direktori Kerja** dalam [Seting Projek](../project-settings/project-settings.md) dan cipta semula projek itu, atau
-2. Aktifkan laluan panjang Windows dan mulakan semula Chloros: jalankan semula pemasang Chloros dengan kotak **Benarkan laluan panjang Windows** dicentang (ia dicentang secara lalai), atau gunakan Dasar Kumpulan: *Konfigurasi Komputer &gt; Templat Pentadbiran &gt; Sistem &gt; Sistem Fail &gt; Benarkan laluan panjang Win32*.
+2. Aktifkan laluan panjang Windows dan mulakan semula Chloros: jalankan semula pemasang Chloros dengan kotak **Benarkan laluan panjang Windows** dicentang (ia dicentang secara lalai), atau gunakan Dasar Kumpulan: *Konfigurasi Komputer > Templat Pentadbiran > Sistem > Sistem Fail > Benarkan laluan panjang Win32*.
 
-### Amaran &quot;Tiada Sasaran Dikesan&quot;
+### Amaran "Tiada Sasaran Dikesan"
 
 **Punca yang mungkin:**
 

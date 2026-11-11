@@ -42,7 +42,7 @@ Alat pelayan merangkumi apa yang dilakukan oleh [Python SDK](api-python-sdk.md).
 claude mcp add chloros -- chloros-mcp
 ```
 
-**Claude Desktop:**tambahkan ini ke `claude_desktop_config.json` (**Tetapan &gt; Pembangun &gt; Sunting Konfig**membukanya), kemudian mulakan semula Claude Desktop.**Cursor** menggunakan kemasukan yang sama dalam `~/.cursor/mcp.json`.
+**Claude Desktop:**tambahkan ini ke `claude_desktop_config.json` (**Tetapan > Pembangun > Sunting Konfig**membukanya), kemudian mulakan semula Claude Desktop.**Cursor** menggunakan kemasukan yang sama dalam `~/.cursor/mcp.json`.
 
 ```json
 {
@@ -131,5 +131,5 @@ Satu ketidaksymmetri yang perlu diketahui oleh pembantu: `process()` dalam SDK s
 
 * **Log masuk Chloros+ diperlukan.**CLI dan SDK memerlukan tahap**berbayar** Chloros+, dikuatkuasakan di pihak pelayan: permintaan akan gagal dengan `401 AUTH_REQUIRED` apabila tidak log masuk dan `403 PLAN_UPGRADE_REQUIRED` pada tahap percuma. Jalankan `chloros-cli login` sekali pada setiap mesin sebelum menjalankan skrip yang dijana. Lihat [Log Masuk Chloros+](chloros+-login.md).
 * **Perintah tangkapan mengendalikan perkakasan sebenar.** `lattice` / `daq` / Perintah `project`, objek sesi SDK dan alat `chloros-mcp` menyambung, menstrim, dan mencetuskan kamera serta sensor fizikal. Semak skrip yang dijana sebelum ia dijalankan buat pertama kali, dan jalankan ia dengan perkakasan hadir.
-* **Semak keluaran secara rawak.** Sahkan folder produk dan beberapa nilai piksel sebelum menerbitkan keputusan. Secara khusus, TIFF reflektansi diskalakan mengikut sumber — baca tag XMP `Chloros:PixelScale` (fail LATTICE membawanya: 32768 = 1.0 reflektansi; Fail Survey3 tidak melakukannya, dan menggunakan 65535 = 1.0) bukannya menganggap pembahagi. Kedua-dua halaman rujukan mendokumentasikan perkara ini di bawah &quot;Membaca piksel pantulan&quot;.
+* **Semak keluaran secara rawak.** Sahkan folder produk dan beberapa nilai piksel sebelum menerbitkan keputusan. Secara khusus, TIFF reflektansi diskalakan mengikut sumber — baca tag XMP `Chloros:PixelScale` (fail LATTICE membawanya: 32768 = 1.0 reflektansi; Fail Survey3 tidak melakukannya, dan menggunakan 65535 = 1.0) bukannya menganggap pembahagi. Kedua-dua halaman rujukan mendokumentasikan perkara ini di bawah "Membaca piksel pantulan".
 * **Kesilapan kecil yang boleh mengganggu kod yang dijana:**`pool-record` menulis ke dalam sistem fail**hos belakang** (default `~/Documents/DAQ Live View/`); pada mesin dengan beberapa antara muka rangkaian, utamakan `daq pool-connect --eth-host <ip-or-hostname>` berbanding penemuan automatik; gunakan `http://127.0.0.1:5000` (jangan sekali-kali `localhost`) di mana-mana URL belakang muncul; skrip yang menelusuri pokok keluaran projek harus melangkau folder `clamp_masks/` (fail `*_clampmask.tif` mereka adalah topeng, bukan imej — lihat [Format Imej Keluaran](output-image-formats.md#clamp-masks)); dan pada Windows di mana laluan panjang dilumpuhkan, pastikan folder projek pendek — folder projek yang lebih dalam daripada kira-kira 130 aksara akan ditolak sebelum pemprosesan bermula.

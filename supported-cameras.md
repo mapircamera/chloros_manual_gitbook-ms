@@ -6,23 +6,10 @@ metaLinks:
 
 # Kamera Disokong
 
-Chloros
-memproses imej daripada dua keluarga kamera MAPIR
-pada **semua platform** (Windows
-, Linux
-amd64, dan Linux
-arm64/Jetson):
+Chloros memproses imej daripada dua keluarga kamera MAPIR pada **semua platform** (Windows, Linux amd64, dan Linux arm64/Jetson):
 
-* **Survey3** — kamera Survey3W
-(luas) dan Survey3N
-(sempit). Input: `RAW+JPG`.
-* **LATTICE**— modul kamera multispektral M3C dan M3M. Input: tangkapan `.tif`/`.tiff`. Kamera LATTICE juga boleh**dikawal secara langsung** daripada Chloros
-— melalui tab GUI Cameras (Windows
-) atau `chloros-cli lattice` / Python
-SDK
-(Windows
-dan Linux
-) — termasuk susunan multi-kamera yang diselaraskan. Lihat [panduan LATTICE](lattice/).
+* **Survey3** — kamera Survey3W (luas) dan Survey3N (sempit). Input: `RAW+JPG`.
+* **LATTICE**— modul kamera multispektral M3C dan M3M. Input: tangkapan `.tif`/`.tiff`. Kamera LATTICE juga boleh**dikawal secara langsung** daripada Chloros — melalui tab GUI Cameras (Windows) atau `chloros-cli lattice` / Python SDK (Windows dan Linux) — termasuk susunan multi-kamera yang diselaraskan. Lihat [panduan LATTICE](lattice/).
 
 Saluran pemprosesan juga menerima fail input `.dng`.
 
@@ -36,9 +23,7 @@ Barisan LATTICE adalah sistem kamera multispektral modular yang dibina berdasark
 <sensor>-<lens>-F<filter>        e.g.  M3C-L41-FRGN,  M3M-L87-F550
 ```
 
-Chloros
-
-menampilkannya dengan awalan `LATT-` (contohnya `LATT-M3M-L41-F550`), dan rentetan model ini menggerakkan segala-galanya seterusnya — profil sensor, susun atur jalur, dan penentukuran diselesaikan secara automatik; tiada apa-apa yang perlu dikonfigurasikan bagi setiap kamera. Nombor lensa ialah **medan pandangan mendatar dalam darjah**: `L41` = sempit 41°, `L87` = lebar 87°.
+Chloros menampilkannya dengan awalan `LATT-` (contohnya `LATT-M3M-L41-F550`), dan rentetan model ini menggerakkan segala-galanya seterusnya — profil sensor, susun atur jalur, dan penentukuran diselesaikan secara automatik; tiada apa-apa yang perlu dikonfigurasikan bagi setiap kamera. Nombor lensa ialah **medan pandangan mendatar dalam darjah**: `L41` = sempit 41°, `L87` = lebar 87°.
 
 Terdapat dua konfigurasi sensor:
 
@@ -49,36 +34,14 @@ Terdapat dua konfigurasi sensor:
 
 ### Pilihan penapis M3C (Bayer)
 
-| Penapis | Julat (nama @ tengah nm / FWHM
-
-nm)       |
+| Penapis | Julat (nama @ tengah nm / FWHM nm)       |
 | ------ | ---------------------------------------- |
 | `FRGB` | Biru 475/30 · Hijau 550/30 · Merah 625/30 |
-| `FRGN` | Merah 660/21 · Green
+| `FRGN` | Merah 660/21 · Green 550/30 · NIR 850/30   |
+| `FOCN` | Orange 618.4/46 · Cyan 494.1/40 · NIR 821.6/54 (diukur — lihat di bawah) |
+| `FNGB` | Blue 475/30 · Green 550/30 · NIR 850/30  |
 
-550/30 · NIR
-
-850/30   |
-| `FOCN` | Orange
-
-618.4/46 · Cyan
-
-494.1/40 · NIR
-
-821.6/54 (diukur — lihat di bawah) |
-| `FNGB` | Blue
-
-475/30 · Green
-
-550/30 · NIR
-
-850/30  |
-
-Untuk `FOCN` nilai adalah jalur separuh maksimum **diukur** penapis (Chloros
-
-1.3.0 dan ke atas; versi terdahulu menggunakan nilai helaian spesifikasi 615/21 · 490/38 · 808/14). Nama jalur kekal `Orange_615`, `Cyan_490` dan `NIR_808`, dan pusat serta lebar yang diukur adalah apa yang dicop oleh Chloros
-
-ke dalam setiap eksport yang dikalibrasi.
+Untuk `FOCN` nilai adalah jalur separuh maksimum **diukur** penapis (Chloros 1.3.0 dan ke atas; versi terdahulu menggunakan nilai helaian spesifikasi 615/21 · 490/38 · 808/14). Nama jalur kekal `Orange_615`, `Cyan_490` dan `NIR_808`, dan pusat serta lebar yang diukur adalah apa yang dicop oleh Chloros ke dalam setiap eksport yang dikalibrasi.
 
 ### Katalog penapis M3M (mono) — 23 SKU
 
@@ -112,14 +75,8 @@ Nombor F ialah label SKU; jalur yang diukur (dicop ke dalam setiap eksport yang 
 | F950   | 945.1                 | 929–961         | 32         |
 | F988 † | 985.3                 | 968–1003        | 35         |
 
-&quot;Pinggir jalur diukur pada nilai lebar penuh pada separuh maksimum daripada imbasan penapis setiap lot oleh MAPIR
+"Pinggir jalur diukur pada nilai lebar penuh pada separuh maksimum daripada imbasan penapis setiap lot oleh MAPIR — nilai yang sama yang dicop oleh Chloros ke dalam setiap eksport yang dikalibrasi." "— (nominal)" = tiada imbasan lot lagi; bagi SKU tersebut, pusat yang dinyatakan ialah nombor SKU dan lebarnya ialah angka pengeluar.
 
-— nilai yang sama yang dicop oleh Chloros
-
-ke dalam setiap eksport yang dikalibrasi.&quot; &quot;— (nominal)&quot; = tiada imbasan lot lagi; bagi SKU tersebut, pusat yang dinyatakan ialah nombor SKU dan lebarnya ialah angka pengeluar.
-
-† &quot;Refleksan F988 dikalibrasi menggunakan panel reflektansi dalam adegan: jalur ini terletak di luar julat kalibrasi penderia cahaya DAQ, jadi Chloros
-
-menggunakan tangkapan panel terkini anda dan menyimpannya di antara sesi penalaan panel.&quot; Lihat [Sasaran Kalibrasi](calibration-targets.md).
+† "Refleksan F988 dikalibrasi menggunakan panel reflektansi dalam adegan: jalur ini terletak di luar julat kalibrasi penderia cahaya DAQ, jadi Chloros menggunakan tangkapan panel terkini anda dan menyimpannya di antara sesi penalaan panel." Lihat [Sasaran Kalibrasi](calibration-targets.md).
 
 Untuk kawalan kamera secara langsung, susunan, penyediaan rangkaian, dan rantaian pemprosesan radiometrik, lihat [panduan LATTICE](lattice/).

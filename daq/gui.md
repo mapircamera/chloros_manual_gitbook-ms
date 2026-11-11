@@ -21,7 +21,7 @@ Klik **Sambungkan Sensor** di bahagian atas bar sisi. Tetingkap dialog sambungan
 | **↻ Segarkan** | Mengimbas semula pengangkutan terpilih serta-merta (dilumpuhkan semasa imbasan BLE/Ethernet). |
 | **Sambungkan Sensor** | Diaktifkan setelah peranti dipilih; dinamakan semula kepada `Connecting...` semasa sambungan dibuat. |
 
-Penemuan hanya dijalankan **semasa dialog sambungan dipaparkan di skrin**, dan diulang setiap 15 saat untuk pengangkutan yang dipilih sahaja — hanya membuka tab tidak akan mengimbas. Sekiranya gagal, dialog akan memaparkan: *&quot;Sambungan gagal. Cuba cabut dan pasang semula sensor, kemudian klik Sambung sekali lagi.&quot;*
+Penemuan hanya dijalankan **semasa dialog sambungan dipaparkan di skrin**, dan diulang setiap 15 saat untuk pengangkutan yang dipilih sahaja — hanya membuka tab tidak akan mengimbas. Sekiranya gagal, dialog akan memaparkan: *"Sambungan gagal. Cuba cabut dan pasang semula sensor, kemudian klik Sambung sekali lagi."*
 
 Bar sisi akan terbuka secara automatik apabila sensor pertama anda disambungkan.
 
@@ -43,9 +43,7 @@ Setiap penderia yang disambungkan akan mendapat satu baris (ditambah satu baris 
 | Lencana Pengangkutan | `DAQ-U` / `DAQ-M` / `DAQ-E`, atau lencana hijau `REF` untuk kumpulan pantulan Ambient+Object. |
 | Nama peranti | Secara lalai menggunakan siri penderia (identiti stabil untuk penentukuran, nama fail `.daq`, dan padanan import); nama tersuai kekal bagi setiap projek. |
 | pil **Dikalibrasi** (hijau) | Ditunjukkan apabila bundel kalibrasi kilang sensor dimuat, iaitu spektra adalah benar W/m²/nm. |
-| **Kemas Kini Tersedia** pil (kuning, DAQ-E sahaja) | Firmware yang sedang berjalan lebih lama daripada imej yang disertakan dengan binaan Chloros
-
-ini. Semasa kemas kini ia memaparkan kemajuan secara langsung (`Flashing… N%`, `Restarting sensor…`, kemudian `Updated X → Y` atau `Failed`). |
+| **Kemas Kini Tersedia** pil (kuning, DAQ-E sahaja) | Firmware yang sedang berjalan lebih lama daripada imej yang disertakan dengan binaan Chloros ini. Semasa kemas kini ia memaparkan kemajuan secara langsung (`Flashing… N%`, `Restarting sensor…`, kemudian `Updated X → Y` atau `Failed`). |
 | Mata | Menghidupkan/mematikan keterlihatan sensor ini pada carta. |
 | Gear | Membuka modal tetapan bagi setiap sensor (di bawah). |
 | ✕ (merah) | Memutuskan sambungan sensor, atau membuang kumpulan Ambient+Object. |
@@ -53,9 +51,9 @@ ini. Semasa kemas kini ia memaparkan kemajuan secara langsung (`Flashing… N%`,
 Di atas baris terdapat dua butang:
 
 * **Sambungkan Sensor** — membuka dialog sambungan (ditukar label kepada `Connecting...` semasa sibuk).
-* **Rakam Semua / Hentikan Semua**— memulakan atau menghentikan rakaman `.daq` pada**setiap**sensor yang disambungkan. Perlukan sekurang-kurangnya satu sensor**dan satu projek terbuka** (petua alat: &quot;Buka projek untuk merakam&quot;); ia bertukar merah selagi mana-mana rakaman sedang dijalankan.
+* **Rakam Semua / Hentikan Semua**— memulakan atau menghentikan rakaman `.daq` pada**setiap**sensor yang disambungkan. Perlukan sekurang-kurangnya satu sensor**dan satu projek terbuka** (petua alat: "Buka projek untuk merakam"); ia bertukar merah selagi mana-mana rakaman sedang dijalankan.
 
-Keadaan kosong memaparkan &quot;Tiada sensor yang disambungkan&quot;.
+Keadaan kosong memaparkan "Tiada sensor yang disambungkan".
 
 <!-- SCREENSHOT-NEEDED: sensor sidebar with three rows — a DAQ-E showing both the green Calibrated pill and the amber Update Available pill, a DAQ-U row, and a green REF group row — plus the Connect Sensor and Record All buttons -->
 
@@ -85,12 +83,8 @@ Buka dengan ikon gear pada baris sensor. Kandungan mengikut susunan:
 butang</version\>
 
 **Kemas Kini ke \<version\>**akan muncul apabila binaan **Chloros** ini membungkus imej firmware DAQ-E yang lebih baru. Kemas kini diflask melalui rangkaian dalam masa kira-kira 30 saat; sensor akan dihidupkan semula dan disambungkan semula secara automatik, dan pemindahan yang terganggu tidak menjejaskan firmware semasa. Aliran kemajuan disiarkan secara langsung (`Flashing… N%` → `Restarting sensor…` → `Updated X → Y`), dan sel membacakan `Up to date` apabila semasa.
-* **PTP Sync** — status PTP langsung (berpindah kembali ke `unknown`). Firmware DAQ-E v1.2.0+ menyertai IEEE 1588 PTPv2 sebagai jam hamba sahaja; backend hos Chloros
-
-adalah grandmaster PTP, dan setiap kamera DAQ-E dan LATTICE di LAN menjadi hamba kepadanya dalam domain 0, mengekalkan cap masa dalam lingkungan kira-kira 1 ms.
-* **Rangkaian**— alamat yang digunakan oleh unit dan bagaimana ia diperoleh (DHCP, pautan-tempatan atau statik), dan tetapan yang disimpan yang terpakai selepas but semula.**Ubah…**membuka borang:**Automatik (DHCP)**atau**IP Tetap**dengan alamat IP, topeng subnet dan gateway pilihan.**Terpakai dan Mulakan Semula** menyimpannya, memulakan semula penderia dan menyambung semula. Alamat statik di luar rangkaian komputer ini ditolak, kerana Chloros
-
-tidak dapat mencapai penderia selepas but semula; satu kotak untuk membenarkannya walaupun begitu akan muncul, untuk komputer yang akan dialamatkan semula atau dialihkan ke rangkaian tersebut. **Streaming semasa kuasa-hidup**menetapkan sama ada penderia memulakan penstriman sebaik sahaja dihidupkan, sebelum sebarang perisian disambungkan.**Mulakan semula sensor** memulakan semula dan menyambung semula dengan tetapan semasa. Permulaan semula ditolak semasa sensor sedang merekod. Baharu dalam 1.3.0.
+* **PTP Sync** — status PTP langsung (berpindah kembali ke `unknown`). Firmware DAQ-E v1.2.0+ menyertai IEEE 1588 PTPv2 sebagai jam hamba sahaja; backend hos Chloros adalah grandmaster PTP, dan setiap kamera DAQ-E dan LATTICE di LAN menjadi hamba kepadanya dalam domain 0, mengekalkan cap masa dalam lingkungan kira-kira 1 ms.
+* **Rangkaian**— alamat yang digunakan oleh unit dan bagaimana ia diperoleh (DHCP, pautan-tempatan atau statik), dan tetapan yang disimpan yang terpakai selepas but semula.**Ubah…**membuka borang:**Automatik (DHCP)**atau**IP Tetap**dengan alamat IP, topeng subnet dan gateway pilihan.**Terpakai dan Mulakan Semula** menyimpannya, memulakan semula penderia dan menyambung semula. Alamat statik di luar rangkaian komputer ini ditolak, kerana Chloros tidak dapat mencapai penderia selepas but semula; satu kotak untuk membenarkannya walaupun begitu akan muncul, untuk komputer yang akan dialamatkan semula atau dialihkan ke rangkaian tersebut. **Streaming semasa kuasa-hidup**menetapkan sama ada penderia memulakan penstriman sebaik sahaja dihidupkan, sebelum sebarang perisian disambungkan.**Mulakan semula sensor** memulakan semula dan menyambung semula dengan tetapan semasa. Permulaan semula ditolak semasa sensor sedang merekod. Baharu dalam 1.3.0.
 
 Untuk kumpulan Ambient+Object, modal gear hanya memaparkan sensor sumber kumpulan, Nama Peranti, dan Warna Garis Graf.
 
@@ -100,9 +94,7 @@ Untuk kumpulan Ambient+Object, modal gear hanya memaparkan sensor sumber kumpula
 
 ### Pilihan Penutup
 
-Tetingkap lungsur **Penutup** memberitahu Chloros
-
-penutup fizikal mana yang dipasang di atas penyebar penderia, dan menerapkan profil pembetulan yang diukur di kilang bagi penutup itu ke atas setiap spektrum. Pilihan bergantung pada model:
+Tetingkap lungsur **Penutup** memberitahu Chloros penutup fizikal mana yang dipasang di atas penyebar penderia, dan menerapkan profil pembetulan yang diukur di kilang bagi penutup itu ke atas setiap spektrum. Pilihan bergantung pada model:
 
 | Model | Pilihan Penutup |
 | --- | --- |
@@ -110,16 +102,14 @@ penutup fizikal mana yang dipasang di atas penyebar penderia, dan menerapkan pro
 | DAQ-M | Tiada (penderia terdedah), Sunshine (pembetul kosin) |
 | DAQ-E | Tiada (penderia terdedah), FOV 15°, FOV 45°, FOV 90°, Sunshine (pembetul kosin) |
 
-**Laras lalai bagi setiap model ialah Sunshine (pembetul kosinus)** — MAPIR
-
-menghantar setiap DAQ dengan penutup Sunshine dipasang, dan ia adalah konfigurasi luar standard: pemandangan hemisfera 180° dengan ralat kosinus ≤ ±4 % sehingga 60° dan ≤ ±4.5 % sehingga 70° (tidak disyorkan di bawah kira-kira 15° ketinggian solar), meredam mengikut reka bentuk (~12×). Pilihan anda kekal dalam projek.
+**Laras lalai bagi setiap model ialah Sunshine (pembetul kosinus)** — MAPIR menghantar setiap DAQ dengan penutup Sunshine dipasang, dan ia adalah konfigurasi luar standard: pemandangan hemisfera 180° dengan ralat kosinus ≤ ±4 % sehingga 60° dan ≤ ±4.5 % sehingga 70° (tidak disyorkan di bawah kira-kira 15° ketinggian solar), meredam mengikut reka bentuk (~12×). Pilihan anda kekal dalam projek.
 
 {% hint style="warning" %}
-Pilihan penutup mesti sepadan dengan penutup fizikal.**Sama ada penderia mahupun perisian tidak dapat mengesan penutup yang dipasang. Pilihan ini mempengaruhi pembetulan secara langsung dan cap yang ditulis ke dalam setiap fail `.daq` — dengan perlemahan ~12× penutup Sunshine, Pertukaran penutup yang tidak dinyatakan menyebabkan spektra diselaraskan dengan salah pada anggaran faktor tersebut. (Mengalihkan dan memasang semula penutup yang sama mengulangi kesilapan sehingga kira-kira 1.5 %.) Pilih**Tiada (penderia kosong)** hanya apabila penutup telah dialihkan secara fizikal; pada DAQ-E, &quot;None&quot; masih menerapkan profil geometri kilang untuk penyebar kaca yang terbenam — ia bukan tiada operasi — dan DAQ-E tanpa penutup adalah konfigurasi bangku, bukan konfigurasi lapangan yang disokong.
+Pilihan penutup mesti sepadan dengan penutup fizikal.**Sama ada penderia mahupun perisian tidak dapat mengesan penutup yang dipasang. Pilihan ini mempengaruhi pembetulan secara langsung dan cap yang ditulis ke dalam setiap fail `.daq` — dengan perlemahan ~12× penutup Sunshine, Pertukaran penutup yang tidak dinyatakan menyebabkan spektra diselaraskan dengan salah pada anggaran faktor tersebut. (Mengalihkan dan memasang semula penutup yang sama mengulangi kesilapan sehingga kira-kira 1.5 %.) Pilih**Tiada (penderia kosong)** hanya apabila penutup telah dialihkan secara fizikal; pada DAQ-E, "None" masih menerapkan profil geometri kilang untuk penyebar kaca yang terbenam — ia bukan tiada operasi — dan DAQ-E tanpa penutup adalah konfigurasi bangku, bukan konfigurasi lapangan yang disokong.
 {% endhint %}
 
 {% hint style="info" %}
-Peningkatan daripada manual terdahulu: suis &quot;Sunshine Diffuser Terpasang&quot; di pihak pelayar dari 1.1.0 telah dihapuskan. Pengendalian topi kini adalah profil Topi per-sensor ini, yang diterapkan di pihak pelayan.
+Peningkatan daripada manual terdahulu: suis "Sunshine Diffuser Terpasang" di pihak pelayar dari 1.1.0 telah dihapuskan. Pengendalian topi kini adalah profil Topi per-sensor ini, yang diterapkan di pihak pelayan.
 {% endhint %}
 
 ***
@@ -148,13 +138,7 @@ Bar atas melekat memaparkan **togol pandangan senarai ⇄ grid**dan gelangsar**Z
 Di bawah carta dalam paparan senarai, dikemas kini setiap 500 ms:
 
 * **Semua model**: Sampel warna Cahaya (sRGB daripada CIE XYZ), Terjenuh (Ya/Tidak), CIE 1931 X/Y/Z, Kromatikiti x/y, CIE u′/v′, CCT (K), CRI (Ra), Panjang Gelombang Dominan (nm), Panjang Gelombang Puncak (nm), Ketulenan Eksitasi, Duv, CIE L*/a*/b*, dan Munsell H/V/C.
-* **Penderia yang telah dikalibrasi sahaja**(mana-mana DAQ-U / DAQ-M / DAQ-E setelah bundel kalibrasi kilangnya dimuatkan — lencana hijau**Dikalisasi** pada baris penderia adalah petandanya): Kuasa Total (W/m²), Luks Fotopik (lx), Luks Skotopik (lx), Perbandingan S/P, PPFD serta PPFD Red
-
-/Green
-
-/Blue
-
-(µmol/m²/s), dan iradiasi opik — S-kone, Melanopik, Rhodopik, M-kone, L-kone (semua W/m²).
+* **Penderia yang telah dikalibrasi sahaja**(mana-mana DAQ-U / DAQ-M / DAQ-E setelah bundel kalibrasi kilangnya dimuatkan — lencana hijau**Dikalisasi** pada baris penderia adalah petandanya): Kuasa Total (W/m²), Luks Fotopik (lx), Luks Skotopik (lx), Perbandingan S/P, PPFD serta PPFD Red /Green /Blue (µmol/m²/s), dan iradiasi opik — S-kone, Melanopik, Rhodopik, M-kone, L-kone (semua W/m²).
 
 <!-- SCREENSHOT-NEEDED: list view live data table for a DAQ-E showing both the colorimetric rows and the power-calibrated rows (Total Power, Photopic/Scotopic Lux, PPFD, opic irradiances) -->
 
@@ -167,12 +151,10 @@ Dua penderia yang bersambung boleh digabungkan menjadi paparan pantulan langsung
 1. Dalam paparan grid, klik **+**pada jubin carta dan pilih**Gabungkan Cahaya Sekeliling + Objek**.
 2. Pilih satu penderia **Sumber Cahaya Sekitar**dan satu penderia**Pemindai Objek**(dua penderia berasingan), kemudian**Buat**.
 
-Chloros
+Chloros mengira R(λ) = object(λ) / ambient(λ) bagi setiap panjang gelombang daripada dua aliran langsung (0 di mana ambient ≤ 0). Label kumpulan mengikut kelas penentukuran penderia:
 
-mengira R(λ) = object(λ) / ambient(λ) bagi setiap panjang gelombang daripada dua aliran langsung (0 di mana ambient ≤ 0). Label kumpulan mengikut kelas penentukuran penderia:
-
-* Kedua-dua penderia ditentukur (bungkusan dimuat) → **&quot;Pantulan Nampaknya&quot;**.
-* Mana-mana sensor tidak dikalibrasi → **&quot;Reflektan Relatif&quot;**.
+* Kedua-dua penderia ditentukur (bungkusan dimuat) → **"Pantulan Nampaknya"**.
+* Mana-mana sensor tidak dikalibrasi → **"Reflektan Relatif"**.
 
 Kumpulan ini akan muncul sebagai baris hijau `REF` dalam bar sisi dan carta tersendiri (isi pelangi, nilai terapung sehingga 4 perpuluhan, seret untuk zum).
 
@@ -184,34 +166,10 @@ Menu **+**juga menawarkan**Tambah Sensor Baharu** dengan tiga pilihan penempatan
 
 ### Jadual indeks vegetasi
 
-Dalam paparan senarai, jadual indeks vegetasi terletak di bawah carta kumpulan pantulan, dikira daripada pantulan langsung di pusat jalur **biru 450 / hijau 550 / merah 670 / NIR
+Dalam paparan senarai, jadual indeks vegetasi terletak di bawah carta kumpulan pantulan, dikira daripada pantulan langsung di pusat jalur **biru 450 / hijau 550 / merah 670 / NIR 800 nm** (nilai sehingga 4 perpuluhan, `---` apabila tidak dapat dikira; selerakkan tetikus pada nama indeks untuk nama penuh):
 
-800 nm** (nilai sehingga 4 perpuluhan, `---` apabila tidak dapat dikira; selerakkan tetikus pada nama indeks untuk nama penuh):
-
-* **Sentiasa dipaparkan** (tidak berubah skala, mana-mana gabungan penderia): NDVI
-
-, GNDVI
-
-, ENDVI, WDRVI
-
-, GRVI
-
-, CVI
-
-, GCI
-
-, MSR.
-* **Hanya apabila kedua-dua penderia telah ditala kuasa** (kedua-dua bundel dimuat): EVI
-
-, SAVI
-
-, OSAVI
-
-, GSAVI, GOSAVI, MSAVI2, RDVI, TDVI, LAI
-
-, NLI, MNLI, FCI, GEMI
-
-.
+* **Sentiasa dipaparkan** (tidak berubah skala, mana-mana gabungan penderia): NDVI, GNDVI, ENDVI, WDRVI, GRVI, CVI, GCI, MSR.
+* **Hanya apabila kedua-dua penderia telah ditala kuasa** (kedua-dua bundel dimuat): EVI, SAVI, OSAVI, GSAVI, GOSAVI, MSAVI2, RDVI, TDVI, LAI, NLI, MNLI, FCI, GEMI.
 
 <!-- SCREENSHOT-NEEDED: an Ambient+Object reflectance group in list view — reflectance chart labeled "Apparent Reflectance" with the vegetation index table below it showing live NDVI etc. -->
 
@@ -235,13 +193,9 @@ Untuk nombor iradiasi kuantitatif, puratakan sekurang-kurangnya 15 saat data —
 ## Susun atur berbilang penderia dan ketahanan projek
 
 * Gabungkan beberapa penderia dalam satu carta (paksi kongsi), kekalkan carta berasingan (susun atur grid automatik), alihkan penderia antara carta, seret untuk menyusun semula baris/jubin, dan sembunyikan penderia individu dengan suis mata.
-* Bagi setiap projek, Chloros
-
-menyimpan: nama peranti, warna graf, saiz carta, mod paparan, dan tetapan setiap penderia (masa integrasi, purata bingkai, keadaan AE, pilihan cap).
+* Bagi setiap projek, Chloros menyimpan: nama peranti, warna graf, saiz carta, mod paparan, dan tetapan setiap penderia (masa integrasi, purata bingkai, keadaan AE, pilihan cap).
 * **Membuka semula projek menyambung semula penderia-penderianya secara automatik** mengikut alamat — port COM untuk DAQ-U, peranti BLE untuk DAQ-M, nama hos mDNS untuk DAQ-E (diresolves walaupun IP unit berubah) — dan menerapkan semula profil cap yang disimpan, purata bingkai, status AE, dan masa integrasi manual setiap sensor.***
 
 ## Penyandingan kamera (DLS)
 
-Tiada apa yang perlu dipasangkan. Tidak seperti aliran kerja DLS dron yang mengikat penderia cahaya kepada kamera pada peringkat awal, Chloros
-
-memadankan data DAQ dengan imej pada peringkat kemudian: pada masa import/pemprosesan, bacaan `.daq` diinterpolasi kepada cap masa pendedahan setiap tangkapan. Rakam dengan mana-mana penderia yang disambungkan (`.daq` dimasukkan ke dalam projek secara automatik), dan pemprosesan reflektansi mencari bacaan yang tepat mengikut masa — lihat [DAQ Light Sensors](README.md) untuk maklumat tentang bagaimana data yang turun ke bawah digunakan. Untuk tangkapan LATTICE **langsung**, pilih sensor dalam menu lungsur**Penderia Cahaya** pada tab Kamera sebaliknya; Setiap tangkapan kemudian menyimpan bacaan yang digunakannya, yang dipadankan hanya dengan kamera bagi tangkapan tersebut (lihat [Aliran Kerja Reflektan](reflectance.md)).</version\>
+Tiada apa yang perlu dipasangkan. Tidak seperti aliran kerja DLS dron yang mengikat penderia cahaya kepada kamera pada peringkat awal, Chloros memadankan data DAQ dengan imej pada peringkat kemudian: pada masa import/pemprosesan, bacaan `.daq` diinterpolasi kepada cap masa pendedahan setiap tangkapan. Rakam dengan mana-mana penderia yang disambungkan (`.daq` dimasukkan ke dalam projek secara automatik), dan pemprosesan reflektansi mencari bacaan yang tepat mengikut masa — lihat [DAQ Light Sensors](README.md) untuk maklumat tentang bagaimana data yang turun ke bawah digunakan. Untuk tangkapan LATTICE **langsung**, pilih sensor dalam menu lungsur**Penderia Cahaya** pada tab Kamera sebaliknya; Setiap tangkapan kemudian menyimpan bacaan yang digunakannya, yang dipadankan hanya dengan kamera bagi tangkapan tersebut (lihat [Aliran Kerja Reflektan](reflectance.md)).</version\>

@@ -76,7 +76,7 @@ Baru dalam 1.3.0, produk indeks menerangkan **dirinya sendiri** dan bukannya men
 | `Chloros:IlluminationInvariant` | `True` untuk indeks yang dikira daripada pantulan, `False` daripada sinaran atau nilai penderia |
 | `Chloros:ChlorosPipelineVersion` | versi Chloros yang menulis indeks |
 
-`Chloros:PixelScale` dikeluarkan daripada produk indeks — gunakan `IndexMin` / `IndexMax` di atas. Resipi bacaan balik penuh terdapat di bawah &quot;Raster indeks integer adalah regangan kontras setiap imej&quot; dalam [Rujukan CLI](reference/cli-reference.md).
+`Chloros:PixelScale` dikeluarkan daripada produk indeks — gunakan `IndexMin` / `IndexMax` di atas. Resipi bacaan balik penuh terdapat di bawah "Raster indeks integer adalah regangan kontras setiap imej" dalam [Rujukan CLI](reference/cli-reference.md).
 
 ## Membaca nilai piksel pantulan
 
@@ -93,4 +93,4 @@ Reflektan disimpan sebagai nombor digital bulat, dan **DN yang bermaksud ρ = 1.
 **Sampulan 8-bit.** Eksport sampulan 8-bit adalah 8-bit. Reflektansnya diskalakan semula dan ditandakan `Chloros:PixelScale=32768`, jadi skala itu terpelihara; Produk DN 8-bit, dan fail pantulan yang ditulis sebelum 1.3.0, dipotong kepada 0–255 dan tidak mempunyai tag skala. Jika tag tiada pada fail pantulan LATTICE, jangan anggap ada skala; eksport semula pada 16-bit atau 32-bit sebaliknya.
 {% endhint %}
 
-Untuk peraturan lengkap (termasuk tag yang serasi dengan MicaSense), lihat **&quot;Membaca piksel pantulan&quot;** dalam [Rujukan CLI](reference/cli-reference.md).
+Untuk peraturan lengkap (termasuk tag yang serasi dengan MicaSense), lihat **"Membaca piksel pantulan"** dalam [Rujukan CLI](reference/cli-reference.md).

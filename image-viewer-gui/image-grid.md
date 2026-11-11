@@ -24,9 +24,7 @@ Apabila tetingkap terlalu sempit untuk kesemuanya, kumpulan akan mengecut dari k
 
 ## Butang Tonton Eksport
 
-Butang-butang ini menukar pratonton grid antara jenis imej. **Sebuah butang akan muncul sebaik sahaja produk yang dinamakannya wujud** — yang bagi fail sumber bermaksud serta-merta semasa pengimportan, bukan selepas pemprosesan.Chloros
-
-mengimbas semula produk projek semasa sesuatu larian sedang dijalankan, jadi butang-butang akan muncul semasa pemprosesan apabila setiap produk mula disimpan ke cakera.
+Butang-butang ini menukar pratonton grid antara jenis imej. **Sebuah butang akan muncul sebaik sahaja produk yang dinamakannya wujud** — yang bagi fail sumber bermaksud serta-merta semasa pengimportan, bukan selepas pemprosesan.Chloros mengimbas semula produk projek semasa sesuatu larian sedang dijalankan, jadi butang-butang akan muncul semasa pemprosesan apabila setiap produk mula disimpan ke cakera.
 
 ### Butang asas
 
@@ -34,9 +32,7 @@ Butang eksport paling kiri dilabelkan untuk **apa yang sebenarnya anda import**:
 
 | Apa yang anda import | Label butang |
 | --- | --- |
-|Survey3
-
-RAW+JPG | `JPG` |
+|Survey3 RAW+JPG | `JPG` |
 | LATTICE merakam dengan pratonton paparan di sebelah bingkai mentah | `PNG` atau `TIFF`, mengikut pratonton yang ada |
 | LATTICE merakam di mana fail asas **ialah** bingkai raw | *tiada butang* — `RAW (Original)` sudah memaparkan fail tersebut |
 
@@ -50,9 +46,7 @@ Dalam projek campuran, label akan mengikut sambungan yang digunakan oleh kebanya
 | **Refleksan** | Imej reflektan yang dikalibrasi | Hanya untuk projekSurvey3
 
 — projek LATTICE menggunakan `RAW (Reflectance)` sebaliknya, jadi grid tidak pernah memaparkan dua butang reflektan |
-| **Imbangan Putih** | Produk imbangan putih (kameraRGB
-
-) | Selepas pemprosesan |
+| **Imbangan Putih** | Produk imbangan putih (kameraRGB) | Selepas pemprosesan |
 | **Betulkan Vignette** | Gantian tanpa penentukuran yang betulkan vignette | Selepas pelaksanaan di mana penentukuran reflektansi tidak dapat diterapkan dan *Betulkan Vignette* diaktifkan |
 | **Tindak Balas Sensor** | Tindak balas tidak dikalibrasi tindak balas sensor | Sama, tetapi dengan *Pembetulan Vignette* dimatikan |
 | **`RAW (<INDEX> Index)`** | Satu butang bagi setiap indeks yang dikira | Selepas pelaksanaan dengan indeks yang dikonfigurasikan |

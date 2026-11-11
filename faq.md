@@ -27,15 +27,9 @@ Ya. Chloros 1.3.0 menyokong modul kamera LATTICE M3C dan M3M secara menyeluruh: 
 
 <summary>Bolehkah saya mengkalibrasi imej saya untuk pantulan tanpa sasaran kalibrasi?</summary>
 
-**Survey3
+**Survey3:** Tidak. Tanpa imej sasaran penentukuran yang diambil pada masa yang sama dengan imej bukan sasaran diambil, anda tidak akan dapat mengaitkan nilai piksel imej kepada peratus pantulan yang diketahui. Jika anda juga tidak menyertakan log daripada penderia cahaya MAPIR, spektrum cahaya persekitaran tidak akan diukur, dan keputusan pantulan tidak akan tepat.
 
-:** Tidak. Tanpa imej sasaran penentukuran yang diambil pada masa yang sama dengan imej bukan sasaran diambil, anda tidak akan dapat mengaitkan nilai piksel imej kepada peratus pantulan yang diketahui. Jika anda juga tidak menyertakan log daripada penderia cahaya MAPIR
-
-, spektrum cahaya persekitaran tidak akan diukur, dan keputusan pantulan tidak akan tepat.
-
-**LATTICE:** Ya. Pantulan boleh dirujuk kepada iradiasi ke bawah yang diukur oleh penderia cahaya DAQ dan bukannya panel (ρ = π·L/E). Apabila sasaran dalam bingkai yang lulus QA hadir, ia secara lalai menjadi rujukan mutlak (`--reflectance-source auto`), melainkan ia lulus dengan penanda, di mana rantaian sasaran dan DAQ bersaing berdasarkan skor yang diukur. Satu pengecualian: &quot;F988 reflektansi dikalibrasi menggunakan panel reflektansi dalam adegan: jalur itu terletak di luar julat kalibrasi penderia cahaya DAQ, jadi Chloros
-
-menggunakan tangkapan panel terkini anda dan menyimpannya di antara penjejakan panel.&quot; Lihat [Sasaran Penentukuran](calibration-targets.md).
+**LATTICE:** Ya. Pantulan boleh dirujuk kepada iradiasi ke bawah yang diukur oleh penderia cahaya DAQ dan bukannya panel (ρ = π·L/E). Apabila sasaran dalam bingkai yang lulus QA hadir, ia secara lalai menjadi rujukan mutlak (`--reflectance-source auto`), melainkan ia lulus dengan penanda, di mana rantaian sasaran dan DAQ bersaing berdasarkan skor yang diukur. Satu pengecualian: "F988 reflektansi dikalibrasi menggunakan panel reflektansi dalam adegan: jalur itu terletak di luar julat kalibrasi penderia cahaya DAQ, jadi Chloros menggunakan tangkapan panel terkini anda dan menyimpannya di antara penjejakan panel." Lihat [Sasaran Penentukuran](calibration-targets.md).
 
 </details>
 
@@ -43,9 +37,7 @@ menggunakan tangkapan panel terkini anda dan menyimpannya di antara penjejakan p
 
 <summary>Adakah saya memerlukan penderia cahaya DAQ?</summary>
 
-Bukan untuk radiasi: Eksport radiasi LATTICE datang daripada kalibrasi radiometrik kilang setiap kamera dan tidak memerlukan sensor DAQ mahupun sasaran. Untuk **pantulan**anda memerlukan rujukan bagi cahaya persekitaran — sama ada pengukuran cahaya menuruni sensor DAQ atau sasaran kalibrasi dalam bingkai. Penderia DAQ membolehkan anda menghasilkan pantulan yang dikalibrasi**tanpa meletakkan sebarang panel dalam adegan**. Fail `.daq` yang direkodkan dipadankan dengan imej anda secara automatik berdasarkan cop masa. Lihat [Sasaran Kalibrasi](calibration-targets.md) dan [Rujukan CLI
-
-](reference/cli-reference.md).
+Bukan untuk radiasi: Eksport radiasi LATTICE datang daripada kalibrasi radiometrik kilang setiap kamera dan tidak memerlukan sensor DAQ mahupun sasaran. Untuk **pantulan**anda memerlukan rujukan bagi cahaya persekitaran — sama ada pengukuran cahaya menuruni sensor DAQ atau sasaran kalibrasi dalam bingkai. Penderia DAQ membolehkan anda menghasilkan pantulan yang dikalibrasi**tanpa meletakkan sebarang panel dalam adegan**. Fail `.daq` yang direkodkan dipadankan dengan imej anda secara automatik berdasarkan cop masa. Lihat [Sasaran Kalibrasi](calibration-targets.md) dan [Rujukan CLI](reference/cli-reference.md).
 
 </details>
 
@@ -92,7 +84,7 @@ Mereka bukan imej pemandangan: import Chloros sendiri melangkau mereka, dan kera
 
 <details>
 
-<summary>Mengapa Chloros mengatakan &quot;Folder projek terlalu dalam untuk komputer ini&quot;?</summary>
+<summary>Mengapa Chloros mengatakan "Folder projek terlalu dalam untuk komputer ini"?</summary>
 
 Ini hanya untuk Windows. Windows disertakan dengan laluan panjang dilumpuhkan, dan tiada laluan fail boleh melebihi 260 aksara. Produk Chloros terletak sehingga kira-kira 130 aksara di bawah folder projek, jadi Chloros menolak folder projek yang lebih dalam sebelum pemprosesan — daripada berjalan dan tidak menulis apa-apa, seperti yang boleh berlaku sebelum 1.3.0. Mesej itu memberikan folder projek terpanjang yang sesuai.
 
@@ -143,9 +135,7 @@ Dalam jadual pelayar fail, memilih imej sasaran terlebih dahulu di lajur kanan a
 
 <summary>Jika saya akan memuat naik imej saya ke <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud,</a> adakah saya perlu memprosesnya dalam Chloros sebelum memuat naik?</summary>
 
-Jika anda merancang untuk memuat naik ke platform pemprosesan dalam talian kami [MAPIR
-
-Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), jangan sunting imej sebelum memuat naik. Cloud akan menjalankan semua pemprosesan yang sama dan lebih banyak lagi.
+Jika anda merancang untuk memuat naik ke platform pemprosesan dalam talian kami [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), jangan sunting imej sebelum memuat naik. Cloud akan menjalankan semua pemprosesan yang sama dan lebih banyak lagi.
 
 </details>
 
@@ -153,7 +143,7 @@ Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscr
 
 <summary>Adakah MAPIR akan menyokong ciri X? Saya benar-benar berharap MAPIR menawarkan X.</summary>
 
-Kami sentiasa berminat menerima maklum balas mengenai produk kami. Jika anda menemui sebarang masalah dengan produk kami, atau mempunyai cadangan tentang bagaimana kami boleh meningkatkan produk kami, sila [HUBUNGI KAMI](https://www.mapir.camera/community/contact) untuk berkongsi pandangan anda. Kebanyakan R&amp;D kami dipandu oleh mendengar keperluan terbesar pelanggan kami.
+Kami sentiasa berminat menerima maklum balas mengenai produk kami. Jika anda menemui sebarang masalah dengan produk kami, atau mempunyai cadangan tentang bagaimana kami boleh meningkatkan produk kami, sila [HUBUNGI KAMI](https://www.mapir.camera/community/contact) untuk berkongsi pandangan anda. Kebanyakan R&D kami dipandu oleh mendengar keperluan terbesar pelanggan kami.
 
 </details>
 
@@ -185,9 +175,7 @@ Ya! Chloros merangkumi [Dynamic Compute Adaptation](processing-architecture/dyna
 
 <summary>Apakah saluran pemprosesan 4-benang?</summary>
 
-Chloros
-menggunakan seni bina jalur paip 4-benang untuk pengguna Chloros
-+: Thread 1 (Pengesanan) memuat imej dan mengesan sasaran penentukuran, Thread 2 (Penentukuran) mengira penentukuran pantulan, Thread 3 (Pemprosesan) melakukan debayering dipercepatkan GPU dan pengiraan indeks, dan Thread 4 (Eksport) menulis fail keluaran. Beberapa imej boleh berada dalam benang berbeza serentak untuk throughput maksimum. Lihat [Saluran Pemprosesan](processing-architecture/processing-pipeline.md) untuk butiran.
+Chloros menggunakan seni bina jalur paip 4-benang untuk pengguna Chloros+: Thread 1 (Pengesanan) memuat imej dan mengesan sasaran penentukuran, Thread 2 (Penentukuran) mengira penentukuran pantulan, Thread 3 (Pemprosesan) melakukan debayering dipercepatkan GPU dan pengiraan indeks, dan Thread 4 (Eksport) menulis fail keluaran. Beberapa imej boleh berada dalam benang berbeza serentak untuk throughput maksimum. Lihat [Saluran Pemprosesan](processing-architecture/processing-pipeline.md) untuk butiran.
 
 </details>
 

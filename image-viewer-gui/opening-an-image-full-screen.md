@@ -45,7 +45,7 @@ Klik dan tahan butang tetikus kiri di atas imej dan seret. Pergerakan imej terha
 
 Sebaik sahaja pembesaran efektif melebihi **60×**, Chloros akan melukis kotak sorotan di sekitar piksel individu yang dipaparkan di bawah penuding dan nilai terapung di sebelahnya.
 
-Perbesaran &quot;berkesan&quot; mengambil kira saiz blok GSD: dengan saiz blok 8, petunjuk akan muncul pada pembesaran 7.5× dan bukannya 60×, kerana satu piksel yang dipaparkan sudah mengandungi 8 × 8 piksel sumber. Kurangkan pembesaran kembali di bawah ambang dan petunjuk itu akan hilang.
+Perbesaran "berkesan" mengambil kira saiz blok GSD: dengan saiz blok 8, petunjuk akan muncul pada pembesaran 7.5× dan bukannya 60×, kerana satu piksel yang dipaparkan sudah mengandungi 8 × 8 piksel sumber. Kurangkan pembesaran kembali di bawah ambang dan petunjuk itu akan hilang.
 
 ### Pintasan papan kekunci
 
@@ -138,7 +138,7 @@ Ia memperkasar imej _yang dipaparkan_ dengan mengambil purata blok piksel sumber
 * Output kursor melaporkan blok, bukan piksel sumber, setiap kali saiz blok melebihi 1 — nilai yang dipaparkan adalah purata blok di bawah penuding anda.
 
 {% hint style="info" %}
-**Mengapa &quot;saiz blok&quot; dan bukan sentimeter per piksel?** Nilai cm/px memerlukan ketinggian di atas tanah. EXIF satu bingkai mengandungi ketinggian GPS di atas paras laut purata, bukan di atas kawasan yang diarahkan kepadanya, jadi Chloros tidak akan mencetak jarak darat yang tidak dapat diperoleh dengan tepat. Saiz blok dalam piksel sumber adalah pilihan lalai yang sama yang digunakan oleh alat awan MAPIR apabila jarak pensampelan darat tidak diketahui.
+**Mengapa "saiz blok" dan bukan sentimeter per piksel?** Nilai cm/px memerlukan ketinggian di atas tanah. EXIF satu bingkai mengandungi ketinggian GPS di atas paras laut purata, bukan di atas kawasan yang diarahkan kepadanya, jadi Chloros tidak akan mencetak jarak darat yang tidak dapat diperoleh dengan tepat. Saiz blok dalam piksel sumber adalah pilihan lalai yang sama yang digunakan oleh alat awan MAPIR apabila jarak pensampelan darat tidak diketahui.
 {% endhint %}
 
 ***

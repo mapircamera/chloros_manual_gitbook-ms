@@ -39,13 +39,13 @@ Chloros memaparkannya dengan awalan `LATT-` (contohnya `LATT-M3M-L87-F450`). Ren
 | --------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | Sensor    | `M3C` / `M3M`                                            | Warna Bayer / monokrom                                                                          |
 | Lensa      | `L41` / `L87`                                            | Nombor adalah **medan pandangan mendatar dalam darjah**: L41 = sempit (41°), L87 = lebar (87°)    |
-| Penapis    | `FRGB` / `FRGN` / `FOCN` / `FNGB` (M3C) atau `F<nm>` (M3M) | Lihat [Penapis &amp; Julat Spektral](https://mapir.gitbook.io/lattice-camera/hardware/filters-and-bands) |
+| Penapis    | `FRGB` / `FRGN` / `FOCN` / `FNGB` (M3C) atau `F<nm>` (M3M) | Lihat [Penapis & Julat Spektral](https://mapir.gitbook.io/lattice-camera/hardware/filters-and-bands) |
 
 Rentetan model memacu segala-galanya seterusnya: Chloros menyelesaikan profil penderia, susun atur jalur, dan penentukuran kilang daripada `DeviceUserID` + `DeviceSerialNumber`. Tiada apa-apa yang perlu dikonfigurasikan bagi setiap kamera — lihat [Menyambungkan Kamera](connecting.md).
 
 ## Penapis dan jalur
 
-Pusat jalur, sempadan FWHM dan keseluruhan katalog M3M 23-SKU adalah spesifikasi produk, jadi ia terdapat dalam manual perkakasan: [**Penapis &amp; Jalur Spektral**](https://mapir.gitbook.io/lattice-camera/hardware/filters-and-bands).
+Pusat jalur, sempadan FWHM dan keseluruhan katalog M3M 23-SKU adalah spesifikasi produk, jadi ia terdapat dalam manual perkakasan: [**Penapis & Jalur Spektral**](https://mapir.gitbook.io/lattice-camera/hardware/filters-and-bands).
 
 Apa yang penting pada bahagian perisian: kod penapis dalam rentetan model menentukan produk mana yang boleh dibina oleh Chloros. Kamera penapis RGB (`FRGB`) hanya mengeluarkan produk debayered dan pratonton — sinaran dan pantulan bagi setiap jalur tidak bermakna untuk penderia jalur lebar, jadi Chloros melangkauinya dan menyatakan demikian. Setiap penapis lain menghasilkan rantaian penuh sinaran → pantulan → indeks.
 
@@ -59,8 +59,8 @@ Pada bahagian perisian, apa yang penting ialah Chloros menyelesaikan penentukura
 
 * [Menyambungkan Kamera](connecting.md) — penemuan automatik, dialog sambungan GUI, padanan CLI/SDK, dan bagaimana penentukuran kilang diselesaikan (pakej pada kamera berbanding awan) apabila kamera disambungkan.
 * [Tetapan Kamera](camera-settings.md) — setiap kawalan dalam tab Kamera: senarai kamera, panel tetapan bagi setiap kamera, dan panel tetapan susunan (termasuk penyunting ROI dan penjajaran).
-* [Tetapan &amp; Mod Rakaman](capture.md) — Rakam Semua, rakaman Tunggal / Berterusan / Selang, jenis eksport, dan susun atur folder rakaman.
+* [Tetapan & Mod Rakaman](capture.md) — Rakam Semua, rakaman Tunggal / Berterusan / Selang, jenis eksport, dan susun atur folder rakaman.
 * [Susunan Pelbagai Kamera](arrays.md) — wizard sambungan susunan, probe kabel penyegerakan, jalur lebar, PTP, dan paparan susunan secara langsung.
-* [Kamera Mono &amp; Indeks Vegetasi](mono-indices.md) — kamera M3M dan aliran kerja selaras → susun → indeks.
+* [Kamera Mono & Indeks Vegetasi](mono-indices.md) — kamera M3M dan aliran kerja selaras → susun → indeks.
 
 Permukaan arahan lengkap terdapat dalam [Rujukan CLI](../reference/cli-reference.md) dan [Rujukan SDK](../reference/sdk-reference.md).

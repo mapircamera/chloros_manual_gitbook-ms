@@ -1,17 +1,14 @@
 # Adaptasi Komputasi Dinamik
 
-Chloros
-1.3.0 menggunakan pengesanan perkakasan dan pemilihan strategi pemprosesan automatik. Enjin pemprosesan menyesuaikan diri dengan perkakasan anda — daripada Jetson Orin Nano hingga stesen kerja berbilang GPU — tanpa sebarang konfigurasi manual.
+Chloros 1.3.0 menggunakan pengesanan perkakasan dan pemilihan strategi pemprosesan automatik. Enjin pemprosesan menyesuaikan diri dengan perkakasan anda — daripada Jetson Orin Nano hingga stesen kerja berbilang GPU — tanpa sebarang konfigurasi manual.
 
 ***
 
 ## Cara Ia Berfungsi
 
-Apabila Chloros
-memulakan, ia memproses profil sistem anda:
+Apabila Chloros memulakan, ia memproses profil sistem anda:
 
-1. **Mengesan sistem pengendalian** — Windows
-atau Linux
+1. **Mengesan sistem pengendalian** — Windows atau Linux
 2. **Mengecam teras CPU dan jumlah RAM**
 
 3.**Mengesan kehadiran GPU** — kebolehan NVIDIA CUDA, VRAM, model
@@ -24,19 +21,16 @@ Profil yang dikesan disimpan dalam cache untuk sesi dalam memori dan pada cakera
 
 | Platform | Profil yang disimpan |
 | --- | --- |
-| **Linux
-/ Jetson** | `~/.config/chloros/system_config.json` (mengiktiraf `XDG_CONFIG_HOME`) |
+| **Linux / Jetson** | `~/.config/chloros/system_config.json` (mengiktiraf `XDG_CONFIG_HOME`) |
 | **Windows** | `%LOCALAPPDATA%\Chloros\config\system_config.json` |
 
-Padamkan fail tersebut untuk memaksa pengesanan semula — berguna selepas menambah GPU atau lebih banyak RAM. Chloros
-juga mengesan semula secara automatik apabila cache ditulis oleh versi lama yang tidak serasi.
+Padamkan fail tersebut untuk memaksa pengesanan semula — berguna selepas menambah GPU atau lebih banyak RAM. Chloros juga mengesan semula secara automatik apabila cache ditulis oleh versi lama yang tidak serasi.
 
 ***
 
 ## Strategi Pengkomputeran
 
-Chloros
-memilih salah satu daripada tiga strategi pengkomputeran berdasarkan perkakasan anda:
+Chloros memilih salah satu daripada tiga strategi pengkomputeran berdasarkan perkakasan anda:
 
 | Strategi | Pilihan Apabila | Pekerja | Pelaksana | Saluran |
 | --- | --- | --- | --- | --- |
@@ -50,11 +44,7 @@ Contoh kerja formula pekerja `GPU_PARALLEL`: 12GB VRAM → 2 pekerja, 16GB → 3
 **Strategi GPU memerlukan PyTorch yang boleh menggunakan CUDA.** Mesin yang PyTorch-nya tiada peranti CUDA yang boleh digunakan akan mendapat `CPU_PARALLEL`, tidak kira apa pun GPUnya. Pakej Jetson 1.3.0 menggunakan binaan CUDA PyTorch JetPack 6, jadi Jetson layak setelah pustaka CUDA dan cuDNN JetPack dipasang. Jetson dengan RAM kurang daripada 12GB sentiasa memproses satu imej pada satu masa, dalam proses (dicatat sebagai `GPU_SINGLE`).
 {% endhint %}
 
-Strategi GPU menjalankan kolam proses pekerja, setiap satu adalah proses OS berasingan dengan konteks CUDA tersendiri, yang dimulakan oleh Chloros
-dengan melancarkan semula program backend yang dipasangnya (bukan melalui `multiprocessing` milik Python
-, kerana permulaan pekerjaannya tidak berfungsi di dalam aplikasi terbungkus). Strategi CPU menggunakan kolam benang (Python
-&#x27;s `ThreadPoolExecutor`). Chloros
-tidak menggunakan sebarang rangka kerja teragih pihak ketiga (seperti Ray).
+Strategi GPU menjalankan kolam proses pekerja, setiap satu adalah proses OS berasingan dengan konteks CUDA tersendiri, yang dimulakan oleh Chloros dengan melancarkan semula program backend yang dipasangnya (bukan melalui `multiprocessing` milik Python, kerana permulaan pekerjaannya tidak berfungsi di dalam aplikasi terbungkus). Strategi CPU menggunakan kolam benang (Python's `ThreadPoolExecutor`). Chloros tidak menggunakan sebarang rangka kerja teragih pihak ketiga (seperti Ray).
 
 ### Jenis Saluran
 
@@ -75,8 +65,7 @@ Aturkan pembolehubah persekitaran `CHLOROS_STRATEGY` untuk memaksa strategi tert
 CHLOROS_STRATEGY=CPU_PARALLEL chloros-cli process ~/datasets/flight001
 ```
 
-Pembolehubah dipadankan tanpa mengira huruf besar/kecil; apa sahaja yang bukan salah satu daripada tiga nama tersebut diabaikan dan pengesanan automatik diteruskan seperti biasa. Di bawah keutamaan, Chloros
-masih memilih bilangan pekerja untuk anda:
+Pembolehubah dipadankan tanpa mengira huruf besar/kecil; apa sahaja yang bukan salah satu daripada tiga nama tersebut diabaikan dan pengesanan automatik diteruskan seperti biasa. Di bawah keutamaan, Chloros masih memilih bilangan pekerja untuk anda:
 
 | Keutamaan | Bilangan pekerja yang digunakan |
 | --- | --- |
@@ -126,8 +115,7 @@ GPU berasingan hanya memperuntukkan 0.5GB untuk sistem, kerana ia tidak berkongs
 
 ## Peruntukan Memori GPU Dinamik
 
-Chloros
-menggunakan [saluran pemprosesan 4-benang](processing-pipeline.md):
+Chloros menggunakan [saluran pemprosesan 4-benang](processing-pipeline.md):
 
 * **Benang 1** (Pengesanan) — Pemuatan imej, penganalisisan EXIF, pengesanan sasaran
 * **Benang 2** (Kalibrasi) — Pengiraan penentukuran pantulan
@@ -154,26 +142,23 @@ Nilai yang sebenarnya digunakan semasa runtime ialah yang **lebih rendah** antar
 
 ## Pemprosesan Sedar Tekstur
 
-Debayer Texture Aware (hanya **Chloros
-+** — `--debayer texture-aware`) menjalankan model penapisan hingar AI/ML yang memerlukan kira-kira 1.75GB VRAM dalam FP16 bagi setiap salinan, jadi ia menggunakan memori GPU yang jauh lebih banyak berbanding kaedah Standard:
+Debayer Texture Aware (hanya **Chloros+** — `--debayer texture-aware`) menjalankan model penapisan hingar AI/ML yang memerlukan kira-kira 1.75GB VRAM dalam FP16 bagi setiap salinan, jadi ia menggunakan memori GPU yang jauh lebih banyak berbanding kaedah Standard:
 
 * Sistem dengan **kurang daripada 7GB VRAM**memproses Texture Aware dalam**gelung serentak, satu imej pada satu masa** — beberapa salinan model tidak muat, dan kolam pekerja hanya akan menambah perebutan
 * Sistem dengan **VRAM 7GB+** boleh memproses Texture Aware secara serentak, walaupun dengan bilangan pekerja yang dikurangkan berbanding Standard
 * Pada **Jetson**, Texture Aware sentiasa dipin pada satu pekerja sahaja
 * Dengan **tiada GPU CUDA yang boleh digunakan**, pelaksanaan menggunakan debayer Standard, dan backend mencatat satu baris `[DEBAYER] … needs a CUDA GPU …` yang menerangkan sebabnya
-* Pada Jetson berkuasa rendah (Nano, Orin Nano), CLI
-akan mengenakan had frekuensi GPU apabila anda meminta Texture Aware — lihat [Panduan NVIDIA Jetson](../linux/nvidia-jetson-guide.md#gpu-frequency-cap-for-texture-aware-on-nano-and-orin-nano)
+* Pada Jetson berkuasa rendah (Nano, Orin Nano), CLI akan mengenakan had frekuensi GPU apabila anda meminta Texture Aware — lihat [Panduan NVIDIA Jetson](../linux/nvidia-jetson-guide.md#gpu-frequency-cap-for-texture-aware-on-nano-and-orin-nano)
 
 ***
 
 ## Pengurusan Terma (Jetson)
 
-Peranti Jetson mempunyai sekatan terma, terutamanya dalam penyebaran tertutup atau di udara. Chloros
-memantau penderia suhu terbina dalam Jetson dan menyesuaikan saiz kumpulan secara automatik:
+Peranti Jetson mempunyai sekatan terma, terutamanya dalam penyebaran tertutup atau di udara. Chloros memantau penderia suhu terbina dalam Jetson dan menyesuaikan saiz kumpulan secara automatik:
 
 | Suhu | Tindak balas |
 | --- | --- |
-| **&lt; 70°C** | Operasi biasa — kelajuan penuh |
+| **< 70°C** | Operasi biasa — kelajuan penuh |
 | **70°C** (Amaran) | Saiz batch dikurangkan secara berperingkat (100% → 50% antara 70°C dan 80°C) |
 | **80°C** (Kritikal) | Penghadan agresif (50% → 0% antara 80°C dan 90°C) |
 | **90°C** (Penutupan) | Hentikan pemprosesan GPU sepenuhnya |
@@ -184,11 +169,9 @@ Pada sistem desktop dengan penyejukan yang mencukupi, pelambatan terma jarang di
 
 ## Pengendalian Tekanan Memori
 
-Chloros
-memantau memori GPU secara berterusan semasa pemprosesan dan bertindak balas pada tiga peringkat.
+Chloros memantau memori GPU secara berterusan semasa pemprosesan dan bertindak balas pada tiga peringkat.
 
-**Saiz kumpulan.** Satu kumpulan bermula pada 8 imej kali pendaraban platform daripada jadual di atas. Chloros
-kemudian memeriksa VRAM kosong, menempatkan 20% daripadanya untuk keperluan PyTorch sendiri, dan menganggap kira-kira 100MB memori GPU bagi setiap imej 12MP — kumpulan itu ialah yang lebih kecil, sama ada had yang diperoleh daripada memori atau asas platform. Ia tidak pernah turun di bawah 1.
+**Saiz kumpulan.** Satu kumpulan bermula pada 8 imej kali pendaraban platform daripada jadual di atas. Chloros kemudian memeriksa VRAM kosong, menempatkan 20% daripadanya untuk keperluan PyTorch sendiri, dan menganggap kira-kira 100MB memori GPU bagi setiap imej 12MP — kumpulan itu ialah yang lebih kecil, sama ada had yang diperoleh daripada memori atau asas platform. Ia tidak pernah turun di bawah 1.
 
 **Pengurangan pencegahan.**Di atas**85% penggunaan VRAM**, saiz kumpulan dikurangkan sebelum apa-apa gagal.**Pemotongan peruntukan per-benang.** Apabila penggunaan langsung meningkat, bajet GPU setiap benang dikurangkan: ×0.75 melebihi penggunaan 80%, ×0.5 melebihi 90%. Julat pemantau ialah 70% (konservatif), 85% (had operasi biasa), dan 95% (risiko OOM).**Penangguhan dan pemulihan OOM.** Jika peristiwa kehabisan memori (out-of-memory) berlaku juga:
 
@@ -196,8 +179,7 @@ kemudian memeriksa VRAM kosong, menempatkan 20% daripadanya untuk keperluan PyTo
 * peruntukan benang aktif dipotong kepada 70% daripada nilai semasa mereka dan pengagih beralih kepada strategi konservatifnya, dan kembali melonggarkan selepas beberapa peruntukan berjaya berturut-turut
 * di bawah tekanan teruk, saluran kembali dari `fused_gpu` ke `tiled_gpu`, dan ke `cpu_fallback` sebagai pilihan terakhir
 
-**RAM Host (Jetson).** Sebelum pemprosesan, CLI
-menganggarkan memori hos puncak daripada kiraan imej dan mod debayer anda dan memberi amaran jika RAM ditambah swap disokong fail mungkin tidak mencukupi, mencetak arahan tepat untuk menambah swap — lihat [Panduan NVIDIA Jetson](../linux/nvidia-jetson-guide.md#swap-warning-and-recommendations).
+**RAM Host (Jetson).** Sebelum pemprosesan, CLI menganggarkan memori hos puncak daripada kiraan imej dan mod debayer anda dan memberi amaran jika RAM ditambah swap disokong fail mungkin tidak mencukupi, mencetak arahan tepat untuk menambah swap — lihat [Panduan NVIDIA Jetson](../linux/nvidia-jetson-guide.md#swap-warning-and-recommendations).
 
 ***
 
@@ -221,21 +203,17 @@ Semakan 7 mencetak `CUDA: <bool>, Denoiser: <bool>` — kedua-duanya mesti benar
 
 ### Log Backend
 
-Strategi dan bilangan pekerja dipilih di dalam backend pada permulaan setiap pelaksanaan — tiada papan pengumuman CLI
-yang mengumumkannya. Apabila sesuatu berkelakuan tidak dijangka (jalur GPU beralih ke pilihan kedua, OOM, penyingkir hingar yang tidak dapat dimuat), log backend untuk sesi tersebut adalah tempat ia muncul:
+Strategi dan bilangan pekerja dipilih di dalam backend pada permulaan setiap pelaksanaan — tiada papan pengumuman CLI yang mengumumkannya. Apabila sesuatu berkelakuan tidak dijangka (jalur GPU beralih ke pilihan kedua, OOM, penyingkir hingar yang tidak dapat dimuat), log backend untuk sesi tersebut adalah tempat ia muncul:
 
 | Platform | Lokasi log |
 | --- | --- |
-| **Linux
-/ Jetson** | `~/.cache/chloros/logs/backend_<YYYYMMDD_HHMMSS>.log` (satu fail bagi setiap pelancaran) |
-| **Linux
-, backend yang dimulakan oleh CLI** | juga `~/.chloros/backend.log` |
+| **Linux / Jetson** | `~/.cache/chloros/logs/backend_<YYYYMMDD_HHMMSS>.log` (satu fail bagi setiap pelancaran) |
+| **Linux, backend yang dimulakan oleh CLI** | juga `~/.chloros/backend.log` |
 | **Windows** | `%LOCALAPPDATA%\Chloros\logs\` |
 
 ### Kemajuan Langsung
 
-Semasa pelaksanaan, CLI
-memaparkan kemajuan secara langsung bagi setiap thread (Mengesan, Menganalisis, Memproses, Mengeksport) yang disiarkan melalui Server-Sent Events — petunjuk praktikal sama ada Thread 3 adalah botol leher. Lihat [Processing Pipeline](processing-pipeline.md).
+Semasa pelaksanaan, CLI memaparkan kemajuan secara langsung bagi setiap thread (Mengesan, Menganalisis, Memproses, Mengeksport) yang disiarkan melalui Server-Sent Events — petunjuk praktikal sama ada Thread 3 adalah botol leher. Lihat [Processing Pipeline](processing-pipeline.md).
 
 ***
 
@@ -243,8 +221,6 @@ memaparkan kemajuan secara langsung bagi setiap thread (Mengesan, Menganalisis, 
 
 * [Saluran Pemprosesan](processing-pipeline.md) — Memahami seni bina saluran 4-benang
 * [Panduan NVIDIA Jetson](../linux/nvidia-jetson-guide.md) — Penyebaran dan pengoptimuman khusus Jetson
-* [CLI
-: Command Line](../CLI.md) — Panduan CLI
+* [CLI: Command Line](../CLI.md) — Panduan CLI
 
-* [Rujukan CLI
-](../reference/cli-reference.md) — Senarai arahan menyeluruh untuk 1.3.0
+* [Rujukan CLI](../reference/cli-reference.md) — Senarai arahan menyeluruh untuk 1.3.0

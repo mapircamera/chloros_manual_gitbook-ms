@@ -194,7 +194,7 @@ Chloros menyimpan kelayakan dan konfigurasi CLI dalam satu direktori rentas plat
 | `/lib/systemd/system/chloros-backend@.service` | Perkhidmatan backend sentiasa aktif pilihan yang menjalankan backend sebagai pengguna yang anda namakan (dipasang, **tidak diaktifkan**) — untuk diaktifkan, lihat [Always-On PTP](#always-on-ptp-for-headless-hosts) |
 | `/lib/systemd/system/chloros-backend.service` | Perkhidmatan yang sama yang menjalankan backend sebagai **root**(dipasang,**tidak diaktifkan**), dikekalkan supaya mesin yang diaktifkannya terus berjalan |
 | `/var/log/chloros/` | Log terperinci perkhidmatan root, boleh dibaca oleh kumpulan `adm` (dihapuskan apabila pakej dipurg) |
-| `/usr/share/applications/chloros-cli.desktop` | entri menu aplikasi &quot;Chloros CLI&quot; yang membuka terminal |
+| `/usr/share/applications/chloros-cli.desktop` | entri menu aplikasi "Chloros CLI" yang membuka terminal |
 
 **Tembok api (baru dalam 1.3.0).** Jika `ufw` atau `firewalld` aktif semasa pemasangan, pakej ini membuka port UDP `5002` (data DAQ-E), `5353` (penemuan mDNS), `319` dan `320` (PTP), dan membuang peraturan tersebut apabila pakej itu dialih keluar. Jika firewall dipasang tetapi tidak aktif, ia tidak menambah apa-apa dan mencetak port yang perlu dibenarkan sekiranya anda mengaktifkannya kemudian. Ia tidak membuka sebarang port TCP: kemas kini firmware DAQ-E, di mana sensor menyambung semula ke komputer ini melalui TCP untuk mengumpul imej, gagal dengan `… device never connected back on TCP <port> …` manakala firewall aktif menyekat sambungan tersebut.
 
@@ -388,7 +388,7 @@ chloros-cli time-sync status
 chloros-cli time-sync peers
 ```
 
-### Perintah `lattice` Gagal Dengan &quot;pemacu kamera LATTICE tidak ditemui&quot;
+### Perintah `lattice` Gagal Dengan "pemacu kamera LATTICE tidak ditemui"
 
 Backend tidak dapat memuatkan runtime kamera LATTICE yang dipasang dengannya. Setiap arahan `lattice` dijalankan pada backend; CLI itu sendiri tidak mempunyai pemacu kamera. Pasang semula Chloros (`sudo apt install --reinstall ./chloros_1.3.0_<arch>.deb`): `.deb` memasang runtime di sebelah backend, dalam `/usr/lib/chloros/arena_runtime`, dan mendaftarkannya dengan pemuat dinamik. Untuk memeriksa pendaftaran tersebut:
 

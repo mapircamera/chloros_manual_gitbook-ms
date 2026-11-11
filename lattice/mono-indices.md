@@ -1,28 +1,18 @@
-# Kamera Mono &amp; Indeks Vegetasi
+# Kamera Mono & Indeks Vegetasi
 
 ## Satu kamera = satu jalur
 
-Kamera **M3M**adalah kembar mono kepada**M3C** Bayer: sebuah sensor monokrom IMX265 di belakang satu penapis interferens jalur sempit. Rentetan model menamakan jalur tersebut — `M3M-<lens>-F<wavelength>`, contohnya `M3M-L87-F685` (dipaparkan dalam Chloros
-
-sebagai `LATT-M3M-L87-F685`). Pengesan ini menghasilkan **satu jalur skala kelabu** tanpa mozek Bayer: tiada apa yang perlu di-demosai, tiada gangguan silang antara saluran yang perlu dipisahkan, dan tiada imbangan putih yang perlu ditetapkan.
+Kamera **M3M**adalah kembar mono kepada**M3C** Bayer: sebuah sensor monokrom IMX265 di belakang satu penapis interferens jalur sempit. Rentetan model menamakan jalur tersebut — `M3M-<lens>-F<wavelength>`, contohnya `M3M-L87-F685` (dipaparkan dalam Chloros sebagai `LATT-M3M-L87-F685`). Pengesan ini menghasilkan **satu jalur skala kelabu** tanpa mozek Bayer: tiada apa yang perlu di-demosai, tiada gangguan silang antara saluran yang perlu dipisahkan, dan tiada imbangan putih yang perlu ditetapkan.
 
 Kesan yang perlu diketahui sebelum anda merancang sistem mono:
 
 * **Radiasi dan pantulan ditakrifkan sepenuhnya bagi setiap jalur.**Mereka adalah peta radiometrik bagi setiap jalur, jadi satu kamera M3M menghasilkan radiasi float32 yang dikalibrasi (W/m²/sr/nm) dan pantulan uint16 (`32768` = ρ 1.0) dengan tepat seperti yang dilakukan oleh jalur M3C. Satu matriks tindak balas sensor**identiti** disertakan dalam bingkai mono — tiada pencampuran semula 3×3 diperlukan atau digunakan.
-* **Satu kamera mono tidak boleh menghasilkan indeks vegetasi.** NDVI
-
-, NDRE
-
-, dan indeks seumpamanya memerlukan sekurang-kurangnya dua jalur. Untuk mengira indeks daripada perkakasan mono, anda menggabungkan beberapa kamera M3M — lihat di bawah.
+* **Satu kamera mono tidak boleh menghasilkan indeks vegetasi.** NDVI, NDRE, dan indeks seumpamanya memerlukan sekurang-kurangnya dua jalur. Untuk mengira indeks daripada perkakasan mono, anda menggabungkan beberapa kamera M3M — lihat di bawah.
 * Kamera M3M menyalurkan **Mono12** (12-bit: 2 bait/piksel pada wayar, atau 1.5 bait/piksel apabila satu tatasusunan menggunakan [penghantaran 12-bit terpampat](arrays.md#packed-12-bit-transport)), yang penting untuk [perancangan jalur lebar tatasusunan](arrays.md#bandwidth-how-many-cameras-fit).
 
-## Apa yang Chloros
+## Apa yang Chloros langkau untuk mono — dan bagaimana ia memberitahu anda
 
-langkau untuk mono — dan bagaimana ia memberitahu anda
-
-Tahap saluran warna tidak terpakai pada sensor jalur tunggal. Chloros
-
-**melangkau mereka dengan mesej satu baris** daripada menghasilkan ralat, dan masih menjalankannya seperti biasa untuk mana-mana kamera M3C (Bayer) dalam sesi yang sama:
+Tahap saluran warna tidak terpakai pada sensor jalur tunggal. Chloros **melangkau mereka dengan mesej satu baris** daripada menghasilkan ralat, dan masih menjalankannya seperti biasa untuk mana-mana kamera M3C (Bayer) dalam sesi yang sama:
 
 | Peringkat | Kelakuan Mono (M3M) | Kelakuan M3C |
 | --- | --- | --- |
@@ -33,23 +23,13 @@ Tahap saluran warna tidak terpakai pada sensor jalur tunggal. Chloros
 | Pencampuran semula gangguan spektral | Identiti (tiada matriks 3×3). | Matriks 3×3 bagi setiap kamera digunakan. |
 | Radiasi / pantulan | **Berfungsi** — bagi setiap jalur, diselaras sepenuhnya. | Berfungsi bagi setiap jalur. |
 
-GUI menerapkan penguncian yang sama: untuk kamera mono, panel tetapan per-kamera menyembunyikan baris yang hanya berkaitan dengan RGB
-
-(Imbangan Putih, Gamma, Profil Warna, Kepenuhan Warna, Kontras, pemisahan saluran), dan histogram langsung dikunci pada satu jejak **MONO**. Pembeza di seluruh susunan ialah token `M3M` dalam rentetan model, yang dipaparkan kepada GUI/SDK
-
-sebagai `is_mono`.
+GUI menerapkan penguncian yang sama: untuk kamera mono, panel tetapan per-kamera menyembunyikan baris yang hanya berkaitan dengan RGB (Imbangan Putih, Gamma, Profil Warna, Kepenuhan Warna, Kontras, pemisahan saluran), dan histogram langsung dikunci pada satu jejak **MONO**. Pembeza di seluruh susunan ialah token `M3M` dalam rentetan model, yang dipaparkan kepada GUI/SDK sebagai `is_mono`.
 
 ## Indeks memerlukan ≥ 2 jalur: selaras → susun → indeks
 
 Aliran kerja indeks mono sentiasa mempunyai tiga langkah yang sama:
 
-1. **Sejajar** — tujukan beberapa kamera M3M pada panjang gelombang yang berbeza (contohnya F650 &quot;Red
-
-&quot; dan F850 &quot;NIR
-
-&quot;), sambungkan mereka sebagai [susunan multi-kamera](arrays.md), dan biarkan Chloros
-
-mengira pemutar bersama (co-registration warp) antara kamera.
+1. **Sejajar** — tujukan beberapa kamera M3M pada panjang gelombang yang berbeza (contohnya F650 "Red" dan F850 "NIR"), sambungkan mereka sebagai [susunan multi-kamera](arrays.md), dan biarkan Chloros mengira pemutar bersama (co-registration warp) antara kamera.
 2. **Susun** — bingkai yang diselaraskan menjadi satu imej berbilang jalur (setiap kamera menyumbang satu jalur bernama).
 3. **Indeks** — menilai formula indeks ke atas jalur-jalur susunan, secara pilihan memaparkannya melalui LUT.
 
@@ -59,34 +39,22 @@ Dalam GUI, keseluruhan rantaian ini adalah mod paparan susunan **Kamera Gabungan
 
 Pengira Indeks membina ungkapan indeks yang digunakan oleh paparan langsung dan eksport indeks bagi setiap kamera. Ia adalah satu permukaan kongsi, dibuka dari dua tempat dalam bar sisi tab Kamera:
 
-* **Per-kamera**— Pratonton Langsung → gear**Indeks** (hanya untuk kamera Bayer RGN
-
-/OCN
-
-/NGB
-
-; kamera mono tunggal tidak mempunyai kawalan indeks kerana satu jalur tidak dapat membuat indeks).
+* **Per-kamera**— Pratonton Langsung → gear**Indeks** (hanya untuk kamera Bayer RGN/OCN/NGB; kamera mono tunggal tidak mempunyai kawalan indeks kerana satu jalur tidak dapat membuat indeks).
 * **Per-array**— tetapan array → Pratonton Langsung → gear**Indeks**. Ini adalah laluan mono: senarai jalur merangkumi**semua kamera ahli**, jadi sepasang mono menyumbang dua jalurnya di sini.
 
 <!-- SCREENSHOT-NEEDED: Index Calculator pane opened for a combined array of two mono cameras (e.g. F650 + F850): band chips row showing the two bands with wavelength labels, the operator buttons, the expression textarea containing "(NIR - Red) / (NIR + Red)", the green "Valid expression" banner, the LUT controls (Apply LUT checked, Level 7-stop, Min 0.2 / Max 1), and the live histogram with p2/p98 percentile lines. -->
 
 Kawalnya, dari atas ke bawah:
 
-* **Cip jalur** (&quot;Jalur — klik untuk menambah ke ekspresi&quot;) — satu butang bagi setiap jalur yang tersedia, dilabelkan nama warna + panjang gelombang dalam nm (nama warna yang sama akan dibezakan seperti contohnya &quot;Warna 850&quot;). Mengklik akan menyisipkan token jalur pada tanda karet. Gelombang daripada kamera yang tidak dapat menghasilkan sinaran bagi setiap gelombang (RGB
-
-/FRGB) akan ditapis keluar.
+* **Cip jalur** ("Jalur — klik untuk menambah ke ekspresi") — satu butang bagi setiap jalur yang tersedia, dilabelkan nama warna + panjang gelombang dalam nm (nama warna yang sama akan dibezakan seperti contohnya "Warna 850"). Mengklik akan menyisipkan token jalur pada tanda karet. Gelombang daripada kamera yang tidak dapat menghasilkan sinaran bagi setiap gelombang (RGB/FRGB) akan ditapis keluar.
 * **Butang pengendali dan fungsi** — `+ - * / ( ) ^ ,` ditambah `abs() sqrt() log() log10() exp() min() max() pow()`.
-* **Kotak teks ekspresi** — formula taip bebas; penanda tempat menunjukkan bentuk klasik NDVI
-
-`(NIR - Red) / (NIR + Red)`. Pratonton token bersaiz baca sahaja di atasnya memaparkan cip jalur, nombor, dan bendera token yang tidak diketahui.
-* **Banner kesahihan**— kelabu &quot;Kosong — tiada indeks akan diterapkan&quot;; hijau &quot;Ungkapan sah&quot;; merah dengan ralat parse tertentu (gelombang tidak diketahui, gelombang samar yang terdedah oleh beberapa kamera, kurungan hilang, …); atau jingga apabila ungkapan itu sah tetapi**konstanta** (contohnya `X/X`, atau penyebut NDVI
-
-yang ditaip dengan `−` dan bukannya `+`) — satu konstanta memetakan keseluruhan bingkai kepada satu warna.
+* **Kotak teks ekspresi** — formula taip bebas; penanda tempat menunjukkan bentuk klasik NDVI `(NIR - Red) / (NIR + Red)`. Pratonton token bersaiz baca sahaja di atasnya memaparkan cip jalur, nombor, dan bendera token yang tidak diketahui.
+* **Banner kesahihan**— kelabu "Kosong — tiada indeks akan diterapkan"; hijau "Ungkapan sah"; merah dengan ralat parse tertentu (gelombang tidak diketahui, gelombang samar yang terdedah oleh beberapa kamera, kurungan hilang, …); atau jingga apabila ungkapan itu sah tetapi**konstanta** (contohnya `X/X`, atau penyebut NDVI yang ditaip dengan `−` dan bukannya `+`) — satu konstanta memetakan keseluruhan bingkai kepada satu warna.
 * Amaran amber berasingan akan muncul jika ekspresi yang digunakan adalah baik tetapi **rangka hidup adalah seragam** (adegan rata atau jenuh) — pengecutan histogram dikesan untuk anda.
 * **Terapkan LUT**(laku secara lalai; mati = regangan skala kelabu),**Tahap**2/3/5/7-henti (laku 7-henti secara lalai), dan input**Min / Max**di kedua-dua belah bar gradien. Min secara lalai adalah**
 
 0.2**— ia memperbesarkan ramp warna ke dalam julat yang relevan dengan vegetasi manakala nilai di bawah dipaparkan sebagai skala kelabu; tetapkan Min kepada −1 untuk julat indeks penuh (butang**Reset** memulihkan kepada −1…+1). Max secara lalai adalah 1.
-* **Histogram langsung** pengagihan indeks — bar berskala sqrt, garisan persentil p2/p98 jingga, garisan median putih, dan bacaan ekor di luar julat (&quot;◀ N% &lt; lo&quot; / &quot;hi &lt; N% ▶&quot;) yang bertukar menjadi jingga melebihi 1% sebagai petunjuk untuk melebarkan tetingkap Min/Max.
+* **Histogram langsung** pengagihan indeks — bar berskala sqrt, garisan persentil p2/p98 jingga, garisan median putih, dan bacaan ekor di luar julat ("◀ N% < lo" / "hi < N% ▶") yang bertukar menjadi jingga melebihi 1% sebagai petunjuk untuk melebarkan tetingkap Min/Max.
 * **Terapkan** merakam ungkapan ke aliran langsung; penalaan LUT digunakan secara langsung tanpa menekan Terapkan. Apabila projek dibuka, ungkapan dan tetapan LUT disimpan bersama projek dan dipulihkan apabila anda membukanya semula; tanpa projek, ia hanya kekal untuk sesi tersebut.
 
 <!-- SCREENSHOT-NEEDED: Combined-array live tile rendering NDVI from a mono pair through the default 7-stop LUT, with the array name pill and fps readout visible — the result of applying the expression from the previous screenshot. -->
@@ -106,22 +74,14 @@ chloros-cli lattice index --live --profile align.json \
   --save-multiband -o output/
 ```
 
-`align-calibrate` menggunakan tatasusunan bersambung yang menyimpan kamera-kameranya, atau membukanya sendiri untuk satu larian. `index --live` sentiasa membuka kamera itu sendiri (dalam [array sementara](../reference/cli-reference.md#multi-camera-transient-sessions)) dan tidak mempunyai `--serials`: ia membuka setiap kamera di rangkaian. Jadi lepaskan setiap kamera yang dipegang oleh Chloros
-
-sebelum ia — GUI, `cam-connect`, `array-connect` (`chloros-cli lattice array-disconnect --all`): membuka kamera yang dipegang untuk kali kedua boleh menghentikan aliran pemegangnya atau menyebabkan backend terhenti. Kamera yang tidak menyampaikan sebarang bingkai akan menyebabkan pelaksanaan gagal, dan tiada susun atau indeks yang ditulis.
+`align-calibrate` menggunakan tatasusunan bersambung yang menyimpan kamera-kameranya, atau membukanya sendiri untuk satu larian. `index --live` sentiasa membuka kamera itu sendiri (dalam [array sementara](../reference/cli-reference.md#multi-camera-transient-sessions)) dan tidak mempunyai `--serials`: ia membuka setiap kamera di rangkaian. Jadi lepaskan setiap kamera yang dipegang oleh Chloros sebelum ia — GUI, `cam-connect`, `array-connect` (`chloros-cli lattice array-disconnect --all`): membuka kamera yang dipegang untuk kali kedua boleh menghentikan aliran pemegangnya atau menyebabkan backend terhenti. Kamera yang tidak menyampaikan sebarang bingkai akan menyebabkan pelaksanaan gagal, dan tiada susun atau indeks yang ditulis.
 
 `--channel` memetakan simbol preset kepada nama jalur susun. Dua peraturan menjimatkan anda daripada kegagalan larian:
 
-* **Simbol adalah sensitif huruf besar/kecil** dan mesti sepadan dengan nama saluran pratet dengan tepat — pratet menggunakan huruf kecil (NDVI
-
-adalah `red`,`nir`; semak `--list-presets`). `--channel red=Red_660` berfungsi; `--channel RED=660` gagal dengan ralat `channel_map missing entries`.
+* **Simbol adalah sensitif huruf besar/kecil** dan mesti sepadan dengan nama saluran pratet dengan tepat — pratet menggunakan huruf kecil (NDVI adalah `red`,`nir`; semak `--list-presets`). `--channel red=Red_660` berfungsi; `--channel RED=660` gagal dengan ralat `channel_map missing entries`.
 * Bahagian jalur mesti menamakan jalur dalam susunan yang diselaraskan (`lattice align-info --profile align.json` menyenaraikannya). Mod luar talian juga menerima indeks jalur berasaskan 0, contohnya `--channel red=0 --channel nir=1`.
 
-`lattice index` juga boleh dijalankan secara luar talian pada TIFF
-
-berbilang jalur yang diselaraskan dan disimpan. Setiap borang dijalankan di backend, jadi ia mesti sedang berjalan dan log masuk pada peringkat berbayar Chloros
-
-+; `--input` atau `--output` relatif menyelesaikan rujukan terhadap folder di mana anda menjalankan arahan:
+`lattice index` juga boleh dijalankan secara luar talian pada TIFF berbilang jalur yang diselaraskan dan disimpan. Setiap borang dijalankan di backend, jadi ia mesti sedang berjalan dan log masuk pada peringkat berbayar Chloros+; `--input` atau `--output` relatif menyelesaikan rujukan terhadap folder di mana anda menjalankan arahan:
 
 ```bash
 chloros-cli lattice index --input aligned.tif --preset NDVI \
@@ -136,16 +96,8 @@ chloros-cli lattice index --input aligned.tif --preset NDVI \
 
 Jalankan `chloros-cli lattice index --list-presets` untuk formula dan simbol saluran setiap pratetap, dan `--list-gradients` untuk gradien warna yang tersedia. Formula tersuai menggunakan `--formula EXPR` dengan sintaks yang sama seperti Kalkulator Indeks. Nota: senarai pratetap ini khusus untuk enjin indeks LATTICE — senarai lungsur pemprosesan Tetapan Projek untuk imej yang diimport adalah berbeza (lihat [Formula Indeks Multispektral](../project-settings/multispectral-index-formulas.md)).
 
-Set penuhnya (`--output-format`, `--vmin/--vmax/--percentile`, `--bg-mode`, tombol warp penjajaran untuk `--live`, dan lain-lain) didokumenkan dalam [Rujukan CLI
-
-§ Indeks / Matematik Vegetasi](../reference/cli-reference.md#index--vegetation-maths); Setara SDK
-
-terdapat dalam [Rujukan SDK
-
-](../reference/sdk-reference.md).
+Set penuhnya (`--output-format`, `--vmin/--vmax/--percentile`, `--bg-mode`, tombol warp penjajaran untuk `--live`, dan lain-lain) didokumenkan dalam [Rujukan CLI § Indeks / Matematik Vegetasi](../reference/cli-reference.md#index--vegetation-maths); Setara SDK terdapat dalam [Rujukan SDK](../reference/sdk-reference.md).
 
 ## Menangkap produk indeks daripada susunan mono
 
-Dengan susunan disambungkan dan ungkapan indeks diterapkan, `array-capture` (atau GUI **Capture All**) menyimpan tahap eksport bagi setiap kamera *dan* render indeks — `--index`/`--no-index` menoggelnya pada CLI
-
-, dan tangkapan secara lalai merangkumi setiap tahap yang terpakai. Sumbangan kamera mono kepada setiap kumpulan tangkapan ialah satu jalurnya pada tahap mentah/debayered (skala kelabu)/radiasi/reflektan, ditambah komposit indeks gabungan yang dikongsi apabila susunan berjalan dalam mod gabungan. Lihat [Susunan Pelbagai Kamera § Pengambilan](arrays.md#capturing-monitoring-vs-analysis).
+Dengan susunan disambungkan dan ungkapan indeks diterapkan, `array-capture` (atau GUI **Capture All**) menyimpan tahap eksport bagi setiap kamera *dan* render indeks — `--index`/`--no-index` menoggelnya pada CLI, dan tangkapan secara lalai merangkumi setiap tahap yang terpakai. Sumbangan kamera mono kepada setiap kumpulan tangkapan ialah satu jalurnya pada tahap mentah/debayered (skala kelabu)/radiasi/reflektan, ditambah komposit indeks gabungan yang dikongsi apabila susunan berjalan dalam mod gabungan. Lihat [Susunan Pelbagai Kamera § Pengambilan](arrays.md#capturing-monitoring-vs-analysis).

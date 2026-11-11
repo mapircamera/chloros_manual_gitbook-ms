@@ -32,7 +32,7 @@ Bar sisi memaparkan, dari atas ke bawah:
 * panel **Nilai Kursor** dengan bacaan, histogram dan kawalan GSD
 
 {% hint style="warning" %}
-**Tidak tersedia untuk kamera mono.** Pada imej LATTICE M3M jalur tunggal, kedua-dua kotak semak dilumpuhkan, dengan petua alat _&quot;Tidak tersedia untuk penderia mono (M3M)&quot;_ — indeks berbilang jalur tidak ditakrifkan pada satu jalur. Untuk mengira indeks daripada kamera M3M, gabungkan dua atau lebih menjadi susunan berbilang jalur yang selari dan gunakan enjin indeks LATTICE.
+**Tidak tersedia untuk kamera mono.** Pada imej LATTICE M3M jalur tunggal, kedua-dua kotak semak dilumpuhkan, dengan petua alat _"Tidak tersedia untuk penderia mono (M3M)"_ — indeks berbilang jalur tidak ditakrifkan pada satu jalur. Untuk mengira indeks daripada kamera M3M, gabungkan dua atau lebih menjadi susunan berbilang jalur yang selari dan gunakan enjin indeks LATTICE.
 {% endhint %}
 
 ***
@@ -79,7 +79,7 @@ Jadual Rujukan (Look-Up Table) memetakan nilai indeks kepada warna: input NDVI 0
 
 ### Menambah LUT
 
-1. Klik butang **<img src="../.gitbook/assets/image (1) (1) (1).png" alt="" data-size="line">&quot;+ Tambah LUT&quot;** di bawah formula
+1. Klik butang **<img src="../.gitbook/assets/image (1) (1) (1).png" alt="" data-size="line">"+ Tambah LUT"** di bawah formula
 2. Pilih gradasi warna
 3. Tetapkan minimum dan maksimum pemotongan
 4. Pilih Mod Pemotongan
@@ -101,7 +101,7 @@ Tudingkan tetikus pada **bar gradasi**untuk membuka senarai pratetap — Chloros
 | 6 | Ungu → Blue → Green → Kuning      | Bersiri, gelap ke terang                                           |
 | 7 | Orange → Putih → Ungu             | Berpencar di sekitar titik tengah yang terang                                   |
 
-Gradien **menyebar**meletakkan warna neutral di tengah tetingkap anda, yang sesuai digunakan apabila titik tengah itu bermaksud sesuatu (seperti ambang atau tarikh asas). Gradien**berurutan** bergerak secara monoton daripada gelap ke terang, yang sesuai untuk kuantiti yang hanya mempunyai &quot;lebih&quot; dan &quot;kurang&quot;.
+Gradien **menyebar**meletakkan warna neutral di tengah tetingkap anda, yang sesuai digunakan apabila titik tengah itu bermaksud sesuatu (seperti ambang atau tarikh asas). Gradien**berurutan** bergerak secara monoton daripada gelap ke terang, yang sesuai untuk kuantiti yang hanya mempunyai "lebih" dan "kurang".
 
 Setiap pratet mempunyai tujuh hentian warna. Klik pratet dan imej akan dikemas kini serta-merta (apabila kotak LUT dicentang).
 
@@ -143,14 +143,14 @@ Apabila nilai indeks piksel jatuh di luar tetingkap min/maks, Mod Pemotongan men
 
 | Label lungsur                  | Nilai yang disimpan      | Pigmen yang berada di luar julat dilukis sebagai                                                                                                |
 | ------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| **Minimum &amp; Maksimum** (lalai) | `clip`            | Warna hujung terdekat pada rona — nilai di bawah minimum mengambil warna pertama, nilai di atas maksimum mengambil warna terakhir |
+| **Minimum & Maksimum** (lalai) | `clip`            | Warna hujung terdekat pada rona — nilai di bawah minimum mengambil warna pertama, nilai di atas maksimum mengambil warna terakhir |
 | **Latar Belakang Telus**      | `transparent`     | Telus sepenuhnya (alpha sebenar)                                                                                                  |
 | **Latar Belakang Indeks**| `indexColor`      | Skala kelabu, diregangkan merentasi julat indeks**penuh** imej, jadi struktur di luar julat masih kelihatan dalam warna kelabu                |
 | **Latar Belakang Asal**         | `backgroundColor` | Imej asas itu sendiri, jadi lapisan warna terletak di atas pemandangan sebenar                                                |
 
 | Mod                       | Terbaik untuk                               | Rupa                                      |
 | -------------------------- | -------------------------------------- | ----------------------------------------- |
-| **Minimum &amp; Maksimum**      | Paparan data penuh, analisis saintifik | Setiap piksel diberi warna                |
+| **Minimum & Maksimum**      | Paparan data penuh, analisis saintifik | Setiap piksel diberi warna                |
 | **Latar Belakang Telus**    | Lapisan GIS, mengasingkan jalur nilai   | Warna di dalam tetingkap, tiada di luar |
 | **Latar Belakang Indeks**       | Penekanan sambil mengekalkan konteks data    | Berwarna di dalam, kelabu di luar               |
 | **Latar Belakang Asli**    | Laporan dan pembentangan              | Berwarna di dalam, gambar di luar         |
@@ -222,7 +222,7 @@ Eksport keseluruhan projek mengambil masa beberapa minit, jadi jalannya proses m
 
 * Bar kemajuan memaparkan `current / total` dan fail yang sedang ditulis
 * Apabila selesai, panel melaporkan berapa banyak imej telah dieksport, berapa banyak yang dilangkau, dan laluan folder output
-* Imej yang dilangkau disenaraikan dengan sebabnya (sehingga lima ditunjukkan, kemudian satu baris &quot;+N lagi&quot;). Sebab biasa ialah lapisan yang tidak mempunyai saluran yang diperlukan oleh indeks ini
+* Imej yang dilangkau disenaraikan dengan sebabnya (sehingga lima ditunjukkan, kemudian satu baris "+N lagi"). Sebab biasa ialah lapisan yang tidak mempunyai saluran yang diperlukan oleh indeks ini
 * Jika **tiada** imej dalam projek yang boleh menggunakan indeks tersebut, proses itu akan melaporkan kegagalan dan bukannya meninggalkan anda dengan folder kosong
 
 Hanya satu eksport sandbox boleh dijalankan pada satu-satu masa. Permintaan untuk memulakan yang kedua sementara yang pertama masih dijalankan akan ditolak dengan mesej yang jelas, dan bukannya membenarkan dua proses bersaing untuk fail projek yang sama.
@@ -233,9 +233,7 @@ Setiap larian yang selesai akan muncul sebagai butang tersendiri dalam bar alat 
 
 ***
 
-## Formula indeks tersuai (Chloros
-
-+)
+## Formula indeks tersuai (Chloros+)
 
 {% hint style="info" %}
 **Tempat menciptanya**: di bar sisi Sandbox, atau dalam**Tetapan Projek** sebelum pemprosesan. Kedua-duanya menulis ke senarai peringkat projek yang sama.
@@ -260,20 +258,18 @@ Squared ratio:                  (y/x)^2
 {% hint style="warning" %}
 **Formula tersuai hanya untuk GUI.** PilihanCLI
 
-/SDK
-
-`--indices` mengembangkan 22 nama pratetap terbina dalam dan secara senyap melangkau apa sahaja yang lain, termasuk formula tersuai anda. Untuk memproses formula tersuai secara pukal, konfigurasikan ia dalam Tetapan Projek dan jalankan pemprosesan, atau gunakan eksport &quot;Terapkan pada semua imej projek&quot; di Sandbox.
+/SDK `--indices` mengembangkan 22 nama pratetap terbina dalam dan secara senyap melangkau apa sahaja yang lain, termasuk formula tersuai anda. Untuk memproses formula tersuai secara pukal, konfigurasikan ia dalam Tetapan Projek dan jalankan pemprosesan, atau gunakan eksport "Terapkan pada semua imej projek" di Sandbox.
 {% endhint %}
 
 ***
 
 ## Penyelesaian Masalah
 
-### &quot;Lapisan ini tidak mempunyai saluran yang diperlukan oleh indeks ini&quot;
+### "Lapisan ini tidak mempunyai saluran yang diperlukan oleh indeks ini"
 
 Formula ini membaca kedudukan saluran yang tidak dimiliki oleh lapisan semasa — contohnya indeks tiga-slot pada fail satu atau dua saluran. Tukar kepada lapisan berbilang jalur (pantulan atau debayered), atau pilih indeks yang sesuai dengan penapis kamera anda.
 
-### &quot;Tidak dapat mencapai backend pemprosesan imej&quot;
+### "Tidak dapat mencapai backend pemprosesan imej"
 
 Backend tidak memberi maklum balas. Semak tab Log; jika backend sedang dihidupkan semula, Sandbox akan pulih dengan sendirinya setelah ia kembali.
 

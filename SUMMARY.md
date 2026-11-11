@@ -41,21 +41,21 @@
 * [Kamera LATTICE](lattice/README.md)
 * [Menyambungkan Kamera](lattice/connecting.md)
 * [Tetapan Kamera](lattice/camera-settings.md)
-* [Tetapan &amp; Mod Rakaman](lattice/capture.md)
+* [Tetapan & Mod Rakaman](lattice/capture.md)
 * [Susunan Pelbagai Kamera](lattice/arrays.md)
-* [Kamera Mono &amp; Indeks Vegetasi](lattice/mono-indices.md)
+* [Kamera Mono & Indeks Vegetasi](lattice/mono-indices.md)
 
 ## Penderia Cahaya DAQ
 
 * [Penderia Cahaya DAQ](daq/README.md)
 * [Tab DAQ dalam Chloros](daq/gui.md)
 * [Panduan Permulaan Cepat CLI (pool-\*)](daq/cli-quick-start.md)
-* [Profil Cap &amp; Julat Dikalibrasi](daq/caps-and-range.md)
-* [Perekodan &amp; Format .daq](daq/recording.md)
-* [Rangkaian DAQ-E &amp; Penyelarasan Masa](daq/ethernet-ptp.md)
+* [Profil Cap & Julat Dikalibrasi](daq/caps-and-range.md)
+* [Perekodan & Format .daq](daq/recording.md)
+* [Rangkaian DAQ-E & Penyelarasan Masa](daq/ethernet-ptp.md)
 * [Aliran Kerja Reflectance](daq/reflectance.md)
 
-## Linux &amp; Pengkomputeran Edge
+## Linux & Pengkomputeran Edge
 
 * [Kajian Umum Linux](linux/linux-overview.md)
 * [Pemasangan Linux](linux/linux-installation.md)
@@ -66,7 +66,7 @@
 * [Penyesuaian Komputasi Dinamik](processing-architecture/dynamic-compute-adaptation.md)
 * [Saluran Pemprosesan](processing-architecture/processing-pipeline.md)
 
-## Rujukan (CLI &amp; SDK)
+## Rujukan (CLI & SDK)
 
 * [Chloros CLI Rujukan](reference/cli-reference.md)
 * [Chloros Python SDK Rujukan](reference/sdk-reference.md)

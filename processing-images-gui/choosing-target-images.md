@@ -159,7 +159,7 @@ Jika Chloros tidak mengesan sasaran anda dengan betul, atur tetapan ini dalam [T
 **Punca yang mungkin:**
 
 * Imej sasaran tidak ditandakan dalam Pelayar Fail
-* Sasaran terlalu kecil dalam bingkai (&lt; 30% imej)
+* Sasaran terlalu kecil dalam bingkai (< 30% imej)
 * Pencahayaan yang buruk (bayang-bayang, silau)
 * Tetapan pengesanan sasaran terlalu ketat
 
@@ -217,7 +217,7 @@ Jika penderia cahaya DAQ merakam sinaran penyinaran ke bawah semasa tangkapan LA
 Anda juga boleh memproses tanpa sasaran dan tanpa DAQ:
 
 1. Biarkan semua kotak semak lajur Sasaran tidak dicentang
-2. **Lumpuhkan** &quot;Penentukuran pantulan / imbangan putih&quot; dalam Tetapan Projek — pengesanan sasaran kemudiannya akan diabaikan sepenuhnya
+2. **Lumpuhkan** "Penentukuran pantulan / imbangan putih" dalam Tetapan Projek — pengesanan sasaran kemudiannya akan diabaikan sepenuhnya
 3. Pembetulan vignet akan tetap diterapkan
 4. Keluaran tidak akan ditentukur untuk pantulan mutlak (LATTICE multispectral masih mengeksport produk debayered, pratonton dan sinaran)
 

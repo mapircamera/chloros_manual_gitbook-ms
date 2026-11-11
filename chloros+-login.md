@@ -16,49 +16,21 @@ Apabila log masuk, butiran akaun anda akan dipaparkan:
 | Pelan | `plan_id` | Jenis |
 | --- | --- | --- |
 | Iron | `0` | Percuma |
-| Tembaga | `1` | Berbayar (Chloros
-
-+) |
-| Gangsa | `2` | Berbayar (Chloros
-
-+) |
-| Perak | `3` | Berbayar (Chloros
-
-+) |
-| Emas | `4` | Berbayar (Chloros
-
-+) |
+| Tembaga | `1` | Berbayar (Chloros+) |
+| Gangsa | `2` | Berbayar (Chloros+) |
+| Perak | `3` | Berbayar (Chloros+) |
+| Emas | `4` | Berbayar (Chloros+) |
 
 Lihat [rancangan dan harga](https://cloud.mapir.camera/pricing) untuk mengetahui apa yang disertakan dalam setiap peringkat berbayar.
 
-### Akses CLI
+### Akses CLI / SDK memerlukan peringkat berbayar
 
-/ SDK
+Akses CLI dan Python SDK memerlukan **mana-mana peringkat berbayar Chloros+ (Copper atau ke atas)**. Ini dikuatkuasakan**di pihak pelayan** — setiap permintaan CLI/SDK mesti mempunyai kedua-dua sesi langsung dan pelan berbayar:
 
-memerlukan peringkat berbayar
-
-Akses CLI
-
-dan Python
-
-SDK
-
-memerlukan **mana-mana peringkat berbayar Chloros
-
-+ (Copper atau ke atas)**. Ini dikuatkuasakan**di pihak pelayan** — setiap permintaan CLI
-
-/SDK
-
-mesti mempunyai kedua-dua sesi langsung dan pelan berbayar:
-
-| Status HTTP
-
-| `error_code` | Maksud | Penyelesaian |
+| Status HTTP | `error_code` | Maksud | Penyelesaian |
 | --- | --- | --- | --- |
 | `401` | `AUTH_REQUIRED` | Tidak log masuk pada mesin ini | `chloros-cli login <email> <password>` |
-| `403` | `PLAN_UPGRADE_REQUIRED` | Log masuk, tetapi peringkat pelan terlalu rendah (peringkat Iron percuma) | Tingkatkan ke mana-mana pelan berbayar Chloros
-
-+ |
+| `403` | `PLAN_UPGRADE_REQUIRED` | Log masuk, tetapi peringkat pelan terlalu rendah (peringkat Iron percuma) | Tingkatkan ke mana-mana pelan berbayar Chloros+ |
 
 `chloros-cli status` kekal boleh diakses pada peringkat percuma, jadi anda sentiasa boleh melihat pelan semasa anda dan mengapa akses ditolak.
 
@@ -77,13 +49,7 @@ Setiap pelan mengehadkan berapa banyak kamera LATTICE dan penderia cahaya DAQ ya
 
 
 
-Log masuk dengan kelayakan Chloros
-
-+ anda untuk mengaktifkan pemprosesan CLI
-
-. Pada Linux
-
-(tanpa GUI), ini adalah satu-satunya cara untuk mengaktifkan lesen anda.
+Log masuk dengan kelayakan Chloros+ anda untuk mengaktifkan pemprosesan CLI. Pada Linux (tanpa GUI), ini adalah satu-satunya cara untuk mengaktifkan lesen anda.
 
 **Tatabahasa:**
 
@@ -92,13 +58,7 @@ chloros-cli login <email> <password>
 ```
 
 {% hint style="info" %}
-**Pengguna SDK**: Python
-
-SDK
-
-juga menyediakan kaedah `logout()` secara berperogram untuk memadam kelayakan yang disimpan dalam cache. Lihat [Rujukan SDK
-
-](reference/sdk-reference.md) untuk maklumat lanjut.
+**Pengguna SDK**: Python SDK juga menyediakan kaedah `logout()` secara berperogram untuk memadam kelayakan yang disimpan dalam cache. Lihat [Rujukan SDK](reference/sdk-reference.md) untuk maklumat lanjut.
 {% endhint %}
 
 **Contoh:**
@@ -125,23 +85,13 @@ Kredensial yang disimpan dalam cache dan konfigurasi disimpan dalam folder `.chl
 | **Windows** | `%USERPROFILE%\.chloros\` |
 | **Linux** | `~/.chloros/` |
 
-Mengpasang versi baharu di atas versi sedia ada mengekalkan log masuk anda, pada Windows
-
-(pemasang) dan pada Linux
-
-(`.deb`, termasuk `chloros-cli update`). Pemupusan Chloros
-
-— atau penghapusan pakej Linux
-
-— akan memadam log masuk yang disimpan dalam cache, jadi anda perlu log masuk semula selepas pemasangan baharu.
+Mengpasang versi baharu di atas versi sedia ada mengekalkan log masuk anda, pada Windows (pemasang) dan pada Linux (`.deb`, termasuk `chloros-cli update`). Pemupusan Chloros — atau penghapusan pakej Linux — akan memadam log masuk yang disimpan dalam cache, jadi anda perlu log masuk semula selepas pemasangan baharu.
 
 ### Tamat Pelan dan Tempoh Kelonggaran Luar Talian
 
 Tarikh tamat pelan dalam GUI menunjukkan bila lesen anda akan menjadi tidak sah. Untuk langganan bulanan berulang, tarikh luput adalah pada akhir bulan; untuk langganan tahunan pula, ia adalah setahun selepas anda memulakan langganan.
 
-Chloros
-
-mengesahkan lesen anda secara dalam talian, tetapi bekerja secara luar talian disokong dalam tempoh kemaafan:
+Chloros mengesahkan lesen anda secara dalam talian, tetapi bekerja secara luar talian disokong dalam tempoh kemaafan:
 
 * Pengesahan pelayan yang berjaya disimpan dalam tumpuan selama **5 minit**, jadi penggunaan biasa menghasilkan sangat sedikit panggilan lesen.
 * Cache lesen yang ditandatangani dan terikat pada mesin merangkumi tempoh luar talian yang lebih lama: **30 hari untuk pelan bulanan**, dan**sehingga tarikh tamat langganan anda (maksimum 365 hari) untuk pelan tahunan**.
@@ -149,13 +99,7 @@ mengesahkan lesen anda secara dalam talian, tetapi bekerja secara luar talian di
 
 ### Had Peranti
 
-Setiap pelan Chloros
-
-+ menawarkan bilangan peranti berdaftar yang berbeza. Setiap peranti yang anda log masuk menggunakan akaun Chloros
-
-+ dikira ke dalam bilangan peranti berdaftar anda. Anda boleh menamakan semula dan mengeluarkan peranti di halaman akaun MAPIR
-
-Cloud anda.
+Setiap pelan Chloros+ menawarkan bilangan peranti berdaftar yang berbeza. Setiap peranti yang anda log masuk menggunakan akaun Chloros+ dikira ke dalam bilangan peranti berdaftar anda. Anda boleh menamakan semula dan mengeluarkan peranti di halaman akaun MAPIR Cloud anda.
 
 <table><thead><tr><th width="168.5999755859375" align="right">Pelan Chloros+</th><th align="center">TAMBAGA</th><th align="center">PERAK</th><th align="center">PERAK</th><th align="center">EMAS</th></tr></thead><tbody><tr><td align="right">Peranti Disokong</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
 

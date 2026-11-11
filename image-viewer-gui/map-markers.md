@@ -86,7 +86,7 @@ Setiap imej dengan data GPS mendapat penanda pada koordinatnya.
 
 Pilih jenis lapisan peta dengan butang (dari kiri ke kanan):
 
-![](&lt;../.gitbook/assets/image (14).png&gt;)
+![](<../.gitbook/assets/image (14).png>)
 
 | Jenis                 | Menunjukkan                                                                |
 | -------------------- | -------------------------------------------------------------------- |

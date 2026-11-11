@@ -21,15 +21,7 @@ MAPIR menawarkan pelbagai sasaran kalibrasi untuk merangkumi pelbagai aplikasi. 
 
 Ini bermakna dengan setiap imej yang anda rakam menggunakan kamera kami, anda boleh menggunakan foto sasaran pantulan kami, seperti [T4-R50](https://www.mapir.camera/collections/calibration-targets/products/diffuse-reflectance-standard-calibration-target-package-t3-r50) atau [T4-R125](https://www.mapir.camera/collections/multispectral-reflectance-reference-calibration-targets/products/diffuse-reflectance-standard-calibration-target-package-t4-r125) untuk mengkalibrasi imej bagi pantulan. Setelah dikalibrasi, setiap piksel dalam imej bersamaan dengan peratus pantulan.
 
-Untuk keluaran **Survey3**, jika anda mengeluarkan imej yang telah dikalibrasi dalam Chloros
-
-sebagai JPG atau TIFF
-
-biasa, maka peratus pantulan dikira dengan membahagikan nilai piksel dengan kedalaman bit format imej. Jadi untuk JPG bahagikan dengan 255, dan untuk TIFF
-
-bahagikan dengan 65,535. Anda juga boleh memilih format keluaran PERCENT dalam Chloros
-
-, dan setiap piksel akan berangka dari nilai peratusan 0.0 hingga 1.0 (0% hingga 100% pantulan). Cuma ingat bahawa sesetengah aplikasi imej tidak dapat menerima imej peratus (titik apung), dan saiznya besar dari segi penyimpanan.
+Untuk keluaran **Survey3**, jika anda mengeluarkan imej yang telah dikalibrasi dalam Chloros sebagai JPG atau TIFF biasa, maka peratus pantulan dikira dengan membahagikan nilai piksel dengan kedalaman bit format imej. Jadi untuk JPG bahagikan dengan 255, dan untuk TIFF bahagikan dengan 65,535. Anda juga boleh memilih format keluaran PERCENT dalam Chloros, dan setiap piksel akan berangka dari nilai peratusan 0.0 hingga 1.0 (0% hingga 100% pantulan). Cuma ingat bahawa sesetengah aplikasi imej tidak dapat menerima imej peratus (titik apung), dan saiznya besar dari segi penyimpanan.
 
 {% hint style="info" %}
 **Reflectansi LATTICE menggunakan skala piksel yang berbeza.** Reflectansi LATTICE disimpan dengan DN 32768 = 100% pantulan (bukan 65535), dan setiap fail membawa tag XMP `Chloros:PixelScale` yang menyatakan skala nya. Baca tag tersebut dan bahagikannya dengannya daripada menganggap ia adalah pemalar — lihat [Format Imej Keluaran](output-image-formats.md).
@@ -37,38 +29,26 @@ bahagikan dengan 65,535. Anda juga boleh memilih format keluaran PERCENT dalam C
 
 ## Sasaran penentukuran dengan kamera LATTICE
 
-Dengan kamera LATTICE, sasaran penentukuran adalah **pilihan** untuk pantulan: Chloros
-
-sebaliknya boleh merujuk pantulan kepada sinaran ke bawah yang diukur oleh penderia cahaya DAQ (ρ = π·L/E). Rujukan dipilih dengan tetapan sumber pantulan projek, ditetapkan dengan `chloros-cli process --reflectance-source` (GUI tidak mempunyai kawalan untuknya dan menggunakan nilai yang disimpan oleh projek, `auto` secara lalai — lihat [Tetapan Projek](project-settings/project-settings.md)):
+Dengan kamera LATTICE, sasaran penentukuran adalah **pilihan** untuk pantulan: Chloros sebaliknya boleh merujuk pantulan kepada sinaran ke bawah yang diukur oleh penderia cahaya DAQ (ρ = π·L/E). Rujukan dipilih dengan tetapan sumber pantulan projek, ditetapkan dengan `chloros-cli process --reflectance-source` (GUI tidak mempunyai kawalan untuknya dan menggunakan nilai yang disimpan oleh projek, `auto` secara lalai — lihat [Tetapan Projek](project-settings/project-settings.md)):
 
 | Nilai | Perilaku |
 | --- | --- |
-| `auto` *(lalai)* | Sasaran dalam bingkai yang lulus QA adalah **rujukan mutlak**; apabila tiada sasaran hadir atau QA gagal, Chloros
-
-kembali kepada pembahagi DAQ downwelling. Sasaran yang lulus QA dengan bendera (panel yang terjatuh, atau jalur yang tidak mengikut susunan) tidak secara automatik diutamakan: rantaian sasaran, sasaran+DAQ dan hanya-DAQ dicuba mengikut susunan skor yang diukur pada panel yang disisihkan. |
+| `auto` *(lalai)* | Sasaran dalam bingkai yang lulus QA adalah **rujukan mutlak**; apabila tiada sasaran hadir atau QA gagal, Chloros kembali kepada pembahagi DAQ downwelling. Sasaran yang lulus QA dengan bendera (panel yang terjatuh, atau jalur yang tidak mengikut susunan) tidak secara automatik diutamakan: rantaian sasaran, sasaran+DAQ dan hanya-DAQ dicuba mengikut susunan skor yang diukur pada panel yang disisihkan. |
 | `target` | Sasaran ketat sahaja — tiada penggantian DAQ. |
 | `daq` | DAQ berkuasa — pengukuran DAQ sentiasa menjadi rujukan. |
 
 Perilaku sasaran tambahan untuk LATTICE:
 
 * **Geometri sasaran** — Panel berpenandaan ArUco, panel ROI tetap, dan sasaran jalur disokong; geometri diambil daripada konfigurasi sasaran projek.
-* **Data pantulan sasaran yang diukur bagi setiap unit** — `--target-reflectance-dir DIR` menunjuk ke direktori imbasan pantulan sasaran yang diukur bagi setiap unit (`<serial>.csv`, dicari berdasarkan nombor siri/QR unit sasaran). Sekiranya gagal, Chloros
-
-akan kembali kepada spektra T3/T4P nominal.
+* **Data pantulan sasaran yang diukur bagi setiap unit** — `--target-reflectance-dir DIR` menunjuk ke direktori imbasan pantulan sasaran yang diukur bagi setiap unit (`<serial>.csv`, dicari berdasarkan nombor siri/QR unit sasaran). Sekiranya gagal, Chloros akan kembali kepada spektra T3/T4P nominal.
 * **Penambatan temporal** — sasaran yang dikesan akan mengkalibrasi bingkai di sekelilingnya dan dikekalkan di antara pengesanan sasaran.
 
-Semantik bendera penuh dan contoh terdapat dalam [Rujukan [CLI
-
-]](reference/cli-reference.md) (lihat &quot;Per-Product Export Toggles&quot;).
+Semantik bendera penuh dan contoh terdapat dalam [Rujukan [CLI]](reference/cli-reference.md) (lihat "Per-Product Export Toggles").
 
 ### F988
 
-&quot;Reflektan F988 dikalibrasi menggunakan panel reflektan dalam adegan: jalur itu terletak di luar julat kalibrasi penderia cahaya DAQ, jadi Chloros
+"Reflektan F988 dikalibrasi menggunakan panel reflektan dalam adegan: jalur itu terletak di luar julat kalibrasi penderia cahaya DAQ, jadi Chloros menggunakan tangkapan panel terkini anda dan menyimpannya di antara penglihatan panel."
 
-menggunakan tangkapan panel terkini anda dan menyimpannya di antara penglihatan panel.&quot;
-
-Jika F988 dijalankan dengan penentukuran DAQ sahaja, Chloros
-
-menolak pantulan berasaskan DAQ untuk jalur tersebut dan menerangkan sebabnya (skip reason `dls-uncalibrated-band-988`); aliran kerja panel adalah laluan yang disokong.
+Jika F988 dijalankan dengan penentukuran DAQ sahaja, Chloros menolak pantulan berasaskan DAQ untuk jalur tersebut dan menerangkan sebabnya (skip reason `dls-uncalibrated-band-988`); aliran kerja panel adalah laluan yang disokong.
 
 <div><figure><img src=".gitbook/assets/t3-125.jpg" alt=""><figcaption><p>T4-R125</p></figcaption></figure> <figure><img src=".gitbook/assets/t3-125_2.jpg" alt=""><figcaption><p>T4-R125</p></figcaption></figure> <figure><img src=".gitbook/assets/t3-125_closed.jpg" alt=""><figcaption><p>T4-R125</p></figcaption></figure></div>

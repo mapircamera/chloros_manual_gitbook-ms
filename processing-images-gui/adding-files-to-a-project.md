@@ -26,18 +26,18 @@ Terdapat dua cara utama untuk menambah imej ke projek anda:
 
 Gunakan pilihan ini untuk mengimport fail imej individu atau pilihan kecil fail.
 
-1. Klik butang **&quot;Add Files&quot;** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> di bahagian atas panel File Browser
+1. Klik butang **"Add Files"** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> di bahagian atas panel File Browser
 2. Navigasi ke folder yang mengandungi imej anda
 3. Pilih satu atau lebih fail imej (tekan dan tahan **Ctrl** untuk memilih beberapa fail)
-4. Klik **&quot;Open&quot;** untuk mengimport fail yang dipilih
+4. Klik **"Open"** untuk mengimport fail yang dipilih
 
 ### Kaedah 2: Tambah Folder
 
 Gunakan pilihan ini untuk mengimport semua imej dari satu folder sekaligus. Anda boleh memilih **beberapa folder** dalam satu tetingkap dialog.
 
-1. Klik butang **&quot;Add Folder&quot;** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> di bahagian atas panel Pelayar Fail
+1. Klik butang **"Add Folder"** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> di bahagian atas panel Pelayar Fail
 2. Navigasi ke dan pilih folder (atau folder-folder) yang mengandungi imej sesi tangkapan anda
-3. Klik **&quot;Select Folder&quot;** untuk mengimport semua imej yang disokong
+3. Klik **"Select Folder"** untuk mengimport semua imej yang disokong
 
 {% hint style="info" %}
 **Fail yang gagal dimuatkan akan dilaporkan.** Jika sesuatu folder mengandungi fail yang diiktiraf oleh Chloros tetapi tidak dapat dimuatkan, amaran akan memaklumkan anda — imej tidak akan hilang secara senyap daripada grid.
@@ -113,7 +113,7 @@ Mengklik butang togol di penjuru atas kanan di atas jadual akan memaparkan metad
 Untuk mengalihkan imej yang tidak diingini daripada projek anda:
 
 1. Pilih satu atau lebih imej dalam jadual Pelayar Fail
-2. Klik butang **&quot;Remove Selected&quot;** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
+2. Klik butang **"Remove Selected"** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
 3. Sahkan pemindahan (fail tidak dipadamkan daripada cakera, hanya dialihkan daripada projek)
 
 ### Mengatur Susun dan Menapis

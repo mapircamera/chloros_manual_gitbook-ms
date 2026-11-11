@@ -73,7 +73,7 @@ Utamanya satu benang yang terikat pada I/O — storan SSD memperbaikinya dengan 
 Dalam Benang 3, kerja bagi setiap imej diparaelakkan seperti berikut:
 
 * **Strategi GPU**(`GPU_SINGLE`, `GPU_PARALLEL`) menggunakan kolam**proses pekerja**, masing-masing merupakan proses OS berasingan dengan konteks CUDA tersendiri. Chloros memulakan setiap pekerja dengan melancarkan program backend yang dipasangnya sekali lagi — bukan melalui `multiprocessing` Python, kerana permulaan pekerja tidak berfungsi di dalamnya aplikasi terbungkus
-* **`CPU_PARALLEL`** menggunakan kolam utas (Python&#x27;s `ThreadPoolExecutor`) — NumPy dan OpenCV melepaskan GIL, jadi utas sudah mencukupi
+* **`CPU_PARALLEL`** menggunakan kolam utas (Python's `ThreadPoolExecutor`) — NumPy dan OpenCV melepaskan GIL, jadi utas sudah mencukupi
 * Peranti Jetson dengan 8GB atau kurang RAM kongsi terus melangkau eksekutor sepenuhnya dan memproses secara berperingkat dalam proses yang sama
 * Texture Aware pada GPU dengan VRAM kurang daripada 7GB juga berjalan secara berperingkat — model penapis hingar tidak dapat memuat lebih daripada sekali
 

@@ -1,4 +1,4 @@
-# Rangkaian DAQ-E &amp; Penyelarasan Masa
+# Rangkaian DAQ-E & Penyelarasan Masa
 
 > Penyediaan rangkaian fizikal untuk penderia — penarahan kabel, PoE, penugasan IP dan tetapan rangkaian peranti itu sendiri — terdapat dalam **[manual pengguna DAQ](https://mapir.gitbook.io/daq/daq-e/network-setup)**. Halaman ini merangkumi bahagian**[DAQ user manual](https://mapir.gitbook.io/daq/daq-e/network-setup)**: penyambungan, penyelarasan masa, dan apa yang perlu dilakukan apabila penemuan tidak menemui sebarang peranti.
 
@@ -11,35 +11,17 @@ DAQ-E adalah ahli Ethernet dalam keluarga DAQ: dikuasakan melalui PoE, ditemui m
 | **Multicast** (laluan lalai) | UDP `239.10.10.10:5002` | Sebarang bilangan pada LAN yang sama menerima aliran yang sama | Setiap datagram disahkan CRC-16/CCITT |
 | **Mentah** | Pelabuhan TCP `5000` | Tepat satu klien (eksklusif) | Serasi bait secara langsung dengan DAQ-U |
 
-Chloros
-
-menggunakan multicast secara lalai, yang membolehkan GUI, CLI
-
-, dan SDK
-
-semua memerhati satu penderia pada satu masa.
+Chloros menggunakan multicast secara lalai, yang membolehkan GUI, CLI, dan SDK semua memerhati satu penderia pada satu masa.
 
 ## Keperluan rangkaian
 
-* **Domain siaran yang sama.** Mesin yang menjalankan Chloros
-
-mesti berada dalam segmen rangkaian L2 yang sama seperti penderia — penemuan mDNS tidak menembusi penghala.
-* **Tembok api.** Pada Windows
-
-, pemasang menambah peraturan tembok api **Chloros
-
-Backend (UDP-In)**untuk backend, pada setiap profil rangkaian, yang merangkumi data DAQ-E (UDP 5002), mDNS (UDP 5353) dan PTP (UDP 319/320), dan peraturan**Chloros
-
-Backend (TCP-In)**, terhad kepada subnet tempatan, untuk sambungan yang dibuat oleh DAQ-E kembali ke komputer semasa kemas kini firmware. Pada Linux
-
-, `.deb` membuka port UDP dalam `ufw` atau `firewalld` apabila firewall tersebut diaktifkan semasa pemasangan. Firewall pihak ketiga, atau yang diaktifkan kemudian, memerlukan port yang sama dibenarkan.
+* **Domain siaran yang sama.** Mesin yang menjalankan Chloros mesti berada dalam segmen rangkaian L2 yang sama seperti penderia — penemuan mDNS tidak menembusi penghala.
+* **Tembok api.** Pada Windows, pemasang menambah peraturan tembok api **Chloros Backend (UDP-In)**untuk backend, pada setiap profil rangkaian, yang merangkumi data DAQ-E (UDP 5002), mDNS (UDP 5353) dan PTP (UDP 319/320), dan peraturan**Chloros Backend (TCP-In)**, terhad kepada subnet tempatan, untuk sambungan yang dibuat oleh DAQ-E kembali ke komputer semasa kemas kini firmware. Pada Linux, `.deb` membuka port UDP dalam `ufw` atau `firewalld` apabila firewall tersebut diaktifkan semasa pemasangan. Firewall pihak ketiga, atau yang diaktifkan kemudian, memerlukan port yang sama dibenarkan.
 * **Kuasa PoE, tiada LED status.** DAQ-E tidak mempunyai LED sendiri — sahkan kuasa melalui penunjuk pautan/PoE pada port suis atau penyuntik, dan biarkan beberapa saat selepas dihidupkan supaya ia boleh memulakan dan menyertai rangkaian.
 
 ## Menyambung
 
-**GUI:** Tab Penderia Cahaya → Sambung Penderia → Jenis Peranti &quot;DAQ-E (Ethernet)&quot;. Penemuan hanya dijalankan selagi dialog sambungan berada di skrin (penjelajahan mDNS ditambah imbasan ARP pada Windows
-
-), diulang setiap 15 saat; butang Segarkan mengimbas semula dengan segera. Penderia yang ditemui akan muncul dalam senarai lungsur; penderia pertama yang dikesan akan dipilih secara automatik.
+**GUI:** Tab Penderia Cahaya → Sambung Penderia → Jenis Peranti "DAQ-E (Ethernet)". Penemuan hanya dijalankan selagi dialog sambungan berada di skrin (penjelajahan mDNS ditambah imbasan ARP pada Windows), diulang setiap 15 saat; butang Segarkan mengimbas semula dengan segera. Penderia yang ditemui akan muncul dalam senarai lungsur; penderia pertama yang dikesan akan dipilih secara automatik.
 
 <!-- SCREENSHOT-NEEDED: DAQ connect dialog with Device Type set to "DAQ-E (Ethernet)" and at least one discovered sensor listed in the Hostname/IP dropdown (e.g. daq-e-xxxxxx.local), Connect button enabled. -->
 
@@ -65,31 +47,17 @@ chloros-cli daq pool-connect --eth-host daq-e-def330.local
 
 ## Tetapan peranti dan firmware
 
-Pengesan itu sendiri menyimpan tetapan rangkaiannya: DHCP (tetapan kilang, akan bertukar kepada alamat pautan-lokal 169.254.x.x apabila tiada pelayan DHCP yang menjawab) atau alamat statik. Ia juga menyimpan sama ada ia mula menstrim semasa kuasa dihidupkan. Ubahnya dalam GUI (tetapan gear sensor, **Rangkaian**:**Ubah…**,**Strem semasa kuasa-pada**,**Mulakan semula penderia**; lihat [Tab DAQ](gui.md)), atau daripada CLI
+Pengesan itu sendiri menyimpan tetapan rangkaiannya: DHCP (tetapan kilang, akan bertukar kepada alamat pautan-lokal 169.254.x.x apabila tiada pelayan DHCP yang menjawab) atau alamat statik. Ia juga menyimpan sama ada ia mula menstrim semasa kuasa dihidupkan. Ubahnya dalam GUI (tetapan gear sensor, **Rangkaian**:**Ubah…**,**Strem semasa kuasa-pada**,**Mulakan semula penderia**; lihat [Tab DAQ](gui.md)), atau daripada CLI dan SDK dengan `pool-set-network`, `pool-set-auto-stream` dan `pool-reboot` (`DAQSensorSession.set_network()`, `set_auto_stream()`, `reboot()`; lihat [Rujukan CLI](../reference/cli-reference.md#daq-e-device-settings)). Penderia dihidupkan semula untuk menerapkan perubahan rangkaian, dan Chloros menyambungkannya semula. Alamat statik mesti ada di rangkaian komputer yang menjalankan Chloros: Chloros menolak alamat yang tidak dapat dihubungi selepas pengaktifan semula. ID penderia dan nama hos `daq-e-<id>.local` tidak pernah berubah. Baharu dalam 1.3.0.
 
-dan SDK
+**Kemas kini firmware terbina dalam GUI.** Apabila DAQ-E yang disambungkan menjalankan firmware yang lebih lama daripada imej yang disertakan dengan binaan Chloros anda, baris sensornya memaparkan pil **Kemas Kini Tersedia** berwarna amber, dan modal tetapan gear menawarkan <version>butang</version>
 
-dengan `pool-set-network`, `pool-set-auto-stream` dan `pool-reboot` (`DAQSensorSession.set_network()`, `set_auto_stream()`, `reboot()`; lihat [Rujukan CLI
-
-](../reference/cli-reference.md#daq-e-device-settings)). Penderia dihidupkan semula untuk menerapkan perubahan rangkaian, dan Chloros
-
-menyambungkannya semula. Alamat statik mesti ada di rangkaian komputer yang menjalankan Chloros
-
-: Chloros
-
-menolak alamat yang tidak dapat dihubungi selepas pengaktifan semula. ID penderia dan nama hos `daq-e-<id>.local` tidak pernah berubah. Baharu dalam 1.3.0.
-
-**Kemas kini firmware terbina dalam GUI.** Apabila DAQ-E yang disambungkan menjalankan firmware yang lebih lama daripada imej yang disertakan dengan binaan Chloros
-
-anda, baris sensornya memaparkan pil **Kemas Kini Tersedia** berwarna amber, dan modal tetapan gear menawarkan <version>butang</version>
-
-&quot;Kemas Kini ke <version>&quot;. Kemas kini disiarkan melalui rangkaian dalam masa kira-kira 30 saat; sensor dihidupkan semula dan disambungkan semula secara automatik, dan pemindahan yang terganggu tidak menjejaskan firmware semasa. Daripada CLI atau SDK, dan pada Linux, yang tiada GUI, jalankan `chloros-cli daq pool-update-firmware --sensor-id <id>` (`DAQSensorSession.update_firmware()`).
+"Kemas Kini ke <version>". Kemas kini disiarkan melalui rangkaian dalam masa kira-kira 30 saat; sensor dihidupkan semula dan disambungkan semula secara automatik, dan pemindahan yang terganggu tidak menjejaskan firmware semasa. Daripada CLI atau SDK, dan pada Linux, yang tiada GUI, jalankan `chloros-cli daq pool-update-firmware --sensor-id <id>` (`DAQSensorSession.update_firmware()`).
 
 <!-- SCREENSHOT-NEEDED: DAQ-E per-sensor settings modal showing the DAQ-E-only rows: Hostname/IP, Firmware row with the "Update to <ver>" button (or "Up to date"), and the PTP Sync row with a live state value. -->
 
 ## Penyegerakan masa PTP
 
-Firmware DAQ-E v1.2.0+ menyertai IEEE 1588 PTPv2 sebagai jam biasa (hanya hamba). **Backend hos Chloros ialah grandmaster PTP** — setiap DAQ-E dan setiap kamera LATTICE di LAN menjadi hamba kepadanya dalam domain 0, mengekalkan semua cop masa peranti dalam toleransi kira-kira 1 ms. Jam kongsi itulah yang membolehkan bacaan DAQ dipadankan waktunya dengan pendedahan kamera (lihat [Perekodan &amp; Format .daq](recording.md)).
+Firmware DAQ-E v1.2.0+ menyertai IEEE 1588 PTPv2 sebagai jam biasa (hanya hamba). **Backend hos Chloros ialah grandmaster PTP** — setiap DAQ-E dan setiap kamera LATTICE di LAN menjadi hamba kepadanya dalam domain 0, mengekalkan semua cop masa peranti dalam toleransi kira-kira 1 ms. Jam kongsi itulah yang membolehkan bacaan DAQ dipadankan waktunya dengan pendedahan kamera (lihat [Perekodan & Format .daq](recording.md)).
 
 Periksa penyelarasan daripada CLI:
 
@@ -112,7 +80,7 @@ Butiran untuk pengguna penjajaran ketat:
 
 * Setiap datagram yang disalurkan membawa medan bendera; **bit 2 ditetapkan pada bingkai yang cap waktunya diselaraskan dengan PTP**. Saluran yang memerlukan penjajaran ketat kamera/DAQ harus mengawal berdasarkan bit tersebut.
 * Sebelum pengambilan bersepadu, sahkan sensor muncul dalam `chloros-cli time-sync peers` dan `chloros-cli daq pool-list` tidak menandakan PTP-nya sebagai dimatikan. (Peralatan dalaman perkakasan terus MAPIR juga boleh mengawal rakaman berdasarkan kunci PTP dengan penanda `--wait-ptp` yang menunggu sehingga 15 saat untuk sensor mencapai keadaan SLAVE; peralatan tersebut bukan sebahagian daripada CLI yang diedarkan.)
-* Semasa PTP sedang menjadi hamba, sensor menolak tolakan jam manual (&quot;PTP menyediakan jam&quot;). Ini adalah reka bentuknya — percayalah kepada PTP.
+* Semasa PTP sedang menjadi hamba, sensor menolak tolakan jam manual ("PTP menyediakan jam"). Ini adalah reka bentuknya — percayalah kepada PTP.
 
 ## Catatan Linux
 
@@ -126,7 +94,7 @@ Butiran untuk pengguna penjajaran ketat:
 
   Tanpa ia, PTP hanya berjalan selagi sesuatu telah memulakan backend — arahan `chloros-cli` atau skrip SDK. Lihat [Pemasangan [Linux]](../linux/linux-installation.md#always-on-ptp-for-headless-hosts) untuk `chloros-backend.service` root dan cara beralih daripadanya.
 
-## Penyelesaian Masalah: &quot;Tiada peranti DAQ-E ditemui&quot;
+## Penyelesaian Masalah: "Tiada peranti DAQ-E ditemui"
 
 | Periksa | Perincian |
 | --- | --- |

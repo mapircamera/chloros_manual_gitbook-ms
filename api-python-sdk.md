@@ -146,7 +146,7 @@ for hint in result.get("summary", {}).get("hints", []):
 ```
 
 {% hint style="warning" %}
-**`process()` tidak membangkitkan ralat apabila suatu pelaksanaan tidak menghasilkan sebarang imej.** Inilah satu-satunya tempat di mana SDK dan CLI dengan sengaja berbeza: `chloros-cli process` menganggap &quot;produk telah diminta, tiada yang ditulis&quot; sebagai kegagalan dan keluar dengan nilai bukan sifar, manakala SDK keluar seperti biasa dan melaporkan keadaan tersebut melalui `summary` / petunjuk. Jika pipeline anda sepatutnya berhenti pada larian kosong, semak sendiri — periksa `summary` (atau kira fail di bawah folder projek) daripada bergantung pada pengecualian.
+**`process()` tidak membangkitkan ralat apabila suatu pelaksanaan tidak menghasilkan sebarang imej.** Inilah satu-satunya tempat di mana SDK dan CLI dengan sengaja berbeza: `chloros-cli process` menganggap "produk telah diminta, tiada yang ditulis" sebagai kegagalan dan keluar dengan nilai bukan sifar, manakala SDK keluar seperti biasa dan melaporkan keadaan tersebut melalui `summary` / petunjuk. Jika pipeline anda sepatutnya berhenti pada larian kosong, semak sendiri — periksa `summary` (atau kira fail di bawah folder projek) daripada bergantung pada pengecualian.
 {% endhint %}
 
 ## Smart Connect — perkakasan langsung
@@ -165,7 +165,7 @@ with chloros_sdk.connect_camera("213800234") as cam:
 ```
 
 {% hint style="info" %}
-**Laluan relatif akan menuju ke lokasi skrip anda dijalankan (diperbaiki pada 1.3.0).** Dengan backend tempatan, `output_dir` relatif (termasuk `"output"` lalai) — dan laluan lain yang dibuka oleh backend (`burst_dir`, `profile_path`, `save_path`, `mask_path`) — diselesaikan terhadap direktori kerja skrip anda, jadi `cam.capture("output/")` menulis ke `<current folder>/output/`. Dalam 1.2.0, backend yang dipasang menyelesaikannya dalam folder pemasangan sendiri dan gagal dengan &quot;Akses ditolak&quot;. Untuk backend jauh, laluan dihantar seperti yang ditaip.
+**Laluan relatif akan menuju ke lokasi skrip anda dijalankan (diperbaiki pada 1.3.0).** Dengan backend tempatan, `output_dir` relatif (termasuk `"output"` lalai) — dan laluan lain yang dibuka oleh backend (`burst_dir`, `profile_path`, `save_path`, `mask_path`) — diselesaikan terhadap direktori kerja skrip anda, jadi `cam.capture("output/")` menulis ke `<current folder>/output/`. Dalam 1.2.0, backend yang dipasang menyelesaikannya dalam folder pemasangan sendiri dan gagal dengan "Akses ditolak". Untuk backend jauh, laluan dihantar seperti yang ditaip.
 {% endhint %}
 
 ### Susunan bersepadu — `connect_array`
@@ -248,7 +248,7 @@ Penggunaan luar talian berfungsi dalam tempoh kurniaan pelan: peringkat dibaca d
 
 ## Pengecualian
 
-Tangkap kelas asas untuk mengendalikan &quot;apa sahaja yang salah dengan Chloros&quot;:
+Tangkap kelas asas untuk mengendalikan "apa sahaja yang salah dengan Chloros":
 
 ```python
 import chloros_sdk

@@ -14,7 +14,7 @@ Dari kiri ke kanan, tajuk utama mengandungi:
 
 * **Projek Baharu**— mencipta projek baharu. Jika anda mempunyai templat projek yang disimpan, satu menu lungsur**Pilih Templat** akan muncul supaya projek baharu bermula daripada tetapan templat tersebut.
 * **Buka Projek**— membuka projek sedia ada. Senarai ini termasuk butang**Buka Folder Projek** yang membuka folder projek dalam pengurus fail anda.
-* **Duplikasi Projek** — salin projek yang sedang dibuka dengan nama baru (nama bebas seperti &quot;MyProject (2)&quot; dicadangkan) dan buka salinannya. _(tampak selepas projek dibuka)_
+* **Duplikasi Projek** — salin projek yang sedang dibuka dengan nama baru (nama bebas seperti "MyProject (2)" dicadangkan) dan buka salinannya. _(tampak selepas projek dibuka)_
 * **Tambah Fail** — tambah fail imej individu ke dalam projek semasa _(tampak selepas projek dibuka)_
 * **Tambah Folder** — tambah satu atau lebih folder imej ke dalam projek semasa _(tampak selepas projek dibuka)_
 * **Mulakan Pemprosesan / Hentikan Pemprosesan** — mulakan atau hentikan saluran pemprosesan imej _(diaktifkan selepas fail ditambah)_
@@ -22,21 +22,7 @@ Dari kiri ke kanan, tajuk utama mengandungi:
 * **Sambung ke Penderia Cahaya** — lompat ke [tab Penderia Cahaya](daq/) untuk menyambungkan penderia cahaya DAQ. Berfungsi tanpa projek dibuka.
 
 {% hint style="info" %}
-**Windows
-
-sahaja**: Antaramuka Pengguna Grafis Desktop Chloros
-
-tersedia pada Windows
-
-. Pengguna Linux
-
-harus melihat dokumentasi [CLI
-
-](CLI.md) dan [Python
-
-SDK
-
-](api-python-sdk.md) untuk pemprosesan tanpa papan pemuka.
+**Windows sahaja**: Antaramuka Pengguna Grafis Desktop Chloros tersedia pada Windows. Pengguna Linux harus melihat dokumentasi [CLI](CLI.md) dan [Python SDK](api-python-sdk.md) untuk pemprosesan tanpa papan pemuka.
 {% endhint %}
 
 ### Butang Main/Mula <img src=".gitbook/assets/image (2) (1) (1).png" alt="" data-size="line">
@@ -51,15 +37,9 @@ Apabila diaktifkan, butang mula pemprosesan memulakan saluran pemprosesan imej.
 
 
 
-Dalam mod Chloros
+Dalam mod Chloros percuma, yang memproses semua fail secara bersiri, bar kemajuan akan menunjukkan 2 peringkat: Pengesanan Sasaran dan Pemprosesan.
 
-percuma, yang memproses semua fail secara bersiri, bar kemajuan akan menunjukkan 2 peringkat: Pengesanan Sasaran dan Pemprosesan.
-
-Dalam mod berlesen Chloros
-
-+ berbayar, yang memproses semua fail serentak, bar kemajuan menunjukkan 4 peringkat: Mengesan, Menganalisis, Kalibrasi, Mengeksport. Jika anda mengarahkan penunjuk tetikus ke atas bar kemajuan Chloros
-
-+, ia akan membuka panel bar kemajuan 4 peringkat yang diperluas supaya anda boleh memantau kemajuan. Mengklik bar kemajuan atas akan membekukan panel lungsur, dan mengklik sekali lagi akan mencairkannya.
+Dalam mod berlesen Chloros+ berbayar, yang memproses semua fail serentak, bar kemajuan menunjukkan 4 peringkat: Mengesan, Menganalisis, Kalibrasi, Mengeksport. Jika anda mengarahkan penunjuk tetikus ke atas bar kemajuan Chloros+, ia akan membuka panel bar kemajuan 4 peringkat yang diperluas supaya anda boleh memantau kemajuan. Mengklik bar kemajuan atas akan membekukan panel lungsur, dan mengklik sekali lagi akan mencairkannya.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 
@@ -85,7 +65,7 @@ Lihat imej anda pada peta 2D interaktif berdasarkan koordinat GPS mereka. Menyok
 
 #### <img src=".gitbook/assets/image (17).png" alt="" data-size="line"> [Kamera](lattice/)
 
-Sambung dan kawal kamera LATTICE secara langsung — satu pada satu masa atau sebagai susunan multi-kamera yang diselaraskan. Tab ini memaparkan jubin pratonton langsung dengan lapisan dan histogram, tetapan bagi setiap kamera dan setiap susunan, serta Tetapan Rakaman yang memilih kamera dan jenis eksport yang dihasilkan oleh &quot;Capture All&quot;. Tersedia apabila backend sudah siap; lihat [seksyen LATTICE](lattice/) untuk panduan lengkap.
+Sambung dan kawal kamera LATTICE secara langsung — satu pada satu masa atau sebagai susunan multi-kamera yang diselaraskan. Tab ini memaparkan jubin pratonton langsung dengan lapisan dan histogram, tetapan bagi setiap kamera dan setiap susunan, serta Tetapan Rakaman yang memilih kamera dan jenis eksport yang dihasilkan oleh "Capture All". Tersedia apabila backend sudah siap; lihat [seksyen LATTICE](lattice/) untuk panduan lengkap.
 
 #### <img src=".gitbook/assets/image (23).png" alt="" data-size="line"> [Penderia Cahaya](daq/)
 

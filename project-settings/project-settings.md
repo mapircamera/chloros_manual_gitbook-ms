@@ -2,9 +2,7 @@
 
 Bar sisi Tetapan Projek <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line">
 
-dalam Chloros
-
-membolehkan anda mengkonfigurasi semua aspek pemprosesan imej, pengesanan sasaran penentukuran, pengiraan indeks multispektral, dan pilihan eksport untuk projek anda. Tetapan ini disimpan bersama projek anda dan boleh disimpan sebagai templat untuk digunakan semula dalam pelbagai projek.
+dalam Chloros membolehkan anda mengkonfigurasi semua aspek pemprosesan imej, pengesanan sasaran penentukuran, pengiraan indeks multispektral, dan pilihan eksport untuk projek anda. Tetapan ini disimpan bersama projek anda dan boleh disimpan sebagai templat untuk digunakan semula dalam pelbagai projek.
 
 ## Mengakses Tetapan Projek
 
@@ -40,9 +38,7 @@ di bar sisi kiri
 
 ## Pengesanan Sasaran
 
-Pilihan ini mengawal cara Chloros
-
-mengesan dan memproses sasaran penentukuran dalam imej anda. Kedua-duanya hanya aktif semasa **Penentukuran pantulan / imbangan putih** diaktifkan (ia akan kelihatan kelabu jika tidak, kerana pengesanan sasaran akan dilangkau sepenuhnya).
+Pilihan ini mengawal cara Chloros mengesan dan memproses sasaran penentukuran dalam imej anda. Kedua-duanya hanya aktif semasa **Penentukuran pantulan / imbangan putih** diaktifkan (ia akan kelihatan kelabu jika tidak, kerana pengesanan sasaran akan dilangkau sepenuhnya).
 
 ### Kawasan sampel penentukuran minimum (px)
 
@@ -68,9 +64,7 @@ mengesan dan memproses sasaran penentukuran dalam imej anda. Kedua-duanya hanya 
 
 ## Pemprosesan
 
-Tetapan ini mengawal cara Chloros
-
-memproses dan menentukur imej anda.
+Tetapan ini mengawal cara Chloros memproses dan menentukur imej anda.
 
 ### Pembetulan Vignette
 
@@ -103,45 +97,25 @@ Untuk projek yang mengandungi tangkapan LATTICE, setiap bingkai LATTICE yang dii
 
 | Tetapan | Folder keluaran | Apa yang dieksport |
 | --- | --- | --- |
-| **Eksport debayered** | `Debayered_Images/` | Imej debayered linear: offset gelap pek penentukuran dialihkan, kemudian demosaik sedar-tepi, tanpa pembetulan lineariti, medan rata atau pencampuran semula — fail yang sama yang disimpan oleh tangkapan pada tahap debayerednya. Disimpan dalam orientasi asal sensor (direkodkan dalam XMP). Terpakai pada kamera RGB
-
-dan multispektral. |
-| **Keluaran pratonton** | `Preview_Images/` | Pratonton paparan. RGB
-
-= imbangan putih (DAQ-illuminant apabila tersedia, jika tidak dunia-kelabu) + gamma; multispektral = regangan warna palsu. |
-| **Eksport radiasi** | `Radiance_Images/` | Radiasi spektral Float32 dalam W/m²/sr/nm. Multispektral (M3C/M3M) sahaja — tidak terpakai untuk imej induk RGB
-
-. Sentiasa ditulis sebagai TIFF
-
-32-bit tanpa mengira tetapan *Format imej Terkalibrasi*. |
+| **Eksport debayered** | `Debayered_Images/` | Imej debayered linear: offset gelap pek penentukuran dialihkan, kemudian demosaik sedar-tepi, tanpa pembetulan lineariti, medan rata atau pencampuran semula — fail yang sama yang disimpan oleh tangkapan pada tahap debayerednya. Disimpan dalam orientasi asal sensor (direkodkan dalam XMP). Terpakai pada kamera RGB dan multispektral. |
+| **Keluaran pratonton** | `Preview_Images/` | Pratonton paparan. RGB = imbangan putih (DAQ-illuminant apabila tersedia, jika tidak dunia-kelabu) + gamma; multispektral = regangan warna palsu. |
+| **Eksport radiasi** | `Radiance_Images/` | Radiasi spektral Float32 dalam W/m²/sr/nm. Multispektral (M3C/M3M) sahaja — tidak terpakai untuk imej induk RGB. Sentiasa ditulis sebagai TIFF 32-bit tanpa mengira tetapan *Format imej Terkalibrasi*. |
 | **Eksport pantulan**| `Reflectance_Calibrated_Images/` | Pantulan Uint16, diskalakan supaya**32768 = pantulan 1.0** (ditandakan sebagai XMP `Chloros:PixelScale`). Multispektral sahaja, ditulis apabila rekod `.daq` downwelling yang sepadan (atau sasaran dalam bingkai yang lulus QA) menutupi bingkai. |
 
-* Kamera induk RGB
-
-memancarkan bayaran semula + pratonton; sinaran/pantulan diabaikan untuknya kerana tidak terpakai.
+* Kamera induk RGB memancarkan bayaran semula + pratonton; sinaran/pantulan diabaikan untuknya kerana tidak terpakai.
 * Kedalaman bit bayaran semula/pratonton mengikut tetapan *Format imej dikalibrasi*; sinaran sentiasa float32.
-* Pemprosesan Survey3
-
-tidak terjejas oleh empat suis ini.
+* Pemprosesan Survey3 tidak terjejas oleh empat suis ini.
 * Produk radiasi dan pantulan kamera multispektral M3C juga boleh menulis per piksel **topeng clamp** ke dalam folder `clamp_masks/` di sebelah folder produk, merekodkan di mana unmix jalur memotong nilai negatif kepada sifar. Lihat [Format Imej Keluaran](../output-image-formats.md#clamp-masks).
 
-Empat suis yang sama wujud secara headless sebagai `chloros-cli process --debayered / --preview / --radiance / --reflectance`. Mereka menggantikan suai leraian CLI
-
-`--radiometric-output` yang lama, yang tidak wujud lagi.
+Empat suis yang sama wujud secara headless sebagai `chloros-cli process --debayered / --preview / --radiance / --reflectance`. Mereka menggantikan suai leraian CLI `--radiometric-output` yang lama, yang tidak wujud lagi.
 
 {% hint style="warning" %}
-**Menutup semua produk yang terpakai menyebabkan pelaksanaan gagal.** Mulai versi 1.2.0, pelaksanaan pemprosesan yang diminta untuk produk tetapi tidak menulis sebarang produk imej akan melaporkan kegagalan dan CLI
-
-akan keluar dengan nilai bukan sifar, bukannya melaporkan kejayaan senyap. Log akan menyenaraikan produk yang tidak dapat ditulis dan sebabnya. Pelaksanaan yang disengajakan hanya untuk metadata (tiada yang diminta) masih dianggap berjaya.
+**Menutup semua produk yang terpakai menyebabkan pelaksanaan gagal.** Mulai versi 1.2.0, pelaksanaan pemprosesan yang diminta untuk produk tetapi tidak menulis sebarang produk imej akan melaporkan kegagalan dan CLI akan keluar dengan nilai bukan sifar, bukannya melaporkan kejayaan senyap. Log akan menyenaraikan produk yang tidak dapat ditulis dan sebabnya. Pelaksanaan yang disengajakan hanya untuk metadata (tiada yang diminta) masih dianggap berjaya.
 {% endhint %}
 
-### Sumber pantulan (tetapan projek, ditetapkan melalui CLI
+### Sumber pantulan (tetapan projek, ditetapkan melalui CLI)
 
-)
-
-Projek juga menyimpan **rujukan pantulan** yang digunakan oleh produk pantulan LATTICE. Tiada kawalan khusus dalam panel tetapan; nilai disimpan dalam konfigurasi projek sebagai `Processing → "Target reflectance source"` dan ditetapkan dengan `chloros-cli process --reflectance-source {auto,target,daq}` (SDK
-
-&#x27;s `configure()` tidak mempunyai kata kunci untuknya):
+Projek juga menyimpan **rujukan pantulan** yang digunakan oleh produk pantulan LATTICE. Tiada kawalan khusus dalam panel tetapan; nilai disimpan dalam konfigurasi projek sebagai `Processing → "Target reflectance source"` dan ditetapkan dengan `chloros-cli process --reflectance-source {auto,target,daq}` (SDK's `configure()` tidak mempunyai kata kunci untuknya):
 
 * **`auto`** (lalai): sasaran penentukuran dalam bingkai yang lulus QA menjadi rujukan mutlak, beralih kepada pembahagi DAQ downwelling (ρ = πL/E) apabila tiada sasaran atau QA gagal. Sasaran yang lulus QA dengan penanda (panel yang terbuang, atau jalur yang tidak teratur) tidak secara automatik diutamakan: rantaian sasaran, sasaran+DAQ dan hanya-DAQ dicuba mengikut susunan skor yang diukur pada panel yang disisihkan.
 * **`target`**: reflektansi berpandu sasaran yang ketat — tiada penggantian DAQ.
@@ -156,30 +130,18 @@ Imbasan sasaran **diukur** bagi setiap unit dicari berdasarkan nombor siri/QR un
 * **Jenis**: Pilihan turun-ke bawah
 * **Pilihan**:
   * Standard (Pantas, Kualiti Sederhana)
-  * Sedar Tekstur (Lambat, Kualiti Tertinggi) \[Chloros
-
-+]
+  * Sedar Tekstur (Lambat, Kualiti Tertinggi) \[Chloros+]
 * **Lalai**: Standard (Pantas, Kualiti Sederhana)
-* **Keterangan**: Memilih algoritma demosaicing yang digunakan untuk menukar data sensor corak Bayer mentah kepada imej berwarna penuh. Kaedah &quot;Standard (Pantas, Kualiti Sederhana)&quot; menyediakan keseimbangan optimum antara kelajuan pemprosesan dan kualiti imej. Kaedah &quot;Texture Aware (Lambat, Kualiti Tertinggi)&quot; [Chloros
-
-+] menggunakan debayer berkualiti tinggi yang peka kepada sempadan digabungkan dengan model penyahbisuan AI/ML yang membuang hampir semua bunyi debayering. Model Texture Aware memerlukan memori GPU (VRAM) untuk dijalankan. Kami mengesyorkan menggunakannya apabila anda mempunyai &gt;4GB VRAM tersedia untuk pemprosesan yang lebih pantas.
-* **Apabila baris itu adalah menu lungsur sama sekali**: menu lungsur dua pilihan akan muncul hanya apabila**kedua-duanya** benar — anda telah log masuk dengan langganan Chloros
-
-+ yang layak, **dan** projek tidak mengandungi sebarang tangkapan LATTICE. Jika tidak, baris tersebut akan dipaparkan sebagai teks biasa yang membaca `Standard (Fast, Medium Quality)` tanpa apa-apa untuk dipilih.
-* **Nota LATTICE**: Tiada model Texture Aware yang dilatih oleh LATTICE, dan pipeline memaksa demosaic standard untuk bingkai LATTICE tanpa mengira nilai yang disimpan. Jika anda menambah folder LATTICE ke dalam projek yang sudah memilih Texture Aware, Chloros
-
-menulis semula tetapan kepada Standard dan bukannya mengekalkan nilai lapuk dalam `project.json`.
+* **Keterangan**: Memilih algoritma demosaicing yang digunakan untuk menukar data sensor corak Bayer mentah kepada imej berwarna penuh. Kaedah "Standard (Pantas, Kualiti Sederhana)" menyediakan keseimbangan optimum antara kelajuan pemprosesan dan kualiti imej. Kaedah "Texture Aware (Lambat, Kualiti Tertinggi)" [Chloros+] menggunakan debayer berkualiti tinggi yang peka kepada sempadan digabungkan dengan model penyahbisuan AI/ML yang membuang hampir semua bunyi debayering. Model Texture Aware memerlukan memori GPU (VRAM) untuk dijalankan. Kami mengesyorkan menggunakannya apabila anda mempunyai >4GB VRAM tersedia untuk pemprosesan yang lebih pantas.
+* **Apabila baris itu adalah menu lungsur sama sekali**: menu lungsur dua pilihan akan muncul hanya apabila**kedua-duanya** benar — anda telah log masuk dengan langganan Chloros+ yang layak, **dan** projek tidak mengandungi sebarang tangkapan LATTICE. Jika tidak, baris tersebut akan dipaparkan sebagai teks biasa yang membaca `Standard (Fast, Medium Quality)` tanpa apa-apa untuk dipilih.
+* **Nota LATTICE**: Tiada model Texture Aware yang dilatih oleh LATTICE, dan pipeline memaksa demosaic standard untuk bingkai LATTICE tanpa mengira nilai yang disimpan. Jika anda menambah folder LATTICE ke dalam projek yang sudah memilih Texture Aware, Chloros menulis semula tetapan kepada Standard dan bukannya mengekalkan nilai lapuk dalam `project.json`.
 
 ### Jarak semakan semula minimum
 
 * **Jenis**: Nombor
 * **Julat**: 0 hingga 3,600 saat
 * **Lalai**: 0 saat
-* **Keterangan**: Menetapkan selang masa minimum (dalam saat) antara penggunaan sasaran penentukuran. Apabila ditetapkan kepada 0, Chloros
-
-akan menggunakan setiap sasaran penentukuran yang dikesan. Apabila ditetapkan kepada nilai yang lebih tinggi, Chloros
-
-hanya akan menggunakan sasaran penentukuran yang dipisahkan oleh sekurang-kurangnya jumlah saat ini, sekali gus mengurangkan masa pemprosesan untuk set data yang kerap merakam sasaran penentukuran.
+* **Keterangan**: Menetapkan selang masa minimum (dalam saat) antara penggunaan sasaran penentukuran. Apabila ditetapkan kepada 0, Chloros akan menggunakan setiap sasaran penentukuran yang dikesan. Apabila ditetapkan kepada nilai yang lebih tinggi, Chloros hanya akan menggunakan sasaran penentukuran yang dipisahkan oleh sekurang-kurangnya jumlah saat ini, sekali gus mengurangkan masa pemprosesan untuk set data yang kerap merakam sasaran penentukuran.
 * **Bilakah hendak laras**:
   * Tetapkan kepada 0 untuk ketepatan penentukuran maksimum apabila keadaan pencahayaan berubah-ubah
   * Tingkatkan (contohnya, kepada 60-300 saat) untuk pemprosesan yang lebih pantas apabila pencahayaan konsisten dan anda mempunyai imej sasaran penentukuran yang kerap
@@ -195,21 +157,17 @@ hanya akan menggunakan sasaran penentukuran yang dipisahkan oleh sekurang-kurang
 
 * **Jenis**: Petak semak
 * **Lalai**: Dilumpuhkan (tidak dipilih)
-* **Keterangan**: Mengaktifkan penggunaan pembetulan Kinematik Pascaproses (PPK) daripada perekod DAQ MAPIR
-
-yang mengandungi GPS (GNSS). Apabila diaktifkan, Chloros
-
-akan menggunakan sebarang fail log .daq yang mengandungi data pin pendedahan dalam direktori projek anda dan menerapkan pembetulan geolokasi tepat pada imej anda.
+* **Keterangan**: Mengaktifkan penggunaan pembetulan Kinematik Pascaproses (PPK) daripada perekod DAQ MAPIR yang mengandungi GPS (GNSS). Apabila diaktifkan, Chloros akan menggunakan sebarang fail log .daq yang mengandungi data pin pendedahan dalam direktori projek anda dan menerapkan pembetulan geolokasi tepat pada imej anda.
 * **Keperluan**: Fail log .daq dengan entri pin pendedahan mesti ada dalam direktori projek anda
 * **Bilakah untuk diaktifkan**: Disyorkan untuk sentiasa mengaktifkan pembetulan PPK jika anda mempunyai entri maklum balas pendedahan dalam fail log .daq anda.
 
 ### Pin Pendedahan 1
 
 * **Jenis**: Pilihan turun-bawah
-* **Kelihatan**: Hanya kelihatan apabila &quot;Terapkan pembetulan PPK&quot; diaktifkan DAN data pendedahan tersedia untuk Pin 1
+* **Kelihatan**: Hanya kelihatan apabila "Terapkan pembetulan PPK" diaktifkan DAN data pendedahan tersedia untuk Pin 1
 * **Pilihan**:
   * Nama model kamera yang dikesan dalam projek
-  * &quot;Jangan Gunakan&quot; - Abaikan pin pendedahan ini
+  * "Jangan Gunakan" - Abaikan pin pendedahan ini
 * **Lalai**: Dipilih secara automatik berdasarkan konfigurasi projek
 * **Keterangan**: Menugaskan kamera tertentu kepada Pin Eksposur 1 untuk penyelarasan masa PPK. Pin eksposur merekodkan masa tepat apabila shutter kamera dicetuskan, yang sangat penting untuk geolokasi PPK yang tepat.
 * **Tingkah laku pemilihan automatik**:
@@ -220,15 +178,15 @@ akan menggunakan sebarang fail log .daq yang mengandungi data pin pendedahan dal
 ### Pin Pendedahan 2
 
 * **Jenis**: Pilihan turun-bawah
-* **Kelihatan**: Hanya kelihatan apabila &quot;Terapkan pembetulan PPK&quot; diaktifkan DAN data pendedahan tersedia untuk Pin 2
+* **Kelihatan**: Hanya kelihatan apabila "Terapkan pembetulan PPK" diaktifkan DAN data pendedahan tersedia untuk Pin 2
 * **Pilihan**:
   * Nama model kamera yang dikesan dalam projek
-  * &quot;Jangan Gunakan&quot; - Abaikan pin pendedahan ini
+  * "Jangan Gunakan" - Abaikan pin pendedahan ini
 * **Lalai**: Pilihan automatik berdasarkan konfigurasi projek
 * **Keterangan**: Menugaskan kamera tertentu kepada Pin Pendedahan 2 untuk penyelarasan masa PPK apabila menggunakan tetapan dwi-kamera.
 * **Tingkah laku pemilihan automatik**:
-  * Satu kamera + satu pin: Pin 2 secara automatik ditetapkan kepada &quot;Jangan Gunakan&quot;
-  * Satu kamera + dua pin: Pin 2 secara automatik ditetapkan kepada &quot;Jangan Gunakan&quot;
+  * Satu kamera + satu pin: Pin 2 secara automatik ditetapkan kepada "Jangan Gunakan"
+  * Satu kamera + dua pin: Pin 2 secara automatik ditetapkan kepada "Jangan Gunakan"
   * Pelbagai kamera: Pemilihan manual diperlukan
 * **Nota**: Kamera yang sama tidak boleh ditugaskan kepada Pin 1 dan Pin 2 pada masa yang sama.***
 
@@ -248,9 +206,7 @@ Setiap baris memaparkan fail, model sensor, dan pembetulan diffuser-cap yang sed
 * **Pilihan**: `Auto` serta profil pembetulan topi yang sah untuk jenis sensor yang terdapat dalam projek
 * **Lalai**: Auto
 * **Disimpan sebagai**: `Processing → "DAQ cap id"` (default `auto`)
-* **Keterangan**: `Auto` menggunakan topi yang direkodkan bagi setiap fail (topi Sunshine dianggap digunakan apabila tiada apa-apa yang direkodkan, tetapi DAQ-U, DAQ-M dan DAQ-E dihantar tanpa topi dan Chloros
-
-tidak dapat melihat apa yang dipasang, oleh itu pemprosesan memberi amaran tentang topi yang diandaikan: pilih topi yang dipasang). Memilih topi tertentu akan menimpa **setiap** fail downwelling dalam projek kecuali DAQ-E-S, yang penyebarnya adalah sebahagian daripada penentukuran; projek yang hanya mengandungi DAQ-E-S tidak memaparkan menu lungsur: rakaman mentah diperbetulkan dengannya, dan rakaman yang sudah mempunyai cap akan dirujuk semula (pembetulan yang dirakam dibatalkan dan yang dipilih digunakan).
+* **Keterangan**: `Auto` menggunakan topi yang direkodkan bagi setiap fail (topi Sunshine dianggap digunakan apabila tiada apa-apa yang direkodkan, tetapi DAQ-U, DAQ-M dan DAQ-E dihantar tanpa topi dan Chloros tidak dapat melihat apa yang dipasang, oleh itu pemprosesan memberi amaran tentang topi yang diandaikan: pilih topi yang dipasang). Memilih topi tertentu akan menimpa **setiap** fail downwelling dalam projek kecuali DAQ-E-S, yang penyebarnya adalah sebahagian daripada penentukuran; projek yang hanya mengandungi DAQ-E-S tidak memaparkan menu lungsur: rakaman mentah diperbetulkan dengannya, dan rakaman yang sudah mempunyai cap akan dirujuk semula (pembetulan yang dirakam dibatalkan dan yang dipilih digunakan).
 * **Penting**: Cap yang dipilih mesti sepadan dengan cap yang dipasang secara fizikal semasa rakaman. Sama ada sensor mahupun perisian tidak dapat mengesan cap fizikal — ID cap yang tidak sepadan akan membetulkan spektra dengan salah.
 
 Secara sengaja terdapat **satu** kawalan untuk seluruh projek dan bukannya menu lungsur bagi setiap fail: tetapan ini akan sampai ke setiap sumber yang mengalir ke bawah dalam projek.***
@@ -294,54 +250,26 @@ Tetapan ini membolehkan anda mengkonfigurasi indeks multispektral untuk analisis
 ### Tambah indeks
 
 * **Jenis**: Panel konfigurasi indeks khas
-* **Keterangan**: Membuka panel interaktif di mana anda boleh memilih dan mengkonfigurasi indeks vegetasi multispektral (NDVI
-
-, NDRE
-
-, EVI
-
-, dan lain-lain) untuk dikira semasa pemprosesan imej. Anda boleh menambah berbilang indeks, setiap satu dengan tetapan visualisasi tersendiri.
-* **Indeks yang tersedia**: Senarai lungsur GUI termasuk**27** formula indeks multispektral yang telah ditetapkan (lihat [Formula Indeks Multispektral](multispectral-index-formulas.md) untuk senarai penuh, termasuk nama yang juga diterima oleh CLI
-
-/SDK
-
-`--indices` pilihan).
+* **Keterangan**: Membuka panel interaktif di mana anda boleh memilih dan mengkonfigurasi indeks vegetasi multispektral (NDVI, NDRE, EVI, dan lain-lain) untuk dikira semasa pemprosesan imej. Anda boleh menambah berbilang indeks, setiap satu dengan tetapan visualisasi tersendiri.
+* **Indeks yang tersedia**: Senarai lungsur GUI termasuk**27** formula indeks multispektral yang telah ditetapkan (lihat [Formula Indeks Multispektral](multispectral-index-formulas.md) untuk senarai penuh, termasuk nama yang juga diterima oleh CLI/SDK `--indices` pilihan).
 * **Ciri-ciri**:
   * Pilih daripada formula indeks yang telah ditetapkan
   * Seret saluran penapis kamera anda ke dalam slot jalur formula
   * Konfigurasikan gradien warna visualisasi (LUT - Jadual Rujukan)
   * Tetapkan nilai ambang dan mod pemotongan
   * Buat formula indeks tersuai
-* **Nota**: Indeks tidak dikira untuk kamera mono LATTICE M3M jalur tunggal — indeks jalur-pelbagai tidak ditakrifkan pada satu jalur. Survey3
-
-dan LATTICE M3C tidak terjejas.
+* **Nota**: Indeks tidak dikira untuk kamera mono LATTICE M3M jalur tunggal — indeks jalur-pelbagai tidak ditakrifkan pada satu jalur. Survey3 dan LATTICE M3C tidak terjejas.
 
 <!-- SCREENSHOT-NEEDED: Project Settings > Index section with one index added and expanded: the filter dropdown, the formula dropdown open showing preset names, the coloured channel circles above the rendered formula, and the "+ Add LUT" button below it. -->
 
 
 
-Setiap indeks yang anda tambah memaparkan formula matematiknya, dengan bulatan berwarna bagi setiap slot jalur: merah = Red
+Setiap indeks yang anda tambah memaparkan formula matematiknya, dengan bulatan berwarna bagi setiap slot jalur: merah = Red, hijau = Green, biru = Blue, jingga = Orange, sian = Cyan, ungu = NIR, magenta = RE. Seret bulatan dari baris di atas formula ke atas slot untuk mengikatnya; klik dua kali slot yang terikat untuk membersihkannya. Indeks hanya akan dikira apabila setiap slot yang digunakan oleh formula mempunyai saluran.
 
-, hijau = Green
-
-, biru = Blue
-
-, jingga = Orange
-
-, sian = Cyan
-
-, ungu = NIR
-
-, magenta = RE. Seret bulatan dari baris di atas formula ke atas slot untuk mengikatnya; klik dua kali slot yang terikat untuk membersihkannya. Indeks hanya akan dikira apabila setiap slot yang digunakan oleh formula mempunyai saluran.
-
-### Formula Tersuai (Ciri Chloros
-
-+)
+### Formula Tersuai (Ciri Chloros+)
 
 * **Jenis**: Susunan definisi formula tersuai
-* **Ketersediaan**: Memerlukan log masuk dengan langganan Chloros
-
-+ yang layak.
+* **Ketersediaan**: Memerlukan log masuk dengan langganan Chloros+ yang layak.
 * **Keterangan**: Membolehkan anda mencipta dan menyimpan formula indeks multispektral tersuai menggunakan matematik jalur. Formula tersuai disimpan bersama tetapan projek anda dan boleh digunakan seperti indeks terbina dalam.
 * **Cara mencipta**:
   1. Dalam panel konfigurasi Indeks, buka pengira formula tersuai
@@ -351,20 +279,8 @@ Setiap indeks yang anda tambah memaparkan formula matematiknya, dengan bulatan b
   * Slot jalur: `x`, `y`, `z`, `a`, `b`, `c` — enam kedudukan yang anda peta ke saluran sebenar dengan menyeret
   * Pengendali: `+`, `-`, `*`, `/`, `^`, dan `()` untuk pengelompokan
   * Fungsi: `sqrt()`, `log()`, `ln()`, `abs()`, `sign()`, `log1p()`, `log2()`
-* **Mengapa simbol, bukan nama kumpulan**: satu formula yang ditulis sebagai `(y-x)/(y+x)` berfungsi pada mana-mana kamera, kerana pemetaan seret-dan-lepas menentukan sama ada `y` adalah NIR
-
-850 nm bagi penapis RGN
-
-atau NIR
-
-808 nm bagi penapis OCN
-
-. The preset terbina dalam disimpan dengan cara yang sama — lihat [Formula Indeks Multispektral](multispectral-index-formulas.md) untuk bentuk simbol tepat bagi kesemua 27.
-* **Di mana ia berfungsi**: formula tersuai disimpan bersama tetapan projek dan boleh digunakan dalam [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) serta dalam pemprosesan. Nama-nama ini**tidak** diterima oleh senarai nama CLI
-
-/SDK
-
-`--indices`, yang hanya mengembangkan 22 nama pratetap terbina dalam.
+* **Mengapa simbol, bukan nama kumpulan**: satu formula yang ditulis sebagai `(y-x)/(y+x)` berfungsi pada mana-mana kamera, kerana pemetaan seret-dan-lepas menentukan sama ada `y` adalah NIR 850 nm bagi penapis RGN atau NIR 808 nm bagi penapis OCN. The preset terbina dalam disimpan dengan cara yang sama — lihat [Formula Indeks Multispektral](multispectral-index-formulas.md) untuk bentuk simbol tepat bagi kesemua 27.
+* **Di mana ia berfungsi**: formula tersuai disimpan bersama tetapan projek dan boleh digunakan dalam [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) serta dalam pemprosesan. Nama-nama ini**tidak** diterima oleh senarai nama CLI/SDK `--indices`, yang hanya mengembangkan 22 nama pratetap terbina dalam.
 
 ***
 
@@ -376,49 +292,19 @@ Pilihan ini mengawal format dan kualiti imej terproses yang dieksport.
 
 * **Jenis**: Pilihan turun-ke bawah
 * **Pilihan**:
-  * **TIFF
-
-(16-bit)** - Format TIFF
-
-16-bit tanpa pemampatan
-  * **TIFF
-
-(8-bit)** - Format TIFF
-
-8-bit tanpa pemampatan
-  * **TIFF
-
-(32-bit, Peratus)** - TIFF
-
-32-bit titik terapung dengan nilai pantulan sebagai peratusan
-  * **PNG
-
-(8-bit)** - Format PNG
-
-8-bit terkompresi
-  * **JPG (8-bit)** - Format JPEG
-
-8-bit yang dimampatkan
-* **Lalai**: TIFF
-
-(16-bit); projek sepenuhnya 8-bit akan memaparkan TIFF
-
-(8-bit), dan hanya menawarkan format 8-bit
+  * **TIFF (16-bit)** - Format TIFF 16-bit tanpa pemampatan
+  * **TIFF (8-bit)** - Format TIFF 8-bit tanpa pemampatan
+  * **TIFF (32-bit, Peratus)** - TIFF 32-bit titik terapung dengan nilai pantulan sebagai peratusan
+  * **PNG (8-bit)** - Format PNG 8-bit terkompresi
+  * **JPG (8-bit)** - Format JPEG 8-bit yang dimampatkan
+* **Lalai**: TIFF (16-bit); projek sepenuhnya 8-bit akan memaparkan TIFF (8-bit), dan hanya menawarkan format 8-bit
 * **Penerangan**: Memilih format fail untuk menyimpan imej yang diproses dan dikalibrasi. Mengeksport data ke dalam subfolder mengikut format di dalam folder setiap kamera (`tiff16`, `tiff32`, `png8`, `jpg8`), dengan satu folder `<Product>_Images/` bagi setiap produk. Fail yang dieksport mengekalkan nama fail asal — folder, bukan sambungan nama fail, mengenal pasti produk.
 * **Cadangan format**:
-  * **TIFF
-
-(16-bit)**: Disyorkan untuk analisis saintifik dan aliran kerja profesional. Memelihara kualiti data maksimum tanpa sebarang artifak pemampatan. Terbaik untuk analisis multispektral dan pemprosesan lanjut dalam perisian GIS.
-  * **TIFF
-
-(32-bit, Peratusan)**: Terbaik untuk aliran kerja yang memerlukan nilai pantulan sebagai peratusan (0-100%). Menawarkan ketepatan maksimum untuk pengukuran radiometrik.
-  * **PNG
-
-(8-bit)**: Baik untuk tontonan web dan visualisasi umum. Saiz fail yang lebih kecil dengan pemampatan tanpa kehilangan data, tetapi julat dinamik yang dikurangkan.
+  * **TIFF (16-bit)**: Disyorkan untuk analisis saintifik dan aliran kerja profesional. Memelihara kualiti data maksimum tanpa sebarang artifak pemampatan. Terbaik untuk analisis multispektral dan pemprosesan lanjut dalam perisian GIS.
+  * **TIFF (32-bit, Peratusan)**: Terbaik untuk aliran kerja yang memerlukan nilai pantulan sebagai peratusan (0-100%). Menawarkan ketepatan maksimum untuk pengukuran radiometrik.
+  * **PNG (8-bit)**: Baik untuk tontonan web dan visualisasi umum. Saiz fail yang lebih kecil dengan pemampatan tanpa kehilangan data, tetapi julat dinamik yang dikurangkan.
   * **JPG (8-bit)**: Saiz fail terkecil, terbaik untuk pratonton dan paparan web sahaja. Menggunakan pemampatan lossy yang tidak sesuai untuk analisis saintifik.
-* **Nota**: Radiasi LATTICE sentiasa dieksport sebagai TIFF
-
-32-bit float tanpa mengira tetapan ini.
+* **Nota**: Radiasi LATTICE sentiasa dieksport sebagai TIFF 32-bit float tanpa mengira tetapan ini.
 
 ***
 
@@ -429,22 +315,12 @@ Ciri ini membolehkan anda menyimpan tetapan projek semasa anda sebagai templat y
 * **Jenis**: Masukan teks + butang Simpan
 * **Keterangan**: Masukkan nama yang menerangkan untuk templat tetapan anda dan klik ikon simpan. Templat tersebut akan menyimpan semua tetapan projek semasa anda (pengesanan sasaran, pilihan pemprosesan, indeks, dan format eksport) untuk kegunaan semula yang mudah dalam projek akan datang. Templat disimpan dalam folder `Project Templates/` di dalam folder simpanan projek anda, dan juga boleh dipilih atau dieksport dari menu utama (*Pilih Templat* / *Simpan Templat* / *Eksport Templat*).
 * **Kes penggunaan**:
-  * Buat templat untuk sistem kamera yang berbeza (RGB
-
-, multispektral, NIR
-
-)
+  * Buat templat untuk sistem kamera yang berbeza (RGB, multispektral, NIR)
   * Simpan konfigurasi piawai untuk jenis tanaman tertentu atau aliran kerja analisis
   * Kongsi tetapan yang konsisten dalam kalangan pasukan
 * **Cara penggunaan**:
   1. Konfigurasikan semua tetapan projek yang anda inginkan
-  2. Masukkan nama templat (contohnya, &quot;RedEdge
-
-Survey3
-
-NDVI
-
-Standard&quot;)
+  2. Masukkan nama templat (contohnya, "RedEdge Survey3 NDVI Standard")
   3. Klik ikon simpan
   4. Templat tersebut kini boleh dimuat apabila mencipta projek baru
 
@@ -455,42 +331,22 @@ Standard&quot;)
 Penyetelan ini menentukan lokasi lalai untuk menyimpan projek baru.
 
 * **Jenis**: Paparan laluan direktori + Butang Sunting
-* **Lalai (Windows
-
-)**: `Documents\MAPIR\Chloros Projects` dalam folder Dokumen anda — biasanya `C:\Users\[Username]\Documents\MAPIR\Chloros Projects`, atau di mana sahaja OneDrive atau profil merayap telah memindahkan Dokumen
-* **Lalai (Linux
-
-)**: `~/Documents/MAPIR/Chloros Projects`
-* **Keterangan**: Menunjukkan direktori lalai semasa di mana projek Chloros
-
-baru dibuat. Klik ikon suntingan untuk memilih direktori yang berbeza. Penggantian disimpan sebagai satu baris teks dalam `~/.chloros/working_directory.txt` — pada Windows
-
-ia adalah `C:\Users\<Username>\.chloros\working_directory.txt`. Jika fail itu hilang, atau menamakan laluan yang tidak wujud lagi, Chloros
-
-akan kembali kepada lalai di atas. CLI
-
-membaca dan menulis fail yang sama, jadi `chloros-cli` dan GUI sentiasa bersetuju tentang lokasi projek.
+* **Lalai (Windows)**: `Documents\MAPIR\Chloros Projects` dalam folder Dokumen anda — biasanya `C:\Users\[Username]\Documents\MAPIR\Chloros Projects`, atau di mana sahaja OneDrive atau profil merayap telah memindahkan Dokumen
+* **Lalai (Linux)**: `~/Documents/MAPIR/Chloros Projects`
+* **Keterangan**: Menunjukkan direktori lalai semasa di mana projek Chloros baru dibuat. Klik ikon suntingan untuk memilih direktori yang berbeza. Penggantian disimpan sebagai satu baris teks dalam `~/.chloros/working_directory.txt` — pada Windows ia adalah `C:\Users\<Username>\.chloros\working_directory.txt`. Jika fail itu hilang, atau menamakan laluan yang tidak wujud lagi, Chloros akan kembali kepada lalai di atas. CLI membaca dan menulis fail yang sama, jadi `chloros-cli` dan GUI sentiasa bersetuju tentang lokasi projek.
 * **Templat Projek** terletak dalam subfolder `Project Templates/` dalam direktori ini.
 * **Bilakah hendak menukar**:
   * Tetapkan ke pemacu rangkaian untuk kerjasama pasukan
   * Tukar ke pemacu dengan ruang simpanan yang lebih besar untuk set data besar
   * Atur projek mengikut tahun, klien, atau jenis projek dalam folder yang berbeza
 * **Nota**: Menukar tetapan ini hanya menjejaskan projek BARU. Projek sedia ada kekal di lokasi asal mereka.
-* **Panjang laluan Windows**: melainkan laluan panjang Windows
-
-diaktifkan (pilihan **Aktifkan laluan panjang Windows** pada pemasang), folder projek yang lebih dalam daripada kira-kira 130 aksara akan ditolak sebelum diproses, kerana hasilnya akan melebihi had laluan 260 aksara Windows
-
-. Lihat [Memulakan Pemprosesan](../processing-images-gui/starting-the-processing.md#the-project-folder-is-too-deep-for-this-computer).
+* **Panjang laluan Windows**: melainkan laluan panjang Windows diaktifkan (pilihan **Aktifkan laluan panjang Windows** pada pemasang), folder projek yang lebih dalam daripada kira-kira 130 aksara akan ditolak sebelum diproses, kerana hasilnya akan melebihi had laluan 260 aksara Windows. Lihat [Memulakan Pemprosesan](../processing-images-gui/starting-the-processing.md#the-project-folder-is-too-deep-for-this-computer).
 
 ***
 
 ## Kekekalan Tetapan
 
-Projek Chloros
-
-ialah satu **folder**. Semua tetapan projek disimpan dalam `project.json` di dalamnya; peranti keras yang disambungkan diingati bersamanya dalam `cameras.json` dan `sensors.json`, jadi membuka semula projek juga menyambung semula kameranya dan penderia cahaya. Apabila anda membuka semula projek, semua tetapan dipulihkan dengan tepat seperti yang anda tinggalkan. Projek yang disimpan juga boleh dikendalikan secara headless dengan `chloros-cli project` atau `open_project` daripada SDK
-
-.
+Projek Chloros ialah satu **folder**. Semua tetapan projek disimpan dalam `project.json` di dalamnya; peranti keras yang disambungkan diingati bersamanya dalam `cameras.json` dan `sensors.json`, jadi membuka semula projek juga menyambung semula kameranya dan penderia cahaya. Apabila anda membuka semula projek, semua tetapan dipulihkan dengan tepat seperti yang anda tinggalkan. Projek yang disimpan juga boleh dikendalikan secara headless dengan `chloros-cli project` atau `open_project` daripada SDK.
 
 ### Hierarki Tetapan
 
@@ -514,11 +370,7 @@ Tetapan pemprosesan dibaca apabila pelaksanaan pemprosesan bermula. Mengubah tet
 
 ## Rujukan kunci konfigurasi
 
-Untuk automasi (CLI
-
-`--config`, SDK
-
-`configure`, atau membaca `project.json` secara langsung), ini adalah kunci tepat di bawah `Project Settings`:
+Untuk automasi (CLI `--config`, SDK `configure`, atau membaca `project.json` secara langsung), ini adalah kunci tepat di bawah `Project Settings`:
 
 | Laluan kunci | Jenis | Lalai |
 | --- | --- | --- |
@@ -553,23 +405,11 @@ Kunci-kunci ini disimpan di bawah pokok `Project Settings` yang sama dan dibaca 
 
 | Laluan kunci | Jenis | Lalai | Ditetapkan oleh |
 | --- | --- | --- | --- |
-| `Processing → LATTICE input level` | `"auto" \| "raw" \| "debayered" \| "processed"` | `"auto"` | `chloros-cli process --input-level`, SDK
-
-`input_level=`. Mengatasi cara TIFF
-
-input LATTICE ditafsir; `auto` menganggar daripada tag XMP `Chloros:ProcessingLevel` setiap fail serta bilangan saluran. Diabaikan untuk tangkapan `.raw` Survey3
-
-. Disengajakan bukan tetapan GUI — auto adalah betul dalam setiap kes biasa. |
-| `Processing → Target reflectance dir` | rentetan laluan | `""` | `chloros-cli process --target-reflectance-dir`, atau sasaran projek API
-
-|
+| `Processing → LATTICE input level` | `"auto" \| "raw" \| "debayered" \| "processed"` | `"auto"` | `chloros-cli process --input-level`, SDK `input_level=`. Mengatasi cara TIFF input LATTICE ditafsir; `auto` menganggar daripada tag XMP `Chloros:ProcessingLevel` setiap fail serta bilangan saluran. Diabaikan untuk tangkapan `.raw` Survey3. Disengajakan bukan tetapan GUI — auto adalah betul dalam setiap kes biasa. |
+| `Processing → Target reflectance dir` | rentetan laluan | `""` | `chloros-cli process --target-reflectance-dir`, atau sasaran projek API |
 | `Processing → Target reflectance config` | kamus berasaskan siri kamera | `{}` | Mendaftar sasaran dalam bingkai (mod `fixed_block` / `fixed_strip` / `aruco`) |
-| `Processing → DAQ-U log path` | rentetan laluan | `""` | SDK
-
-`process_folder(daq_log_path=…)`. Menunjuk ke arah rakaman `.daq` atau folder yang mengandungi rakaman tersebut |
-| `Target Detection → Minimum calibration target squares` | nombor | `4` | Lalai lama; tiada kawalan dan tiada bendera CLI
-
-|
+| `Processing → DAQ-U log path` | rentetan laluan | `""` | SDK `process_folder(daq_log_path=…)`. Menunjuk ke arah rakaman `.daq` atau folder yang mengandungi rakaman tersebut |
+| `Target Detection → Minimum calibration target squares` | nombor | `4` | Lalai lama; tiada kawalan dan tiada bendera CLI |
 | `UI → Grid thumbnail size` | nombor | `160` | Gelangsar zum gambar kecil imej itu sendiri |
 
 Dua keutamaan pemapar disimpan **di peringkat teratas dalam `project.json`**, di luar `Project Settings` sepenuhnya, kerana ia adalah keadaan paparan dan bukannya tetapan pemprosesan:
@@ -582,26 +422,16 @@ Dua keutamaan pemapar disimpan **di peringkat teratas dalam `project.json`**, di
 
 ## Amalan Terbaik
 
-1. **Mulakan dengan tetapan lalai**: Tetapan lalai berfungsi dengan baik untuk kebanyakan sistem kamera MAPIR
-
-dan aliran kerja tipikal.
+1. **Mulakan dengan tetapan lalai**: Tetapan lalai berfungsi dengan baik untuk kebanyakan sistem kamera MAPIR dan aliran kerja tipikal.
 2. **Buat templat**: Setelah anda mengoptimumkan tetapan untuk aliran kerja atau kamera tertentu, simpanlah ia sebagai templat untuk memastikan keseragaman merentas projek.
 3. **Uji sebelum pemprosesan penuh**: Apabila bereksperimen dengan tetapan baru, uji pada sebilangan kecil imej sebelum memproses keseluruhan set data anda.
-4. **Dokumenkan tetapan anda**: Gunakan nama templat yang menerangkan sistem kamera, jenis pemprosesan, dan kegunaan yang dimaksudkan (contohnya, &quot;Survey3
-
-_RGB_NDVI_Pertanian&quot;).
+4. **Dokumenkan tetapan anda**: Gunakan nama templat yang menerangkan sistem kamera, jenis pemprosesan, dan kegunaan yang dimaksudkan (contohnya, "Survey3_RGB_NDVI_Pertanian").
 5. **Pilihan format eksport**: Pilih format eksport anda berdasarkan kegunaan akhir anda:
    * Analisis saintifik → TIFF (16-bit atau 32-bit)
-   * Pemprosesan GIS → TIFF
-
-(16-bit)
-   * Visualisasi pantas → PNG
-
-(8-bit)
+   * Pemprosesan GIS → TIFF (16-bit)
+   * Visualisasi pantas → PNG (8-bit)
    * Perkongsian web → JPG (8-bit)
 
 ***
 
-Untuk maklumat lanjut mengenai indeks multispektral dalam Chloros
-
-, lihat halaman [Formula Indeks Multispektral](multispectral-index-formulas.md).
+Untuk maklumat lanjut mengenai indeks multispektral dalam Chloros, lihat halaman [Formula Indeks Multispektral](multispectral-index-formulas.md).

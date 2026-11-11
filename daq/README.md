@@ -86,8 +86,8 @@ Setiap nama fail `.daq` merangkumi ID penderia dan cap masa.
 
 * [**Tab DAQ dalam Chloros**](gui.md) — panduan GUI lengkap: menyambungkan setiap model, tetapan bagi setiap penderia, carta spektrum, data kolorimetrik secara langsung, pantulan dua penderia, dan rakaman.
 * [**Permulaan Cepat CLI (pool-\*)**](cli-quick-start.md) — memandu sensor DAQ daripada `chloros-cli daq pool-*`, laluan baris perintah yang disokong.
-* [**Profil Cap &amp; Julat Kalibrasi**](caps-and-range.md) — cap apa yang wujud bagi setiap model, cara mengisytiharkannya, dan julat spektral kalibrasi secara terperinci.
-* [**Perekodan &amp; Format .daq**](recording.md) — format SQLite `.daq` dan aliran kerja perekodan.
-* [**Rangkaian DAQ-E &amp; Penyelarasan Masa**](ethernet-ptp.md) — mod pengangkutan DAQ-E dan penyelarasan masa PTP.
+* [**Profil Cap & Julat Kalibrasi**](caps-and-range.md) — cap apa yang wujud bagi setiap model, cara mengisytiharkannya, dan julat spektral kalibrasi secara terperinci.
+* [**Perekodan & Format .daq**](recording.md) — format SQLite `.daq` dan aliran kerja perekodan.
+* [**Rangkaian DAQ-E & Penyelarasan Masa**](ethernet-ptp.md) — mod pengangkutan DAQ-E dan penyelarasan masa PTP.
 * [**Aliran Kerja Reflektan**](reflectance.md) — menggunakan data DAQ downwelling untuk menghasilkan reflektan.
 * Untuk dokumentasi peringkat bendera yang lengkap, lihat [Rujukan CLI](../reference/cli-reference.md) (seksyen `chloros-cli daq`) dan [Rujukan SDK](../reference/sdk-reference.md) (`chloros_sdk.connect_daq_sensor()`), kedua-duanya ditulis untuk boleh digunakan terus oleh pembantu AI.
