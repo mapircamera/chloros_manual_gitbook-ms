@@ -90,8 +90,8 @@ Buka dengan **gear** pada baris kamera. Panel ini akan tergelincir ke atas senar
 
 Di bahagian atas tetingkap terdapat histogram luma langsung yang dikira daripada pratonton **JPEG** pada kira-kira 8 Hz. Puratanya diberi pemberat Bayer — (R+2G+B)/4 — untuk menepati metrik AE kamera itu sendiri.
 
-* **Garis putus-putus**Jingga****= sasaran AE.**Seret secara mendatar untuk menyasarkan semula** — satu arahan dihantar apabila dilepaskan, dan menyeret akan menukar mod sasaran AE kepada Manual.
-* **Garis pepenuh**Hijau**** = luma min sebenar (apa yang AE berikan pada masa ini).
+* **Garis putus-putus Jingga** = sasaran AE.**Seret secara mendatar untuk menyasarkan semula** — satu arahan dihantar apabila dilepaskan, dan menyeret akan menukar mod sasaran AE kepada Manual.
+* **Garis pepenuh Hijau** = luma min sebenar (apa yang AE berikan pada masa ini).
 * **Butang**RGB **(atas-kanan): menukar histogram superimposisi setiap jalur yang diwarnakan oleh penapis kamera (contohnya pada FRGN: kelabu**NIR **, hijau, merah). Pada kamera mono (M3M), butang ini bertulis "MONO" dan dilumpuhkan — mono sentiasa memaparkan histogram luma jalur tunggal.
 * Label paksi-X mengikut kedalaman bit sensor format piksel semasa: 0..255, 0..1023, 0..4095, atau 0..65535.
 
@@ -325,7 +325,7 @@ Nota dalam panel: "Perubahan format/rezolusi memulakan semula semua kamera seket
 
 Baharu dalam 1.3.0. Baris pemangkasan ROI dan peta di bawahnya berfungsi bersama:
 
-* **ROI Hidup / ROI Padam**— menghidupkan atau mematikan pemangkasan sensor**segera**(kamera akan dihidupkan semula seketika; jubin susunan akan memaparkan "Mengekodkan tetapan…").****Padam**membaca keseluruhan sensor dan**mengingat potongan anda**— medan tersebut terus memaparkannya;**Hidup** menerapkannya semula. Menghidupkan ROI tanpa menetapkan potongan akan menerapkan potongan separuh saiz yang berpusat ("Tiada potongan ditetapkan, jadi potongan separuh saiz yang berpusat telah diterapkan. Laras menggunakan medan.").
+* **ROI Hidup / ROI Padam**— menghidupkan atau mematikan pemangkasan sensor**segera**(kamera akan dihidupkan semula seketika; jubin susunan akan memaparkan "Mengekodkan tetapan…").**Padam**membaca keseluruhan sensor dan**mengingat potongan anda**— medan tersebut terus memaparkannya;**Hidup** menerapkannya semula. Menghidupkan ROI tanpa menetapkan potongan akan menerapkan potongan separuh saiz yang berpusat ("Tiada potongan ditetapkan, jadi potongan separuh saiz yang berpusat telah diterapkan. Laras menggunakan medan.").
 * **Pilih**— melakar kotak potongan pada peta: seret merentasinya, atau klik dua sudut bertentangan (Esc membatalkan). Petak empat segi itu akan muncul dalam medan Lebar/Tinggi/Panjang/Lebar Latitud/Panjang Latitud, disesuaikan dengan langkah di atas; tiada apa-apa yang diterapkan sehingga anda menekan**Terapkan**, jadi anda boleh melarasnya dengan teliti terlebih dahulu menggunakan anak panah medan. Satu segi empat sama bagi setiap kali menekan Pilih.
 * **Peta**menunjukkan kawasan potongan pada keseluruhan sensor, jadi anda boleh meluaskannya semula: "Sensor penuh, langsung" sementara kamera membaca keseluruhan sensor, atau "Snit penuh bingkai dari {masa}. Kamera hanya membaca potongan." semasa ia dipotong. Jika tatasusunan hanya pernah disalurkan dalam bentuk potongan, peta akan membaca "Tiada paparan bingkai penuh lagi: tatasusunan ini hanya pernah disalurkan dalam bentuk potongan." dengan butang**Tunjukkan bingkai penuh**, yang mematikan ROI. Label `W×H @ X,Y` bagi potongan itu terletak di luar kotak (di atasnya, atau di bawah apabila kotak menyentuh bahagian atas), pada peta dan pada jubin langsung.
 * **Terpakai**menetapkan medan: pemotongan menghidupkan ROI; bingkai penuh (selepas**Reset**) menamatkannya dengan pemotongan sebelumnya masih diingati; ROI yang dimatikan dan medannya masih menunjukkan pemotongan yang diingati kekal dimatikan apabila anda menerapkan perubahan lain (format, binning, kadar).

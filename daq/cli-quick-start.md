@@ -170,7 +170,7 @@ chloros-cli daq pool-reboot --sensor-id daq-e-def330
 chloros-cli daq pool-update-firmware --sensor-id daq-e-def330
 ```
 
-`pool-info` memaparkan firmware sensor (dan sama ada keluaran Chloros ini membawa versi yang lebih baru), alamatnya dan bagaimana ia diperoleh, tetapan rangkaian yang disimpan selagi ia berbeza daripada yang sedang digunakan, penstriman semasa kuasa dihidupkan dan PTP. `pool-set-network` memulakan semula penderia untuk menerapkan perubahan dan menyambung semula dengan tetapan yang ada; `--no-reboot` hanya menyimpannya. Alamat statik mesti berada dalam rangkaian komputer ini, jika tidak Chloros akan menolaknya; `--force` menafikan itu, hanya untuk komputer yang akan dialamatkan semula atau dirut ke alamat tersebut. Permulaan semula ditolak semasa penderia sedang merekod. `pool-update-firmware` ialah **Update to \<version\>**</version\> GUI <version\>untuk baris perintah, dan cara untuk mengemas kini DAQ-E pada Linux, yang tiada GUI. Baharu dalam 1.3.0.
+`pool-info` memaparkan firmware sensor (dan sama ada keluaran Chloros ini membawa versi yang lebih baru), alamatnya dan bagaimana ia diperoleh, tetapan rangkaian yang disimpan selagi ia berbeza daripada yang sedang digunakan, penstriman semasa kuasa dihidupkan dan PTP. `pool-set-network` memulakan semula penderia untuk menerapkan perubahan dan menyambung semula dengan tetapan yang ada; `--no-reboot` hanya menyimpannya. Alamat statik mesti berada dalam rangkaian komputer ini, jika tidak Chloros akan menolaknya; `--force` menafikan itu, hanya untuk komputer yang akan dialamatkan semula atau dirut ke alamat tersebut. Permulaan semula ditolak semasa penderia sedang merekod. `pool-update-firmware` ialah **Update to \<version\>** GUI untuk baris perintah, dan cara untuk mengemas kini DAQ-E pada Linux, yang tiada GUI. Baharu dalam 1.3.0.
 
 ***
 
@@ -206,4 +206,3 @@ chloros-cli daq pool-update-firmware --sensor-id daq-e-def330
 {% hint style="info" %}
 **Petua untuk pembantu AI.** Setiap halaman manual ini disajikan sebagai Markdown mentah — sambungkan `.md` kepada slug URL huruf kecil pada URL (halaman ini: `https://mapir.gitbook.io/chloros/daq/cli-quick-start.md`); indeks yang boleh dibaca mesin ialah `https://mapir.gitbook.io/chloros/llms.txt`. Untuk dokumentasi lengkap pada peringkat bendera bagi `chloros-cli daq` dan setiap keluarga arahan lain, muat turun [Rujukan CLI](../reference/cli-reference.md) (`https://mapir.gitbook.io/chloros/reference/cli-reference.md`); jalur Python ialah `chloros_sdk.connect_daq_sensor()` dalam [Rujukan SDK](../reference/sdk-reference.md).
 {% endhint %}
-</version\>

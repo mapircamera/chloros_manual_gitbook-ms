@@ -1313,7 +1313,7 @@ Kesemuanya beroperasi pada **susunan berterusan** (jalankan `array-connect` terl
 | Mod | Bendera | Tingkah laku |
 | --- | --- | --- |
 | **Tunggal** *(laluan)* | (tiada) | Satu kumpulan tangkapan diselaraskan, kemudian keluar. |
-| ****Berterusan** | `--continuous` | Rakaman berturut-turut sehingga `Ctrl+C`, `--count N` rakaman, `--duration S`, atau sehingga pemacu penuh. Menggunakan rakaman berterusan terbina dalam backend (mod Berterusan GUI) — lihat [mod Berterusan](#continuous-mode---continuous) di bawah. |
+| **Berterusan** | `--continuous` | Rakaman berturut-turut sehingga `Ctrl+C`, `--count N` rakaman, `--duration S`, atau sehingga pemacu penuh. Menggunakan rakaman berterusan terbina dalam backend (mod Berterusan GUI) — lihat [mod Berterusan](#continuous-mode---continuous) di bawah. |
 | **Interval** | `--interval S` | Satu pusingan setiap `S` saat (diukur dari permulaan setiap pusingan), had yang sama. |
 | **Terpantas** | `--fastest` | Mentah-sahaja + bacaan DAQ yang ditetapkan + komposit indeks gabungan; melangkau matematik sinaran/pantulan/paparan supaya bingkai tiba dengan pantas. Menyiratkan `--processing raw --force-daq`. Proses semula `.daq` yang disimpan ke dalam produk yang dikalibrasi kemudian. |
 

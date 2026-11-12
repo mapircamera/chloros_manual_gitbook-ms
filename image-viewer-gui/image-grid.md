@@ -121,6 +121,6 @@ Kerana satu jubin pada asalnya hanya selebar beberapa ratus piksel, saiz blok ka
 ## Halaman berkaitan
 
 * [**Membuka Imej Penuh Skrin**](opening-an-image-full-screen.md) — pemapar skrin penuh, nilai kursor dan histogram
-* [****Lapisan Imej**](image-layers.md) — menu lungsur lapisan di dalam pemapar skrin penuh
+* [**Lapisan Imej**](image-layers.md) — menu lungsur lapisan di dalam pemapar skrin penuh
 * [**Sandbox Indeks/LUT**](index-lut-sandbox.md) — membina dan mengeksport visualisasi indeks
 * [**Tetapan Projek**](../project-settings/project-settings.md) — suis eksport yang menentukan produk mana yang wujud sama sekali
