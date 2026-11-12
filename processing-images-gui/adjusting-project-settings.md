@@ -44,7 +44,9 @@ Panel Tetapan Projek disusun ke dalam seksyen di bawah. Dua seksyen tambahan —
 
 Mengawal cara Chloros mengenal pasti sasaran penentukuran dalam imej anda.
 
-**Tetapan utama:*** **Keluasan sampel penentukuran minimum (px)**: Ambang saiz untuk pengesanan sasaran (lalai:**25**, julat 0–10000)
+**Tetapan utama:**
+
+* **Keluasan sampel penentukuran minimum (px)**: Ambang saiz untuk pengesanan sasaran (lalai:**25**, julat 0–10000)
 * **Pengelompokan Sasaran Minimum (0-100)**: Ambang keserupaan untuk pengelompokan kawasan sasaran (lalai:**60**)**Bilakah hendak melaraskan:**
 
 *   Tingkatkan kawasan sampel jika terdapat pengesanan palsu
@@ -59,19 +61,26 @@ Pilihan ini diwarnakan kelabu apabila **Penentukuran Reflektan / Imbangan Putih*
 
 Pilihan utama pemprosesan imej dan penentukuran.
 
-**Pilihan utama:*** **Pembetulan vignette**: Mengimbangi penggelapan lensa di tepi ✅ Disyorkan
+**Pilihan utama:**
+
+* **Pembetulan vignette**: Mengimbangi penggelapan lensa di tepi ✅ Disyorkan
 * **Kalibrasi pantulan / imbangan putih**: Mengkalibrasi imej menggunakan sasaran yang dikesan (Survey3) dan/atau data penderia cahaya DAQ (LATTICE) ✅ Disyorkan
 * **Kaedah Debayer**: Algoritma untuk menukar RAW kepada multispektral 3-saluran
 * **Jarak semakan semula minimum**: Masa minimum dalam saat antara penggunaan sasaran penentukuran (lalai:**0** = gunakan semua, julat 0–3600)**Produk sandaran tanpa penentukuran:**Apabila satu bingkai tidak dapat ditentukur reflektans (tiada sasaran tersedia, atau penentukuran dilumpuhkan), ia dieksport sebagai salah satu daripada dua produk sandaran —**hanya satu daripada pasangan itu wujud bagi setiap larian**, dipilih oleh suis pembetulan Vignette:
 
-* **Eksport tindak balas sensor**: menulis `Sensor_Response_Images` — digunakan apabila pembetulan Vignette**dimatikan*** **Eksport pembetulan vignet**: menulis `Vignette_Corrected_Images` — digunakan apabila pembetulan Vignette di**aktifkan**Petak semak yang tidak aktif akan diwarnakan kelabu. Menyahsemak petak aktif akan menyebabkan fail tersebut langsung tidak ditulis.**Produk eksport LATTICE** (ditunjukkan untuk setiap projek; ia terpakai pada tangkapan LATTICE):
+* **Eksport tindak balas sensor**: menulis `Sensor_Response_Images` — digunakan apabila pembetulan Vignette**dimatikan**
+* **Eksport pembetulan vignet**: menulis `Vignette_Corrected_Images` — digunakan apabila pembetulan Vignette di**aktifkan**Petak semak yang tidak aktif akan diwarnakan kelabu. Menyahsemak petak aktif akan menyebabkan fail tersebut langsung tidak ditulis.**Produk eksport LATTICE** (ditunjukkan untuk setiap projek; ia terpakai pada tangkapan LATTICE):
 
 * **Eksport debayered**: imej debayered linear (`Debayered_Images`): offset gelap pek kalibrasi dialihkan, kemudian demosaic, tanpa flat field atau unmix — fail yang sama yang disimpan oleh capture pada tahap debayerednya — dalam orientasi asal sensor. Terpakai untuk modul RGB dan multispektral.
 * **Previu Eksport**: previun paparan (`Preview_Images`). RGB = imbangan putih (DAQ-illuminant apabila tersedia, jika tidak dunia-kelabu) + gamma; multispektral = regangan warna palsu.
 * **Eksport radiasi**: float32 radiasi spektral (`Radiance_Images`, W/m²/sr/nm). Modul multispektral sahaja — tidak terpakai untuk induk RGB.
-* ****Eksport pantulan**: uint16 pantulan (`Reflectance_Calibrated_Images`, DN 32768 = ρ 1.0) apabila bacaan `.daq` ke bawah atau sasaran dalam bingkai menutupi bingkai. Modul multispektral sahaja.
+* **Eksport pantulan**: uint16 pantulan (`Reflectance_Calibrated_Images`, DN 32768 = ρ 1.0) apabila bacaan `.daq` ke bawah atau sasaran dalam bingkai menutupi bingkai. Modul multispektral sahaja.
 
-Kesemuanya **diaktifkan secara lalai**— satu bingkai mentah LATTICE yang diimport disalurkan ke setiap produk yang diaktifkan dan terpakai dalam satu pusingan pemprosesan. Petak semak**Eksport pantulan** akan diwarnakan kelabu apabila Kalibrasi pantulan dimatikan. Seting yang dimatikan oleh suis induk akan sentiasa dipaparkan dalam warna kelabu dengan petua alat yang menamakan suis yang perlu diubah.**Seting lanjutan:*** **Perbezaan zon waktu penderia cahaya**: Jam dari UTC untuk padanan zon waktu penderia cahaya (lalai: 0, julat −12 hingga +12)
+Kesemuanya **diaktifkan secara lalai**— satu bingkai mentah LATTICE yang diimport disalurkan ke setiap produk yang diaktifkan dan terpakai dalam satu pusingan pemprosesan. Petak semak**Eksport pantulan** akan diwarnakan kelabu apabila Kalibrasi pantulan dimatikan. Seting yang dimatikan oleh suis induk akan sentiasa dipaparkan dalam warna kelabu dengan petua alat yang menamakan suis yang perlu diubah.
+
+**Seting lanjutan:**
+
+* **Perbezaan zon waktu penderia cahaya**: Jam dari UTC untuk padanan zon waktu penderia cahaya (lalai: 0, julat −12 hingga +12)
 * **Terapkan pembetulan PPK**: Menggunakan data GPS/pin pendedahan daripada fail `.daq` (lalai: tidak diaktifkan)
 * **Pin Pendedahan 1/2**: Menugaskan kamera kepada pin pendedahan untuk susunan dwi-kamera
 
@@ -105,7 +114,9 @@ Konfigurasikan indeks vegetasi yang ingin dikira dan dieksport. Tetingkap lungsu
 3. Konfigurasikan tetapan visualisasi (warna LUT, julat nilai)
 4. Tambah beberapa indeks mengikut keperluan
 
-**Indeks Popular:*** **NDVI**: Kesihatan vegetasi umum (yang paling biasa)
+**Indeks Popular:**
+
+* **NDVI**: Kesihatan vegetasi umum (yang paling biasa)
 * **NDRE**: Pengesanan tekanan awal dengan RedEdge
 * **GNDVI**: Sensitif terhadap kepekatan klorofil
 * **OSAVI**: Berfungsi dengan baik pada tanah yang kelihatan
@@ -215,7 +226,11 @@ Jika menggunakan perekod DAQ MAPIR dengan GPS untuk geolokasi tepat:
 3. Tetapkan**"Light sensor timezone offset"** jika perlu (lalai: 0 untuk UTC)
 4. Tugaskan kamera kepada pin pendedahan:
    * **Satu kamera**: Ditugaskan secara automatik kepada Pin 1
-   * **Dua kamera**: Tugaskan setiap kamera secara manual kepada pin yang betul**Penugasan Pin Pendedahan:*** **Pin Pendedahan 1**: Pilih model kamera daripada senarai lungsur
+   * **Dua kamera**: Tugaskan setiap kamera secara manual kepada pin yang betul
+
+**Penugasan Pin Pendedahan:**
+
+* **Pin Pendedahan 1**: Pilih model kamera daripada senarai lungsur
 * **Pin Pendedahan 2**: Pilih kamera kedua atau "Jangan Gunakan"
 * Kamera yang sama tidak boleh ditugaskan kepada kedua-dua pin
 

@@ -57,7 +57,11 @@ output/
 └── *.daq          the downwelling reading matched to the capture
 ```
 
-**Tandakan Tambah Folder pada akar tangkapan** (`output/` di atas). Apabila folder yang dipilih tidak mengandungi sebarang imej tetapi mempunyai subfolder, Chloros akan menelusuri subfolder tersebut secara automatik — subfolder pada setiap aras dan folder akar `.daq` semua diambil sekaligus.**Cara import tangkapan:*** Setiap tangkapan diimport sebagai **satu imej tunggal**, dikumpulkan mengikut tangkapan (bukan satu kemasukan bagi setiap tahap). Tahap-tahap lain bagi tangkapan yang sama akan muncul sebagai mod paparan bagi imej tersebut.
+**Tandakan Tambah Folder pada akar tangkapan** (`output/` di atas). Apabila folder yang dipilih tidak mengandungi sebarang imej tetapi mempunyai subfolder, Chloros akan menelusuri subfolder tersebut secara automatik — subfolder pada setiap aras dan folder akar `.daq` semua diambil sekaligus.
+
+**Cara import tangkapan:**
+
+* Setiap tangkapan diimport sebagai **satu imej tunggal**, dikumpulkan mengikut tangkapan (bukan satu kemasukan bagi setiap tahap). Tahap-tahap lain bagi tangkapan yang sama akan muncul sebagai mod paparan bagi imej tersebut.
 * **Pemprosesan sentiasa bermula daripada bingkai mentah.** Tahap-tahap lain boleh dilihat, tetapi hanya `raw` yang akan dimasukkan ke dalam saluran pemprosesan — memproses semula produk yang telah diproses akan menyebabkan pembetulan digunakan dua kali, jadi Chloros menolaknya. Eksport yang diimport semula tidak akan pernah mengambil slot mentah sesuatu tangkapan.
 * Folder tangkapan yang disimpan **tanpa** import mentah akan dipaparkan seperti biasa, tetapi pemprosesan akan melangkauinya dan akan memberitahu demikian dalam log. (Penanda aras CLI `--input-level` boleh memaksa titik kemasukan untuk kes ini — lihat [Rujukan CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like).)
 * Mulai versi 1.3.0, folder captures juga boleh mengandungi folder `clamp_masks/` (topeng piksel demi piksel untuk tahap sinaran dan pantulan — lihat [Format Imej Keluaran](../output-image-formats.md#clamp-masks)). Topeng bukan imej pemandangan, dan Chloros akan melangkau mereka semasa import di mana sahaja ia berada.

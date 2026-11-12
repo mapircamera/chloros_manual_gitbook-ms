@@ -256,10 +256,15 @@ Chloros memeriksa kemas kini, memaklumkan apabila versi baru tersedia, dan memau
 
 **Tarikh Keluaran: 10 Februari 2026**
 
-**Ciri Baharu*** **Kaedah Debayer Sedar Tekstur \[Hanya Chloros+] -** Texture Aware menggunakan debayer sedar sempadan berkualiti tinggi yang digabungkan dengan model penyahbisuan AI/ML yang membuang hampir semua bunyi debayering.
-* **Sokongan untuk Sasaran Kalibrasi T4P*** **Pemprosesan GPU Chloros+ yang lebih pantas, pengurusan memori yang lebih baik**
+**Ciri Baharu**
 
-**Pembetulan pepijat*** Antaramuka depan (GUI) baharu sepenuhnya, kini sepatutnya berfungsi pada semua komputer Windows.
+* **Kaedah Debayer Sedar Tekstur \[Hanya Chloros+] -** Texture Aware menggunakan debayer sedar sempadan berkualiti tinggi yang digabungkan dengan model penyahbisuan AI/ML yang membuang hampir semua bunyi debayering.
+* **Sokongan untuk Sasaran Kalibrasi T4P**
+* **Pemprosesan GPU Chloros+ yang lebih pantas, pengurusan memori yang lebih baik**
+
+**Pembetulan pepijat**
+
+* Antaramuka depan (GUI) baharu sepenuhnya, kini sepatutnya berfungsi pada semua komputer Windows.
 
 </details>
 
@@ -269,14 +274,18 @@ Chloros memeriksa kemas kini, memaklumkan apabila versi baru tersedia, dan memau
 
 **Tarikh Keluaran: 5 Januari 2026**
 
-**Ciri Baharu*** **Togol Imej/Metadata**: Ditambah togol dalam Pelayar Fail untuk melihat metadata imej terpilih dalam jadual dan bukannya grid imej
+**Ciri Baharu**
+
+* **Togol Imej/Metadata**: Ditambah togol dalam Pelayar Fail untuk melihat metadata imej terpilih dalam jadual dan bukannya grid imej
 * **Gelangsar Zum Grid Imej**: Gelangsar UI baharu untuk melaras saiz miniatur (juga menyokong CTRL + roda tetikus)
 * **Butang Eksport Grid Imej**: Butang di baris atas untuk menukar pratonton kecil daripada JPG kepada eksport yang diproses (Sasaran, Refleksan, Indeks, LUT)
 * **Tab Peta**: Peta 2D interaktif baru yang memaparkan penanda lokasi GPS imej
   * Menyokong Google Maps dan jubin peta ESRI (memilih secara automatik perkhidmatan jubin terbaik berdasarkan ketersediaan tahap zum)
   * Pratonton imbasan kecil pada penanda peta apabila tetikus diletakkan di atasnya
 
-**Pembetulan pepijat*** Sokongan yang dipertingkatkan untuk memasang Chloros pada komputer berbahasa bukan Inggeris
+**Pembetulan pepijat**
+
+* Sokongan yang dipertingkatkan untuk memasang Chloros pada komputer berbahasa bukan Inggeris
 
 </details>
 
@@ -286,13 +295,21 @@ Chloros memeriksa kemas kini, memaklumkan apabila versi baru tersedia, dan memau
 
 **Tarikh Keluaran: 20 Disember 2025**
 
-**Ciri-ciri Baharu*** Pelancaran Awal
+**Ciri-ciri Baharu**
 
-**Peningkatan*** Pelancaran Awal
+* Pelancaran Awal
 
-**Pembetulan pepijat*** Pelancaran Awal
+**Peningkatan**
 
-**Masalah Yang Dikenali*** Pelancaran Awal
+* Pelancaran Awal
+
+**Pembetulan pepijat**
+
+* Pelancaran Awal
+
+**Masalah Yang Dikenali**
+
+* Pelancaran Awal
 
 </details>
 

@@ -28,7 +28,11 @@ Untuk pengguna dengan lesen Chloros+:
 1.**Mengesani** - Mencari sasaran penentukuran
 2. **Menganalisis** - Menyemak imej dan menyediakan saluran paip
 3. **Kalibrasi** - Mengaplikasikan pembetulan vignet dan pantulan
-4. **Eksport** - Menyimpan fail yang diproses**Ciri Interaktif:*** **Tudingkan tetikus** ke atas bar kemajuan untuk melihat panel 4-peringkat yang diperluas
+4. **Eksport** - Menyimpan fail yang diproses
+
+**Ciri Interaktif:**
+
+* **Tudingkan tetikus** ke atas bar kemajuan untuk melihat panel 4-peringkat yang diperluas
 * **Klik** bar kemajuan untuk membekukan/menetap panel yang diperluas
 * **Klik sekali lagi** untuk membuka beku dan menyembunyikan secara automatik apabila tetikus dikeluarkan
 * Setiap peringkat menunjukkan kemajuan individu (0-100%)
@@ -92,7 +96,9 @@ Untuk pengguna dengan lesen Chloros+:
 
 ### Fasa 3: Kalibrasi
 
-**Apa yang berlaku:*** **Debayering**: Menukar corak Bayer RAW kepada 3 saluran (dilangkau untuk modul mono LATTICE, dengan nota)
+**Apa yang berlaku:**
+
+* **Debayering**: Menukar corak Bayer RAW kepada 3 saluran (dilangkau untuk modul mono LATTICE, dengan nota)
 * **Pembetulan Vignette**: Menghilangkan penggelapan pada tepi lensa
 * **Kalibrasi Reflektan**: Menormalkan dengan nilai sasaran dan/atau DAQ downwelling
 * **Pengiraan Indeks**: Mengira indeks multispektral
@@ -104,7 +110,9 @@ Untuk pengguna dengan lesen Chloros+:
 * Imej semasa sedang diproses
 * Imej siap / Jumlah imej
 
-**Tingkah laku pemprosesan:*** **Mod Bebas**: Memproses satu imej pada satu masa secara bersiri
+**Tingkah laku pemprosesan:**
+
+* **Mod Bebas**: Memproses satu imej pada satu masa secara bersiri
 * **Mod Chloros+**: Menggunakan kolam pekerja yang menyesuaikan perkakasan — 1-4 pekerja serentak pada sistem GPU (bergantung pada VRAM), seorang pekerja bagi setiap teras fizikal (dikurangkan satu) pada sistem CPU sahaja. Lihat [Penyesuaian Komputasi Dinamik](../processing-architecture/dynamic-compute-adaptation.md)
 * **Pecutan GPU**: Mempercepat peringkat ini dengan ketara**Apa yang perlu diperhatikan:**
 

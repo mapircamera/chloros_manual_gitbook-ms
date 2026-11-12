@@ -78,7 +78,11 @@ Chloros beroperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 1. **Mengesani** (Benang 1) - Mencari sasaran penentukuran
 2. **Menganalisis** (Benang 2) - Menyemak metadata imej dan mengira penentukuran
 3. **Menentukur** (Benang 3) - Debayering, pembetulan viniet, penentukuran, pengiraan indeks
-4. **Mengeksport** (Benang 4) - Menyimpan imej yang diproses dan indeks**Interaksi bar kemajuan:*** **Tuding tetikus** ke atas bar untuk melihat panel lungsur 4 peringkat terperinci
+4. **Mengeksport** (Benang 4) - Menyimpan imej yang diproses dan indeks
+
+**Interaksi bar kemajuan:**
+
+* **Tuding tetikus** ke atas bar untuk melihat panel lungsur 4 peringkat terperinci
 * **Klik** bar kemajuan untuk membekukan panel lungsur di tempatnya
 * **Klik sekali lagi** untuk membuka bekuan dan menyembunyikan panel**Masa pemprosesan:**
 
@@ -116,7 +120,9 @@ Chloros beroperasi dalam dua mod pemprosesan berbeza bergantung pada lesen anda:
 
 ### Fasa 3: Kalibrasi
 
-**Apa yang dilakukan oleh Chloros:*** **Pembetulan Vignette**: Menghilangkan penggelapan lensa di tepi
+**Apa yang dilakukan oleh Chloros:**
+
+* **Pembetulan Vignette**: Menghilangkan penggelapan lensa di tepi
 * **Kalibrasi reflektansi**: Menormalkan menggunakan nilai reflektansi sasaran dan/atau data DAQ downwelling
 * Menerapkan pembetulan pada semua jalur/saluran
 * Menggunakan rujukan kalibrasi yang sesuai untuk setiap imej berdasarkan cop masa

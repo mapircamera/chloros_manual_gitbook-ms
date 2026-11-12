@@ -401,7 +401,7 @@ Rujukan pantas untuk apa yang wujud di mana apabila kamera adalah ahli tatasusun
 Perilaku merentas lain:
 
 * **Paparan gabungan vs berasingan** dipilih semasa menyambungkan susunan: gabungan = satu jubin komposit yang diselaraskan (sumber ahli hanya melalui Paparan Berpisah); berasingan = setiap ahli memaparkan jubin tersendiri yang diselaraskan. Kamera tidak pernah memaparkan kedua-dua sumber berdiri sendiri dan jubin susunan.
-* ****Sambung semula automatik**: membuka projek yang disimpan akan memulihkan kameranya dan susunannya serta menerapkan semula setiap tetapan yang disimpan ke backend sebelum penstriman disambung semula.
+* **Sambung semula automatik**: membuka projek yang disimpan akan memulihkan kameranya dan susunannya serta menerapkan semula setiap tetapan yang disimpan ke backend sebelum penstriman disambung semula.
 * **Pintu tangkapan**: kamera yang tersembunyi atau terhenti dikecualikan daripada Tangkapan Semua; satu susunan hanya dihalang sepenuhnya apabila SEMUA ahlinya tersembunyi/terhenti. Lihat [Tetapan & Mod Rakaman](capture.md).
 
 ## Bagaimana tetapan kekal

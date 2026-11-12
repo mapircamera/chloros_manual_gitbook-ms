@@ -32,7 +32,9 @@ Jika **tiada** imej dipilih, Chloros akan kembali mengimbas setiap imej dalam pr
 
 Semak imej yang telah anda import dalam Pelayar Fail dan kenal pasti imej mana yang mengandungi sasaran penentukuran.
 
-**Senario biasa:*** **Sasaran pra-rakaman**: Dirakam sebelum memulakan sesi
+**Senario biasa:**
+
+* **Sasaran pra-rakaman**: Dirakam sebelum memulakan sesi
 * **Sasaran pasca-perekaman**: Dirakam selepas menamatkan sesi
 * **Sasaran di lapangan**: Sasaran yang diletakkan di dalam kawasan perekaman
 * **Beberapa sasaran**: 2-3 imej sasaran setiap sesi (disyorkan)
@@ -140,9 +142,17 @@ Gunakan lajur ini untuk mengesahkan anda telah menandakan sasaran untuk setiap j
 
 ### Mengatur Sensitiviti Pengesanan
 
-Jika Chloros tidak mengesan sasaran anda dengan betul, atur tetapan ini dalam [Tetapan Projek](adjusting-project-settings.md):**Keluasan sampel pensijilan minimum (px):*** **Lalai**: 25 piksel
+Jika Chloros tidak mengesan sasaran anda dengan betul, atur tetapan ini dalam [Tetapan Projek](adjusting-project-settings.md):
+
+**Keluasan sampel pensijilan minimum (px):**
+
+* **Lalai**: 25 piksel
 * **Tingkatkan** jika mendapat pengesanan palsu pada artifak kecil
-* **Kurangkan** jika sasaran tidak dikesan**Pengklusteran Sasaran Minimum (0-100):*** **Lalai**: 60
+* **Kurangkan** jika sasaran tidak dikesan
+
+**Pengklusteran Sasaran Minimum (0-100):**
+
+* **Lalai**: 60
 * **Tingkatkan** jika sasaran dipecahkan kepada beberapa pengesanan
 * **Kurangkan** jika sasaran dengan variasi warna tidak dikesan sepenuhnya
 

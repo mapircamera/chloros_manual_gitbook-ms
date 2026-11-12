@@ -82,7 +82,9 @@ Jangan kira menggunakan formula — bilangan keluaran bergantung pada produk yan
 
 ### Pratonton dalam Pemapar Imej Luaran
 
-**Pemapar yang disyorkan:*** **QGIS** - Perisian GIS percuma (terbaik untuk analisis multispektral bergeoreferens)
+**Pemapar yang disyorkan:**
+
+* **QGIS** - Perisian GIS percuma (terbaik untuk analisis multispektral bergeoreferens)
 * **IrfanView** - Pemapar imej pantas dan ringan (menyokong TIFF)
 * **Adobe Photoshop** - Penyuntingan profesional (menyokong TIFF)
 * **GIMP** - Alternatif percuma kepada Photoshop
@@ -112,7 +114,9 @@ Reflectansi disimpan sebagai DN integer, dan **DN yang bermaksud ρ = 1.0 bergan
 | LATTICE (M3C/M3M) | **32768** (ruang lebih sehingga ρ 2.0) | Tag XMP `Chloros:PixelScale=32768` dicop pada fail |
 | Survey3          | **65535** (dipotong pada ρ 1.0)     | Tiada tag `Chloros:PixelScale` — ketiadaan itu adalah isyarat (produk Survey3 membawa tag pemprosesan `Chloros:*` lain) |
 
-Baca tag `Chloros:PixelScale` dan bahagikannya dengannya** daripada menganggap secara seragam 65535 — membahagikan pantulan LATTICE dengan 65535 secara senyap akan mengurangkan setiap nilai kepada separuh. Fail reflektansi daripada versi sebelum 1.3.0 yang ditulis sebagai 8-bit telah dipotong (clipped), bukan diskala semula, dan tiada tag skala: eksport semula ia pada 16-bit atau 32-bit dan bukannya membahagikannya. Lihat [Format Imej Keluaran](../output-image-formats.md) untuk maklumat penuh.***
+**Baca tag `Chloros:PixelScale` dan bahagikannya dengannya** daripada menganggap secara seragam 65535 — membahagikan pantulan LATTICE dengan 65535 secara senyap akan mengurangkan setiap nilai kepada separuh. Fail reflektansi daripada versi sebelum 1.3.0 yang ditulis sebagai 8-bit telah dipotong (clipped), bukan diskala semula, dan tiada tag skala: eksport semula ia pada 16-bit atau 32-bit dan bukannya membahagikannya. Lihat [Format Imej Keluaran](../output-image-formats.md) untuk maklumat penuh.
+
+***
 
 ## Metadata yang Dibawa ke dalam Eksport
 
@@ -272,12 +276,18 @@ Julat NDVI yang dijangkakan:
 
 ### Strategi Sandaran yang Disyorkan
 
-**Apa yang perlu disimpan:*** ✅ **Imej asal RAW/JPG atau tangkapan mentah LATTICE** - Arkibkan pada pemacu/awan berasingan; mentah adalah sumber saluran paip dan segala-galanya yang lain boleh dijana semula daripadanya
+**Apa yang perlu disimpan:**
+
+* ✅ **Imej asal RAW/JPG atau tangkapan mentah LATTICE** - Arkibkan pada pemacu/awan berasingan; mentah adalah sumber saluran paip dan segala-galanya yang lain boleh dijana semula daripadanya
 * ✅ **Fail penderia cahaya `.daq` / `.csv`** - Diperlukan untuk menentukan semula pantulan kemudian
 * ✅ **Keluaran yang diproses** - Simpan imej dan indeks yang telah dikalibrasi
 * ✅ **Folder projek** (`project.json` dan rakan-rakannya) - Mengandungi semua tetapan untuk pemprosesan semula jika perlu
 * ✅ **Log Ralat** - Mencatat butiran pemprosesan
-* ✅ **Imej sasaran penentukuran** - Untuk pengesahan dan pemprosesan semula**Cadangan penyimpanan:*** **Sandaran segera**: Cakera keras luaran
+* ✅ **Imej sasaran penentukuran** - Untuk pengesahan dan pemprosesan semula
+
+**Cadangan penyimpanan:**
+
+* **Sandaran segera**: Cakera keras luaran
 * **Arkib jangka panjang**: Penyimpanan awan (Google Drive, Dropbox, dll.)
 * **Data kritikal**: Simpan 2-3 salinan di lokasi yang berbeza***
 

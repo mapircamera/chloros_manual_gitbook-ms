@@ -45,7 +45,11 @@ Benang pengiraan yang terikat pada CPU. Pada larian Survey3 atau larian campuran
 
 ### Benang 3: Pemprosesan (GPU)
 
-**Tujuan**: Mengaplikasikan pembetulan dan mengira indeks vegetasi.**Ini adalah benang yang paling intensif dari segi pengkomputeran.*** **Debayering**: menukar data Bayer RAW kepada imej berbilang saluran
+**Tujuan**: Mengaplikasikan pembetulan dan mengira indeks vegetasi.
+
+**Ini adalah benang yang paling intensif dari segi pengkomputeran.**
+
+* **Debayering**: menukar data Bayer RAW kepada imej berbilang saluran
   * Standard (Pantas, Kualiti Sederhana) — lalai, `--debayer standard`
   * Sedar Tekstur (Lambat, Kualiti Tertinggi) — hanya untuk Chloros+, `--debayer texture-aware`, menggunakan model penyahbisin UI/ML
   * Rakaman LATTICE mono (M3M) adalah jalur tunggal: langkah demosaik dan imbangan putih akan dilangkau untuknya (dengan mesej log satu baris), manakala sebarang imej M3C/Bayer dalam larian yang sama masih akan menerima langkah-langkah tersebut
