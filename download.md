@@ -193,7 +193,9 @@ Buka ciri lanjutan dengan langganan Chloros+:
 * **🐻 Kaedah Debayer Canggih Berpengetahuan Teksatur** - debayer berpengetahuan sempadan berkualiti tinggi yang digabungkan dengan model penyahbisin AI/ML yang membuang hampir semua bunyi debayering.
 * 🧮 **Formula Tersuai** - Buat indeks multispektral tersuai
 
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Lihat Pelan & Harga Chloros+</a></p>***
+<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Lihat Pelan & Harga Chloros+</a></p>
+
+***
 
 ## Bantuan Pemasangan
 
@@ -234,7 +236,9 @@ Perlukan bantuan dengan pemasangan atau penyediaan?
 * 📧 **E-mel**: info@mapir.camera
 * 🌐 **Laman web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **Dokumentasi**: [Getting Started](./)
-* ❓ **Soalan Lazim**: [Frequently Asked Questions](faq.md)***
+* ❓ **Soalan Lazim**: [Frequently Asked Questions](faq.md)
+
+***
 
 ## Kemas Kini Perisian
 

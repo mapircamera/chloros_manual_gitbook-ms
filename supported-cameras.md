@@ -47,9 +47,7 @@ Untuk `FOCN` nilai adalah jalur separuh maksimum **diukur** penapis (Chloros 1.3
 
 Nombor F ialah label SKU; jalur yang diukur (dicop ke dalam setiap eksport yang dikalibrasi) ialah imbasan penapis bagi setiap lot:
 
-| SKU    | Pusat (nm, diukur) | TepiFWHM
-
-(nm) | Lebar (nm) |
+| SKU    | Pusat (nm, diukur) | Tepi FWHM (nm) | Lebar (nm) |
 | ------ | --------------------- | --------------- | ---------- |
 | F385   | 379.4                 | 367–392         | 25         |
 | F405   | 403.9                 | 390–417         | 27         |

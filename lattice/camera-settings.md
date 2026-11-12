@@ -196,7 +196,9 @@ Semua dalam bahagian ini hanya untuk **pihak paparan**— ia mengubah apa yang a
 | **Saturasi** | 0–200 (100 = neutral) | 100 | Hanya RGB | Saturasi HSV pada pratonton langsung. |
 | **Kontras** | 0–200 (100 = neutral) | 100 | Hanya RGB | Kontras linear sekitar kelabu pertengahan pada pratonton langsung. |
 | **Cermin H / Cermin V** | Petak semak | Padam | Semua | Membalikkan pratonton secara mendatar / menegak. |
-| **Pusingan**| 0° / 90° / 180° / 270° | 0° | Semua | Memusingkan pratonton. Orientasi digunakan pada penghujung rantaian pratonton backend.**Sambungan yang disimpan (1.3.0):**produk Preview, Radiance, Reflectance dan Index kamera berdiri sendiri dipusingkan oleh Cermin/Pusingan, manakala**Raw dan Debayered kekal dalam orientasi asal kamera**; setiap fail tangkapan merekodkan tetapan dalam XMPnya, jadi pemprosesan raw kemudian akan menerapkannya dengan cara yang sama.**Fail ahli tatasusunan kekal asal** (tetapan direkodkan, bukan diterapkan), dan pandangan komposit tatasusunan mengabaikannya. |**Semantik profil warna** (kamera RGB):
+| **Pusingan**| 0° / 90° / 180° / 270° | 0° | Semua | Memusingkan pratonton. Orientasi digunakan pada penghujung rantaian pratonton backend.**Sambungan yang disimpan (1.3.0):**produk Preview, Radiance, Reflectance dan Index kamera berdiri sendiri dipusingkan oleh Cermin/Pusingan, manakala**Raw dan Debayered kekal dalam orientasi asal kamera**; setiap fail tangkapan merekodkan tetapan dalam XMPnya, jadi pemprosesan raw kemudian akan menerapkannya dengan cara yang sama.**Fail ahli tatasusunan kekal asal** (tetapan direkodkan, bukan diterapkan), dan pandangan komposit tatasusunan mengabaikannya. |
+
+**Semantik profil warna** (kamera RGB):
 
 * **Raw** — memintas sepenuhnya rantaian pemprosesan.
 * **Linear** — isyarat gelap + medan rata + imbangan putih; tiada matriks warna, tiada gamma.

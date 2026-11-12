@@ -160,7 +160,9 @@ Untuk menyimpan rekod pemprosesan atau untuk menghantar kepada Sokongan MAPIR:
 3. Sertakan bersama dokumentasi projek
 4. Hantar kepada sokongan MAPIR jika menghadapi masalah
 
-Untuk menghantar masalah terus ke MAPIR, gunakan ikon pepijat (**Laporkan pepijat**) di bahagian atas tab Log Ralat — lihat [Melaporkan pepijat daripada tab log](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).***
+Untuk menghantar masalah terus ke MAPIR, gunakan ikon pepijat (**Laporkan pepijat**) di bahagian atas tab Log Ralat — lihat [Melaporkan pepijat daripada tab log](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).
+
+***
 
 ## Isu Keluaran Biasa dan Penyelesaian
 

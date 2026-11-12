@@ -10,7 +10,9 @@ Gunakan gelangsar zum di penjuru kanan atas untuk melaras saiz miniatur imej. Ge
 * **Ctrl + `+`**/**Ctrl + `=`**dan**Ctrl + `−`** menukar saiz sebanyak 4 px setiap tekan. Lintasan papan kekunci berhenti pada 64 px di hujung kecil dan, di hujung besar, pada saiz apa pun yang muat tepat dua pratonton setiap baris dalam tetingkap semasa.
 * Saiz yang anda tetapkan disimpan bersama projek (`UI → Grid thumbnail size` dalam `project.json`, lalai `160`), jadi membuka semula projek akan memulihkannya.
 
-<figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>*Resolusi* lakaran kecil adalah tetapan berasingan daripada *saiz* lakaran kecil: lihat **Paparan → Resolusi Lakaran Kecil Imej** dalam [Tetapan Projek](../project-settings/project-settings.md) (lalai 512 px pada sisi terpanjang). Saiz ialah betapa besar jubin itu dilukis; resolusi ialah berapa banyak butiran dimuatkan untuk mengisinya.***
+<figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>*Resolusi* lakaran kecil adalah tetapan berasingan daripada *saiz* lakaran kecil: lihat **Paparan → Resolusi Lakaran Kecil Imej** dalam [Tetapan Projek](../project-settings/project-settings.md) (lalai 512 px pada sisi terpanjang). Saiz ialah betapa besar jubin itu dilukis; resolusi ialah berapa banyak butiran dimuatkan untuk mengisinya.
+
+***
 
 ## Bar alat grid
 
@@ -20,7 +22,9 @@ Barisan butang di atas grid mempunyai sehingga tiga kumpulan, dari kiri ke kanan
 2. **Butang penapis kamera** — satu bagi setiap kamera LATTICE. Muncul hanya dalam mod Per Kamera.
 3. **Butang mod Eksport/Paparan** — produk yang mana setiap imbasan kecil dipaparkan.
 
-Apabila tetingkap terlalu sempit untuk kesemuanya, kumpulan akan mengecut dari kanan ke kiri menjadi menu lungsur apabila disasar: butang eksport/paparan akan terlipat dahulu, diikuti oleh butang kamera. Kumpulan yang disembunyikan meninggalkan satu butang dengan label pilihan yang sedang aktif, dan apabila disasar, ia akan menurunkankan keseluruhan set. **Per Trigger / Per Camera tidak pernah disembunyikan.**<!-- SCREENSHOT-NEEDED: Image grid toolbar of a LATTICE array project at full width, showing all three button groups inline: Per Trigger / Per Camera, three camera filter buttons labelled "LATT-M3M (serial)", and the export/view buttons including TIFF, RAW (Original), RAW (Radiance), RAW (Reflectance). -->***
+Apabila tetingkap terlalu sempit untuk kesemuanya, kumpulan akan mengecut dari kanan ke kiri menjadi menu lungsur apabila disasar: butang eksport/paparan akan terlipat dahulu, diikuti oleh butang kamera. Kumpulan yang disembunyikan meninggalkan satu butang dengan label pilihan yang sedang aktif, dan apabila disasar, ia akan menurunkankan keseluruhan set. **Per Trigger / Per Camera tidak pernah disembunyikan.**<!-- SCREENSHOT-NEEDED: Image grid toolbar of a LATTICE array project at full width, showing all three button groups inline: Per Trigger / Per Camera, three camera filter buttons labelled "LATT-M3M (serial)", and the export/view buttons including TIFF, RAW (Original), RAW (Radiance), RAW (Reflectance). -->
+
+***
 
 ## Butang Tonton Eksport
 
@@ -43,10 +47,8 @@ Dalam projek campuran, label akan mengikut sambungan yang digunakan oleh kebanya
 | Butang | Menunjukkan | Bila ia muncul |
 | --- | --- | --- |
 | **Sasaran** | Imej dengan sasaran penentukuran yang dikesan | Selepas pelaksanaan yang mengesan sasaran |
-| **Refleksan** | Imej reflektan yang dikalibrasi | Hanya untuk projekSurvey3
-
-— projek LATTICE menggunakan `RAW (Reflectance)` sebaliknya, jadi grid tidak pernah memaparkan dua butang reflektan |
-| **Imbangan Putih** | Produk imbangan putih (kameraRGB) | Selepas pemprosesan |
+| **Refleksan** | Imej reflektan yang dikalibrasi | Hanya untuk projek Survey3 — projek LATTICE menggunakan `RAW (Reflectance)` sebaliknya, jadi grid tidak pernah memaparkan dua butang reflektan |
+| **Imbangan Putih** | Produk imbangan putih (kamera RGB) | Selepas pemprosesan |
 | **Betulkan Vignette** | Gantian tanpa penentukuran yang betulkan vignette | Selepas pelaksanaan di mana penentukuran reflektansi tidak dapat diterapkan dan *Betulkan Vignette* diaktifkan |
 | **Tindak Balas Sensor** | Tindak balas tidak dikalibrasi tindak balas sensor | Sama, tetapi dengan *Pembetulan Vignette* dimatikan |
 | **`RAW (<INDEX> Index)`** | Satu butang bagi setiap indeks yang dikira | Selepas pelaksanaan dengan indeks yang dikonfigurasikan |

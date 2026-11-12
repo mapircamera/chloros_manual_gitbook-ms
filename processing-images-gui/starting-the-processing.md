@@ -180,7 +180,9 @@ Setelah dimulakan, keseluruhan saluran akan berjalan secara automatik:
 * Pelaksanaan yang dihentikan melaporkan dengan jujur apa yang telah disiapkannya (lihat baris `[RUN-SUMMARY]` dalam log)
 * Satu larian baru memulakan saluran daripada awal
 
-**Petua perancangan:** Untuk projek yang sangat besar, pertimbangkan untuk memproses secara bersiri atau menggunakan CLI untuk kawalan yang lebih baik.***
+**Petua perancangan:** Untuk projek yang sangat besar, pertimbangkan untuk memproses secara bersiri atau menggunakan CLI untuk kawalan yang lebih baik.
+
+***
 
 ## Memantau Pemprosesan Anda
 

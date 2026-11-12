@@ -65,7 +65,9 @@ membawa tag pemprosesan Chloros dalam setiap mod pemprosesan. Fail LATTICE menta
 * **Semantik kegagalan yang jujur.** Jalankan `chloros-cli process` yang meminta produk tetapi tidak menulis sebarang produk kini gagal dengan jelas dan keluar dengan nilai bukan sifar; pelaksanaan yang berjaya melaporkan berapa banyak produk imej yang telah ditulis.
 * **Susun atur keluaran baharu.** Produk disimpan dalam folder `<project>/<camera>/<format>/<Product>_Images/` dan mengekalkan nama fail sumber — folder, bukan Suffiks nama fail, mengenal pasti produk. Lihat [Format Imej Keluaran](output-image-formats.md).
 * **Lebih banyak input, pelan, dan bahasa.** Sokongan input `.dng`; semua 38 bahasa antaramuka telah lengkap; had perkakasan mengikut pelan dengan penggunaan percuma (tanpa log masuk) sehingga 4 kamera dan 2 penderia cahaya.
-* **Kebolehpercayaan.** Pemprosesan Berhenti dengan lancar dengan ringkasan pelaksanaan yang tepat, projek berbilang kamera mengeksport setiap kamera, dan kemas kini pemasang tidak lagi log anda keluar.***
+* **Kebolehpercayaan.** Pemprosesan Berhenti dengan lancar dengan ringkasan pelaksanaan yang tepat, projek berbilang kamera mengeksport setiap kamera, dan kemas kini pemasang tidak lagi log anda keluar.
+
+***
 
 Chloros tersedia dalam 3 antaramuka aplikasi:
 

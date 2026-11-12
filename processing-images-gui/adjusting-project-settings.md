@@ -153,7 +153,9 @@ Bahagian ini muncul **hanya** apabila sekurang-kurangnya satu imej dalam projek 
 
 * **Terapkan penjajaran tatasusunan** (lalai: diaktifkan): memutarbelitkan setiap produk yang diproses (debayered / pratonton / sinaran / pantulan / indeks) ke dalam geometri rujukan bersama tatasusunan. Tidak diaktifkan = mengeksport dalam geometri sensor asal.
 * **Pot ke tumpang tindih biasa** (lalai: aktif): memotong eksport yang selari ke kawasan yang dikongsi semua modul, supaya setiap jalur mempunyai jejak yang sama. Matikan mengekalkan kanvas penderia penuh (isi hitam di luar sumber).
-* **Pengambilan Semula**:**Bilinear (halus, lalai)**,**Ter dekat (pelihara nilai tepat)**— tiada pencampuran antara piksel, untuk analisis radiometrik yang ketat — atau**Kubik (paling tajam)**.***
+* **Pengambilan Semula**:**Bilinear (halus, lalai)**,**Ter dekat (pelihara nilai tepat)**— tiada pencampuran antara piksel, untuk analisis radiometrik yang ketat — atau**Kubik (paling tajam)**.
+
+***
 
 ## Menyimpan dan Memuat Tetapan
 

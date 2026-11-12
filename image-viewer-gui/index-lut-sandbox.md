@@ -71,7 +71,9 @@ Untuk rujukan formula lengkap — ketiga-tiga senarai pratetap dan nama yang ber
 
 ### Dengan Indeks dicentang tetapi tiada LUT
 
-Imej dilukis dalam **skala kelabu**, diregangkan di antara dua nilai ambang. Ini disengajakan: imej indeks adalah data skalar, dan skala kelabu adalah pameran yang paling tepat untuknya. Tambah LUT apabila anda mahukan warna.***
+Imej dilukis dalam **skala kelabu**, diregangkan di antara dua nilai ambang. Ini disengajakan: imej indeks adalah data skalar, dan skala kelabu adalah pameran yang paling tepat untuknya. Tambah LUT apabila anda mahukan warna.
+
+***
 
 ## Menggunakan LUT (Jadual Rujukan)
 
@@ -135,7 +137,9 @@ Contoh tetingkap NDVI:
 | Tumbuhan sihat sahaja                 | 0.5  | 0.9 |
 | Tekankan tekanan                     | 0.2  | 0.5 |
 
-Mengecilkan tetingkap meningkatkan kontras dalam kawasan minat anda dan menolak segala-galanya yang lain ke luar julat — di mana **Mod Pemotongan** menentukan apa yang berlaku kepadanya.***
+Mengecilkan tetingkap meningkatkan kontras dalam kawasan minat anda dan menolak segala-galanya yang lain ke luar julat — di mana **Mod Pemotongan** menentukan apa yang berlaku kepadanya.
+
+***
 
 ## Mod pemotongan
 

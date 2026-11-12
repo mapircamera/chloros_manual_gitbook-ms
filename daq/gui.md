@@ -194,7 +194,9 @@ Untuk nombor iradiasi kuantitatif, puratakan sekurang-kurangnya 15 saat data —
 
 * Gabungkan beberapa penderia dalam satu carta (paksi kongsi), kekalkan carta berasingan (susun atur grid automatik), alihkan penderia antara carta, seret untuk menyusun semula baris/jubin, dan sembunyikan penderia individu dengan suis mata.
 * Bagi setiap projek, Chloros menyimpan: nama peranti, warna graf, saiz carta, mod paparan, dan tetapan setiap penderia (masa integrasi, purata bingkai, keadaan AE, pilihan cap).
-* **Membuka semula projek menyambung semula penderia-penderianya secara automatik** mengikut alamat — port COM untuk DAQ-U, peranti BLE untuk DAQ-M, nama hos mDNS untuk DAQ-E (diresolves walaupun IP unit berubah) — dan menerapkan semula profil cap yang disimpan, purata bingkai, status AE, dan masa integrasi manual setiap sensor.***
+* **Membuka semula projek menyambung semula penderia-penderianya secara automatik** mengikut alamat — port COM untuk DAQ-U, peranti BLE untuk DAQ-M, nama hos mDNS untuk DAQ-E (diresolves walaupun IP unit berubah) — dan menerapkan semula profil cap yang disimpan, purata bingkai, status AE, dan masa integrasi manual setiap sensor.
+
+***
 
 ## Penyandingan kamera (DLS)
 

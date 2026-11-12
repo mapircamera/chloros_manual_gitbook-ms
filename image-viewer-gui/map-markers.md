@@ -80,7 +80,9 @@ Setiap imej dengan data GPS mendapat penanda pada koordinatnya.
 | Penyedia        | Nota                                                                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Peta Google** | Liputan global meluas; menyokong keempat-empat jenis jubin                                                                                                            |
-| **Esri ArcGIS**| Gambar udara beresolusi lebih tinggi di kawasan tertentu. Jenis jubin**Terrain** tidak ditawarkan untuk Esri dan butangnya dilumpuhkan semasa Esri dipilih |***
+| **Esri ArcGIS**| Gambar udara beresolusi lebih tinggi di kawasan tertentu. Jenis jubin**Terrain** tidak ditawarkan untuk Esri dan butangnya dilumpuhkan semasa Esri dipilih |
+
+***
 
 ## Jenis Jubin Peta
 
@@ -95,7 +97,9 @@ Pilih jenis lapisan peta dengan butang (dari kiri ke kanan):
 | **Satelit**        | Imej satelit terperinci, tiada label — pilihan jalur lebar tertinggi |
 | **Hibrid** (laluan) | Imej satelit dengan jalan raya dan label yang dilukis di atasnya                |
 
-Tab Peta dibuka pada **Hibrid**. Pilihan anda akan dibawa semasa menukar penyedia jika penyedia tersebut menyokongnya.***
+Tab Peta dibuka pada **Hibrid**. Pilihan anda akan dibawa semasa menukar penyedia jika penyedia tersebut menyokongnya.
+
+***
 
 ## Navigasi Peta
 
@@ -143,7 +147,9 @@ Tab Peta dibuka pada **Hibrid**. Pilihan anda akan dibawa semasa menukar penyedi
 
 ### Peta kosong atau jubin berhenti dimuat
 
-Penyedia jubin adalah perkhidmatan dalam talian. Jika jubin berhenti sampai, semak sambungan rangkaian mesin, kemudian cuba menukar penyedia. Jika anda telah memperbesarkan gambar dengan melampau, tekan butang **×** tetapkan semula untuk kembali ke tahap zum biasa dan biarkan peta meminta semula jubin.***
+Penyedia jubin adalah perkhidmatan dalam talian. Jika jubin berhenti sampai, semak sambungan rangkaian mesin, kemudian cuba menukar penyedia. Jika anda telah memperbesarkan gambar dengan melampau, tekan butang **×** tetapkan semula untuk kembali ke tahap zum biasa dan biarkan peta meminta semula jubin.
+
+***
 
 ## Halaman berkaitan
 

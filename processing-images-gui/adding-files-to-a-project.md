@@ -62,7 +62,9 @@ output/
 * Folder tangkapan yang disimpan **tanpa** import mentah akan dipaparkan seperti biasa, tetapi pemprosesan akan melangkauinya dan akan memberitahu demikian dalam log. (Penanda aras CLI `--input-level` boleh memaksa titik kemasukan untuk kes ini — lihat [Rujukan CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like).)
 * Mulai versi 1.3.0, folder captures juga boleh mengandungi folder `clamp_masks/` (topeng piksel demi piksel untuk tahap sinaran dan pantulan — lihat [Format Imej Keluaran](../output-image-formats.md#clamp-masks)). Topeng bukan imej pemandangan, dan Chloros akan melangkau mereka semasa import di mana sahaja ia berada.
 
-**Sesi LATTICE hub** diimport dengan cara yang sama: tudingkan Tambah Folder ke pada folder sesi yang disalin daripada hab (ia mengandungi `raw/` dan `previews/`), bersama sebarang log DAQ-M `.csv` downwelling. Jika penentukuran kamera atau DAQ belum disimpan dalam cache pada mesin anda, Chloros akan mengambilnya secara automatik melalui nombor siri semasa pengimportan (perlu internet sekali sahaja).***
+**Sesi LATTICE hub** diimport dengan cara yang sama: tudingkan Tambah Folder ke pada folder sesi yang disalin daripada hab (ia mengandungi `raw/` dan `previews/`), bersama sebarang log DAQ-M `.csv` downwelling. Jika penentukuran kamera atau DAQ belum disimpan dalam cache pada mesin anda, Chloros akan mengambilnya secara automatik melalui nombor siri semasa pengimportan (perlu internet sekali sahaja).
+
+***
 
 ## Memahami Jadual Pelayar Fail
 
@@ -104,7 +106,9 @@ Mengklik butang togol di penjuru atas kanan di atas jadual akan memaparkan metad
 
 * Fail `.daq` dan `.csv` muncul dalam senarai Pelayar Fail tetapi bukan imej yang boleh diklik — ia membekalkan iradiasi ke bawah untuk penentukuran pantulan.
 * Setiap fail `.daq`/`.csv` yang diimport disenaraikan dalam **Project Settings → DAQ Light Sensor**, di mana anda boleh menyemak pembetulan topi penyebar yang digunakan untuk setiap fail. Lihat [Mengeset Tetapan Projek](adjusting-project-settings.md).
-* Rakaman yang anda buat dalam tab **Penderia Cahaya** akan ditambah ke dalam projek terbuka secara automatik — tiada import manual diperlukan.***
+* Rakaman yang anda buat dalam tab **Penderia Cahaya** akan ditambah ke dalam projek terbuka secara automatik — tiada import manual diperlukan.
+
+***
 
 ## Mengurus Fail dalam Projek Anda
 
@@ -221,7 +225,9 @@ Jika projek anda mengandungi imej daripada berbilang kamera MAPIR:
 
 ### Laporan Projek Dibuka Semula Menunjukkan Fail Hilang
 
-Jika fail sumber dipindahkan atau dipadam sejak projek terakhir dibuka, Chloros akan memberitahu anda **fail** **mana**yang hilang dan bukannya membuka pada grid kosong. Jika folder projek itu sendiri dipindahkan, Chloros akan menuding semula laluan sumbernya ke folder di mana `project.json` berada sekarang, dan menyimpan sandaran (`project.json.before-relink-<date>-<time>`). Apabila ia tidak menemuinya, tetingkap**Fail sumber tidak ditemui**menawarkan**BROWSE** ke lokasi baru, kemudian Projek Baharu atau Padam Projek. Daripada CLI, gunakan `chloros-cli project open PATH --relink FOLDER`; daripada SDK, `open_project(path, relink=...)`.***
+Jika fail sumber dipindahkan atau dipadam sejak projek terakhir dibuka, Chloros akan memberitahu anda **fail** **mana**yang hilang dan bukannya membuka pada grid kosong. Jika folder projek itu sendiri dipindahkan, Chloros akan menuding semula laluan sumbernya ke folder di mana `project.json` berada sekarang, dan menyimpan sandaran (`project.json.before-relink-<date>-<time>`). Apabila ia tidak menemuinya, tetingkap**Fail sumber tidak ditemui**menawarkan**BROWSE** ke lokasi baru, kemudian Projek Baharu atau Padam Projek. Daripada CLI, gunakan `chloros-cli project open PATH --relink FOLDER`; daripada SDK, `open_project(path, relink=...)`.
+
+***
 
 ## Langkah Seterusnya
 

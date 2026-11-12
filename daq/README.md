@@ -17,7 +17,9 @@ MAPIR mengukur cahaya persekitaran sebagai spektra yang dikalibrasi secara radio
 | --- | --- | --- |
 | **DAQ-U** | USB (siri) | imbasan port siri |
 | **DAQ-M** | Tenaga Rendah Bluetooth | imbasan BLE mengikut nama |
-| **DAQ-E** | Ethernet (IPv4, berkuasa PoE) | mDNS `_daq-e._tcp` (nama hos `daq-e-<id>.local`) |**DAQ-E-S (baru dalam 1.3.0).** Sebuah DAQ-E dengan penyebar tetap dan penderia condong. Chloros menyenaraikannya sebagai `DAQ-E-S` dan menggunakannya tepat seperti DAQ-E, kecuali ia tidak mengambil pembetulan topi dan setiap bacaan membawa condongan, putaran dan haluan unit. Lihat [DAQ-E-S: diffuser tetap dan condong](caps-and-range.md#daq-e-s-fixed-diffuser-and-tilt).
+| **DAQ-E** | Ethernet (IPv4, berkuasa PoE) | mDNS `_daq-e._tcp` (nama hos `daq-e-<id>.local`) |
+
+**DAQ-E-S (baru dalam 1.3.0).** Sebuah DAQ-E dengan penyebar tetap dan penderia condong. Chloros menyenaraikannya sebagai `DAQ-E-S` dan menggunakannya tepat seperti DAQ-E, kecuali ia tidak mengambil pembetulan topi dan setiap bacaan membawa condongan, putaran dan haluan unit. Lihat [DAQ-E-S: diffuser tetap dan condong](caps-and-range.md#daq-e-s-fixed-diffuser-and-tilt).
 
 Ketiganya menggunakan protokol wayar yang sama dan menyampaikan data yang identik:
 

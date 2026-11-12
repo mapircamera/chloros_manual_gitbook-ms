@@ -23,7 +23,9 @@ Chloros 1.3.0 menyediakan sokongan Linux asli untuk **CLI**dan**Python SDK** —
 | **Debayer sedar tekstur** (perlukan GPU CUDA) | Ya (Chloros+) | Ya (Chloros+) | Ya (Chloros+) | Ya (Chloros+) |
 | **Penyesuaian Komputasi Dinamik** | Ya | Ya | Ya | Ya |
 | **Backend sebagai perkhidmatan sistem** (`chloros-backend@<user>.service`) | Tidak | Tidak | Ya (pilih untuk sertai) | Ya (pilih untuk sertai) |
-| **Pemutakhiran di tempat** (`chloros-cli update`) | Tidak (jalankan pemasang) | Tidak (jalankan pemasang) | Ya | Ya |***
+| **Pemutakhiran di tempat** (`chloros-cli update`) | Tidak (jalankan pemasang) | Tidak (jalankan pemasang) | Ya | Ya |
+
+***
 
 ## Seni Bina yang Disokong
 
@@ -36,7 +38,9 @@ Chloros 1.3.0 menyediakan sokongan Linux asli untuk **CLI**dan**Python SDK** —
 
 * **Ubuntu 22.04 LTS atau lebih baru** (amd64)
 * **Debian 12 atau lebih baru** (amd64)
-* **NVIDIA JetPack 6** (arm64 — platform Jetson Orin)***
+* **NVIDIA JetPack 6** (arm64 — platform Jetson Orin)
+
+***
 
 ## Apa yang Diperolehi Pengguna Linux
 
@@ -55,7 +59,9 @@ Chloros 1.3.0 menyediakan sokongan Linux asli untuk **CLI**dan**Python SDK** —
 
 * **GUI Desktop** — tiada antara muka grafik; semua interaksi adalah melalui CLI atau Python SDK
 * **Pemandang Imej** — tiada pemandang imej interaktif, paparan grid, atau penanda peta
-* **Pengurusan projek visual** — projek dibuat dan dikendalikan melalui arahan CLI dan panggilan SDK (perkakasan itu sendiri — kamera, penderia, tangkapan — kekal boleh dikawal sepenuhnya dari terminal)***
+* **Pengurusan projek visual** — projek dibuat dan dikendalikan melalui arahan CLI dan panggilan SDK (perkakasan itu sendiri — kamera, penderia, tangkapan — kekal boleh dikawal sepenuhnya dari terminal)
+
+***
 
 ## Keperluan Lesen
 

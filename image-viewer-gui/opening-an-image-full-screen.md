@@ -55,7 +55,9 @@ Perbesaran "berkesan" mengambil kira saiz blok GSD: dengan saiz blok 8, petunjuk
 | **←**                           | Skrin penuh | Imej sebelumnya                      |
 | **Ctrl + R**                    | Skrin penuh | Seting semula kotak pasir indeks/LUT         |
 | **Ctrl + `+`**/**Ctrl + `=`** | Grid        | Thumbnail yang lebih besar (4 px setiap tekan)  |
-| **Ctrl + `−`**                  | Grid        | Thumbnail lebih kecil (4 px setiap tekan) |***
+| **Ctrl + `−`**                  | Grid        | Thumbnail lebih kecil (4 px setiap tekan) |
+
+***
 
 ## Nilai Penunjuk
 
@@ -98,7 +100,9 @@ Pemapar, kotak pasir indeks/LUT dan eksport indeks semuanya menyelesaikan skala 
 Dua kesan yang perlu diketahui:
 
 * **Peratus 32-bit**TIFF menyimpan DN/65535 sebagai titik apung, dan eksport**8-bit** PNG/JPG menyimpan DN × 255/65535 — pemapar menukarkan kedua-duanya kembali sebelum mencetak peratusan.
-* Satu kes tidak dapat dipulihkan: eksport **TIFF 8-bit daripada tangkapan sumber 8-bit** dipotong kepada 0–255 dan bukannya diskala semula, dan sengaja tidak mempunyai tag skala. Untuk fail-fail tersebut, panel hanya mencetak DN, tanpa lajur peratus. Ini adalah jawapan yang jujur, bukan pepijat.***
+* Satu kes tidak dapat dipulihkan: eksport **TIFF 8-bit daripada tangkapan sumber 8-bit** dipotong kepada 0–255 dan bukannya diskala semula, dan sengaja tidak mempunyai tag skala. Untuk fail-fail tersebut, panel hanya mencetak DN, tanpa lajur peratus. Ini adalah jawapan yang jujur, bukan pepijat.
+
+***
 
 ## Histogram lapisan
 
@@ -124,7 +128,9 @@ Tiga butang terletak di atas histogram:
 | **INDEKS**| Aktif      | Muncul hanya semasa sesuatu indeks aktif. Menukar histogram daripada jalur sumber kepada**agihan nilai indeks**, dengan dua ambang klip dilukis sebagai garisan putus-putus jingga dan nilai indeks kursor sebagai garisan putih                                                          |
 | **RGB**| Padam    | Menukar daripada lengkung gabungan kepada lengkung bagi setiap saluran. Pada sensor mono, butang ini tertulis**MONO** dan dilumpuhkan — hanya terdapat satu saluran untuk dipaparkan                                                                                                                                  |
 
-Histogram dikira pada **blok yang boleh anda lihat**, bukan piksel sumber di belakangnya: ubah saiz blok GSD dan pengagihan dikira semula, supaya histogram, penanda tetikus dan imej yang dipaparkan sentiasa sepadu.***
+Histogram dikira pada **blok yang boleh anda lihat**, bukan piksel sumber di belakangnya: ubah saiz blok GSD dan pengagihan dikira semula, supaya histogram, penanda tetikus dan imej yang dipaparkan sentiasa sepadu.
+
+***
 
 ## Saiz blok GSD
 
@@ -183,7 +189,9 @@ Terapkan indeks multispektral dan Jadual Rujukan Warna (LUT) daripada bar sisi:
 
 3. Pilih penapis kamera anda dan formula indeks, kemudian seret bulatan saluran ke dalam ruang kosong formula tersebut
 4. Tambah LUT dan pilih gradien, ambang dan mod pemangkasan
-5. Baca nilai pada kursor, dan simpan hasilnya dengan **Eksport/Simpan Imej(e)**Lihat [Sandbox Indeks/LUT](index-lut-sandbox.md) untuk panduan lengkap.***
+5. Baca nilai pada kursor, dan simpan hasilnya dengan **Eksport/Simpan Imej(e)**Lihat [Sandbox Indeks/LUT](index-lut-sandbox.md) untuk panduan lengkap.
+
+***
 
 ## Penyelesaian Masalah
 

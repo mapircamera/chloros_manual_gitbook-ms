@@ -34,7 +34,9 @@ di bar sisi kiri
 * **Pilihan**: `Default (512 px)`, `1024 px`, `2048 px`, `Full resolution`
 * **Lalai**: Lalai (512 px)
 * **Keterangan**: Resolusi (sisi terpanjang, dalam piksel) di mana pratonton grid-imej dipaparkan. Nilai yang lebih tinggi kelihatan lebih tajam apabila diperbesarkan tetapi memuat lebih perlahan dan menggunakan lebih banyak memori. Resolusi penuh digunakan untuk saiz imej asal.
-* **Nota**: Hanya untuk paparan — ini tidak pernah menjejaskan pemprosesan atau fail yang dieksport.***
+* **Nota**: Hanya untuk paparan — ini tidak pernah menjejaskan pemprosesan atau fail yang dieksport.
+
+***
 
 ## Pengesanan Sasaran
 
@@ -188,7 +190,9 @@ Imbasan sasaran **diukur** bagi setiap unit dicari berdasarkan nombor siri/QR un
   * Satu kamera + satu pin: Pin 2 secara automatik ditetapkan kepada "Jangan Gunakan"
   * Satu kamera + dua pin: Pin 2 secara automatik ditetapkan kepada "Jangan Gunakan"
   * Pelbagai kamera: Pemilihan manual diperlukan
-* **Nota**: Kamera yang sama tidak boleh ditugaskan kepada Pin 1 dan Pin 2 pada masa yang sama.***
+* **Nota**: Kamera yang sama tidak boleh ditugaskan kepada Pin 1 dan Pin 2 pada masa yang sama.
+
+***
 
 ## Penderia Cahaya DAQ
 
@@ -209,7 +213,9 @@ Setiap baris memaparkan fail, model sensor, dan pembetulan diffuser-cap yang sed
 * **Keterangan**: `Auto` menggunakan topi yang direkodkan bagi setiap fail (topi Sunshine dianggap digunakan apabila tiada apa-apa yang direkodkan, tetapi DAQ-U, DAQ-M dan DAQ-E dihantar tanpa topi dan Chloros tidak dapat melihat apa yang dipasang, oleh itu pemprosesan memberi amaran tentang topi yang diandaikan: pilih topi yang dipasang). Memilih topi tertentu akan menimpa **setiap** fail downwelling dalam projek kecuali DAQ-E-S, yang penyebarnya adalah sebahagian daripada penentukuran; projek yang hanya mengandungi DAQ-E-S tidak memaparkan menu lungsur: rakaman mentah diperbetulkan dengannya, dan rakaman yang sudah mempunyai cap akan dirujuk semula (pembetulan yang dirakam dibatalkan dan yang dipilih digunakan).
 * **Penting**: Cap yang dipilih mesti sepadan dengan cap yang dipasang secara fizikal semasa rakaman. Sama ada sensor mahupun perisian tidak dapat mengesan cap fizikal — ID cap yang tidak sepadan akan membetulkan spektra dengan salah.
 
-Secara sengaja terdapat **satu** kawalan untuk seluruh projek dan bukannya menu lungsur bagi setiap fail: tetapan ini akan sampai ke setiap sumber yang mengalir ke bawah dalam projek.***
+Secara sengaja terdapat **satu** kawalan untuk seluruh projek dan bukannya menu lungsur bagi setiap fail: tetapan ini akan sampai ke setiap sumber yang mengalir ke bawah dalam projek.
+
+***
 
 ## Penyelarasan Susunan
 

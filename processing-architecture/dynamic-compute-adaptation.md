@@ -103,9 +103,7 @@ Pada hos x86_64 dengan GPU NVIDIA berasingan, VRAM yang dikesan juga menetapkan 
 | --- | --- | --- |
 | **8GB+** | 90% | ×2.0 |
 | **6-8GB** | 85% | ×1.75 |
-| **
-
-3.5-6GB** | 80% | ×1.5 |
+| **3.5-6GB** | 80% | ×1.5 |
 | **2-3.5GB** | 75% | ×1.25 |
 | **Kurang daripada 2GB** | 70% | ×1.0 |
 
@@ -138,7 +136,9 @@ Dua peraturan mengawal angka-angka ini:
 * Sebarang thread yang **satu-satunya** aktif akan diberikan peruntukan maksimum profilnya.
 * Apabila lebih daripada satu tugas GPU *berat* aktif, peruntukan asas setiap tugas berat akan dibahagikan di antara mereka (tidak pernah di bawah minimum yang dikonfigurasikan).
 
-Nilai yang sebenarnya digunakan semasa runtime ialah yang **lebih rendah** antara peruntukan profil platform dan cadangan masa nyata daripada pemantau memori GPU, jadi kad yang sibuk sentiasa diutamakan berbanding profil yang optimistik.***
+Nilai yang sebenarnya digunakan semasa runtime ialah yang **lebih rendah** antara peruntukan profil platform dan cadangan masa nyata daripada pemantau memori GPU, jadi kad yang sibuk sentiasa diutamakan berbanding profil yang optimistik.
+
+***
 
 ## Pemprosesan Sedar Tekstur
 
